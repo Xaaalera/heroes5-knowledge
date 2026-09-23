@@ -94,6 +94,9 @@ class Links(HTMLParser):
 
 def main():
     failures = []
+    for path in SITE.rglob('*'):
+        if path.is_file() and (path.suffix == '.pyc' or '__pycache__' in path.parts):
+            failures.append(f'Python cache must not be published: {path.relative_to(SITE)}')
     files = list(SITE.rglob('*.html'))
     if len(files) < 17:
         failures.append('Expected the bilingual articles and 404 page; run npm run build.')

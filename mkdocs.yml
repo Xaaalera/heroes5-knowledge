@@ -142,3 +142,8 @@ extra:
       en: Inferno
 watch:
 - theme
+exclude_docs: '**/__pycache__/**
+
+  **/*.pyc
+
+  '
