@@ -17,6 +17,8 @@
 
 Пояснение механики расположения сопровождать схемами рядом с соответствующим этапом, а не только длинным текстом. Боевые сетки строить циклом из данных: полное поле, обе армии, препятствия, размеры отрядов и оси X/Y. Учебные кандидаты и измеренные позиции различать явно. Скриншоты разных боёв дополняют схемы; ракурс должен показывать оба строя.
 
+Практический пример механики должен связывать входы, правило, промежуточные решения и проверенный результат. Один снимок конечной расстановки не доказывает причины. Историю согласования ракурсов и организации съёмки хранить в рабочих заметках; в статье оставить объяснения игроку и компактный раздел метода/ограничений. Код обозначать как исходник, восстановление или псевдокод; не выдавать частный проход за весь алгоритм.
+
 ### Виды страниц и каркас
 
 | `content_type` | Назначение | Что читатель должен получить |
@@ -75,6 +77,8 @@ Applies to every `docs/` article and translation. The shared source links in RU 
 8. Public articles must not depend on inaccessible private logs. Publish usable evidence or state the limitation. Screenshots assist actions/comparisons rather than replacing explanation.
 
 Explain spatial mechanics with diagrams next to the relevant stage. Generate battle grids with loops from data: full field, both armies, obstacles, footprints and X/Y axes. Distinguish hypothetical candidates from measured positions. Screenshots of different battles supplement diagrams and should show both formations.
+
+A worked mechanics example connects inputs, rules, intermediate decisions and a checked result. A final-position screenshot alone does not establish causes. Keep camera-approval and capture-workflow history in working notes; articles need reader-facing explanations and a compact methods/limits section. Identify code as original source, reconstruction or pseudocode; never present a partial pass as the entire algorithm.
 
 ### Page types and shape
 

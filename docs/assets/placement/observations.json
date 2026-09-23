@@ -1123,6 +1123,447 @@
       "sequence": 3,
       "image": "pack_12.png",
       "image_sha256": "39e354bf89e4f89dce205b9658b48fc831aa55da5e91b6242430af60ec6d755c"
+    },
+    {
+      "id": "elementals_trace",
+      "fixture": "pack_12",
+      "grid": [
+        16,
+        12
+      ],
+      "blocked": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          15,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          14,
+          4
+        ],
+        [
+          15,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          14,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          15,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          15,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          14,
+          8
+        ],
+        [
+          15,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          14,
+          9
+        ],
+        [
+          15,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          14,
+          10
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          14,
+          11
+        ],
+        [
+          15,
+          11
+        ]
+      ],
+      "units": [
+        {
+          "label": "A1",
+          "side": "hero",
+          "creature": "CREATURE_ANGEL",
+          "cell": [
+            3,
+            4
+          ],
+          "size": 2
+        },
+        {
+          "label": "N1",
+          "side": "neutral",
+          "creature": "CREATURE_EARTH_ELEMENTAL",
+          "cell": [
+            12,
+            8
+          ],
+          "size": 1
+        },
+        {
+          "label": "N2",
+          "side": "neutral",
+          "creature": "CREATURE_AIR_ELEMENTAL",
+          "cell": [
+            12,
+            10
+          ],
+          "size": 1
+        },
+        {
+          "label": "N3",
+          "side": "neutral",
+          "creature": "CREATURE_WATER_ELEMENTAL",
+          "cell": [
+            12,
+            4
+          ],
+          "size": 1
+        },
+        {
+          "label": "N4",
+          "side": "neutral",
+          "creature": "CREATURE_FIRE_ELEMENTAL",
+          "cell": [
+            13,
+            2
+          ],
+          "size": 1
+        }
+      ],
+      "placement_context": {
+        "depth": 2,
+        "defensive": 0,
+        "spread": 0,
+        "enemy_large": 1,
+        "shooter_count": 1
+      },
+      "native_attempts": [
+        {
+          "creature": "CREATURE_FIRE_ELEMENTAL",
+          "candidate": [
+            13,
+            2
+          ],
+          "success": true
+        },
+        {
+          "creature": "CREATURE_EARTH_ELEMENTAL",
+          "candidate": [
+            12,
+            8
+          ],
+          "success": true
+        },
+        {
+          "creature": "CREATURE_WATER_ELEMENTAL",
+          "candidate": [
+            12,
+            8
+          ],
+          "success": false
+        },
+        {
+          "creature": "CREATURE_WATER_ELEMENTAL",
+          "candidate": [
+            12,
+            4
+          ],
+          "success": true
+        },
+        {
+          "creature": "CREATURE_AIR_ELEMENTAL",
+          "candidate": [
+            12,
+            8
+          ],
+          "success": false
+        },
+        {
+          "creature": "CREATURE_AIR_ELEMENTAL",
+          "candidate": [
+            12,
+            4
+          ],
+          "success": false
+        },
+        {
+          "creature": "CREATURE_AIR_ELEMENTAL",
+          "candidate": [
+            12,
+            10
+          ],
+          "success": true
+        }
+      ],
+      "trace_method": "Read-only snapshots at game placement entry/return and general-pass entry; positions independently recorded in Start. Runtime addresses and pointers omitted.",
+      "photo_status": "Capture failed; no image published for this run."
     }
   ],
   "observer_note": "Test combat callback enumerated attackers and defenders and included a post-recording sleep; this did not change pre-Start placement. Opening effects may precede screenshots. Temporary map script restored after capture.",
@@ -1131,5 +1572,21 @@
     "uni.dll": "aa5211151d9e9a8c135e180ff8832908d128ccae08a5145162bcdae4946c18ee",
     "um.dll": "1956c00b371d22a3e1a644394ff3e7159b6ec36d660d5ffa36628fcf63fd0fc6",
     "d3d9.dll": "5eb152357f99d53397b764384d5cf9a0f6aece733ced30a34186ac57fb15be25"
+  },
+  "stage_pair": {
+    "purpose": "Visibility before deployment confirmation and early combat; not a placement trace or the elementals field.",
+    "same_battle": true,
+    "predictor_loaded": false,
+    "date": "2026-09-23",
+    "images": [
+      {
+        "file": "academy-before.png",
+        "sha256": "bf0135a897f4f4f56e66a9edb7878487a1b542591d329a1ca60e4a7f73b7e792"
+      },
+      {
+        "file": "academy-after.png",
+        "sha256": "978b09a8dcdfa3f8015021830fa298ace53f335ed290b5d84b842be2bf6b5d7c"
+      }
+    ]
   }
 }

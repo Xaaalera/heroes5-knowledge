@@ -14,7 +14,7 @@ updated: 2026-09-23
 
 The game first prepares **combat stacks**, selects a formation method, determines available cells and places creature groups in sequence. Army composition, obstacles, creature size and the selected algorithm branch can therefore change starting positions. “Shooters behind, everyone else in front” is not a sufficient rule.
 
-This account applies to the investigated **Heroes V: Tribes of the East with Universe** build. It combines code analysis, execution of individual code sections and three test-map observations. It is not a complete specification of every mode; [evidence and limits](#evidence) appear below. The subject is the game, not a third-party predictor.
+This account applies to the investigated **Heroes V: Tribes of the East with Universe** build. It combines code analysis, execution of individual code sections and test-map observations and recorded placement attempts. It is not a complete specification of every mode; [evidence and limits](#evidence) appear below. 
 
 ## Reading the 2D diagrams
 
@@ -27,7 +27,7 @@ This account applies to the investigated **Heroes V: Tribes of the East with Uni
 - A colored dot identifies anchor `(x,y)`. For a large creature it is the upper-right cell of its 2×2 footprint in this diagram. One stack occupies the whole square.
 - **A1 is the hero's angels at `(3,4)`**, occupying `(2,3)`, `(3,3)`, `(2,4)`, `(3,4)`. **N1 is the genies at `(13,4)`**, occupying columns 12–13 and rows 3–4.
 
-Every grid is **generated with loops from one data record**, not drawn manually over a screenshot. Both armies and recorded obstacles appear on every diagram. Open a diagram for full resolution; SVG stays sharp when enlarged.
+Diagrams show both armies and obstacles. Open an image to inspect individual cells more closely.
 
 ## 1. Combat stacks are prepared first
 
@@ -38,6 +38,16 @@ The investigated preparation function copies types and quantities when there are
 Once stack count is selected, creatures are divided with a remainder. **If ten creatures have already been assigned to three stacks**, distribution is **4 + 3 + 3**: three each, with the remaining creature assigned to the first stack. This does not mean ten creatures always split into three stacks.
 
 Under additional conditions, interior stacks can receive a type from the source creature's upgrade list; the endpoints retain the original type. Splitting, upgrading and selecting a cell are distinct operations. No exact probabilities are claimed: code comparison boundaries were checked, but the random generator's distribution was not independently established.
+
+### What the player sees before combat
+
+[![Before confirmation, the hero army and obstacles are visible while neutrals remain hidden](../../assets/placement/academy-before.png)](../../assets/placement/academy-before.png)
+
+*Before confirmation: the field and hero army are visible. Missing neutral models do not mean the algorithm has no neutral army data.*
+
+[![The same battle after confirmation reveals genies, golems and gremlins](../../assets/placement/academy-after.png)](../../assets/placement/academy-after.png)
+
+*After confirmation, three enemy stacks are visible on the same field. Model visibility and cell calculation are different events; game calls establish calculation timing, not the appearance of the models.*
 
 ## 2. The game selects a formation path
 
@@ -95,57 +105,138 @@ Successful placement reserves the occupied cells. Later stacks cannot reuse them
 
 If some stacks remain, the extended algorithm can shift its row window and retry. Additional passes scan deployment columns. In the checked code, the apparent same-type merging branch never enters its inner loop for a valid vector size. Thus “the game always merges stacks when space runs out” would be incorrect. Excluding a record from another placement attempt also does not, by itself, prove creatures disappeared from the army. [S6](#evidence).
 
-## Example: three Academy stacks
+## Worked example: why each elemental occupies its cell
 
-In the first full-field diagram, **A1 belongs to the hero**, while N labels identify neutrals. Coordinates were recorded in Start before turns; footprint sizes are checked separately from position.
+Consider **four stacks of 15 elementals** against the hero's army. This run includes recorded mode flags and the game's actual placement attempts, not just final coordinates.
 
-| Label | Stack | Starting anchor `(x,y)` | Footprint |
-|---|---|---|---|
-| A1 | Hero's angels | `(3,4)` | 2×2 |
-| N1 | Genies | `(13,4)` | 2×2 |
-| N2 | Iron golems | `(12,8)` | 1×1 |
-| N3 | Gremlins | `(13,2)` | 1×1 |
+[![The worked battlefield: angels on the left and four elemental stacks on the right](../../assets/placement/elementals_trace-positions.svg)](../../assets/placement/elementals_trace-positions.svg)
 
-Gremlins occupy Y=2, whose illustrated geometric approach has length 0. This is consistent with using a sheltered row but does not replace tracing branch selection. Genies receive an entire free square and golems another cell. [Diagram source data](../../assets/placement/observations.json).
+### Inputs
 
-## Example: seven stacks
-
-[![Full grid with the hero's angels and seven neutral stacks](../../assets/placement/pack_15-positions.svg)](../../assets/placement/pack_15-positions.svg)
-
-| Label | Stack type | Starting anchor |
+| Parameter | Value | Consequence |
 |---|---|---|
-| A1 | Hero's angels | `(3,4)` |
-| N1 | `CREATURE_GRAND_ELF` | `(13,6)` |
-| N2 | `CREATURE_ARCHER` | `(13,7)` |
-| N3 | `CREATURE_PEASANT` | `(12,10)` |
-| N4 | `CREATURE_PIT_FIEND` — 2×2 | `(13,4)` |
-| N5 | `CREATURE_INFERNAL_SUCCUBUS` | `(13,8)` |
-| N6 | `CREATURE_CERBERI` | `(12,8)` |
-| N7 | `CREATURE_FAMILIAR` | `(12,6)` |
+| Full grid | 16×12 including service boundary | Playable cells here are X=2…13 and Y=1…10 |
+| Deployment depth | Two columns | In this pass the shooter starts at X=13, small non-shooters at X=12 |
+| Defensive mode | Off | No extra defensive pass |
+| Spread mode | Off | No spread filtering of candidate rows |
+| Shooter stacks | One | Shooter window contains one row |
 
-Identifiers map unambiguously to game records. Large demon N4 occupies `(12,3)`, `(13,3)`, `(12,4)`, `(13,4)`; stacks above it do not overlap its footprint. Armies need not fill the field's height uniformly.
+These parameters were recorded during this battle, not inferred retrospectively from the picture.
 
-[![Actual seven-stack battle in the selected overview angle](../../assets/placement/pack_15.png)](../../assets/placement/pack_15.png)
+### Step 1: measure each row's free approach
 
-*The same battle: elevated oblique overview with the hero army on the left and neutrals on the right. This is an early-combat frame, not the exact Start callback moment; opening effects may already have occurred. Diagram coordinates were recorded separately before turns. Predictor not loaded.*
+Starting at X=11, scan left to the first obstacle or boundary. In Y=2, only X=11 is free before blocked cell X=10. Its approach length is therefore **1**.
 
-## Example: four elementals
+[![Elemental battlefield approach lengths, with row 2 shortest](../../assets/placement/elementals_trace-approach.svg)](../../assets/placement/elementals_trace-approach.svg)
 
-[![Complete 2D grid with the hero's angels, four elementals and different obstacles](../../assets/placement/pack_12-positions.svg)](../../assets/placement/pack_12-positions.svg)
+| Row Y | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Length L | 6 | **1** | 10 | 10 | 10 | 7 | 4 | 10 | 10 | 10 |
 
-| Label | Stack | Starting anchor |
+With one shooter, the minimum window is simply the row with minimum L: **Y=2**. The non-shooter row sort yields **8, 4, 10, 3, 5, 9, 6, 1, 7, 2**. Several rows have L=10; row 8 comes first because of the game's tie handling, not because of its position on the screenshot.
+
+### Step 2: Fire receives (13,2)
+
+Fire is this group's sole shooter, so it is processed before the three small non-shooters. First attempt: X=13 and selected row Y=2. The cell is free, so placement succeeds.
+
+[![Fire's first candidate (13,2) succeeds](../../assets/placement/elementals_trace-fire.svg)](../../assets/placement/elementals_trace-fire.svg)
+
+**Why this cell:** the role determines this pass's column, minimum L determines its first row, and occupancy permits placement.
+
+### Step 3: Earth receives (12,8)
+
+The other three stacks are first separated by flight. Earth and Water are non-flying; Air flies and follows them. Ground speeds 4/5 do not reach the comparison threshold `16 − 2 − 6 = 8`, so Earth and Water are ordered by evaluated strength.
+
+The separate definition-based N=15 scoring control gives Earth 2034 and Water 1269: Earth comes first. Those are controlled formula results, not score telemetry from this run. The recorded placement order confirms **Earth → Water → Air**.
+
+The first candidate row is Y=8. Cell `(12,8)` is free, so Earth occupies it.
+
+[![Earth's first candidate (12,8) is available](../../assets/placement/elementals_trace-earth.svg)](../../assets/placement/elementals_trace-earth.svg)
+
+### Step 4: Water skips an occupied candidate
+
+Water starts from the same row list rather than automatically receiving the next row.
+
+1. `(12,8)` is occupied by Earth: **failure**.
+2. `(12,4)` is free: **success**.
+
+[![Water fails at (12,8) and succeeds at (12,4)](../../assets/placement/elementals_trace-water.svg)](../../assets/placement/elementals_trace-water.svg)
+
+Attempt diagrams use the final battlefield for orientation. Red outlines mark rejected candidates; green outlines mark accepted ones. These are deployment attempts, not creature movement.
+
+### Step 5: Air skips two occupied candidates
+
+1. `(12,8)` contains Earth: **failure**.
+2. `(12,4)` contains Water: **failure**.
+3. `(12,10)` is free: **success**.
+
+[![Air has two failed candidates before succeeding at (12,10)](../../assets/placement/elementals_trace-air.svg)](../../assets/placement/elementals_trace-air.svg)
+
+Air's higher speed does not make it first: flight is checked before speed in this comparison. Placement order is still distinct from turn order.
+
+### Compare calculation with the game
+
+| Stack | Calculated attempts | Recorded game sequence |
 |---|---|---|
-| A1 | Hero's angels | `(3,4)` |
-| N1 | Earth elemental | `(12,8)` |
-| N2 | Air elemental | `(12,10)` |
-| N3 | Water elemental | `(12,4)` |
-| N4 | Fire elemental | `(13,3)` |
+| Fire | `(13,2)` ✓ | Matches |
+| Earth | `(12,8)` ✓ | Matches |
+| Water | `(12,8)` × → `(12,4)` ✓ | Matches |
+| Air | `(12,8)` × → `(12,4)` × → `(12,10)` ✓ | Matches |
 
-[![Another actual battle: four elementals opposite the hero army](../../assets/placement/pack_12.png)](../../assets/placement/pack_12.png)
+**All seven attempts**, including three failures, and **all four final positions** match. This validates the reconstructed pass for this battle's inputs. Its [inputs and native attempt sequence](../../assets/placement/observations.json) are published as `elementals_trace`.
 
-*No manual camera changes were made after the owner selected the reference angle. This battle has a different arena and army; the air elemental remains at its own field edge. Coordinates come from Start records, not reconstruction from camera projection.*
+## Code for the worked pass
 
-All three battles differ in composition and obstacles. They illustrate different game outcomes, not an isolated experiment changing one factor.
+The following is short pseudocode for our reconstruction of this pass, not published Nival source or an implementation of every game branch.
+
+```text
+lengths = measure_free_approaches(grid)
+shooter_row = first_row_with_minimum(lengths)
+melee_rows = native_sort_descending(lengths)
+
+place(shooter, x=13, rows=[shooter_row, ...])
+for stack in order_by_flight_and_score(melee_stacks):
+    for row in melee_rows:
+        candidate = (12, row)
+        if whole_footprint_is_free(candidate, stack.size):
+            place(stack, candidate)
+            reserve_footprint(candidate, stack.size)
+            break
+```
+
+The critical details are **native tie handling**, restarting the row list for each stack, and reserving cells immediately after successful placement.
+
+Download the [executable Python walkthrough](../../assets/placement/placement_walkthrough.py) and [input data](../../assets/placement/observations.json) into one folder, then run:
+
+```sh
+python placement_walkthrough.py
+```
+
+It calculates placements from the mask and fixture traits; recorded target cells are used only afterwards for comparison. It calculates scores from the four creatures’ traits rather than supplying a ready-made order. It checks two fields and, for `elementals_trace`, the exact native attempt sequence. Defensive/spread modes, other compositions and fallback branches are outside its scope.
+
+## Another field: why Fire changes row
+
+The same composition now faces different obstacles. Y=2 has ten free approach cells, while Y=3 has only one. The minimum moves **from row 2 to row 3**, so Fire receives `(13,3)`.
+
+[![A different field puts Fire in row 3 while the others retain rows 8, 4 and 10](../../assets/placement/pack_12-positions.svg)](../../assets/placement/pack_12-positions.svg)
+
+The first three suitable non-shooter rows remain **8, 4, 10**. The calculation gives Earth `(12,8)`, Water `(12,4)` and Air `(12,10)`; all four results match that battle's Start record. Unlike the preceding experiment, this run did not record internal attempts.
+
+[![Four elementals on the second field, with Fire below the other stacks](../../assets/placement/pack_12.png)](../../assets/placement/pack_12.png)
+
+*Fire occupies `(13,3)`. Earth, Water and Air retain rows 8, 4 and 10: these obstacle differences change the shooter's first position without changing the first suitable positions for the others.*
+
+## Large creatures: check the whole square
+
+In this mixed army, large demon N4 has anchor `(13,4)` and occupies `(12,3)`, `(13,3)`, `(12,4)`, `(13,4)`. Angels A1 on the opposite side also occupy a 2×2 square.
+
+[![Large-creature footprints within the complete mixed-army field](../../assets/placement/pack_15-positions.svg)](../../assets/placement/pack_15-positions.svg)
+
+[![The large demon and angels occupy more space than neighboring small stacks](../../assets/placement/pack_15.png)](../../assets/placement/pack_15.png)
+
+*Compare N4's square with neighboring N1/N2/N5 cells. Checking only anchor `(13,4)` is insufficient: all four cells must be free.*
+
+This example illustrates footprint validation. The reasons for all seven positions were not reconstructed from an attempt trace; the elemental battle above supplies the detailed sequence confirmation.
 
 ## What can be inferred before combat
 
@@ -169,6 +260,8 @@ Investigated `H5_Game.exe` SHA-256: `88c9dc6107b9bced0649924a86360f1c56397ee00de
 | S5 | General pass `0x859670`; score `0xbf9b80`; support `0x8580e0` | Code and selected code-section checks; do not replace adjacency exceptions with assumed behavior |
 | S6 | Retries `0x859eb0`; merging `0x8599d0` | Merge inner loop shown unreachable in the checked EXE; not a claim covering all modified versions |
 
+The scoring control uses Universe_mod.pak definitions under `Neutrals/*_Elemental.xdb`, quantity 15, coefficients 0.05/0.05, reference attack 1 and reference defence slot 0. That zero comes from the inspected aggregate field, not the peasant’s ordinary defence. Results: Earth 2034, Water 1269, Fire 940, Air 733. This control excludes hero modifiers and is not combat damage dealt.
+
 On your own test map, starting coordinates can be recorded in the combat `Start` callback **before the first turn**:
 
 ```lua
@@ -184,4 +277,4 @@ function Start()
 end;
 ```
 
-This belongs to a map's combat script, not the ordinary adventure console. Our experiments enumerated both armies and a separate observer of `GetUnitPosition` results. No predictor was loaded; the observer does not assign positions. Static obstacle masks were recorded separately before Start. The temporary capture script added a delay after recording both armies, and the original map archive was restored afterwards. This delay cannot change already selected starting cells. The prepared [public record](../../assets/placement/observations.json) contains coordinates and hashes of unchanged screenshots. The polygon is not yet public, so reproducing these exact arenas is not currently provided; a reader's own map can test the recording method without necessarily producing the same cells.
+This belongs to a map's combat script, not the ordinary adventure console. Our experiments enumerated both armies and a separate observer of `GetUnitPosition` results. No predictor was loaded; the observer does not assign positions. Static obstacle masks were recorded separately before Start. The elemental experiment records placement entry/return attempts and mode flags before the general pass. Those observations are not inputs to the reconstruction. The prepared [public record](../../assets/placement/observations.json) contains coordinates and hashes of unchanged screenshots. The polygon is not yet public, so reproducing these exact arenas is not currently provided; a reader's own map can test the recording method without necessarily producing the same cells.

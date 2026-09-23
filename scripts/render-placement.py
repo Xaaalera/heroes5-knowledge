@@ -50,7 +50,11 @@ def render(battle, layer='positions'):
     validate_battle(battle)
     width, height = battle['grid']
     cell_size, left, top = 48, 60, 68
-    canvas_width = left + width * cell_size + 82
+    attempt_creatures = {
+        'fire': 'CREATURE_FIRE_ELEMENTAL', 'earth': 'CREATURE_EARTH_ELEMENTAL',
+        'water': 'CREATURE_WATER_ELEMENTAL', 'air': 'CREATURE_AIR_ELEMENTAL',
+    }
+    canvas_width = left + width * cell_size + (260 if layer in attempt_creatures else 82)
     canvas_height = top + height * cell_size + 58
     blocked = {tuple(cell) for cell in battle['blocked']}
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {canvas_width} {canvas_height}">',
@@ -98,6 +102,17 @@ def render(battle, layer='positions'):
         position_x, position_y = left + (x - 1) * cell_size, top + (height - 1 - y) * cell_size
         parts.append(f'<rect x="{position_x + 2}" y="{position_y + 2}" width="{2 * cell_size - 4}" height="{2 * cell_size - 4}" fill="none" stroke="#ff737b" stroke-width="4" stroke-dasharray="8 4"/>')
         parts.append(f'<text x="{position_x + cell_size}" y="{position_y + cell_size + 9}" font-size="34" fill="#ff737b">×</text>')
+    if layer in attempt_creatures:
+        attempts = [attempt for attempt in battle['native_attempts']
+                    if attempt['creature'] == attempt_creatures[layer]]
+        for index, attempt in enumerate(attempts, 1):
+            x, y = attempt['candidate']
+            position_x, position_y = left + x * cell_size, top + (height - 1 - y) * cell_size
+            color = '#a3e9a1' if attempt['success'] else '#ff737b'
+            mark = '✓' if attempt['success'] else '×'
+            parts.append(f'<rect x="{position_x + 1}" y="{position_y + 1}" width="{cell_size - 2}" height="{cell_size - 2}" fill="none" stroke="{color}" stroke-width="4"/>')
+            parts.append(f'<text x="{position_x + 9}" y="{position_y + cell_size - 5}" font-size="17" fill="{color}">{index}</text>')
+            parts.append(f'<text x="{left + width * cell_size + 18}" y="{top + index * 36}" text-anchor="start" fill="{color}">{index}. ({x}, {y}) {mark}</text>')
     parts.append('</g></svg>')
     return '\n'.join(parts) + '\n'
 
@@ -108,9 +123,11 @@ def main():
     options = parser.parse_args()
     data = json.loads((ASSETS / 'observations.json').read_text(encoding='utf-8'))
     for battle in data['battles']:
-        if not re.fullmatch(r'pack_[0-9]+', battle['id']):
+        if not re.fullmatch(r'pack_[0-9]+|elementals_trace', battle['id']):
             raise ValueError('Invalid battle identifier')
         layers = ('positions', 'footprint', 'approach') if battle['id'] == 'pack_8' else ('positions',)
+        if battle['id'] == 'elementals_trace':
+            layers = ('positions', 'approach', 'fire', 'earth', 'water', 'air')
         for layer in layers:
             path = ASSETS / f'{battle["id"]}-{layer}.svg'
             expected = render(battle, layer)
