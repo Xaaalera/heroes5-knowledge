@@ -1,6 +1,6 @@
 {
-  "diffHash": "a6214dc5e6883a58aea6ab5e91d31f63bfeeaedbd3c28f277b123f9b2b46bc9a",
-  "commitSha": "45df28b66f94f6c1d663757fd11f58df1a4ce4b0",
+  "diffHash": "03611c605a37b74b1d3aa7ddc4b97ab4ea7fc55f0fbc147a7decabb13852a727",
+  "commitSha": "a70c4dd9860a04feea0dce9797f041968ddd1eee",
   "perAgent": {
     "craft": {
       "score": 10,
@@ -203,7 +203,7 @@
           "minor": 0,
           "advisory": 8
         },
-        "one_line": "The traced elemental pass is supported by recorded mode and attempts; the older field is clearly conditional, with eight draft advisories remaining."
+        "one_line": "The publication cache guard and README align with the generated site; the scoped article review remains PASS with eight draft advisories."
       },
       "review": {
         "reviewer": "/root/review_craft",
@@ -246,11 +246,11 @@
           },
           "reproducibility": {
             "verdict": "PASS",
-            "evidence": "Ran `python placement_walkthrough.py`: elementals_trace reported context_source=recorded and matched four final cells plus all seven captured attempts; pack_12 reported context_source=assumed under an explicit depth2/no-defence/no-spread assumption and matched four saved final cells. Missing, empty or partial context now raises rather than silently assuming. `python scripts/render-placement.py --check` passed. Parent reports 8 Node, 21 Python, 19 HTML and fresh full 11 browser checks passing. The exact test map remains unpublished, so identical arenas cannot be replayed by readers."
+            "evidence": "The downloadable walkthrough still reports elementals_trace context_source=recorded with four matching cells and seven matching native attempts, and pack_12 context_source=assumed with four conditional cell matches. `python scripts/render-placement.py --check` passed in the previous exact review; the article content is unchanged. For this publication-hardening diff, parent reports configured 8 Node, 21 Python and 19 HTML checks passing after a fresh build. In generated site output I inspected, placement_walkthrough.py is present and no .pyc/__pycache__ files appear. This review does not certify all game modes or reproduce the unpublished map."
           },
           "evidence": {
             "verdict": "PASS",
-            "evidence": "Authorized raw elementals_trace grid/start and native entry/return log match public mask, five units and seven defender attempts. This is evidence for the traced ordinary pass only. The pack_12 record lacks mode flags and native attempts; its matching cells are conditional output under assumed_context, as the revised article and README now say. Archived Academy before/after PNG bytes match earlier raw captures but are unrelated to the trace. I did not rerun the game or verify all executable branches."
+            "evidence": "Previous authorized raw trace/grid/source comparison remains applicable because neither article nor prepared observations changed in this diff. The recorded elemental pass has seven native defender attempts and four final cells; the older pack_12 comparison is conditional on assumed mode flags. Current README explains that Python bytecode/cache is excluded and checked while the downloadable .py remains; generated site inspection confirmed that state. I did not rerun the game or verify all binary branches."
           },
           "applicability": {
             "verdict": "PASS",
@@ -262,7 +262,7 @@
           },
           "maintenance": {
             "verdict": "PASS",
-            "evidence": "The mandatory content standard and 22-path review protocol remain in place. Downloadable walkthrough now requires recorded or explicitly assumed mode context; CLI output exposes context_source and tests cover missing/empty/partial context. Both article languages and README explain the behavior, while observations.json remains the canonical geometry/trace record. Eight existing draft advisories remain; any further diff needs another exact review."
+            "evidence": "README now documents publication treatment for the downloadable Python reconstruction. mkdocs.yml excludes __pycache__ and .pyc paths; check_site.py rejects bytecode/cache if found in generated output. Parent reports this check first caught a real copied cache file and then passed after exclusion/rebuild. No article, diagrams, or canonical observations changed; all 22 cumulative Markdown paths remain covered and eight existing draft advisories remain."
           }
         },
         "findings": [
@@ -311,5 +311,5 @@
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-09-23T21:10:09.353Z"
+  "timestamp": "2026-09-23T21:20:17.917Z"
 }
