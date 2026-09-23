@@ -3,7 +3,7 @@ export const documentationCriteria = [
   'evidence', 'applicability', 'translations', 'maintenance',
 ];
 
-export const validateDocsReview = (review, files) => {
+export const validateDocsReview = (review, files, score) => {
   if (!review || typeof review.reviewer !== 'string' || !review.reviewer.trim()) {
     throw new Error('Docs review requires the actual independent reviewer identity.');
   }
@@ -29,5 +29,11 @@ export const validateDocsReview = (review, files) => {
     if (['blocker', 'major'].includes(finding.severity)) {
       throw new Error('Docs review has blocking findings. Fix and review the final diff again.');
     }
+  }
+  const expectedScore = Math.max(0, 10 - 3 * review.findings.filter((finding) => finding.severity === 'major').length
+    - 20 * review.findings.filter((finding) => finding.severity === 'blocker').length
+    - review.findings.filter((finding) => finding.severity === 'minor').length);
+  if (score !== expectedScore) {
+    throw new Error(`Docs score must match its findings: expected ${expectedScore}.`);
   }
 };

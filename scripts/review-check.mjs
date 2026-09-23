@@ -88,7 +88,7 @@ for (const lens of config.agents.filter((agent) => agent.enabled !== false)) {
     throw new Error(`Missing or insufficient review result for ${lens.name}.`);
   }
 }
-validateDocsReview(attestation.perAgent.docs.review, documentationFiles);
+validateDocsReview(attestation.perAgent.docs.review, documentationFiles, attestation.perAgent.docs.score);
 execFileSync(
   'git',
   ['merge-base', '--is-ancestor', attestation.commitSha, 'HEAD'],
