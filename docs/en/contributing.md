@@ -1,4 +1,6 @@
 ---
+content_type: meta
+status: draft
 faction: inferno
 title: Suggest an edit
 lang: en

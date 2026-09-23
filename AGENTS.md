@@ -2,6 +2,8 @@
 
 ## RU
 
+- Обязательный стандарт статей — [CONTRIBUTING.md](CONTRIBUTING.md). Читать перед написанием и docs-review. Оценивать все изменённые статьи по его приёмке; зелёные машинные проверки не подтверждают факты. Не менять `draft` на `verified` без независимой содержательной проверки.
+
 - Это публичная личная база знаний Xaaalera о Героях. Не называть её официальной вики или состоявшимся сообществом.
 - Статьи — только `docs/`, английские пары — `docs/en/`. Общие факты менять в обеих версиях. UI-строки — `extra.labels` в `mkdocs.yml`.
 - `theme/` и `styles/` отвечают за представление. Сохранять Markdown переносимым; не дублировать статьи в HTML.
@@ -12,6 +14,8 @@
 - GitHub Pages — первый этап. Правки через GitHub, а не через встроенный wiki-редактор. Не обещать реализованный MCP или SDK.
 
 ## EN
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) owns the mandatory article standard. Read it before authoring and docs-review; assess every changed article against its acceptance criteria. Machine checks do not establish factual correctness. Never promote draft to verified without independent content verification.
 
 - This is Xaaalera’s public personal knowledge base about Heroes. Do not present it as an official wiki or an established community.
 - Articles live only in `docs/`, with English counterparts in `docs/en/`. Keep facts aligned in both languages. UI strings live in `mkdocs.yml` under `extra.labels`.

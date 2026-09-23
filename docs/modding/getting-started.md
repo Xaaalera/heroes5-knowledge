@@ -1,4 +1,6 @@
 ---
+content_type: explanation
+status: draft
 faction: academy
 title: Первый эксперимент
 lang: ru

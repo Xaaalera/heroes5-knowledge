@@ -28,6 +28,8 @@ python -m mkdocs serve
 
 `site/` и скомпилированный CSS не редактируются и не коммитятся. После правки SCSS выполнить `npm run styles`; MkDocs serve следит за статьями и темой. Публикация Pages выполняется workflow этой репы.
 
+Обязательные требования к структуре, доказательствам, статусам и редакторской приёмке: [стандарт в CONTRIBUTING](CONTRIBUTING.md). Все стартовые статьи отмечены `draft`; успешная сборка не подтверждает их факты.
+
 ### Проверка и ограничения
 
 Проверка сборки ищет сломанные ссылки, пропавшие переводы и приватные пути. Playwright проверяет навигацию, поиск, переключение языка и переполнение на пяти ширинах. Результаты скриншотов остаются локальными тестовыми артефактами.
@@ -44,7 +46,9 @@ The site URL and commands above apply to both languages. Requires Python 3.10+ a
 
 Presentation lives in `theme/` and `styles/`; generated `site/` and CSS are not committed. Run `npm run styles` after changing SCSS. MkDocs serve watches articles and the theme; this repo's Pages workflow publishes the site.
 
-Checks cover local links, translations and private paths. Browser tests exercise navigation, search, language switching and overflow at five widths. Screenshots remain local test artifacts.
+The mandatory article standard and editorial acceptance live in [CONTRIBUTING](CONTRIBUTING.md). All seed pages are draft; successful builds do not verify their factual claims.
+
+Checks cover content metadata, local links, translations and private paths. Browser tests exercise navigation, search, language switching and overflow at five widths. Screenshots remain local test artifacts.
 
 The initial articles are not a complete engine reference. Art is original, not extracted game resources. Direct wiki editing is not available; proposed changes use GitHub. See the shared contribution, agent and asset documentation links above.
 

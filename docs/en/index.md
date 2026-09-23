@@ -1,4 +1,6 @@
 ---
+content_type: landing
+status: draft
 faction: haven
 title: Xaaalera’s knowledge base about Heroes
 lang: en

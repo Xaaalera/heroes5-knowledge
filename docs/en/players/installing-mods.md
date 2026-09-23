@@ -1,4 +1,6 @@
 ---
+content_type: how-to
+status: draft
 faction: fortress
 title: Installing and removing a mod
 lang: en

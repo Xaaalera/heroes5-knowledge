@@ -1,4 +1,6 @@
 ---
+content_type: explanation
+status: draft
 faction: sylvan
 title: Перед первым модом
 lang: ru

@@ -1,4 +1,6 @@
 ---
+content_type: reference
+status: draft
 faction: necropolis
 title: PAK, H5U, XDB и другие форматы
 lang: ru

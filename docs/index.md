@@ -1,4 +1,6 @@
 ---
+content_type: landing
+status: draft
 faction: haven
 title: База знаний Xaaalera о Героях
 lang: ru

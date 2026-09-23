@@ -1,4 +1,6 @@
 ---
+content_type: meta
+status: draft
 faction: stronghold
 title: О базе знаний
 lang: ru

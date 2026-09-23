@@ -1,4 +1,6 @@
 ---
+content_type: how-to
+status: draft
 faction: dungeon
 title: Verifying a change
 lang: en

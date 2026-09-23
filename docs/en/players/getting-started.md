@@ -1,4 +1,6 @@
 ---
+content_type: explanation
+status: draft
 faction: sylvan
 title: Before your first mod
 lang: en
