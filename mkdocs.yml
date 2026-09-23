@@ -1,0 +1,142 @@
+site_name: База знаний Xaaalera о Героях
+site_description: Личные заметки, исследования и руководства по Heroes V.
+site_url: https://xaaalera.github.io/heroes5-knowledge/
+repo_url: https://github.com/Xaaalera/heroes5-knowledge
+edit_uri: edit/main/docs/
+theme:
+  name: null
+  custom_dir: theme
+  static_templates:
+  - 404.html
+plugins:
+- search:
+    lang:
+    - ru
+    - en
+markdown_extensions:
+- admonition
+- attr_list
+- fenced_code
+- tables
+- toc:
+    permalink: false
+nav:
+- Главная: index.md
+- Игрокам:
+  - С чего начать: players/getting-started.md
+  - Установка модов: players/installing-mods.md
+- Моддерам:
+  - Первый эксперимент: modding/getting-started.md
+  - Проверка изменений: modding/verification.md
+- Справочник:
+  - Форматы файлов: reference/formats.md
+- О базе: about/index.md
+- Предложить правку: contributing.md
+- English:
+  - Home: en/index.md
+  - Players:
+    - Getting started: en/players/getting-started.md
+    - Installing mods: en/players/installing-mods.md
+  - Mod creators:
+    - First experiment: en/modding/getting-started.md
+    - Verification: en/modding/verification.md
+  - File formats: en/reference/formats.md
+  - About: en/about/index.md
+  - Contributing: en/contributing.md
+extra:
+  labels:
+    ru:
+      brand: База знаний Xaaalera
+      brand_context: О ГЕРОЯХ · HEROES V
+      home: Главная
+      players: Игрокам
+      modding: Моддерам
+      reference: Справочник
+      about: О базе
+      contribute: Предложить правку
+      search: Найти в базе
+      search_placeholder: Например, установка модов или XDB…
+      search_hint: Поиск по заголовкам и тексту статей
+      search_empty: Ничего не найдено. Попробуй другой запрос.
+      search_error: Поиск недоступен. Воспользуйся разделами сайта.
+      close: Закрыть
+      menu: Меню
+      skip: Перейти к содержимому
+      contents: На этой странице
+      edit: Исправить на GitHub
+      related: Продолжить чтение
+      footer: Личные заметки и исследования Xaaalera. Неофициальная база по Heroes
+        V.
+      made: Сделано с любопытством к игре.
+      source: Исходники базы
+      not_found: Эта страница ещё не нанесена на карту.
+      return_home: Вернуться на главную
+      language: English version
+      language_short: EN
+      sections: Выбери свой путь
+      sections_note: От первого мода до устройства игровых файлов.
+      routes: Маршруты по базе
+      highlights: На полях кодекса
+      preview_notice: Предварительный показ оформления. Статьи — стартовые черновики,
+        содержание ещё дорабатывается.
+    en:
+      brand: Xaaalera’s knowledge base
+      brand_context: ABOUT HEROES · HEROES V
+      home: Home
+      players: Players
+      modding: Mod creators
+      reference: Reference
+      about: About
+      contribute: Suggest an edit
+      search: Search the knowledge base
+      search_placeholder: For example, installing mods or XDB…
+      search_hint: Search article titles and content
+      search_empty: Nothing found. Try another search.
+      search_error: Search is unavailable. Browse the site sections instead.
+      close: Close
+      menu: Menu
+      skip: Skip to content
+      contents: On this page
+      edit: Edit on GitHub
+      related: Continue reading
+      footer: Personal notes and research by Xaaalera. An unofficial Heroes V knowledge
+        base.
+      made: Made with curiosity about the game.
+      source: Site source
+      not_found: This page is not on the map yet.
+      return_home: Return home
+      language: Русская версия
+      language_short: RU
+      sections: Choose your path
+      sections_note: From a first mod to the files that make the game work.
+      routes: Paths through the knowledge base
+      highlights: In the margins
+      preview_notice: Design preview. Articles are initial drafts; their content is
+        still being developed.
+  worlds:
+    haven:
+      ru: Орден Порядка
+      en: Haven
+    sylvan:
+      ru: Лесной Союз
+      en: Sylvan
+    fortress:
+      ru: Северные Кланы
+      en: Fortress
+    academy:
+      ru: Академия Волшебства
+      en: Academy
+    dungeon:
+      ru: Лига Теней
+      en: Dungeon
+    necropolis:
+      ru: Некрополис
+      en: Necropolis
+    stronghold:
+      ru: Великая Орда
+      en: Stronghold
+    inferno:
+      ru: Инферно
+      en: Inferno
+watch:
+- theme

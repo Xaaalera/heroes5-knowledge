@@ -1,0 +1,11 @@
+node_modules/
+.venv/
+site/
+theme/assets/site.css
+__pycache__/
+.local/
+.env
+.env.*
+test-results/
+playwright-report/
+.review/work/

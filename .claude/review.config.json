@@ -1,0 +1,46 @@
+{
+  "persona": "plain",
+  "base": "6bfce19e12bcfe327593a3e37f9f21401e1b5777",
+  "secretAllowlist": [],
+  "agents": [
+    {
+      "name": "craft",
+      "threshold": 7,
+      "skills": []
+    },
+    {
+      "name": "architecture",
+      "threshold": 8,
+      "skills": []
+    },
+    {
+      "name": "tests",
+      "threshold": 7,
+      "skills": []
+    },
+    {
+      "name": "docs",
+      "threshold": 8,
+      "skills": []
+    },
+    {
+      "name": "security",
+      "threshold": 9,
+      "skills": []
+    }
+  ],
+  "gates": [
+    {
+      "name": "build",
+      "command": "npm run build"
+    },
+    {
+      "name": "checks",
+      "command": "npm run check"
+    },
+    {
+      "name": "browser",
+      "command": "npm test"
+    }
+  ]
+}

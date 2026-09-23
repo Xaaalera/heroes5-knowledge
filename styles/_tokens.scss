@@ -1,0 +1,34 @@
+$color-ink: #111b20;
+$color-deep: #0b1419;
+$color-panel: #18262c;
+$color-panel-hover: #20343a;
+$color-line: #34434a;
+$color-gold: #dfbe78;
+$color-gold-light: #f7dda0;
+$color-muted: #a6b6b9;
+$color-text: #e7ece3;
+$color-teal: #8cbfb0;
+$color-purple: #b1a3ce;
+$color-paper: #ded0b1;
+$color-paper-ink: #302f27;
+$space-xs: 0.375rem;
+$space-sm: 0.75rem;
+$space-md: 1.25rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
+$space-section: 4.5rem;
+$content-width: 76rem;
+$breakpoint-tablet: 48rem;
+$breakpoint-desktop: 68rem;
+$font-body: 'Golos Text', 'Segoe UI', sans-serif;
+$font-pixel: 'Press Start 2P', monospace;
+$faction-accents: (
+  haven: #efcc85,
+  sylvan: #b4dfb7,
+  fortress: #bfd9ed,
+  academy: #94d7ed,
+  dungeon: #d2b5f0,
+  necropolis: #a1dfc7,
+  stronghold: #eac49a,
+  inferno: #f4b298,
+);

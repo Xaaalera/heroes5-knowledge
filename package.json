@@ -1,0 +1,24 @@
+{
+  "name": "heroes5-knowledge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "styles": "sass styles/main.scss theme/assets/site.css --no-source-map --style=compressed",
+    "build": "npm run styles && python -m mkdocs build --strict",
+    "test": "playwright test",
+    "check": "python scripts/check_site.py && node --check theme/assets/site.js",
+    "review:info": "node scripts/review-check.mjs --info",
+    "review:secrets": "review-gate --secrets-only",
+    "review:attest": "node scripts/review-check.mjs --attest",
+    "review:gate": "node scripts/review-check.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "bladeforge-review-harness": "0.3.0",
+    "sass": "1.105.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

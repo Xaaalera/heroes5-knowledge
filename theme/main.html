@@ -1,0 +1,106 @@
+{% set language = page.meta.lang|default('ru') if page else 'ru' %}
+{% set labels = config.extra.labels[language] %}
+{% set prefix = 'en/' if language == 'en' else '' %}
+{% set is_home = page and page.meta.home %}
+{% set faction = page.meta.faction|default('haven') if page else 'haven' %}
+{% set world = config.extra.worlds[faction] %}
+<!doctype html>
+<html lang="{{ language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#111b20">
+  {% if not page %}<base href="{{ config.site_url }}">{% endif %}
+  <title>{% if page and not is_home %}{{ page.title }} · {% endif %}{{ labels.brand }}</title>
+  <meta name="description" content="{{ page.meta.description|default(config.site_description) if page else config.site_description }}">
+  {% if page and page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
+  <link rel="icon" href="{{ 'assets/crest.svg'|url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ 'assets/site.css'|url }}">
+  <script src="{{ 'assets/site.js'|url }}" defer></script>
+</head>
+<body class="{% if is_home %}page-home{% else %}page-article{% endif %}" data-faction="{{ faction }}" data-search-index="{{ 'search/search_index.json'|url }}" data-search-base="{{ ''|url }}" data-language="{{ language }}">
+  <div class="world-background" aria-hidden="true"><img src="{{ ('assets/worlds/' ~ faction ~ '.png')|url }}" width="1920" height="1080" alt="" fetchpriority="high"></div>
+  <div class="world-caption"><span aria-hidden="true">✦</span> {{ world[language] }}</div>
+  <a class="skip-link" href="#main">{{ labels.skip }}</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="{{ (prefix)|url }}">
+        <img class="brand__crest" src="{{ 'assets/crest.svg'|url }}" width="32" height="36" alt="">
+        <span><strong>{{ labels.brand }}</strong><small>{{ labels.brand_context }}</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">{{ labels.menu }} <span aria-hidden="true">☰</span></button>
+      <nav id="site-navigation" class="navigation" aria-label="{{ labels.menu }}">
+        {% for key, target in [('players', 'players/getting-started/'), ('modding', 'modding/getting-started/'), ('reference', 'reference/formats/'), ('about', 'about/')] %}
+        <a href="{{ (prefix ~ target)|url }}" {% if page and page.meta.section == key %}aria-current="true"{% endif %}>{{ labels[key] }}</a>
+        {% endfor %}
+      </nav>
+      <div class="site-header__actions">
+        <button class="search-trigger" type="button" data-open-search aria-label="{{ labels.search }}"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h9v2H5v7H3zm9 2h2v7h-2zM5 12h7v2H5zm8 1h3v3h2v2h-4v-3h-1z"/></svg><span>{{ labels.search }}</span><kbd>/</kbd></button>
+        <a class="language-link" href="{{ page.meta.translation|url if page and page.meta.translation else 'en/'|url }}" lang="{{ 'en' if language == 'ru' else 'ru' }}" aria-label="{{ labels.language }}">{{ labels.language_short }}</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="site-main" tabindex="-1">
+    <p class="section-heading">{{ labels.preview_notice }}</p>
+    {% if is_home %}
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="eyebrow"><span class="status-light" aria-hidden="true"></span>{{ page.meta.eyebrow }}</p>
+        <h1 id="hero-title">{% for line in page.meta.hero_title %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</h1>
+        <p class="hero__description">{{ page.meta.description }}</p>
+        <div class="hero__actions"><a class="button button--gold" href="{{ (prefix ~ 'players/getting-started/')|url }}">{{ page.meta.primary_action }} <span aria-hidden="true">→</span></a><a class="button button--quiet" href="{{ (prefix ~ 'modding/getting-started/')|url }}">{{ page.meta.secondary_action }} <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero__caption"><span aria-hidden="true">✦</span> {{ page.meta.art_caption }}</div>
+    </section>
+
+    <section class="path-section" aria-labelledby="paths-title">
+      <div class="section-heading"><div><p class="eyebrow">{{ labels.routes }}</p><h2 id="paths-title">{{ labels.sections }}</h2></div><p>{{ labels.sections_note }}</p></div>
+      <div class="path-grid">
+        {% for card in page.meta.paths %}
+        <a class="path-card path-card--{{ card.icon }}" href="{{ card.href|url }}">
+          <span class="path-card__number" aria-hidden="true">0{{ loop.index }}</span>
+          <svg class="pixel-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="{{ 'assets/icons.svg'|url }}#{{ card.icon }}"></use></svg>
+          <h3>{{ card.title }}</h3><p>{{ card.description }}</p><span class="path-card__link">{{ card.action }} <span aria-hidden="true">→</span></span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="reading-section" aria-labelledby="reading-title">
+      <div class="reading-section__list"><div class="section-heading"><div><p class="eyebrow">{{ page.meta.reading_eyebrow }}</p><h2 id="reading-title">{{ page.meta.reading_title }}</h2></div><span class="small-label">{{ page.meta.edition }}</span></div>
+        {% for entry in page.meta.reading %}<a class="reading-link" href="{{ entry.href|url }}"><span class="reading-link__index" aria-hidden="true">{{ '%02d'|format(loop.index) }}</span><span><span class="reading-link__tag">{{ entry.tag }}</span><strong>{{ entry.title }}</strong><small>{{ entry.description }}</small></span><span class="reading-link__arrow" aria-hidden="true">↗</span></a>{% endfor %}
+      </div>
+      <aside class="field-note"><svg class="pixel-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="{{ 'assets/icons.svg'|url }}#quill"></use></svg><p class="eyebrow">{{ labels.highlights }}</p><h2>{{ page.meta.note_title }}</h2><div class="field-note__body">{{ page.content }}</div><a href="{{ (prefix ~ 'about/')|url }}">{{ page.meta.note_action }} <span aria-hidden="true">→</span></a></aside>
+    </section>
+    <section class="contribute-banner"><span class="contribute-banner__symbol" aria-hidden="true">+</span><div><h2>{{ page.meta.contribute_title }}</h2><p>{{ page.meta.contribute_text }}</p></div><a class="button button--quiet" href="{{ (prefix ~ 'contributing/')|url }}">{{ labels.contribute }} <span aria-hidden="true">↗</span></a></section>
+    {% else %}
+    <div class="article-layout">
+      <aside class="article-navigation" aria-label="{{ labels.menu }}">
+        <a class="back-link" href="{{ (prefix)|url }}">← {{ labels.home }}</a>
+        {% for key in ['players', 'modding', 'reference'] %}
+        <h2>{{ labels[key] }}</h2>
+        {% for item in pages if item.page and item.page.meta.lang|default('ru') == language and item.page.meta.section == key %}<a href="{{ item.page.url|url }}" {% if page and item.page.url == page.url %}aria-current="page"{% endif %}>{{ item.page.title }}</a>{% endfor %}
+        {% endfor %}
+        <a class="back-link" href="{{ (prefix ~ 'contributing/')|url }}">{{ labels.contribute }} ↗</a>
+      </aside>
+      <article class="article-content">
+        {% if page %}<div class="article-content__meta"><span class="eyebrow">{{ page.meta.kicker|default(labels.brand_context) }}</span>{% if page.meta.updated %}<span class="small-label">{{ page.meta.updated }}</span>{% endif %}</div>{{ page.content }}
+        <div class="article-content__edit"><a href="{{ page.edit_url }}">{{ labels.edit }} ↗</a></div>
+        {% else %}<h1>404</h1><p>{{ labels.not_found }}</p><a class="button button--gold" href="{{ ''|url }}">{{ labels.return_home }}</a>{% endif %}
+      </article>
+      {% if page and page.toc %}<aside class="article-toc"><p>{{ labels.contents }}</p><nav aria-label="{{ labels.contents }}">{% for entry in page.toc %}{% for child in entry.children %}<a href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}</nav></aside>{% endif %}
+    </div>
+    {% endif %}
+  </main>
+  <footer class="site-footer"><div><img src="{{ 'assets/crest.svg'|url }}" width="20" height="24" alt=""><p>{{ labels.footer }}</p></div><span>{{ labels.made }}</span><a href="{{ config.repo_url }}">{{ labels.source }} ↗</a></footer>
+
+  <dialog class="search-dialog" aria-labelledby="search-title" data-empty="{{ labels.search_empty }}" data-error="{{ labels.search_error }}" data-hint="{{ labels.search_hint }}">
+    <form method="dialog"><label id="search-title" for="search-query">{{ labels.search }}</label><button type="submit" aria-label="{{ labels.close }}">×</button></form>
+    <input id="search-query" type="search" autocomplete="off" placeholder="{{ labels.search_placeholder }}">
+    <p class="search-dialog__status" role="status">{{ labels.search_hint }}</p>
+    <ul class="search-dialog__results"></ul>
+  </dialog>
+</body>
+</html>
