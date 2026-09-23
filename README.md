@@ -57,3 +57,5 @@ The initial articles are not a complete engine reference. Art is original, not e
 Восемь фракционных замков служат фоном всего окна. Поле `faction` в метаданных статьи выбирает изображение из `docs/assets/worlds/` и цветовой акцент. Фон меняется при навигации; обновление страницы и смена языка сохраняют фракцию. Названия фракций: `extra.worlds` в `mkdocs.yml`.
 
 Eight faction castles fill the viewport behind the content. Article metadata `faction` selects an image from `docs/assets/worlds/` and its accent color. Navigation changes the background; reloads and language changes preserve the faction. Localized names live in `mkdocs.yml` under `extra.worlds`.
+
+Перед push / Before push: `npm ci` installs the Git pre-push gate. Follow the independent agent protocol in [CONTRIBUTING](CONTRIBUTING.md): a docs score alone is insufficient; the hash-bound report must cover all eight criteria and changed Markdown files. / `npm ci` устанавливает pre-push gate. Одной оценки docs недостаточно: нужен независимый отчёт по восьми критериям и всем изменённым Markdown-файлам.

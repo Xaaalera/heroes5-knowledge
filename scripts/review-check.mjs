@@ -1,5 +1,6 @@
 import { execFileSync, execSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
+import { validateDocsReview, documentationCriteria } from './review-docs.mjs';
 import {
   evaluateGate,
   getCumulativeDiff,
@@ -33,12 +34,21 @@ if (forbidden.length > 0) {
     `Local game or generated files are tracked: ${forbidden.join(', ')}`,
   );
 }
+const documentationFiles = execFileSync('git', [
+  'diff', '--name-only', '-z', base, 'HEAD', '--', '*.md',
+], { encoding: 'utf8' }).split('\0').filter(Boolean);
 const diff = getCumulativeDiff(base);
 const hash = hashDiff(diff);
 const config = loadConfig();
 if (process.argv.includes('--info')) {
-  console.log(JSON.stringify({ base, hash, config }));
+  console.log(JSON.stringify({ base, hash, config, documentationFiles, documentationCriteria }));
   process.exit(0);
+}
+const dirtyPaths = execFileSync('git', ['status', '--porcelain', '--untracked-files=normal'], {
+  encoding: 'utf8',
+}).split('\n').filter((line) => line && !line.slice(3).startsWith('.review/attestations/'));
+if (dirtyPaths.length) {
+  throw new Error('Commit the source changes before reviewing or pushing.');
 }
 const attestArgument = process.argv.indexOf('--attest');
 const resultsPath =
@@ -78,6 +88,7 @@ for (const lens of config.agents.filter((agent) => agent.enabled !== false)) {
     throw new Error(`Missing or insufficient review result for ${lens.name}.`);
   }
 }
+validateDocsReview(attestation.perAgent.docs.review, documentationFiles);
 execFileSync(
   'git',
   ['merge-base', '--is-ancestor', attestation.commitSha, 'HEAD'],

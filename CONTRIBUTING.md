@@ -110,3 +110,36 @@ Run README build/check commands before a PR. Test theme changes on wide and narr
 Before a push, obtain independent judgments for the five configured lenses: craft, architecture, tests, docs and security. Each reviews the exact base-to-HEAD diff; after fixes, review the final diff again. Review info reports the base/hash. Pass actual judgment JSON to review:attest; the example above is a format example, not real scores. Commit the resulting attestation separately and run review:gate.
 
 The default review base is pinned to the initial commit; an explicit --base may override it. CI uses the pinned base, so any baseline update must be coordinated with review.
+
+## Independent pre-push review / Независимое ревью перед push
+
+### RU
+
+Перед **каждым push** автор запускает отдельного read-only агента docs-review. Контракт — обязательный стандарт выше. Вход: `npm run review:info --silent` (base/hash/список Markdown-файлов/критерии), точный diff и результаты проверок. Агент читает каждую изменённую статью вместе с относящимися к ней источниками. Автор не подменяет его оценку собственной.
+
+Агент возвращает `docs.review` внутри результата линзы docs:
+
+- `reviewer`: реальный идентификатор агента/сеанса; не заявлять криптографическое подтверждение личности.
+- `files`: все Markdown-пути из `documentationFiles` команды review:info, включая удалённые (оценить последствия удаления).
+- `criteria`: ровно именованные критерии `purpose`, `structure`, `specificity`, `reproducibility`, `evidence`, `applicability`, `translations`, `maintenance`. Для каждого — `verdict` (`PASS` или обоснованное `N/A`) и непустой `evidence` с конкретными проверенными примерами/ограничениями. Отрицательная оценка не преобразуется в PASS ради push.
+- `findings`: список `{severity, path, detail}`; пустой список допустим только если проблем не найдено. Blocker/Major блокируют push. Minor учитываются в оценке. Известные недостатки явно маркированного черновика допускаются как advisory только в режиме предварительного показа; они не означают, что статья содержательно соответствует стандарту. Новая ложная пометка verified или замаскированный черновик — блокирующая ошибка.
+
+Критерии означают: обещание/ответ; подходящий тип и связность; отсутствие воды и точность; выполнимость; происхождение фактов; версия/условия; паритет RU/EN; актуальность, статус и один источник данных. В evidence перечислить, что не было проверено; наличие источника не равняется проверке его содержания.
+
+После исправлений агент проверяет финальный diff заново (не более трёх автоматических циклов). Если агент недоступен или результат FAIL, push остаётся заблокирован; автопроверки не заменяют агента. Остальные включённые линзы по-прежнему обязательны.
+
+`npm ci` устанавливает `.githooks/pre-push` через prepare; отдельно: `npm run prepare`. Существующий чужой hooksPath не перезаписывается: установка останавливается для явной интеграции. Хук проверяет только push текущего HEAD; для другой ветки сначала переключиться на неё. Отчёт и исходники должны быть закоммичены. Полный отчёт сохраняется внутри hash-привязанной аттестации через существующий review:attest. Изменение diff делает старую аттестацию непригодной. CI перед публикацией повторяет тот же gate.
+
+Хук не запускает платный API и не притворяется агентом: он проверяет результат уже выполненного независимого ревью. Git позволяет сознательно обойти локальный хук; CI блокирует публикацию без правильной аттестации, но это не серверный запрет записи в ветку. Аттестация — проверяемая запись работы, не защита от намеренно сфабрикованного отчёта.
+
+### EN
+
+Before every push, the author runs a separate read-only docs-review agent under the mandatory standard above. Input: review:info base/hash/documentationFiles/criteria, exact diff and machine results. The agent reads every changed article and relevant evidence; the author cannot substitute their own judgment.
+
+Return `docs.review` in the docs lens result: actual `reviewer` identity; `files` covering all listed Markdown paths (including deletion impacts); `criteria` keyed by purpose, structure, specificity, reproducibility, evidence, applicability, translations, maintenance, each with PASS or justified N/A and concrete nonempty evidence; and explicit `findings` entries with severity/path/detail. Report what was not verified. The eight dimensions cover promise, structure, precision, execution, provenance, versions, translation parity and maintenance.
+
+Blocker/Major findings block push; Minor affects scoring. Existing explicitly labelled preview-draft gaps may be advisory but are not content certification. False verified status or disguised drafts block. Never turn FAIL into PASS to permit a push. Re-review the final diff after fixes, at most three automatic cycles. If the agent is unavailable, review remains pending. Other enabled lenses remain required.
+
+npm ci installs the tracked pre-push hook via prepare; npm run prepare installs it separately. Existing non-project hooksPath is preserved and requires explicit integration. Push the currently checked-out HEAD only. Commit source and attestation; review:attest stores the complete report in the hash-bound record. Changed diffs invalidate old records. CI runs the same publication gate.
+
+The hook validates an actual prior agent review; it does not invoke a paid API or impersonate a reviewer. Local hooks can deliberately be bypassed. CI protects publication, not server-side branch writes. The record is not cryptographic proof against a fabricated review.

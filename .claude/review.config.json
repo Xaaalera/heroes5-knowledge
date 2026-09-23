@@ -21,7 +21,10 @@
     {
       "name": "docs",
       "threshold": 8,
-      "skills": []
+      "skills": [],
+      "rules": [
+        "Read CONTRIBUTING.md mandatory standard and independent review protocol. Assess every Markdown path from review:info; return docs.review with all eight criteria, evidence and findings. Do not certify drafts or invent reviewer identity."
+      ]
     },
     {
       "name": "security",

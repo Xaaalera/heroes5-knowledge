@@ -7,11 +7,12 @@
     "styles": "sass styles/main.scss theme/assets/site.css --no-source-map --style=compressed",
     "build": "npm run styles && python -m mkdocs build --strict",
     "test": "playwright test",
-    "check": "python -m unittest discover -s tests -p test_*.py && python scripts/check_site.py && node --check theme/assets/site.js",
+    "check": "node --test scripts/review-docs.test.mjs && python -m unittest discover -s tests -p test_*.py && python scripts/check_site.py && node --check theme/assets/site.js",
     "review:info": "node scripts/review-check.mjs --info",
     "review:secrets": "review-gate --secrets-only",
     "review:attest": "node scripts/review-check.mjs --attest",
-    "review:gate": "node scripts/review-check.mjs"
+    "review:gate": "node scripts/review-check.mjs",
+    "prepare": "node scripts/install-hooks.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",
