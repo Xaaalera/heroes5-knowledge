@@ -25,6 +25,7 @@ nav:
 - Игрокам:
   - С чего начать: players/getting-started.md
   - Установка модов: players/installing-mods.md
+  - Как игра расставляет армию: players/army-placement.md
 - Моддерам:
   - Первый эксперимент: modding/getting-started.md
   - Проверка изменений: modding/verification.md
@@ -37,6 +38,7 @@ nav:
   - Players:
     - Getting started: en/players/getting-started.md
     - Installing mods: en/players/installing-mods.md
+    - How the game deploys armies: en/players/army-placement.md
   - Mod creators:
     - First experiment: en/modding/getting-started.md
     - Verification: en/modding/verification.md

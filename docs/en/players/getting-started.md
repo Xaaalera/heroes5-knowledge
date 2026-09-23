@@ -36,3 +36,5 @@ Install one mod and run a short scenario where its effect is visible. Installing
 ## Next step
 
 Continue with [installing mods](installing-mods.md). For unfamiliar extensions, see the [file format reference](../reference/formats.md).
+
+[How the game deploys a neutral army — illustrated explanation](army-placement.md).

@@ -1,0 +1,95 @@
+{
+    "date":  "2026-09-23",
+    "map":  "WorkshopPolygon",
+    "predictor_loaded":  false,
+    "capture_method":  "Game frames after Start; opening actions may have occurred. Coordinates recorded separately by Start before turns.",
+    "exe_sha256":  "88c9dc6107b9bced0649924a86360f1c56397ee00de0413f6f2b08f865ed5519",
+    "battles":  [
+                    {
+                        "id":  "pack_8",
+                        "units":  [
+                                      {
+                                          "creature":  "CREATURE_GENIE",
+                                          "cell":  [
+                                                       13,
+                                                       8
+                                                   ]
+                                      },
+                                      {
+                                          "creature":  "CREATURE_IRON_GOLEM",
+                                          "cell":  [
+                                                       12,
+                                                       4
+                                                   ]
+                                      },
+                                      {
+                                          "creature":  "CREATURE_GREMLIN",
+                                          "cell":  [
+                                                       13,
+                                                       9
+                                                   ]
+                                      }
+                                  ],
+                        "image":  "pack_8.png",
+                        "image_sha256":  "978b09a8dcdfa3f8015021830fa298ace53f335ed290b5d84b842be2bf6b5d7c",
+                        "sequence":  1
+                    },
+                    {
+                        "id":  "pack_15",
+                        "units":  [
+                                      {
+                                          "creature":  "CREATURE_GRAND_ELF",
+                                          "cell":  [
+                                                       13,
+                                                       3
+                                                   ]
+                                      },
+                                      {
+                                          "creature":  "CREATURE_ARCHER",
+                                          "cell":  [
+                                                       13,
+                                                       1
+                                                   ]
+                                      },
+                                      {
+                                          "creature":  "CREATURE_PEASANT",
+                                          "cell":  [
+                                                       12,
+                                                       1
+                                                   ]
+                                      },
+                                      {
+                                          "creature":  "CREATURE_PIT_FIEND",
+                                          "cell":  [
+                                                       13,
+                                                       5
+                                                   ]
+                                      },
+                                      {
+                                          "creature":  "CREATURE_INFERNAL_SUCCUBUS",
+                                          "cell":  [
+                                                       13,
+                                                       2
+                                                   ]
+                                      },
+                                      {
+                                          "creature":  "CREATURE_CERBERI",
+                                          "cell":  [
+                                                       12,
+                                                       2
+                                                   ]
+                                      },
+                                      {
+                                          "creature":  "CREATURE_FAMILIAR",
+                                          "cell":  [
+                                                       12,
+                                                       3
+                                                   ]
+                                      }
+                                  ],
+                        "image":  "pack_15.png",
+                        "image_sha256":  "69f40af377d1aae8e3f1ad1df2de770db87a34834397f1ab8cff1e9c041fd9c4",
+                        "sequence":  2
+                    }
+                ]
+}
