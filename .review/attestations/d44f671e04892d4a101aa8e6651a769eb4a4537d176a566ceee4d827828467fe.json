@@ -1,6 +1,6 @@
 {
-  "diffHash": "23b0911df6fc82993eaf4c4478db9723067c381980b1979d5b4a575cabf66775",
-  "commitSha": "b71d2ae2cbca465c9f70480d948b97d3e70dd541",
+  "diffHash": "d44f671e04892d4a101aa8e6651a769eb4a4537d176a566ceee4d827828467fe",
+  "commitSha": "5cc18db56fcf78481b9f19851309328823aa2fa4",
   "perAgent": {
     "craft": {
       "score": 10,
@@ -81,6 +81,26 @@
           "scenario": null,
           "confidence": "high",
           "evidence": "Compared the page text and its new draft/type metadata with CONTRIBUTING's mandatory article standard."
+        },
+        {
+          "severity": "advisory",
+          "why_this_severity": "Explicitly disclosed limitation in an initial draft preview; no claim of complete reproducibility or verified status.",
+          "where": "docs/players/army-placement.md",
+          "occurrences": 1,
+          "problem": "The exact WorkshopPolygon arena is not public, so readers cannot reproduce the two pictured formations from the article alone. The draft discloses this and supplies a Start callback for testing coordinates on a reader's own map; the specific algorithm claims are not independently runtime-verified by this review.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared both new article texts with the authorized research note, raw capture record, prepared public JSON, images and the mandatory content standard."
+        },
+        {
+          "severity": "advisory",
+          "why_this_severity": "Explicitly disclosed limitation in an initial draft preview; no claim of complete reproducibility or verified status.",
+          "where": "docs/en/players/army-placement.md",
+          "occurrences": 1,
+          "problem": "The exact WorkshopPolygon arena is not public, so readers cannot reproduce the two pictured formations from the article alone. The English draft discloses this and supplies the same Start callback for a reader's map; the specific algorithm claims are not independently runtime-verified by this review.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared both new article texts with the authorized research note, raw capture record, prepared public JSON, images and the mandatory content standard."
         }
       ],
       "claims": [
@@ -129,6 +149,10 @@
           "disposition": "judged"
         },
         {
+          "path": "docs/en/players/army-placement.md",
+          "disposition": "judged"
+        },
+        {
           "path": "docs/en/players/getting-started.md",
           "disposition": "judged"
         },
@@ -153,6 +177,10 @@
           "disposition": "judged"
         },
         {
+          "path": "docs/players/army-placement.md",
+          "disposition": "judged"
+        },
+        {
           "path": "docs/players/getting-started.md",
           "disposition": "judged"
         },
@@ -173,9 +201,9 @@
           "blocker": 0,
           "major": 0,
           "minor": 0,
-          "advisory": 6
+          "advisory": 8
         },
-        "one_line": "The final Markdown set and review protocol align, with six recorded draft advisories and no factual certification."
+        "one_line": "The final Markdown set and pre-push protocol align; eight draft advisories record known limits without certifying game facts."
       },
       "review": {
         "reviewer": "/root/review_craft",
@@ -191,12 +219,14 @@
           "docs/en/index.md",
           "docs/en/modding/getting-started.md",
           "docs/en/modding/verification.md",
+          "docs/en/players/army-placement.md",
           "docs/en/players/getting-started.md",
           "docs/en/players/installing-mods.md",
           "docs/en/reference/formats.md",
           "docs/index.md",
           "docs/modding/getting-started.md",
           "docs/modding/verification.md",
+          "docs/players/army-placement.md",
           "docs/players/getting-started.md",
           "docs/players/installing-mods.md",
           "docs/reference/formats.md"
@@ -204,35 +234,35 @@
         "criteria": {
           "purpose": {
             "verdict": "PASS",
-            "evidence": "Read all 20 Markdown paths. Eight RU/EN page pairs have identifiable reader questions: landing pages route readers, about/contributing explain the project and participation, player/modding pages introduce tasks, and formats pages summarize file types. All 16 site pages explicitly say status: draft; this does not certify that each title is fully delivered."
+            "evidence": "Read all 22 Markdown paths, including the new neutral-army explanation pair. Nine RU/EN page pairs have clear roles: landing, about/contributing, player/modding methods and format/placement explanations. The new title accurately identifies game deployment, not a predictor, and opens with scope. All 18 site pages remain explicitly draft, not certified articles."
           },
           "structure": {
             "verdict": "PASS",
-            "evidence": "Compared the 16 frontmatter records with CONTRIBUTING: two landing, four meta, four explanation, four how-to and two reference pages, with matching types in each language pair. Section headings and links exist; the how-to pages still need complete examples before promotion from draft."
+            "evidence": "Compared 18 frontmatter records with CONTRIBUTING: two landing, four meta, six explanation, four how-to and two reference pages; types/statuses match in each RU/EN pair. The new placement explanation follows preparation, branch selection, footprint, row priority, group passes, retries, examples and evidence/limits. Older how-to draft gaps remain advisory."
           },
           "specificity": {
             "verdict": "PASS",
-            "evidence": "Read each article pair and the four repository documents. The player package table distinguishes .pak/.h5u, Lua and DLL; verification names a SHA-256 command and labels its path illustrative. The installation and verification drafts remain general, as listed in findings. I did not check claims against a game installation."
+            "evidence": "For the new pair, checked conditional 10-to-3 split as 4+3+3, 2x2 anchors around obstacle (2,2), equal-row candidate order 8,4,6,10,2,7,3,5,9,1, and both observed coordinate tables against authorized research and capture data. The wording preserves that these are branch-specific checks, not one universal formation. Older installation/verification drafts remain general."
           },
           "reproducibility": {
             "verdict": "PASS",
-            "evidence": "README's build/check/test sequence matches package.json; CONTRIBUTING's review:info, review:attest, review:gate and prepare scripts are present, and the hook delegates to review:gate. Machine checks were reported passing by the parent. Game procedures in both how-to pairs are incomplete drafts, recorded as advisories; none was executed in Heroes V."
+            "evidence": "README and pre-push instructions still match package scripts and hook. New article gives a combat Start callback and labels screenshot frames as after Start, while coordinates were logged before turns. The exact WorkshopPolygon map is unpublished, so readers cannot reproduce the pictured battles; both drafts disclose that limit. I did not run the game or independently execute the disassembled code."
           },
           "evidence": {
             "verdict": "PASS",
-            "evidence": "All 16 site pages remain draft, none claims verified_on or sources, and README/CONTRIBUTING explicitly say machine success does not prove facts. NOTICE lists font source URLs and asset provenance, but I did not verify external URLs, image creation history, or game-format claims. The format reference lacks adjacent evidence, recorded as advisories."
+            "evidence": "Checked new S1-S6 claims against the authorized research note, including late corrections for unreachable merging, world/local guard coordinates, CombatSize (not tier), deployment depth without field expansion, and equal-score sorting. Raw capture JSON matches both public coordinate tables; public observations.json records no predictor and correct capture timing; PNG SHA-256 values match. This review did not independently regenerate research, verify game binaries, or certify all claims. All 18 pages remain draft."
           },
           "applicability": {
             "verdict": "PASS",
-            "evidence": "Compared each RU/EN technical pair: getting-started distinguishes original game, expansions and Universe; installation defers destinations to the relevant mod/build; verification labels .\\bin\\H5_Game.exe as an example. No article claims one build's observations apply to all versions. Actual game compatibility was not tested."
+            "evidence": "The new pair pins Heroes V Tribes of the East with Universe and the investigated EXE hash, separates game algorithm from predictor, limits its conclusions to checked branches, and says exact map/other modes/builds are not established. Existing player guides continue to distinguish original game, expansions, Universe and mod build requirements. No cross-version runtime test was performed."
           },
           "translations": {
             "verdict": "PASS",
-            "evidence": "Checked all eight reciprocal RU/EN frontmatter pairs, matching content_type/status/faction and corresponding headings, tables, caveats and links. README, CONTRIBUTING, AGENTS and NOTICE include matching RU/EN project instructions. Build/link checks were reported passing; no independent external translation verification was performed."
+            "evidence": "Checked all nine reciprocal RU/EN page pairs and matching content_type/status/faction. New army-placement pair preserves the same branch limits, S1-S6 checks, two coordinate tables, early-frame/Start distinction, unpublished-map caveat, and links. The getting-started pair adds corresponding links. 19 HTML pages and link checks passed per parent; I did not independently run translation tooling."
           },
           "maintenance": {
             "verdict": "PASS",
-            "evidence": "CONTRIBUTING owns the article standard, AGENTS/README point to it, package.json invokes Python and Node checks, and review:info enumerates all 20 cumulative Markdown paths. Existing draft status remains visible; the reviewer must revisit final diff after changes. I did not treat this report as factual certification or cryptographic proof."
+            "evidence": "CONTRIBUTING remains the article standard, and README/AGENTS point to it. The placement pair is linked in both nav sections and player starting pages; NOTICE states screenshot ownership limits. Its prepared JSON supplies coordinates and hashes without private raw logs. review:info now lists 22 Markdown paths, all covered here; any next content change needs a new exact-diff review."
           }
         },
         "findings": [
@@ -265,11 +295,21 @@
             "severity": "advisory",
             "path": "docs/en/reference/formats.md",
             "detail": "The English draft repeats the format claims without adjacent public sources or a reproducible evidence record; game facts remain unverified."
+          },
+          {
+            "severity": "advisory",
+            "path": "docs/players/army-placement.md",
+            "detail": "The exact WorkshopPolygon arena is not public, so readers cannot reproduce the two pictured formations from the article alone. The draft discloses this and supplies a Start callback for testing coordinates on a reader's own map; the specific algorithm claims are not independently runtime-verified by this review."
+          },
+          {
+            "severity": "advisory",
+            "path": "docs/en/players/army-placement.md",
+            "detail": "The exact WorkshopPolygon arena is not public, so readers cannot reproduce the two pictured formations from the article alone. The English draft discloses this and supplies the same Start callback for a reader's map; the specific algorithm claims are not independently runtime-verified by this review."
           }
         ]
       }
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-09-23T18:53:06.807Z"
+  "timestamp": "2026-09-23T19:18:04.313Z"
 }
