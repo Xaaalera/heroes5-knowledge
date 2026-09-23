@@ -15,6 +15,8 @@
 7. **Связность.** У факта/таблицы один основной источник в базе; другие статьи ссылаются на него. Допустим краткий контекст. Термины и игровые названия единообразны; RU/EN сообщают одинаковые факты.
 8. **Доступность.** Публичная статья не требует доступа к приватному журналу. Подготовить публичное доказательство или обозначить ограничение. Скриншоты нужны для действия/сравнения, а не вместо объяснения.
 
+Пояснение механики расположения сопровождать схемами рядом с соответствующим этапом, а не только длинным текстом. Боевые сетки строить циклом из данных: полное поле, обе армии, препятствия, размеры отрядов и оси X/Y. Учебные кандидаты и измеренные позиции различать явно. Скриншоты разных боёв дополняют схемы; ракурс должен показывать оба строя.
+
 ### Виды страниц и каркас
 
 | `content_type` | Назначение | Что читатель должен получить |
@@ -71,6 +73,8 @@ Applies to every `docs/` article and translation. The shared source links in RU 
 6. Provide units, conditions and exceptions. Tie native addresses/calls to exact builds/hashes. Never invent data to fill a template.
 7. Keep a canonical source for facts/tables and link to it. Brief context is allowed. Use consistent terms and matching RU/EN facts.
 8. Public articles must not depend on inaccessible private logs. Publish usable evidence or state the limitation. Screenshots assist actions/comparisons rather than replacing explanation.
+
+Explain spatial mechanics with diagrams next to the relevant stage. Generate battle grids with loops from data: full field, both armies, obstacles, footprints and X/Y axes. Distinguish hypothetical candidates from measured positions. Screenshots of different battles supplement diagrams and should show both formations.
 
 ### Page types and shape
 

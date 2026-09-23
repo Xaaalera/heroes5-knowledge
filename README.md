@@ -59,3 +59,9 @@ The initial articles are not a complete engine reference. Art is original, not e
 Eight faction castles fill the viewport behind the content. Article metadata `faction` selects an image from `docs/assets/worlds/` and its accent color. Navigation changes the background; reloads and language changes preserve the faction. Localized names live in `mkdocs.yml` under `extra.worlds`.
 
 Перед push / Before push: `npm ci` installs the Git pre-push gate. Follow the independent agent protocol in [CONTRIBUTING](CONTRIBUTING.md): a docs score alone is insufficient; the hash-bound report must cover all eight criteria and changed Markdown files. / `npm ci` устанавливает pre-push gate. Одной оценки docs недостаточно: нужен независимый отчёт по восьми критериям и всем изменённым Markdown-файлам.
+
+### Placement diagrams / Схемы расстановки
+
+`docs/assets/placement/observations.json` owns recorded coordinates of both armies and blocked cells. `npm run figures` generates complete SVG grids with labelled X/Y axes; edit data/generator, not individual SVG cells. `npm run check` rejects stale diagrams and invalid/overlapping footprints. Screenshots are separate evidence; instructional overlays are labelled in the article.
+
+JSON — единственный источник записанных координат обеих армий и препятствий. `npm run figures` строит полные SVG-сетки циклом; вручную SVG-клетки не править. Проверка отклоняет устаревшие схемы, выход за границы и пересечения фигур. Скриншоты дополняют схемы; учебные слои подписаны отдельно.

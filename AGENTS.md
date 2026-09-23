@@ -2,6 +2,8 @@
 
 ## RU
 
+- Механика расположения требует полных 2D-схем по CONTRIBUTING. Сетки генерируются циклом из координат обеих армий и препятствий; не рисовать клетки вручную. Для статьи о расстановке источник — `docs/assets/placement/observations.json`, генератор — `npm run figures`.
+
 - Перед каждым push выполнить протокол независимого агента из CONTRIBUTING: получить полный `docs.review` по восьми критериям и всем Markdown-файлам review:info. Без отчёта push запрещён; не обходить хук и не выдумывать PASS. `npm ci` устанавливает pre-push hook; отчёт хранится в аттестации.
 
 - Обязательный стандарт статей — [CONTRIBUTING.md](CONTRIBUTING.md). Читать перед написанием и docs-review. Оценивать все изменённые статьи по его приёмке; зелёные машинные проверки не подтверждают факты. Не менять `draft` на `verified` без независимой содержательной проверки.
@@ -16,6 +18,8 @@
 - GitHub Pages — первый этап. Правки через GitHub, а не через встроенный wiki-редактор. Не обещать реализованный MCP или SDK.
 
 ## EN
+
+- Spatial mechanics require complete 2D diagrams under CONTRIBUTING. Generate cells in loops from both armies and obstacles; never hand-place grid cells. Placement article data lives in `docs/assets/placement/observations.json`; regenerate with npm run figures.
 
 - Before every push follow CONTRIBUTING’s independent-agent protocol: obtain full docs.review for all eight criteria and review:info Markdown paths. Never bypass the hook or fabricate PASS; missing review blocks push. npm ci installs the pre-push hook; the attestation stores the report.
 

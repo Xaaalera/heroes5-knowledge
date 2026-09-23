@@ -14,7 +14,20 @@ updated: 2026-09-23
 
 The game first prepares **combat stacks**, selects a formation method, determines available cells and places creature groups in sequence. Army composition, obstacles, creature size and the selected algorithm branch can therefore change starting positions. “Shooters behind, everyone else in front” is not a sufficient rule.
 
-This account applies to the investigated **Heroes V: Tribes of the East with Universe** build. It combines code analysis, execution of individual code sections and two test-map observations. It is not a complete specification of every mode; [evidence and limits](#evidence) appear below. The subject is the game, not a third-party predictor.
+This account applies to the investigated **Heroes V: Tribes of the East with Universe** build. It combines code analysis, execution of individual code sections and three test-map observations. It is not a complete specification of every mode; [evidence and limits](#evidence) appear below. The subject is the game, not a third-party predictor.
+
+## Reading the 2D diagrams
+
+[![Full field with the hero army on the left, neutrals on the right and labelled X/Y axes](../../assets/placement/pack_8-positions.svg)](../../assets/placement/pack_8-positions.svg)
+
+**X is the column number**, increasing to the right. **Y is the row number**, increasing upwards in these diagrams. These are native grid coordinates, not screen pixels; camera orientation does not change them.
+
+- Cyan **A** footprints belong to the hero's army; orange **N** footprints belong to neutrals. Numbers identify stacks, not quantities or turn order.
+- Hatching marks blocked cells, including obstacles and the outer service boundary. These observations use a full 16×12 grid; service cells are not deployment positions.
+- A colored dot identifies anchor `(x,y)`. For a large creature it is the upper-right cell of its 2×2 footprint in this diagram. One stack occupies the whole square.
+- **A1 is the hero's angels at `(3,4)`**, occupying `(2,3)`, `(3,3)`, `(2,4)`, `(3,4)`. **N1 is the genies at `(13,4)`**, occupying columns 12–13 and rows 3–4.
+
+Every grid is **generated with loops from one data record**, not drawn manually over a screenshot. Both armies and recorded obstacles appear on every diagram. Open a diagram for full resolution; SVG stays sharp when enlarged.
 
 ## 1. Combat stacks are prepared first
 
@@ -40,6 +53,10 @@ A small creature occupies **1×1** cell; a large creature occupies **2×2**. All
 
 For example, an obstacle at `(2,2)` invalidates large-creature anchors `(2,2)`, `(3,2)`, `(2,3)` and `(3,3)`. An anchor `(x,y)` represents cells `(x,y)`, `(x−1,y)`, `(x,y−1)` and `(x−1,y−1)`. This example was checked by executing the mask-processing code section. [S3](#evidence).
 
+[![Full field and an invalid 2×2 candidate intersecting an obstacle](../../assets/placement/pack_8-footprint.svg)](../../assets/placement/pack_8-footprint.svg)
+
+*The red dashed square is a hypothetical placement attempt at `(8,6)`. That cell is blocked in the recorded mask, so the candidate fails. Cyan/orange armies retain their actual recorded starting positions; they were not moved for the illustration.*
+
 The game also calculates **deployment depth**: how many initial columns are available. The battlefield itself does not expand. Free space and small/large stacks matter; minimum depth is connected to the Tactics advantage. In the checked Universe run, runtime changes also altered the large-stack capacity calculation and added a column with four or more large stacks. This is build-specific evidence, not a universal Heroes V rule.
 
 ## 4. Rows receive priorities
@@ -47,6 +64,10 @@ The game also calculates **deployment depth**: how many initial columns are avai
 The algorithm measures each row's continuous free approach from its designated column to an obstacle or boundary. Large creatures depend on neighboring rows: a narrow approach in one constrains the whole square.
 
 For shooters, a cyclic row window with the minimum sum of approach lengths is selected. Its length depends on the number of shooter-category stacks. Equal sums retain the first window found. This is a geometric evaluation, not a full simulation of enemy movement or shooting. [S4](#evidence).
+
+[![Row approaches over the complete battlefield with lengths L on the right](../../assets/placement/pack_8-approach.svg)](../../assets/placement/pack_8-approach.svg)
+
+*Dashes and L illustrate a separate geometric calculation: walk from X=11 towards X=2 until a blocked cell. Y=2 begins with an obstacle, so L=0; Y=1 has free cells X=11 and X=10, so L=2. Army footprints remain for orientation; lines use the static pre-Start mask and do not simulate movement. This illustrates approach length, not a trace of every internal decision in this battle.*
 
 **Equal scores do not imply top-to-bottom order.** In the checked sort, ten equally ranked rows produce candidate order `8, 4, 6, 10, 2, 7, 3, 5, 9, 1` in field coordinates. This is not a finished ten-stack formation: obstacles, occupancy and branch selection still affect the result.
 
@@ -76,41 +97,55 @@ If some stacks remain, the extended algorithm can shift its row window and retry
 
 ## Example: three Academy stacks
 
-[![Opening of an actual battle with genies, iron golems and gremlins](../../assets/placement/pack_8.png)](../../assets/placement/pack_8.png)
+In the first full-field diagram, **A1 belongs to the hero**, while N labels identify neutrals. Coordinates were recorded in Start before turns; footprint sizes are checked separately from position.
 
-*Actual early-combat frame, with the predictor DLL not loaded. Genies have already cast a spell; this is not the exact Start event frame. The table was recorded separately in Start before turns. Open the image for full resolution.*
+| Label | Stack | Starting anchor `(x,y)` | Footprint |
+|---|---|---|---|
+| A1 | Hero's angels | `(3,4)` | 2×2 |
+| N1 | Genies | `(13,4)` | 2×2 |
+| N2 | Iron golems | `(12,8)` | 1×1 |
+| N3 | Gremlins | `(13,2)` | 1×1 |
 
-| Stack | Starting anchor `(x,y)` | Occupied cells |
-|---|---|---|
-| Genies | `(13,8)` | `(12,7)`, `(13,7)`, `(12,8)`, `(13,8)` |
-| Iron golems | `(12,4)` | One cell |
-| Gremlins | `(13,9)` | One cell |
-
-![Recorded columns 12–13: genies occupy rows 7–8, golems row 4 and gremlins row 9](../../assets/placement/academy-cells.svg){ width="340" }
-
-*Diagram from Start records, not the camera angle: 1 — genies, 2 — golems, 3 — gremlins. Only columns 12–13 are shown; obstacles and the rest of the field are omitted.*
-
-The example shows different sizes and roles: genies need four cells, shooting gremlins need one, and golems occupy another available position. The frame alone cannot establish the selected branch or each row's score; those claims need the code analysis above. [Observation record](../../assets/placement/observations.json).
+Gremlins occupy Y=2, whose illustrated geometric approach has length 0. This is consistent with using a sheltered row but does not replace tracing branch selection. Genies receive an entire free square and golems another cell. [Diagram source data](../../assets/placement/observations.json).
 
 ## Example: seven stacks
 
-[![Seven stacks grouped near the battlefield edge and obstacles](../../assets/placement/pack_15.png)](../../assets/placement/pack_15.png)
+[![Full grid with the hero's angels and seven neutral stacks](../../assets/placement/pack_15-positions.svg)](../../assets/placement/pack_15-positions.svg)
 
-*A second battle on the same test map with different obstacle geometry. Predictor disabled. The frame is from early combat; coordinates were recorded separately at Start.*
+| Label | Stack type | Starting anchor |
+|---|---|---|
+| A1 | Hero's angels | `(3,4)` |
+| N1 | `CREATURE_GRAND_ELF` | `(13,6)` |
+| N2 | `CREATURE_ARCHER` | `(13,7)` |
+| N3 | `CREATURE_PEASANT` | `(12,10)` |
+| N4 | `CREATURE_PIT_FIEND` — 2×2 | `(13,4)` |
+| N5 | `CREATURE_INFERNAL_SUCCUBUS` | `(13,8)` |
+| N6 | `CREATURE_CERBERI` | `(12,8)` |
+| N7 | `CREATURE_FAMILIAR` | `(12,6)` |
 
-| In-game type identifier | Starting anchor |
-|---|---|
-| `CREATURE_GRAND_ELF` | `(13,3)` |
-| `CREATURE_ARCHER` | `(13,1)` |
-| `CREATURE_PEASANT` | `(12,1)` |
-| `CREATURE_PIT_FIEND` — size 2×2 | `(13,5)` |
-| `CREATURE_INFERNAL_SUCCUBUS` | `(13,2)` |
-| `CREATURE_CERBERI` | `(12,2)` |
-| `CREATURE_FAMILIAR` | `(12,3)` |
+Identifiers map unambiguously to game records. Large demon N4 occupies `(12,3)`, `(13,3)`, `(12,4)`, `(13,4)`; stacks above it do not overlap its footprint. Armies need not fill the field's height uniformly.
 
-Identifiers allow exact matching against the [observation record](../../assets/placement/observations.json) regardless of name localization. The large demon's anchor `(13,5)` also occupies `(12,4)`, `(13,4)` and `(12,5)`; adjacent small stacks do not overlap its square. An army need not be evenly distributed across the entire field height.
+[![Actual seven-stack battle in the selected overview angle](../../assets/placement/pack_15.png)](../../assets/placement/pack_15.png)
 
-Both composition and obstacles differ between these battles. They show two possible outcomes, not an isolated experiment changing only one factor.
+*The same battle: elevated oblique overview with the hero army on the left and neutrals on the right. This is an early-combat frame, not the exact Start callback moment; opening effects may already have occurred. Diagram coordinates were recorded separately before turns. Predictor not loaded.*
+
+## Example: four elementals
+
+[![Complete 2D grid with the hero's angels, four elementals and different obstacles](../../assets/placement/pack_12-positions.svg)](../../assets/placement/pack_12-positions.svg)
+
+| Label | Stack | Starting anchor |
+|---|---|---|
+| A1 | Hero's angels | `(3,4)` |
+| N1 | Earth elemental | `(12,8)` |
+| N2 | Air elemental | `(12,10)` |
+| N3 | Water elemental | `(12,4)` |
+| N4 | Fire elemental | `(13,3)` |
+
+[![Another actual battle: four elementals opposite the hero army](../../assets/placement/pack_12.png)](../../assets/placement/pack_12.png)
+
+*No manual camera changes were made after the owner selected the reference angle. This battle has a different arena and army; the air elemental remains at its own field edge. Coordinates come from Start records, not reconstruction from camera projection.*
+
+All three battles differ in composition and obstacles. They illustrate different game outcomes, not an isolated experiment changing one factor.
 
 ## What can be inferred before combat
 
@@ -138,11 +173,15 @@ On your own test map, starting coordinates can be recorded in the combat `Start`
 
 ```lua
 function Start()
+    for index, unit in GetAttackerCreatures() do
+        local x, y = GetUnitPosition(unit);
+        print("ATTACKER", unit, GetCreatureType(unit), x, y);
+    end;
     for index, unit in GetDefenderCreatures() do
         local x, y = GetUnitPosition(unit);
-        print("PLACEMENT", unit, GetCreatureType(unit), x, y);
+        print("DEFENDER", unit, GetCreatureType(unit), x, y);
     end;
 end;
 ```
 
-This belongs to a map's combat script, not the ordinary adventure console. Our experiments used this defender enumeration and a separate observer of `GetUnitPosition` results. No predictor was loaded; the observer does not assign positions. The prepared [public record](../../assets/placement/observations.json) contains coordinates and hashes of unchanged screenshots. The polygon is not yet public, so reproducing these exact arenas is not currently provided; a reader's own map can test the recording method without necessarily producing the same cells.
+This belongs to a map's combat script, not the ordinary adventure console. Our experiments enumerated both armies and a separate observer of `GetUnitPosition` results. No predictor was loaded; the observer does not assign positions. Static obstacle masks were recorded separately before Start. The temporary capture script added a delay after recording both armies, and the original map archive was restored afterwards. This delay cannot change already selected starting cells. The prepared [public record](../../assets/placement/observations.json) contains coordinates and hashes of unchanged screenshots. The polygon is not yet public, so reproducing these exact arenas is not currently provided; a reader's own map can test the recording method without necessarily producing the same cells.

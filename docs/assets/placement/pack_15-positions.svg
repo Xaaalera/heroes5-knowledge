@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910 702">
+<title>pack_15 · positions</title>
+<defs><pattern id="blocked" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#374047"/><path d="M0 8L8 0" stroke="#78818a"/></pattern></defs>
+<rect width="910" height="702" fill="#101c22"/>
+<g font-family="sans-serif" font-size="18" text-anchor="middle" fill="#e6e8de">
+<text x="444.0" y="28">X →</text>
+<text x="23" y="43">Y ↑</text>
+<text x="84.0" y="54">0</text>
+<rect data-cell="0,0" x="60" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,1" x="60" y="548" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,2" x="60" y="500" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,3" x="60" y="452" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,4" x="60" y="404" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,5" x="60" y="356" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,6" x="60" y="308" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,7" x="60" y="260" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,8" x="60" y="212" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,9" x="60" y="164" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,10" x="60" y="116" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="0,11" x="60" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="132.0" y="54">1</text>
+<rect data-cell="1,0" x="108" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,1" x="108" y="548" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,2" x="108" y="500" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,3" x="108" y="452" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,4" x="108" y="404" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,5" x="108" y="356" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,6" x="108" y="308" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,7" x="108" y="260" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,8" x="108" y="212" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,9" x="108" y="164" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,10" x="108" y="116" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="1,11" x="108" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="180.0" y="54">2</text>
+<rect data-cell="2,0" x="156" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="2,1" x="156" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,2" x="156" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,3" x="156" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,4" x="156" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,5" x="156" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,6" x="156" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,7" x="156" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,8" x="156" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,9" x="156" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,10" x="156" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="2,11" x="156" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="228.0" y="54">3</text>
+<rect data-cell="3,0" x="204" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="3,1" x="204" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,2" x="204" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,3" x="204" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,4" x="204" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,5" x="204" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,6" x="204" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,7" x="204" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,8" x="204" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,9" x="204" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,10" x="204" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="3,11" x="204" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="276.0" y="54">4</text>
+<rect data-cell="4,0" x="252" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="4,1" x="252" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,2" x="252" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,3" x="252" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,4" x="252" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,5" x="252" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,6" x="252" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,7" x="252" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,8" x="252" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,9" x="252" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,10" x="252" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="4,11" x="252" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="324.0" y="54">5</text>
+<rect data-cell="5,0" x="300" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="5,1" x="300" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,2" x="300" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,3" x="300" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,4" x="300" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,5" x="300" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,6" x="300" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,7" x="300" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,8" x="300" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,9" x="300" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,10" x="300" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="5,11" x="300" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="372.0" y="54">6</text>
+<rect data-cell="6,0" x="348" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="6,1" x="348" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,2" x="348" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,3" x="348" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,4" x="348" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,5" x="348" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,6" x="348" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,7" x="348" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,8" x="348" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,9" x="348" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,10" x="348" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="6,11" x="348" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="420.0" y="54">7</text>
+<rect data-cell="7,0" x="396" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="7,1" x="396" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,2" x="396" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,3" x="396" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,4" x="396" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,5" x="396" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,6" x="396" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,7" x="396" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,8" x="396" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,9" x="396" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,10" x="396" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="7,11" x="396" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="468.0" y="54">8</text>
+<rect data-cell="8,0" x="444" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="8,1" x="444" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,2" x="444" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,3" x="444" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,4" x="444" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,5" x="444" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,6" x="444" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,7" x="444" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,8" x="444" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,9" x="444" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,10" x="444" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="8,11" x="444" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="516.0" y="54">9</text>
+<rect data-cell="9,0" x="492" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="9,1" x="492" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,2" x="492" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,3" x="492" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,4" x="492" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,5" x="492" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,6" x="492" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,7" x="492" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,8" x="492" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,9" x="492" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,10" x="492" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="9,11" x="492" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="564.0" y="54">10</text>
+<rect data-cell="10,0" x="540" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="10,1" x="540" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,2" x="540" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,3" x="540" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,4" x="540" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,5" x="540" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,6" x="540" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,7" x="540" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,8" x="540" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,9" x="540" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,10" x="540" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="10,11" x="540" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="612.0" y="54">11</text>
+<rect data-cell="11,0" x="588" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="11,1" x="588" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="11,2" x="588" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="11,3" x="588" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="11,4" x="588" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="11,5" x="588" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="11,6" x="588" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="11,7" x="588" y="260" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="11,8" x="588" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="11,9" x="588" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="11,10" x="588" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="11,11" x="588" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="660.0" y="54">12</text>
+<rect data-cell="12,0" x="636" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="12,1" x="636" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,2" x="636" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,3" x="636" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,4" x="636" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,5" x="636" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,6" x="636" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,7" x="636" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,8" x="636" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,9" x="636" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,10" x="636" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="12,11" x="636" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="708.0" y="54">13</text>
+<rect data-cell="13,0" x="684" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="13,1" x="684" y="548" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,2" x="684" y="500" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,3" x="684" y="452" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,4" x="684" y="404" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,5" x="684" y="356" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,6" x="684" y="308" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,7" x="684" y="260" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,8" x="684" y="212" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,9" x="684" y="164" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,10" x="684" y="116" width="48" height="48" fill="#1a3038" stroke="#58696f"/>
+<rect data-cell="13,11" x="684" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="756.0" y="54">14</text>
+<rect data-cell="14,0" x="732" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,1" x="732" y="548" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,2" x="732" y="500" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,3" x="732" y="452" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,4" x="732" y="404" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,5" x="732" y="356" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,6" x="732" y="308" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,7" x="732" y="260" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,8" x="732" y="212" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,9" x="732" y="164" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,10" x="732" y="116" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="14,11" x="732" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="804.0" y="54">15</text>
+<rect data-cell="15,0" x="780" y="596" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,1" x="780" y="548" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,2" x="780" y="500" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,3" x="780" y="452" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,4" x="780" y="404" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,5" x="780" y="356" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,6" x="780" y="308" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,7" x="780" y="260" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,8" x="780" y="212" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,9" x="780" y="164" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,10" x="780" y="116" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<rect data-cell="15,11" x="780" y="68" width="48" height="48" fill="url(#blocked)" stroke="#58696f"/>
+<text x="35" y="626.0">0</text>
+<text x="35" y="578.0">1</text>
+<text x="35" y="530.0">2</text>
+<text x="35" y="482.0">3</text>
+<text x="35" y="434.0">4</text>
+<text x="35" y="386.0">5</text>
+<text x="35" y="338.0">6</text>
+<text x="35" y="290.0">7</text>
+<text x="35" y="242.0">8</text>
+<text x="35" y="194.0">9</text>
+<text x="35" y="146.0">10</text>
+<text x="35" y="98.0">11</text>
+<rect x="159" y="407" width="90" height="90" fill="#5ed2e4" fill-opacity=".24" stroke="#5ed2e4" stroke-width="3"/>
+<text x="204.0" y="459.0" font-size="22" font-weight="bold">A1</text>
+<circle cx="243" cy="413" r="4" fill="#5ed2e4"/>
+<rect x="687" y="311" width="42" height="42" fill="#ffb971" fill-opacity=".24" stroke="#ffb971" stroke-width="3"/>
+<text x="708.0" y="339.0" font-size="22" font-weight="bold">N1</text>
+<circle cx="723" cy="317" r="4" fill="#ffb971"/>
+<rect x="687" y="263" width="42" height="42" fill="#ffb971" fill-opacity=".24" stroke="#ffb971" stroke-width="3"/>
+<text x="708.0" y="291.0" font-size="22" font-weight="bold">N2</text>
+<circle cx="723" cy="269" r="4" fill="#ffb971"/>
+<rect x="639" y="119" width="42" height="42" fill="#ffb971" fill-opacity=".24" stroke="#ffb971" stroke-width="3"/>
+<text x="660.0" y="147.0" font-size="22" font-weight="bold">N3</text>
+<circle cx="675" cy="125" r="4" fill="#ffb971"/>
+<rect x="639" y="407" width="90" height="90" fill="#ffb971" fill-opacity=".24" stroke="#ffb971" stroke-width="3"/>
+<text x="684.0" y="459.0" font-size="22" font-weight="bold">N4</text>
+<circle cx="723" cy="413" r="4" fill="#ffb971"/>
+<rect x="687" y="215" width="42" height="42" fill="#ffb971" fill-opacity=".24" stroke="#ffb971" stroke-width="3"/>
+<text x="708.0" y="243.0" font-size="22" font-weight="bold">N5</text>
+<circle cx="723" cy="221" r="4" fill="#ffb971"/>
+<rect x="639" y="215" width="42" height="42" fill="#ffb971" fill-opacity=".24" stroke="#ffb971" stroke-width="3"/>
+<text x="660.0" y="243.0" font-size="22" font-weight="bold">N6</text>
+<circle cx="675" cy="221" r="4" fill="#ffb971"/>
+<rect x="639" y="311" width="42" height="42" fill="#ffb971" fill-opacity=".24" stroke="#ffb971" stroke-width="3"/>
+<text x="660.0" y="339.0" font-size="22" font-weight="bold">N7</text>
+<circle cx="675" cy="317" r="4" fill="#ffb971"/>
+</g></svg>
