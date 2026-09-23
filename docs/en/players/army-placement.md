@@ -14,7 +14,7 @@ updated: 2026-09-23
 
 The game first prepares **combat stacks**, selects a formation method, determines available cells and places creature groups in sequence. Army composition, obstacles, creature size and the selected algorithm branch can therefore change starting positions. “Shooters behind, everyone else in front” is not a sufficient rule.
 
-This account applies to the investigated **Heroes V: Tribes of the East with Universe** build. It combines code analysis, execution of individual code sections and test-map observations and recorded placement attempts. It is not a complete specification of every mode; [evidence and limits](#evidence) appear below. 
+This account applies to the investigated **Heroes V: Tribes of the East with Universe** build. It combines code analysis, execution of individual code sections and test-map observations and recorded placement attempts. It is not a complete specification of every mode; [evidence and limits](#evidence) appear below.
 
 ## Reading the 2D diagrams
 
@@ -110,6 +110,8 @@ If some stacks remain, the extended algorithm can shift its row window and retry
 Consider **four stacks of 15 elementals** against the hero's army. This run includes recorded mode flags and the game's actual placement attempts, not just final coordinates.
 
 [![The worked battlefield: angels on the left and four elemental stacks on the right](../../assets/placement/elementals_trace-positions.svg)](../../assets/placement/elementals_trace-positions.svg)
+
+For this experiment: **A1 — hero’s angels; N1 — Earth, N2 — Air, N3 — Water, N4 — Fire**. Stack labels are local to each example.
 
 ### Inputs
 
@@ -212,19 +214,19 @@ Download the [executable Python walkthrough](../../assets/placement/placement_wa
 python placement_walkthrough.py
 ```
 
-It calculates placements from the mask and fixture traits; recorded target cells are used only afterwards for comparison. It calculates scores from the four creatures’ traits rather than supplying a ready-made order. It checks two fields and, for `elementals_trace`, the exact native attempt sequence. Defensive/spread modes, other compositions and fallback branches are outside its scope.
+It calculates placements from the mask and fixture traits; recorded target cells are used only afterwards for comparison. It calculates scores from the four creatures’ traits rather than supplying a ready-made order. For `elementals_trace`, it uses recorded mode flags and checks the exact native attempt sequence. The second field requires an explicit assumption and reports `context_source: assumed`. Missing context without an explicit assumption stops execution. Defensive/spread modes, other compositions and fallback branches are outside its scope.
 
-## Another field: why Fire changes row
+## Another field: applying the same pass conditionally
 
-The same composition now faces different obstacles. Y=2 has ten free approach cells, while Y=3 has only one. The minimum moves **from row 2 to row 3**, so Fire receives `(13,3)`.
+Take a different battle with the same composition. Its mode flags were not recorded, so we **explicitly assume the same ordinary pass** and compare its result with the saved cells. Y=2 has ten free approach cells, while Y=3 has only one. In this calculation, the minimum moves **from row 2 to row 3**, producing `(13,3)` for Fire.
 
 [![A different field puts Fire in row 3 while the others retain rows 8, 4 and 10](../../assets/placement/pack_12-positions.svg)](../../assets/placement/pack_12-positions.svg)
 
-The first three suitable non-shooter rows remain **8, 4, 10**. The calculation gives Earth `(12,8)`, Water `(12,4)` and Air `(12,10)`; all four results match that battle's Start record. Unlike the preceding experiment, this run did not record internal attempts.
+The first three suitable non-shooter rows remain **8, 4, 10**. The calculation gives Earth `(12,8)`, Water `(12,4)` and Air `(12,10)`; all four results match that battle's Start record. Matching cells does not establish which branch the game selected in this second battle.
 
 [![Four elementals on the second field, with Fire below the other stacks](../../assets/placement/pack_12.png)](../../assets/placement/pack_12.png)
 
-*Fire occupies `(13,3)`. Earth, Water and Air retain rows 8, 4 and 10: these obstacle differences change the shooter's first position without changing the first suitable positions for the others.*
+*Fire occupies `(13,3)`; Earth, Water and Air occupy rows 8, 4 and 10. These match the conditional calculation; an internal attempt log does not establish the causes for this run.*
 
 ## Large creatures: check the whole square
 

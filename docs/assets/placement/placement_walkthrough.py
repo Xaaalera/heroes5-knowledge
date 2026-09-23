@@ -64,7 +64,7 @@ def row_lengths(width, height, blocked):
     return lengths
 
 
-def replay(battle):
+def replay(battle, *, assumed_context=None):
     """Reconstruct this documented fixture without reading its recorded target cells."""
     width, height = battle['grid']
     blocked = {tuple(cell) for cell in battle['blocked']}
@@ -80,7 +80,13 @@ def replay(battle):
     if set(neutrals) != set(traits) or any(unit['size'] != 1 for unit in neutrals.values()):
         raise ValueError('This walkthrough covers only the four size-1 elementals')
     context = battle.get('placement_context')
-    if context and (context['defensive'] or context['spread'] or context['depth'] != 2):
+    context_source = 'recorded'
+    if not context:
+        context = assumed_context
+        context_source = 'assumed'
+    if not isinstance(context, dict) or not {'defensive', 'spread', 'depth'} <= context.keys():
+        raise ValueError('A recorded context or an explicit assumed_context is required')
+    if context['defensive'] or context['spread'] or context['depth'] != 2:
         raise ValueError('This example does not implement defensive, spread or deeper deployment')
     if width != 16 or height != 12:
         raise ValueError('This worked example uses the recorded 16x12 grid and two-column depth')
@@ -116,12 +122,12 @@ def replay(battle):
                 break
         else:
             raise ValueError('No cell in the illustrated pass; fallback is outside this example')
-    return {'scores': scores, 'lengths': lengths, 'melee_rows': melee_rows,
+    return {'context_source': context_source, 'scores': scores, 'lengths': lengths, 'melee_rows': melee_rows,
             'shooter_row': shooter_row + 1, 'attempts': attempts, 'placements': placements}
 
 
-def verify(battle):
-    result = replay(battle)
+def verify(battle, *, assumed_context=None):
+    result = replay(battle, assumed_context=assumed_context)
     observed = {unit['creature']: unit['cell'] for unit in battle['units'] if unit['side'] == 'neutral'}
     if result['placements'] != observed:
         raise ValueError('Reconstruction does not match recorded game positions')
@@ -133,5 +139,8 @@ def verify(battle):
 if __name__ == '__main__':
     data = json.loads(Path(__file__).with_name('observations.json').read_text(encoding='utf-8'))
     for battle in data['battles']:
-        if battle['id'] in ('pack_12', 'elementals_trace'):
+        if battle['id'] == 'elementals_trace':
             print(battle['id'], json.dumps(verify(battle), ensure_ascii=False))
+        elif battle['id'] == 'pack_12':
+            assumption = {'depth': 2, 'defensive': False, 'spread': False}
+            print(battle['id'], json.dumps(verify(battle, assumed_context=assumption), ensure_ascii=False))

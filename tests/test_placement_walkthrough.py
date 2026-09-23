@@ -20,11 +20,22 @@ class PlacementWalkthroughTests(unittest.TestCase):
         self.assertEqual([index + 1 for index in WALKTHROUGH.native_order([10] * 10)],
                          [8, 4, 6, 10, 2, 7, 3, 5, 9, 1])
 
-    def test_two_recorded_fields_match_all_eight_final_cells(self):
-        for name in ('pack_12', 'elementals_trace'):
-            with self.subTest(name=name):
-                result = WALKTHROUGH.verify(self.battles[name])
-                self.assertEqual(len(result['placements']), 4)
+    def test_recorded_and_explicitly_assumed_contexts_are_distinguished(self):
+        recorded = WALKTHROUGH.verify(self.battles['elementals_trace'])
+        assumed = WALKTHROUGH.verify(self.battles['pack_12'], assumed_context={
+            'depth': 2, 'defensive': False, 'spread': False})
+        self.assertEqual(recorded['context_source'], 'recorded')
+        self.assertEqual(assumed['context_source'], 'assumed')
+        self.assertEqual(len(recorded['placements']), 4)
+        self.assertEqual(len(assumed['placements']), 4)
+
+    def test_missing_empty_or_incomplete_context_cannot_pass_silently(self):
+        for context in (None, {}, {'depth': 2}):
+            with self.subTest(context=context):
+                battle = copy.deepcopy(self.battles['elementals_trace'])
+                battle['placement_context'] = context
+                with self.assertRaisesRegex(ValueError, 'context.*required'):
+                    WALKTHROUGH.verify(battle)
 
     def test_seven_native_attempts_include_three_real_rejections(self):
         battle = self.battles['elementals_trace']
