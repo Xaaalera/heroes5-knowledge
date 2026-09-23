@@ -1,6 +1,6 @@
 {
-  "diffHash": "299df7c1ab37ba86f68c81443b8ef4e55bbaf543a914b500578d4c8ac283fcf2",
-  "commitSha": "2563eff249c48f52657af91961889f8563119210",
+  "diffHash": "a6214dc5e6883a58aea6ab5e91d31f63bfeeaedbd3c28f277b123f9b2b46bc9a",
+  "commitSha": "45df28b66f94f6c1d663757fd11f58df1a4ce4b0",
   "perAgent": {
     "craft": {
       "score": 10,
@@ -203,7 +203,7 @@
           "minor": 0,
           "advisory": 8
         },
-        "one_line": "The final Markdown set and full-field figures align with the captured records; eight draft advisories remain without certifying game facts."
+        "one_line": "The traced elemental pass is supported by recorded mode and attempts; the older field is clearly conditional, with eight draft advisories remaining."
       },
       "review": {
         "reviewer": "/root/review_craft",
@@ -234,35 +234,35 @@
         "criteria": {
           "purpose": {
             "verdict": "PASS",
-            "evidence": "Read all 22 Markdown paths, including the revised neutral-army explanation pair. Nine RU/EN page pairs have clear purposes: landing, about/contributing, player/modding methods and format/placement explanations. The placement title promises the game's deployment mechanism, and its opening limits scope to investigated Universe behavior. All 18 site pages remain draft; this review does not certify complete game mechanics."
+            "evidence": "Read all 22 Markdown paths and both final army-placement articles. Nine RU/EN page pairs retain clear purposes. The placement pair now answers why the four elemental stacks receive their shown cells by connecting measured grid inputs, row calculation, role/strength ordering, occupancy attempts and recorded outcomes. It expressly limits this causal demonstration to the investigated Universe general pass. All 18 site pages remain draft and broader game mechanics are not certified."
           },
           "structure": {
             "verdict": "PASS",
-            "evidence": "Compared all 18 page frontmatter records with CONTRIBUTING: two landing, four meta, six explanation, four how-to and two reference pages, matched in RU/EN pairs. The placement explanation now pairs full 2D diagrams with footprint and row stages and shows three battles. Every generated positions SVG includes both armies, full 16x12 cell grid, blocked mask, footprint labels and X/Y axes; footprint/approach layers are explicitly teaching illustrations."
+            "evidence": "Checked all 18 frontmatter records against CONTRIBUTING: two landing, four meta, six explanation, four how-to and two reference pages with paired RU/EN status/type. The revised placement article places 2D diagrams beside each causal step, includes executable code after the worked example, then separates the second field, large-footprint illustration and methods/limits. Historical camera coordination is removed from article prose while NOTICE records provenance."
           },
           "specificity": {
             "verdict": "PASS",
-            "evidence": "Compared new public data with authorized raw grid and Start records for pack_8, pack_15 and pack_12: all three masks, attacker/defender types and starting anchors match exactly. Tables and figures show A1 angel (3,4), pack_8 N1 genie (13,4) with 2x2 square, pack_15 N4 pit fiend (13,4) with 2x2 square, and pack_12 elemental anchors. Illustrative candidate (8,6) intersects a recorded obstacle; approach caption's Y=2 L=0 and Y=1 L=2 match the static mask. These displays do not establish why each cell was selected."
+            "evidence": "The traced elementals case has recorded depth 2, defensive/spread off, one shooter, 16x12 grid and seven native defender attempts. Its mask gives approach lengths 6,1,10,10,10,7,4,10,10,10; native tie-sort yields melee rows 8,4,10,3,5,9,6,1,7,2. Reconstructed scores are Earth 2034, Water 1269, Fire 940, Air 733 and attempted cells match the native trace. The older pack_12 field has saved final coordinates but no recorded mode flags; its four matching calculated cells require explicit assumed_context and do not establish the game's selected branch."
           },
           "reproducibility": {
             "verdict": "PASS",
-            "evidence": "The tracked generator and `npm run figures` produce SVGs from observations.json, and `python scripts/render-placement.py --check` passed in this review. Parent reports 8 Node, 13 Python, 11 browser tests and 19 HTML pages passing. Article includes both-army Start callback and distinguishes pre-turn coordinates/static masks from early-combat frames. Exact WorkshopPolygon map remains unpublished, so identical arenas cannot be independently reproduced; this remains an advisory draft limit. I did not run the game."
+            "evidence": "Ran `python placement_walkthrough.py`: elementals_trace reported context_source=recorded and matched four final cells plus all seven captured attempts; pack_12 reported context_source=assumed under an explicit depth2/no-defence/no-spread assumption and matched four saved final cells. Missing, empty or partial context now raises rather than silently assuming. `python scripts/render-placement.py --check` passed. Parent reports 8 Node, 21 Python, 19 HTML and fresh full 11 browser checks passing. The exact test map remains unpublished, so identical arenas cannot be replayed by readers."
           },
           "evidence": {
             "verdict": "PASS",
-            "evidence": "Checked algorithm explanation against the authorized research note's later corrections: unreachable merging, world/local guard coordinate mismatch, CombatSize rather than tier, fixed battlefield with variable deployment depth, and equal-score sorting. Public observations.json reproduces all three authorized raw grid masks and Start unit lists, states predictor unloaded and post-recording delay, and its pack_15/pack_12 screenshot hashes match published PNG bytes. Owner-approved camera record was supplied for pack_15; I did not independently recreate that pose, inspect game binaries, or certify every code-analysis claim."
+            "evidence": "Authorized raw elementals_trace grid/start and native entry/return log match public mask, five units and seven defender attempts. This is evidence for the traced ordinary pass only. The pack_12 record lacks mode flags and native attempts; its matching cells are conditional output under assumed_context, as the revised article and README now say. Archived Academy before/after PNG bytes match earlier raw captures but are unrelated to the trace. I did not rerun the game or verify all executable branches."
           },
           "applicability": {
             "verdict": "PASS",
-            "evidence": "The placement pair pins investigated Heroes V Tribes of the East with Universe and EXE hash, separates game mechanism from a predictor, and labels overlays as illustrative rather than observed placements. Three battles vary both armies/obstacles, so the article does not claim isolated causality. It also discloses post-Start effects, temporary capture delay, unpublished map and unknown exact source camera pose. Other modes/builds are not asserted equivalent."
+            "evidence": "The reconstruction enforces four size-1 elementals, 16x12 field, depth2 and no defensive/spread mode. It uses recorded mode flags when present, otherwise only an explicit assumed_context, and reports which source was used. The articles show a full causal chain for elementals_trace and identify pack_12 as a conditional comparison, not proof that the game chose the same branch. Other formations, fallback behavior and unpublished-map reproduction remain outside scope."
           },
           "translations": {
             "verdict": "PASS",
-            "evidence": "Checked all nine reciprocal RU/EN pairs and matching content_type/status/faction. The revised placement pair agrees on full grid directions, A/N legend, three battles and coordinate tables, 2x2 footprints, hypothetical candidate, approach layer, Start timing, predictor absence, camera limits and unpublished map. README/CONTRIBUTING/AGENTS/NOTICE add matching RU/EN diagram guidance. Link/HTML checks passed per parent."
+            "evidence": "All nine reciprocal RU/EN page pairs retain matching content_type/status/faction. New placement edits agree on local A1/N1-N4 elemental legend, recorded versus assumed mode source, pack_12's conditional comparison and the limitation that final-cell agreement does not prove branch selection. README gives the same distinction in English and Russian; full 11 browser tests passed per parent."
           },
           "maintenance": {
             "verdict": "PASS",
-            "evidence": "CONTRIBUTING owns the full-field diagram rule; AGENTS and README point to canonical observations.json and `npm run figures`. Generator emits five SVGs in loops and check rejects stale output or invalid/overlapping footprints. Article links all five current diagrams and two distinct battle photos; NOTICE distinguishes game art from original diagrams. review:info still lists all 22 cumulative Markdown paths; any next content change needs an exact-diff review."
+            "evidence": "The mandatory content standard and 22-path review protocol remain in place. Downloadable walkthrough now requires recorded or explicitly assumed mode context; CLI output exposes context_source and tests cover missing/empty/partial context. Both article languages and README explain the behavior, while observations.json remains the canonical geometry/trace record. Eight existing draft advisories remain; any further diff needs another exact review."
           }
         },
         "findings": [
@@ -311,5 +311,5 @@
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-09-23T20:02:03.294Z"
+  "timestamp": "2026-09-23T21:10:09.353Z"
 }
