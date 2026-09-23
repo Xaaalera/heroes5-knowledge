@@ -1,0 +1,275 @@
+{
+  "diffHash": "23b0911df6fc82993eaf4c4478db9723067c381980b1979d5b4a575cabf66775",
+  "commitSha": "b71d2ae2cbca465c9f70480d948b97d3e70dd541",
+  "perAgent": {
+    "craft": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "architecture": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "tests": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "security": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "docs": {
+      "score": 10,
+      "verdict": "PASS",
+      "findings": [
+        {
+          "severity": "advisory",
+          "why_this_severity": "Pre-existing, explicitly labelled preview-draft content is advisory under the repository's draft exception.",
+          "where": "docs/players/installing-mods.md",
+          "occurrences": 1,
+          "problem": "The draft how-to tells readers to follow each mod author's instructions, so it cannot itself supply an exact installation path and full executable procedure.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared the page text and its new draft/type metadata with CONTRIBUTING's mandatory article standard."
+        },
+        {
+          "severity": "advisory",
+          "why_this_severity": "Pre-existing, explicitly labelled preview-draft content is advisory under the repository's draft exception.",
+          "where": "docs/en/players/installing-mods.md",
+          "occurrences": 1,
+          "problem": "The English draft has the same author-instructions dependency and no complete installation procedure for a specified mod/build.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared the page text and its new draft/type metadata with CONTRIBUTING's mandatory article standard."
+        },
+        {
+          "severity": "advisory",
+          "why_this_severity": "Pre-existing, explicitly labelled preview-draft content is advisory under the repository's draft exception.",
+          "where": "docs/modding/verification.md",
+          "occurrences": 1,
+          "problem": "The draft how-to gives a verification method and an illustrative hash command, but no complete mod-specific scenario that another reader can execute end to end.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared the page text and its new draft/type metadata with CONTRIBUTING's mandatory article standard."
+        },
+        {
+          "severity": "advisory",
+          "why_this_severity": "Pre-existing, explicitly labelled preview-draft content is advisory under the repository's draft exception.",
+          "where": "docs/en/modding/verification.md",
+          "occurrences": 1,
+          "problem": "The English draft likewise lacks a complete mod-specific verification scenario with reproducible actions and observed result.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared the page text and its new draft/type metadata with CONTRIBUTING's mandatory article standard."
+        },
+        {
+          "severity": "advisory",
+          "why_this_severity": "Pre-existing, explicitly labelled preview-draft content is advisory under the repository's draft exception.",
+          "where": "docs/reference/formats.md",
+          "occurrences": 1,
+          "problem": "The draft format table names PAK, H5U, XDB, Lua and DLL behavior without adjacent public sources or a reproducible evidence record; game facts remain unverified.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared the page text and its new draft/type metadata with CONTRIBUTING's mandatory article standard."
+        },
+        {
+          "severity": "advisory",
+          "why_this_severity": "Pre-existing, explicitly labelled preview-draft content is advisory under the repository's draft exception.",
+          "where": "docs/en/reference/formats.md",
+          "occurrences": 1,
+          "problem": "The English draft repeats the format claims without adjacent public sources or a reproducible evidence record; game facts remain unverified.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared the page text and its new draft/type metadata with CONTRIBUTING's mandatory article standard."
+        }
+      ],
+      "claims": [
+        {
+          "path": "AGENTS.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "NOTICE.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "README.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/about/index.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/contributing.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/about/index.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/contributing.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/index.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/getting-started.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/verification.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/players/getting-started.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/players/installing-mods.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/reference/formats.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/index.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/getting-started.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/verification.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/getting-started.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/installing-mods.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/reference/formats.md",
+          "disposition": "judged"
+        }
+      ],
+      "summary": {
+        "agent": "docs",
+        "verdict": "PASS",
+        "score": 10,
+        "counts": {
+          "blocker": 0,
+          "major": 0,
+          "minor": 0,
+          "advisory": 6
+        },
+        "one_line": "The final Markdown set and review protocol align, with six recorded draft advisories and no factual certification."
+      },
+      "review": {
+        "reviewer": "/root/review_craft",
+        "files": [
+          "AGENTS.md",
+          "CONTRIBUTING.md",
+          "NOTICE.md",
+          "README.md",
+          "docs/about/index.md",
+          "docs/contributing.md",
+          "docs/en/about/index.md",
+          "docs/en/contributing.md",
+          "docs/en/index.md",
+          "docs/en/modding/getting-started.md",
+          "docs/en/modding/verification.md",
+          "docs/en/players/getting-started.md",
+          "docs/en/players/installing-mods.md",
+          "docs/en/reference/formats.md",
+          "docs/index.md",
+          "docs/modding/getting-started.md",
+          "docs/modding/verification.md",
+          "docs/players/getting-started.md",
+          "docs/players/installing-mods.md",
+          "docs/reference/formats.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "Read all 20 Markdown paths. Eight RU/EN page pairs have identifiable reader questions: landing pages route readers, about/contributing explain the project and participation, player/modding pages introduce tasks, and formats pages summarize file types. All 16 site pages explicitly say status: draft; this does not certify that each title is fully delivered."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "Compared the 16 frontmatter records with CONTRIBUTING: two landing, four meta, four explanation, four how-to and two reference pages, with matching types in each language pair. Section headings and links exist; the how-to pages still need complete examples before promotion from draft."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "Read each article pair and the four repository documents. The player package table distinguishes .pak/.h5u, Lua and DLL; verification names a SHA-256 command and labels its path illustrative. The installation and verification drafts remain general, as listed in findings. I did not check claims against a game installation."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "README's build/check/test sequence matches package.json; CONTRIBUTING's review:info, review:attest, review:gate and prepare scripts are present, and the hook delegates to review:gate. Machine checks were reported passing by the parent. Game procedures in both how-to pairs are incomplete drafts, recorded as advisories; none was executed in Heroes V."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "All 16 site pages remain draft, none claims verified_on or sources, and README/CONTRIBUTING explicitly say machine success does not prove facts. NOTICE lists font source URLs and asset provenance, but I did not verify external URLs, image creation history, or game-format claims. The format reference lacks adjacent evidence, recorded as advisories."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "Compared each RU/EN technical pair: getting-started distinguishes original game, expansions and Universe; installation defers destinations to the relevant mod/build; verification labels .\\bin\\H5_Game.exe as an example. No article claims one build's observations apply to all versions. Actual game compatibility was not tested."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "Checked all eight reciprocal RU/EN frontmatter pairs, matching content_type/status/faction and corresponding headings, tables, caveats and links. README, CONTRIBUTING, AGENTS and NOTICE include matching RU/EN project instructions. Build/link checks were reported passing; no independent external translation verification was performed."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "CONTRIBUTING owns the article standard, AGENTS/README point to it, package.json invokes Python and Node checks, and review:info enumerates all 20 cumulative Markdown paths. Existing draft status remains visible; the reviewer must revisit final diff after changes. I did not treat this report as factual certification or cryptographic proof."
+          }
+        },
+        "findings": [
+          {
+            "severity": "advisory",
+            "path": "docs/players/installing-mods.md",
+            "detail": "The draft how-to tells readers to follow each mod author's instructions, so it cannot itself supply an exact installation path and full executable procedure."
+          },
+          {
+            "severity": "advisory",
+            "path": "docs/en/players/installing-mods.md",
+            "detail": "The English draft has the same author-instructions dependency and no complete installation procedure for a specified mod/build."
+          },
+          {
+            "severity": "advisory",
+            "path": "docs/modding/verification.md",
+            "detail": "The draft how-to gives a verification method and an illustrative hash command, but no complete mod-specific scenario that another reader can execute end to end."
+          },
+          {
+            "severity": "advisory",
+            "path": "docs/en/modding/verification.md",
+            "detail": "The English draft likewise lacks a complete mod-specific verification scenario with reproducible actions and observed result."
+          },
+          {
+            "severity": "advisory",
+            "path": "docs/reference/formats.md",
+            "detail": "The draft format table names PAK, H5U, XDB, Lua and DLL behavior without adjacent public sources or a reproducible evidence record; game facts remain unverified."
+          },
+          {
+            "severity": "advisory",
+            "path": "docs/en/reference/formats.md",
+            "detail": "The English draft repeats the format claims without adjacent public sources or a reproducible evidence record; game facts remain unverified."
+          }
+        ]
+      }
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-09-23T18:53:06.807Z"
+}
