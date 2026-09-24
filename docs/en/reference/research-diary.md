@@ -238,6 +238,8 @@ Download SHA-256: `81115018610632c94b9db9566b28cc85afa3e42b76cf2c37e3ffbfc4a5af4
 
 **Review correction:** the old tools prepended workspace `.local/native-analysis` to Python imports. An inert fixture demonstrated module shadowing before PID checks. The devkit now imports no code from that data directory and uses installed Python-environment dependencies. The old version failed the fixture; the corrected version passed. Map-startup path validation also received regression cases.
 
+**CI correction:** GitHub Windows used a short `RUNNER~1` path while the CLI returned its full form. The first path-string comparison failed despite an identical destination. The test now compares resolved paths; runtime code did not change.
+
 [Environment and commands](../modding/devkit.md). This publishes tools; earlier statements that command tooling was unpublished describe the period before extraction. No universal native API is claimed.
 
 ## Recording rules
