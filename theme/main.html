@@ -31,7 +31,7 @@
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">{{ labels.menu }} <span aria-hidden="true">☰</span></button>
       <nav id="site-navigation" class="navigation" aria-label="{{ labels.menu }}">
-        {% for key, target in [('players', 'players/getting-started/'), ('modding', 'modding/getting-started/'), ('reference', 'reference/formats/'), ('about', 'about/')] %}
+        {% for key, target in [('players', 'players/army-placement/'), ('modding', 'modding/resource-overrides/'), ('reference', 'reference/research-index/'), ('about', 'about/')] %}
         <a href="{{ (prefix ~ target)|url }}" {% if page and page.meta.section == key %}aria-current="true"{% endif %}>{{ labels[key] }}</a>
         {% endfor %}
       </nav>
@@ -50,7 +50,7 @@
         <p class="eyebrow"><span class="status-light" aria-hidden="true"></span>{{ page.meta.eyebrow }}</p>
         <h1 id="hero-title">{% for line in page.meta.hero_title %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</h1>
         <p class="hero__description">{{ page.meta.description }}</p>
-        <div class="hero__actions"><a class="button button--gold" href="{{ (prefix ~ 'players/getting-started/')|url }}">{{ page.meta.primary_action }} <span aria-hidden="true">→</span></a><a class="button button--quiet" href="{{ (prefix ~ 'modding/getting-started/')|url }}">{{ page.meta.secondary_action }} <span aria-hidden="true">↗</span></a></div>
+        <div class="hero__actions"><a class="button button--gold" href="{{ (prefix ~ 'players/army-placement/')|url }}">{{ page.meta.primary_action }} <span aria-hidden="true">→</span></a><a class="button button--quiet" href="{{ (prefix ~ 'modding/resource-overrides/')|url }}">{{ page.meta.secondary_action }} <span aria-hidden="true">↗</span></a></div>
       </div>
       <div class="hero__caption"><span aria-hidden="true">✦</span> {{ page.meta.art_caption }}</div>
     </section>

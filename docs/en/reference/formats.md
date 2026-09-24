@@ -2,41 +2,53 @@
 content_type: reference
 status: draft
 faction: necropolis
-title: PAK, H5U, XDB and other formats
+title: Heroes V archives, XDB and encodings
 lang: en
 section: reference
-kicker: REFERENCE · FILES
+kicker: HEROES V · UNIVERSE
 translation: reference/formats/
-description: Basic resource, script, and native modification formats in Heroes V.
-updated: 2026-09-23
+description: Heroes V archives, XDB and encodings
+updated: '2026-09-24'
 ---
-# PAK, H5U, XDB and other formats
+# Heroes V archives, XDB and encodings
 
-A short map of files encountered when working with Heroes V. This introductory reference does not guarantee that every game version supports every file.
+A resource is identified by its **path inside the container**, not its extraction directory. A version-text override therefore retains `UI/MainMenu2/Version.txt`.
 
-| Format | Meaning | What to check |
+| Format | Observed behavior | Check |
 |---|---|---|
-| `.pak` | ZIP resource archive | Internal paths and which archive loads |
-| `.h5u` | ZIP-format mod package | Support and install location in the target version |
-| `.xdb` | XML game-resource definition | Object type, fields, and `href` references |
-| `.lua` | Lua script | Execution context and available functions |
-| `.txt` | Text resource | Encoding, markup, and references from definitions |
-| `.dll` | Native library | Loader, architecture, and compatible build |
+| PAK | All eight local data archives opened as ZIP | Member paths, timestamps, sizes and bytes |
+| H5U | A separate UserMODs ZIP overrode version text; rollback removed the marker | Before/install/remove with restarts |
+| H5M | Test map ZIP contains map.xdb, terrain and script resources | Members and references; test loading separately |
+| XDB/XML | XML definitions for creatures, objects and UI | XML parsing establishes syntax, not valid game links |
+| TXT | Investigated UI text uses UTF-16LE with BOM | Inspect original bytes and decoding |
+| Lua | Inspected combat-startup.lua handled as UTF-8 | Test the correct game context |
+| DLL | Executable x86 code | PE/exports/calls; placing a DLL in H5U does not load it |
 
-## Paths are part of an archive
+## Read a resource without extracting the game
 
-The resource's path inside the archive matters. Changing it during packaging may make the game miss the resource or continue using the original definition.
+Python 3, from the game directory; no installation or writes:
 
-Do not combine archives blindly: matching internal paths can indicate a resource conflict.
+```python
+from zipfile import ZipFile
 
-## XDB references
+with ZipFile('data/Universe_mod.pak') as archive:
+    name = 'UI/MainMenu2/Version.txt'
+    member = archive.getinfo(name)
+    raw = archive.read(name)
+    print(member.date_time, len(raw), raw[:2].hex())
+    print(raw.decode('utf-16'))
+```
 
-`href` links definitions to other resources. When moving your own definition, check its relative references too: they are interpreted relative to the file's location.
+This checked text starts with `fffe`. Do not apply this decoder to all members: XML has its declaration/BOM, and binary resources remain bytes.
 
-Text search and an XML parser are useful research tools. Verify encoding and structure after saving.
+## Relative XDB links
 
-## Different layers need different checks
+`href="../Textures/icon.xdb#xpointer(/Texture)"` combines a resource path with an XML pointer. Moving the containing definition can change its target. Clone processing must resolve links against the original directory. Our clone generator also removes the root ObjectRecordID; missing expected template nodes fail instead of silently constructing substitutes.
 
-A resource mod needs a loading check. Lua needs execution in the intended context. A native library needs executable compatibility checks and in-game observation.
+## ZIP dates are not a complete precedence model
 
-Continue with [your first experiment](../modding/getting-started.md) and [verification](../modding/verification.md).
+Our inventory comparison selected newer member dates for case-insensitive matching paths. That describes the analysis tool, not a proven complete loader order. Maps, UserMODs, loose files and native patches need separate treatment.
+
+The marker established one override, not universal alphabetic priority or hot reload.
+
+**Evidence:** ZIP inventory, encoding/reference tests and the September 21 live marker on the [pinned build](universe-build.md). UTF-8 analysis copies are not automatically installable game text. [Marker recipe](../modding/resource-overrides.md).

@@ -20,7 +20,7 @@ This is Xaaalera’s personal knowledge base about Heroes. Its current focus is 
 
 **Mod creators:** technical notes, formats, examples, and reproducible checks.
 
-This is the first edition. Initial articles establish the structure; detailed research will be added as it is prepared.
+Prepared findings are linked in the [knowledge map](../reference/research-index.md), alongside remaining questions.
 
 ## Reading technical notes
 

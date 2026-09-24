@@ -23,26 +23,41 @@ markdown_extensions:
 nav:
 - Главная: index.md
 - Игрокам:
-  - С чего начать: players/getting-started.md
-  - Установка модов: players/installing-mods.md
-  - Как игра расставляет армию: players/army-placement.md
+  - Расстановка в игре: players/army-placement.md
+  - Проекции и карточки: players/deployment-preview.md
 - Моддерам:
-  - Первый эксперимент: modding/getting-started.md
-  - Проверка изменений: modding/verification.md
+  - Ресурсный override: modding/resource-overrides.md
+  - Боевые скрипты: modding/combat-scripts.md
+  - Тестовые карты: modding/test-maps.md
+  - Нативные окна: modding/native-ui.md
+  - Публичные данные: modding/public-information.md
 - Справочник:
-  - Форматы файлов: reference/formats.md
+  - Карта знаний: reference/research-index.md
+  - Сборка Universe: reference/universe-build.md
+  - Архивы и кодировки: reference/formats.md
+  - Существа и грейды: reference/creatures.md
+  - Хранилища: reference/banks.md
+  - 'Расстановка: детали': reference/placement-internals.md
 - О базе: about/index.md
 - Предложить правку: contributing.md
 - English:
   - Home: en/index.md
   - Players:
-    - Getting started: en/players/getting-started.md
-    - Installing mods: en/players/installing-mods.md
-    - How the game deploys armies: en/players/army-placement.md
+    - Game placement: en/players/army-placement.md
+    - Projections and cards: en/players/deployment-preview.md
   - Mod creators:
-    - First experiment: en/modding/getting-started.md
-    - Verification: en/modding/verification.md
-  - File formats: en/reference/formats.md
+    - Resource override: en/modding/resource-overrides.md
+    - Combat scripts: en/modding/combat-scripts.md
+    - Test maps: en/modding/test-maps.md
+    - Native UI: en/modding/native-ui.md
+    - Public inputs: en/modding/public-information.md
+  - Reference:
+    - Knowledge map: en/reference/research-index.md
+    - Universe build: en/reference/universe-build.md
+    - Archives and encodings: en/reference/formats.md
+    - Creature definitions: en/reference/creatures.md
+    - Banks: en/reference/banks.md
+    - Placement internals: en/reference/placement-internals.md
   - About: en/about/index.md
   - Contributing: en/contributing.md
 extra:
@@ -79,8 +94,8 @@ extra:
       sections_note: От первого мода до устройства игровых файлов.
       routes: Маршруты по базе
       highlights: На полях кодекса
-      preview_notice: Предварительный показ оформления. Статьи — стартовые черновики,
-        содержание ещё дорабатывается.
+      preview_notice: База пополняется. Сборка, способ проверки и известные ограничения
+        указаны в статьях.
     en:
       brand: Xaaalera’s knowledge base
       brand_context: ABOUT HEROES · HEROES V
@@ -113,8 +128,8 @@ extra:
       sections_note: From a first mod to the files that make the game work.
       routes: Paths through the knowledge base
       highlights: In the margins
-      preview_notice: Design preview. Articles are initial drafts; their content is
-        still being developed.
+      preview_notice: Research in progress. Articles state their build, evidence and
+        known limits.
   worlds:
     haven:
       ru: Орден Порядка

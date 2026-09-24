@@ -98,8 +98,9 @@ def main():
         if path.is_file() and (path.suffix == '.pyc' or '__pycache__' in path.parts):
             failures.append(f'Python cache must not be published: {path.relative_to(SITE)}')
     files = list(SITE.rglob('*.html'))
-    if len(files) < 17:
-        failures.append('Expected the bilingual articles and 404 page; run npm run build.')
+    expected_pages = len(list((ROOT / 'docs').rglob('*.md'))) + 1
+    if len(files) != expected_pages:
+        failures.append(f'Expected {expected_pages} article/404 pages, found {len(files)}; run npm run build.')
     parsed = {}
     for path in files:
         text = path.read_text(encoding='utf-8')

@@ -1,12 +1,27 @@
 import { test, expect } from '@playwright/test';
 
+test('removed seed articles are absent from routes and search', async ({ page }) => {
+  const removed = [
+    'players/getting-started/', 'players/installing-mods/',
+    'modding/getting-started/', 'modding/verification/',
+  ].flatMap((route) => [route, `en/${route}`]);
+  for (const route of removed) {
+    const response = await page.request.get(route);
+    expect(response.status(), route).toBe(404);
+  }
+  const response = await page.request.get('search/search_index.json');
+  const index = await response.json();
+  const stale = index.docs.filter((entry) => removed.includes(entry.location.split('#')[0]));
+  expect(stale).toEqual([]);
+});
+
 for (const width of [320, 390, 768, 1088, 1440]) {
   test(`homepage fits at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto('./');
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     await expect(
-      page.getByRole('link', { name: /Собрать свой отряд/ }),
+      page.getByRole('link', { name: /Понять расстановку/ }),
     ).toBeVisible();
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth > window.innerWidth,
@@ -26,21 +41,21 @@ test('navigation, bilingual counterpart and code article work below the Pages pr
   await page.goto('./');
   await page.getByRole('link', { name: 'Моддерам', exact: true }).click();
   await expect(page).toHaveURL(
-    /heroes5-knowledge\/modding\/getting-started\/$/,
+    /heroes5-knowledge\/modding\/resource-overrides\/$/,
   );
   await page
-    .getByRole('link', { name: 'Проверка изменений', exact: true })
+    .getByRole('link', { name: 'Боевые скрипты', exact: true })
     .first()
     .click();
-  await expect(page.locator('pre')).toContainText('Get-FileHash');
+  await expect(page.locator('pre').first()).toContainText('GetUnitPosition');
   await page.getByRole('link', { name: 'English version' }).click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-    'Verifying a change',
+    'Combat scripts: Prepare, Start and battle results',
   );
   await page.getByRole('link', { name: 'Русская версия' }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-    'Как проверить изменение',
+    'Боевые скрипты: Prepare, Start и результат боя',
   );
 });
 
@@ -55,7 +70,7 @@ test('mobile navigation can be opened and followed', async ({ page }) => {
     .getByRole('link', { name: 'Игрокам' })
     .click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-    'Перед первым модом',
+    'Как игра расставляет нейтральную армию',
   );
 });
 
@@ -68,7 +83,7 @@ test('keyboard search opens, finds a document and preserves deployment paths', a
   await page.getByRole('searchbox').fill('XDB');
   await page
     .locator('.search-dialog__results')
-    .getByRole('link', { name: /PAK, H5U, XDB/ })
+    .getByRole('link', { name: /Архивы, XDB и кодировки/ })
     .click();
   await expect(page).toHaveURL(/heroes5-knowledge\/reference\/formats\/$/);
   await page.keyboard.press('/');
@@ -99,9 +114,9 @@ test('English homepage and article fit on a narrow viewport', async ({
       () => document.documentElement.scrollWidth > innerWidth,
     ),
   ).toBe(false);
-  await page.goto('en/modding/verification/');
+  await page.goto('en/modding/combat-scripts/');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-    'Verifying a change',
+    'Combat scripts: Prepare, Start and battle results',
   );
   expect(
     await page.evaluate(
@@ -114,10 +129,10 @@ test('English homepage and article fit on a narrow viewport', async ({
 test('all eight backgrounds load as viewport backgrounds and survive reload and translation', async ({ page }) => {
   const routes = [
     ['./', 'haven'],
-    ['players/getting-started/', 'sylvan'],
-    ['players/installing-mods/', 'fortress'],
-    ['modding/getting-started/', 'academy'],
-    ['modding/verification/', 'dungeon'],
+    ['modding/combat-scripts/', 'sylvan'],
+    ['modding/resource-overrides/', 'fortress'],
+    ['players/deployment-preview/', 'academy'],
+    ['reference/creatures/', 'dungeon'],
     ['reference/formats/', 'necropolis'],
     ['about/', 'stronghold'],
     ['contributing/', 'inferno'],

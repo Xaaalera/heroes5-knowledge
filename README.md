@@ -2,7 +2,7 @@
 
 ## RU
 
-Личные заметки, исследования и руководства по Heroes V. Предварительный показ оформления; статьи — стартовые черновики, содержание дорабатывается. Материалы для игроков, первые шаги моддинга и справочник файлов.
+Подготовленные результаты исследования Heroes V Universe: игровые механики, ресурсы, скрипты, нативный интерфейс и воспроизводимые примеры. Вход по темам — [карта знаний](docs/reference/research-index.md).
 
 - Сайт: https://xaaalera.github.io/heroes5-knowledge/
 - Статьи: `docs/`; английские версии: `docs/en/`.
@@ -23,34 +23,34 @@ npm run build
 npm run check
 npx playwright install chromium
 npm test
-python -m mkdocs serve
+python -m mkdocs serve --watch-theme
 ```
 
 `site/` и скомпилированный CSS не редактируются и не коммитятся. После правки SCSS выполнить `npm run styles`; MkDocs serve следит за статьями и темой. Публикация Pages выполняется workflow этой репы.
 
-Обязательные требования к структуре, доказательствам, статусам и редакторской приёмке: [стандарт в CONTRIBUTING](CONTRIBUTING.md). Все стартовые статьи отмечены `draft`; успешная сборка не подтверждает их факты.
+Обязательные требования к структуре, доказательствам, статусам и редакторской приёмке: [стандарт в CONTRIBUTING](CONTRIBUTING.md). Статус `draft` сохраняет явно указанные границы исследования; успешная сборка не подтверждает факты.
 
 ### Проверка и ограничения
 
 Проверка сборки ищет сломанные ссылки, пропавшие переводы и приватные пути. Playwright проверяет навигацию, поиск, переключение языка и переполнение на пяти ширинах. Результаты скриншотов остаются локальными тестовыми артефактами.
 
-Начальные статьи не являются полным справочником движка. Дизайн не копирует игровые ресурсы. Гостевого wiki-редактирования пока нет — предложения идут через GitHub.
+Материалы не являются полной спецификацией движка. Фоны оригинальные; игровые кадры и их происхождение перечислены в NOTICE. Гостевого wiki-редактирования пока нет — предложения идут через GitHub.
 
 Подробнее: [CONTRIBUTING](CONTRIBUTING.md), [AGENTS](AGENTS.md), [источники иллюстраций и шрифтов](NOTICE.md).
 
 ## EN
 
-Xaaalera’s personal notes, research, and guides about Heroes V. This is a design preview with initial draft articles; the content is being developed. The site includes player guides, first modding steps, and a file reference.
+Xaaalera’s personal notes, research, and guides about Heroes V. Prepared findings cover game mechanics, resources, scripts, native UI and reproducible examples. Start with the [knowledge map](docs/en/reference/research-index.md).
 
 The site URL and commands above apply to both languages. Requires Python 3.10+ and Node.js 22+. Markdown articles are the only content source; the site builds independently of any private workspace.
 
 Presentation lives in `theme/` and `styles/`; generated `site/` and CSS are not committed. Run `npm run styles` after changing SCSS. MkDocs serve watches articles and the theme; this repo's Pages workflow publishes the site.
 
-The mandatory article standard and editorial acceptance live in [CONTRIBUTING](CONTRIBUTING.md). All seed pages are draft; successful builds do not verify their factual claims.
+The mandatory article standard and editorial acceptance live in [CONTRIBUTING](CONTRIBUTING.md). Draft status retains stated research limits; successful builds do not verify factual claims.
 
 Checks cover content metadata, local links, translations and private paths. Browser tests exercise navigation, search, language switching and overflow at five widths. Screenshots remain local test artifacts.
 
-The initial articles are not a complete engine reference. Art is original, not extracted game resources. Direct wiki editing is not available; proposed changes use GitHub. See the shared contribution, agent and asset documentation links above.
+This is not a complete engine specification. Background art is original; game screenshots and provenance are listed in NOTICE. Direct wiki editing is not available; proposed changes use GitHub. See the shared contribution, agent and asset documentation links above.
 
 ### Фоны / Backgrounds
 
@@ -71,3 +71,5 @@ The placement article includes `docs/assets/placement/placement_walkthrough.py`,
 The walkthrough distinguishes recorded mode flags from an explicit `assumed_context`. Missing flags without that argument fail; the older field comparison is conditional, not evidence of its selected branch. / Код различает записанный режим и явно заданное предположение. Отсутствующий режим без assumed_context вызывает отказ; совпадение клеток старого поля не доказывает выбранную игрой ветку.
 
 Python bytecode/cache directories are excluded from MkDocs output and rejected by the generated-site check. The downloadable walkthrough `.py` remains a public source file. / Кэш и байткод Python исключены из сайта и запрещены проверкой сборки; скачиваемый `.py` остаётся доступным исходником.
+
+Browser tests start a dedicated non-live-reloading server on port 8769 and do not reuse the interactive preview. / Браузерные проверки запускают отдельный сервер без live reload на 8769 и не переиспользуют интерактивный preview со старым CSS.

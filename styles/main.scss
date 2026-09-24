@@ -567,6 +567,7 @@ svg {
   }
 }
 .article-content {
+  overflow-wrap: anywhere;
   background: rgba($color-deep, .94);
   padding: $space-lg;
   border: 1px solid $color-line;

@@ -48,7 +48,7 @@
 
 Перед статусом `verified` инструкция проходит выполнение другим читателем/проверяющим без устных подсказок. Для справки сверяются ключевые значения и источники; для объяснения — логика и пример. Количество заголовков/слов, отсутствие запрещённых слов или положительная оценка ИИ не заменяют эту проверку. Автор не объявляет собственную статью проверенной лишь по факту генерации.
 
-Текущие стартовые страницы — `draft`. Перерабатывать их по этому стандарту, начиная с трёх эталонов: инструкция, справка, объяснение. Полнота сайта не достигается созданием пустых разделов.
+Материалы с неполной областью проверки сохраняют `draft`. Повышать статус только после описанной приёмки. Пустые вводные заготовки удалять или заменять конкретными результатами; количество страниц не является показателем полноты.
 
 
 Исправления и дополнения принимаются через issues и pull requests. Начни с одной страницы и одного проверяемого изменения. Укажи версию игры и способ проверки технического утверждения.
@@ -106,7 +106,7 @@ RU/EN pairs must have corresponding `lang`, reciprocal site-root-relative `trans
 
 Before verified status, another reader/reviewer executes a procedure without verbal help; reference values/sources and explanation logic/examples are checked as applicable. Word counts, headings, banned-word checks or a positive AI score do not substitute for this. Generating an article never verifies it.
 
-All initial pages are draft. Improve them using three exemplars (procedure, reference, explanation), without empty scaffolding.
+Research with incomplete evidence retains draft status until the stated acceptance is met. Remove empty introductory placeholders or replace them with concrete findings; page count is not completeness.
 
 
 Use issues and pull requests. Start with one page and one verifiable change. State the game version and verification method for technical claims.

@@ -8,51 +8,53 @@ home: true
 translation: ''
 eyebrow: A PERSONAL CODEX · HEROES V
 hero_title:
-  - Explore the world.
-  - Make it your own.
-description: Xaaalera’s notes on Heroes V — from installing mods to game files, scripts, and tested experiments.
-primary_action: Explore the knowledge base
-secondary_action: Start modding
+- Explore the world.
+- Make it your own.
+description: Xaaalera’s notes on Heroes V — from installing mods to game files, scripts,
+  and tested experiments.
+primary_action: Understand deployment
+secondary_action: Test a resource mod
 art_caption: Notes from Ashan · first edition
 edition: FIRST EDITION
-reading_eyebrow: START HERE
-reading_title: First pages of the codex
+reading_eyebrow: CONCRETE MECHANISMS
+reading_title: Research findings
 note_title: Test first. Write it down next.
 note_action: About this knowledge base
 contribute_title: Found a mistake or know something useful?
 contribute_text: A helpful contribution starts with a small observation.
 paths:
-  - icon: shield
-    title: Players
-    description: Prepare the game, install a mod, and understand compatibility.
-    action: Gather your party
-    href: en/players/getting-started/
-  - icon: forge
-    title: Mod creators
-    description: Explore resources, start an experiment, and verify it in the game.
-    action: Enter the workshop
-    href: en/modding/getting-started/
-  - icon: book
-    title: Reference
-    description: File formats, terms, and a few useful places to return to.
-    action: Browse the pages
-    href: en/reference/formats/
+- icon: shield
+  title: Players
+  description: Deployment, projections and creature reference cards.
+  action: Understand deployment
+  href: en/players/army-placement/
+- icon: forge
+  title: Mod creators
+  description: Resource overrides, combat callbacks, native windows and test maps.
+  action: Test a resource
+  href: en/modding/resource-overrides/
+- icon: book
+  title: Reference
+  description: Build, archives, creatures, banks and technical rules.
+  action: Open the knowledge map
+  href: en/reference/research-index/
 reading:
-  - title: Before your first mod
-    tag: PLAYERS
-    description: Game version, a backup, and a clear way back.
-    href: en/players/getting-started/
-  - title: What a mod is made of
-    tag: WORKSHOP
-    description: Data, Lua, and native changes are three different layers.
-    href: en/modding/getting-started/
-  - title: PAK, H5U, XDB explained
-    tag: REFERENCE
-    description: A short map of the main Heroes V file formats.
-    href: en/reference/formats/
+- title: Why stacks occupy these cells
+  tag: PLAYERS
+  description: Row calculation, native attempts and full-field diagrams.
+  href: en/players/army-placement/
+- title: 'One resource: build, check, remove'
+  tag: WORKSHOP
+  description: Menu marker and standalone H5U packer.
+  href: en/modding/resource-overrides/
+- title: 'Banks: tiers and variants'
+  tag: REFERENCE
+  description: Avoid mixing alternative guards into misleading ranges.
+  href: en/reference/banks/
 ---
-This knowledge base begins with my notes, not a claim to know the entire game.
 
-Technical articles distinguish **observations**, **verified mechanisms**, and **hypotheses**. The game version and the method of verification are part of the answer.
+Findings from the Heroes V Universe investigation: resource data, game behavior and checked examples.
+
+The [knowledge map](reference/research-index.md) links available topics and remaining questions.
 
 — Xaaalera

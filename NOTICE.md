@@ -28,3 +28,7 @@
 `academy-before.png` and `academy-after.png` are an unedited archived pair from one additional battle, illustrating visibility before/after confirmation. They do not show the elementals trace. `placement_walkthrough.py` is our executable reconstruction of a scoped pass, not original Nival source. The new attempt diagrams use captured entry/return results.
 
 Пара academy-before/after — неизменённые архивные кадры одного дополнительного боя, поясняющие видимость до/после подтверждения. Они не относятся к опыту трассировки элементалей. Python-файл — наше восстановление отдельного прохода, не исходник Nival; схемы попыток используют записанные результаты входа/выхода функции.
+
+## Projection cards / Карточки проекций
+
+`docs/assets/preview/gremlin-base.png` and `gremlin-upgrade.png` are unchanged archived game screenshots from the September23 native UI checks. Base speed3 and upgraded speed5 are visible; these are synthetic reference cards, not a disclosure of actual guard quantities. / Неизменённые архивные кадры: базовая скорость3 и улучшенная5; карточки справочные, без раскрытия скрытой численности.
