@@ -38,7 +38,7 @@ Definition examples: `Academy/Rakshasa_Rukh.xdb` DefenceSkill 20→25 and Health
 | `um.dll` | `1956c00b371d22a3e1a644394ff3e7159b6ec36d660d5ffa36628fcf63fd0fc6` |
 | `d3d9.dll` | `5eb152357f99d53397b764384d5cf9a0f6aece733ced30a34186ac57fb15be25` |
 
-All are x86 PE, machine 0x14c. EXE equality does not establish resource/profile/runtime-patch equality. From your game directory:
+All are x86 PE, machine 0x14c. The inspected EXE ImageBase is `0x400000`; function addresses in these articles are absolute virtual addresses, not file offsets. EXE equality does not establish resource/profile/runtime-patch equality. From your game directory:
 
 ```powershell
 Get-FileHash -Algorithm SHA256 .\bin\H5_Game.exe

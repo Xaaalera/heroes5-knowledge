@@ -8,7 +8,7 @@ section: about
 kicker: ЗАПИСКИ XAAALERA
 translation: en/about/
 description: Зачем появилась база и как читать её материалы.
-updated: 2026-09-23
+updated: 2026-09-24
 ---
 # О базе знаний
 

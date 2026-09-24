@@ -8,7 +8,7 @@ section: about
 kicker: XAAALERA’S NOTES
 translation: about/
 description: Why the knowledge base exists and how to read its articles.
-updated: 2026-09-23
+updated: 2026-09-24
 ---
 # About the knowledge base
 
