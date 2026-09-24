@@ -14,15 +14,7 @@ updated: 2026-09-24
 
 This page preserves **experiments, original results and corrections**. [Articles](research-index.md) explain the current understanding; diary entries record its basis.
 
-The first entries were reconstructed on **September 24, 2026** from September 21–23 research. This begins the public journal; it is not a complete migration of all working notes. Missing original logs are identified. Article links provide explanation, not a substitute for original data.
-
-## Recording rules
-
-- Each experiment records its date, question, build, inputs, actions, observation, conclusion, limits and result files.
-- Distinguish **observation**, **inference** and **hypothesis**. Preserve failed experiments too.
-- Do not rewrite a published observation to fit a new conclusion. Append a dated correction linking the earlier entry. Typo fixes and removal of accidentally published personal data are allowed; technical corrections must preserve history.
-- Articles link to entries; entries link to data, code and images. Record SHA-256 for files important to reproduction and retain earlier versions in Git when replacing them.
-- An ADR records **a project decision**: context, options, choice and consequences. Game experiments belong here rather than becoming ADRs.
+September 21–23 entries were reconstructed on **September 24, 2026**. This begins the journal; entries identify source data that remain unpublished.
 
 Experiments below use the [pinned Universe build](universe-build.md) unless stated otherwise.
 
@@ -39,8 +31,6 @@ Experiments below use the [pinned Universe build](universe-build.md) unless stat
 SHA-256: `b5baf474cb523dfa9ec66831676d9c98c722198f1e8af017290d38ec38fa68dc`.
 
 **Limit:** the cleaned copy has not had a separate menu launch. Earlier live movement/battle checks used the original polygon. Archive validation does not replace a fresh launch.
-
-### Original harness behavior (September 21–23 experiments)
 
 ### Flat terrain that did not permit walking
 
@@ -138,3 +128,11 @@ JSON SHA-256 at this entry: `3865ebc7623a024edafc5f208834070916b0bf651e27f5f3e63
 **Conclusion:** this resource override worked. General archive precedence and resource hot reload remain unestablished.
 
 [Reproducible packager and steps](../modding/resource-overrides.md). The original experiment log is unpublished; this entry is retrospective.
+
+## Recording rules
+
+- Each experiment records its date, question, build, inputs, actions, observation, conclusion, limits and result files.
+- Distinguish **observation**, **inference** and **hypothesis**. Preserve failed experiments too.
+- Do not rewrite a published observation to fit a new conclusion. Append a dated correction linking the earlier entry. Typo fixes and removal of accidentally published personal data are allowed; technical corrections must preserve history.
+- Articles link to entries; entries link to data, code and images. Record SHA-256 for files important to reproduction and retain earlier versions in Git when replacing them.
+- An ADR records **a project decision**: context, options, choice and consequences. Game experiments belong here rather than becoming ADRs.
