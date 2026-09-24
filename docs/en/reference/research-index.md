@@ -33,7 +33,7 @@ Prepared findings from the Heroes V Universe investigation. Resource inspection,
 
 - Every combat branch, expansion or mod.
 - A general native-plugin API for Universe.
-- Public SDK/polygon package or universal predictor installer.
+- Public SDK or universal predictor installer. [The test polygon is available](../modding/test-maps.md).
 - A working victory/loss assessor or hidden quantities/upgrades.
 - Universal archive precedence or hot reload.
 - OrcDeposit's exact object XDB and complete live bank coverage.

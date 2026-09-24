@@ -32,3 +32,9 @@
 ## Projection cards / Карточки проекций
 
 `docs/assets/preview/gremlin-base.png` and `gremlin-upgrade.png` are unchanged archived game screenshots from the September23 native UI checks. Base speed3 and upgraded speed5 are visible; these are synthetic reference cards, not a disclosure of actual guard quantities. / Неизменённые архивные кадры: базовая скорость3 и улучшенная5; карточки справочные, без раскрытия скрытой численности.
+
+## Test map / Тестовая карта
+
+RU — `docs/assets/WorkshopPolygon.h5m`: полигон проекта, плоский terrain и скрипты созданы для тестов. XDB использует структуру стандартного шаблона карты и ссылки на объекты установленной игры. Игровые модели, текстуры и определения существ в архив не включены. Публичная копия от 2026-09-24 убирает диагностические подписки локального стенда. Требуется установленная Universe; файл не содержит DLL или SDK.
+
+EN — `docs/assets/WorkshopPolygon.h5m`: project-authored polygon, flat terrain and test scripts. XDB uses the standard map-template structure and references installed game objects. No game models, textures or creature definitions are bundled. The September 24 public copy removes local harness diagnostic subscriptions. Installed Universe is required; no DLL or SDK is included.
