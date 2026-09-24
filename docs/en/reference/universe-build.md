@@ -44,6 +44,44 @@ The main archive contained 3767 UI, 787 GameMechanics, 185 MapObjects and 61 RMG
 
 Definition examples: `Academy/Rakshasa_Rukh.xdb` DefenceSkill 20→25 and Health 140→145; `Dungeon/Assassin.xdb` WeeklyGrowth 7→8; `Dungeon/Blood_Witch.xdb` 5→6. These are file values, not universal final battle stats.
 
+## Download the original comparison table {#archive-diff}
+
+[archive-diff.csv](../../assets/archive-diff.csv) contains **6930 records** for the two archives listed above. It contains resource names, comparison results, sizes and ZIP-member dates, not the contents of game files.
+
+| Column | Meaning |
+|---|---|
+| archive | Universe archive |
+| path | Resource path inside ZIP |
+| status | `added`: absent from baseline; `changed`: different bytes; `same`: identical bytes |
+| baseline_archive | Selected baseline archive; empty for added |
+| bytes | Resource size in bytes |
+| member_date | ZIP-member date, not the research date |
+
+When several baseline archives contained the same case-insensitive path, the report selected the newest member date and kept the first on ties. This is the report's selection rule, **not proven game mount precedence**.
+
+Download the CSV to a working directory and run this Python 3 code there to recount the table:
+
+```python
+from collections import Counter
+import csv
+
+with open('archive-diff.csv', encoding='utf-8', newline='') as source:
+    counts = Counter((row['archive'], row['status']) for row in csv.DictReader(source))
+for (archive, status), count in sorted(counts.items()):
+    print(archive, status, count)
+```
+
+```text
+Universe_mod.pak added 4047
+Universe_mod.pak changed 1075
+Universe_mod.pak same 37
+universe_mod_texts_ru.pak added 942
+universe_mod_texts_ru.pak changed 605
+universe_mod_texts_ru.pak same 224
+```
+
+Download SHA-256 (UTF-8, LF): `81115018610632c94b9db9566b28cc85afa3e42b76cf2c37e3ffbfc4a5af4299`.
+
 ## Limits of string evidence
 
 UniverseTrigger and event names such as UNIVERSE_COMBAT_STARTED and UNIVERSE_WORLD_READY_AFTER_LOAD appear in the binary. Names alone do not prove callable signatures or availability in a Lua context. Proxy indicators in d3d9.dll do not make replacement with an arbitrary loader compatible.
@@ -51,3 +89,5 @@ UniverseTrigger and event names such as UNIVERSE_COMBAT_STARTED and UNIVERSE_WOR
 The main archive's RMG/MapScript.lua contained only a comment header; Universe is not explained by Lua scripts alone.
 
 **Evidence:** local ZIP catalogs, byte comparisons, PE headers/strings and binary hashes, September 21–23,2026. Recheck later builds. [Archive inspection](formats.md) · [Native UI](../modding/native-ui.md).
+
+[Research record](research-diary.md#archive-inventory).

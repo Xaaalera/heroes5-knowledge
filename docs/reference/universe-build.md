@@ -46,6 +46,44 @@ Get-FileHash -Algorithm SHA256 .\bin\H5_Game.exe
 
 Примеры побайтово найденных изменений определений: у `Academy/Rakshasa_Rukh.xdb` DefenceSkill 20→25, Health 140→145; у `Dungeon/Assassin.xdb` WeeklyGrowth 7→8; у `Dungeon/Blood_Witch.xdb` 5→6. Это значения исследованных файлов, не обещание таких итоговых статов в любом бою.
 
+## Скачать исходную таблицу сравнения {#archive-diff}
+
+[archive-diff.csv](../assets/archive-diff.csv) содержит **6930 записей** двух архивов из таблицы выше. Это имена ресурсов, результаты сравнения, размеры и даты ZIP-записей; содержимое игровых файлов в CSV не включено.
+
+| Столбец | Значение |
+|---|---|
+| archive | Архив Universe |
+| path | Путь ресурса внутри ZIP |
+| status | `added` — пути нет в базе; `changed` — байты отличаются; `same` — совпадают |
+| baseline_archive | Выбранный архив базы; пусто для added |
+| bytes | Размер ресурса в байтах |
+| member_date | Дата ZIP-записи, не дата исследования |
+
+При совпадающем пути в нескольких базовых архивах отчёт выбирал более новую дату ZIP-члена; при равной дате оставлял первый. Пути сопоставлялись без учёта регистра. Это правило отчёта, **не доказанный приоритет загрузки игры**.
+
+Чтобы пересчитать таблицу, скачай CSV в рабочую папку и выполни этот код Python 3 из той же папки:
+
+```python
+from collections import Counter
+import csv
+
+with open('archive-diff.csv', encoding='utf-8', newline='') as source:
+    counts = Counter((row['archive'], row['status']) for row in csv.DictReader(source))
+for (archive, status), count in sorted(counts.items()):
+    print(archive, status, count)
+```
+
+```text
+Universe_mod.pak added 4047
+Universe_mod.pak changed 1075
+Universe_mod.pak same 37
+universe_mod_texts_ru.pak added 942
+universe_mod_texts_ru.pak changed 605
+universe_mod_texts_ru.pak same 224
+```
+
+SHA-256 скачиваемого CSV (UTF-8, LF): `81115018610632c94b9db9566b28cc85afa3e42b76cf2c37e3ffbfc4a5af4299`.
+
 ## Что нельзя заключить по DLL-строкам
 
 Имена `UniverseTrigger` и событий `UNIVERSE_COMBAT_STARTED`, `UNIVERSE_WORLD_READY_AFTER_LOAD` найдены в бинарнике. Само наличие имени не устанавливает сигнатуру и доступность функции в конкретном Lua-контексте. Обнаруженные признаки proxy у `d3d9.dll` также не разрешают заменять её произвольным загрузчиком: цепочка загрузки должна сохраняться.
@@ -53,3 +91,5 @@ Get-FileHash -Algorithm SHA256 .\bin\H5_Game.exe
 `RMG/MapScript.lua` из основного архива содержал лишь комментарий-заголовок. Поэтому описывать Universe как набор Lua-скриптов неверно.
 
 **Основание:** ZIP-каталоги и сравнение содержимого, строки/PE-заголовки и SHA-256 установки; проверки 21–23 сентября 2026. Статистика не переносится на более позднюю сборку автоматически. [Как читать архивы](formats.md) · [Точки UI в этой сборке](../modding/native-ui.md).
+
+[Запись исследования](research-diary.md#archive-inventory).

@@ -133,6 +133,99 @@ JSON SHA-256 at this entry: `3865ebc7623a024edafc5f208834070916b0bf651e27f5f3e63
 
 [Reproducible packager and steps](../modding/resource-overrides.md). The original experiment log is unpublished; this entry is retrospective.
 
+## September 24 — reading ArmyWnd from the archive again {#army-resource-check}
+
+**Question:** can readers independently reproduce the size and `Visible=true` finding without running the mod?
+
+**Actions:** opened the original `data.pak` with a standard ZIP reader, read three UI resources as bytes and parsed their XML. This repeat ran on September 24 without launching the game; it checks files, not live hovering.
+
+| Resource under `UI/Tooltips/CommonAdvObjTooltip/` | SHA-256 of bytes inside ZIP |
+|---|---|
+| `ArmyWnd.(WindowSimple).xdb` | `30a503de3aa0d28c29229a5d9d51cc98ea324ac32ea27a8388ebb8067bc1a2e9` |
+| `ArmyWnd.(WindowSimpleShared).xdb` | `782648e5e3e329701e261eced6f5b41da13830c61691a7c7dd833ed048eb531f` |
+| `MainWnd.(WindowGatheringShared).xdb` | `3b41fc1c4979187c74e4bd0ccc28bd7ebed9bfd30a1c700bcebfedfccb0ff617` |
+
+**Result:** the ArmyWnd instance has size 197×110 and `Visible=true`. Its Shared resource has `Size/First=0×0` and `Size/Second=false`; reading only Shared does not establish a zero-sized panel. All three hashes match the September 21 research record.
+
+**Conclusion:** resource visibility is already enabled. This does not establish that the game supplied model data or selected the window. [Reproduction code and explanation](../modding/native-ui.md#read-army-resource). Game XDB files are not distributed; the example reads an installed copy.
+
+## September 23 — projection range and input checks {#projection-range}
+
+**Question:** can reachable cells be highlighted before Start using public creature properties?
+
+**Method:** the C++ function receives speed, Flying, CombatSize and an obstacle mask. Orthogonal steps cost 2, diagonals 3, with a `speed × 2` budget; highlighting includes complete legal landing footprints. Other projections and visible player-army cells are added to the static mask.
+
+**Algorithm check:** 16 authored fields matched execution of original `0xb5f0d0` in an emulator. Allocation/free were substituted and the source EXE hash was checked. Cases covered diagonals, a wall, flight/landing, a 2×2 corridor, boundaries and buffer guards. This is the preserved September 23 result, not a new September 24 run.
+
+**In-game observation:** frames showed the 2×2 genie's range, a smaller golem range and dismissal on exit. A subsequent background run passed five battles, card switching, cursor exit, menu blocking, type changes and cleanup after Start. These results do not confirm physical RMB holding.
+
+**Prediction limit:** another control matched pack_8 at 3/3, pack_12 at 4/4 and pack_15 at 3/7; a further run gave 0/7 for pack_15. Single-type pack_0/pack_1 had one projection against three/two actual stacks. Successful rendering does not establish exact placement for every army.
+
+[Cards and current prototype limits](../players/deployment-preview.md) · [Input boundary](../modding/public-information.md). Original run reports and the 16-field fixture are not public yet. Reconstructed September 24 from preserved results.
+
+## September 22 — five battles in one process {#projection-lifecycle}
+
+**Question:** can native projections survive another battle without leftover models and references?
+
+**Scenario:** ordinary attacks on `pack_8 → pack_12 → pack_15 → pack_0 → pack_1`, creating **3 / 4 / 7 / 1 / 1 projections**. These were not artificial `StartCombat` calls with supplied armies.
+
+**Result:** each battle checked boundaries, non-overlapping footprints and cleanup; generations increased from 1 through 5. The first also checked hover and the card. Two recorded processes completed the sequence and normal exit; 42 tests passed at that checkpoint.
+
+**Established:** repeated creation/removal in these scenarios. **Not established:** agreement with final AI deployment. Upgrade cycling did not yet exist in this checkpoint and cannot be credited to that earlier run.
+
+Historical DLL hash: `8290957f03a1eb526168430f69fefb45fa2a01859a96f19f2251d7dd273dfa4b`. This identifies the checked file, not an available release. Original logs and this DLL are unpublished. [Why second-battle cleanup matters](../modding/native-ui.md). Reconstructed September 24.
+
+## September 21 — from army template to renderer invocation {#army-tooltip-probe}
+
+**Initial hypothesis:** enabling the stock `ArmyWnd` container through XDB might show reference bank guards.
+
+**Resource check:** ArmyText, seven CreatureFace.1–7 cells, 40×40 frames and 34×34 portraits were found. `Visible` was already true; visibility alone was insufficient.
+
+**Next experiment:** a temporary entry counter at `0x5f8050`, without reading actual guards.
+
+| Action | Cumulative counter |
+|---|---:|
+| Before hovering | 0 |
+| Hovering bank and neutral pack | 47 |
+| Then bank and empty ground only | 51 |
+
+**Conclusion:** the bank tooltip path invokes the renderer. The four additional calls cannot be separated into show/hide events; no frame recording exists for this experiment. Invocation does not establish safe integration of a new reference model.
+
+**Static refinement:** model slots `+0x38/+0x3c/+0x40` supply population condition, count and indexed access. The inspected implementation uses a 24-byte stride; `0x5fd080` computes count and `0x5fd0a0` obtains an entry. An entry carries texture, numeric and string labels. This describes one implementation, not a ready ABI for arbitrary objects.
+
+[Current native-window explanation](../modding/native-ui.md). Addresses apply only to the pinned EXE. The manual record was reconstructed September 24; no separate public counter dump is available.
+
+## September 21 — assessor button and OCR {#assessor-inputs}
+
+**Task:** selected hero → visible neutral tooltip → Assess button.
+
+**Options:** integrated button or external window. The integrated route had WindowMSButton and a UI_SHOW_WINDOW example, but these did not establish arbitrary Lua callbacks. An external window required capturing the tooltip before losing hover and validating recognized text.
+
+**Checked:** a hidden Tk 8.6.12 test window opened and closed; Windows OCR recognized synthetic “Imps 20–30”. Later, the user confirmed the persistent button accepted a click and displayed a diagnostic response.
+
+**Unfinished:** victory/loss model, automatic selected-hero acquisition and the complete visible-input path. Recognizing a synthetic image does not test the game font or a fullscreen external overlay.
+
+**Retained calculation requirement:** use known own-hero data and visible enemy types/ranges; compare endpoint cases. If outcomes differ across the range, report uncertainty/risk, but this remains an unimplemented plan. Reject `40–32` rather than silently swap bounds. Stock Danger is not treated as a validated estimate because its input origins remain unknown.
+
+[Available inputs and OCR checks](../modding/public-information.md). Original button/Tk/OCR logs are not public yet. Reconstructed September 24.
+
+## September 21 — Universe inventory and comparison-base correction {#archive-inventory}
+
+**Method:** eight `data/*.pak` files opened as ZIP; resources compared byte-for-byte against local `data.pak`, `a2p1-data.pak`, `texts.pak` and `a2p1-texts.pak`.
+
+| Archive | Total | Changed | New paths | Identical |
+|---|---:|---:|---:|---:|
+| Universe_mod.pak | 5159 | 1075 | 4047 | 37 |
+| universe_mod_texts_ru.pak | 1771 | 605 | 942 | 224 |
+
+**Correction:** the initial main-archive count without text baselines was 1074 changed / 4048 new. Including all four baseline archives produced 1075 / 4047. Difference counts therefore need their comparison-base definition.
+
+**Limit:** the local baseline was not independently verified as clean stock ToE. File counts are not feature counts; DLLs can change behavior beyond resources. Menu version 2.0 and a DLL PAK-check string 1.8 do not identify one version unambiguously.
+
+[Original comparison CSV](../../assets/archive-diff.csv) — all 6930 rows for two archives, without game resource contents. Publication on September 24 normalized line endings to LF only; original rows/fields were preserved. Recounting CSV rows confirmed the table; no fresh comparison of all game archives was performed.
+
+Download SHA-256: `81115018610632c94b9db9566b28cc85afa3e42b76cf2c37e3ffbfc4a5af4299` (732359 bytes). [Fields and recount code](universe-build.md#archive-diff). The experiment record was reconstructed September 24; the complete inventory of all eight archives remains unpublished.
+
 ## Recording rules
 
 - Each experiment records its date, question, build, inputs, actions, observation, conclusion, limits and result files.

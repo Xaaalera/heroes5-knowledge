@@ -48,3 +48,5 @@ The prototype assumes one stack per publicly known type. The game can split it, 
 In one observed example, a single peasant projection before Start became **three combat stacks of 10**. Splitting explains the mismatch, not cell size. [How the game builds the army](army-placement.md).
 
 **Checks on September 21–23, 2026:** the user confirmed opening and cycling with physical RMB. Holding RMB remains unconfirmed; background window messages do not replace that check. The prediction does not read hidden quantities, final upgrades or the completed combat army as inputs.
+
+[Research record](../reference/research-diary.md#projection-range).

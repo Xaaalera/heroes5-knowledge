@@ -45,3 +45,5 @@ OCR extracts text from an image, but can miss a readable card:
 Missing OCR text therefore does not establish that a card is absent from the screen.
 
 **Evidence:** MonsterTooltip/AG_INFO inspection and button/OCR checks on September 21–23, 2026. [Creatures](../reference/creatures.md) · [Banks](../reference/banks.md) · [Projections](../players/deployment-preview.md).
+
+[Research record](../reference/research-diary.md#assessor-inputs).

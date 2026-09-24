@@ -30,6 +30,44 @@ An army tooltip needs **a window template, the selected root and a populated dat
 
 In the inspected model, virtual slots `+0x38/+0x3c/+0x40` supply the population condition, element count and element access. A 24-byte record contains a texture reference and numeric/string labels. These offsets describe one implementation, not a universal C++ ABI.
 
+## Read ArmyWnd from your installation {#read-army-resource}
+
+Use Python 3 and `data.pak` from the [inspected build](../reference/universe-build.md). Save this as `inspect_army_window.py`. It only reads ZIP/XML and does not launch the game.
+
+```python
+from hashlib import sha256
+from pathlib import Path
+from zipfile import ZipFile
+from xml.etree import ElementTree
+import sys
+
+archive_path = Path(sys.argv[1]) / 'data' / 'data.pak'
+resource = 'UI/Tooltips/CommonAdvObjTooltip/ArmyWnd.(WindowSimple).xdb'
+with ZipFile(archive_path) as archive:
+    raw = archive.read(resource)
+window = ElementTree.fromstring(raw)
+size = window.find('.//Size/First')
+print('sha256:', sha256(raw).hexdigest())
+print('Visible:', window.findtext('.//Visible'))
+print('Size:', size.findtext('x'), size.findtext('y'))
+```
+
+Replace `../HeroesV-test` with your installed game's directory:
+
+```powershell
+python inspect_army_window.py "../HeroesV-test"
+```
+
+Expected output for the inspected resource:
+
+```text
+sha256: 30a503de3aa0d28c29229a5d9d51cc98ea324ac32ea27a8388ebb8067bc1a2e9
+Visible: true
+Size: 197 110
+```
+
+A different hash means different resource bytes; compare contents first. The example inspects the `WindowSimple` **instance**. Its Shared file has size 0×0 and `Size/Second=false`; Shared alone does not establish a zero-sized panel. [September 24 repeat-check record](../reference/research-diary.md#army-resource-check).
+
 ## Selecting the prototype window
 
 Switching the shared renderer found panels but did not provide suitable population and space for every bank.
@@ -70,3 +108,5 @@ Before a native call, check the window pointer, calling convention, reference ow
 | Rotator creation | `0x789010` |
 
 **Scope:** the [pinned build](../reference/universe-build.md) only; no ready SDK. Evidence: resources, call counter and game checks on September 21–23, 2026. Original game DLLs were not replaced with a generic loader.
+
+[Research record](../reference/research-diary.md#army-tooltip-probe).

@@ -52,3 +52,5 @@ Our inventory comparison selected newer member dates for case-insensitive matchi
 The marker established one override, not universal alphabetic priority or hot reload.
 
 **Evidence:** ZIP inventory, encoding/reference tests and the September 21 live marker on the [pinned build](universe-build.md). UTF-8 analysis copies are not automatically installable game text. [Marker recipe](../modding/resource-overrides.md).
+
+[Research record](research-diary.md#archive-inventory).

@@ -30,6 +30,44 @@ updated: '2026-09-24'
 
 В изученной модели виртуальные слоты `+0x38/+0x3c/+0x40` отвечают за условие наполнения, число элементов и доступ к элементу. Запись занимает 24 байта и содержит ссылку текстуры, числовую и строковую подписи. Эти смещения описывают одну реализацию, а не универсальный C++ ABI.
 
+## Прочитать ArmyWnd из своей игры {#read-army-resource}
+
+Нужны Python 3 и `data.pak` из [исследованной сборки](../reference/universe-build.md). Сохрани пример как `inspect_army_window.py`. Он только читает ZIP и XML, игру запускать не нужно.
+
+```python
+from hashlib import sha256
+from pathlib import Path
+from zipfile import ZipFile
+from xml.etree import ElementTree
+import sys
+
+archive_path = Path(sys.argv[1]) / 'data' / 'data.pak'
+resource = 'UI/Tooltips/CommonAdvObjTooltip/ArmyWnd.(WindowSimple).xdb'
+with ZipFile(archive_path) as archive:
+    raw = archive.read(resource)
+window = ElementTree.fromstring(raw)
+size = window.find('.//Size/First')
+print('sha256:', sha256(raw).hexdigest())
+print('Visible:', window.findtext('.//Visible'))
+print('Size:', size.findtext('x'), size.findtext('y'))
+```
+
+Запусти, заменив `../HeroesV-test` каталогом своей установленной игры:
+
+```powershell
+python inspect_army_window.py "../HeroesV-test"
+```
+
+Ожидаемый результат для проверенного ресурса:
+
+```text
+sha256: 30a503de3aa0d28c29229a5d9d51cc98ea324ac32ea27a8388ebb8067bc1a2e9
+Visible: true
+Size: 197 110
+```
+
+Другой хеш означает другие байты ресурса — сначала сравни содержимое. Пример проверяет **экземпляр** `WindowSimple`; у его Shared-файла размер 0×0 и `Size/Second=false`. По одному Shared нельзя заключить, что панель должна иметь нулевой размер. [Запись повторной проверки 24 сентября](../reference/research-diary.md#army-resource-check).
+
 ## Как окно выбиралось в прототипе
 
 Переключения общей функции отрисовки оказалось недостаточно: панели находились, но данные и место под них подходили не всем хранилищам.
@@ -70,3 +108,5 @@ updated: '2026-09-24'
 | Создание rotator | `0x789010` |
 
 **Применимость:** только [закреплённая сборка](../reference/universe-build.md); готового SDK нет. Основание — ресурсы, счётчик вызовов и игровые проверки 21–23 сентября 2026. Исходные DLL игры универсальным загрузчиком не заменялись.
+
+[Запись исследования](../reference/research-diary.md#army-tooltip-probe).

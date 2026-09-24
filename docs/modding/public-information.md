@@ -45,3 +45,5 @@ OCR — распознавание текста с изображения — м
 Поэтому отсутствие текста в ответе OCR не означает, что карточки нет на экране.
 
 **Основание:** разбор MonsterTooltip/AG_INFO и проверки кнопки/OCR 21–23 сентября 2026. [Существа](../reference/creatures.md) · [Хранилища](../reference/banks.md) · [Проекции](../players/deployment-preview.md).
+
+[Запись исследования](../reference/research-diary.md#assessor-inputs).
