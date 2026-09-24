@@ -33,6 +33,7 @@ nav:
   - Публичные данные: modding/public-information.md
 - Справочник:
   - Карта знаний: reference/research-index.md
+  - Дневник исследований: reference/research-diary.md
   - Сборка Universe: reference/universe-build.md
   - Архивы и кодировки: reference/formats.md
   - Существа и грейды: reference/creatures.md
@@ -53,6 +54,7 @@ nav:
     - Public inputs: en/modding/public-information.md
   - Reference:
     - Knowledge map: en/reference/research-index.md
+    - Research diary: en/reference/research-diary.md
     - Universe build: en/reference/universe-build.md
     - Archives and encodings: en/reference/formats.md
     - Creature definitions: en/reference/creatures.md

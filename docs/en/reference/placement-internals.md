@@ -12,7 +12,7 @@ updated: '2026-09-24'
 ---
 # Placement internals and corrected assumptions
 
-This preserves details beyond the [player explanation](../players/army-placement.md): branch selection, arithmetic and exceptions. Addresses apply only to the [pinned EXE](universe-build.md). Static analysis, emulation and live observation have different evidential scope.
+Technical reference for **stack splitting, sorting and cell selection**. Start with the illustrated [player explanation](../players/army-placement.md). All addresses below refer to the [pinned EXE](universe-build.md); validation scope is listed at the end.
 
 ## Army preparation
 
@@ -78,3 +78,5 @@ Additional ability evaluator 0xbfa360 has separate applicability/target tests. I
 Sort/truncation/footprint and parts of split/spread arithmetic ran in original-code emulation. Universe width changes were observed in a separate process. The live elemental journal confirms seven attempts/four cells only for its ordinary pass. It does not validate every special mode.
 
 **Evidence:** September 21–23 analysis and corrections; published [example data](../players/army-placement.md). [Definitions](creatures.md) · [Research map](research-index.md).
+
+[Research record](research-diary.md#placement-corrections).

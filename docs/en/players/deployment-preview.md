@@ -12,35 +12,39 @@ updated: '2026-09-24'
 ---
 # What a deployment projection shows
 
-The experimental projection shows a **hypothesized position for a publicly known creature type**, not an actual hidden stack. If one type splits, projection and actual stack counts can differ.
+A projection marks **a creature's predicted position and movement area**. It uses a known type without revealing hidden guard quantities or upgrades. This is an experimental mod for the inspected Universe build; no universal release is available.
 
-| Action | Checked prototype behavior |
+## Controls
+
+| Action | Result |
 |---|---|
-| Hover | Movement area for the selected reference type |
-| First RMB | Full base/known-type card |
-| Repeated RMB for an uncertain grade | Base → upgrade → alternate → base |
+| Hover | Movement area of the selected reference type |
+| First RMB | Full card of the base or already known upgrade |
+| Repeated RMB when upgrade is unknown | Base → upgrade → alternative upgrade → base |
 | Double LMB | Native detailed creature window |
-| Detail-window arrows | Cycle available reference variants |
-| Start | Release projections, cards and highlights |
+| Detailed-window arrows | Switch available variants |
+| Start | Remove projections, cards and highlighting |
 
-Physical RMB holding remains separately unconfirmed. Extra bottom arrows were an experiment and removed. A known upgraded type should not imply all grades are equally possible.
+If the upgrade is known, the card shows it. Figures are opaque with a subtle warm glow. The current version has no additional lower arrows.
 
-## Stats come from the selected definition
+## Example: gremlin and upgrade
 
-[![Base gremlin card: speed 3, health 5](../../assets/preview/gremlin-base.png)](../../assets/preview/gremlin-base.png)
+[![Base gremlin: speed 3, health 5](../../assets/preview/gremlin-base.png)](../../assets/preview/gremlin-base.png)
 
-[![Master gremlin card: speed 5, health 6](../../assets/preview/gremlin-upgrade.png)](../../assets/preview/gremlin-upgrade.png)
+[![Master gremlin: speed 5, health 6](../../assets/preview/gremlin-upgrade.png)](../../assets/preview/gremlin-upgrade.png)
 
-In this control, base speed is3 and upgraded speed 5. Switching updates both the card and movement calculation because the cache key includes creature type. Speed/Flying/CombatSize come from [definitions](../reference/creatures.md); the native descriptor supplies text/stats. This is not a three-creature hardcoded stat table.
+Switching changes speed from **3 to 5** and health from **5 to 6**. The movement area is recalculated with the card.
 
-The reference descriptor represents one creature without a hero or real combat stack. Quantity 1 in its detailed window does not reveal a single enemy; real combat effects are not established by this reference.
+Stats are not hardcoded for the pictured creatures. `Speed`, `Flying` and `CombatSize` come from the [selected type definition](../reference/creatures.md); the native descriptor supplies the name and card fields. The cache key includes the type, preventing reuse of the previous upgrade's movement area.
 
-## Why it does not fully reproduce the game
+## Why the detailed window shows “1”
 
-Inputs are public types and geometry, excluding hidden quantities, final upgrades and actual defender stacks. The basic assumption is one stack per public type; special strategies/splitting/composition changes can differ.
+The reference contains one creature without a hero or real combat stack. This **does not mean the guard has one enemy**. The card also does not establish effects that apply in an actual battle.
 
-A live solo control showed one peasant projection before Start and three actual stacks of10 afterwards. That demonstrates the assumption's limit, not incorrect cell geometry. [The game's algorithm](army-placement.md) is documented separately.
+## When prediction and battle differ
 
-## Status
+The prototype assumes one stack per publicly known type. The game can split it, change the composition or choose a special strategy.
 
-This describes a September 21–23 prototype on our build, not a public universal-compatibility release. The user confirmed physical RMB opening/cycling; addressed-message tests are separate evidence. Current presentation uses opaque figures with subtle warm glow. Holding RMB remains unconfirmed.
+In one observed example, a single peasant projection before Start became **three combat stacks of 10**. Splitting explains the mismatch, not cell size. [How the game builds the army](army-placement.md).
+
+**Checks on September 21–23, 2026:** the user confirmed opening and cycling with physical RMB. Holding RMB remains unconfirmed; background window messages do not replace that check. The prediction does not read hidden quantities, final upgrades or the completed combat army as inputs.

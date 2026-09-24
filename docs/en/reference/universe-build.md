@@ -12,20 +12,7 @@ updated: '2026-09-24'
 ---
 # The investigated Universe build
 
-Universe changes resources, UI and executable behavior. An XDB edit does not establish DLL behavior, and the menu version does not identify all four binaries.
-
-## Resource snapshot, September 21, 2026
-
-All eight inspected data PAKs opened as ZIP. The comparison baseline was the local data, a2p1-data, texts and a2p1-texts archives, not an independently authenticated clean ToE installation.
-
-| Archive | Resources | Changed | Added paths | Identical |
-|---|---:|---:|---:|---:|
-| `Universe_mod.pak` | 5159 | 1075 | 4047 | 37 |
-| `universe_mod_texts_ru.pak` | 1771 | 605 | 942 | 224 |
-
-The main archive contained 3767 UI, 787 GameMechanics, 185 MapObjects and 61 RMG resources. These count files, not features.
-
-Definition examples: `Academy/Rakshasa_Rukh.xdb` DefenceSkill 20→25 and Health 140→145; `Dungeon/Assassin.xdb` WeeklyGrowth 7→8; `Dungeon/Blood_Witch.xdb` 5→6. These are file values, not universal final battle stats.
+**Native addresses and experiments in this knowledge base refer to the four file hashes below.** “Universe 2.0” alone does not identify the build: the mod changes resources, UI and executable code. Compare your installation’s SHA-256 hashes before repeating native experiments.
 
 ## Exact native baseline
 
@@ -43,6 +30,19 @@ All are x86 PE, machine 0x14c. The inspected EXE ImageBase is `0x400000`; functi
 ```powershell
 Get-FileHash -Algorithm SHA256 .\bin\H5_Game.exe
 ```
+
+## Resource snapshot, September 21, 2026
+
+All eight inspected data PAKs opened as ZIP. The comparison baseline was the local data, a2p1-data, texts and a2p1-texts archives, not an independently authenticated clean ToE installation.
+
+| Archive | Resources | Changed | Added paths | Identical |
+|---|---:|---:|---:|---:|
+| `Universe_mod.pak` | 5159 | 1075 | 4047 | 37 |
+| `universe_mod_texts_ru.pak` | 1771 | 605 | 942 | 224 |
+
+The main archive contained 3767 UI, 787 GameMechanics, 185 MapObjects and 61 RMG resources. These count files, not features.
+
+Definition examples: `Academy/Rakshasa_Rukh.xdb` DefenceSkill 20→25 and Health 140→145; `Dungeon/Assassin.xdb` WeeklyGrowth 7→8; `Dungeon/Blood_Witch.xdb` 5→6. These are file values, not universal final battle stats.
 
 ## Limits of string evidence
 

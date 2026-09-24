@@ -12,7 +12,7 @@ updated: '2026-09-24'
 ---
 # Heroes V archives, XDB and encodings
 
-A resource is identified by its **path inside the container**, not its extraction directory. A version-text override therefore retains `UI/MainMenu2/Version.txt`.
+**PAK, H5U and H5M in the inspected installation can be read as ZIP.** An override must preserve the internal resource path: `UI/MainMenu2/Version.txt` for the version text. An extra enclosing directory changes that path.
 
 | Format | Observed behavior | Check |
 |---|---|---|

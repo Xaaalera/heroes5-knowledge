@@ -12,7 +12,7 @@ updated: '2026-09-24'
 ---
 # Banks: types, tiers and guard ranges
 
-A public bank reference describes **possible guards**, not the actual hidden variant chosen for a particular object. Keep tiers and alternative complete compositions separate.
+**One bank tier can have several guard compositions.** The crypt, for example, has eight variants across four tiers. A reference must map variants to tiers rather than use array indices as tier numbers. Below are the catalog and two quantity examples.
 
 ## Resource mapping
 
@@ -42,7 +42,7 @@ Check MapObjects/Universe_mod/Demonbank, Monasterybank and NecroEstate `(AdvMapB
 
 DefaultStats contains 8 Crypt variants for 4 tiers,5 MagiVault variants for 3, and 7 DragonUtopia variants for 5. Match each variant's army, rewards and AG_INFO panel. Aggregate identical creatures within one complete variant, never mutually exclusive substitutions.
 
-## Corrected demon-bank example
+## Example: demon-bank guard quantity
 
 AG_INFO05_01_SIZE…05_04_SIZE describe five groups of three guard slots, totaling 15:
 
@@ -64,3 +64,5 @@ Four variants contain 5,10,15 or20 of **each of four types**. The 15-per-type va
 Inspected AdvMapTreasureShared values: wood/ore 4–7, rare resources 2–4, gold 5–10 internal units. A ×100 gold conversion was not verified by our controlled experiment; do not present 500–1000 as an established payout from this evidence.
 
 **Evidence:** MapObjects, UI/AGINFO and DefaultStats Banks, September 21 and corrected grouping. Slot counts checked across 13 families; probabilities, all labels and runtime rules remain incomplete. [Public information](../modding/public-information.md) · [Build](universe-build.md).
+
+[Research record](research-diary.md#banks).

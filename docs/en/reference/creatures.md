@@ -12,7 +12,7 @@ updated: '2026-09-24'
 ---
 # Creature definitions: stats, size and upgrades
 
-A creature-type definition is reference data. It does not reveal the quantity or hidden upgrade of a particular neutral army.
+**Creature XDB stores base stats, footprint and upgrades.** For example, `Speed` sets movement speed, `CombatSize` defines the footprint and `Upgrades` lists upgrades. These are type properties, not the quantity or hidden upgrade of a particular army.
 
 | XDB field | Meaning in inspected mechanisms | Definition offset in the pinned x86 build |
 |---|---|---|
@@ -40,10 +40,12 @@ Source: Universe_mod.pak `GameMechanics/Creature/Creatures/Neutrals/*_Elemental.
 
 This separates Fire as a shooter and Air as flying in the [placement example](../players/army-placement.md).
 
-## Corrected size/upgrade interpretations
+## CombatSize is footprint; Upgrades lists upgrades
 
 Field registration and the XML loader establish +0xdc as CombatSize, clamped to1…2. The investigated archive contains 179 Creature definitions:102 size 1 and 77 size 2. Other archives/DLLs may add more creatures.
 
 Consequently the neutral-splitting condition CombatSize>2 cannot occur after that loader; creature tier is not the tested value. Upgrades is independently confirmed by its loader; Peasant.xdb lists MILITIAMAN and LANDLORD. A reference list does not establish the hidden army's actual upgrade.
 
 **Evidence:** registration/loader analysis and ZIP definitions, September 22–23,2026. [Placement internals](placement-internals.md) · [Public versus hidden information](../modding/public-information.md).
+
+[Research record](research-diary.md#placement-corrections).

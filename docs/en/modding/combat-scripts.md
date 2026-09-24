@@ -12,7 +12,7 @@ updated: '2026-09-24'
 ---
 # Combat scripts: Prepare, Start and battle results
 
-Adventure-map and combat scripts run in different contexts. An adventure query timing out during combat does not by itself establish a broken function or control channel.
+Record initial positions with `GetUnitPosition` in **combat `Start`, before the first turn**. Read results and losses separately, after battle, through `COMBAT_RESULTS_TRIGGER`.
 
 | Event | Timing | Useful observation |
 |---|---|---|
@@ -46,7 +46,7 @@ Our map uses this CombatScript.xdb resource:
 <Script><FileName href="CombatScript.lua"/></Script>
 ```
 
-The neutral object's CombatScript field references that Script resource. Merely placing Lua in an archive does not prove callback execution. Our experiments also captured GetUnitPosition results with an observer; these print calls are not a published log-collection system.
+Bind the neutral object's `CombatScript` field to this Script resource; a Lua file in the archive alone is insufficient. The code prints each stack's type and coordinates; it does not include a log collector. The published experiments also recorded `GetUnitPosition` results with a separate observer.
 
 ## After-battle results
 
@@ -65,6 +65,8 @@ SetTrigger(COMBAT_RESULTS_TRIGGER, "OnResults");
 Argument 1 selects the winner's army; index 0 selects its first stack. The observed string `0|1|13|10|0` means battle index 0, one winning stack, type 13, initial 10 and died 0. Handle empty armies before querying index 0.
 
 These are after-battle assertions, never precombat predictor inputs. [Public information boundary](public-information.md).
+
+Adventure-map and combat scripts run in different contexts. An adventure query can time out during combat; that alone does not prove the function is broken.
 
 ## Additional Universe events
 

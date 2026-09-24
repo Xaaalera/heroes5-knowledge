@@ -12,39 +12,61 @@ updated: '2026-09-24'
 ---
 # Native UI: why Visible=true is insufficient
 
-ArmyWnd already had Visible=true, yet the bank reference army was absent. A template describes layout; the game must also select the window, supply its model and fill children.
+An army tooltip needs **a window template, the selected root and a populated data model**. `ArmyWnd` already had `Visible=true`; the flag cannot fill an empty model.
 
-## Resources and model
+## Army-panel elements
 
-`data.pak/UI/Tooltips/CommonAdvObjTooltip/` contains a197×110 ArmyWnd, ArmyText and seven CreatureFace slots. Each has a40×40 frame,34×34 CreatureIconPlace and CreaturesNumber; MonsterTooltip/CommonAdvObjTooltip already reference the container.
+`data.pak/UI/Tooltips/CommonAdvObjTooltip/` contains:
 
-The renderer searches child names. Investigated model virtual slots+0x38/+0x3c/+0x40 correspond to population condition, count and indexed access. One implementation uses 24-byte entries containing a texture reference and numeric/string labels. This is not a universal C++ ABI.
-
-## Separate root selection
-
-1. A shared-renderer experiment found panels but did not establish complete filling/layout for all banks.
-2. The working prototype registered a separate root in typedWindows of a Universe UIGameRoot copy.
-3. Public object names select that root before native filling/layout; ordinary tooltips retain their original path.
-4. Its table has 19 names for 12 families. Renames/name collisions remain limitations, not a proven Type dispatcher.
-
-A separate demon-bank window was observed in-game. Other families/new rows did not all receive equivalent live validation.
-
-## Distinct army UI mechanisms
-
-ArmyWnd is the portrait/label list for an object. SCreatureInfoTooltip is the combat screen's single-type detailed card. Projection cards use a synthetic one-creature descriptor without hero or real combat stack; CScreenTooltipController owns display/RMB. Grade switching updates both retained references rather than just an icon. Details use an owned CSimpleCreaturesRotator; quantity 1 is reference data, not revealed enemy numbers.
-
-## Lifecycle
-
-Windows/projections are tied to owners and generations. Start/destruction releases references. An early second-battle crash came from clearing mask pointers while retaining dimensions; resetting the complete 24-byte structure fixed that regression. One successful opening cannot validate lifecycle behavior.
-
-Strings/vtables are not ready APIs. Validate object identity, calling convention, reference ownership, active screen and execution thread separately.
-
-| Investigated entry | Address |
+| Element | Purpose and size |
 |---|---|
-| Army-list renderer | 0x5f8050 |
-| Root selection before layout | 0x5f8800 |
-| Combat tooltip source | 0x546f40 |
-| Creature descriptor | 0x4bd550 |
-| Rotator construction | 0x789010 |
+| ArmyWnd | 197×110 container |
+| ArmyText | Army text |
+| CreatureFace.1–7 | Seven portrait cells |
+| Cell frame / CreatureIconPlace | 40×40 / 34×34 |
+| CreaturesNumber | Quantity label |
 
-**Evidence:** resources, call counter, separate bank window and later native card checks, September 21–23. Only the [pinned build](../reference/universe-build.md); not an SDK. Original game DLLs were not replaced by a generic loader.
+`MonsterTooltip` and `CommonAdvObjTooltip` already reference this container. The renderer finds child elements **by name**.
+
+In the inspected model, virtual slots `+0x38/+0x3c/+0x40` supply the population condition, element count and element access. A 24-byte record contains a texture reference and numeric/string labels. These offsets describe one implementation, not a universal C++ ABI.
+
+## Selecting the prototype window
+
+Switching the shared renderer found panels but did not provide suitable population and space for every bank.
+
+The working path was:
+
+1. Register a separate root in a copy of Universe `UIGameRoot`'s `typedWindows`.
+2. Select it by the public object name **before** normal population and layout.
+3. Keep other tooltips on their normal path.
+
+The prototype table contains 19 names for 12 families. Renaming or duplicate names can break selection; a universal Type dispatcher is unconfirmed. The separate demon-bank window was seen in game; other families did not receive the same full check.
+
+## Army list versus creature card
+
+| Window | Display |
+|---|---|
+| Object-tooltip ArmyWnd | Several portraits and labels |
+| Combat SCreatureInfoTooltip | Stats of one creature type |
+
+A projection uses a reference descriptor for one creature, without a hero or real combat stack. `CScreenTooltipController` owns the card/RMB behavior; changing upgrade updates **both retained references**. Replacing the image alone is insufficient.
+
+The detailed window uses `CSimpleCreaturesRotator`. Its displayed quantity of one is a reference value, not an enemy count.
+
+## Why the second battle matters
+
+Window and projection references belong to an owner and generation; Start or screen destruction releases them. An early mask reset cleared pointers but retained dimensions, causing the second battle to crash. The fix resets **all 24 bytes** of the mask structure.
+
+Before a native call, check the window pointer, calling convention, reference ownership, active screen and execution thread. A function name or virtual-method table alone is insufficient.
+
+## Addresses in the inspected build
+
+| Purpose | Address |
+|---|---|
+| Army-list renderer | `0x5f8050` |
+| Root selection before layout | `0x5f8800` |
+| Combat tooltip source | `0x546f40` |
+| Creature descriptor creation | `0x4bd550` |
+| Rotator creation | `0x789010` |
+
+**Scope:** the [pinned build](../reference/universe-build.md) only; no ready SDK. Evidence: resources, call counter and game checks on September 21–23, 2026. Original game DLLs were not replaced with a generic loader.

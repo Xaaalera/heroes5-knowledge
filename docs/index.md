@@ -58,3 +58,5 @@ reading:
 [Карта знаний](reference/research-index.md) показывает доступные темы и оставшиеся вопросы.
 
 — Xaaalera
+
+[Дневник исследований](reference/research-diary.md) — опыты, исходные данные и исправления выводов.

@@ -12,26 +12,36 @@ updated: '2026-09-24'
 ---
 # Inputs available for a public prediction
 
-Type definitions, a visible quantity interval and the exact hidden composition are different sources. Rounding a hidden quantity after reading it does not make it public.
+A pre-battle prediction can use **visible creature types, the displayed quantity range and reference stats**. It cannot use the exact hidden army composition, even if the quantity is rounded after reading it.
 
-| Input | Supports | Does not establish |
+## What is known before combat
+
+| Source | Available information | Still unknown |
 |---|---|---|
-| Ordinary tooltip portrait | Match a known type to a definition | Combat stack count after splitting |
-| Visible quantity interval | Evaluate an eventual model at its bounds | Exact quantity |
-| Creature XDB | Reference traits | Actual hidden upgrade |
-| Bank AG_INFO/DefaultStats | Possible guards | The object's selected tier |
-| Combat Start positions | After-the-fact comparison | Honest precombat prediction input |
+| Tooltip portrait | Creature type | Number of combat stacks after splitting |
+| Displayed quantity range | Lower and upper calculation bounds | Exact quantity |
+| Creature XDB | Properties of that type | Hidden stack's upgrade |
+| Bank AG_INFO/DefaultStats | Possible guard compositions | Selected tier of this object |
+| Combat Start coordinates | Actual placement for comparison | This is an outcome, not a prediction input |
 
-Unknown/ambiguous portraits or a mismatched target invalidate the input. The inspected integration binds target information to the new grid of the attack command; stale hovering is not a current target.
+For example, a displayed range supports calculations at both endpoints. It does not identify one exact quantity inside the range.
 
-## Why Danger is not our model
+Inputs must belong to **the current attack target**. The inspected integration binds the target description to the new battle grid of the attack command. A previous hover, unknown portrait or ambiguous portrait is insufficient.
 
-MonsterTooltip/Danger.(WindowTextView).xdb links ARMY_DANGER_* labels. Finding their display does not establish where all evaluation inputs originate.
+## Can the built-in danger rating be used?
 
-The experimental Assess button accepted clicks and displayed a diagnostic response. It did not validate a victory, loss or probability model. Evaluating lower/upper quantity bounds and returning “risky” remained a proposal, not an implemented battle assessor.
+The danger text uses `MonsterTooltip/Danger.(WindowTextView).xdb` and `ARMY_DANGER_*` strings. The origin of all rating inputs remains unknown, including whether they are limited to information available to the player.
 
-## OCR is not ground truth
+The custom battle assessor is also unfinished. Its prototype button accepted clicks and returned a diagnostic response. Victory, loss and range-based risk calculations remained a plan.
 
-Recognizing “Imps 20–30” in a synthetic image did not measure accuracy on the game font. A full-frame OCR pass over a readable golem card once returned only “00.”; crop-based recognition recovered its title/fields. Missing recognized text does not prove missing UI. Reject a reversed 40–32 interval rather than silently swapping it.
+## Checking recognized text
 
-**Evidence:** MonsterTooltip/AG_INFO analysis, diagnostic-button and OCR controls, September 21–23. [Creature definitions](../reference/creatures.md) · [Banks](../reference/banks.md) · [Projection meaning](../players/deployment-preview.md).
+OCR extracts text from an image, but can miss a readable card:
+
+- A synthetic “Imps 20–30” example was recognized. This did not test the game font.
+- One full golem-card attempt returned only “00.”. Processing separate image regions recovered the name and fields.
+- Reject a range such as `40–32` as an error; do not silently swap its bounds.
+
+Missing OCR text therefore does not establish that a card is absent from the screen.
+
+**Evidence:** MonsterTooltip/AG_INFO inspection and button/OCR checks on September 21–23, 2026. [Creatures](../reference/creatures.md) · [Banks](../reference/banks.md) · [Projections](../players/deployment-preview.md).

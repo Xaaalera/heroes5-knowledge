@@ -19,6 +19,12 @@
 
 Практический пример механики должен связывать входы, правило, промежуточные решения и проверенный результат. Один снимок конечной расстановки не доказывает причины. Историю согласования ракурсов и организации съёмки хранить в рабочих заметках; в статье оставить объяснения игроку и компактный раздел метода/ограничений. Код обозначать как исходник, восстановление или псевдокод; не выдавать частный проход за весь алгоритм.
 
+### Статья и дневник исследования
+
+Статья отвечает читателю; `docs/reference/research-diary.md` и EN-пара сохраняют историю опытов. После значимого опыта или исправления вывода добавлять запись: дата и сборка, вопрос, входы/действия, наблюдение, вывод или гипотеза, ограничения, ссылки на данные/код/снимки. Ретроспективные записи помечать датой восстановления; не выдавать пересказ за сырой журнал. Если исходный журнал не опубликован, указать это.
+
+Опубликованные технические наблюдения не переписывать молча: новое уточнение — датированная поправка со ссылкой на исходную запись. Разрешены опечатки и удаление случайно раскрытых личных данных; в Git сохраняется история, но секреты требуют отдельного удаления из истории. Не публиковать приватные пути, профили, токены или игровые дистрибутивы. При обновлении артефакта сохранять версию и хеш, на которые опирался вывод. Статья ссылается на запись, запись — на доказательства. ADR нужен для выбора устройства проекта, не для каждого игрового опыта.
+
 ### Виды страниц и каркас
 
 | `content_type` | Назначение | Что читатель должен получить |
@@ -79,6 +85,12 @@ Applies to every `docs/` article and translation. The shared source links in RU 
 Explain spatial mechanics with diagrams next to the relevant stage. Generate battle grids with loops from data: full field, both armies, obstacles, footprints and X/Y axes. Distinguish hypothetical candidates from measured positions. Screenshots of different battles supplement diagrams and should show both formations.
 
 A worked mechanics example connects inputs, rules, intermediate decisions and a checked result. A final-position screenshot alone does not establish causes. Keep camera-approval and capture-workflow history in working notes; articles need reader-facing explanations and a compact methods/limits section. Identify code as original source, reconstruction or pseudocode; never present a partial pass as the entire algorithm.
+
+### Articles and research diary
+
+Articles answer readers; `docs/reference/research-diary.md` and its EN pair preserve experimental history. After a significant experiment or corrected conclusion, append: date/build, question, inputs/actions, observation, inference or hypothesis, limits, and data/code/image links. Label retrospective entries with their reconstruction date; do not present a summary as a raw log. State when original logs are unpublished.
+
+Never silently rewrite published technical observations: add a dated correction linked to the original entry. Typo fixes and removal of accidentally exposed personal data are allowed; Git retains history, but secrets require separate history removal. Exclude private paths, profiles, tokens and game distributions. Keep the version and hash supporting a finding when updating an artifact. Articles link to records; records link to evidence. ADRs record project-design choices rather than every game experiment.
 
 ### Page types and shape
 

@@ -8,13 +8,13 @@ section: players
 kicker: PLAYERS · COMBAT MECHANICS
 translation: players/army-placement/
 description: From preparing stacks to selecting cells — Heroes V Universe deployment with actual battle examples.
-updated: 2026-09-23
+updated: 2026-09-24
 ---
 # How the game deploys a neutral army
 
-The game first prepares **combat stacks**, selects a formation method, determines available cells and places creature groups in sequence. Army composition, obstacles, creature size and the selected algorithm branch can therefore change starting positions. “Shooters behind, everyone else in front” is not a sufficient rule.
+**The game places stacks in sequence: it selects suitable rows, checks free cells and reserves occupied space.** Obstacles and previously placed creatures therefore affect the next stack. Before placement, the game prepares the army and chooses a formation method.
 
-This account applies to the investigated **Heroes V: Tribes of the East with Universe** build. It combines code analysis, execution of individual code sections and test-map observations and recorded placement attempts. It is not a complete specification of every mode; [evidence and limits](#evidence) appear below.
+Follow the rules on full 2D diagrams, then trace seven placement attempts for four elemental stacks. Examples use **Heroes V: Tribes of the East with Universe**; [sources and validation limits](#evidence) appear at the end.
 
 ## Reading the 2D diagrams
 
@@ -266,17 +266,15 @@ The scoring control uses Universe_mod.pak definitions under `Neutrals/*_Elementa
 
 On your own test map, starting coordinates can be recorded in the combat `Start` callback **before the first turn**:
 
-```lua
-function Start()
-    for index, unit in GetAttackerCreatures() do
-        local x, y = GetUnitPosition(unit);
-        print("ATTACKER", unit, GetCreatureType(unit), x, y);
-    end;
-    for index, unit in GetDefenderCreatures() do
-        local x, y = GetUnitPosition(unit);
-        print("DEFENDER", unit, GetCreatureType(unit), x, y);
-    end;
-end;
-```
+[Code for recording both armies and binding CombatScript](../modding/combat-scripts.md).
 
-This belongs to a map's combat script, not the ordinary adventure console. Our experiments enumerated both armies and a separate observer of `GetUnitPosition` results. No predictor was loaded; the observer does not assign positions. Static obstacle masks were recorded separately before Start. The elemental experiment records placement entry/return attempts and mode flags before the general pass. Those observations are not inputs to the reconstruction. The prepared [public record](../../assets/placement/observations.json) contains coordinates and hashes of unchanged screenshots. [Download the polygon and installation instructions](../modding/test-maps.md). The map lets readers repeat attacks, but does not by itself pin the hero, settings, random state or arena mask of every archived experiment; identical screenshot positions are not guaranteed.
+
+Recording method:
+
+- Both armies' coordinates were recorded in combat `Start`, not queried from the adventure console. No predictor was loaded; the observer did not assign cells.
+- Obstacles were recorded before Start. For the elemental experiment, mode was captured before the general pass and candidates at placement entry/return.
+- Recorded final positions were not reconstruction inputs.
+
+[Experiment data and original image hashes](../../assets/placement/observations.json) · [Diary of placement attempts](../reference/research-diary.md#elementals) · [Download the polygon](../modding/test-maps.md).
+
+The map permits repeated attacks but does not pin the hero, settings, random state or arena mask of each archived experiment. Identical screenshot positions are not guaranteed.

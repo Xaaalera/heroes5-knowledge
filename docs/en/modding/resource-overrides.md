@@ -12,7 +12,7 @@ updated: '2026-09-24'
 ---
 # Test a resource override with a menu marker
 
-This experiment adds `[DEV: menu-marker]` beside the main-menu version. It tests one resource override from a separate H5U without changing game balance.
+Add `[DEV: menu-marker]` beside the main-menu version through a separate H5U. If it appears after installation and disappears after removal, the game loaded the `UI/MainMenu2/Version.txt` override.
 
 ## Requirements
 
@@ -58,10 +58,10 @@ Replace the example path with your test installation. The ZIP member must be exa
 
 If absent, inspect the internal path, BOM, launched copy and competing overrides. Replacing the original PAK would change the experiment's meaning.
 
-## Observed result and scope
+## What was checked
 
-On September 21,2026 the user confirmed appearance and disappearance after installation/removal with restarts. The first test-copy launch exited unexpectedly; a repeat succeeded, with the initial cause unresolved.
+On the inspected build, the marker appeared after H5U installation and disappeared after removal with restarts. [Experiment record and failed first launch](../reference/research-diary.md#menu-marker).
 
-The packer used the original member date plus two seconds. Identical inputs under the same compression environment produced identical output, not proof of universal newest-file priority, map precedence or hot reload.
+The example uses the original ZIP-member timestamp plus 2 seconds. Identical inputs and compression environment produced identical packages. This did not test general archive/map precedence or resource hot reload.
 
-XML clones additionally require valid nodes, href resolution and ObjectRecordID handling. [Formats](../reference/formats.md). Do not replace original UI text with normalized analysis UTF-8 without the required encoding conversion.
+XML clones additionally require checking edited nodes, relative `href` and `ObjectRecordID`. Text normalized to UTF-8 for analysis must be returned to its original encoding before packaging. [Formats and links](../reference/formats.md).

@@ -2,6 +2,8 @@
 
 ## RU
 
+[Дневник исследований](docs/reference/research-diary.md) хранит датированные опыты и ссылки на исходные результаты; статьи дают отредактированное объяснение. Правила ведения — в CONTRIBUTING.
+
 Подготовленные результаты исследования Heroes V Universe: игровые механики, ресурсы, скрипты, нативный интерфейс и воспроизводимые примеры. Вход по темам — [карта знаний](docs/reference/research-index.md).
 
 - Сайт: https://xaaalera.github.io/heroes5-knowledge/
@@ -39,6 +41,8 @@ python -m mkdocs serve --watch-theme
 Подробнее: [CONTRIBUTING](CONTRIBUTING.md), [AGENTS](AGENTS.md), [источники иллюстраций и шрифтов](NOTICE.md).
 
 ## EN
+
+The [research diary](docs/en/reference/research-diary.md) stores dated experiments and links to source results; articles provide edited explanations. CONTRIBUTING defines the recording rules.
 
 Xaaalera’s personal notes, research, and guides about Heroes V. Prepared findings cover game mechanics, resources, scripts, native UI and reproducible examples. Start with the [knowledge map](docs/en/reference/research-index.md).
 

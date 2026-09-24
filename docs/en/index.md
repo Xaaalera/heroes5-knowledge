@@ -58,3 +58,5 @@ Findings from the Heroes V Universe investigation: resource data, game behavior 
 The [knowledge map](reference/research-index.md) links available topics and remaining questions.
 
 — Xaaalera
+
+[Research diary](reference/research-diary.md) — experiments, source data and corrections.

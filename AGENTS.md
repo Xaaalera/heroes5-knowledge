@@ -2,6 +2,8 @@
 
 ## RU
 
+- После значимого исследования или исправления вывода обновлять [дневник](docs/reference/research-diary.md) и EN-пару по CONTRIBUTING. Статьи ссылаются на записи; не переписывать старые технические наблюдения без датированной поправки. Ретроспективный пересказ не выдавать за сырой лог.
+
 - Механика расположения требует полных 2D-схем по CONTRIBUTING. Сетки генерируются циклом из координат обеих армий и препятствий; не рисовать клетки вручную. Для статьи о расстановке источник — `docs/assets/placement/observations.json`, генератор — `npm run figures`.
 
 - Перед каждым push выполнить протокол независимого агента из CONTRIBUTING: получить полный `docs.review` по восьми критериям и всем Markdown-файлам review:info. Без отчёта push запрещён; не обходить хук и не выдумывать PASS. `npm ci` устанавливает pre-push hook; отчёт хранится в аттестации.
@@ -18,6 +20,8 @@
 - GitHub Pages — первый этап. Правки через GitHub, а не через встроенный wiki-редактор. Не обещать реализованный MCP или SDK.
 
 ## EN
+
+- After significant research or a corrected conclusion, update the [diary](docs/en/reference/research-diary.md) and RU pair under CONTRIBUTING. Articles link to records; preserve prior technical observations through dated corrections. Never present a retrospective summary as a raw log.
 
 - Spatial mechanics require complete 2D diagrams under CONTRIBUTING. Generate cells in loops from both armies and obstacles; never hand-place grid cells. Placement article data lives in `docs/assets/placement/observations.json`; regenerate with npm run figures.
 

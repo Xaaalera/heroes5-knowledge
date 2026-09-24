@@ -12,7 +12,7 @@ updated: '2026-09-24'
 ---
 # Knowledge map: investigated topics
 
-Prepared findings from the Heroes V Universe investigation. Resource inspection, original-code emulation and live battle observation have different scopes.
+Choose a question from the table. For experiments, failed assumptions and corrections, see the [research diary](research-diary.md).
 
 | Question | Article | Contents |
 |---|---|---|

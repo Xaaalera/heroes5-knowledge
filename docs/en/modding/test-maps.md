@@ -12,11 +12,9 @@ updated: '2026-09-24'
 ---
 # Test maps: repeatable battles and movement checks
 
-An ordinary neutral attack tests actual army preparation. Scripted StartCombat with a supplied composition isolates arena effects. Neither substitutes for full coverage of the other.
+[**Download WorkshopPolygon.h5m**](../../assets/WorkshopPolygon.h5m) — a Heroes V Universe polygon for neutral battles and arena comparisons. The 96 × 96 map contains eight towns and heroes, 12 banks, 16 neutral armies and six arena launch objects.
 
 ## Download and open the map
-
-[Download WorkshopPolygon.h5m](../../assets/WorkshopPolygon.h5m) — a 96 × 96 test polygon with eight towns and heroes, 12 banks, 16 neutral armies and six arena launch objects.
 
 1. Install **Heroes V: Tribes of the East with Universe**. The polygon was used on the [pinned build](../reference/universe-build.md); other builds have not been separately checked.
 2. Close the game. Copy the downloaded file into `Maps`, beside `bin` and `data` in the game directory. Create `Maps` if missing. **Do not extract the H5M.** Back up an existing `WorkshopPolygon.h5m` before replacing it.
@@ -48,26 +46,14 @@ The polygon generator prepares Grass_Big_01, Dirt_Small_01, Sand_Big_01, Snow_01
 
 Record composition/counts, hero, obstacles and Start positions. Changing both army and field cannot isolate an obstacle's effect.
 
-## Flat terrain that did not permit walking
+## When building your own map
 
-An early polygon had StoneRoad without a base terrain layer. Generator reachability checks passed while in-game walking failed. Adding Grass **beneath** the road restored movement, confirmed by the user.
+- Place base `Grass` beneath `StoneRoad`. An early polygon without it failed in-game movement despite passing cell-connectivity checks.
+- `ChangeHeroStat` refills movement within the daily cap. A 9999999 script value does not give unlimited movement; bypassing the cap required a separate test-process adjustment.
+- Replace H5M after closing the game and start the map anew. The harness needed a separate fix for `-advmap` startup; use the menu for the downloaded map.
 
-```text
-upper layer: StoneRoad
-base layer:  Grass
-heightmap:   authored flat terrain
-```
-
-Flat elevation and graph reachability do not establish valid in-game terrain. Generator tests now check both containers; the live check exercises actual movement.
-
-## Movement refill versus the daily cap
-
-Normal ChangeHeroStat movement additions were clamped to the daily maximum. A special temporary test-process adjustment bypassed the cap only for addition 9999999; current points 9999999 were observed with maximum 2500. This is a test-harness modification, not ordinary API behavior or a property of the resource mod. An unconfirmed BaseHeroMovement resource override was removed.
-
-## Startup and restart
-
-The inspected -advmap handler existed, but subsequent mainmenu could leave the game in its menu. Redirecting the startup command in an owned suspended test process loaded the map. Process creation still does not establish readiness; verify API response/screen state.
-
-Stage a changed H5M separately while the game is running and install after exit. CloseMainWindow may only open confirmation; verify process termination.
+[Terrain, movement and startup experiment details](../reference/research-diary.md#map-release).
 
 **Evidence:** September 21–23 polygon experiments and later placement captures. The polygon is downloadable above; the command SDK remains unpublished. [Combat callbacks](combat-scripts.md) · [Map formats](../reference/formats.md).
+
+[Research record](../reference/research-diary.md#map-release).
