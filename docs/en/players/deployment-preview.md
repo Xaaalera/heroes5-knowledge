@@ -2,17 +2,47 @@
 content_type: explanation
 status: draft
 faction: academy
-title: What a deployment projection shows
+title: 'Deployment preview: installation and controls'
 lang: en
 section: players
 kicker: HEROES V · UNIVERSE
 translation: players/deployment-preview/
-description: What a deployment projection shows
+description: 'Deployment preview: installation and controls'
 updated: '2026-09-24'
 ---
-# What a deployment projection shows
+# Deployment preview: installation and controls
 
 A projection marks **a creature's predicted position and movement area**. It uses a known type without revealing hidden guard quantities or upgrades. This is an experimental mod for the inspected Universe build; no universal release is available.
+
+## Source and installation
+
+[Predictor source](https://github.com/Xaaalera/heroes5-deployment-preview) · [Universe / Heroes V Lobby](https://h5lobby.com/) · [tested devkit](https://github.com/Xaaalera/heroes5-mod-devkit/tree/1b8934ac084491da460ce8bb145819e41e2cf888).
+
+Use Windows, CMake 3.21+ and Visual Studio 2022 C++ x86 tools. In an **x86 Native Tools Command Prompt**:
+
+```bat
+git clone --recursive https://github.com/Xaaalera/heroes5-deployment-preview.git
+cd heroes5-deployment-preview
+cmake -G "NMake Makefiles" -S . -B .local/build/deployment-preview-native -DCMAKE_BUILD_TYPE=Release
+cmake --build .local/build/deployment-preview-native --config Release
+cmake --install .local/build/deployment-preview-native --config Release --prefix .local/dist/deployment-preview-native
+```
+
+Exit the game. Keep the resulting `workshop_preview_loader.exe` and `WorkshopDeploymentPreview.dll` together in a separate mod directory. **Do not replace game DLLs or put this DLL in UserMODs.**
+
+Example from the checkout root:
+
+```powershell
+.local/dist/deployment-preview-native/workshop_preview_loader.exe --game "../HeroesV-Universe/bin/H5_Game.exe"
+```
+
+Replace the example with your game EXE. The loader accepts only the [four pinned binary hashes](../reference/universe-build.md); a current lobby build may differ. Do not bypass a mismatch. Check projections/cards before Start in an ordinary attack. Python is for development checks, not the installed EXE/DLL pair.
+
+## Disable and remove
+
+Exit and launch the ordinary game EXE directly to leave the plugin unloaded. Remove the two mod files from their separate directory after exit; the loader does not patch game binaries on disk.
+
+Extraction checks built x86 and passed nine C++/emulator checks with the local game oracle. No fresh live launch followed extraction; combined use with bank reference is unverified. [Full instructions](https://github.com/Xaaalera/heroes5-deployment-preview#readme) · [Both mods and installation rules](mods.md).
 
 ## Controls
 

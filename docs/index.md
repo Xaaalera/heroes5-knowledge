@@ -64,3 +64,5 @@ reading:
 [Devkit: развернуть стенд разработки](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#быстрый-старт) · [Как устроен наш стенд](modding/devkit.md).
 
 [Вход для агента: документы, devkit и данные](llms.txt).
+
+[Наши моды и установка](players/mods.md) · [Universe / Heroes V Lobby](https://h5lobby.com/).

@@ -93,3 +93,5 @@ The main archive's RMG/MapScript.lua contained only a comment header; Universe i
 **Evidence:** local ZIP catalogs, byte comparisons, PE headers/strings and binary hashes, September 21–23,2026. Recheck later builds. [Archive inspection](formats.md) · [Native UI](../modding/native-ui.md).
 
 [Research record](research-diary.md#archive-inventory).
+
+Universe project: [UniverseTeam / Heroes V Lobby site](https://h5lobby.com/), [community](https://vk.com/h5universe). Check downloaded versions against the pinned hashes separately.

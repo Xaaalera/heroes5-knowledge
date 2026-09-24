@@ -64,3 +64,5 @@ The [knowledge map](reference/research-index.md) links available topics and rema
 [Devkit: set up a development environment](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#setup-and-first-mod) · [How our environment works](modding/devkit.md).
 
 [Agent entry point: documents, devkit and evidence](../llms.txt).
+
+[Our mods and installation](players/mods.md) · [Universe / Heroes V Lobby](https://h5lobby.com/).

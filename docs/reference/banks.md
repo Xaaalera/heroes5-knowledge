@@ -70,3 +70,5 @@ updated: '2026-09-24'
 [Запись исследования](research-diary.md#banks).
 
 Группировка отрядов и формирование справочного текста реализованы в [object_reference.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/object_reference.py). Это компилятор рецептов; рецепты конкретных модов не поставляются вместе с devkit.
+
+[Мод со справочными портретами: исходники и установка](../players/bank-reference.md).

@@ -29,6 +29,12 @@ EN: Read the relevant article and its scope first. Draft is not a verified speci
 - [Archive comparison CSV](https://xaaalera.github.io/heroes5-knowledge/assets/archive-diff.csv): metadata only; fields and download hash are described in the build article.
 - [Test polygon H5M](https://xaaalera.github.io/heroes5-knowledge/assets/WorkshopPolygon.h5m): own map; requires an installed game. Installation and validation limits are in the test-map article.
 
+## Mods / Моды
+
+- [Mod catalog and installation](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/players/mods.md): two distinct installation methods and Universe links.
+- [Deployment preview agent guide](https://raw.githubusercontent.com/Xaaalera/heroes5-deployment-preview/main/AGENTS.md): native C++ mod and pinned testing environment.
+- [Bank reference agent guide](https://raw.githubusercontent.com/Xaaalera/heroes5-bank-reference/main/AGENTS.md): self-contained recipe and diagnostic startup.
+
 ## Editing / Правки
 
 - [Knowledge repository AGENTS.md](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/AGENTS.md): bilingual authoring and verification entry point.

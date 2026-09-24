@@ -242,6 +242,18 @@ Download SHA-256: `81115018610632c94b9db9566b28cc85afa3e42b76cf2c37e3ffbfc4a5af4
 
 [Environment and commands](../modding/devkit.md). This publishes tools; earlier statements that command tooling was unpublished describe the period before extraction. No universal native API is claimed.
 
+## September 24 — two mod repositories {#mod-repositories}
+
+**Task:** separate predictor and bank-reference source from the shared workshop and pin the development environment.
+
+**Result:** [predictor](https://github.com/Xaaalera/heroes5-deployment-preview) owns its C++ DLL/loader and checks; [bank reference](https://github.com/Xaaalera/heroes5-bank-reference) owns its window recipe with embedded catalog. Both pin devkit 1b8934ac084491da460ce8bb145819e41e2cf888 as a submodule. SDK --source builds from a separate checkout; deploy installs the existing H5U.
+
+**Preservation check:** C++ logic was unchanged, with text-format normalization only. The standalone bank package, 1215708 bytes, was byte-identical to the former build: SHA-256 824a14b48fbdadce9ea0475b49bc4d1f1f6d2ef112ef8294b63cc1ea4ebf7f1e. The original 17 native/prototype tests were partitioned into 9 predictor, 2 reference and 6 retained private Python-prototype checks. Two new recipe and two new SDK cases increased the workshop suite to 52.
+
+**Checks:** x86 Release built in the new directory; 9 predictor checks with the local game oracle and 4 reference checks passed. The first isolated reference-test run found a missing random import; it was restored before the passing run. Without a game, only the explicitly identified EXE oracle may be skipped; other skips prevent acceptance. This is not a fresh live battle.
+
+**Installation:** predictor uses its own DLL loader; reference currently needs H5U plus devkit's diagnostic --army-layout. Combined use remains unverified. [Both installation guides](../players/mods.md). Earlier H5U/Python experiments and the diagnostic assessor are not part of these deliveries.
+
 ## Recording rules
 
 - Each experiment records its date, question, build, inputs, actions, observation, conclusion, limits and result files.

@@ -68,3 +68,5 @@ Inspected AdvMapTreasureShared values: wood/ore 4–7, rare resources 2–4, gol
 [Research record](research-diary.md#banks).
 
 [object_reference.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/object_reference.py) implements stack grouping and reference-text generation. It compiles recipes; individual mod recipes are not bundled with the devkit.
+
+[Portrait-reference mod: source and installation](../players/bank-reference.md).

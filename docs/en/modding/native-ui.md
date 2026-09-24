@@ -112,3 +112,5 @@ Before a native call, check the window pointer, calling convention, reference ow
 [Research record](../reference/research-diary.md#army-tooltip-probe).
 
 Inspection tools: [native-probe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/native-probe.py) and [frame capture/OCR](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#capture-input-and-shutdown). The predictor card implementation is not included in the devkit.
+
+[Predictor card source](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp) and the [bank-reference recipe](https://github.com/Xaaalera/heroes5-bank-reference/blob/main/mod.json) now live in separate repositories.

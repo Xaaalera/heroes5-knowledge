@@ -23,6 +23,8 @@ markdown_extensions:
 nav:
 - Главная: index.md
 - Игрокам:
+  - Моды и установка: players/mods.md
+  - Справочник хранилищ: players/bank-reference.md
   - Расстановка в игре: players/army-placement.md
   - Проекции и карточки: players/deployment-preview.md
 - Моддерам:
@@ -45,6 +47,8 @@ nav:
 - English:
   - Home: en/index.md
   - Players:
+    - Mods and installation: en/players/mods.md
+    - Bank reference: en/players/bank-reference.md
     - Game placement: en/players/army-placement.md
     - Projections and cards: en/players/deployment-preview.md
   - Mod creators:
@@ -89,6 +93,7 @@ extra:
       footer: Личные заметки и исследования Xaaalera. Неофициальная база по Heroes
         V.
       made: Сделано с любопытством к игре.
+      universe: Universe Mod
       source: Исходники базы
       not_found: Эта страница ещё не нанесена на карту.
       return_home: Вернуться на главную
@@ -123,6 +128,7 @@ extra:
       footer: Personal notes and research by Xaaalera. An unofficial Heroes V knowledge
         base.
       made: Made with curiosity about the game.
+      universe: Universe Mod
       source: Site source
       not_found: This page is not on the map yet.
       return_home: Return home
