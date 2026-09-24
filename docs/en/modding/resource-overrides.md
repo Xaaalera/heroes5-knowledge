@@ -65,3 +65,5 @@ On the inspected build, the marker appeared after H5U installation and disappear
 The example uses the original ZIP-member timestamp plus 2 seconds. Identical inputs and compression environment produced identical packages. This did not test general archive/map precedence or resource hot reload.
 
 XML clones additionally require checking edited nodes, relative `href` and `ObjectRecordID`. Text normalized to UTF-8 for analysis must be returned to its original encoding before packaging. [Formats and links](../reference/formats.md).
+
+For repeated build/install/rollback cycles, use the [devkit](devkit.md).

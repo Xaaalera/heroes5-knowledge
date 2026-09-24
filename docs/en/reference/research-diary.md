@@ -226,6 +226,20 @@ Historical DLL hash: `8290957f03a1eb526168430f69fefb45fa2a01859a96f19f2251d7dd27
 
 Download SHA-256: `81115018610632c94b9db9566b28cc85afa3e42b76cf2c37e3ffbfc4a5af4299` (732359 bytes). [Fields and recount code](universe-build.md#archive-diff). The experiment record was reconstructed September 24; the complete inventory of all eight archives remains unpublished.
 
+## September 24 — extracting the development environment {#devkit-extraction}
+
+**Task:** make shared tools usable without the private workshop or an individual mod.
+
+**Change:** builder, control-channel, map-generator, UI-helper and archive-inspection source/tests moved to [heroes5-mod-devkit](https://github.com/Xaaalera/heroes5-mod-devkit). H5_WORKSPACE/H5_GAME_DIR locate mutable data; old workshop commands bridge to the canonical implementation. The predictor C++ DLL stays with its mod.
+
+**Dependency found:** the generator read its bank list from the object-reference recipe and assumed the journal directory existed. The first empty-workspace build left an H5M without its journal and then refused to overwrite it. The recipe dependency was removed and the journal directory is created before writing. A new empty-directory run passed: 60 objects, six arenas and valid ZIP. The initial failure is not described as a successful first attempt.
+
+**Checks:** 37 isolated devkit tests and 48 workshop checks through bridges passed. PowerShell forwarding used an inert fixture without a game. Experimental UniverseTrigger subscriptions were removed from the generic generator. No separate live-game launch followed extraction; these checks establish code portability and file generation.
+
+**Review correction:** the old tools prepended workspace `.local/native-analysis` to Python imports. An inert fixture demonstrated module shadowing before PID checks. The devkit now imports no code from that data directory and uses installed Python-environment dependencies. The old version failed the fixture; the corrected version passed. Map-startup path validation also received regression cases.
+
+[Environment and commands](../modding/devkit.md). This publishes tools; earlier statements that command tooling was unpublished describe the period before extraction. No universal native API is claimed.
+
 ## Recording rules
 
 - Each experiment records its date, question, build, inputs, actions, observation, conclusion, limits and result files.

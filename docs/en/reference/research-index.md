@@ -16,6 +16,7 @@ Choose a question from the table. For experiments, failed assumptions and correc
 
 | Question | Article | Contents |
 |---|---|---|
+| How do I set up a development environment? | [Devkit and workflow](../modding/devkit.md) | Repository, sandbox, builds, control and shutdown |
 | Why these starting cells? | [Player placement explanation](../players/army-placement.md) | Full grids, row calculation, seven native attempts, executable example |
 | Other algorithm branches? | [Placement internals](placement-internals.md) | Splitting, sort, spread, depth, adjacency and corrected assumptions |
 | Which build? | [Universe baseline](universe-build.md) | Four hashes, change layers and archive counts |
@@ -33,7 +34,7 @@ Choose a question from the table. For experiments, failed assumptions and correc
 
 - Every combat branch, expansion or mod.
 - A general native-plugin API for Universe.
-- Public SDK or universal predictor installer. [The test polygon is available](../modding/test-maps.md).
+- Universal native-plugin API or universal predictor installer. [Development tools are available separately](../modding/devkit.md). [The test polygon is available](../modding/test-maps.md).
 - A working victory/loss assessor or hidden quantities/upgrades.
 - Universal archive precedence or hot reload.
 - OrcDeposit's exact object XDB and complete live bank coverage.

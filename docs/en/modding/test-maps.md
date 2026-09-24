@@ -54,6 +54,6 @@ Record composition/counts, hero, obstacles and Start positions. Changing both ar
 
 [Terrain, movement and startup experiment details](../reference/research-diary.md#map-release).
 
-**Evidence:** September 21–23 polygon experiments and later placement captures. The polygon is downloadable above; the command SDK remains unpublished. [Combat callbacks](combat-scripts.md) · [Map formats](../reference/formats.md).
+**Evidence:** September 21–23 polygon experiments and later placement captures. The polygon is downloadable above; command tools are available in the [devkit](devkit.md). [Combat callbacks](combat-scripts.md) · [Map formats](../reference/formats.md).
 
 [Research record](../reference/research-diary.md#map-release).

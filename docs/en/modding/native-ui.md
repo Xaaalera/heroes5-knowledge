@@ -107,6 +107,6 @@ Before a native call, check the window pointer, calling convention, reference ow
 | Creature descriptor creation | `0x4bd550` |
 | Rotator creation | `0x789010` |
 
-**Scope:** the [pinned build](../reference/universe-build.md) only; no ready SDK. Evidence: resources, call counter and game checks on September 21–23, 2026. Original game DLLs were not replaced with a generic loader.
+**Scope:** the [pinned build](../reference/universe-build.md) only; no universal plugin API. The [devkit](devkit.md) contains development tools. Evidence: resources, call counter and game checks on September 21–23, 2026. Original game DLLs were not replaced with a generic loader.
 
 [Research record](../reference/research-diary.md#army-tooltip-probe).
