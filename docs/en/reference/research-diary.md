@@ -222,7 +222,7 @@ Historical DLL hash: `8290957f03a1eb526168430f69fefb45fa2a01859a96f19f2251d7dd27
 
 **Limit:** the local baseline was not independently verified as clean stock ToE. File counts are not feature counts; DLLs can change behavior beyond resources. Menu version 2.0 and a DLL PAK-check string 1.8 do not identify one version unambiguously.
 
-[Original comparison CSV](../../assets/archive-diff.csv) — all 6930 rows for two archives, without game resource contents. Publication on September 24 normalized line endings to LF only; original rows/fields were preserved. Recounting CSV rows confirmed the table; no fresh comparison of all game archives was performed.
+[Original comparison CSV](../../assets/archive-diff.csv) — all 6930 rows for two archives, without game resource contents. Publication on September 24 removed the UTF-8 BOM and normalized line endings to LF; original rows/fields were preserved. Recounting CSV rows confirmed the table; no fresh comparison of all game archives was performed.
 
 Download SHA-256: `81115018610632c94b9db9566b28cc85afa3e42b76cf2c37e3ffbfc4a5af4299` (732359 bytes). [Fields and recount code](universe-build.md#archive-diff). The experiment record was reconstructed September 24; the complete inventory of all eight archives remains unpublished.
 
