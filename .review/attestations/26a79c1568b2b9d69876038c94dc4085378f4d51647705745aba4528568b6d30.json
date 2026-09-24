@@ -1,0 +1,218 @@
+{
+  "diffHash": "26a79c1568b2b9d69876038c94dc4085378f4d51647705745aba4528568b6d30",
+  "commitSha": "7b46af34d54c66b31ec7d62e49888fc47931d4d6",
+  "perAgent": {
+    "craft": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "architecture": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "tests": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "security": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "docs": {
+      "score": 10,
+      "verdict": "PASS",
+      "findings": [],
+      "claims": [
+        {
+          "path": "AGENTS.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "README.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/contributing.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/contributing.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/index.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/combat-scripts.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/devkit.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/native-ui.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/public-information.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/resource-overrides.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/test-maps.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/players/army-placement.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/reference/banks.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/reference/formats.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/reference/universe-build.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/index.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/llms.txt",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/combat-scripts.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/devkit.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/native-ui.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/public-information.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/resource-overrides.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/test-maps.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/army-placement.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/reference/banks.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/reference/formats.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/reference/universe-build.md",
+          "disposition": "judged"
+        }
+      ],
+      "summary": {
+        "agent": "docs",
+        "verdict": "PASS",
+        "score": 10,
+        "counts": {
+          "blocker": 0,
+          "major": 0,
+          "minor": 0,
+          "advisory": 0
+        },
+        "one_line": "The 27-file agent index review covers llms.txt formally and retains clear revision and discovery limits."
+      },
+      "review": {
+        "reviewer": "/root/review_craft",
+        "files": [
+          "AGENTS.md",
+          "README.md",
+          "docs/contributing.md",
+          "docs/en/contributing.md",
+          "docs/en/index.md",
+          "docs/en/modding/combat-scripts.md",
+          "docs/en/modding/devkit.md",
+          "docs/en/modding/native-ui.md",
+          "docs/en/modding/public-information.md",
+          "docs/en/modding/resource-overrides.md",
+          "docs/en/modding/test-maps.md",
+          "docs/en/players/army-placement.md",
+          "docs/en/reference/banks.md",
+          "docs/en/reference/formats.md",
+          "docs/en/reference/universe-build.md",
+          "docs/index.md",
+          "docs/llms.txt",
+          "docs/modding/combat-scripts.md",
+          "docs/modding/devkit.md",
+          "docs/modding/native-ui.md",
+          "docs/modding/public-information.md",
+          "docs/modding/resource-overrides.md",
+          "docs/modding/test-maps.md",
+          "docs/players/army-placement.md",
+          "docs/reference/banks.md",
+          "docs/reference/formats.md",
+          "docs/reference/universe-build.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "Read all 27 review:info documentation paths, including the Markdown-formatted docs/llms.txt. The changes give readers and coding agents contextual routes into the published devkit source, the site's own Markdown, research diary and public evidence without copying article bodies. AGENTS and README define how to verify claims and report what remains untested; neither promises that every client automatically discovers the index."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "llms.txt starts with a single project H1 and summary blockquote, then bounded H2 link groups for starting points, devkit, evidence and editing. This matches the llmstxt.org proposal's core shape. Jinja adds describedby to the site index and alternate/text-markdown to each page's GitHub source. Contextual source links are placed in relevant RU/EN articles rather than one undifferentiated link dump. README/AGENTS explain the discovery and check workflow. Final review scope now includes docs/llms.txt itself, so edits to the index require the same independent assessment as article Markdown."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "The index names raw Markdown for RU/EN knowledge maps, diaries and build reference; it points to devkit AGENTS/README/commands and specific public JSON/Python/CSV/H5M artifacts. Template alternate uses page.file.src_uri, so RU and EN pages resolve to their respective docs paths. The site checker verifies llms.txt is published and all own-repository raw-source targets exist; the browser test checks alternate/describedby on RU home and both devkit pages under the /heroes5-knowledge/ prefix. Parent independently checked 21 distinct SDK URLs across 11 HTTP documents, including fragments. `review-check.mjs` now uses Git pathspecs `*.md` and the exact `docs/llms.txt`, which review:info confirms as one of 27 documentationFiles."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "Parent reports knowledge build/check (8 Node, 23 Python, 37 HTML) and all 13 browser tests passing. The new discovery test fetched llms.txt under the Pages prefix, and the validator tests reject removed or escaping own-source targets. I inspected llms.txt and the changed template/checker/test text; I did not run a game, fetch all external SDK links myself, or certify each agent client's behavior. README explicitly says discovery is client-dependent. The final scope correction changes review selection only; no link, page, or llms.txt content changed after the prior checks."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "Official llmstxt.org describes an llms.txt H1, short summary, H2 link lists and rel=alternate text/markdown plus rel=describedby; agents.md provides a coding-agent instruction entrypoint. Current llms.txt follows that shape and identifies draft/build/evidence limits. Local code shows check_agent_index called by check_site.main and page template emitting both relations. Parent's HTTP checks cover external SDK links; local checker intentionally covers only own-repository raw links. No article content was duplicated into generated agent-only prose. The revised config rule and bilingual README explicitly require the .txt index in docs-review, matching the new Git pathspec."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "llms.txt and AGENTS tell agents to record repository revision, distinguish source inspection/isolated checks/fresh game run, follow disputed claims to diary/evidence, and treat draft/native addresses as build-scoped. README discloses that raw main links may drift ahead of the deployed site and that client discovery varies. Devkit AGENTS separately covers workspace/game boundaries and dependencies; the website does not claim its build tests validate gameplay."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "Compared changed RU/EN article pairs: the same devkit source files, build/inspection tools, agent instructions and evidence links appear in corresponding contexts. Both home pages link an agent entrypoint, both README/AGENTS sections describe the same verification order and limits, and llms.txt uses bilingual labels while linking RU and EN knowledge maps/diaries/devkit overviews. No substantive translation mismatch found. Final README RU/EN additions agree that docs/llms.txt is mandatory in the same review as Markdown."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "The index is curated and links canonical Markdown/artifacts instead of maintaining duplicate article copies. README states main-branch drift and asks reviewers to pin a revision; check_site validates local source targets and browser tests validate published discovery metadata. Existing page-by-page source links and 21 external SDK URLs were checked per parent report, but future main changes still need renewed link review. review:info now lists exactly 27 documentationFiles covered here, including docs/llms.txt; a future llms-only edit cannot escape the formal eight-criterion review."
+          }
+        },
+        "findings": []
+      }
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-09-24T13:43:42.170Z"
+}
