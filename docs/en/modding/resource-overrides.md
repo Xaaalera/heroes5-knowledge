@@ -66,4 +66,4 @@ The example uses the original ZIP-member timestamp plus 2 seconds. Identical inp
 
 XML clones additionally require checking edited nodes, relative `href` and `ObjectRecordID`. Text normalized to UTF-8 for analysis must be returned to its original encoding before packaging. [Formats and links](../reference/formats.md).
 
-For repeated build/install/rollback cycles, use the [devkit](devkit.md).
+For repeated cycles, follow [devkit setup](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#setup-and-first-mod) and the [build/deploy/rollback reference](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#resource-workflow). Builder source: [mod-dev.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/mod-dev.py).

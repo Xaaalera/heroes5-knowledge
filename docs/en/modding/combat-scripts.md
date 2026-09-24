@@ -48,6 +48,8 @@ Our map uses this CombatScript.xdb resource:
 
 Bind the neutral object's `CombatScript` field to this Script resource; a Lua file in the archive alone is insufficient. The code prints each stack's type and coordinates; it does not include a log collector. The published experiments also recorded `GetUnitPosition` results with a separate observer.
 
+To repeat an experiment on the polygon, use the [devkit map launch](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#maps-workspace-and-control) and [terminal commands](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#terminal-workflow). See [test-map.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/test-map.py) for object-to-`CombatScript` bindings.
+
 ## After-battle results
 
 Map-script handler checked with a nonempty winning army:

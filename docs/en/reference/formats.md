@@ -43,11 +43,11 @@ This checked text starts with `fffe`. Do not apply this decoder to all members: 
 
 ## Relative XDB links
 
-`href="../Textures/icon.xdb#xpointer(/Texture)"` combines a resource path with an XML pointer. Moving the containing definition can change its target. Clone processing must resolve links against the original directory. Our clone generator also removes the root ObjectRecordID; missing expected template nodes fail instead of silently constructing substitutes.
+`href="../Textures/icon.xdb#xpointer(/Texture)"` combines a resource path with an XML pointer. Moving the containing definition can change its target. Clone processing must resolve links against the original directory. The [devkit clone generator](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/mod-dev.py) also removes the root ObjectRecordID; missing expected template nodes fail instead of silently constructing substitutes.
 
 ## ZIP dates are not a complete precedence model
 
-Our inventory comparison selected newer member dates for case-insensitive matching paths. That describes the analysis tool, not a proven complete loader order. Maps, UserMODs, loose files and native patches need separate treatment.
+The [devkit inventory tool](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/inspect_universe.py) selected newer member dates for case-insensitive matching paths. That describes the analysis tool, not a proven complete loader order. Maps, UserMODs, loose files and native patches need separate treatment.
 
 The marker established one override, not universal alphabetic priority or hot reload.
 

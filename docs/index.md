@@ -60,3 +60,7 @@ reading:
 — Xaaalera
 
 [Дневник исследований](reference/research-diary.md) — опыты, исходные данные и исправления выводов.
+
+[Devkit: развернуть стенд разработки](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#быстрый-старт) · [Как устроен наш стенд](modding/devkit.md).
+
+[Вход для агента: документы, devkit и данные](llms.txt).

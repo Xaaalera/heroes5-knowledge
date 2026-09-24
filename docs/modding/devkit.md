@@ -20,13 +20,13 @@ Python и PowerShell обслуживают разработку и провер
 
 | Часть | Что делает | Результат |
 |---|---|---|
-| `mod-dev.py` | Собирает, устанавливает и откатывает ресурсный мод | H5U и журнал собственных хешей |
+| [mod-dev.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/mod-dev.py) | Собирает, устанавливает и откатывает ресурсный мод | H5U и журнал собственных хешей |
 | Песочница | Копирует файлы установленной игры без hardlink | `.local/test-game/` |
-| `test-map.py` | Создаёт полигон из ресурсов своей игры | WorkshopPolygon.h5m |
-| `native-probe.py` | Запускает свой процесс и подключает командный канал | PID и проверяемое состояние канала |
-| `game_control.py` | Читает состояние, двигает героя, запускает и завершает бои | Ответ команды и проверка результата |
-| `game-ui.ps1` | Сохраняет кадр, распознаёт текст, выполняет адресный ввод | PNG и OCR-данные |
-| `inspect_universe.py` | Сравнивает архивы и извлекает тексты для анализа | Локальная инвентаризация |
+| [test-map.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/test-map.py) | Создаёт полигон из ресурсов своей игры | WorkshopPolygon.h5m |
+| [native-probe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/native-probe.py) | Запускает свой процесс и подключает командный канал | PID и проверяемое состояние канала |
+| [game_control.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/game_control.py) | Читает состояние, двигает героя, запускает и завершает бои | Ответ команды и проверка результата |
+| [game-ui.ps1](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/game-ui.ps1) | Сохраняет кадр, распознаёт текст, выполняет адресный ввод | PNG и OCR-данные |
+| [inspect_universe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/inspect_universe.py) | Сравнивает архивы и извлекает тексты для анализа | Локальная инвентаризация |
 
 Файлы мода, копия игры и журналы лежат в **рабочей папке**, отдельно от исходников devkit. Мастерская подключает devkit как submodule; старые команды в её `scripts/` сохранены через переходники к единственной реализации.
 
@@ -99,3 +99,5 @@ python -X utf8 scripts/game_control.py interact Brem pack_8
 - Отдельного живого запуска выделенного комплекта пока не было. Исторические игровые результаты сохранены в [дневнике](../reference/research-diary.md).
 
 Нативные инструменты проверяют хеши четырёх игровых файлов и отказываются работать с другой сборкой. Полная изоляция записей профиля не доказана; запуск EXE может кратко получить фокус. Адресный ввод и физическая мышь — разные проверки. Сам devkit не поставляет предиктор, универсальный SDK плагинов или подтверждение всех арен.
+
+Для работы с этой базой через агента есть [указатель llms.txt](../llms.txt) и [инструкции devkit для агента](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/AGENTS.md).

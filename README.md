@@ -77,3 +77,11 @@ The walkthrough distinguishes recorded mode flags from an explicit `assumed_cont
 Python bytecode/cache directories are excluded from MkDocs output and rejected by the generated-site check. The downloadable walkthrough `.py` remains a public source file. / Кэш и байткод Python исключены из сайта и запрещены проверкой сборки; скачиваемый `.py` остаётся доступным исходником.
 
 Browser tests start a dedicated non-live-reloading server on port 8769 and do not reuse the interactive preview. / Браузерные проверки запускают отдельный сервер без live reload на 8769 и не переиспользуют интерактивный preview со старым CSS.
+
+### Agent entry points / Входы для агентов
+
+RU — `docs/llms.txt` — короткий указатель на исходный Markdown, devkit и доказательства. Шаблон страницы даёт `rel="describedby"` на этот файл и `rel="alternate" type="text/markdown"` на соответствующий исходник статьи в GitHub. Копии статей не храним. Ветка main может опережать развёрнутый сайт: при проверке фиксировать ревизию. AGENTS.md содержит порядок проверок. `npm run check` проверяет наличие llms.txt и локальные исходники его ссылок; браузерный тест проверяет обнаружение на RU/EN-страницах с префиксом Pages. Обнаружение указателя зависит от клиента; не обещаем автоматическое чтение каждым агентом.
+
+EN — `docs/llms.txt` indexes source Markdown, devkit and evidence. Page metadata links it with describedby and links the corresponding GitHub Markdown source with alternate/type=text/markdown. No duplicate article copies are maintained. Main may precede a deployed site, so record revisions during verification. AGENTS.md defines check order. `npm run check` validates llms.txt and its own-repository source targets; a browser test checks discovery on RU/EN pages under the Pages prefix. Client discovery varies; automatic loading by every agent is not guaranteed.
+
+Format references / описание форматов: [llms.txt proposal](https://llmstxt.org/) · [AGENTS.md](https://agents.md/).

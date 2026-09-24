@@ -60,3 +60,7 @@ The [knowledge map](reference/research-index.md) links available topics and rema
 — Xaaalera
 
 [Research diary](reference/research-diary.md) — experiments, source data and corrections.
+
+[Devkit: set up a development environment](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#setup-and-first-mod) · [How our environment works](modding/devkit.md).
+
+[Agent entry point: documents, devkit and evidence](../llms.txt).

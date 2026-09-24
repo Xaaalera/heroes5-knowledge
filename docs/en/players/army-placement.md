@@ -275,6 +275,6 @@ Recording method:
 - Obstacles were recorded before Start. For the elemental experiment, mode was captured before the general pass and candidates at placement entry/return.
 - Recorded final positions were not reconstruction inputs.
 
-[Experiment data and original image hashes](../../assets/placement/observations.json) · [Diary of placement attempts](../reference/research-diary.md#elementals) · [Download the polygon](../modding/test-maps.md).
+[Experiment data and original image hashes](../../assets/placement/observations.json) · [Diary of placement attempts](../reference/research-diary.md#elementals) · [Download the polygon](../modding/test-maps.md) · [Launch the polygon with the devkit](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#maps-workspace-and-control).
 
 The map permits repeated attacks but does not pin the hero, settings, random state or arena mask of each archived experiment. Identical screenshot positions are not guaranteed.

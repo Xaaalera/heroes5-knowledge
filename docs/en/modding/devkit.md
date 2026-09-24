@@ -20,13 +20,13 @@ Python and PowerShell handle development/testing. The predictor remains a C++ DL
 
 | Component | Purpose | Output |
 |---|---|---|
-| `mod-dev.py` | Build, install and roll back resource mods | H5U and ownership hashes |
+| [mod-dev.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/mod-dev.py) | Build, install and roll back resource mods | H5U and ownership hashes |
 | Sandbox | Copy installed files without hardlinks | `.local/test-game/` |
-| `test-map.py` | Generate a polygon from installed resources | WorkshopPolygon.h5m |
-| `native-probe.py` | Launch an owned process with a control channel | PID and validated channel state |
-| `game_control.py` | Inspect state, move heroes, start/finish battles | Command response and result check |
-| `game-ui.ps1` | Capture, OCR and addressed input | PNG and OCR data |
-| `inspect_universe.py` | Compare archives and extract analysis text | Local inventory |
+| [test-map.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/test-map.py) | Generate a polygon from installed resources | WorkshopPolygon.h5m |
+| [native-probe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/native-probe.py) | Launch an owned process with a control channel | PID and validated channel state |
+| [game_control.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/game_control.py) | Inspect state, move heroes, start/finish battles | Command response and result check |
+| [game-ui.ps1](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/game-ui.ps1) | Capture, OCR and addressed input | PNG and OCR data |
+| [inspect_universe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/inspect_universe.py) | Compare archives and extract analysis text | Local inventory |
 
 Mod files, copied game and logs belong to a **workspace**, separate from devkit source. The workshop consumes the devkit as a submodule; compatibility entry points preserve its old commands while calling one canonical implementation.
 
@@ -99,3 +99,5 @@ The polygon contains eight factions, 12 banks, 16 neutral armies and six scripte
 - This extracted distribution has not had a separate live-game launch. Historical game results remain in the [diary](../reference/research-diary.md).
 
 Native tools validate four game-file hashes and reject other builds. Complete profile isolation is unproven and EXE startup can briefly take focus. Addressed input and physical mouse behavior are different checks. The devkit does not bundle the predictor or a universal plugin SDK, nor certify every arena.
+
+For agent-assisted work, use the [llms.txt index](../../llms.txt) and [devkit agent instructions](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/AGENTS.md).

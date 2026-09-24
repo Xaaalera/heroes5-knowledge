@@ -40,6 +40,8 @@ updated: '2026-09-24'
 
 SHA-256 скачиваемого файла: `b5baf474cb523dfa9ec66831676d9c98c722198f1e8af017290d38ec38fa68dc`.
 
+Для изменения и повторной сборки карты есть [генератор test-map.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/test-map.py) и [инструкция запуска в devkit](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#карта-и-команды-игры).
+
 ## Один состав — несколько арен
 
 На нашем полигоне для одинаковой смешанной армии подготовлены:

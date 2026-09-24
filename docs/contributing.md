@@ -29,6 +29,8 @@ updated: 2026-09-23
 
 Скриншот должен показывать сам результат. Перед добавлением проверь, что на нём нет лишних окон и личной информации.
 
+Для воспроизводимого опыта используй [devkit и тестовую копию игры](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#быстрый-старт). [Справочник команд](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#командный-канал) помогает повторить запуск, бой и закрытие.
+
 ## Устройство сайта
 
 Markdown — единственный исходник статей. Оформление находится в `theme/` и `styles/`. Команды сборки и проверки описаны в [README репозитория](https://github.com/Xaaalera/heroes5-knowledge#readme).

@@ -150,3 +150,23 @@ test('all eight backgrounds load as viewport backgrounds and survive reload and 
     await expect.poll(() => background.locator('img').evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
   }
 });
+
+
+test('agent discovery exposes Markdown sources and an index below the Pages prefix', async ({ page }) => {
+  const pages = [
+    ['modding/devkit/', 'docs/modding/devkit.md'],
+    ['en/modding/devkit/', 'docs/en/modding/devkit.md'],
+    ['./', 'docs/index.md'],
+  ];
+  for (const [route, source] of pages) {
+    await page.goto(route);
+    await expect(page.locator('link[rel="alternate"][type="text/markdown"]')).toHaveAttribute(
+      'href', `https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/${source}`,
+    );
+    const indexAddress = await page.locator('link[rel="describedby"]').evaluate((link) => link.href);
+    expect(new URL(indexAddress).pathname).toBe('/heroes5-knowledge/llms.txt');
+    const response = await page.request.get(indexAddress);
+    expect(response.status()).toBe(200);
+    expect(await response.text()).toContain('heroes5-mod-devkit/main/AGENTS.md');
+  }
+});

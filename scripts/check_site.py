@@ -92,8 +92,27 @@ class Links(HTMLParser):
                 self.links.append(attributes[name])
 
 
-def main():
+def check_agent_index(path, repository):
+    """Keep the agent index present and its own-repository source links resolvable."""
+    if not path.is_file():
+        return ['Missing published llms.txt agent index']
+    text = path.read_text(encoding='utf-8-sig')
     failures = []
+    if not text.startswith('# '):
+        failures.append('llms.txt must start with its project title')
+    prefix = 'https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/'
+    for link in re.findall(r'\[[^\]]+\]\(([^)]+)\)', text):
+        if not link.startswith(prefix):
+            continue
+        relative = unquote(urlsplit(link).path.split('/main/', 1)[1])
+        source = (repository / relative).resolve()
+        if not source.is_relative_to(repository.resolve()) or not source.is_file():
+            failures.append(f'llms.txt source does not exist in this repository: {relative}')
+    return failures
+
+
+def main():
+    failures = check_agent_index(SITE / 'llms.txt', ROOT)
     for path in SITE.rglob('*'):
         if path.is_file() and (path.suffix == '.pyc' or '__pycache__' in path.parts):
             failures.append(f'Python cache must not be published: {path.relative_to(SITE)}')

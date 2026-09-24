@@ -68,3 +68,5 @@ updated: '2026-09-24'
 **Основание:** MapObjects, UI/AGINFO и Banks в `GameMechanics/RPGStats/DefaultStats.xdb`, проверки 21 сентября2026 и исправление группировки. Число слотов сверено для 13 семейств; полная сверка всех вероятностей, названий и runtime-правил не выполнена. [Публичные данные](../modding/public-information.md) · [Сборка](universe-build.md).
 
 [Запись исследования](research-diary.md#banks).
+
+Группировка отрядов и формирование справочного текста реализованы в [object_reference.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/object_reference.py). Это компилятор рецептов; рецепты конкретных модов не поставляются вместе с devkit.

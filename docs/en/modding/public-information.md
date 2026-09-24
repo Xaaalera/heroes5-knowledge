@@ -47,3 +47,5 @@ Missing OCR text therefore does not establish that a card is absent from the scr
 **Evidence:** MonsterTooltip/AG_INFO inspection and button/OCR checks on September 21–23, 2026. [Creatures](../reference/creatures.md) · [Banks](../reference/banks.md) · [Projections](../players/deployment-preview.md).
 
 [Research record](../reference/research-diary.md#assessor-inputs).
+
+The environment uses [game-ui.ps1](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/game-ui.ps1) for capture and recognition; see the [devkit command reference](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#capture-input-and-shutdown) for parameters.

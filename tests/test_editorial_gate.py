@@ -71,5 +71,26 @@ class EditorialGateTests(unittest.TestCase):
                 self.assertTrue(any('invalid YAML' in failure for failure in failures))
 
 
+    def test_agent_index_rejects_a_removed_markdown_source(self):
+        with tempfile.TemporaryDirectory() as folder:
+            repository = Path(folder)
+            source = repository / 'docs/topic.md'
+            source.parent.mkdir()
+            source.write_text('# Topic', encoding='utf-8')
+            index = repository / 'llms.txt'
+            index.write_text('# Index\n\n- [Topic](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/topic.md)\n', encoding='utf-8')
+            self.assertEqual(CHECK.check_agent_index(index, repository), [])
+            source.unlink()
+            self.assertTrue(any('does not exist' in message for message in CHECK.check_agent_index(index, repository)))
+
+    def test_agent_index_requires_a_published_file_and_confined_sources(self):
+        with tempfile.TemporaryDirectory() as folder:
+            repository = Path(folder)
+            index = repository / 'llms.txt'
+            self.assertTrue(CHECK.check_agent_index(index, repository))
+            index.write_text('# Index\n\n- [Outside](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/../outside.md)\n', encoding='utf-8')
+            self.assertTrue(CHECK.check_agent_index(index, repository))
+
+
 if __name__ == '__main__':
     unittest.main()

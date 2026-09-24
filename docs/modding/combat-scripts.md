@@ -50,6 +50,8 @@ end;
 
 Свяжи поле `CombatScript` объекта нейтрала с этим Script-ресурсом: одного Lua-файла в архиве недостаточно. Код печатает тип и координаты каждого отряда; готового сборщика журнала здесь нет. В опубликованных опытах результат `GetUnitPosition` дополнительно записывал отдельный наблюдатель.
 
+Чтобы повторить опыт на полигоне, используй [запуск карты в devkit](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#карта-и-команды-игры) и [командный канал](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#командный-канал). Привязку `CombatScript` к объектам можно посмотреть в [генераторе test-map.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/test-map.py).
+
 ## Результаты без чтения скрытых входов
 
 Пример обработчика в скрипте карты, проверенный на непустой армии победителя:

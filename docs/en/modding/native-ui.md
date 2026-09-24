@@ -110,3 +110,5 @@ Before a native call, check the window pointer, calling convention, reference ow
 **Scope:** the [pinned build](../reference/universe-build.md) only; no universal plugin API. The [devkit](devkit.md) contains development tools. Evidence: resources, call counter and game checks on September 21–23, 2026. Original game DLLs were not replaced with a generic loader.
 
 [Research record](../reference/research-diary.md#army-tooltip-probe).
+
+Inspection tools: [native-probe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/native-probe.py) and [frame capture/OCR](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#capture-input-and-shutdown). The predictor card implementation is not included in the devkit.

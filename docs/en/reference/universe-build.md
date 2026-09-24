@@ -44,6 +44,8 @@ The main archive contained 3767 UI, 787 GameMechanics, 185 MapObjects and 61 RMG
 
 Definition examples: `Academy/Rakshasa_Rukh.xdb` DefenceSkill 20→25 and Health 140→145; `Dungeon/Assassin.xdb` WeeklyGrowth 7→8; `Dungeon/Blood_Witch.xdb` 5→6. These are file values, not universal final battle stats.
 
+Use the devkit’s [inspect_universe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/inspect_universe.py) to inventory your installation. [Workspace configuration](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#maps-workspace-and-control) selects the source game and output location.
+
 ## Download the original comparison table {#archive-diff}
 
 [archive-diff.csv](../../assets/archive-diff.csv) contains **6930 records** for the two archives listed above. It contains resource names, comparison results, sizes and ZIP-member dates, not the contents of game files.

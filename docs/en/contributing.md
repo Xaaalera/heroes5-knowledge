@@ -29,6 +29,8 @@ Separate observations from assumptions. Include the game version, scenario, and 
 
 Screenshots should show the result itself. Check for unrelated windows and personal information before adding them.
 
+Use the [devkit and a separate game copy](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#setup-and-first-mod) for reproducible experiments. The [command reference](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#terminal-workflow) covers startup, battles and shutdown.
+
 ## Site structure
 
 Markdown is the only source for articles. Presentation lives in `theme/` and `styles/`. Build and check commands are in the [repository README](https://github.com/Xaaalera/heroes5-knowledge#readme).

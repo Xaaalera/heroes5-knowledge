@@ -68,4 +68,4 @@ python make_marker.py "../HeroesV-test"
 
 Для XML-клонов отдельно проверяются изменяемые узлы, относительные `href` и `ObjectRecordID`. Тексты после анализа в UTF-8 нужно вернуть в исходную кодировку перед упаковкой. [Форматы и ссылки](../reference/formats.md).
 
-Для повторного цикла сборки, установки и отката есть [готовый devkit](devkit.md).
+Для повторного цикла используй [установку devkit](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#быстрый-старт) и [команды build/deploy/rollback](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#ресурсный-цикл). Исходник сборщика — [mod-dev.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/mod-dev.py).

@@ -46,6 +46,8 @@ Get-FileHash -Algorithm SHA256 .\bin\H5_Game.exe
 
 Примеры побайтово найденных изменений определений: у `Academy/Rakshasa_Rukh.xdb` DefenceSkill 20→25, Health 140→145; у `Dungeon/Assassin.xdb` WeeklyGrowth 7→8; у `Dungeon/Blood_Witch.xdb` 5→6. Это значения исследованных файлов, не обещание таких итоговых статов в любом бою.
 
+Чтобы получить инвентаризацию своей установки, используй [inspect_universe.py из devkit](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/inspect_universe.py). Исходную игру и папку результатов задают [настройки рабочего каталога](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#где-что-хранится).
+
 ## Скачать исходную таблицу сравнения {#archive-diff}
 
 [archive-diff.csv](../assets/archive-diff.csv) содержит **6930 записей** двух архивов из таблицы выше. Это имена ресурсов, результаты сравнения, размеры и даты ZIP-записей; содержимое игровых файлов в CSV не включено.

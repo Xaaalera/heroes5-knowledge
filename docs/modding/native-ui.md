@@ -110,3 +110,5 @@ Size: 197 110
 **Применимость:** только [закреплённая сборка](../reference/universe-build.md); универсального API плагинов нет. [Devkit](devkit.md) содержит инструменты разработки. Основание — ресурсы, счётчик вызовов и игровые проверки 21–23 сентября 2026. Исходные DLL игры универсальным загрузчиком не заменялись.
 
 [Запись исследования](../reference/research-diary.md#army-tooltip-probe).
+
+Инструменты проверки: [диагностический перехват native-probe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/native-probe.py) и [захват кадра/OCR](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#изображение-и-закрытие). Код карточек самого предиктора в devkit не входит.

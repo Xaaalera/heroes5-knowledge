@@ -47,3 +47,5 @@ OCR — распознавание текста с изображения — м
 **Основание:** разбор MonsterTooltip/AG_INFO и проверки кнопки/OCR 21–23 сентября 2026. [Существа](../reference/creatures.md) · [Хранилища](../reference/banks.md) · [Проекции](../players/deployment-preview.md).
 
 [Запись исследования](../reference/research-diary.md#assessor-inputs).
+
+Захват и распознавание в стенде выполняет [game-ui.ps1](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/game-ui.ps1); параметры описаны в [справочнике devkit](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#изображение-и-закрытие).

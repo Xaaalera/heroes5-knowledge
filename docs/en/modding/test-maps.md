@@ -40,6 +40,8 @@ Scripted arenas call `StartCombat` against 80 peasants, 35 footmen and 12 priest
 
 Download SHA-256: `b5baf474cb523dfa9ec66831676d9c98c722198f1e8af017290d38ec38fa68dc`.
 
+For map changes and rebuilding, use the [test-map.py generator](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/test-map.py) and [devkit launch instructions](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#maps-workspace-and-control).
+
 ## Same composition, multiple arenas
 
 The polygon generator prepares Grass_Big_01, Dirt_Small_01, Sand_Big_01, Snow_01, Lava_Small_01 and River_Grass_Big_01 under data.pak Scenes/CombatArenas. Scenery references are checked separately. Six prepared scenarios are not six certified live passes. Ordinary pack_0…pack_15 additionally exercise actual attacks.

@@ -2,6 +2,15 @@
 
 ## RU
 
+### Быстрая проверка агентом
+
+1. Для проверки утверждения читай метаданные статьи, указанную сборку, запись дневника и артефакт. Ссылки на исходники доступны через `docs/llms.txt`; HTML страниц содержит Markdown alternate. Не объявляй гипотезу подтверждённой по одному пересказу.
+2. Для правки клона сначала выполни `git status --short` и `git rev-parse HEAD`, затем прочти CONTRIBUTING.md. Не включай чужие незавершённые изменения в свой коммит.
+3. Подготовка сайта: `python -m pip install -r requirements.txt`, `npm ci`, `npx playwright install chromium` (в Linux может потребоваться системная установка зависимостей Chromium). Проверки: `npm run build`, `npm run check`, `npm test`.
+4. Игровые инструменты проверяются в отдельном devkit по его AGENTS.md; тесты сайта не проверяют игру. Редактура не обновляет дату реального игрового опыта.
+5. Итог проверки содержит ревизию, область, выполненные команды/коды выхода, результаты и пропуски, пути или ссылки на доказательства и явно непроверенные части. Сохраняй хеш опубликованных байтов, а не только Windows-копии текста.
+
+
 - После значимого исследования или исправления вывода обновлять [дневник](docs/reference/research-diary.md) и EN-пару по CONTRIBUTING. Статьи ссылаются на записи; не переписывать старые технические наблюдения без датированной поправки. Ретроспективный пересказ не выдавать за сырой лог.
 
 - Механика расположения требует полных 2D-схем по CONTRIBUTING. Сетки генерируются циклом из координат обеих армий и препятствий; не рисовать клетки вручную. Для статьи о расстановке источник — `docs/assets/placement/observations.json`, генератор — `npm run figures`.
@@ -20,6 +29,15 @@
 - GitHub Pages — первый этап. Правки через GitHub, а не через встроенный wiki-редактор. Не обещать реализованный MCP или SDK.
 
 ## EN
+
+### Agent verification entry point
+
+1. To assess a claim, read article metadata, build identity, diary entry and evidence artifact. `docs/llms.txt` links source documents and each HTML page exposes a Markdown alternate. A summary alone does not establish a hypothesis.
+2. Before editing a checkout, run `git status --short` and `git rev-parse HEAD`, then read CONTRIBUTING. Preserve unrelated work.
+3. Prepare with `python -m pip install -r requirements.txt`, `npm ci`, `npx playwright install chromium` (Linux may need Chromium system dependencies). Run `npm run build`, `npm run check`, `npm test`.
+4. Check game tools separately under devkit AGENTS.md; site tests do not test gameplay. An editorial change does not change an experiment's actual date.
+5. Report revision, scope, executed commands/exit codes, results/skips, evidence paths or links, and unverified parts. Hash published bytes rather than only a Windows text checkout.
+
 
 - After significant research or a corrected conclusion, update the [diary](docs/en/reference/research-diary.md) and RU pair under CONTRIBUTING. Articles link to records; preserve prior technical observations through dated corrections. Never present a retrospective summary as a raw log.
 
