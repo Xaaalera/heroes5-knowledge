@@ -32,6 +32,8 @@ SHA-256: `b5baf474cb523dfa9ec66831676d9c98c722198f1e8af017290d38ec38fa68dc`.
 
 **Limit:** the cleaned copy has not had a separate menu launch. Earlier live movement/battle checks used the original polygon. Archive validation does not replace a fresh launch.
 
+**Original harness history, September 21–23:** the following three checks preceded the September 24 public-copy release.
+
 ### Flat terrain that did not permit walking
 
 An early polygon had StoneRoad without a base terrain layer. Generator reachability checks passed while in-game walking failed. Adding Grass **beneath** the road restored movement, confirmed by the user.
