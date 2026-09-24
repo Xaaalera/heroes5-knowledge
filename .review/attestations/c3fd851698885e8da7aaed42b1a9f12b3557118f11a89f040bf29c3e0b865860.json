@@ -1,0 +1,150 @@
+{
+  "diffHash": "c3fd851698885e8da7aaed42b1a9f12b3557118f11a89f040bf29c3e0b865860",
+  "commitSha": "f85fe1a108d67c138cd171963c44162bbcc9660a",
+  "perAgent": {
+    "craft": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "architecture": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "tests": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "security": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "docs": {
+      "score": 10,
+      "verdict": "PASS",
+      "findings": [
+        {
+          "severity": "advisory",
+          "why_this_severity": "An explicitly disclosed draft validation limit; no observed user-facing failure from the cleaned archive.",
+          "where": "docs/modding/test-maps.md",
+          "occurrences": 1,
+          "problem": "The cleaned downloadable H5M has not had a separate launch through the game menu. The draft says so; ZIP integrity and static references do not establish that every menu/install step or all six arenas work at runtime.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared the public H5M bytes, ZIP members, scripts, map object coordinates and changed article text; runtime launch was not performed."
+        },
+        {
+          "severity": "advisory",
+          "why_this_severity": "An explicitly disclosed draft validation limit; no observed user-facing failure from the cleaned archive.",
+          "where": "docs/en/modding/test-maps.md",
+          "occurrences": 1,
+          "problem": "The cleaned downloadable H5M has not had a separate launch through the game menu. The English draft says so; ZIP integrity and static references do not establish that every menu/install step or all six arenas work at runtime.",
+          "scenario": null,
+          "confidence": "high",
+          "evidence": "Compared the public H5M bytes, ZIP members, scripts, map object coordinates and changed article text; runtime launch was not performed."
+        }
+      ],
+      "claims": [
+        {
+          "path": "NOTICE.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/test-maps.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/players/army-placement.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/reference/research-index.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/test-maps.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/army-placement.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/reference/research-index.md",
+          "disposition": "judged"
+        }
+      ],
+      "summary": {
+        "agent": "docs",
+        "verdict": "PASS",
+        "score": 10,
+        "counts": {
+          "blocker": 0,
+          "major": 0,
+          "minor": 0,
+          "advisory": 2
+        },
+        "one_line": "The public map and seven changed docs align; the cleaned map's fresh game launch remains explicitly unverified."
+      },
+      "review": {
+        "reviewer": "/root/review_craft",
+        "files": [
+          "NOTICE.md",
+          "docs/en/modding/test-maps.md",
+          "docs/en/players/army-placement.md",
+          "docs/en/reference/research-index.md",
+          "docs/modding/test-maps.md",
+          "docs/players/army-placement.md",
+          "docs/reference/research-index.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "Read all seven changed Markdown files. The test-map pair now offers the requested public H5M with a concrete download/install/remove task; placement and research-index pairs replace the obsolete unpublished-map statement with links and limit exact screenshot reproducibility. NOTICE identifies map authorship and installed-game dependencies."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "The how-to pair gives requirements, Maps placement, in-game search, observable result, restart/removal and troubleshooting, followed by map coordinates and evidence limits. Placement articles link to the how-to at their methods section; the research index points to it. No changed page claims the command SDK or predictor DLL is included."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "Independently inspected tracked H5M: ZIP has nine members and passes CRC; SHA-256 is b5baf474cb523dfa9ec66831676d9c98c722198f1e8af017290d38ec38fa68dc, as documented. map-tag reports 96x96; map.xdb lists eight towns, eight heroes, 12 banks at the stated 60/72 rows, 16 packs at y28/48/51/54 and six arenas at y7 with stated X coordinates. MapScript.lua grants six non-gold resources at 1000 and gold at 100000 and defines six StartCombat calls using 80/35/12 creatures."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "The download target and relative Markdown links are present; parent reports both language download routes return 200 with the exact documented hash, build/check/browser/secret checks pass. Instructions specify the launched installation's Maps folder, keep H5M zipped, back up an existing filename, start a new map and remove the file to uninstall. I did not start the game. The cleaned copy's menu load and six arena interactions remain untested at runtime, explicitly disclosed and recorded as advisories."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "Public H5M CRC passed and archive content matched its own docs. MapScript.lua has no UniverseTrigger or COMBAT_RESULTS_TRIGGER; CombatScript.lua contains only a Start callback printing defender positions. No local path, DLL or SDK member was found in the archive. Parent reports byte-by-byte comparison showing every other original member unchanged; the original working archive was outside this review's permitted public-only scope, so I did not independently repeat that comparison. No fresh game run or exact archived screenshot replay was claimed."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "The map how-to targets Heroes V Tribes of the East with installed Universe and links the pinned build. It says other builds are unchecked, original polygon live tests do not certify this cleaned copy, all six arenas are not certified, and the downloadable map lacks predictor DLL/SDK. Placement articles say hero/settings/random state/arena masks are not pinned, so identical prior screenshot positions are not promised."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "Compared the Russian and English test-map pairs: same 96x96, eight towns/heroes, 12 banks, 16 packs, six arena objects, coordinates, 80/35/12 scripted army, 1000/100000 resources, cleaned-hook statement, SHA-256, install/remove steps and untested-copy caveat. Placement and research-index pair updates carry the same public-link and exact-replay limits. The reciprocal metadata and site links pass parent-reported checks."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "The new artifact is one tracked H5M under docs/assets, linked from both test-map pages; placement and research-index pages now point to that single how-to. The updated review config uses base ed00a3dd0335008c06d7b16358d369f9fdb28e8a, and review:info lists exactly the seven changed Markdown paths covered here. Future H5M changes should update its published hash and recheck runtime availability; no cached private diagnostic files are bundled."
+          }
+        },
+        "findings": [
+          {
+            "severity": "advisory",
+            "path": "docs/modding/test-maps.md",
+            "detail": "The cleaned downloadable H5M has not had a separate launch through the game menu. The draft says so; ZIP integrity and static references do not establish that every menu/install step or all six arenas work at runtime."
+          },
+          {
+            "severity": "advisory",
+            "path": "docs/en/modding/test-maps.md",
+            "detail": "The cleaned downloadable H5M has not had a separate launch through the game menu. The English draft says so; ZIP integrity and static references do not establish that every menu/install step or all six arenas work at runtime."
+          }
+        ]
+      }
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-09-24T08:19:40.579Z"
+}
