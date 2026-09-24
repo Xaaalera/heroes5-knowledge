@@ -82,6 +82,8 @@ Stage a changed H5M separately while the game is running and install after exit.
 
 JSON SHA-256 at this entry: `3865ebc7623a024edafc5f208834070916b0bf651e27f5f3e63ba01b64f0718c`.
 
+**Correction on September 24, 2026, after publication:** the previous hash belongs to the local Windows copy with CRLF. The downloadable JSON and Git blob use LF: 22919 bytes, SHA-256 `cdb06375ba4a46194f32eab8337a0087ca4df2cfab67b5633f33954b8f26ab28`. Byte comparison confirmed only line-ending conversion; experiment data are identical. Use this second hash to verify the download.
+
 **Review correction:** the older `pack_12` record has no captured mode. Code requires explicit `assumed_context`; matching cells under that assumption does not prove the game selected that branch. The article retains this limit.
 
 ## September 23 — battle images and failed capture {#captures}

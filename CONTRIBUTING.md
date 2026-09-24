@@ -23,7 +23,7 @@
 
 Статья отвечает читателю; `docs/reference/research-diary.md` и EN-пара сохраняют историю опытов. После значимого опыта или исправления вывода добавлять запись: дата и сборка, вопрос, входы/действия, наблюдение, вывод или гипотеза, ограничения, ссылки на данные/код/снимки. Ретроспективные записи помечать датой восстановления; не выдавать пересказ за сырой журнал. Если исходный журнал не опубликован, указать это.
 
-Опубликованные технические наблюдения не переписывать молча: новое уточнение — датированная поправка со ссылкой на исходную запись. Разрешены опечатки и удаление случайно раскрытых личных данных; в Git сохраняется история, но секреты требуют отдельного удаления из истории. Не публиковать приватные пути, профили, токены или игровые дистрибутивы. При обновлении артефакта сохранять версию и хеш, на которые опирался вывод. Статья ссылается на запись, запись — на доказательства. ADR нужен для выбора устройства проекта, не для каждого игрового опыта.
+Опубликованные технические наблюдения не переписывать молча: новое уточнение — датированная поправка со ссылкой на исходную запись. Разрешены опечатки и удаление случайно раскрытых личных данных; в Git сохраняется история, но секреты требуют отдельного удаления из истории. Не публиковать приватные пути, профили, токены или игровые дистрибутивы. При обновлении артефакта сохранять версию и хеш, на которые опирался вывод. Хеш для скачивания проверять по опубликованным байтам; локальная Windows-копия текста может отличаться от Git/Pages переводами строк CRLF/LF. Статья ссылается на запись, запись — на доказательства. ADR нужен для выбора устройства проекта, не для каждого игрового опыта.
 
 ### Виды страниц и каркас
 
@@ -90,7 +90,7 @@ A worked mechanics example connects inputs, rules, intermediate decisions and a 
 
 Articles answer readers; `docs/reference/research-diary.md` and its EN pair preserve experimental history. After a significant experiment or corrected conclusion, append: date/build, question, inputs/actions, observation, inference or hypothesis, limits, and data/code/image links. Label retrospective entries with their reconstruction date; do not present a summary as a raw log. State when original logs are unpublished.
 
-Never silently rewrite published technical observations: add a dated correction linked to the original entry. Typo fixes and removal of accidentally exposed personal data are allowed; Git retains history, but secrets require separate history removal. Exclude private paths, profiles, tokens and game distributions. Keep the version and hash supporting a finding when updating an artifact. Articles link to records; records link to evidence. ADRs record project-design choices rather than every game experiment.
+Never silently rewrite published technical observations: add a dated correction linked to the original entry. Typo fixes and removal of accidentally exposed personal data are allowed; Git retains history, but secrets require separate history removal. Exclude private paths, profiles, tokens and game distributions. Keep the version and hash supporting a finding when updating an artifact. Verify download hashes against published bytes; a local Windows text copy can differ from Git/Pages through CRLF/LF conversion. Articles link to records; records link to evidence. ADRs record project-design choices rather than every game experiment.
 
 ### Page types and shape
 
