@@ -1,0 +1,143 @@
+{
+  "diffHash": "09539d1a117c29d717d8d3f29d391940877982ee322197ce6d5d930d8d2acc5a",
+  "commitSha": "fd4817574fdf8fddae1460fefc912159c7901eea",
+  "perAgent": {
+    "craft": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "architecture": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "tests": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "security": {
+      "score": 10,
+      "verdict": "PASS"
+    },
+    "docs": {
+      "score": 10,
+      "verdict": "PASS",
+      "findings": [],
+      "claims": [
+        {
+          "path": "docs/en/modding/devkit.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/native-ui.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/resource-overrides.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/test-maps.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/reference/research-diary.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/reference/research-index.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/devkit.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/native-ui.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/resource-overrides.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/test-maps.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/reference/research-diary.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/reference/research-index.md",
+          "disposition": "judged"
+        }
+      ],
+      "summary": {
+        "agent": "docs",
+        "verdict": "PASS",
+        "score": 10,
+        "counts": {
+          "blocker": 0,
+          "major": 0,
+          "minor": 0,
+          "advisory": 0
+        },
+        "one_line": "The bilingual devkit guide remains accurate, and the diary records the test-only Windows CI path correction."
+      },
+      "review": {
+        "reviewer": "/root/review_craft",
+        "files": [
+          "docs/en/modding/devkit.md",
+          "docs/en/modding/native-ui.md",
+          "docs/en/modding/resource-overrides.md",
+          "docs/en/modding/test-maps.md",
+          "docs/en/reference/research-diary.md",
+          "docs/en/reference/research-index.md",
+          "docs/modding/devkit.md",
+          "docs/modding/native-ui.md",
+          "docs/modding/resource-overrides.md",
+          "docs/modding/test-maps.md",
+          "docs/reference/research-diary.md",
+          "docs/reference/research-index.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "Read all 12 changed Markdown paths. New RU/EN devkit pages answer how to obtain and use the published shared development tools; the research-index pair adds the route, related modding pages distinguish command tools from a universal native SDK, and the diary pair records the extraction's process and limits. The page points to the actual heroes5-mod-devkit repository, not a promised future package."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "Both devkit pages proceed from included components to setup, first H5U marker cycle, command-driven battles and extraction checks. Nav and research-index entries link the new pair; native-ui/resource-overrides/test-maps give contextual backlinks. The dated diary entry appends extraction results and the subsequent shadow-import correction without replacing earlier historical observations. Detailed command semantics remain in the canonical devkit docs/commands.md link."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "Compared the new PowerShell setup and H5U cycle against the reviewed devkit README and script parsers: Git clone/venv/requirements, H5_WORKSPACE/H5_GAME_DIR, copying examples/menu-marker, prepare/build/deploy/launch --sandbox and rollback align. game_control parser exposes status, heroes, teleport, interact, confirm, finish --winner 0, results, hero and quit. The public polygon's pack_8 location permits teleport Brem 14 50 before interacting; dispatch alone is not called a completed fight. Included-tool table matches mod-dev, test-map, native-probe, game_control, game-ui and inspect_universe entrypoints."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "The website gives an actionable setup path and an expected visual marker, then links the full SDK command reference. Parent reports 37 SDK tests and 48 legacy bridge tests passing, a fresh clone's 37 tests with no root path variables, and an empty external-workspace staged map with 60 objects/six arenas and valid ZIP. The article says the extracted kit has not had a separate live-game launch; I did not start a game. Parent reports knowledge build/check 8 Node/21 Python/37 HTML passing; All 12 browser tests later passed per parent."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "The SDK source review at HEAD fcc0422 established canonical shared scripts, workspace separation, optional native artifacts and import-path hardening. The new diary entry preserves the first failed empty-workspace H5M/journal attempt, explains the later successful 60-object/six-arena build, and records the inert shadow-module differential check without claiming game execution. It links the current devkit page and keeps predictor C++ and historical native results separate. I did not independently rerun the SDK suite or examine a game/profile; parent supplied those machine outcomes. Final diary correction matches SDK HEAD 4406cf0: GitHub Windows represented a temporary path with RUNNER~1 while CLI returned its full spelling; the test resolves both paths before equality comparison. The exact SDK diff touched only the test assertion/config base, not runtime tools."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "The new page targets Windows 10/11, Python 3.10+ x64 and installed Tribes of the East with Universe, and links pinned native build hashes. It says the predictor DLL is excluded, a universal plugin SDK is not provided, complete profile isolation is unproven, EXE startup can briefly take focus, and physical mouse checks differ from addressed input. Test-map and native UI updates say command tools are available while still denying a universal native API."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "Compared both 101-line devkit articles and all five updated RU/EN article pairs: the component table, setup commands, marker cycle, quickbattle commands, 37/48 test counts, 60-object map, no-new-live-launch caveat, shadow-import correction and external SDK link agree. RU/EN nav entries, research-index links and diary histories have counterparts. Reciprocal metadata and local links are covered by parent-reported site checks; this is not a professional translation audit. Both diary languages append the same CI path-normalization correction without altering earlier extraction results."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "The website adds one discoverable devkit page per language and updates obsolete unpublished-command-tool wording in test-map/native-UI/research-index pages. The extraction diary is dated September 24 and preserves prior entries, including a failed first attempt and a review-driven correction. The SDK remains the canonical code and command reference; website steps are a bounded onboarding route. review:info lists exactly the 12 changed Markdown paths covered here; no source/artifact was edited by this reviewer. The CI failure and narrow test-only fix are appended as dated research history rather than silently rewriting the earlier 37-test extraction record."
+          }
+        },
+        "findings": []
+      }
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-09-24T12:50:36.574Z"
+}
