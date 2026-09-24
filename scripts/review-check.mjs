@@ -35,7 +35,7 @@ if (forbidden.length > 0) {
   );
 }
 const documentationFiles = execFileSync('git', [
-  'diff', '--name-only', '-z', base, 'HEAD', '--', '*.md',
+  'diff', '--name-only', '-z', base, 'HEAD', '--', '*.md', 'docs/llms.txt',
 ], { encoding: 'utf8' }).split('\0').filter(Boolean);
 const diff = getCumulativeDiff(base);
 const hash = hashDiff(diff);

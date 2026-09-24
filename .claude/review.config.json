@@ -23,7 +23,7 @@
       "threshold": 8,
       "skills": [],
       "rules": [
-        "Read CONTRIBUTING.md mandatory standard and independent review protocol. Assess every Markdown path from review:info; return docs.review with all eight criteria, evidence and findings. Do not certify drafts or invent reviewer identity."
+        "Read CONTRIBUTING.md mandatory standard and independent review protocol. Assess every documentationFiles path from review:info, including the Markdown-formatted docs/llms.txt agent index; return docs.review with all eight criteria, evidence and findings. Do not certify drafts or invent reviewer identity."
       ]
     },
     {
