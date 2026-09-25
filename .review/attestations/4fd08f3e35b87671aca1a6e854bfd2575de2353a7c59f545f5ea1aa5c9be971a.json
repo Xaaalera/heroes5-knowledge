@@ -1,0 +1,138 @@
+{
+  "diffHash": "4fd08f3e35b87671aca1a6e854bfd2575de2353a7c59f545f5ea1aa5c9be971a",
+  "commitSha": "ececdea7dc417b91daa58429dbf78eac47e95bf2",
+  "perAgent": {
+    "craft": {
+      "verdict": "PASS",
+      "score": 10
+    },
+    "docs": {
+      "score": 10,
+      "verdict": "PASS",
+      "findings": [],
+      "claims": [
+        {
+          "path": "README.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/modding/devkit.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/players/bank-reference.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/players/deployment-preview.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/players/mods.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/reference/research-diary.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/modding/devkit.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/bank-reference.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/deployment-preview.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/mods.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/reference/research-diary.md",
+          "disposition": "judged"
+        }
+      ],
+      "summary": {
+        "agent": "docs",
+        "verdict": "PASS",
+        "score": 10,
+        "counts": {
+          "blocker": 0,
+          "major": 0,
+          "minor": 0,
+          "advisory": 0
+        },
+        "one_line": "The published preview.2 download links and dated evidence match the released DLL packages and retain limits."
+      },
+      "review": {
+        "reviewer": "/root/review_craft",
+        "files": [
+          "README.md",
+          "docs/en/modding/devkit.md",
+          "docs/en/players/bank-reference.md",
+          "docs/en/players/deployment-preview.md",
+          "docs/en/players/mods.md",
+          "docs/en/reference/research-diary.md",
+          "docs/modding/devkit.md",
+          "docs/players/bank-reference.md",
+          "docs/players/deployment-preview.md",
+          "docs/players/mods.md",
+          "docs/reference/research-diary.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "Read all 11 changed Markdown paths. The player catalog and both mod how-tos now provide direct public preview.2 DLL ZIP downloads; developer and site READMEs stop saying releases are unavailable. The diary appends a post-publication record of bytes, hashes and disable evidence while preserving the earlier entry that correctly said the packages were still under acceptance at that time."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "RU/EN catalog tables link each product to its download; product pages lead with the same direct ZIP and retain install/removal/limits; devkit pages link back to player downloads. The diary follow-up remains inside the dated DLL-delivery record and distinguishes package publication, whole-pair disable check and local polygon variant from prior five-battle observations. No article body or artifact was duplicated into a new parallel page."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "Both direct URLs target v0.1.0-preview.2 and distinct named ZIPs. Parent verified unauthenticated HTTP 200 and bytes: predictor 155145 bytes SHA-256 cd9470ee0ecf44ceaddf4eb994ae2ba0a7ad3447dd618d2a9862245a25a1acda; bank 773747 bytes SHA-256 8371720bc99d0f7a92f9416eb7945f5c6cab5d6927cb00d7e9fcbd1e54c7b52f. Both omit EXEs and include byte-identical shared dinput8.dll SHA-256 7959116c5e61369a9af533eb460b09b0e7a897543a6ede2fc1075800a7a62837. The diary records all values, and official GitHub tag pages show the DLL-only prereleases."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "Parent reports knowledge build/check passed (8 Node, 23 Python, 41 HTML) and both unauthenticated direct downloads returned matching bytes. After temporarily removing both mod DLLs, shared dinput8 and H5U, the ordinary game EXE reached menu and exited code 0; original four game-binary hashes stayed unchanged and test files were restored. I did not repeat the download or live game run. The five-battle archive remains tied to a local polygon SHA-256 85247993da2370ae3325d4f41d3c89e4395b7a60dab31e9d7149ec0662e2c587, distinct from the published map."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "GitHub's public release tag pages identify both preview.2 DLL-only releases; parent supplied exact downloaded asset hashes and shared-bootstrap comparison. The updated diary preserves earlier acceptance wording and appends a follow-up rather than rewriting it. It does not claim the whole-pair disable check covers every other-mod combination or that five battle results reproduce on any polygon version. No new gameplay result is inferred from publication itself."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "Links target experimental preview.2 packages for the pinned Universe build, with ordinary Heroes/Lobby startup and one shared dinput8. Player pages retain installation/removal and measured limitations: exact predictor placement is not guaranteed; crypt visual check is one locale/screen; original Universe binaries are unchanged. The diary distinguishes complete disable of the pair from partial-mod compatibility and calls out local map-variant drift."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "Compared RU/EN catalog, predictor, bank, devkit, README and diary additions: direct ZIP URLs, version, sizes/hashes, common DLL, no EXEs, normal startup, disable result and polygon-variant caveat agree. Both languages link to the same canonical release assets and keep source ZIP versus player ZIP distinct. No material translation mismatch found."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "Release URLs and hashes live in one dated diary follow-up while player pages provide actionable links. Earlier pre-release statements remain historically true in their original dated entry; README/devkit status text is updated to current availability. The site still routes readers to mod READMEs for validation limits. review:info lists exactly 11 changed Markdown paths, all covered here; no source file was edited by this reviewer."
+          }
+        },
+        "findings": []
+      }
+    },
+    "security": {
+      "verdict": "PASS",
+      "score": 10
+    },
+    "tests": {
+      "verdict": "PASS",
+      "score": 10
+    },
+    "architecture": {
+      "verdict": "PASS",
+      "score": 10
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-09-25T11:13:15.206Z"
+}
