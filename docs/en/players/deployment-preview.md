@@ -4,7 +4,7 @@ status: draft
 faction: academy
 title: 'Deployment preview: installation and controls'
 lang: en
-section: players
+section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/deployment-preview/
 description: 'Deployment preview: installation and controls'

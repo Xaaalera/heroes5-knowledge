@@ -23,10 +23,11 @@ markdown_extensions:
 nav:
 - Главная: index.md
 - Игрокам:
-  - Моды и установка: players/mods.md
-  - Справочник хранилищ: players/bank-reference.md
   - Расстановка в игре: players/army-placement.md
-  - Проекции и карточки: players/deployment-preview.md
+- Моды:
+  - Все моды: players/mods.md
+  - Предиктор расстановки: players/deployment-preview.md
+  - Справочник хранилищ: players/bank-reference.md
 - Моддерам:
   - Стенд разработки: modding/devkit.md
   - Ресурсный override: modding/resource-overrides.md
@@ -47,10 +48,11 @@ nav:
 - English:
   - Home: en/index.md
   - Players:
-    - Mods and installation: en/players/mods.md
-    - Bank reference: en/players/bank-reference.md
     - Game placement: en/players/army-placement.md
-    - Projections and cards: en/players/deployment-preview.md
+  - Mods:
+    - All mods: en/players/mods.md
+    - Deployment predictor: en/players/deployment-preview.md
+    - Bank reference: en/players/bank-reference.md
   - Mod creators:
     - Development environment: en/modding/devkit.md
     - Resource override: en/modding/resource-overrides.md
@@ -75,6 +77,7 @@ extra:
       brand_context: О ГЕРОЯХ · HEROES V
       home: Главная
       players: Игрокам
+      mods: Моды
       modding: Моддерам
       reference: Справочник
       about: О базе
@@ -110,6 +113,7 @@ extra:
       brand_context: ABOUT HEROES · HEROES V
       home: Home
       players: Players
+      mods: Mods
       modding: Mod creators
       reference: Reference
       about: About

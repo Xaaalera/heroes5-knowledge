@@ -4,7 +4,7 @@ status: draft
 faction: haven
 title: Моды и установка
 lang: ru
-section: players
+section: mods
 kicker: HEROES V · UNIVERSE
 translation: en/players/mods/
 description: Два мода, их исходники и разные способы установки.

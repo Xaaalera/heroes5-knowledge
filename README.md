@@ -9,6 +9,7 @@
 - Сайт: https://xaaalera.github.io/heroes5-knowledge/
 - Статьи: `docs/`; английские версии: `docs/en/`.
 - Оформление: Jinja-шаблон `theme/main.html`, SCSS `styles/`, браузерный поиск `theme/assets/site.js`.
+- «Моды» — отдельный раздел верхнего меню и боковой навигации: каталог, предиктор расстановки и справочник хранилищ. Статьи используют `section: mods`; опубликованные адреса сохранены.
 - Единственный источник статьи — Markdown. Сайт собирается самостоятельно, без приватной мастерской.
 
 ### Сборка
@@ -47,6 +48,8 @@ The [research diary](docs/en/reference/research-diary.md) stores dated experimen
 Xaaalera’s personal notes, research, and guides about Heroes V. Prepared findings cover game mechanics, resources, scripts, native UI and reproducible examples. Start with the [knowledge map](docs/en/reference/research-index.md).
 
 The site URL and commands above apply to both languages. Requires Python 3.10+ and Node.js 22+. Markdown articles are the only content source; the site builds independently of any private workspace.
+
+“Mods” is a separate section in the header and article navigation, containing the catalog and both mod guides. Their metadata uses `section: mods`; published URLs are preserved.
 
 Presentation lives in `theme/` and `styles/`; generated `site/` and CSS are not committed. Run `npm run styles` after changing SCSS. MkDocs serve watches articles and the theme; this repo's Pages workflow publishes the site.
 

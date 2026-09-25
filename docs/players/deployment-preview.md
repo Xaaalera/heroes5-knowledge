@@ -4,7 +4,7 @@ status: draft
 faction: academy
 title: 'Предиктор расстановки: установка и управление'
 lang: ru
-section: players
+section: mods
 kicker: HEROES V · UNIVERSE
 translation: en/players/deployment-preview/
 description: 'Предиктор расстановки: установка и управление'

@@ -4,7 +4,7 @@ status: draft
 faction: fortress
 title: Справочник хранилищ — установка и карточки
 lang: ru
-section: players
+section: mods
 kicker: HEROES V · UNIVERSE
 translation: en/players/bank-reference/
 description: Исходники, установка, чтение справки и удаление мода.

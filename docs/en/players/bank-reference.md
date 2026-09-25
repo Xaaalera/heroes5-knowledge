@@ -4,7 +4,7 @@ status: draft
 faction: fortress
 title: Bank reference — installation and cards
 lang: en
-section: players
+section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/bank-reference/
 description: Source, installation, reading the reference and removal.

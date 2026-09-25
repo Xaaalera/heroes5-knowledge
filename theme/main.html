@@ -33,7 +33,7 @@
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">{{ labels.menu }} <span aria-hidden="true">☰</span></button>
       <nav id="site-navigation" class="navigation" aria-label="{{ labels.menu }}">
-        {% for key, target in [('players', 'players/army-placement/'), ('modding', 'modding/resource-overrides/'), ('reference', 'reference/research-index/'), ('about', 'about/')] %}
+        {% for key, target in [('players', 'players/army-placement/'), ('mods', 'players/mods/'), ('modding', 'modding/resource-overrides/'), ('reference', 'reference/research-index/'), ('about', 'about/')] %}
         <a href="{{ (prefix ~ target)|url }}" {% if page and page.meta.section == key %}aria-current="true"{% endif %}>{{ labels[key] }}</a>
         {% endfor %}
       </nav>
@@ -81,7 +81,7 @@
     <div class="article-layout">
       <aside class="article-navigation" aria-label="{{ labels.menu }}">
         <a class="back-link" href="{{ (prefix)|url }}">← {{ labels.home }}</a>
-        {% for key in ['players', 'modding', 'reference'] %}
+        {% for key in ['players', 'mods', 'modding', 'reference'] %}
         <h2>{{ labels[key] }}</h2>
         {% for item in pages if item.page and item.page.meta.lang|default('ru') == language and item.page.meta.section == key %}<a href="{{ item.page.url|url }}" {% if page and item.page.url == page.url %}aria-current="page"{% endif %}>{{ item.page.title }}</a>{% endfor %}
         {% endfor %}
