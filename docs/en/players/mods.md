@@ -21,6 +21,6 @@ Two experimental add-ons for **[Heroes V Universe / Heroes V Lobby](https://h5lo
 
 ## Download the mods
 
-Ready-to-use player archives are not available yet. The GitHub links above point to source code. Mod pages describe features, controls and limits; installation of a ready-made version will be documented when it is released.
+Player archives are not public yet: the prepared packages await in-game acceptance of their new launch paths. The GitHub links above lead to repositories. Mod pages describe features, controls, simple installation and removal; download links will appear when the releases are published.
 
 [Developers: build and test launch](../modding/devkit.md#mod-sources).

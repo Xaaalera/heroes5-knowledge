@@ -1,5 +1,5 @@
 ---
-content_type: reference
+content_type: how-to
 status: draft
 faction: fortress
 title: Bank reference
@@ -8,7 +8,7 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/bank-reference/
 description: 'Possible bank armies: what the mod shows and how to read its cards.'
-updated: 2026-09-24
+updated: 2026-09-25
 ---
 # Bank reference
 
@@ -17,11 +17,24 @@ The mod shows **possible armies by tier**, portraits, ranges and alternatives. I
 
 ## Download and install
 
-**No ready-to-use player archive has been published yet.** The prototype still launches through development tools; ordinary installation is not available.
+**Package `0.1.0-preview.1` is prepared but not published:** its new launch path still awaits in-game acceptance. Code → Download ZIP downloads source code, not the player package.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-bank-reference) · [Universe](https://h5lobby.com/).
 
-The H5U alone does not enable the complete reference. A copy-and-play installation guide would therefore be misleading. Prototype build and launch instructions are in the [developer section](../modding/devkit.md#mod-sources).
+The player ZIP needs Windows and the [supported game build](../reference/universe-build.md). No Python, Git or devkit is needed.
+
+1. Exit the game and editor. Extract `Heroes5BankReference` beside the game's `bin` folder.
+2. Double-click `workshop_bank_reference.exe`. Keep `workshop-army-reference.h5u` beside it.
+3. If a file picker appears, select your Universe installation's `bin/H5_Game.exe`. Cancel installs and starts nothing.
+4. The launcher checks the version, copies its H5U into `UserMODs` and starts the game. Hover a supported bank on the map: the possible-army reference should appear.
+
+A differing existing `UserMODs/workshop-army-reference.h5u` is not overwritten. Exit the game and preserve that earlier file separately before replacing it. If the game version or EXE/H5U pair does not match, check compatibility and extract the complete package again.
+
+## Disable and remove
+
+Exit the game. Delete `UserMODs/workshop-army-reference.h5u` and the `Heroes5BankReference` folder. Leave other UserMODs files alone. The ordinary game EXE launches without the reference selector.
+
+[Developers: source build and test environment](../modding/devkit.md#mod-sources).
 
 ## Use the mod
 
@@ -35,6 +48,19 @@ On the adventure map, hover a supported bank to display its possible guard armie
 - The paired count is the whole group's range, not a guaranteed count of each species.
 
 [Where tiers and ranges come from](../reference/banks.md). Thirteen families map 19 public titles to 12 confirmed types. OrcDeposit remains unbound; renamed objects are unsupported by title-based selection.
+
+## Example: imp cache
+
+The historical card check displayed four possible tiers:
+
+| Tier | Range |
+|---|---|
+| T1 | 90–135 |
+| T2 | 120–165 |
+| T3 | 150–195 |
+| T4 | 180–225 |
+
+The T2 range belongs only to that variant: do not add other tiers or infer that the selected bank actually has T2. [Observation source](../reference/research-diary.md#army-tooltip-probe).
 
 ## Limits
 

@@ -1,5 +1,5 @@
 ---
-content_type: reference
+content_type: how-to
 status: draft
 faction: academy
 title: 'Deployment predictor'
@@ -8,7 +8,7 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/deployment-preview/
 description: 'Deployment predictor'
-updated: '2026-09-24'
+updated: '2026-09-25'
 ---
 # Deployment predictor
 
@@ -16,11 +16,24 @@ A projection marks **a creature's predicted position and movement area**. It use
 
 ## Download and install
 
-**No ready-to-use player archive has been published yet.** GitHub currently provides source code; Code → Download ZIP downloads source, not an installed mod.
+**Package `0.1.0-preview.1` is prepared but not published:** its new launch path still awaits in-game acceptance. Code → Download ZIP downloads source code, not the player package.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-deployment-preview) · [Universe](https://h5lobby.com/).
 
-A simple installation package is not available as a public release yet. Readers are not expected to build it. Build instructions belong in the [developer section](../modding/devkit.md#mod-sources).
+The player ZIP needs Windows and the supported game. No Python, Git or compiler is needed.
+
+1. Exit the game. Extract `Heroes5DeploymentPreview` beside the game's `bin` folder.
+2. Double-click `workshop_preview_loader.exe`. Keep `WorkshopDeploymentPreview.dll` beside it.
+3. If a file picker appears, select your Universe installation's `bin/H5_Game.exe`. Cancel closes the launcher without starting the game.
+4. Start an ordinary battle: enemy projections should appear before Start. Hover for movement range; right-click for a creature card.
+
+If the build is unsupported, compare it with the linked build below. If the DLL is missing, extract the entire archive again. Do not replace game DLLs.
+
+## Disable and remove
+
+Exit the game. Launch the ordinary game EXE to play without the mod. Delete the `Heroes5DeploymentPreview` folder to remove it; the predictor installs nothing in `UserMODs`.
+
+[Developers: source build and test environment](../modding/devkit.md#mod-sources).
 
 ## Compatibility
 
