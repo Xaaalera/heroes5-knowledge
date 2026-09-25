@@ -101,3 +101,12 @@ The polygon contains eight factions, 12 banks, 16 neutral armies and six scripte
 Native tools validate four game-file hashes and reject other builds. Complete profile isolation is unproven and EXE startup can briefly take focus. Addressed input and physical mouse behavior are different checks. The devkit does not bundle the predictor or a universal plugin SDK, nor certify every arena.
 
 For agent-assisted work, use the [llms.txt index](../../llms.txt) and [devkit agent instructions](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/AGENTS.md).
+
+## Build our mods {#mod-sources}
+
+These instructions are for developers, not players:
+
+- [Predictor: C++ build and launch](https://github.com/Xaaalera/heroes5-deployment-preview#readme).
+- [Bank reference: H5U build and diagnostic launch](https://github.com/Xaaalera/heroes5-bank-reference#readme).
+
+Both repositories pin devkit as a submodule. Their READMEs contain dependencies, exact commands, disabling and validation limits. Ready-to-use player releases are not available yet.

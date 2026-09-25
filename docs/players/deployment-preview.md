@@ -1,48 +1,30 @@
 ---
-content_type: how-to
+content_type: reference
 status: draft
 faction: academy
-title: 'Предиктор расстановки: установка и управление'
+title: 'Предиктор расстановки'
 lang: ru
 section: mods
 kicker: HEROES V · UNIVERSE
 translation: en/players/deployment-preview/
-description: 'Предиктор расстановки: установка и управление'
+description: 'Предиктор расстановки'
 updated: '2026-09-24'
 ---
-# Предиктор расстановки: установка и управление
+# Предиктор расстановки
 
 Проекция отмечает **предполагаемое место существа и доступную ему область хода**. Она использует известный тип, но не раскрывает скрытую численность и грейд охраны. Это экспериментальный мод для исследованной сборки Universe; универсального релиза пока нет.
 
-## Исходники и установка
+## Скачать и установить
 
-[Исходники предиктора](https://github.com/Xaaalera/heroes5-deployment-preview) · [Universe / Heroes V Lobby](https://h5lobby.com/) · [проверенный devkit](https://github.com/Xaaalera/heroes5-mod-devkit/tree/1b8934ac084491da460ce8bb145819e41e2cf888).
+**Готовый архив для игроков пока не опубликован.** На GitHub доступны исходники; кнопка Code → Download ZIP скачивает код, а не установленный мод.
 
-Нужны Windows, CMake 3.21+ и Visual Studio 2022 C++ x86 tools. В **x86 Native Tools Command Prompt**:
+[Страница мода на GitHub](https://github.com/Xaaalera/heroes5-deployment-preview) · [Universe](https://h5lobby.com/).
 
-```bat
-git clone --recursive https://github.com/Xaaalera/heroes5-deployment-preview.git
-cd heroes5-deployment-preview
-cmake -G "NMake Makefiles" -S . -B .local/build/deployment-preview-native -DCMAKE_BUILD_TYPE=Release
-cmake --build .local/build/deployment-preview-native --config Release
-cmake --install .local/build/deployment-preview-native --config Release --prefix .local/dist/deployment-preview-native
-```
+Простая установка ещё не оформлена в публичный выпуск. Не требуется собирать мод самостоятельно, чтобы пользоваться этой базой. Инструкции сборки относятся к [разработчикам](../modding/devkit.md#mod-sources).
 
-Закрой игру. Полученные `workshop_preview_loader.exe` и `WorkshopDeploymentPreview.dll` должны лежать рядом в отдельной папке мода. **Не заменяй игровые DLL и не помещай эту DLL в UserMODs.**
+## Совместимость
 
-Пример запуска из корня клона:
-
-```powershell
-.local/dist/deployment-preview-native/workshop_preview_loader.exe --game "../HeroesV-Universe/bin/H5_Game.exe"
-```
-
-Замени пример своим путём к `H5_Game.exe`. Загрузчик принимает только [указанные хеши четырёх игровых файлов](../reference/universe-build.md): текущая версия из лобби может отличаться. При несовпадении не обходи проверку. В обычном нападении проверь проекции и карточки до Start. Python нужен разработческим проверкам, не установленной паре EXE/DLL.
-
-## Отключение и удаление
-
-Закрой игру и запусти обычный `H5_Game.exe` напрямую — плагин не подключится. После выхода для удаления достаточно убрать два файла мода из их отдельной папки. Игровые EXE/DLL на диске загрузчик не меняет.
-
-После переноса выполнены x86-сборка и девять проверок C++/эмулятора с локальным EXE-оракулом. Свежего живого запуска после переноса не было; совместная работа со справочником хранилищ отдельно не проверена. [Полная инструкция](https://github.com/Xaaalera/heroes5-deployment-preview#readme) · [Оба мода и правила установки](mods.md).
+Мод разработан для [исследованной сборки Universe](../reference/universe-build.md). Работа на других версиях и совместно со справочником хранилищ не подтверждена.
 
 ## Управление
 
