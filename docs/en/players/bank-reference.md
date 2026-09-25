@@ -51,7 +51,7 @@ On the adventure map, hover a supported bank to display its possible guard armie
 
 ## Example: imp cache
 
-The historical card check displayed four possible tiers:
+Public imp-cache data gives these reference ranges by tier:
 
 | Tier | Range |
 |---|---|
@@ -60,7 +60,7 @@ The historical card check displayed four possible tiers:
 | T3 | 150–195 |
 | T4 | 180–225 |
 
-The T2 range belongs only to that variant: do not add other tiers or infer that the selected bank actually has T2. [Observation source](../reference/research-diary.md#army-tooltip-probe).
+The T2 range belongs only to that variant: do not add other tiers or infer that the selected bank actually has T2. [Calculation source](../reference/research-diary.md#banks).
 
 ## Limits
 
