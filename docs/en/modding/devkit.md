@@ -109,7 +109,7 @@ These instructions are for developers, not players:
 - [Predictor: C++ build and launch](https://github.com/Xaaalera/heroes5-deployment-preview#readme).
 - [Bank reference: DLL and H5U build](https://github.com/Xaaalera/heroes5-bank-reference#readme).
 
-Both repositories pin devkit as a submodule. Their READMEs contain dependencies, exact commands, disabling and validation limits. Ready-to-use player releases are not available yet.
+Both repositories pin devkit as a submodule. Their READMEs contain dependencies, exact commands, disabling and validation limits. [Ready DLL packages](../players/mods.md) require no player development tools.
 
 ## Ordinary startup with DLLs {#dll-autoload}
 

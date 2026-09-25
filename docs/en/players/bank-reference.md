@@ -17,7 +17,7 @@ The mod shows **possible armies by tier**, portraits, ranges and alternatives. I
 
 ## Download and install
 
-**The DLL package is not published yet.** The separate-EXE candidate was withdrawn. Keep launching through Heroes/Lobby as usual. Code → Download ZIP downloads source code, not the player package.
+**[Download DLL package 0.1.0-preview.2](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.2/Heroes5BankReference-0.1.0-preview.2.zip)** — experimental release. Keep ordinary Heroes/Lobby startup; there is no separate mod EXE. Code → Download ZIP downloads source, not the player package.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-bank-reference) · [Universe](https://h5lobby.com/).
 
@@ -28,7 +28,7 @@ The player ZIP needs Windows and the [supported game build](../reference/univers
 3. Start through Heroes/Lobby as usual. There is no separate player EXE for this mod.
 4. Hover a supported bank on the map: the possible-army reference should appear.
 
-Remove the old text prototype `workshop-object-reference.h5u` from UserMODs if present: it adds unwanted text and stretches the card. Preserve an existing H5U separately before replacing it. The reference DLL and H5U must belong to the same release. This delivery is under validation; its public download will be added afterward.
+Remove the old text prototype `workshop-object-reference.h5u` from UserMODs if present: it adds unwanted text and stretches the card. Preserve an existing H5U separately before replacing it. The reference DLL and H5U must belong to the same release. Validation limits are described below.
 
 ## Disable and remove
 

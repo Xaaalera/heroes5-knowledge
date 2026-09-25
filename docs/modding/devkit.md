@@ -109,7 +109,7 @@ python -X utf8 scripts/game_control.py interact Brem pack_8
 - [Предиктор: сборка C++ и запуск](https://github.com/Xaaalera/heroes5-deployment-preview#readme).
 - [Справочник хранилищ: сборка DLL и H5U](https://github.com/Xaaalera/heroes5-bank-reference#readme).
 
-Оба репозитория закрепляют devkit как submodule. README содержат зависимости, точные команды, отключение и границы проверки. Готовых пользовательских выпусков пока нет.
+Оба репозитория закрепляют devkit как submodule. README содержат зависимости, точные команды, отключение и границы проверки. [Готовые DLL-пакеты](../players/mods.md) устанавливаются без инструментов разработки.
 
 ## Обычный запуск с DLL {#dll-autoload}
 

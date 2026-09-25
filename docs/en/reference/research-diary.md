@@ -278,6 +278,19 @@ Download SHA-256: `81115018610632c94b9db9566b28cc85afa3e42b76cf2c37e3ffbfc4a5af4
 
 **Limits:** SDK passed 39 Python, 8 Node and 2 native CTest checks; predictor passed 9 and reference 6. This does not cover every bank, arena or display size. The Heroes/Lobby UI itself was not automated; the ordinary game EXE and automatic loading mechanism were checked. New DLL packages remain under acceptance at this entry's date. No game distributions, profiles or private logs are published.
 
+### Follow-up after DLL package publication
+
+[Predictor preview.2](https://github.com/Xaaalera/heroes5-deployment-preview/releases/tag/v0.1.0-preview.2) and [reference preview.2](https://github.com/Xaaalera/heroes5-bank-reference/releases/tag/v0.1.0-preview.2) are published. Unauthenticated downloads returned HTTP 200 and neither ZIP contains an EXE. Shared dinput8.dll is identical in both archives: SHA-256 7959116c5e61369a9af533eb460b09b0e7a897543a6ede2fc1075800a7a62837.
+
+| Archive | Bytes | SHA-256 |
+|---|---|---|
+| Heroes5DeploymentPreview-0.1.0-preview.2.zip | 155145 | cd9470ee0ecf44ceaddf4eb994ae2ba0a7ad3447dd618d2a9862245a25a1acda |
+| Heroes5BankReference-0.1.0-preview.2.zip | 773747 | 8371720bc99d0f7a92f9416eb7945f5c6cab5d6927cb00d7e9fcbd1e54c7b52f |
+
+After temporarily removing both mod DLLs, shared dinput8.dll and the H5U, the ordinary game EXE reached the menu and exited normally with code 0. Test files were then restored. All four original binary hashes stayed unchanged. This checks disabling the complete pair, not every combination with other mods.
+
+The five battles used a local WorkshopPolygon variant with SHA-256 85247993da2370ae3325d4f41d3c89e4395b7a60dab31e9d7149ec0662e2c587, different from the article's published map. The linked observation summary is available, but is not a claim of exact reproduction on any polygon version.
+
 ## Recording rules
 
 - Each experiment records its date, question, build, inputs, actions, observation, conclusion, limits and result files.

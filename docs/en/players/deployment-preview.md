@@ -16,7 +16,7 @@ A projection marks **a creature's predicted position and movement area**. It use
 
 ## Download and install
 
-**The DLL package is not published yet.** The separate-EXE candidate was withdrawn. Keep launching through Heroes/Lobby as usual. Code → Download ZIP downloads source code, not the player package.
+**[Download DLL package 0.1.0-preview.2](https://github.com/Xaaalera/heroes5-deployment-preview/releases/download/v0.1.0-preview.2/Heroes5DeploymentPreview-0.1.0-preview.2.zip)** — experimental release. Keep ordinary Heroes/Lobby startup; there is no separate mod EXE. Code → Download ZIP downloads source, not the player package.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-deployment-preview) · [Universe](https://h5lobby.com/).
 
@@ -27,7 +27,7 @@ The player ZIP needs Windows and the supported game. No Python, Git or compiler 
 3. Start through Heroes/Lobby as usual. There is no separate player EXE for this mod.
 4. Start an ordinary battle: enemy projections should appear before Start. Hover for movement range; right-click for a creature card.
 
-If the build is unsupported, compare it with the linked build below. Original `d3d9.dll`, `uni.dll` and `um.dll` are not replaced. This delivery path is under validation; its public download will be added afterward.
+If the build is unsupported, compare it with the linked build below. Original `d3d9.dll`, `uni.dll` and `um.dll` are not replaced. Validation results and limits are described below.
 
 ## Disable and remove
 
