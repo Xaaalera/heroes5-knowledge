@@ -1,0 +1,113 @@
+{
+  "diffHash": "c61af5b19cdb1c004ae69c858617f3c7658305537bf7b56970f81b3c78759020",
+  "commitSha": "7b4f0cc4d8981fcf9da49655a12c64feeb185ff1",
+  "perAgent": {
+    "craft": {
+      "verdict": "PASS",
+      "score": 10
+    },
+    "docs": {
+      "score": 10,
+      "verdict": "PASS",
+      "findings": [],
+      "claims": [
+        {
+          "path": "docs/en/players/bank-reference.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/players/deployment-preview.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/en/players/mods.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/bank-reference.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/deployment-preview.md",
+          "disposition": "judged"
+        },
+        {
+          "path": "docs/players/mods.md",
+          "disposition": "judged"
+        }
+      ],
+      "summary": {
+        "agent": "docs",
+        "verdict": "PASS",
+        "score": 10,
+        "counts": {
+          "blocker": 0,
+          "major": 0,
+          "minor": 0,
+          "advisory": 0
+        },
+        "one_line": "The prospective player install guides match their source packages and clearly withhold release/live-validation claims."
+      },
+      "review": {
+        "reviewer": "/root/review_craft",
+        "files": [
+          "docs/en/players/bank-reference.md",
+          "docs/en/players/deployment-preview.md",
+          "docs/en/players/mods.md",
+          "docs/players/bank-reference.md",
+          "docs/players/deployment-preview.md",
+          "docs/players/mods.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "Read all six changed player-page Markdown paths. The Mods catalog now says player packages are prepared but unpublished; the two mod pages give simple prospective ZIP install/use/remove steps, keeping developer builds in the separate devkit section. Both products remain explicitly awaiting in-game acceptance of their new launch paths."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "Catalog remains a landing page; predictor and bank pages now declare how-to, with prerequisites, four player steps, troubleshooting, removal, usage and limitations. Each RU/EN pair mirrors the same sections. The final bank example cites the calculation diary entry #banks rather than incorrectly using the renderer-counter entry; the historical live-card claim was removed from the numerical table."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "The predictor steps name Heroes5DeploymentPreview, workshop_preview_loader.exe and its adjacent WorkshopDeploymentPreview.dll, file-picker H5_Game.exe, ordinary battle/hover/RMB and ordinary-EXE disable. The bank steps name Heroes5BankReference, workshop_bank_reference.exe plus matching workshop-army-reference.h5u, no overwrite of a different UserMODs file, and H5U/folder removal. Both say Code → Download ZIP is source rather than the unpublished player archive. Bank imp-cache reference ranges T1 90-135, T2 120-165, T3 150-195 and T4 180-225 match the linked #banks calculation record and are not presented as a detected hidden tier."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "The website describes package 0.1.0-preview.1 as prepared, not released. Parent reports site checks before the final four-line citation correction: 8 Node, 23 Python, 41 HTML and 13 browser tests passed; the link gate was to rerun on final HEAD. Bank source's six no-game checks include real InstallPackage tempdir copy/repeat/refusal, while predictor source checks no-args/--check packaging without a fresh battle. I did not start either mod or confirm player double-click behavior in game."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "Compared the player instructions with the reviewed predictor and bank source READMEs/loaders: adjacent folder search/file-picker cancel and pinned game hashes are implemented; bank installer copies a matching H5U, refuses foreign content, and normal launches avoid the selector. The new bank table now states public calculation and links the diary's #banks entry, which actually contains the 15-slot tier bounds. Older #army-tooltip-probe describes renderer calls, so using it for numeric bounds would have been incorrect; final text no longer does so."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "Both pages require the supported Universe build and warn that prepared player ZIPs are not publicly downloadable or stable until live launch acceptance. They do not require Python/Git/compiler for future compiled packages, and developer source builds remain linked separately. Predictor/Bank combined use and broader bank coverage remain unverified; no claim is made that CI or --check replaces gameplay."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "RU and EN catalog, predictor and bank pairs agree on preview.1 prepared/unpublished status, source ZIP warning, folder/executable names, file-picker behavior, bank no-overwrite and removal, candidate result checks, and no-live-validation caveat. Both bank pages change the tier-example wording and link to #banks calculation source. No substantive translation mismatch found."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "The player pages stay under the separate Mods section with existing URLs and how-to metadata. They add instructions without copying the developer CMake/Python build steps, linking the canonical devkit section instead. The bank example references one canonical calculation record. review:info lists exactly six changed Markdown paths; no source or game file was edited by this reviewer."
+          }
+        },
+        "findings": []
+      }
+    },
+    "security": {
+      "verdict": "PASS",
+      "score": 10
+    },
+    "tests": {
+      "verdict": "PASS",
+      "score": 10
+    },
+    "architecture": {
+      "verdict": "PASS",
+      "score": 10
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-09-25T08:45:26.141Z"
+}
