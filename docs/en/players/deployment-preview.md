@@ -1,5 +1,5 @@
 ---
-content_type: explanation
+content_type: how-to
 status: draft
 faction: academy
 title: 'Deployment preview: installation and controls'

@@ -1,5 +1,5 @@
 ---
-content_type: explanation
+content_type: how-to
 status: draft
 faction: academy
 title: 'Предиктор расстановки: установка и управление'
