@@ -254,6 +254,30 @@ Download SHA-256: `81115018610632c94b9db9566b28cc85afa3e42b76cf2c37e3ffbfc4a5af4
 
 **Installation:** predictor uses its own DLL loader; reference currently needs H5U plus devkit's diagnostic --army-layout. Combined use remains unverified. [Both installation guides](../players/mods.md). Earlier H5U/Python experiments and the diagnostic assessor are not part of these deliveries.
 
+## September 25 — ordinary startup and DLL mods {#dll-delivery}
+
+**Decision:** separate player EXEs were rejected. Preserve normal Heroes/Lobby startup; both EXE candidates were withdrawn. This corrects delivery after the [repository split](#mod-repositories), without rewriting earlier experiments.
+
+**Mechanism:** the pinned H5_Game.exe imports DirectInput8Create and had no adjacent dinput8.dll. A new file from [devkit 71509e4](https://github.com/Xaaalera/heroes5-mod-devkit/tree/71509e43af0faf080d8a47ed5b3ff8c72da2a3e9) forwards to the Windows system library and initializes our DLLs under bin/Heroes5Mods, outside DllMain. Original EXE/d3d9/uni/um files are not replaced. Game hashes establish compatibility, not plugin authenticity.
+
+**Actions and observation:** ordinary H5_Game.exe reached the menu with the predictor DLL; both DLLs then loaded together. Five battles used the ordinary game process with development-only polygon startup, command mailbox and separate Start observer. Card input used addressed messages, not a new physical-RMB acceptance. Projections cleared, the map returned and the game exited normally.
+
+| Scenario | Predicted / after Start | Exact cell matches |
+|---|---|---|
+| pack_8 | 3 / 3 | 3 |
+| pack_12 | 4 / 4 | 4 |
+| pack_15 | 7 / 7 | 1 |
+| pack_0 | 1 / 2 | 0 |
+| pack_1 | 1 / 1 | 1 |
+
+**Conclusion:** startup/card/cleanup checks passed, not five exact predictions. Mixed-pack placement and stack splitting differ. A relationship to DLL initialization timing is not established because runs did not fix the same random state. [Summary and after-Start observations](../../assets/preview/dll-checks-2026-09-25.json).
+
+**Environment correction:** the sandbox still had old workshop-object-reference.h5u, which inserted long text above portraits and stretched the card off-screen. After its normal removal, the [crypt card](../../assets/preview/bank-reference-crypt.png) was captured with both DLLs automatically loaded. It is an actual 1264×921 foreground-client capture, not a reconstruction; SHA-256 18beb8c79f7e627a52ecf9e5a510653a15be8f5f01cf4d4fcc762af1f9d4279e.
+
+**Invalid package:** missing bank H5U initially could leave the predictor partly installed. Policy changed to cancel startup. The first dialog inside InitOnce hung; reporting moved after InitOnce, rejecting reentrant input. The repeat showed one dialog and exit code 1114. The temporarily removed H5U was restored. A separate fixture checks preservation of foreign content on installation refusal.
+
+**Limits:** SDK passed 39 Python, 8 Node and 2 native CTest checks; predictor passed 9 and reference 6. This does not cover every bank, arena or display size. The Heroes/Lobby UI itself was not automated; the ordinary game EXE and automatic loading mechanism were checked. New DLL packages remain under acceptance at this entry's date. No game distributions, profiles or private logs are published.
+
 ## Recording rules
 
 - Each experiment records its date, question, build, inputs, actions, observation, conclusion, limits and result files.

@@ -21,6 +21,6 @@ Two experimental add-ons for **[Heroes V Universe / Heroes V Lobby](https://h5lo
 
 ## Download the mods
 
-Player archives are not public yet: the prepared packages await in-game acceptance of their new launch paths. The GitHub links above lead to repositories. Mod pages describe features, controls, simple installation and removal; download links will appear when the releases are published.
+Player archives are not public yet: delivery is being changed to DLLs loaded during ordinary Heroes/Lobby startup. The separate-EXE drafts were withdrawn. The GitHub links above lead to repositories. Mod pages describe features, controls, simple installation and removal; download links will appear when the releases are published.
 
 [Developers: build and test launch](../modding/devkit.md#mod-sources).

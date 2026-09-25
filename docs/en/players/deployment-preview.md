@@ -16,28 +16,28 @@ A projection marks **a creature's predicted position and movement area**. It use
 
 ## Download and install
 
-**Package `0.1.0-preview.1` is prepared but not published:** its new launch path still awaits in-game acceptance. Code → Download ZIP downloads source code, not the player package.
+**The DLL package is not published yet.** The separate-EXE candidate was withdrawn. Keep launching through Heroes/Lobby as usual. Code → Download ZIP downloads source code, not the player package.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-deployment-preview) · [Universe](https://h5lobby.com/).
 
 The player ZIP needs Windows and the supported game. No Python, Git or compiler is needed.
 
-1. Exit the game. Extract `Heroes5DeploymentPreview` beside the game's `bin` folder.
-2. Double-click `workshop_preview_loader.exe`. Keep `WorkshopDeploymentPreview.dll` beside it.
-3. If a file picker appears, select your Universe installation's `bin/H5_Game.exe`. Cancel closes the launcher without starting the game.
+1. Exit the game. The DLL package places the shared `bin/dinput8.dll` and `bin/Heroes5Mods/WorkshopDeploymentPreview.dll` inside the installed game directory.
+2. Both of our mods share one `dinput8.dll`. Do not overwrite a copy installed by another mod; that combination has not been checked.
+3. Start through Heroes/Lobby as usual. There is no separate player EXE for this mod.
 4. Start an ordinary battle: enemy projections should appear before Start. Hover for movement range; right-click for a creature card.
 
-If the build is unsupported, compare it with the linked build below. If the DLL is missing, extract the entire archive again. Do not replace game DLLs.
+If the build is unsupported, compare it with the linked build below. Original `d3d9.dll`, `uni.dll` and `um.dll` are not replaced. This delivery path is under validation; its public download will be added afterward.
 
 ## Disable and remove
 
-Exit the game. Launch the ordinary game EXE to play without the mod. Delete the `Heroes5DeploymentPreview` folder to remove it; the predictor installs nothing in `UserMODs`.
+Exit the game and remove `bin/Heroes5Mods/WorkshopDeploymentPreview.dll`. Remove the shared `bin/dinput8.dll` only after removing all of our DLL mods, and only if it came from our package. The predictor installs nothing in `UserMODs`.
 
 [Developers: source build and test environment](../modding/devkit.md#mod-sources).
 
 ## Compatibility
 
-Developed for the [inspected Universe build](../reference/universe-build.md). Other versions and combined use with bank reference are unverified.
+Developed for the [inspected Universe build](../reference/universe-build.md). Both mod DLLs loaded together through five battle cycles with cards and cleanup. This does not cover every combination; other game versions are unverified.
 
 ## Controls
 
@@ -75,3 +75,5 @@ In one observed example, a single peasant projection before Start became **three
 **Checks on September 21–23, 2026:** the user confirmed opening and cycling with physical RMB. Holding RMB remains unconfirmed; background window messages do not replace that check. The prediction does not read hidden quantities, final upgrades or the completed combat army as inputs.
 
 [Research record](../reference/research-diary.md#projection-range).
+
+The September 25 DLL-loading check matched **1 of 7 positions** in a mixed pack, and one single-stack prediction became two stacks. Successful mod startup does not imply accurate placement. [Data from this run](../../assets/preview/dll-checks-2026-09-25.json).

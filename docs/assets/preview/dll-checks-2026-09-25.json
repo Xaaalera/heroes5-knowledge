@@ -1,0 +1,401 @@
+{
+  "date": "2026-09-25",
+  "sdk_revision": "71509e43af0faf080d8a47ed5b3ff8c72da2a3e9",
+  "game_exe_sha256": "88c9dc6107b9bced0649924a86360f1c56397ee00de0413f6f2b08f865ed5519",
+  "launch_mode": {
+    "auto_load": true,
+    "separate_native_loader": false,
+    "input_transport": "postmessage"
+  },
+  "battles": [
+    {
+      "pack": "pack_8",
+      "prediction": [
+        {
+          "type": 65,
+          "cell": [
+            13,
+            4
+          ],
+          "size": 2
+        },
+        {
+          "type": 57,
+          "cell": [
+            13,
+            7
+          ],
+          "size": 1
+        },
+        {
+          "type": 61,
+          "cell": [
+            12,
+            6
+          ],
+          "size": 1
+        }
+      ],
+      "comparison": {
+        "exact_matches": 3,
+        "predicted": 3,
+        "actual": 3,
+        "same_type_counts": true
+      },
+      "after_start": {
+        "pid": 31848,
+        "status": "captured",
+        "sequence": 1,
+        "units": [
+          {
+            "creature": "CREATURE_GENIE",
+            "cell": [
+              13,
+              4
+            ],
+            "unit": "defender-creature-0-CREATURE_GENIE",
+            "type": 65
+          },
+          {
+            "creature": "CREATURE_IRON_GOLEM",
+            "cell": [
+              12,
+              6
+            ],
+            "unit": "defender-creature-1-CREATURE_IRON_GOLEM",
+            "type": 61
+          },
+          {
+            "creature": "CREATURE_GREMLIN",
+            "cell": [
+              13,
+              7
+            ],
+            "unit": "defender-creature-2-CREATURE_GREMLIN",
+            "type": 57
+          }
+        ]
+      }
+    },
+    {
+      "pack": "pack_12",
+      "prediction": [
+        {
+          "type": 85,
+          "cell": [
+            13,
+            1
+          ],
+          "size": 1
+        },
+        {
+          "type": 87,
+          "cell": [
+            12,
+            8
+          ],
+          "size": 1
+        },
+        {
+          "type": 86,
+          "cell": [
+            12,
+            4
+          ],
+          "size": 1
+        },
+        {
+          "type": 88,
+          "cell": [
+            12,
+            6
+          ],
+          "size": 1
+        }
+      ],
+      "comparison": {
+        "exact_matches": 4,
+        "predicted": 4,
+        "actual": 4,
+        "same_type_counts": true
+      },
+      "after_start": {
+        "pid": 31848,
+        "status": "captured",
+        "sequence": 2,
+        "units": [
+          {
+            "creature": "CREATURE_EARTH_ELEMENTAL",
+            "cell": [
+              12,
+              8
+            ],
+            "unit": "defender-creature-0-CREATURE_EARTH_ELEMENTAL",
+            "type": 87
+          },
+          {
+            "creature": "CREATURE_AIR_ELEMENTAL",
+            "cell": [
+              12,
+              6
+            ],
+            "unit": "defender-creature-1-CREATURE_AIR_ELEMENTAL",
+            "type": 88
+          },
+          {
+            "creature": "CREATURE_WATER_ELEMENTAL",
+            "cell": [
+              12,
+              4
+            ],
+            "unit": "defender-creature-2-CREATURE_WATER_ELEMENTAL",
+            "type": 86
+          },
+          {
+            "creature": "CREATURE_FIRE_ELEMENTAL",
+            "cell": [
+              13,
+              1
+            ],
+            "unit": "defender-creature-3-CREATURE_FIRE_ELEMENTAL",
+            "type": 85
+          }
+        ]
+      }
+    },
+    {
+      "pack": "pack_15",
+      "prediction": [
+        {
+          "type": 25,
+          "cell": [
+            13,
+            8
+          ],
+          "size": 2
+        },
+        {
+          "type": 22,
+          "cell": [
+            13,
+            10
+          ],
+          "size": 1
+        },
+        {
+          "type": 48,
+          "cell": [
+            13,
+            9
+          ],
+          "size": 1
+        },
+        {
+          "type": 3,
+          "cell": [
+            13,
+            1
+          ],
+          "size": 1
+        },
+        {
+          "type": 20,
+          "cell": [
+            12,
+            6
+          ],
+          "size": 1
+        },
+        {
+          "type": 15,
+          "cell": [
+            12,
+            10
+          ],
+          "size": 1
+        },
+        {
+          "type": 1,
+          "cell": [
+            12,
+            2
+          ],
+          "size": 1
+        }
+      ],
+      "comparison": {
+        "exact_matches": 1,
+        "predicted": 7,
+        "actual": 7,
+        "same_type_counts": true
+      },
+      "after_start": {
+        "pid": 31848,
+        "status": "captured",
+        "sequence": 3,
+        "units": [
+          {
+            "creature": "CREATURE_GRAND_ELF",
+            "cell": [
+              13,
+              6
+            ],
+            "unit": "defender-creature-0-CREATURE_GRAND_ELF",
+            "type": 48
+          },
+          {
+            "creature": "CREATURE_ARCHER",
+            "cell": [
+              13,
+              5
+            ],
+            "unit": "defender-creature-1-CREATURE_ARCHER",
+            "type": 3
+          },
+          {
+            "creature": "CREATURE_PEASANT",
+            "cell": [
+              12,
+              6
+            ],
+            "unit": "defender-creature-2-CREATURE_PEASANT",
+            "type": 1
+          },
+          {
+            "creature": "CREATURE_PIT_FIEND",
+            "cell": [
+              13,
+              8
+            ],
+            "unit": "defender-creature-3-CREATURE_PIT_FIEND",
+            "type": 25
+          },
+          {
+            "creature": "CREATURE_INFERNAL_SUCCUBUS",
+            "cell": [
+              13,
+              4
+            ],
+            "unit": "defender-creature-4-CREATURE_INFERNAL_SUCCUBUS",
+            "type": 22
+          },
+          {
+            "creature": "CREATURE_CERBERI",
+            "cell": [
+              12,
+              5
+            ],
+            "unit": "defender-creature-5-CREATURE_CERBERI",
+            "type": 20
+          },
+          {
+            "creature": "CREATURE_FAMILIAR",
+            "cell": [
+              12,
+              4
+            ],
+            "unit": "defender-creature-6-CREATURE_FAMILIAR",
+            "type": 15
+          }
+        ]
+      }
+    },
+    {
+      "pack": "pack_0",
+      "prediction": [
+        {
+          "type": 1,
+          "cell": [
+            13,
+            6
+          ],
+          "size": 1
+        }
+      ],
+      "comparison": {
+        "exact_matches": 0,
+        "predicted": 1,
+        "actual": 2,
+        "same_type_counts": false
+      },
+      "after_start": {
+        "pid": 31848,
+        "status": "captured",
+        "sequence": 4,
+        "units": [
+          {
+            "creature": "CREATURE_PEASANT",
+            "cell": [
+              13,
+              8
+            ],
+            "unit": "defender-creature-0-CREATURE_PEASANT",
+            "type": 1
+          },
+          {
+            "creature": "CREATURE_PEASANT",
+            "cell": [
+              13,
+              3
+            ],
+            "unit": "defender-creature-1-CREATURE_PEASANT",
+            "type": 1
+          }
+        ]
+      }
+    },
+    {
+      "pack": "pack_1",
+      "prediction": [
+        {
+          "type": 3,
+          "cell": [
+            13,
+            6
+          ],
+          "size": 1
+        }
+      ],
+      "comparison": {
+        "exact_matches": 1,
+        "predicted": 1,
+        "actual": 1,
+        "same_type_counts": true
+      },
+      "after_start": {
+        "pid": 31848,
+        "status": "captured",
+        "sequence": 5,
+        "units": [
+          {
+            "creature": "CREATURE_ARCHER",
+            "cell": [
+              13,
+              6
+            ],
+            "unit": "defender-creature-0-CREATURE_ARCHER",
+            "type": 3
+          }
+        ]
+      }
+    }
+  ],
+  "normal_exit": true,
+  "startup_failure": {
+    "missing_bank_h5u": true,
+    "exit_code": 1114
+  },
+  "bank_visual": {
+    "family": "crypt",
+    "legacy_text_package_removed": true,
+    "image": "bank-reference-crypt.png",
+    "capture": "foreground game client",
+    "width": 1264,
+    "height": 921
+  },
+  "limits": [
+    "Heroes/Lobby interface itself not automated",
+    "Not all bank families or screen resolutions checked",
+    "Instrumented map/control/observer setup is development-only"
+  ]
+}

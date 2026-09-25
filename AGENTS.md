@@ -2,6 +2,8 @@
 
 ## RU
 
+- Пользователь запускает игру обычным способом через Heroes/Lobby. Наши моды подключаются через DLL; отдельный EXE для игрока запрещён владельцем. Диагностические EXE и Python-команды принадлежат только инструкциям разработчика. При смене поставки синхронизировать README, RU/EN wiki, devkit, инструкции агентам и release notes; прежние EXE-пакеты не публиковать.
+
 ### Быстрая проверка агентом
 
 1. Для проверки утверждения читай метаданные статьи, указанную сборку, запись дневника и артефакт. Ссылки на исходники доступны через `docs/llms.txt`; HTML страниц содержит Markdown alternate. Не объявляй гипотезу подтверждённой по одному пересказу.
@@ -29,6 +31,8 @@
 - GitHub Pages — первый этап. Правки через GitHub, а не через встроенный wiki-редактор. Не обещать реализованный MCP или SDK.
 
 ## EN
+
+- Players keep the ordinary Heroes/Lobby launch. Our mods load through DLLs; the owner rejects separate player launchers. Diagnostic EXEs and Python commands belong only in developer instructions. Delivery changes must update README, RU/EN wiki, devkit, agent instructions and release notes together; never publish the superseded EXE packages.
 
 ### Agent verification entry point
 

@@ -31,9 +31,9 @@ EN: Read the relevant article and its scope first. Draft is not a verified speci
 
 ## Mods / Моды
 
-- [Mod catalog and installation](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/players/mods.md): two distinct installation methods and Universe links.
+- [Mod catalog and installation](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/players/mods.md): automatic DLL loading during ordinary Heroes/Lobby startup; separate player EXEs are withdrawn.
 - [Deployment preview agent guide](https://raw.githubusercontent.com/Xaaalera/heroes5-deployment-preview/main/AGENTS.md): native C++ mod and pinned testing environment.
-- [Bank reference agent guide](https://raw.githubusercontent.com/Xaaalera/heroes5-bank-reference/main/AGENTS.md): self-contained recipe and diagnostic startup.
+- [Bank reference agent guide](https://raw.githubusercontent.com/Xaaalera/heroes5-bank-reference/main/AGENTS.md): self-contained recipe, DLL/H5U delivery and pinned development tools.
 
 ## Editing / Правки
 

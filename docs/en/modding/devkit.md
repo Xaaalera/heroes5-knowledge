@@ -96,7 +96,7 @@ The polygon contains eight factions, 12 banks, 16 neutral armies and six scripte
 - 37 devkit tests cover packaging/ownership, XML, terrain, emulated control and external workspaces.
 - 48 existing workshop checks passed through compatibility entry points; shared implementations are not duplicated.
 - A polygon built in an empty workspace without our mod directory: 60 objects, six arenas, valid ZIP.
-- This extracted distribution has not had a separate live-game launch. Historical game results remain in the [diary](../reference/research-diary.md).
+- On September 25, the command environment ran five battles with both DLLs automatically loaded. Startup, cards and cleanup are checked separately from prediction accuracy; results and discrepancies are in the [diary](../reference/research-diary.md#dll-delivery).
 
 Native tools validate four game-file hashes and reject other builds. Complete profile isolation is unproven and EXE startup can briefly take focus. Addressed input and physical mouse behavior are different checks. The devkit does not bundle the predictor or a universal plugin SDK, nor certify every arena.
 
@@ -107,6 +107,12 @@ For agent-assisted work, use the [llms.txt index](../../llms.txt) and [devkit ag
 These instructions are for developers, not players:
 
 - [Predictor: C++ build and launch](https://github.com/Xaaalera/heroes5-deployment-preview#readme).
-- [Bank reference: H5U build and diagnostic launch](https://github.com/Xaaalera/heroes5-bank-reference#readme).
+- [Bank reference: DLL and H5U build](https://github.com/Xaaalera/heroes5-bank-reference#readme).
 
 Both repositories pin devkit as a submodule. Their READMEs contain dependencies, exact commands, disabling and validation limits. Ready-to-use player releases are not available yet.
+
+## Ordinary startup with DLLs {#dll-autoload}
+
+The shared [devkit dinput8.dll source](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/native/mod_loader.cpp) initializes known DLLs under bin/Heroes5Mods and forwards DirectInput to Windows. There is no separate player EXE. Initialization failure cancels startup instead of continuing with only part of the mods.
+
+For the test polygon and Start observation use `native-probe.py launch --map WorkshopPolygon --control --observe-deployment`. This instruments the ordinary game process for development, not player installation. Do not combine legacy --native-loader injection with DLL autoloading.

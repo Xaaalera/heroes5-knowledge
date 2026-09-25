@@ -17,22 +17,22 @@ The mod shows **possible armies by tier**, portraits, ranges and alternatives. I
 
 ## Download and install
 
-**Package `0.1.0-preview.1` is prepared but not published:** its new launch path still awaits in-game acceptance. Code → Download ZIP downloads source code, not the player package.
+**The DLL package is not published yet.** The separate-EXE candidate was withdrawn. Keep launching through Heroes/Lobby as usual. Code → Download ZIP downloads source code, not the player package.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-bank-reference) · [Universe](https://h5lobby.com/).
 
 The player ZIP needs Windows and the [supported game build](../reference/universe-build.md). No Python, Git or devkit is needed.
 
-1. Exit the game and editor. Extract `Heroes5BankReference` beside the game's `bin` folder.
-2. Double-click `workshop_bank_reference.exe`. Keep `workshop-army-reference.h5u` beside it.
-3. If a file picker appears, select your Universe installation's `bin/H5_Game.exe`. Cancel installs and starts nothing.
-4. The launcher checks the version, copies its H5U into `UserMODs` and starts the game. Hover a supported bank on the map: the possible-army reference should appear.
+1. Exit the game and editor. The DLL package contains the shared `bin/dinput8.dll`, `bin/Heroes5Mods/WorkshopBankReference.dll` and `UserMODs/workshop-army-reference.h5u` for the installed game directory.
+2. Both of our mods share one `dinput8.dll`. Do not replace a copy belonging to another mod; that combination has not been checked.
+3. Start through Heroes/Lobby as usual. There is no separate player EXE for this mod.
+4. Hover a supported bank on the map: the possible-army reference should appear.
 
-A differing existing `UserMODs/workshop-army-reference.h5u` is not overwritten. Exit the game and preserve that earlier file separately before replacing it. If the game version or EXE/H5U pair does not match, check compatibility and extract the complete package again.
+Remove the old text prototype `workshop-object-reference.h5u` from UserMODs if present: it adds unwanted text and stretches the card. Preserve an existing H5U separately before replacing it. The reference DLL and H5U must belong to the same release. This delivery is under validation; its public download will be added afterward.
 
 ## Disable and remove
 
-Exit the game. Delete `UserMODs/workshop-army-reference.h5u` and the `Heroes5BankReference` folder. Leave other UserMODs files alone. The ordinary game EXE launches without the reference selector.
+Exit the game. Remove `UserMODs/workshop-army-reference.h5u` and `bin/Heroes5Mods/WorkshopBankReference.dll`. Leave other UserMODs files alone. Remove shared `bin/dinput8.dll` only after removing all of our DLL mods, and only if it came from our package.
 
 [Developers: source build and test environment](../modding/devkit.md#mod-sources).
 
@@ -41,6 +41,10 @@ Exit the game. Delete `UserMODs/workshop-army-reference.h5u` and the `Heroes5Ban
 On the adventure map, hover a supported bank to display its possible guard armies.
 
 ## Read the reference
+
+[![Crypt: separate A and B alternatives for each tier](../../assets/preview/bank-reference-crypt.png)](../../assets/preview/bank-reference-crypt.png)
+
+Crypt card after removing the old text prototype. A and B are alternatives for one tier, not parts of a single army.
 
 - T1/T2… describes a possible tier, not scouted guards of this object.
 - A/B separates alternative complete armies; do not sum them.
@@ -64,5 +68,5 @@ The T2 range belongs only to that variant: do not add other tiers or infer that 
 
 ## Limits
 
-An in-game check confirmed the imp cache. Other banks and later presentation changes have not received complete visual verification. Combined use with the predictor is unverified.
+Historical evidence covers the imp cache. On September 25, automatic DLL loading displayed the crypt card at 1264×921. Both DLLs were active together, including five predictor battle cycles. Other banks, display sizes and all feature combinations remain incompletely checked.
 

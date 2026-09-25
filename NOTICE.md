@@ -39,6 +39,12 @@ RU — `docs/assets/WorkshopPolygon.h5m`: полигон проекта, пло�
 
 EN — `docs/assets/WorkshopPolygon.h5m`: project-authored polygon, flat terrain and test scripts. XDB uses the standard map-template structure and references installed game objects. No game models, textures or creature definitions are bundled. The September 24 public copy removes local harness diagnostic subscriptions. Installed Universe is required; no DLL or SDK is included.
 
+## DLL delivery evidence / Данные проверки DLL
+
+RU — `docs/assets/preview/bank-reference-crypt.png`: снимок клиентской области собственной тестовой игры от 2026-09-25, после удаления старого текстового прототипа. Снят при двух автоматически загруженных DLL; изображена карточка склепа. Изображение не реконструировалось; частные окна и профили не включены. `dll-checks-2026-09-25.json` — извлечённые результаты пяти боёв и явно указанные ограничения; не полный частный журнал.
+
+EN — `docs/assets/preview/bank-reference-crypt.png`: September 25 foreground-client screenshot from the owned test game after removal of the old text prototype, with both DLLs loaded and the crypt card visible. Not a reconstruction; no private windows/profiles included. `dll-checks-2026-09-25.json` contains extracted five-battle results and limits, not a complete private log.
+
 ## Resource comparison data / Данные сравнения ресурсов
 
 RU — `docs/assets/archive-diff.csv`: созданная проектом таблица побайтового сравнения локальных архивов 21 сентября 2026. Содержит только пути, имена архивов, классификацию, размеры и даты ZIP-членов; не содержит игровых ресурсов, профилей или сохранений. Для публикации 24 сентября убран UTF-8 BOM, переводы строк нормализованы в LF; значения полей не менялись.

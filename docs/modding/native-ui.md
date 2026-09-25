@@ -114,3 +114,5 @@ Size: 197 110
 Инструменты проверки: [диагностический перехват native-probe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/native-probe.py) и [захват кадра/OCR](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#изображение-и-закрытие). Код карточек самого предиктора в devkit не входит.
 
 [Исходник карточек предиктора](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp) и [рецепт справочника хранилищ](https://github.com/Xaaalera/heroes5-bank-reference/blob/main/mod.json) теперь хранятся в отдельных репозиториях.
+
+С 25 сентября поставка перерабатывается на автоматическое подключение DLL при обычном запуске Heroes/Lobby, без отдельного EXE мода. [Общий механизм в devkit](devkit.md#dll-autoload) и [новые проверки](../reference/research-diary.md#dll-delivery) уточняют способ загрузки; изложенные выше старые опыты сохраняют свои даты и границы.
