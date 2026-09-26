@@ -8,7 +8,7 @@ section: modding
 kicker: HEROES V · UNIVERSE
 translation: en/modding/devkit/
 description: Наш стенд разработки модов
-updated: 2026-09-24
+updated: 2026-09-26
 ---
 # Наш стенд разработки модов
 

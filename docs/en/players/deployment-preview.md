@@ -8,7 +8,7 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/deployment-preview/
 description: 'Deployment predictor'
-updated: '2026-09-25'
+updated: '2026-09-26'
 ---
 # Deployment predictor
 

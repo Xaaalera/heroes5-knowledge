@@ -8,7 +8,7 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/bank-reference/
 description: 'Possible bank armies: what the mod shows and how to read its cards.'
-updated: 2026-09-25
+updated: 2026-09-26
 ---
 # Bank reference
 

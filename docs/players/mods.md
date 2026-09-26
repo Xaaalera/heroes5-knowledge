@@ -8,7 +8,7 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: en/players/mods/
 description: Два мода, их исходники и разные способы установки.
-updated: 2026-09-24
+updated: 2026-09-26
 ---
 # Моды и установка
 

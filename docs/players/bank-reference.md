@@ -8,7 +8,7 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: en/players/bank-reference/
 description: 'Возможные армии хранилищ: что показывает мод и как читать карточки.'
-updated: 2026-09-25
+updated: 2026-09-26
 ---
 # Справочник хранилищ
 
