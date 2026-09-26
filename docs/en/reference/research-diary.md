@@ -12,6 +12,12 @@ updated: 2026-09-26
 ---
 # Research diary
 
+This page preserves **experiments, original results and corrections**. [Articles](research-index.md) explain the current understanding; diary entries record its basis.
+
+September 21–23 entries were reconstructed on **September 24, 2026**. This begins the journal; entries identify source data that remain unpublished.
+
+Experiments below use the [pinned Universe build](universe-build.md) unless stated otherwise.
+
 ## September 26: sheltered formation and prediction limits {#placement-defence-2026-09-26}
 
 **Question:** why does a seven-stack pack sometimes shelter its shooters and sometimes use ordinary placement despite similar visible composition?
@@ -61,19 +67,13 @@ The candidate passed11 tests without skips. A new general pass matched7/7; a pro
 
 **A measured split:** in one solo encounter, ratio `1.0189` selected two initial stacks; RNG roll `44` left it unchanged, so the original30 creatures became two combat stacks. The cause is captured from the engine, not inferred from final cells alone. In a separate RMG encounter, the engine enabled spread and chose rows `y=10` and `y=1`, while the ordinary DLL showed `y=8` and `y=4`. The published data include approach lengths and accepted/rejected candidates.
 
-**Research Superadmin:** an explicitly enabled DLL returned RMG source `(92,18),(98,8)` **before Start**; ordinary startup returned an empty list. Manually selecting spread and using hidden counts matched4/4 in one isolated four-stack control. This isolates rules, not an automatic exact mode: a different manually forced spread series matched only6/19, then4/19 when the engine chose another policy. The100/100 target has not been reached.
+**Research Superadmin:** an explicitly enabled DLL returned RMG source `(92,18),(98,8)` **before Start**; ordinary startup returned an empty list. In one four-stack control, manually selecting spread and using hidden counts matched **all four occupied cells**, but only **one of four exact creature+cell pairs**. This isolates parts of the rules, not an automatic exact mode: a different manually forced spread series matched only6/19, then4/19 when the engine chose another policy. The100/100 target has not been reached.
 
 [Numerical records and build hashes](../../assets/preview/rmg-accuracy-2026-09-25.json) · [technical mechanism](placement-internals.md). Complete logs and RMG map archives remain local. The final ten-load campaign and≥70% complete matches among **mixed** packs have not passed; newer DLL changes need fresh validation.
 
 **Later September25 control:** one RMG-A pass, with the player's own army restored to its starting composition before each battle, fully matched10/18 mixed packs. All eight misses used another native branch: five spread, three defensive. On RMG-B,0/13 mixed packs fully matched: the engine spread twelve and used defensive plus spread for one. Neutral compositions were unchanged, but arenas and random decisions varied between passes. These two loads do not replace the required ten.
 
 **Next September25 candidate:** the DLL now reads qualitative count bands from stock public cards, never exact neutral quantities, and uses them to estimate spread and defensive selection. Separate fresh loads matched all cells in13/18 mixed RMG-A packs and11/13 mixed RMG-B packs. On the polygon, one defensive seven-stack battle against a small hero army matched all seven creature+cell pairs. With10 Angels, the DLL often falsely enables defence that the game suppresses; the exception is still under study. Reconstructed spread arithmetic matched205/205 native calls **after Start**, but those observations never feed ordinary prediction. These are separate experiments, not the required ten-load campaign or the independent pre-publication review.
-
-This page preserves **experiments, original results and corrections**. [Articles](research-index.md) explain the current understanding; diary entries record its basis.
-
-September 21–23 entries were reconstructed on **September 24, 2026**. This begins the journal; entries identify source data that remain unpublished.
-
-Experiments below use the [pinned Universe build](universe-build.md) unless stated otherwise.
 
 ## September 24 — public polygon copy {#map-release}
 

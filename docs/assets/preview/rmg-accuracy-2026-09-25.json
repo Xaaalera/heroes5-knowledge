@@ -123,8 +123,6 @@
       "spread_calculation_after_start": [],
       "cell_attempts_after_start": [
         {
-          "context": 1963208,
-          "record": 506747684,
           "candidate_local": [
             0,
             9
@@ -136,8 +134,6 @@
           ]
         },
         {
-          "context": 1963208,
-          "record": 506747720,
           "candidate_local": [
             1,
             9
@@ -149,8 +145,6 @@
           ]
         },
         {
-          "context": 1963208,
-          "record": 506747720,
           "candidate_local": [
             1,
             8
@@ -162,8 +156,6 @@
           ]
         },
         {
-          "context": 1963208,
-          "record": 506747648,
           "candidate_local": [
             1,
             9
@@ -324,31 +316,26 @@
       ],
       "spread_calculation_after_start": [
         {
-          "strategy_pointer": 22278104,
           "spread": 0,
           "enemy_area_attack_relative_power": 0.0,
           "known_threshold_from_DefaultStats": 0.35
         },
         {
-          "strategy_pointer": 22278104,
           "spread": 1,
           "enemy_area_attack_relative_power": 0.4067796468734741,
           "known_threshold_from_DefaultStats": 0.35
         },
         {
-          "strategy_pointer": 22279596,
           "spread": 0,
           "enemy_area_attack_relative_power": 0.0,
           "known_threshold_from_DefaultStats": 0.35
         },
         {
-          "strategy_pointer": 22279596,
           "spread": 1,
           "enemy_area_attack_relative_power": 0.4067796468734741,
           "known_threshold_from_DefaultStats": 0.35
         },
         {
-          "strategy_pointer": 22279292,
           "spread": 1,
           "enemy_area_attack_relative_power": 0.375,
           "known_threshold_from_DefaultStats": 0.35
@@ -356,8 +343,6 @@
       ],
       "cell_attempts_after_start": [
         {
-          "context": 22278048,
-          "record": 506774820,
           "candidate_local": [
             0,
             2
@@ -369,8 +354,6 @@
           ]
         },
         {
-          "context": 22278048,
-          "record": 506774856,
           "candidate_local": [
             1,
             2
@@ -382,8 +365,6 @@
           ]
         },
         {
-          "context": 22278048,
-          "record": 506774856,
           "candidate_local": [
             1,
             1
@@ -395,8 +376,6 @@
           ]
         },
         {
-          "context": 22278048,
-          "record": 506774784,
           "candidate_local": [
             1,
             2
@@ -408,8 +387,6 @@
           ]
         },
         {
-          "context": 22278048,
-          "record": 499478884,
           "candidate_local": [
             1,
             9
@@ -421,8 +398,6 @@
           ]
         },
         {
-          "context": 22278048,
-          "record": 499478848,
           "candidate_local": [
             1,
             9
@@ -434,8 +409,6 @@
           ]
         },
         {
-          "context": 22278048,
-          "record": 499478848,
           "candidate_local": [
             1,
             0
@@ -639,8 +612,6 @@
       "spread_calculation_after_start": [],
       "cell_attempts_after_start": [
         {
-          "context": 19788496,
-          "record": 506851364,
           "candidate_local": [
             0,
             8
@@ -652,8 +623,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 506851400,
           "candidate_local": [
             1,
             8
@@ -665,8 +634,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 506851400,
           "candidate_local": [
             1,
             7
@@ -678,8 +645,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 506851328,
           "candidate_local": [
             1,
             8
@@ -691,8 +656,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 507655104,
           "candidate_local": [
             0,
             3
@@ -704,8 +667,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 507655140,
           "candidate_local": [
             1,
             9
@@ -717,8 +678,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 507655212,
           "candidate_local": [
             1,
             9
@@ -730,8 +689,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 507655212,
           "candidate_local": [
             1,
             6
@@ -743,8 +700,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 507655176,
           "candidate_local": [
             1,
             9
@@ -756,8 +711,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 507655176,
           "candidate_local": [
             1,
             6
@@ -769,8 +722,6 @@
           ]
         },
         {
-          "context": 19788496,
-          "record": 507655176,
           "candidate_local": [
             1,
             0
