@@ -8,7 +8,7 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/placement-internals/
 description: Placement internals and corrected assumptions
-updated: '2026-09-24'
+updated: '2026-09-26'
 ---
 # Placement internals and corrected assumptions
 
@@ -35,6 +35,10 @@ Splitting strength differs from placement score. For the inspected CHero path, n
 0x85a190 checks combat_active_auto_placement and nonempty source descriptors. For ordinary CAdvMapMonster the chain reaches the map object's army, not unique portrait count. 0x85a040 preserves existing positions and fills gaps.
 
 Extended: 0x859eb0→0x859cd0→0x8598e0. Defensive 0x8593c0 is conditional; general 0x859670 always runs, followed by remaining-column passes. Simple 0x85a110 has its own fallback.
+
+In the pinned Universe `DefaultStats.xdb`, the defensive comparison uses `OurShootersMinRelativePower=0.2` and `OurShootersMinRelativeAdvantage=1.3`, both with strict greater-than tests. An opposing-capability check at `0xa2f710` and early conditions also apply; the two thresholds are not the complete formula. Spread is related to `EnemyAreaAttackMinRelativePower=0.35` and its own conditions. Defence and spread can both be enabled. Two recorded `pack_15` battles with the same captured public quantity bands had shooter-power shares of about 0.217 and 0.183 with different defensive flags; exact neutral counts were not retained and arenas differed. [Observation record](research-diary.md#placement-defence-2026-09-26).
+
+The defensive pass at `0x857cc0` lists free neighbors of occupied cells, removes duplicates, and sorts candidates. `0x857f90` assigns weight 2 to chosen shooter-window rows, 1 to their neighbors, and 0 to other rows; `0x85a9b0/0x85a850` resolves ties in the game's order. Large and small defenders keep separate candidate sequences, and an entire 2×2 footprint is checked before placement. Combined defence and spread use selected spaced rows rather than ordinary adjacency. Recorded Polygon `pack_15` attempts from rounds 1, 4, and 10 passed offline when the defensive branch was supplied; the newer DLL has no fresh live campaign.
 
 ## Scores and ties
 

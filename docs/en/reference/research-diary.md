@@ -8,9 +8,66 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/research-diary/
 description: Research diary
-updated: 2026-09-24
+updated: 2026-09-26
 ---
 # Research diary
+
+## September 26: sheltered formation and prediction limits {#placement-defence-2026-09-26}
+
+**Question:** why does a seven-stack pack sometimes shelter its shooters and sometimes use ordinary placement despite similar visible composition?
+
+**Retrospective record:** we compared a completed ten-load series from September 25 with the defensive-pass analysis from September 26. Prediction was frozen before Start; the game's decision and actual cells were read separately after Start. EXE SHA-256 was `88c9dc6107b9bced0649924a86360f1c56397ee00de0413f6f2b08f865ed5519` and the older DLL SHA-256 was `30caceb1a584a99418d37b6a2f7424dc18c5214cbb6a4ccbbbe92d05f4a1498e`. The full working JSON is not published.
+
+| Polygon `pack_15` | Round 1 | Round 7 |
+|---|---:|---:|
+| Hero army | 10 Angels | 10 Angels |
+| Hero Attack / Defence | 1 / 2 | 1 / 2 |
+| Day and visible quantity bands of seven neutral stacks | Same | Same |
+| Internal shooter-power share; threshold 0.2 | ≈0.217 | ≈0.183 |
+| Game's sheltered formation | Yes | No |
+| Exact “type + cell” pairs from older DLL | 3/7 | 7/7 |
+
+**Finding and limit:** public quantity bands do not determine exact neutral strength; hidden quantities can affect sheltering. But exact counts for these two records were not retained, and the arenas differed. The table establishes different internal estimates and decisions with the listed visible inputs unchanged; it does **not** establish the sole cause. Do not invent a terrain rule to fill the missing input or attribute every miss to this ambiguity.
+
+Across ten loads, the older candidate matched **all occupied cells in 111 of 149 mixed battles**. This counts **battles**, not individual cells, and does not ensure every creature type occupies its exact expected cell. Polygon `pack_15` had only 3/7 exact pairs in rounds 1 and 10, so an every-battle 5/7 threshold remains unproven. Two mismatch explanations in the series remained incomplete. The newer C++ defensive ordering passed recorded offline attempts but has not completed a fresh live campaign; the older DLL's score does not transfer to it.
+
+[Player explanation](../players/army-placement.md#mixed-armies) · [technical rules](placement-internals.md). This is a prepared summary of local observations, not a release of the full raw log.
+
+## September 25 — why the mixed pack matched 1/7 {#placement-policy}
+
+**Question:** observer error, DLL startup or placement calculation?
+
+**Method:** ordinary DLL loading, WorkshopPolygon, pack_8 → pack_12 → pack_15. Predictions were saved before Start; GetUnitPosition recorded positions separately. An additional observer captured parameters before `0x8598e0`; these records were read after combat and never supplied to the predictor. Random state was not fixed between runs.
+
+**Observations:** the general formation matched 5/7 and 6/7. Run32808 matched1/7 with `defensive=1`: the engine used a protective pass the predictor does not yet implement. This establishes a different placement sequence, not the sole cause of older run31848, whose flag was not recorded. No causal link to DLL loading was established.
+
+A separate shooter-window defect was found: with `enemyLarge=1`, the engine uses the minimum approach length of two neighboring rows; the predictor always used one. Replaying record13044 moves the three-row window from6–8 to7–9. A dedicated test reproduces this without reading final positions.
+
+**Local C++ DLL correction:** the owner authorized the known hero army as input. Large-creature share is estimated from its types/counts, public definitions and the threshold in loaded game settings. Hidden neutral upgrades, quantities and splitting are not read. Mixed hero-army weights remain approximate: a synthetic reference score without hero bonuses is used.
+
+The candidate passed11 tests without skips. A new general pass matched7/7; a protective pass still matched1/7. Replacing angels with peasants switched `enemyLarge` to0, but the protective mixed pack matched0/7. **Overall accuracy is not fixed.** The protective pass and mode selection remain separate work; selection also depends on unavailable neutral strength. This candidate is not part of published preview.2.
+
+[Data: predictions, Start positions, flags and approach lengths](../../assets/preview/accuracy-policy-2026-09-25.json) · [Predictor](../players/deployment-preview.md). Full working logs are unpublished; the artifact contains sanitized numerical records and the EXE/candidate SHA-256 hashes. All test processes exited normally.
+
+## September 25 — generator packs and Superadmin source {#rmg-placement-check}
+
+**Question:** does accuracy hold for Universe RMG neutrals, and what causes the failures?
+
+**Method:** two local RMG maps were copied into the sandbox. Only the copies received addressable monster names, forced combat instead of flee/join, and an after-Start cell observer. Original maps and creature armies were unchanged. Predictions were frozen before Start. Separate after-Start observers recorded placement policy, the spread decision ratio, splitting and candidate-cell attempts. Hidden source inspection required an explicit Superadmin opt-in; ordinary runs did not read it.
+
+**One ordinary RMG-A pass:** **9/24** selected packs matched all cells, including **9/18** mixed packs. This is one pass, not the ten-load result. Six misses were solo-stack splits, eight were mode mismatches, and one still needs exact cell-order reconstruction. An earlier pass of the same map matched3/24 with different hero/RNG state. Solo results remain recorded; the primary gate now concerns mixed packs.
+
+**PanUI reference check:** the image's `4,9,1,6,3,8,2,7,5,10` labels are already reproduced by the DLL's five-bit reversal of `y−1` when row scores tie. The portrait groups show creature priorities, but their full mapping to game IDs and categories has not yet been checked; the DLL reduces them to three broad groups. The image does not select defensive or spread placement, so changing the number order cannot repair the eight branch mismatches.
+
+**A measured split:** in one solo encounter, ratio `1.0189` selected two initial stacks; RNG roll `44` left it unchanged, so the original30 creatures became two combat stacks. The cause is captured from the engine, not inferred from final cells alone. In a separate RMG encounter, the engine enabled spread and chose rows `y=10` and `y=1`, while the ordinary DLL showed `y=8` and `y=4`. The published data include approach lengths and accepted/rejected candidates.
+
+**Research Superadmin:** an explicitly enabled DLL returned RMG source `(92,18),(98,8)` **before Start**; ordinary startup returned an empty list. Manually selecting spread and using hidden counts matched4/4 in one isolated four-stack control. This isolates rules, not an automatic exact mode: a different manually forced spread series matched only6/19, then4/19 when the engine chose another policy. The100/100 target has not been reached.
+
+[Numerical records and build hashes](../../assets/preview/rmg-accuracy-2026-09-25.json) · [technical mechanism](placement-internals.md). Complete logs and RMG map archives remain local. The final ten-load campaign and≥70% complete matches among **mixed** packs have not passed; newer DLL changes need fresh validation.
+
+**Later September25 control:** one RMG-A pass, with the player's own army restored to its starting composition before each battle, fully matched10/18 mixed packs. All eight misses used another native branch: five spread, three defensive. On RMG-B,0/13 mixed packs fully matched: the engine spread twelve and used defensive plus spread for one. Neutral compositions were unchanged, but arenas and random decisions varied between passes. These two loads do not replace the required ten.
+
+**Next September25 candidate:** the DLL now reads qualitative count bands from stock public cards, never exact neutral quantities, and uses them to estimate spread and defensive selection. Separate fresh loads matched all cells in13/18 mixed RMG-A packs and11/13 mixed RMG-B packs. On the polygon, one defensive seven-stack battle against a small hero army matched all seven creature+cell pairs. With10 Angels, the DLL often falsely enables defence that the game suppresses; the exception is still under study. Reconstructed spread arithmetic matched205/205 native calls **after Start**, but those observations never feed ordinary prediction. These are separate experiments, not the required ten-load campaign or the independent pre-publication review.
 
 This page preserves **experiments, original results and corrections**. [Articles](research-index.md) explain the current understanding; diary entries record its basis.
 

@@ -1,0 +1,1088 @@
+{
+  "date": "2026-09-25",
+  "exe_sha256": "88c9dc6107b9bced0649924a86360f1c56397ee00de0413f6f2b08f865ed5519",
+  "candidate_dll_sha256": "4a6248b1399805c606f1cd20d36c97b8b65bcefe1bc61257ddb72ff562c8e890",
+  "method": "Ordinary DLL autoload; prediction before Start; native placement policy recorded separately; GetUnitPosition captured at Start. Policy records read only after combat; never predictor inputs.",
+  "limits": [
+    "Random state was not fixed across live runs.",
+    "The candidate corrects the large-hero shooter window, not the missing defensive pass.",
+    "Own mixed-army weights use definition-based scores with a synthetic reference; hero modifiers are not reconstructed."
+  ],
+  "cases": [
+    {
+      "run": 13044,
+      "stage": "before",
+      "pack": "pack_15",
+      "prediction": [
+        {
+          "type": 25,
+          "cell": [
+            13,
+            4
+          ],
+          "size": 2
+        },
+        {
+          "type": 22,
+          "cell": [
+            13,
+            8
+          ],
+          "size": 1
+        },
+        {
+          "type": 48,
+          "cell": [
+            13,
+            6
+          ],
+          "size": 1
+        },
+        {
+          "type": 3,
+          "cell": [
+            13,
+            7
+          ],
+          "size": 1
+        },
+        {
+          "type": 20,
+          "cell": [
+            12,
+            6
+          ],
+          "size": 1
+        },
+        {
+          "type": 15,
+          "cell": [
+            12,
+            10
+          ],
+          "size": 1
+        },
+        {
+          "type": 1,
+          "cell": [
+            12,
+            2
+          ],
+          "size": 1
+        }
+      ],
+      "observed": [
+        {
+          "creature": "CREATURE_GRAND_ELF",
+          "cell": [
+            13,
+            7
+          ],
+          "unit": "defender-creature-0-CREATURE_GRAND_ELF",
+          "type": 48
+        },
+        {
+          "creature": "CREATURE_ARCHER",
+          "cell": [
+            13,
+            9
+          ],
+          "unit": "defender-creature-1-CREATURE_ARCHER",
+          "type": 3
+        },
+        {
+          "creature": "CREATURE_PEASANT",
+          "cell": [
+            12,
+            2
+          ],
+          "unit": "defender-creature-2-CREATURE_PEASANT",
+          "type": 1
+        },
+        {
+          "creature": "CREATURE_PIT_FIEND",
+          "cell": [
+            13,
+            4
+          ],
+          "unit": "defender-creature-3-CREATURE_PIT_FIEND",
+          "type": 25
+        },
+        {
+          "creature": "CREATURE_INFERNAL_SUCCUBUS",
+          "cell": [
+            13,
+            8
+          ],
+          "unit": "defender-creature-4-CREATURE_INFERNAL_SUCCUBUS",
+          "type": 22
+        },
+        {
+          "creature": "CREATURE_CERBERI",
+          "cell": [
+            12,
+            6
+          ],
+          "unit": "defender-creature-5-CREATURE_CERBERI",
+          "type": 20
+        },
+        {
+          "creature": "CREATURE_FAMILIAR",
+          "cell": [
+            12,
+            10
+          ],
+          "unit": "defender-creature-6-CREATURE_FAMILIAR",
+          "type": 15
+        }
+      ],
+      "comparison": {
+        "exact_matches": 5,
+        "predicted": 7,
+        "actual": 7,
+        "same_type_counts": true
+      },
+      "policy_calls": [
+        {
+          "defensive": 0,
+          "policy_bytes": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "window": 0,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            6,
+            2,
+            10,
+            10
+          ],
+          "large_rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            6,
+            2,
+            2,
+            10
+          ]
+        },
+        {
+          "defensive": 0,
+          "policy_bytes": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "window": 3,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            1,
+            2,
+            10,
+            10
+          ],
+          "large_rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            1,
+            1,
+            2,
+            10
+          ]
+        }
+      ],
+      "normal_exit": "game_closed"
+    },
+    {
+      "run": 33604,
+      "stage": "before",
+      "pack": "pack_15",
+      "prediction": [
+        {
+          "type": 25,
+          "cell": [
+            13,
+            8
+          ],
+          "size": 2
+        },
+        {
+          "type": 22,
+          "cell": [
+            13,
+            10
+          ],
+          "size": 1
+        },
+        {
+          "type": 48,
+          "cell": [
+            13,
+            9
+          ],
+          "size": 1
+        },
+        {
+          "type": 3,
+          "cell": [
+            13,
+            1
+          ],
+          "size": 1
+        },
+        {
+          "type": 20,
+          "cell": [
+            12,
+            4
+          ],
+          "size": 1
+        },
+        {
+          "type": 15,
+          "cell": [
+            12,
+            6
+          ],
+          "size": 1
+        },
+        {
+          "type": 1,
+          "cell": [
+            12,
+            2
+          ],
+          "size": 1
+        }
+      ],
+      "observed": [
+        {
+          "creature": "CREATURE_GRAND_ELF",
+          "cell": [
+            13,
+            2
+          ],
+          "unit": "defender-creature-0-CREATURE_GRAND_ELF",
+          "type": 48
+        },
+        {
+          "creature": "CREATURE_ARCHER",
+          "cell": [
+            13,
+            1
+          ],
+          "unit": "defender-creature-1-CREATURE_ARCHER",
+          "type": 3
+        },
+        {
+          "creature": "CREATURE_PEASANT",
+          "cell": [
+            12,
+            2
+          ],
+          "unit": "defender-creature-2-CREATURE_PEASANT",
+          "type": 1
+        },
+        {
+          "creature": "CREATURE_PIT_FIEND",
+          "cell": [
+            13,
+            8
+          ],
+          "unit": "defender-creature-3-CREATURE_PIT_FIEND",
+          "type": 25
+        },
+        {
+          "creature": "CREATURE_INFERNAL_SUCCUBUS",
+          "cell": [
+            13,
+            10
+          ],
+          "unit": "defender-creature-4-CREATURE_INFERNAL_SUCCUBUS",
+          "type": 22
+        },
+        {
+          "creature": "CREATURE_CERBERI",
+          "cell": [
+            12,
+            4
+          ],
+          "unit": "defender-creature-5-CREATURE_CERBERI",
+          "type": 20
+        },
+        {
+          "creature": "CREATURE_FAMILIAR",
+          "cell": [
+            12,
+            6
+          ],
+          "unit": "defender-creature-6-CREATURE_FAMILIAR",
+          "type": 15
+        }
+      ],
+      "comparison": {
+        "exact_matches": 6,
+        "predicted": 7,
+        "actual": 7,
+        "same_type_counts": true
+      },
+      "policy_calls": [
+        {
+          "defensive": 0,
+          "policy_bytes": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "window": 0,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            6,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            2,
+            1
+          ],
+          "large_rows": [
+            6,
+            6,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            2,
+            1
+          ]
+        },
+        {
+          "defensive": 0,
+          "policy_bytes": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "window": 3,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            1,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            5,
+            5
+          ],
+          "large_rows": [
+            1,
+            1,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            5,
+            5
+          ]
+        }
+      ],
+      "normal_exit": "game_closed"
+    },
+    {
+      "run": 32808,
+      "stage": "candidate",
+      "pack": "pack_15",
+      "prediction": [
+        {
+          "type": 25,
+          "cell": [
+            13,
+            8
+          ],
+          "size": 2
+        },
+        {
+          "type": 22,
+          "cell": [
+            13,
+            10
+          ],
+          "size": 1
+        },
+        {
+          "type": 48,
+          "cell": [
+            13,
+            9
+          ],
+          "size": 1
+        },
+        {
+          "type": 3,
+          "cell": [
+            13,
+            4
+          ],
+          "size": 1
+        },
+        {
+          "type": 20,
+          "cell": [
+            12,
+            4
+          ],
+          "size": 1
+        },
+        {
+          "type": 15,
+          "cell": [
+            12,
+            6
+          ],
+          "size": 1
+        },
+        {
+          "type": 1,
+          "cell": [
+            12,
+            10
+          ],
+          "size": 1
+        }
+      ],
+      "observed": [
+        {
+          "creature": "CREATURE_GRAND_ELF",
+          "cell": [
+            13,
+            10
+          ],
+          "unit": "defender-creature-0-CREATURE_GRAND_ELF",
+          "type": 48
+        },
+        {
+          "creature": "CREATURE_ARCHER",
+          "cell": [
+            13,
+            9
+          ],
+          "unit": "defender-creature-1-CREATURE_ARCHER",
+          "type": 3
+        },
+        {
+          "creature": "CREATURE_PEASANT",
+          "cell": [
+            12,
+            10
+          ],
+          "unit": "defender-creature-2-CREATURE_PEASANT",
+          "type": 1
+        },
+        {
+          "creature": "CREATURE_PIT_FIEND",
+          "cell": [
+            13,
+            7
+          ],
+          "unit": "defender-creature-3-CREATURE_PIT_FIEND",
+          "type": 25
+        },
+        {
+          "creature": "CREATURE_INFERNAL_SUCCUBUS",
+          "cell": [
+            13,
+            8
+          ],
+          "unit": "defender-creature-4-CREATURE_INFERNAL_SUCCUBUS",
+          "type": 22
+        },
+        {
+          "creature": "CREATURE_CERBERI",
+          "cell": [
+            12,
+            9
+          ],
+          "unit": "defender-creature-5-CREATURE_CERBERI",
+          "type": 20
+        },
+        {
+          "creature": "CREATURE_FAMILIAR",
+          "cell": [
+            12,
+            8
+          ],
+          "unit": "defender-creature-6-CREATURE_FAMILIAR",
+          "type": 15
+        }
+      ],
+      "comparison": {
+        "exact_matches": 1,
+        "predicted": 7,
+        "actual": 7,
+        "same_type_counts": true
+      },
+      "policy_calls": [
+        {
+          "defensive": 0,
+          "policy_bytes": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "window": 0,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            5,
+            10
+          ],
+          "large_rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            5,
+            5
+          ]
+        },
+        {
+          "defensive": 1,
+          "policy_bytes": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "window": 3,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            2,
+            10
+          ],
+          "large_rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            2,
+            2
+          ]
+        }
+      ],
+      "normal_exit": "game_closed"
+    },
+    {
+      "run": 27056,
+      "stage": "candidate-small-hero",
+      "pack": "pack_15",
+      "prediction": [
+        {
+          "type": 25,
+          "cell": [
+            13,
+            8
+          ],
+          "size": 2
+        },
+        {
+          "type": 22,
+          "cell": [
+            13,
+            10
+          ],
+          "size": 1
+        },
+        {
+          "type": 48,
+          "cell": [
+            13,
+            9
+          ],
+          "size": 1
+        },
+        {
+          "type": 3,
+          "cell": [
+            13,
+            4
+          ],
+          "size": 1
+        },
+        {
+          "type": 20,
+          "cell": [
+            12,
+            4
+          ],
+          "size": 1
+        },
+        {
+          "type": 15,
+          "cell": [
+            12,
+            6
+          ],
+          "size": 1
+        },
+        {
+          "type": 1,
+          "cell": [
+            12,
+            2
+          ],
+          "size": 1
+        }
+      ],
+      "observed": [
+        {
+          "creature": "CREATURE_GRAND_ELF",
+          "cell": [
+            13,
+            10
+          ],
+          "unit": "defender-creature-0-CREATURE_GRAND_ELF",
+          "type": 48
+        },
+        {
+          "creature": "CREATURE_ARCHER",
+          "cell": [
+            13,
+            9
+          ],
+          "unit": "defender-creature-1-CREATURE_ARCHER",
+          "type": 3
+        },
+        {
+          "creature": "CREATURE_PEASANT",
+          "cell": [
+            12,
+            10
+          ],
+          "unit": "defender-creature-2-CREATURE_PEASANT",
+          "type": 1
+        },
+        {
+          "creature": "CREATURE_PIT_FIEND",
+          "cell": [
+            13,
+            7
+          ],
+          "unit": "defender-creature-3-CREATURE_PIT_FIEND",
+          "type": 25
+        },
+        {
+          "creature": "CREATURE_INFERNAL_SUCCUBUS",
+          "cell": [
+            13,
+            8
+          ],
+          "unit": "defender-creature-4-CREATURE_INFERNAL_SUCCUBUS",
+          "type": 22
+        },
+        {
+          "creature": "CREATURE_CERBERI",
+          "cell": [
+            12,
+            9
+          ],
+          "unit": "defender-creature-5-CREATURE_CERBERI",
+          "type": 20
+        },
+        {
+          "creature": "CREATURE_FAMILIAR",
+          "cell": [
+            12,
+            8
+          ],
+          "unit": "defender-creature-6-CREATURE_FAMILIAR",
+          "type": 15
+        }
+      ],
+      "comparison": {
+        "exact_matches": 0,
+        "predicted": 7,
+        "actual": 7,
+        "same_type_counts": true
+      },
+      "policy_calls": [
+        {
+          "defensive": 0,
+          "policy_bytes": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "window": 0,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            10,
+            10,
+            10,
+            10,
+            4,
+            10,
+            10,
+            10,
+            7,
+            0
+          ],
+          "large_rows": [
+            10,
+            10,
+            10,
+            10,
+            4,
+            4,
+            10,
+            10,
+            7,
+            0
+          ]
+        },
+        {
+          "defensive": 1,
+          "policy_bytes": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "window": 3,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            10,
+            10,
+            10,
+            10,
+            3,
+            10,
+            10,
+            10,
+            0,
+            7
+          ],
+          "large_rows": [
+            10,
+            10,
+            10,
+            10,
+            3,
+            3,
+            10,
+            10,
+            0,
+            0
+          ]
+        }
+      ],
+      "normal_exit": "game_closed"
+    },
+    {
+      "run": 30180,
+      "stage": "candidate",
+      "pack": "pack_15",
+      "prediction": [
+        {
+          "type": 25,
+          "cell": [
+            13,
+            8
+          ],
+          "size": 2
+        },
+        {
+          "type": 22,
+          "cell": [
+            13,
+            2
+          ],
+          "size": 1
+        },
+        {
+          "type": 48,
+          "cell": [
+            13,
+            3
+          ],
+          "size": 1
+        },
+        {
+          "type": 3,
+          "cell": [
+            13,
+            1
+          ],
+          "size": 1
+        },
+        {
+          "type": 20,
+          "cell": [
+            12,
+            4
+          ],
+          "size": 1
+        },
+        {
+          "type": 15,
+          "cell": [
+            12,
+            6
+          ],
+          "size": 1
+        },
+        {
+          "type": 1,
+          "cell": [
+            12,
+            10
+          ],
+          "size": 1
+        }
+      ],
+      "observed": [
+        {
+          "creature": "CREATURE_GRAND_ELF",
+          "cell": [
+            13,
+            3
+          ],
+          "unit": "defender-creature-0-CREATURE_GRAND_ELF",
+          "type": 48
+        },
+        {
+          "creature": "CREATURE_ARCHER",
+          "cell": [
+            13,
+            1
+          ],
+          "unit": "defender-creature-1-CREATURE_ARCHER",
+          "type": 3
+        },
+        {
+          "creature": "CREATURE_PEASANT",
+          "cell": [
+            12,
+            10
+          ],
+          "unit": "defender-creature-2-CREATURE_PEASANT",
+          "type": 1
+        },
+        {
+          "creature": "CREATURE_PIT_FIEND",
+          "cell": [
+            13,
+            8
+          ],
+          "unit": "defender-creature-3-CREATURE_PIT_FIEND",
+          "type": 25
+        },
+        {
+          "creature": "CREATURE_INFERNAL_SUCCUBUS",
+          "cell": [
+            13,
+            2
+          ],
+          "unit": "defender-creature-4-CREATURE_INFERNAL_SUCCUBUS",
+          "type": 22
+        },
+        {
+          "creature": "CREATURE_CERBERI",
+          "cell": [
+            12,
+            4
+          ],
+          "unit": "defender-creature-5-CREATURE_CERBERI",
+          "type": 20
+        },
+        {
+          "creature": "CREATURE_FAMILIAR",
+          "cell": [
+            12,
+            6
+          ],
+          "unit": "defender-creature-6-CREATURE_FAMILIAR",
+          "type": 15
+        }
+      ],
+      "comparison": {
+        "exact_matches": 7,
+        "predicted": 7,
+        "actual": 7,
+        "same_type_counts": true
+      },
+      "policy_calls": [
+        {
+          "defensive": 0,
+          "policy_bytes": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "window": 0,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            10,
+            0,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "large_rows": [
+            10,
+            0,
+            0,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ]
+        },
+        {
+          "defensive": 0,
+          "policy_bytes": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "window": 3,
+          "shift": 0,
+          "dimensions": [
+            16,
+            12
+          ],
+          "rows": [
+            10,
+            6,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "large_rows": [
+            10,
+            6,
+            6,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ]
+        }
+      ],
+      "normal_exit": "game_closed"
+    }
+  ]
+}

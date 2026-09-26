@@ -1,0 +1,792 @@
+{
+  "date": "2026-09-25",
+  "scope": "Pinned Universe sandbox; sanitized numerical RMG-derived records without map archives or game binaries",
+  "method": "Prediction frozen before Start. Explicit developer Superadmin reads source quantities before Start. Native decisions and actual cells were captured after Start and never fed to prediction.",
+  "normal_rmg_a_smoke": {
+    "map_source_sha256": "80f9a50ec5ecc1f67e71f2c84f3b419c13e932f990e0090dda78ffbfc37662e8",
+    "candidate_dll_sha256": "18faf0e9d46074aa583ee094300beb3b82c468b351c7803c130517af490bbb2d",
+    "full_matches": 9,
+    "battles": 24,
+    "mixed_full_matches": 9,
+    "mixed_battles": 18,
+    "solo_full_matches": 0,
+    "solo_battles": 6
+  },
+  "cases": [
+    {
+      "label": "split_decision",
+      "map_source_sha256": "f69d236b9ca11052faec06832c30f36c6a9d463c637ace2d4fccd8201451793e",
+      "game_exe_sha256": "88c9dc6107b9bced0649924a86360f1c56397ee00de0413f6f2b08f865ed5519",
+      "candidate_dll_sha256": "5c06cee7d33450703edadffbb551a91f3fea74bede7742fcd5844645cbda3c35",
+      "mode": "superadmin_source_research",
+      "manual_spread_override": false,
+      "hero_army_before_start": null,
+      "hidden_source_before_start": {
+        "enabled": true,
+        "generation": 1,
+        "source_stacks": [
+          {
+            "type": 15,
+            "quantity": 10
+          }
+        ]
+      },
+      "prediction_before_start": [
+        {
+          "type": 15,
+          "cell": [
+            13,
+            6
+          ],
+          "size": 1
+        }
+      ],
+      "observed_after_start": [
+        {
+          "creature": "CREATURE_FAMILIAR",
+          "cell": [
+            13,
+            8
+          ],
+          "unit": "defender-creature-0-CREATURE_FAMILIAR",
+          "type": 15
+        },
+        {
+          "creature": "CREATURE_FAMILIAR",
+          "cell": [
+            13,
+            3
+          ],
+          "unit": "defender-creature-1-CREATURE_FAMILIAR",
+          "type": 15
+        }
+      ],
+      "comparison": {
+        "exact_matches": 0,
+        "predicted": 1,
+        "actual": 2,
+        "same_type_counts": false,
+        "exact_cell_matches": 0,
+        "same_base_counts": false,
+        "position_full_match": false
+      },
+      "split_decision_after_start": [
+        {
+          "initial_stacks": 2,
+          "maximum_stacks": 4,
+          "source_quantity": 10,
+          "strength_ratio": 4.267906665802002,
+          "random_roll": 60,
+          "after_roll": 2,
+          "final_stacks": 2
+        }
+      ],
+      "strategy_after_start": [
+        {
+          "side": 1,
+          "defensive": 1,
+          "enemy_large": 0,
+          "spread": 0,
+          "shooter_count": 1,
+          "window_shift": 0,
+          "depth": 2,
+          "grid": [
+            16,
+            12
+          ],
+          "ordinary_approach_rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            1,
+            6,
+            10,
+            0
+          ],
+          "large_approach_rows": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            1,
+            1,
+            6,
+            0
+          ]
+        }
+      ],
+      "spread_calculation_after_start": [],
+      "cell_attempts_after_start": [
+        {
+          "context": 1963208,
+          "record": 506747684,
+          "candidate_local": [
+            0,
+            9
+          ],
+          "success": true,
+          "cell": [
+            2,
+            10
+          ]
+        },
+        {
+          "context": 1963208,
+          "record": 506747720,
+          "candidate_local": [
+            1,
+            9
+          ],
+          "success": false,
+          "cell": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "context": 1963208,
+          "record": 506747720,
+          "candidate_local": [
+            1,
+            8
+          ],
+          "success": true,
+          "cell": [
+            3,
+            9
+          ]
+        },
+        {
+          "context": 1963208,
+          "record": 506747648,
+          "candidate_local": [
+            1,
+            9
+          ],
+          "success": true,
+          "cell": [
+            3,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "label": "ordinary_spread",
+      "map_source_sha256": "f69d236b9ca11052faec06832c30f36c6a9d463c637ace2d4fccd8201451793e",
+      "game_exe_sha256": "88c9dc6107b9bced0649924a86360f1c56397ee00de0413f6f2b08f865ed5519",
+      "candidate_dll_sha256": "18faf0e9d46074aa583ee094300beb3b82c468b351c7803c130517af490bbb2d",
+      "mode": "normal_public_prediction",
+      "manual_spread_override": false,
+      "hero_army_before_start": [
+        {
+          "type": 92,
+          "count": 22
+        },
+        {
+          "type": 94,
+          "count": 9
+        },
+        {
+          "type": 96,
+          "count": 2
+        }
+      ],
+      "hidden_source_before_start": null,
+      "prediction_before_start": [
+        {
+          "type": 98,
+          "cell": [
+            12,
+            6
+          ],
+          "size": 1
+        },
+        {
+          "type": 92,
+          "cell": [
+            12,
+            10
+          ],
+          "size": 1
+        }
+      ],
+      "observed_after_start": [
+        {
+          "creature": "CREATURE_BROWLER",
+          "cell": [
+            12,
+            10
+          ],
+          "unit": "defender-creature-0-CREATURE_BROWLER",
+          "type": 98
+        },
+        {
+          "creature": "CREATURE_DEFENDER",
+          "cell": [
+            12,
+            1
+          ],
+          "unit": "defender-creature-1-CREATURE_DEFENDER",
+          "type": 92
+        }
+      ],
+      "comparison": {
+        "exact_matches": 0,
+        "predicted": 2,
+        "actual": 2,
+        "same_type_counts": true,
+        "exact_cell_matches": 1,
+        "same_base_counts": true,
+        "position_full_match": false
+      },
+      "split_decision_after_start": [],
+      "strategy_after_start": [
+        {
+          "side": 1,
+          "defensive": 1,
+          "enemy_large": 0,
+          "spread": 0,
+          "shooter_count": 1,
+          "window_shift": 0,
+          "depth": 2,
+          "grid": [
+            16,
+            12
+          ],
+          "ordinary_approach_rows": [
+            10,
+            10,
+            0,
+            0,
+            10,
+            10,
+            10,
+            6,
+            6,
+            10
+          ],
+          "large_approach_rows": [
+            10,
+            10,
+            0,
+            0,
+            0,
+            10,
+            10,
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "side": 0,
+          "defensive": 0,
+          "enemy_large": 0,
+          "spread": 1,
+          "shooter_count": 0,
+          "window_shift": 0,
+          "depth": 2,
+          "grid": [
+            16,
+            12
+          ],
+          "ordinary_approach_rows": [
+            10,
+            10,
+            6,
+            6,
+            10,
+            10,
+            10,
+            0,
+            0,
+            10
+          ],
+          "large_approach_rows": [
+            10,
+            10,
+            6,
+            6,
+            6,
+            10,
+            10,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "spread_calculation_after_start": [
+        {
+          "strategy_pointer": 22278104,
+          "spread": 0,
+          "enemy_area_attack_relative_power": 0.0,
+          "known_threshold_from_DefaultStats": 0.35
+        },
+        {
+          "strategy_pointer": 22278104,
+          "spread": 1,
+          "enemy_area_attack_relative_power": 0.4067796468734741,
+          "known_threshold_from_DefaultStats": 0.35
+        },
+        {
+          "strategy_pointer": 22279596,
+          "spread": 0,
+          "enemy_area_attack_relative_power": 0.0,
+          "known_threshold_from_DefaultStats": 0.35
+        },
+        {
+          "strategy_pointer": 22279596,
+          "spread": 1,
+          "enemy_area_attack_relative_power": 0.4067796468734741,
+          "known_threshold_from_DefaultStats": 0.35
+        },
+        {
+          "strategy_pointer": 22279292,
+          "spread": 1,
+          "enemy_area_attack_relative_power": 0.375,
+          "known_threshold_from_DefaultStats": 0.35
+        }
+      ],
+      "cell_attempts_after_start": [
+        {
+          "context": 22278048,
+          "record": 506774820,
+          "candidate_local": [
+            0,
+            2
+          ],
+          "success": true,
+          "cell": [
+            2,
+            3
+          ]
+        },
+        {
+          "context": 22278048,
+          "record": 506774856,
+          "candidate_local": [
+            1,
+            2
+          ],
+          "success": false,
+          "cell": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "context": 22278048,
+          "record": 506774856,
+          "candidate_local": [
+            1,
+            1
+          ],
+          "success": true,
+          "cell": [
+            3,
+            2
+          ]
+        },
+        {
+          "context": 22278048,
+          "record": 506774784,
+          "candidate_local": [
+            1,
+            2
+          ],
+          "success": true,
+          "cell": [
+            3,
+            3
+          ]
+        },
+        {
+          "context": 22278048,
+          "record": 499478884,
+          "candidate_local": [
+            1,
+            9
+          ],
+          "success": true,
+          "cell": [
+            12,
+            10
+          ]
+        },
+        {
+          "context": 22278048,
+          "record": 499478848,
+          "candidate_local": [
+            1,
+            9
+          ],
+          "success": false,
+          "cell": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "context": 22278048,
+          "record": 499478848,
+          "candidate_local": [
+            1,
+            0
+          ],
+          "success": true,
+          "cell": [
+            12,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "label": "admin_source_and_spread",
+      "map_source_sha256": "f69d236b9ca11052faec06832c30f36c6a9d463c637ace2d4fccd8201451793e",
+      "game_exe_sha256": "88c9dc6107b9bced0649924a86360f1c56397ee00de0413f6f2b08f865ed5519",
+      "candidate_dll_sha256": "18faf0e9d46074aa583ee094300beb3b82c468b351c7803c130517af490bbb2d",
+      "mode": "superadmin_source_research",
+      "manual_spread_override": true,
+      "hero_army_before_start": null,
+      "hidden_source_before_start": {
+        "enabled": true,
+        "generation": 1,
+        "source_stacks": [
+          {
+            "type": 30,
+            "quantity": 30
+          },
+          {
+            "type": 152,
+            "quantity": 60
+          },
+          {
+            "type": 32,
+            "quantity": 45
+          },
+          {
+            "type": 153,
+            "quantity": 66
+          }
+        ]
+      },
+      "prediction_before_start": [
+        {
+          "type": 30,
+          "cell": [
+            13,
+            4
+          ],
+          "size": 1
+        },
+        {
+          "type": 153,
+          "cell": [
+            12,
+            10
+          ],
+          "size": 1
+        },
+        {
+          "type": 32,
+          "cell": [
+            12,
+            7
+          ],
+          "size": 1
+        },
+        {
+          "type": 152,
+          "cell": [
+            12,
+            1
+          ],
+          "size": 1
+        }
+      ],
+      "observed_after_start": [
+        {
+          "creature": "CREATURE_DISEASE_ZOMBIE",
+          "cell": [
+            12,
+            7
+          ],
+          "unit": "defender-creature-0-CREATURE_DISEASE_ZOMBIE",
+          "type": 153
+        },
+        {
+          "creature": "CREATURE_ZOMBIE",
+          "cell": [
+            12,
+            1
+          ],
+          "unit": "defender-creature-1-CREATURE_ZOMBIE",
+          "type": 32
+        },
+        {
+          "creature": "CREATURE_SKELETON_WARRIOR",
+          "cell": [
+            12,
+            10
+          ],
+          "unit": "defender-creature-2-CREATURE_SKELETON_WARRIOR",
+          "type": 152
+        },
+        {
+          "creature": "CREATURE_SKELETON_ARCHER",
+          "cell": [
+            13,
+            4
+          ],
+          "unit": "defender-creature-3-CREATURE_SKELETON_ARCHER",
+          "type": 30
+        }
+      ],
+      "comparison": {
+        "exact_matches": 1,
+        "predicted": 4,
+        "actual": 4,
+        "same_type_counts": true,
+        "exact_cell_matches": 4,
+        "same_base_counts": true,
+        "position_full_match": true
+      },
+      "split_decision_after_start": [],
+      "strategy_after_start": [
+        {
+          "side": 1,
+          "defensive": 1,
+          "enemy_large": 0,
+          "spread": 0,
+          "shooter_count": 1,
+          "window_shift": 0,
+          "depth": 2,
+          "grid": [
+            16,
+            12
+          ],
+          "ordinary_approach_rows": [
+            10,
+            10,
+            10,
+            2,
+            2,
+            10,
+            10,
+            10,
+            1,
+            10
+          ],
+          "large_approach_rows": [
+            10,
+            10,
+            10,
+            2,
+            2,
+            2,
+            10,
+            10,
+            1,
+            1
+          ]
+        },
+        {
+          "side": 0,
+          "defensive": 0,
+          "enemy_large": 0,
+          "spread": 1,
+          "shooter_count": 1,
+          "window_shift": 0,
+          "depth": 2,
+          "grid": [
+            16,
+            12
+          ],
+          "ordinary_approach_rows": [
+            10,
+            10,
+            10,
+            4,
+            4,
+            10,
+            10,
+            10,
+            6,
+            10
+          ],
+          "large_approach_rows": [
+            10,
+            10,
+            10,
+            4,
+            4,
+            4,
+            10,
+            10,
+            6,
+            6
+          ]
+        }
+      ],
+      "spread_calculation_after_start": [],
+      "cell_attempts_after_start": [
+        {
+          "context": 19788496,
+          "record": 506851364,
+          "candidate_local": [
+            0,
+            8
+          ],
+          "success": true,
+          "cell": [
+            2,
+            9
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 506851400,
+          "candidate_local": [
+            1,
+            8
+          ],
+          "success": false,
+          "cell": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 506851400,
+          "candidate_local": [
+            1,
+            7
+          ],
+          "success": true,
+          "cell": [
+            3,
+            8
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 506851328,
+          "candidate_local": [
+            1,
+            8
+          ],
+          "success": true,
+          "cell": [
+            3,
+            9
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 507655104,
+          "candidate_local": [
+            0,
+            3
+          ],
+          "success": true,
+          "cell": [
+            13,
+            4
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 507655140,
+          "candidate_local": [
+            1,
+            9
+          ],
+          "success": true,
+          "cell": [
+            12,
+            10
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 507655212,
+          "candidate_local": [
+            1,
+            9
+          ],
+          "success": false,
+          "cell": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 507655212,
+          "candidate_local": [
+            1,
+            6
+          ],
+          "success": true,
+          "cell": [
+            12,
+            7
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 507655176,
+          "candidate_local": [
+            1,
+            9
+          ],
+          "success": false,
+          "cell": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 507655176,
+          "candidate_local": [
+            1,
+            6
+          ],
+          "success": false,
+          "cell": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "context": 19788496,
+          "record": 507655176,
+          "candidate_local": [
+            1,
+            0
+          ],
+          "success": true,
+          "cell": [
+            12,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Different generated arenas/RNG; no ten-map certification.",
+    "Manual spread isolates geometry, not strategy choice.",
+    "Superadmin source inspection is not yet an exact pre-Start position predictor."
+  ]
+}

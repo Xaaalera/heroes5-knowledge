@@ -68,6 +68,8 @@ The reference contains one creature without a hero or real combat stack. This **
 
 ## When prediction and battle differ
 
+September25 checks found errors in strategy selection, spread and stack ordering. The local DLL now attempts protective placement, but generator packs remain unstable: one ordinary RMG-A pass matched every cell in9 of18 mixed battles. The downloadable preview.2 does not contain these local corrections. A solo split is a separate explained miss; upgrades do not penalize the cell comparison. [Evidence and limits](../reference/research-diary.md#rmg-placement-check).
+
 The prototype assumes one stack per publicly known type. The game can split it, change the composition or choose a special strategy.
 
 In one observed example, a single peasant projection before Start became **three combat stacks of 10**. Splitting explains the mismatch, not cell size. [How the game builds the army](army-placement.md).
