@@ -1,0 +1,83 @@
+{
+  "diffHash": "ea566531c54f38aab74b3e3e59d9aaf7ed9d9105825950a9ba70c8fd6ccc65a4",
+  "commitSha": "0fb70dd6a3b18fde58ef2b4a3fbd3065692b3044",
+  "perAgent": {
+    "craft": {
+      "verdict": "PASS",
+      "score": 10
+    },
+    "architecture": {
+      "verdict": "PASS",
+      "score": 10
+    },
+    "tests": {
+      "verdict": "PASS",
+      "score": 10
+    },
+    "docs": {
+      "verdict": "PASS",
+      "score": 10,
+      "review": {
+        "reviewer": "/root/review_craft",
+        "files": [
+          "README.md",
+          "docs/en/modding/devkit.md",
+          "docs/en/players/army-placement.md",
+          "docs/en/players/bank-reference.md",
+          "docs/en/players/deployment-preview.md",
+          "docs/en/players/mods.md",
+          "docs/en/reference/placement-internals.md",
+          "docs/en/reference/research-diary.md",
+          "docs/modding/devkit.md",
+          "docs/players/army-placement.md",
+          "docs/players/bank-reference.md",
+          "docs/players/deployment-preview.md",
+          "docs/players/mods.md",
+          "docs/reference/placement-internals.md",
+          "docs/reference/research-diary.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "Player placement pair now explains stack preparation, formation choice, cell selection and a traced battle; technical details and newer candidate limits are in the reference/diary. Mod release pages remain current."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "RU/EN placement leads with the answer, diagrams, decisions, recorded seven attempts and limits; reference carries addresses. Diary intro is restored directly after H1, followed by dated Sep26/Sep25 records without overwriting earlier entries."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "Checked public claims for strict 0.20/1.3 shelter thresholds, 0.35 spread setting, rows 1/5/10 for R10 N3, seven elemental attempts and 9/24 RMG-A with 9/18 mixed. Published RMG admin control reports four occupied-cell matches but one exact creature+cell pair; final diary says exactly that."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "Published accuracy-policy and rmg-accuracy JSON expose sanitized counts, flags, positions and attempts; existing figures and code remain linked. Ten-load 111/149 source log, RMG maps and later candidate campaigns remain unpublished and are explicitly labelled; no fresh live validation of newer DLL is claimed."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "Compared new article/reference/diary claims with the two public numerical JSON artifacts and existing observations; pack policy 5/7,6/7,1/7,0/7,7/7 and RMG 9/24/9/18 are not conflated. Unpublished 111/149 raw series is scoped as prepared retrospective record, not independently certified here."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "Rules are limited to pinned Universe ordinary paths, with simple versus complex mode and unresolved conditions identified. Preview.2 is explicitly distinct from local corrective DLL candidates; spread, defence, hidden counts and special battles remain uncertain."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "RU/EN placement, reference, diary and mod-status pairs agree on thresholds, figures, battle counts, Superadmin four cells versus one exact pair, release/candidate distinction and 2026-09-26 edited dates."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "All 15 review:info paths are covered. The date and diary corrections preserve prior historical records, remove process pointers from published RMG JSON while keeping measurements, and retain canonical evidence links. No source edit or attestation was made by reviewer."
+          }
+        },
+        "findings": []
+      }
+    },
+    "security": {
+      "verdict": "PASS",
+      "score": 10
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-09-26T16:40:20.010Z"
+}
