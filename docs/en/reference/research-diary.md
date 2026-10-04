@@ -8,9 +8,617 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/research-diary/
 description: Research diary
-updated: 2026-09-26
+updated: 2026-10-04
 ---
 # Research diary
+
+## 2026-10-04 — RMG and refined source category
+
+DLL3199 passes five fresh loads: three fullPolygon profiles108/108, RMG-A24/24 andRMG-B19/19,total151/151. Full composition/quantities/cells, both actual snapshots, frozenSHA/time and game closures are independently checked.
+
+Follow-up tracing establishes a boundary: source category reads declared shots from the definition, while actor physical state may differ. A failing regression is added, then the predicate corrected. Current DLLcc368 passes60/60 native gates and retains3/3 on the original counterexample; games close and resources are restored. The151 result is not transferred to this new build. Local evidence new-dll-rmg43-verification.json and definition-category-counterexample-verification.json. Next: fresh broad matrix and remaining branches.
+
+## 2026-10-04 — defensive counterexample fixed
+
+The0/3 cause was category membership: the engine includes a Cyclops with an available Goblin among shooters, although its separate physical state did not confirm a shot. The predictor placed it among large stacks and counted one shooter. Defensive category and window size are corrected; ordinary large-pass precedence remains. Cyclops first takes13,2, Archer then13,8, Goblin13,3.
+
+New DLL3199e570 matches the retained counterexample3/3 completely.60/60 native tests and fresh fullPolygon36/36 (mixed30/30) pass, games close and temporary resources are restored. FrozenSHA/time/both observations/new build hashes are independently checked. Old108/273 results are not transferred to the new DLL. Local evidence protected-linked-fix-verification.json and shooter-category-new-dll-full36-verification.json. The full goal remains open.
+
+## 2026-10-04 — defensive placement counterexample
+
+An authored Goblin/Cyclops/Archer army on selective obstacles yields **0/3 exact creature+quantity+cell tuples**. Composition and quantities are correct;1/3 occupied-cell overlap is not tuple accuracy. The game closes, map/manifest are restored and temporary obstacles removed. The negative forecast and both observations are retained.
+
+New protected/linked phase snapshots show the engine places all three stacks inside protection before the general pass. Investigate protective candidate order and carrier placement. Separately, original dispatcher execution confirms a mandatory general pass after protection; C++ omits that stage, but it does not explain this negative. DLL31cc03e0 unchanged. Local evidence protected-linked-confirmed-miss.json; next step is a reproducible correction and new-DLL control.
+
+## 2026-10-04 — live equality under threshold calibration
+
+In three owned loads an army containing only large stacks has invariant ratio1. Three neighbouring float thresholds around1 are temporarily applied; the actual engine flag istrue/false/false for thresholdbelow/equal/above the ratio. The comparison is strict: equality does not enable the rule. The observer records the native flag at calculation time.
+
+All three complete forecasts frozen before Start match7/7; the threshold is restored before game exit. This is calibration, not stock0.55 equality or replay of one RNG state. Game/map/DLL files unchanged; the observer addition changes the tool hash. Local evidence large-threshold-calibrated-triple-verification.json. Natural equality and remaining branches still need verification.
+
+## 2026-10-04 — initial placement-score boundary
+
+The initial baseline passes two zeros to the caster calculation.776 comparisons of original scorer with C++ now check these arguments;1/1 PASS5.835s. A separate spell-damage path calls the caster directly only for Snipe Dead. Other descriptors use actor methods; their indirect paths are not excluded.
+
+Three corresponding loaded-code ranges match the EXE. Both Brem descriptors in the control are non-damaging, score24; the complete forecast frozen before Start matches7/7 and the game closes. This narrows the previously tested arithmetic boundary, not global reachability of other actions. DLL31cc03e0 unchanged. Local evidence initial-area-reachability-verification.json. Next: threshold equality and remaining placement dispatcher transitions.
+
+## 2026-10-04 — nonzero hero action codes
+
+1536 synthetic cases execute the original hero dispatcher and Universe patch. Five known actions use different level bonuses; Holy Charge additionally clamps the Jousting coefficient, applies the original-level multiplier and triples the result with Absolute Charge. The specialization predicate uses original equality against one stored code, not several simultaneous specializations.
+
+The test1/1 PASS3.293s retains earlier checks. Coefficient values are synthetic; the loaded value and enabled actions in a live game remain unverified. First establish which paths are reachable during the initial placement score. DLL31cc03e0 unchanged, no game launch. [Reproducible oracle](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py); local timing journal retained.
+
+## 2026-10-04 — complete specialization series
+
+Jazaz and level7 Hero1 each pass36 complete packs:72/72,mixed60/60,solo12/12. All pre-Start hero scores are28 and70 respectively. Composition, quantities, cells, frozenSHA/time and both after-Start checks are independently verified. Games close and original map/manifest are restored. Total measurement333.748s; phase timers overlap it. With the earlier Calid series three current profiles give108/108, but the complete algorithm is not accepted.
+
+The mastery patch is a separate War Machines bonus from Ring of Machine Affinity. Artifact91 is not Critical Strike skill91: these are distinct enums.192 synthetic cases execute original artifact search, patch and final0…4 range;1/1 PASS3.849s. Real equipment state and the skipping flag0x80 meaning remain unverified. Local evidence jazaz-full36-verification.json and hero1-offender-full36-verification.json; DLL31cc03e0 unchanged. Other branches and the final matrix remain open.
+
+## 2026-10-04 — positive controls for two specializations
+
+Temporary authored Jazaz confirms actual specialization17 and a pre-Start score28 at level1: base24 plus4. Hero1 with starting experience9000 loads at level7, confirms code74 and score70: base58 plus the3%-per-level bonus with native rounding. Each complete seven-stack forecast matches7/7 and games close; composition/quantities/cells/frozenSHA/time are independently checked.
+
+The entire291-byte Universe patch stage and its constants/transfers match the pinned DLL after relocation. This closes the previous256-byte capture limitation for this range. Map and manifest are restored byte-for-byte after each experiment; original game binaries unchanged. Level7 is added to the oracle:1/1 PASS2.941s,640 Universe cases and retained EXE checks. Local evidence hero-specialization-positive-verification.json; DLL31cc03e0 unchanged. Full specialization matrices and other branches remain open.
+
+## 2026-10-04 — complete polygon with Critical Strike
+
+Calid with verified Critical Strike passes all36 authored armies: complete matches36/36, mixed30/30,solo6/6. All72 pre-Start hero-score rows contain36; composition, quantities and cells are checked against both after-Start snapshots, with frozenSHA/time verification. The game closes normally. Total launch measurement180.283s includes completion-observation latency. This is one polygon load, not complete-algorithm acceptance.
+
+A subsequent Hero1 control identifies the actual owner asCHero. The specialization predicate compares one stored enum with the requested enum; its live bytes match the EXE and25 oracle cases pass. Another Universe patch in skill reading contains an extra skill2 branch; its meaning remains open. DLL31cc03e0 unchanged. Local evidence calid-critical-full36-verification.json and hero-owner-specialization-live.json. Next: positive specializations and remaining branches.
+
+## 2026-10-04 — repeatable hero and skill control
+
+The test driver accepts an existing hero and ordered skill grants for one Polygon/Superadmin load. Ownership, each grant's acceptance, queues and increasing mastery are checked; steps are retained in JSON. Ordinary-mode policy is unchanged. Four invalid configurations were rejected before launch.
+
+The normal Calid6/6/6/60/91 command, without an in-memory function change, freezes baseline36 at10/4 and an exact complete7/7 forecast; the game closes. FrozenSHA/time/both snapshots/current driver hash are independently checked. DLL31cc03e0 unchanged; the earlier273 series stays tied to its older driver. [Reproduction command](https://github.com/Xaaalera/heroes5-deployment-preview#authored-heroes-and-skills-in-superadmin); local evidence calid-critical-cli-verification.json. Next: the complete polygon with the skill and specialization controls.
+
+## 2026-10-04 — positive Critical Strike control
+
+Skill granting requires a valid hero and dependencies. On the existing Inferno hero Calid, ordinary commands granted Attack through3, Demonic Strike and Critical Strike in sequence; each command's acceptance and mastery were verified. HasHeroSkill confirmed Critical Strike enabled.
+
+Before Start the level1 hero score is36 at horizons10/4, agreeing with base24 plus the50% Universe bonus. There is no paired pre-grant measurement of this same hero. The complete seven-stack forecast matches7/7 and the game closes; frozenSHA/time/both actual snapshots are independently verified. Hero selection used a temporary research function change in memory, explicitly recorded; map/tool/DLL files unchanged. Local evidence calid-critical-strike-live.json and calid-critical-strike-verification.json. Next: persistent authored hero/skill control parameters and specialization tests.
+
+## 2026-10-04 — binding predicates to the hero owner
+
+Actual hero predicate addresses were captured before Start. The skill predicate calls owner method174 and returns true only for a positive signed result; the second predicate forwards to owner method190. These original forwarders now execute in the oracle; five skill-result boundaries are added,1/1 PASS2.901s. The second owner's deeper implementation remains unverified.
+
+The Critical Strike grant attempt did not produce a positive control: the command is exposed but HasHeroSkill stayed0→0. The experiment stopped before Start; an earlier boolean RPC error is also retained. A separate baseline-only control then preserved the exact7/7 forecast, baseline24 and normal game exit. This does not verify an enabled bonus. Local evidence hero-critical-strike-live.json and hero-baseline-live-methods.json; DLL31cc03e0 unchanged. Next: grant conditions or a suitable authored hero and a positive control.
+
+## 2026-10-04 — testing the replacement Universe stage
+
+576 synthetic target and null-target calls match while executing the original uni.dll stage. It accumulates a float bonus from three predicates: half the score, level×coefficient×score, and level×4. The total is then converted to an integer and clamped to at least1. Original rounding order and HP reads remain intact.
+
+The first256 bytes of previously captured live code exactly match the pinned uni.dll after PE relocation. This does not verify all runtime data or the remaining tail. Real skill-predicate semantics remain open. The existing test1/1 PASS2.871s retains earlier EXE checks; the first new-test failure came from stale emulator instructions, fixed by explicit cache invalidation after patching. DLL31cc03e0 unchanged, no new game launch. Local evidence hero-baseline-universe-verification.json; [reproducible test](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py).
+
+## 2026-10-04 — live correction: record format and Universe patch
+
+The earlier12-byte record inference is corrected: seven live stacks have a current16-byte record. The getter reads end−8. For undamaged stacks its value agrees with HP of one creature: multiplying by independently observed quantity gives stack HP in all7 cases. Damaged behavior remains unverified. The first array-validation failure is retained; the retry forecast frozen before Start matches7/7 and the game closes normally.
+
+Loaded-byte comparison finds a JMP atbc1d09 to uni.dll RVA37d10. Therefore earlier180/864 complete caller comparisons prove stock EXE arithmetic, not the replacement Universe stage. The new code accumulates bonuses through three predicates; its rounding and semantics still need an oracle. Other checked helper/scalar/getter ranges match the EXE. The record fixture is corrected,1/1 PASS2.689s; DLL31cc03e0 unchanged. Local evidence: target-floor-live-verification.json and hero-baseline-live-patch.json; next step is testing the Universe patch.
+
+## 2026-10-04 — source of the score floor
+
+Target getter1d4 returns the second word of the last12-byte record in an internal list. An empty list uses a zero sentinel. The word's meaning remains unproven; the quantity observer uses a different getter1d8.
+
+The existing [native test](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py) replaces the1d4 stub with original instructions.864 target cases and5 list boundaries pass;1296 interpolation cases and180 null-target calls remain covered:1/1 PASS2.517s. This is PE/emulator evidence, not live lists. DLL31cc03e0/sourcef8e9ba97 unchanged; the next control must compare the list with independently observed quantities and HP in an owned game.
+
+## 2026-10-04 — hero score with a target
+
+864 synthetic complete target-call cases match original instructions. The table index comes from one of two target interfaces or defaults to3; the original getter calculates remaining HP of one creature. When additional checks qualify, after the specialization bonus the result becomes the maximum of twice the score and target getter1d4; the original-level multiplier follows.
+
+Both sides of the getter1d4 comparison are covered. Its meaning and skill-predicate semantics remain unproven; call modes other than0 are not covered. External characteristics are substituted; these are not864 live battles. The existing [native test](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py) also retains1296 interpolation cases and180 null-target calls:1/1 PASS2.404s. DLL31cc03e0/sourcef8e9ba97 unchanged, no game launch; local timings saved.
+
+## 2026-10-04 — bonus order in the initial hero score
+
+The complete null-target calculation matches original game instructions in180 combinations. A bonus first adds3 to the interpolation level; two specialization codes then add half the integer result; the final multiplier uses the original hero level. Native rounding, minimum1 and FPU restoration are preserved.
+
+The existing test now checks180 complete calls and1296 interpolation cases:1/1 PASS in2.152s. Previously captured exact tables are reused; external hero characteristics are substituted. Flag combinations are synthetic arithmetic coverage, not bonuses available together to one hero. Virtual predicate semantics, loaded-code equivalence and the target-present call remain open. DLL31cc03e0/sourcef8e9ba97 unchanged; no new game launch. Reproduction: [native test](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py), `test_hero_baseline_interpolation_matches_original_tier_level_and_scalar_boundaries`; local timing journal retained.
+
+## 2026-10-04 — target scalar meaning in the hero score
+
+The target scalar is tied to HP of one creature, not stack quantity. The getter obtains maximumHP, accounts for fractional damage, adds0.5 before integer conversion and clamps to at least1. Original x87 rounding order is preserved.63 original-instruction comparisons with a supplied max-HP value pass; fraction boundaries are synthetic, not63 observed battles.
+
+Seven real objects in an owned game confirm the interface chain and maximum-HP getter address. These reads occur after Start for research only. The forecast frozen before Start independently matches pack15 exactly7/7 and the game closes. Local evidence accuracy-campaign-20261004T090443Z-50576-polygon-admin.json, PID32688, target-scalar-live-chain.json. DLL31cc03e0/sourcef8e9ba97 unchanged. Maximum-HP modifiers and the full hero caller still need verification.
+
+## 2026-10-04 — hero melee tables in the live game
+
+Exact float32 words of two hero-score tables were read before Start in an owned game. Values match stock HeroDamageLevel1/HeroDamageLevel30 in DefaultStats.xdb; matching content does not prove archive precedence. Hero baseline24 agrees with row3 at level1 and scalar30. Pack15 forecast matches completely7/7 and the game closes.
+
+Oracle coverage expands to synthetic and loaded tables:1296 original-instruction comparisons pass with FPU control word/reference restoration. Local report accuracy-campaign-20261004T084718Z-41500-polygon-admin.json, PID48664, supplement hero-baseline-live-settings.json. DLL31cc03e0/sourcef8e9ba97 unchanged. Complete hero modifiers and target scalar meaning still need verification.
+
+## 2026-10-04 — hero initial-score arithmetic
+
+Original helperbc1a50 clamps the index of two tables to1…8 and linearly changes their value with level using float32 coefficient0.033333335. Level31 is the upper table reference; rounding can differ from that endpoint. Levels above31 continue without a clamp. The result is multiplied by the target scalar and converted to an integer with the original x87 operation/rounding order.
+
+648 original-instruction comparisons against independent arithmetic pass with synthetic tables and CW0xc7f; resource references and control word are restored. Only external resource getters are substituted, not arithmetic. Persistent test_hero_baseline_interpolation_matches_original_tier_level_and_scalar_boundaries passes1/1. This verifies a helper formula; loaded tables, scalar meaning and complete hero modifiers remain unconfirmed. DLL31cc03e0/sourcef8e9ba97 unchanged.
+
+## 2026-10-04 — full cycle drops from80.18 to26.33min
+
+The full273-battle campaign on the same DLL31cc03e0/sourcef8e9ba97 with optimized tools takes1579.579s instead of4810.981s. These two complete runs save3231.402s,53.86min, with a3.0457x time ratio. They cover the same selected scope and DLL, but use separate RNG/loads without statistically isolating each change.
+
+Accuracy remains273/273 complete forecasts frozen before Start, mixed213/213,solo60/60. All ten games close normally and the current-hash strict verifier passes. Local report accuracy-campaign-20261004T075852Z-41916-rotation-admin.json, SHA `ba4f72a40076c9ba89f7990044f5fc878881e2fc7fd9c78b5c87efc0d685bf6f`; separate strict-verification record. Old CLI exit1 is an unconditional Superadmin terminal error, not a real mismatch. Algorithm edge cases and native DLL HMR remain unfinished.
+
+## 2026-10-04 — complete short-cycle comparison
+
+The same three selected packs pass in two fresh loads:25.334s with separate CLI processes and21.285s with the reused client. Both reports give3/3 complete pre-/post-Start matches and normal game closure. This is one pair with different RNG and startup times; whole long-campaign speedup is not established.
+
+Local reports accuracy-campaign-20261004T074547Z-46036-polygon-admin.json and accuracy-campaign-20261004T074613Z-46036-polygon-admin.json. Final client error-boundary regression passes. The current speed phase is complete; algorithm work resumes, while native DLL HMR is a separate research TODO.
+
+## 2026-10-04 — command client in one process
+
+The harness reuses the existing canonical SDK dispatcher without starting Python for every command. PID, process creation, signatures and readiness are still validated on each call. Game handles are not retained between loads; CLI and serve remain available. Full SDK46/46 and three consecutive live forecasts3/3 pass, with normal game closure.
+
+Identical day reads on one map give median0.165s through CLI and0.068s in-process. This speeds up that query, not the whole campaign. Local report accuracy-campaign-20261004T073153Z-42336-polygon-admin.json, PID5124, DLL31cc03e0/sourcef8e9ba97;22.820s complete cycle includes10 comparison queries. Tool hashes changed; older reports keep their original version scope.
+
+## 2026-10-04 — completed-battle cache and combined army reads
+
+The harness serializes completed battle records once, after final comparison. Later saves stream those cached records while updating the active battle and headers. Full JSON stays compatible; atomic replacement and lock handling remain. On identical273-battle data repeated save drops from0.7618 to0.0244s, with complete parsed equality. Initial cache population takes0.9912s separately.
+
+Day and army counts are read in one query. Injected10→7→10 restoration passes with an exact7/7 forecast (accuracy-campaign-20261004T065752Z-41424-polygon-admin.json). Three consecutive battles with the new persistence match3/3 and preserve all prior evidence (accuracy-campaign-20261004T070426Z-42936-polygon-admin.json). Games closed. DLL31cc03e0 unchanged, driver7f5471b5 new. These measurements do not establish whole long-campaign speedup.
+
+## 2026-10-04 — complete reduced forecast without deadline waiting
+
+The harness immediately accepts a complete plan with fewer models when model count matches validated planned_models and the unplaced-record mask. Incomplete forecasts still wait; ordinary mode stays strict. The regression passes and two live controls preserve an exact BlackDragon10 forecast at[13,2] before Start and confirm1/1 afterward. Maps are restored and games closed.
+
+On one window the new helper takes2.896s including initial readiness, then the old helper10.125s on the already-ready window; forecasts match. Paired report accuracy-campaign-20261004T062443Z-46832-polygon-admin.json, PID47616; separate production control accuracy-campaign-20261004T062130Z-41328-polygon-admin.json, PID44840. DLL31cc03e0/sourcef8e9ba97 unchanged, helper3221→9dc6. This optimization phase is finished; algorithm edge cases remain next.
+
+## 2026-10-04 — faster saves and ranged-hero verification
+
+New reports use compact JSON with the existing atomic replacement and lock handling. Saving the same full273-battle report drops from5.527 to0.699s and218.9 to56.3MB; all parsed data matches. This measures one save, not the entire campaign. The old report and its driver are retained by hash.
+
+Current DLL31cc03e0/sourcef8e9ba97 passes fullPolygon with100 Archers in the hero army:36/36 complete matches, mixed30/30,solo6/6. Report accuracy-campaign-20261004T060800Z-42664-polygon-admin.json, PID20704, SHA `e929219016f6f86dd3a51beb0814a5ad2c1ade89753b28968d1d750058cf1ebb`,240.918s. Exact tuples, freeze before Start and normal closure are independently checked; new driverd603 differs from previous9f5, while the DLL remains unchanged.
+
+## 2026-10-04 — ten loads of the current DLL:273/273
+
+Current DLL31cc03e0/sourcef8e9ba97 passes ten fresh Polygon and both RMG loads:273/273 exact whole-pack forecasts, mixed213/213,solo60/60. Creature types, quantities and cells, prediction freeze before Start, build/map/tool hashes and normal closure of all ten games were checked. The independent strict verifier passes. This proves the tested sample, not reconstruction of every algorithm branch.
+
+Local evidence: accuracy-campaign-20261004T044050Z-51896-rotation-admin.json, SHA `caf4165889599d115d76ed44f7e42b8cf94288e5854901efc83d36e76d7e8879`; separate strict-verification JSON records scope and goal_complete=false. Runtime4810.981s (~80.18min). The old driver returns exit1 due to an unconditional Superadmin rejection; it is not a forecast mismatch, and the original report stays unchanged. Exact threshold equality and remaining open cases need separate controls.
+
+## 2026-10-04 — six arenas on the current DLL
+
+The80-Peasant,35-Footman,12-Priest army matches completely on Grass_Big_01,Dirt_Small_01,Sand_Big_01,Snow_01,Lava_Small_01 andRiver_Grass_Big_01:6/6 battles,18/18 units. Cells differ across arenas; every forecast is frozen before Start and original scripted types/quantities are separately verified. Projection models release and six games close normally directly after the Start snapshot.
+
+Local report arena-placement-20261004T043701Z-admin.json, DLL31cc03e0/sourcef8e9ba97, SHA `7a0abe47f62502f680389e8b030cd3af06bbd04015398aa5cf37bd4d1bc9f6b9`. Per-case elapsed total61.910s. This placement-only control does not verify results, level dialogs or hero return; it does not replace the ten-load protocol or remaining algorithm branches.
+
+## 2026-10-04 — current DLL on RMG-B
+
+All19 selected WorkshopRmgTaggedB packs match completely: mixed13/13,solo6/6. Required packs were independently derived from map XML; creature types, quantities, cells, hashes and prediction freeze before Start were checked. Vegeyr returned after battles and the game closed normally.
+
+Local report: accuracy-campaign-20261004T043014Z-49124-rmg_b-admin.json, PID37808, DLL31cc03e0/sourcef8e9ba97,184.882s. SHA256: `64c7c119c5f75e79e8ea02a3257573e5f8b2c84a9de2d0f41d5f1aaa48934ce9`. Current Polygon/RMG-A/RMG-B have three separately verified loads; the ten-load protocol and full algorithm remain unfinished.
+
+## 2026-10-04 — current DLL on RMG-A
+
+All24 selected packs on WorkshopRmgTaggedA match completely: mixed18/18,solo6/6. Required packs were independently derived from map XML; creature types, quantities, cells, hashes and prediction freeze before Start were checked. Hero9 returned after battles and the game closed normally. Cases rmg_a_071/133 pass; the historical hero-loss cause remains unknown.
+
+Local report: accuracy-campaign-20261004T042413Z-36388-rmg_a-admin.json, PID45020, DLL31cc03e0/sourcef8e9ba97,233.449s. SHA256: `32efe3fdffaab170350a3e78d09234d3e2362ef218d1a0c199bb917331248ecd`. This verifies one RMG-A load; RMG-B, ten-load control and remaining algorithm branches still require current-DLL verification.
+
+## 2026-10-04 — new DLL on both threshold sides
+
+Seven-stack pack15 matches completely with two mixed hero armies:1400/1800 Peasants,10 Angels and100 Archers. Ratios frozen before Start,5250/9404=0.558273 and5338/10996=0.485449, fall above and below loaded threshold0.54999995. The corresponding native comparisons match forecast bits exactly. Later rows from another calculation phase do not replace the original operands.
+
+Local reports: accuracy-campaign-20261004T042026Z-34568-polygon-admin.json (PID48348) and accuracy-campaign-20261004T042042Z-43512-polygon-admin.json (PID36360), DLL31cc03e0/sourcef8e9ba97. Each7/7 units, normal closure;15.280/15.300s. These are two separate loads, not exact threshold equality or three values tested from the same state.
+
+## 2026-10-04 — broad control after the DLL fix
+
+New DLL31cc03e0/sourcef8e9ba97 passes all36 authored packs with the original Angel10 hero army: mixed30/30,solo6/6. Creature types, quantities and cells, prediction hashes, freeze before Start and normal game closure were independently checked. This is one load with this army; other armies, arenas, RMG and the ten-load protocol remain unverified for the new DLL.
+
+Local report: accuracy-campaign-20261004T041313Z-11904-polygon-admin.json, PID46572,268.463s. SHA256: `ba5c163056112b6a50159dd6740927a01f1c6f13cabd3b1b374f0baa2b655a0e`.
+
+## 2026-10-04 — forecast of placed large stacks fixed
+
+The control with20 original Dragons confirms one placed10-Dragon stack at[13,2], with no merge into20. The old empty forecast is retained as incomplete in a diagnostic report. The new DLL preserves successful anchors and quantities, removes unplaced records from display and does not recalculate rows after compaction. Their mask does not imply an engine859b40 exclusion call or adventure-army deletion.
+
+Full native58/58 and live pre-Start forecast1/1 pass. DLL31cc03e0/sourcef8e9ba97; report accuracy-campaign-20261004T041000Z-6096-polygon-admin.json, PID51456, SHA7962d300c60002618fad10851a6ac19f44d1a6c5b6096adaa5e28676462efdbb. Game closed, map restored;21.614s. Broad results of the previous DLL do not transfer to this one.
+
+## 2026-10-04 — insufficient space for multiple large stacks
+
+The authored BlackDragon20 versus Angel100 control with fixed obstacles produced public2/models0 and failed projection readiness before Start. No saved forecast or final cells exist; this is a predictor failure, not a completed accuracy sample. The game closed normally, temporary map and manifest were restored, and obstacles removed. Local report: accuracy-campaign-20261004T035629Z-25968-polygon-admin.json, PID41664, DLL baca8975/source13ae9b,20.809s.
+
+Static caller85a110 invokes simple857380, runs859930 once on failure, then releases context85adf0 and returns. The extended merge/exclusion retry is absent here. After-Start handling of the remaining unplaced stack is still unverified; prediction must not add exclusion without that evidence.
+
+## 2026-10-04 — current DLL with Peasants in the hero army
+
+All36 authored packs matched completely with1000 Peasants in the hero army: mixed30/30, solo6/6. Creature types, quantities, cells, the prediction hash frozen before Start and normal game closure were checked. Pack19 contains one neutral Peasant1000 stack at[13,6], versus four stacks in the previous100-Archer hero control. This tests changed splitting with a different known hero army.
+
+Local evidence: accuracy-campaign-20261004T034843Z-34716-polygon-admin.json, PID24144, DLL baca8975/source13ae9b,262.590s. SHA256: `d93c03716dbcfe0e8efa97c7bb1187fbfbf1685d19ce306b2c634ff558ae5084`. One load does not complete the ten-load protocol or reconstruction of the full algorithm.
+
+## 2026-10-04 — current DLL with a ranged hero army
+
+All36 authored neutral compositions matched completely with100 Archers in the hero army: mixed30/30, solo6/6. Every creature type, exact quantity and cell was checked, alongside the prediction hash and its freeze before Start; the game closed normally. This is one load of current DLL baca8975, not completion of the ten-load protocol or the full algorithm.
+
+Local evidence: accuracy-campaign-20261004T034054Z-10192-polygon-admin.json, PID25584, source13ae9b, duration272.228s. Report SHA256: `5c7ba899cdcaf41c87633130c609a1ff3ba1a670e01f191f650f1a47eb930dd4`.
+
+## 2026-10-04 — large stack in live fallback
+
+- Sandbox ordinary pack19 temporarily becomes BlackDragon1 with the previous fixed-obstacle fixture. This is an ordinary neutral attack, not scripted859eb0. Forecast[84×1,13,2,size2] saved before Start matches exact1/1 afterward; direct859930 side0 confirms fallback after simple failure.
+- At fallback entry the stack is unplaced; large helper writes its2×2 footprint in free front cells. Return/normal exit succeed. Hash/time/tuple/entry independently checked; map/manifest restored byte-for-byte and temporary H5U removed.
+- One-large/two-column/melee scope does not prove third-column or split-large join/remove behavior. DLL baca89 unchanged; raw JSON/derived map/manifest stay local and game resources are not published. [Predictor](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp).
+
+## 2026-10-04 — live fallback with fixed obstacles
+
+- Sandbox uses the stock ArenaObstaclesGroup/FixedObstacles/blockedTiles format: X12/13,Y3..10 blocked, front two rows free. Temporary resource H5U belongs in UserMODs; the first erroneous data-directory installation did not apply obstruction and is not counted.
+- Ordinary single-source Peasant1000 andArcher40 invoke direct859930 side0 after partial simple placement. First stack already occupies[13,2], others remain unplaced. Forecasts before Start match2/2 battles and6/6(type,quantity,cell) units, retaining that first cell; melee and shooter-first column priority differ as in the game.
+- Return/normal exit succeed; exact owned overlay removed after hash verification. A supplemental manifest links immutable reports to overlay hash/setup. Derived game resources/raw JSON stay local and are not published. Third-column/2x2/remaining branches need separate controls. [Predictor](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp), [path observer](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
+
+## 2026-10-04 — direct859930 entry and unsuitable scripted control
+
+- Passive path journal now records859930 itself; shared column-helper calls do not substitute for caller proof. New observer installs successfully on a normal Peasant1000 control with3/3 exact forecast and normal exit;859930 was not invoked.
+- Single BlackDragon20 on specified Grass_Big_01 matches1/1 exact forecast before Start, returns and exits normally. Native route is859eb0/859670 rather than the target simple fallback. This scripted pack therefore does not count as live859930 coverage and is not blindly repeated over scenes.
+- Next needs an ordinary single-source neutral attack with authored obstruction geometry and direct859930 entry. Production DLL unchanged; driver hash changed. Internal JSON/hash/time evidence retained but unpublished. [Observer](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
+
+## 2026-10-04 — broad control of the new fallback DLL
+
+- Current DLL baca89 with Angels10 completes all36 authored cases:36/36 exact(type,quantity,cell),mixed30/30,solo6/6. Forecasts before Start, hashes/timing order and exact counters independently checked. Return and normal exit succeed; full cycle261.870s.
+- Recorded path set does not contain859930; shared column-helper calls do not prove forced fallback. Synthetic240-case/selector checks remain a separate evidence scope. Other armies/arenas/RMG, live fallback and remaining branches stay open. Earlier273/273 is not transferred to this DLL. Internal JSON retained but unpublished. [Harness](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
+
+## 2026-10-04 — simple placement fallback implemented
+
+- DLL baca89 adds source-simple fallback following original859930: source order, partial placed mask/occupancy, shooter-gated large/small passes, cursor reset per helper. Width2/3 comes from the army deployment rectangle; unsupported right-side/full-height geometry is not guessed.
+- C++ matches original instructions on240 synthetic mixed two/three-column cases. Selector separately reproduces partial failure and[13,2],[13,1],[12,1]. Full native58/58 pass without skips.
+- Live Archer40→twoArcher20 control matches2/2 and exits normally. It did not require fallback; forced live fallback remains pending.273/273 belongs to previous DLL a8d794; new broad matrix is still needed. Internal JSON/archives/timings retained but unpublished. [C++](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp), [native tests](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py).
+
+## 2026-10-04 — uncovered fallback pass
+
+- Original857380/859930 tested on a synthetic field: three identical ranged1x1 stacks, two columns, local rows0/1 free and2..9 blocked. Simple placement writes the first stack[13,2] then fails; fallback preserves it and writes remaining[13,1],[12,1].
+- This exposes a specific gap in current source-simple prediction, which stops after failure. Completed273/273 does not cover it; no live miss claimed here. Native regression passes; production DLL is unchanged.
+- 858ba0 copies records in input order rather than sorting;742e10 releases temporary references. The test substitutes getters/copy for identical records; placement passes run original instructions. Mixed records and optional third-column mode remain incomplete. Internal fixture/log retained but unpublished. [Tests](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py).
+
+## 2026-10-04 — strict ten-load control
+
+- Current DLL a8d794 completes273/273 exact(type,quantity,cell) matches across ten fresh loads: mixed213/213,solo60/60. Polygon144/144,RMG-A72/72,RMG-B57/57. Every game exits normally; no return failures in this series.
+- Independent strict verification checks current source/DLL/tool/map hashes, expected packs/load order, prediction hashes, storage before Start/observation and exact counters. PASS applies to this dataset; goal_completefalse keeps complete-algorithm verification separate. Legacy CLI exit1 is its old Superadmin acceptance flag, not a miss in this series.
+- Live equality/same-state thresholds, effects/linked/dispatcher/baseline/null-hero/859930 and complete RNG boundaries remain open. One clean series does not explain earlier hero loss. Full cycle4800.185s; report217989320bytes. Whole-JSON rewrites warrant profiling, not a claim that they caused all elapsed time. Internal JSON/hash evidence is retained but unpublished. [Verifier](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/check.py).
+
+## 2026-10-04 — current DLL on both RMG maps
+
+- DLL a8d794 matches all24/24 selected RMG-A and19/19 RMG-B battles; mixed18/18 and13/13,solo6/6 on each. Predictions frozen before Start; exact(type,quantity,cell), hashes and timing independently checked. Return and normal exit succeed.
+- A Stronghold hero completes previously problematic pack133; a positive control does not explain an earlier different hero's disappearance. B case094 matches creatures and cells. Older-DLL failures remain separate evidence.
+- Three current Polygon profiles plus two RMG loads total151/151 complete battles(mixed121/121,solo30/30). Five fresh loads are not the ten-load protocol or the entire algorithm. RMG cycles took245.027s and185.380s. Live equality, remaining branches and earlier hero loss stay open. Internal JSONs are unpublished. [Harness](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
+
+## 2026-10-04 — ranged army and threshold sides
+
+- Current DLL a8d794 with Archer100 completes all36 authored cases:36/36 exact(type,quantity,cell) matches, mixed30/30,solo6/6. Combined with the other two profiles on this DLL,108/108 battles complete. Return and normal exit checked; JSON hashes and before/after Start ordering independently verified.
+- Mixed Peasant1400/1800+Angel10+Archer100 pack15 controls each match7/7. Frozen large/total melee scores5250/9398 and5244/10647 yield0.55863 and0.49253 across loaded0.549999952; first native comparisons agree. Later comparisons may describe a different state and must not replace the initial snapshot.
+- These are separate fresh loads, not equality or a same-state triple. Live equality, current RMG/ten-load series and remaining branches stay open. No new code/DLL change in this experiment; internal JSONs are retained but unpublished. [Harness](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
+
+## 2026-10-04 — native level dialog and complete Polygon controls
+
+- Devkit now observes CLevelUpBox construction/destruction instead of inferring absence from empty OCR. A live control shows the object exists while GetHeroLevel remains1; choosing destroys it and commits level2. Production cleanup handled a real forced modal with one choice and closed state; combat boundaries were stubbed in this separate UI experiment.
+- Current DLL a8d794 full Angels10 and Peasant1000 series match **72/72 exact** battles: mixed60/60,solo12/12. Predictions are frozen before Start; types/quantities/cells, hashes and timing order independently checked. Adventure return and normal exit succeed. Neither series opened a level dialog; positive dialog evidence remains the separate control.
+- Native55/55 and SDK45/45 tests pass without skips. Full36-battle cycles took263.507s and264.510s, measurements rather than a general benchmark. Screenshots remain unreliable and their guard remains. Ten loads, other armies/thresholds/RNG/branches and earlier Stronghold hero loss stay open. Internal logs are unpublished. [SDK](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/game_control.py), [mod check](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/native-preview-check.py).
+
+## 2026-10-04 — forecasts on six named arenas
+
+- DLL a8d794 matches original scripted arguments to descriptors captured as primitive inputs and binds them to a checked placement window. Ambiguous/stale/unsupported data are rejected. Source modifiers, hero and geometry are accounted for before Start; final positions are not inputs.
+- Six fresh controls: Grass_Big_01,Dirt_Small_01,Sand_Big_01,Snow_01,Lava_Small_01,River_Grass_Big_01. Fixed army: Peasant80, Footman35, Priest12. Forecasts saved before Start match6/6 battles and18/18(type,quantity,cell) tuples. Each game exits normally directly after its Start snapshot; projection release checked.
+- This verifies placement, not results/adventure return or ten rotated loads. Main campaign still stops on blank results captures. A foreground-owned client DC fallback was also blank and reverted. Native54/54 pass; full current-DLL matrix remains unverified. Internal JSON/hash/time evidence is retained but unpublished. [Source](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp).
+
+## 2026-10-03 — production capture of original scripted inputs
+
+- New DLLfb8e74 explicitly captures original StartCombat arguments in Superadmin. Live control retained exact80/35/12, input generation1 and56 primitive rows. Argument-level modifiers remain unknown; placement binding and a finished scripted forecast are not implemented.
+- Final54/54 native tests passed. A normal three-stack attack matched all3 exact(type,quantity,cell) tuples against a forecast frozen before Start, but results checking failed on a blank capture. The run is incomplete and the game closed normally. Earlier aggregate accuracy does not apply to this DLL.
+- SourceTrace ABI7 distinguishes map-neutral/scripted provenance and modifier availability. Ordinary mode receives no new hidden inputs. Full algorithm, six named arenas and ten loads remain open. Internal logs/source archive are retained but unpublished. [Source](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp).
+
+## 2026-10-03 — original scripted army before placement construction
+
+- Correction to the previous control: original-source generation0 does not establish absent scripted entry. A checked arena-call return and separate placement generation0→1 prove native placement-window construction. Visibility/non-minimization were checked; rendered deployment remains unproven.
+- On the pinned build, an owned temporary observer at0x5d434c captured original StartCombat arguments: Peasant80, Footman35, Priest12. They matched the authored army and preceded combat construction, without consuming final positions. Original code restored; normal game exit confirmed.
+- The DLL's ordinary attack handler does not run on this path. Scripted source/generation support is still unimplemented; named-arena prediction accuracy remains unproven. The console VM separately lacks type/pcall; the earlier type query timed out. Internal logs/decompilation are retained but unpublished. [DLL source](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp).
+
+## 2026-10-03 — blank capture does not establish game phase
+
+- On the pinned Universe build, a scripted Grass_Big_01 control yielded no saved forecast: original-source generation0 and public/models0. PrintWindow succeeded but returned a blank black/white surface. Combat entry remains unproven; this is not an accuracy sample.
+- Devkit retains PNG and rejects at most two colours sampled on a32×32 grid before OCR. A retained blank frame was rejected; an adventure frame passed. All9 SDK tests passed without skips. Passing the heuristic does not establish phase, freshness or correct rendering.
+- Screenshot failure no longer suppresses separate native failure diagnostics in the predictor harness; its targeted regression passed. Missing original source and earlier hero disappearance remain unexplained. Internal logs are retained but unpublished; no new full accuracy campaign was completed. Sources: [shared capture](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/game-ui.ps1), [harness](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
+
+## October3 — separate strict verification and incomplete campaign
+
+Superadmin report verification now checks current hashes, the complete selected pack set, ten normally closed loads, prediction before observation and exact creatures/quantities/cells. Spatial-only matches or incomplete campaigns cannot pass. All52 tests passed. Passing this set alone does not establish full algorithm branch coverage.
+
+The new campaign retained210 fully compared matches and one additional correct four-stack snapshot. After the last battle, the driver could not find its selected adventure hero, so cleanup and ten loads remain unverified. The cause is unknown; all eight games closed normally and evidence is retained. No hero was automatically recreated or replaced. Internal logs distinguish accurate prediction from cleanup failure.
+
+## October3 — level-up modal stopped the campaign
+
+All101 completed battles in the new current-DLL series matched completely. The next battle never started because an adventure level-up modal remained open. This is a test-driver failure, not a measured placement miss; ten loads did not complete.
+
+Checking hero level alone was insufficient: the API returns the old level until a skill is selected. The driver now recognizes the real dialog and sends addressed selection/OK events. A separate live UI control confirmed1→2, modal disappearance and normal closure; its combat stages were mocked, so it is not an accuracy battle. All51 tests passed; initial failed controls remain retained. OCR adds latency; direct devkit modal detection remains to implement.
+
+## October3 — current DLL:151/151 complete sets
+
+With unchanged94f0e7,108 Polygon battles across three hero armies,24 battles on the first generated map and19 on the second matched completely:151/151, with121/121 mixed. These are five fresh loads. Creatures, quantities, cells, prediction hashes and pre-Start preservation were checked separately; all games closed normally.
+
+Exact tested source bytes are retained in a SHA-256 archive. The ten-load series, specified arenas and remaining special branches still need verification. This does not complete the overall goal; internal logs retain earlier misses.
+
+## October3 — overlapping Cyclops roles
+
+A Cyclops paired with Goblins can be a physical shooter despite zero ordinary ammo. Ordinary deployment processes large units before special shooters, whereas defence begins with shooters. One shooter flag does not replace category order.
+
+The first correction produced a new0/2 miss with hero Angels while the Peasant control matched; the failure remains retained. DLL94f0e7 stores physical capability separately, uses the selected role for row choice, and passed50 native tests and2/2 fresh controlled battles. Both new fields differ from the original negatives. Retained obstacle-vector checks reproduce rows7 and4 but do not replay complete arenas. A full new series remains necessary; raw logs are internal.
+
+## October3 — ten loads:269/273 and two additional rules
+
+DLL e4d4c6 matched269/273 complete battles across ten fresh Polygon/two-generated-map loads:209/213 mixed and60/60 solo. Predictions were saved before Start and all games closed normally.272/273 occupied-cell-set matches do not replace creature/quantity verification.
+
+Three misses of one pack exchanged two melee units under defence plus spread. The game used ordinary movement-aware ordering; the mod selected power ordering. DLL384e08 corrects comparator selection and passes49 native tests and3 fresh targeted battles, including defence without spread. Its complete series has not run.
+
+The fourth miss remains:40 Goblins and3 Cyclopes. The game classifies the Cyclops as a physical shooter in this composition despite a recorded ordinary ammo count of zero. Both predicted rows differed from the actual rows. Exact classification and its use remain to fix; the full algorithm is not yet proven. Raw logs remain internal.
+
+## October3 — exact source identity, RMG-A24/24
+
+The previous failure is explained: public identification yielded type89 (Black Knight), whereas the original army contained90 (Death Knight). No quantity matched89, so calculation stopped before world capture. The placement-binding hypothesis was refuted: frame guards,16×12 field and obstacle buffer were valid.
+
+Superadmin now uses exact original types and order before calculated splits/grades. This is not a knight-specific exception; ordinary mode retains public inputs. DLL `e4d4c655c72ff5be2e21e77213d964f7c6b7457442eba5404a4c29afb807679d` passed the targeted battle2/2 and the complete first generated-map set24/24:18 mixed and6 solo. Predictions were saved before Start, games closed normally, and49 native tests passed. Earlier Polygon108/108 and second-map19/19 belong to another DLL.
+
+Operation timing has started. The corrected one-case run took20 seconds and the complete24-battle set232 seconds; individual analysis intervals took minutes. Test duration does not prove accuracy, and one successful map set does not complete the overall goal. Raw diagnostic logs remain internal.
+
+## October3 — three hero armies and generated maps
+
+With unchanged DLL `c14548e7855da4f1ba13b664937703406a56381265887a222328ab1491b632de`, Polygon matched108/108 complete battles:36 compositions each with10 hero Angels,1000 Peasants and100 Archers. A separate series on the second generated map matched19/19, including composition, quantities and cells. Predictions were saved before Start and test games closed normally.
+
+A10-Titan control matched the target seven-stack pack7/7: large ranged troops were excluded from both melee groups, with24/24 matching native scores. Two mixed armies matched7/7 each with ratios0.492 below the approximately0.55 threshold and0.558 above it. Exact equality was tested at the arithmetic boundary; a live equality army remains to prepare. Intermediate inputs differ between these loads, so they are not a controlled change of just one variable.
+
+The first generated map remains incomplete:7 battles matched, then the next case stopped before Start. A screenshot shows deployment on a lava arena, but the forecast did not render and its calculation world was not captured. Placement-frame binding remains unexplained; the previous battle's stale observation is not this case's result. Successful series do not close this separate forecast-start failure. Raw logs remain internal; the overall goal is not complete.
+
+## October3 — ground retry fixed, ranged series36/36
+
+DLL `c14548e7855da4f1ba13b664937703406a56381265887a222328ab1491b632de` retries unplaced small support troops together with all small melee units using a joint sorted list. A fresh complete series with100 hero Archers matched36 of36 packs:30 of30 mixed and6 of6 solo. The previous counterexample's Swordsmen now matched(12,8); its Archers matched(13,6). Predictions were saved before Start, actual composition/quantities/cells captured afterward. The game closed normally.
+
+All49 native tests passed. The first intermediate build displayed no models before Start because a new iterator was not reset between planning and rendering. The failure was retained, the reset fixed and tested separately. Passing native tests alone had not proved live operation. Other hero armies, arenas, thresholds and RMG remain necessary;36/36 does not complete the overall goal. Raw logs remain internal.
+
+## October3 — complete ranged series and ground retry
+
+With DLL `0cb7c5ef4bd169c8d56d26a1f9d76f07d28d13ec234842c29b8ccb3f32b489b4` and100 hero Archers,35 of36 packs matched completely:29 of30 mixed and6 of6 solo. The sole miss was15 Swordsmen: predicted(13,1), actual(12,8). The same pack's40 Archers matched(13,4), and placement mode agreed. The original algorithm retries unplaced small melee units in the general ground placement pass after support placement. Our code omits this retry; the exact cell choice remains to reproduce.
+
+A separate hero control with100 Peasants+10 Angels+100 Archers matched7/7. Owned large/all-melee scores5243/5498, calculated before Start, exactly matched the later native comparison. All48 native tests passed without skips. Both games closed normally. This verifies specific branches; the complete goal and new miss remain open. Raw logs are internal; a public input-field dataset is not yet published.
+
+## October3 — hero contribution to large melee strength
+
+In the investigated Universe build, large melee strength is compared with all melee strength. Both estimates include the hero contribution and use the complete opposing army as the reference. An army of100 Archers therefore yielded24/24=1 despite having no creatures in either selected group. After-Start observations confirmed zero selected creature damage/health and hero contribution24. The earlier estimate based on the health share of large creatures missed this contribution.
+
+Corrected DLL `0cb7c5ef4bd169c8d56d26a1f9d76f07d28d13ec234842c29b8ccb3f32b489b4` calculated24/24 before Start. One fresh battle against a mixed seven-stack pack matched all7 creatures, quantities and cells, followed by normal game closure. Earlier6/7 and4/7 misses remain retained. Their original arenas have not been replayed, and the complete series has not run on this DLL. This does not establish100% overall accuracy. Raw logs remain internal; a public example containing the original input fields is not yet published.
+
+## 3 October — new counterexample with a ranged hero army
+
+The test driver now accepts explicit hero armies with composition readback before combat. The first control with100 Archers matched6/7 exact pairs in the seven-stack pack: types and quantities were correct, one cell differed. Defence and spread matched the game.
+
+A fresh repeat matched7/7, but the negative control remains open. Diagnostics recorded a1.0 fraction against a threshold near0.55 for neighbouring-row handling. Reconstruct the exact fraction inputs before correcting the implementation. All games closed; the earlier two-army72/72 does not extend to ranged conditions. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally.
+
+## 3 October — new DLL matches all72 Polygon battles
+
+All36 compositions were checked again with two hero armies:72/72 complete matches, mixed60/60 and solo12/12. Composition, quantities, upgrades/splitting and cells matched; forecasts were frozen before Start. Both games closed normally.
+
+A separate calculation replay from the old miss's saved inputs restored17 enemy aggregate numeric fields exactly. However, the earlier defensive-positive state did not recur live. Ranged hero armies, threshold controls, arenas, RNG, full RMG coverage and other algorithm gaps remain. Two Polygon loads do not complete the full goal; post-Start explanations remain a separate task. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally.
+
+## 3 October — complete campaign with two hero armies
+
+All36 compositions were checked across two fresh loads: baseline army36/36, second army35/36. Total71/72 exact battles including composition, quantities, upgrades and cells; mixed59/60,solo12/12. After-Start observations are now saved before leaving combat. Both games closed normally.
+
+One miss involved an unsupported shooter flag that halves its entire action factor. The correction matched220 original-function comparisons and all47 tests of the new DLL passed. Two fresh target controls matched, but the earlier defensive-positive state did not recur. Repeat the full campaign on the new DLL, then complete other hero armies, arenas, thresholds, RNG and RMG. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally; the full goal is unfinished.
+
+## 3 October — quick combat obstructed placement verification
+
+Observed subsequent startups did not reproduce the earlier access violation. A screenshot of a separate failure showed a different cause: the strong hero received quick-combat results without entering placement. Test maps now disallow quick combat for their objects; armies/positions and the player's saved profile are preserved.
+
+The first new control matched completely, including splitting and an upgrade. A broader run completed11 exact battles before a report-write failure; brief Windows locks now receive bounded atomic-replacement retries. The latest run completed four exact battles and stopped reading the hero after leaving the next battle. The full Polygon and second hero army remain unverified; the original crash is unexplained. All games closed. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally.
+
+## 3 October — late spread passes corrected
+
+The row filter incorrectly bypassed later ground and support placement passes. After correction all44 tests passed, and the problematic mixed pack on the second RMG map matched completely across three fresh spread-on loads. This verifies correction of that specific miss.
+
+The full Polygon campaign with two hero armies failed during startup before its first battle. The access violation cause remains unknown; neither Granny nor the new DLL is established as its cause. Capture exception context before retry. All processes are closed; the complete goal and post-Start explanations remain open. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally.
+
+## 3 October — spread mode reconstructed, cells still differ
+
+Actor area properties are frozen before Start;768 arithmetic checks matched original branches. The owned calculation now correctly enables spread, but three fresh battles of the problematic RMG pack still differ in cells. Candidate and row selection need diagnosis. All43 tests of the current DLL passed; the goal remains unfinished.
+
+Following the owner's report, visible automation now chooses the current player's hero, asks the game to validate approach cells, and follows the camera after verified teleport. A separate control image shows the hero and selected portrait; the game closed. The original intermittent disappearance was not independently reproduced, so no single proven cause is claimed. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally; post-Start explanations remain pending.
+
+## 3 October — area estimate inputs frozen before Start
+
+The new capture saved26 army and spell property records before Start. No overflow or unsupported records occurred, and they did not change after Start. All42 tests passed. A fresh battle matched completely with spread off; the owned denominator101 matched the game.
+
+The hero value24 came from the caster baseline property rather than its sole listed spell, which was neither damaging nor area eligible. The property's internal formula still needs reconstruction. Next are the remaining actor area properties and complete numerator; earlier spread-on misses remain open. The sandbox closed normally. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally.
+
+## 3 October — spell scoring for spread
+
+Spell power calculation from availability, damage, resources and available casts was reconstructed;776 original-function comparisons matched. Four-turn and ten-turn estimates differ: damage97 with resources for one cast yields24 versus9. Therefore the completed aggregate estimate cannot substitute for the spread numerator.
+
+Spell fields still need capture before Start and integration with other army area properties. The new calculation is built but not deployed; no live accuracy improvement is claimed. The cause of the observed hero value24 remains unproven. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally; explanations remain pending.
+
+## 3 October — owned power calculation for spread
+
+The area-attack ratio denominator was ported to C++;664 original-instruction comparisons matched. In a fresh battle both prediction and game produced97, and the entire pack matched. The hero had Battle Frenzy and the game selected spread off. This is a separate positive control; the preceding three spread-on misses remain open because the exact numerator still needs capture and calculation before Start. The game closed; the goal is unfinished. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally.
+
+## 3 October — category clarified and remaining miss
+
+The special category argument places a unit in the shooter group only with two additional flags. Exclusion, shooter, flying and ground priority was reconstructed;64 original-instruction checks passed. The new DLL calculates both armies.
+
+Three fresh controls of the problematic mixed pack on the second RMG map still produced0/3 complete matches: prediction does not yet calculate the spread chosen by the game. Capture primitive area-attack properties before Start and compute their relative power; after-Start observation remains validation only. Earlier36/36 belongs to the previous DLL. All test games closed; explanations remain pending. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are being prepared locally.
+
+## 3 October — first complete Polygon match {#integrated-polygon-2026-10-03}
+
+Computed composition is now connected to projections. Split solo packs use their own sequential placement pass, preserving order and quantities.64 cell cases matched the original function and all39 tests passed. Three fresh targeted loads matched whole packs.
+
+The new full Polygon load produced36/36 exact battles: mixed30/30,solo6/6. This covers one load/profile. Three selected encounters matched on the first RMG map; two of three matched on the second. The miss involves spread selection with a currently unsupported hero-army category. A separate driver error expecting the original stack count was fixed and retained.
+
+The goal remains incomplete: that mismatch, the full profile/arena/RNG/RMG matrix and remaining fallback branches need work. Games were closed. All-player post-Start explanations remain open. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are prepared locally; the new candidate is unpublished.
+
+## 3 October — composition computed before Start {#owned-composition-2026-10-03}
+
+Owned C++ determines stack count, RNG draws, interior upgrade and quantities from early inputs.2352 cases matched original instructions. Three fresh loads matched composition3/3, including upgrade substitution.
+
+Rendered cells still use the previous forecast: only1/3 whole battles matched. All38 tests passed and games were closed. Placement integration is next. All-player post-Start explanations remain a separately open task. [Sources](https://github.com/Xaaalera/heroes5-deployment-preview) are prepared locally; new evidence is unpublished.
+
+
+
+
+
+
+
+
+
+
+## 3 October — early strength and RNG inputs captured in the DLL {#source-input-runtime-2026-10-03}
+
+C++ now captures early source-stack stats, context flags, coefficients and extended initiative, then computes strength with owned code. RNG state is separately captured before the splitting draw. Completed engine decisions and cells are never prediction inputs.
+
+Three fresh loads with default and small hero armies matched all nine distinct numeric results on each load. Hero and target inputs are scoped separately from other map armies. The early seed matched independent observation and reproduced its draw. All37 tests passed without skips.
+
+Initial journals overflowed with repeated queries; those failures were retained. Identical inputs now deduplicate, changed inputs remain separate, and verification stops at the freeze boundary. These results prove inputs and arithmetic, not composition prediction. Army sums, stack count, grades, quantities and their separate placement path are next. Games were closed and original game files unchanged. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are prepared locally; the new candidate is unpublished.
+
+
+## 3 October — preserving initiative input precision {#source-initiative-precision-2026-10-03}
+
+Before integration, an input-format difference was found: the engine receives extended initiative, subtracts the integer baseline and only then rounds the difference. Storing the getter directly as float could change the result. The C++ input now preserves the extended value before subtraction.
+
+1936 numerical cases matched the original function, including pairs proving that early narrowing changes final strength. All37 tests passed without skips. An initial extended-number fixture normalization error was retained and corrected; it is not counted as an engine defect.
+
+Actual stat capture still needs integration. A new build is prepared while the sandbox retains the previous DLL; no game was launched for these checks. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are prepared locally and new results are unpublished.
+
+
+## 3 October — owned source strength in C++ {#owned-source-strength-2026-10-03}
+
+Owned numerical source-stack strength was implemented with ordered integer conversions, modifiers and context corrections. It receives stat values and coefficients without reading the engine's completed decision. x87 precision and intermediate stores preserve the verified order.
+
+1920 compiled C++ cases matched the original function: actual coefficients, two FPU modes, shooter bonus, context penalty and large integer values. The full37/37 checks passed without skips. This proves the numeric core within the tested domain, not a new in-game result.
+
+Early input capture and composition generation still need integration. A new build is prepared, the test game is closed and the sandbox DLL remains the prior version. [Source and tests](https://github.com/Xaaalera/heroes5-deployment-preview) are prepared locally; the candidate is unpublished.
+
+
+## 3 October — strength calculation order for splitting {#split-strength-order-2026-10-03}
+
+The source-stack strength arithmetic was reconstructed: base value, ordered stat additions, modifiers and multiplication by quantity. The engine converts to an integer after each addition and multiplier; moving all conversions to the end changes the algorithm.
+
+108 controlled cases matched the original function under two FPU modes. These test arithmetic with supplied inputs and binary-exact coefficients. Context branches, shooter bonuses and rounding with actual coefficients still require verification. An initial fixture field-type error was retained and corrected against original instructions.
+
+A live control confirmed the function bytes and froze loaded-build coefficients. The DLL was unchanged and the solo pack still split differently from its forecast. Own strength and composition calculation from early inputs is next. The game was closed; [tool sources](https://github.com/Xaaalera/heroes5-deployment-preview) are prepared locally and new raw evidence is unpublished.
+
+
+## 3 October — capturing RNG at the split draw {#split-rng-timing-2026-10-03}
+
+The late preview RNG state does not reproduce splitting rolls. A passive trace captured state immediately before the draw: independent arithmetic matched all four measured cases. Splitting and initial initiative use the same RNG, with state captured at different times.
+
+This does not yet implement composition prediction. Strength calculation, stack-count boundaries, grade selection and quantities remain to reconstruct. Three fresh controls of the unchanged DLL yielded2/3 matches because two random outcomes retained one stack; these are not an improvement. A Python driver failure was preserved and fixed before successful measurements, and games were closed. [Tools](https://github.com/Xaaalera/heroes5-deployment-preview) are prepared locally; new evidence is unpublished.
+
+
+## 3 October — residual passes implemented in C++ {#owned-residuals-2026-10-03}
+
+The Superadmin predictor now places remaining large and small units after primary groups. Original source order is kept separately from strength sorting and already placed units are skipped. Full occupied footprints are checked and the free-row cursor persists between units. Ordinary mode is unchanged.
+
+The new DLL matched pack7 completely across three fresh loads with default, small and default hero armies. A separate36-composition load then produced32/36 full matches: mixed30/30, solo2/6. Four misses involve composition splitting that is not yet predicted, including grade substitution. One Polygon load does not establish100% across profiles, arenas and RMG.
+
+All36 native tests passed without skips; cell tests gained residual and exhausted-space cases. Games were closed and original game files unchanged. Predictions were saved before Start; observations served as verification. [Predictor sources](https://github.com/Xaaalera/heroes5-deployment-preview) are prepared locally; the new candidate and raw evidence are unpublished.
+
+
+## 3 October — why shooter support is skipped {#leftover-chronology-2026-10-03}
+
+A passive trace showed that the support pass generates neighbours of the shooter's world cell, then tests them against local deployment bounds. All eight candidates were outside those bounds in the measured battle. The unicorn remains unplaced until the large leftover pass, after the pixie and shooter. This pinned-build behaviour still needs reconstruction in C++.
+
+Three fresh loads with different hero armies produced1/3 whole matches; the small-army control matched. The new causal control remains0/1 because the DLL was unchanged. Instrumentation-install, initial field-label and context-offset errors were retained and corrected evidence verified separately. Measurement replaces the previous hypothesis about placement before primary attempts. Documents were repaired after a Cyrillic pipeline encoding error; JSON reports remain unchanged.
+
+Games were closed and game files unchanged. Diagnostic cells are never forecast inputs. [Predictor tools](https://github.com/Xaaalera/heroes5-deployment-preview) are prepared locally; new raw evidence is unpublished.
+
+## 3 October — health and exact unit assignments {#health-defensive-order-2026-10-03}
+
+A conditional health transformation is reconstructed from a coefficient frozen from the loaded game before Start. Owned code repeats multiplication precision, integer conversion and the inactive case.42 original-instruction cases match and36 tests pass. The alternative branch is verified offline only; other effects remain unfinished.
+
+The first live control matched all occupied cells but swapped two units, so strict prediction failed. Mode-specific sorting is corrected: defence compares strength, while ordinary placement retains ground/flying ordering. Three fresh controls then match whole packs. New complete load gives31/36 strict, mixed29/30 and solo2/6; large leftovers and composition changes remain. One load does not establish100% or full RMG/profile scope. Games close normally and counterexamples are retained. Oracles are in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview); raw data unpublished.
+
+## 3 October — seven-stack resource corrections {#resource-factor-2026-10-03}
+
+Three current/maximum counter pairs are frozen before Start and replayed in C++ in native order. Positive maxima use1+0.1×current/maximum. Full, partial and ignored ratios match original instructions bit-for-bit across100 cases in two FPU environments;35 tests pass. Resource names remain to verify without assuming mana/ammo.
+
+The seven-stack pack matches in four fresh controls across defensive and ordinary modes. A new complete36-composition run gives30 strict matches, mixed28/30 and solo2/6. This is neither100% acceptance nor a controlled regression comparison against the previous different load. A separate mixed-pack health effect, large leftovers and composition transforms remain. Games close normally; oracle is in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview), raw data unpublished and full goal active.
+
+## 3 October — defensive prediction and36 compositions {#defensive-prediction-36-2026-10-03}
+
+The DLL now selects defence from aggregates and unit properties frozen before Start. Threshold comparisons and opponent-capability checks are reconstructed for supported inputs; specialized power/ability evaluations retain declared native-helper provenance. Defensive phase mapping and large-unit column/row retries are corrected. Unsupported effects do not count as a complete calculation.
+
+One complete load tests36 compositions:31 strict type/quantity/cell matches, mixed28/30 and solo3/6.35 tests pass and the game closes normally. This is progress, not100% acceptance across profiles/arenas/RMG. Remaining misses involve composition changes, large-stack leftovers and resource corrections in the seven-stack pack. It matched7/7 in an earlier load but4/7 in the new one; both results remain recorded without a universal claim. Two earlier campaigns stopped on research-observer overflow and zero models, with corrections and negative evidence retained. Raw reports are unpublished; tests are in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview).
+
+## 3 October — auxiliary power provenance {#auxiliary-power-input-2026-10-03}
+
+The additional24 comes from the hero evaluator; physical-unit evaluations are zero in this pack. It contributes to ranged advantage. The DLL now freezes that native evaluator result before Start as an explicit input and accumulates matching records itself. The evaluator's complete mechanics are not yet implemented in owned code.
+
+Live control matches17 of18 words for both aggregates; the remaining word is an internal pointer the owned calculation does not create. This verifies one pack's numeric inputs, not complete effects or placement accuracy.34 tests pass, frozen data is unchanged after Start and the game closes normally. Defensive policy is still unconnected and the battle remains a strict miss. Tests are in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview); raw game data is unpublished.
+
+## 3 October — hero correction from primitive integers {#hero-scalar-replay-2026-10-03}
+
+The conditional hero correction is reconstructed: two integers are summed and multiplied by0.05, then1+that value scales the army factor. Stat names and guard meaning still require verification. The DLL freezes primitive inputs before multiplication and calculates the correction with pass/generation binding.
+
+Owned arithmetic matches original instructions bit-for-bit across ten cases. Live values1 and1 produce all13 matching numeric fields for both armies before Start. Auxiliary scoring and defensive policy remain unfinished, so the battle is still a strict miss.33 tests pass and the game closes normally. Oracle is in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview); raw evidence remains unpublished and full goal open.
+
+## 3 October — owned runtime aggregates {#owned-runtime-aggregates-2026-10-03}
+
+Frozen inputs now drive owned aggregate calculation in the DLL before Start. Repeated observations are separated by army/pass; order is preserved and ambiguous duplicates or unsupported effects are rejected. Live control verifies13 bit-exact neutral numeric fields. The own army matches12 of13, with hero correction to the action factor still unfinished.
+
+FPU-state preservation and post-Start immutability are verified;31 tests pass. Grouping oracle is in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview) and raw evidence remains unpublished. Defensive policy is not yet connected, so the control battle remains a strict miss. Auxiliary score fields, abilities and full coverage remain open. The game closes normally.
+
+## 3 October — owned early collector {#owned-early-collector-2026-10-03}
+
+Pre-Start attribute capture now runs in the C++ DLL. The bounded snapshot is tied to an attack and frozen before combat. Corrected live control retains42 rows;20 fields per row match independent observations and remain unchanged after Start. Unsupported effects are explicit and final occupied cells are absent.
+
+The first candidate crashed after reset changed an existing handler's input register. The defect is localized, corrected and covered by a regression test; negative evidence is retained. The control game closes normally. Capture is not yet connected to defensive policy and the battle remains a strict miss. Aggregate integration and hero corrections come next; tests are in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview) and raw game records remain unpublished.
+
+## 3 October — early inputs and rounding {#early-inputs-fpu-2026-10-03}
+
+Early observation confirms the same forecast world contains both armies during calculation, while late vectors are empty. Types, quantities and actual attributes are retained before Start. Independent C++ replay initially differed from live float bits: the game uses24-bit x87 precision with rounding toward zero.
+
+Reproducing that environment matches all42 factors. An initial numerator seed1 was also restored, after which13 neutral numeric aggregate fields match. Hero correction, auxiliary fields and group ordering remain unfinished. This verifies core arithmetic on frozen inputs, not an active predictor or100% acceptance. Games close normally and defensive-mode misses remain. The three relevant oracle tests are in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview); raw replay is unpublished.
+
+## 3 October — input capture timing {#forecast-input-lifetime-2026-10-03}
+
+A live control confirms both forecast-world army interfaces, but the next finds both unit vectors empty at prediction-freeze time. Late reading of these vectors does not provide complete calculation inputs. Earlier observed factors were computed before Start; whether those temporary actors belong to the same world remains unverified.
+
+Next is earlier attribute/context capture with generation checks. Both control battles remain strict defensive-mode misses and games close normally. Snapshot size/lifetime checks extend `test_superadmin_source_requires_opt_in_and_expires_with_placement` in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview); raw records remain unpublished. The negative result is retained.
+
+## 3 October — health and distinct defence weights {#health-accumulation-2026-10-03}
+
+Owned C++ accumulates health and defence weights. Total and gated-subset defence can differ: the verified doubling applies to the total, while the subset uses the raw value. A temporary remaining-health label is replaced with a neutral subset name; the complete meaning of its eligibility gate remains to verify.
+
+Seven sequential inputs and final normalization match original EXE instructions bit-for-bit. Evidence: `test_owned_health_accumulation_matches_native_subset_and_distinct_defence` in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview). Earlier health effects are neutralized in this oracle; complete input capture and defensive-policy integration remain unfinished. No game launched and placement accuracy has not changed.
+
+## 3 October — army damage accumulation {#damage-accumulation-2026-10-03}
+
+Owned C++ accumulates damage and weighted sums for shooters, flying, ground and category-excluded units. Eight sequential inputs match original EXE instructions bit-for-bit, including float rounding, zero damage and integer overflow. Subsequent normalization also matches.
+
+Evidence: `test_owned_damage_accumulation_matches_original_categories_and_rounding` in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview). This oracle stops before health and status processing. Complete input collection and defensive-policy integration remain unfinished; no game launched and placement accuracy has not increased.
+
+## 3 October — army-strength normalization {#aggregate-normalization-2026-10-03}
+
+Weighted normalization is reconstructed: attack uses damage, defence uses health and categories have separate denominators. Zero denominators preserve prior fields. The intermediate action-factor sum is float, correcting an inaccurate decompiler type.
+
+Owned C++ matches original EXE instructions bit-for-bit across ten complete18-field inputs. Evidence: `test_owned_aggregate_normalization_matches_original_words_and_zero_gates` in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview). Exact input collection and defensive-policy integration remain unfinished. No game launched this pass; placement accuracy is unchanged.
+
+## 3 October — conditional bonus and C++ arithmetic {#conditional-action-factor-2026-10-03}
+
+The counter-origin hypothesis for1.1 is disproved for the tested pack: measured counters are zero. A different original property/flag condition activates the bonus. Adding this branch explains42 measured factors within rounding precision. Exact property/flag names still require verification; this is not a universal constant multiplier.
+
+Baseline arithmetic is implemented in C++ with x87 intermediate precision. Ten cases match original EXE instructions bit-for-bit. The oracle extends `test_native_initial_action_factor_includes_initiative_speed_and_atb` in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview). Full defensive policy is not yet connected to this calculation; both control battles remain strict misses. Raw data is unpublished and games closed normally.
+
+## 3 October — calculation timing and attributes {#action-factor-inputs-2026-10-03}
+
+A new observer shows that factors in the tested mixed pack are calculated before Start. Reading a buffer later does not prove computation happened after Start; a separate pre-Start prefix is now retained. Actual morale, luck, initiative, speed and ATB are measured. The shooter speed-factor exemption is verified; the source of an additional1.1 multiplier remains under investigation.
+
+Four controls remain strict defensive-mode misses. Observer x87/bounds test: `test_action_factor_observer_preserves_x87_inputs_and_bounds` in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview). Raw game records remain unpublished, and observations do not feed the predictor. Games closed normally.
+
+## 3 October — live generator control {#live-atb-rng-2026-10-03}
+
+Three fresh loads of one mixed pack verify that the preview-world RNG state frozen before Start begins the sequence creating three actual actors. Active Universe uses ATB0…0.1 while the disk EXE contains0…0.25. This corrects the previous static conclusion without rewriting historical evidence.
+
+All three predictions remain strict misses due to defensive-mode selection. Exact battle inputs, subsequent ATB corrections and abilities remain unfinished; this experiment does not verify splitting, grades or RMG. Games closed normally. Observer checks extend `test_native_battle_rng_uses_two_steps_and_signed_shift` in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview); raw game JSON remains unpublished.
+
+## 3 October — initial ATB generator {#initial-atb-rng-2026-10-03}
+
+The shared combat-actor constructor samples initial ATB in [0,0.25]. Generator arithmetic uses two state steps and a signed-shift mixer. Original-instruction emulation checks six seeds,30 integer cases and48 ATB samples; float results and resulting state match bit-for-bit. Evidence: `test_native_battle_rng_uses_two_steps_and_signed_shift` in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview); working decompilation is not published.
+
+Pre-Start state capture timing and consumption order during transformations and creation of both armies remain unverified. Abilities can subsequently change ATB. No game launched this pass; arithmetic verification does not establish live predictor accuracy.
+
+## 3 October — initial battle factors {#initial-battle-factor-2026-10-03}
+
+Executing the pinned build's original arithmetic verifies that baseline battle strength depends on initiative, speed, morale, luck and initial ATB. Six cases check initiative/ATB boundaries and the selected-unit exemption. Attack and defence account for native terrain; army accumulation adds its own unit offset.
+
+Abilities, statuses and reproducing initial ATB/RNG before Start remain unfinished. No fresh game launched this pass. Evidence: `test_native_initial_action_factor_includes_initiative_speed_and_atb` in the [predictor repository](https://github.com/Xaaalera/heroes5-deployment-preview); source game records and decompilation are not yet published. After-Start observations remain verification, not predictor inputs.
 
 This page preserves **experiments, original results and corrections**. [Articles](research-index.md) explain the current understanding; diary entries record its basis.
 
@@ -19,6 +627,30 @@ September 21–23 entries were reconstructed on **September 24, 2026**. This beg
 Experiments below use the [pinned Universe build](universe-build.md) unless stated otherwise.
 
 ## September 26: sheltered formation and prediction limits {#placement-defence-2026-09-26}
+
+**October 2, 2026 follow-up:** work resumed to reconstruct the complete algorithm and achieve fully matching Superadmin predictions frozen before Start. Ordinary-mode policy will be discussed separately. Exact source quantities are available to Superadmin, but automatic strategy, composition transformations and special adjacency are not fully reproduced.
+
+Twenty theory compositions were added locally to the polygon, bringing the total to36. Cases cover1×1/2×2 footprints, shooter support, Goblin/Shaman/Cyclops links, a missing partner, reversed input order, seven large stacks and duplicate types. A new40-Goblin/8-Shaman control matched1/2 exact pairs: the Shaman matched, but the engine placed the Goblin beside it while the prediction chose another row under the same strategy. Special-category adjacency is a cause hypothesis to verify. Two source Peasant stacks of10 and20 matched2/2 cells; final quantities were not checked. Full local logs are unpublished; these controls do not establish100% Superadmin accuracy.
+
+The sandbox startup was restored by changing import order only in the owned process's memory, preserving on-disk game files. This validates test tooling, not a changed player installation. Record every discrepancy and then verify its branch; one successful case does not complete a mechanism.
+
+A seven-large-type control exposed an incomplete prediction: seven public types but five created projections. The test stopped before Start and closed the game normally; no actual cells were recorded. Deployment capacity and leftover passes are hypotheses for the next check, not a measured5/7 result.
+
+**Later correction that day:** a separate research control froze the partial prediction before Start and then recorded actual deployment. The engine also deployed only five units from seven source types. All five occupied cells matched, but only2/5 type/cell pairs matched; source selection and ordering remain unresolved. Missing projections alone therefore do not prove the earlier capacity hypothesis.
+
+Goblin linkage is now implemented in C++: a previously placed large carrier still participates in adjacency, and upgraded Goblins are identified by base type. The observer captures actual quantities after Start, while exact-quantity predictions are saved and hashed before Start. Two fresh controls, Goblin/Shaman and two source Peasant stacks, matched types, quantities and cells. These are individual experiments, not100% acceptance; full logs remain local.
+
+Verification exposed two SDK checkouts at different versions. The workshop now has one working checkout per subrepo, with repeated mod dependencies linked to the shared SDK and a command checking origins/versions. SDK edits are immediately visible to both mods. Algorithm research was paused by the owner; no new DLL was published.
+
+**After goal resumption:** non-shooter ordering was checked separately: ground units before flyers, speed takes priority when reaching the distance between armies, then strength is compared. C++ matched original-instruction execution on108 combinations; these are not108 live battles. Source speed/flight are frozen before army transformations.
+
+Live observation explained the five-stack selection: after the first failed attempt the engine excluded eight Genies, then five Hydras after the second, even though the Hydras had already been placed. Placement is then recalculated. Prediction still lacks the complete exclusion/retry cycle; matching five occupied cells with different creatures is not a complete forecast. Full logs remain unpublished and the100% goal remains open.
+
+**Next verified step:** owned dry planning, weakest-source exclusion and occupancy restoration were added to the DLL. Another arena then exposed a further rule: a2×2 unit may try the next row while retaining the original candidate score. After reproducing it, three fresh loads of the problematic pack fully matched types, quantities and cells. Predictions were computed before Start; observation only verified them.
+
+A completed36-composition load matched28 exact formations:24/30 mixed and4/6 solo. Two split cases, five defensive-mode decisions and one large-unit leftover pass remain wrong. Other profiles, arenas and RMG are not yet verified with this candidate. This is intermediate evidence, not a100% guarantee. All20 native checks pass, the game is closed and the new DLL is unpublished.
+
+The next investigation compared raw army aggregation with battle aggregation. The source-descriptor builder was connected after fixing its calling convention; the first incorrect experiment crashed and is recorded separately. Two corrected controls matched total damage/health but differed in attack/defence and multiplier: one army differed by+1, the other by+2, with different multipliers. The causes are not yet established. Raw input is frozen before Start; battle aggregation is observed only for verification after Start. Exact formation choice requires those transformations; local evidence remains unpublished and the100% goal is unfinished.
 
 **Question:** why does a seven-stack pack sometimes shelter its shooters and sometimes use ordinary placement despite similar visible composition?
 
