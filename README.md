@@ -1,5 +1,18 @@
 # База знаний Xaaalera о Героях
 
+
+## Author and related projects / Автор и связанные проекты
+
+Автор / Author: [Xaaalera](https://github.com/Xaaalera) · [email](mailto:dampirsimpl@gmail.com) · [личный Telegram / personal Telegram](https://t.me/Victima).
+
+- [Deployment Preview / Предиктор](https://github.com/Xaaalera/heroes5-deployment-preview).
+- [Bank Reference / Справочник армий](https://github.com/Xaaalera/heroes5-bank-reference).
+- [Mod Devkit / Девкит](https://github.com/Xaaalera/heroes5-mod-devkit): shared development and test tools for both DLL mods.
+- [Knowledge source / Исходники базы](https://github.com/Xaaalera/heroes5-knowledge) · [public knowledge / база знаний](https://xaaalera.github.io/heroes5-knowledge/).
+- [Heroes V Universe / Heroes Lobby](https://h5lobby.com/).
+
+RU: личные проекты автора; не официальные продукты Universe. EN: Personal projects by the author, not official Universe products.
+
 ## Delivery correction / Поправка к поставке — 2026-09-25
 
 RU: отдельные EXE-загрузчики отклонены владельцем. Пользователь запускает игру через Heroes/Lobby как раньше; моды должны подключаться автоматически через DLL. Текущий прототип использует новый bin/dinput8.dll и bin/Heroes5Mods/*.dll, для справочника также нужен его H5U. Штатные бинарники Universe не заменяются. Обычный запуск до меню и автоматическое подключение двух DLL с показом проекций проверены; актуальные выпуски и ограничения указаны в репозиториях модов. Приведённые ниже команды со старым EXE — диагностика/история разработки, не инструкция игроку.

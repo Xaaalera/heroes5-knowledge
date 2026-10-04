@@ -1,6 +1,20 @@
 # Repository instructions / Инструкции репозитория
 
+
+## Public projects / Публичные проекты
+
+- [Deployment Preview / Предиктор](https://github.com/Xaaalera/heroes5-deployment-preview): native placement projections.
+- [Bank Reference / Справочник армий](https://github.com/Xaaalera/heroes5-bank-reference): possible bank armies.
+- [Mod Devkit / Девкит](https://github.com/Xaaalera/heroes5-mod-devkit): shared tools used to build and test both DLL mods.
+- [Knowledge / База знаний](https://github.com/Xaaalera/heroes5-knowledge) · [public site / сайт](https://xaaalera.github.io/heroes5-knowledge/).
+- [Author / Автор — Xaaalera](https://github.com/Xaaalera) · [email](mailto:dampirsimpl@gmail.com) · [personal Telegram / личный Telegram](https://t.me/Victima).
+- [Heroes V Universe / Heroes Lobby](https://h5lobby.com/).
+
+RU: эти проекты принадлежат автору; база знаний и моды не являются официальными продуктами Universe. Общие факты и контакты обновлять во всех канонических репозиториях. EN: These are the author's projects, not official Universe products. Keep shared facts and contact links consistent across canonical repositories.
+
 ## RU
+
+- При работе внутри связанной мастерской каждый сабрепозиторий имеет один канонический checkout. Общие зависимости используются через ссылки каталогов; не клонировать второй SDK и не переносить правки между копиями. Перед работой из корня мастерской выполнять `scripts/sync-subrepos.ps1 -Check`. Для самостоятельного клона этой базы процедура мастерской не требуется.
 
 - Пользователь запускает игру обычным способом через Heroes/Lobby. Наши моды подключаются через DLL; отдельный EXE для игрока запрещён владельцем. Диагностические EXE и Python-команды принадлежат только инструкциям разработчика. При смене поставки синхронизировать README, RU/EN wiki, devkit, инструкции агентам и release notes; прежние EXE-пакеты не публиковать.
 
@@ -31,6 +45,8 @@
 - GitHub Pages — первый этап. Правки через GitHub, а не через встроенный wiki-редактор. Не обещать реализованный MCP или SDK.
 
 ## EN
+
+- Inside a linked workshop, each subrepo has one canonical checkout and repeated dependencies use directory junctions. Never clone another SDK or copy edits between checkouts. Run the workshop's `scripts/sync-subrepos.ps1 -Check` before work. Standalone knowledge clones do not need workshop setup.
 
 - Players keep the ordinary Heroes/Lobby launch. Our mods load through DLLs; the owner rejects separate player launchers. Diagnostic EXEs and Python commands belong only in developer instructions. Delivery changes must update README, RU/EN wiki, devkit, agent instructions and release notes together; never publish the superseded EXE packages.
 
