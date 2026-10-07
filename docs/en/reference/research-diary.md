@@ -8,9 +8,243 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/research-diary/
 description: Research diary
-updated: 2026-10-04
+updated: 2026-10-08
 ---
 # Research diary
+
+## 2026-10-08 — SDK release and bank development adapter
+
+- Published [xkit v0.1.1-preview.1](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.1) and [bank reference preview.4](https://github.com/Xaaalera/heroes5-bank-reference/releases/tag/v0.1.0-preview.4). Remote archive digests match verified local files. SDK CI passed 197 Python tests, 8 JavaScript checks and 7 native tests; bank reference passed 6 checks with no skips.
+- Bank development verifies the crypt card and populated cache through automatic bank DLL and SDK core updates. A comment change checks the update lifecycle; a separate version-marked callback verifies changed code execution. Incompatible data structures are rejected. Predictor work remains paused.
+- The fresh bank player archive passed ordinary startup: installed selector instructions match the build and the game exits normally. The full check took 6.19 seconds. Card rendering from this exact archive is still unverified; development results do not establish it.
+- A new attempt to observe standalone H5U output without the SDK crashed. Windows attributes the fault to Granny, the game's animation library. Earlier dumps linked similar failures to DLL placement; this run has no new dump. [Microsoft PE documentation](https://learn.microsoft.com/en-us/windows/win32/debug/pe-format) explains relocation but does not prove this crash's cause. Ordinary startup and the visible marker remain unverified in a single matching process.
+
+## 2026-10-07 — published xkit SDK
+
+- [xkit 0.1.0](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.0) includes sources, Game API and a ready runtime. The downloaded archive matches the verified bundle by SHA-256. Python176, native7 and hosted CI passed.
+- Live `xkit check --player` verified added functions/core export, two-plugin HMR, state transfer, callback teardown, rollback and independent DLL packages during ordinary startup. Both owned games exited0; full111.33-second cycle. This is SDK evidence, not a new predictor accuracy result.
+- Console checks used physical Ctrl+Enter, history, Tab, mouse resizing and overflowing log scrolling without camera zoom. Returning to the map restored zoom. Severity levels and full structured journals remain available.
+- CI first exposed short/full Windows path comparisons, then missing Game API checkout. Both attempts are retained and corrected; final hosted CI passed. Predictor algorithm work remains paused.
+
+## 2026-10-06 — added core export through automatic HMR
+
+- The baseline DLL lacked the new named console-command export. Canonical core replacement made it available in the same game, retained the plugin counter, and allowed the CLI to load the map and read expected heroes.
+- A separate control used the existing source watcher. Saving the file automatically built/applied the new core in4.23 seconds from save to confirmed application. The new command worked, counter persisted and generation correctly advanced. Watcher/game exited normally; full control27.71 seconds.
+- This was an acceptance source snapshot, not another active devkit. Canonical checkout stayed unchanged. The first control incorrectly required generation to stay constant; that failed report remains retained. HMR advances generation while retaining state.
+- SDK archive inclusion and current source matching are verified. They do not establish fresh independent installation, physical input or ordinary delivery. Whole acceptance continues; new changes are unpublished.
+
+## 2026-10-06 — map restart and return to the menu
+
+- Added xkit game restart with an explicit map name and xkit game menu. Command help and human results share the terminal and embedded-console registry.
+- An owned process changed a map resource, then confirmed its reset and the startup script running again. The first read showed the base resource; the next showed the scripted value. Dispatcher return does not mean map initialization is finished.
+- A stock game capture confirmed the actual main menu in that same process. Subsequent map loading returned the eight expected heroes; the active plugin retained its counter and generation. The complete capture control took15.97 seconds with normal game/client exits.
+- Initial control-script errors remain separately preserved. Command tests passed29 and console17; a separate routing review found no issue. Physical panel input, added-export HMR and ordinary delivery are not certified by this control. New changes are unpublished.
+
+## 2026-10-06 — map loading through the human xkit command
+
+- xkit game map WorkshopPolygon is connected to stock native dispatch. Help and output support Russian and English, Tab completes map filenames, and the embedded console uses the same command registry.
+- The short client borrows the resident core without stopping plugins when it exits. Live control loaded the map, returned the eight expected heroes and preserved the active plugin's counter and generation. The corrected complete control took10.37 seconds with normal client/game exits.
+- The first control caught the map receipt being overwritten by status; it was fixed and the original report retained. Command JSON separates dispatcher return from verified game effect. Native checks passed6/6 and Python149; separate review concerns the new client mode and routing only.
+- Physical console entry, added-export HMR, the current independent archive and ordinary released-mod startup still need acceptance. New changes are unpublished.
+
+## 2026-10-06 — stock map loading from the menu
+
+- Shared Game API gained an experimental stock-console binding. It uses the game's string and allocator on the verified main thread; SDK marshals a separate message without taking plugin command numbers.
+- Menu command registration and an actual setting change were confirmed. Requesting WorkshopPolygon produced a captured loaded map; a separate query returned the eight expected heroes. The final complete control took8.07 seconds with normal client/game exits. Native checks passed6/6 and a separate review found no issue.
+- Two verification limits were found separately: an interpreter count stayed zero on the loaded map, and the first custom query assumed the wrong GetAllNames result format. Original unsuccessful reports remain retained; positive facts have a separate bounded acceptance record.
+- Public CLI integration is pending. It needs a resident-core borrowing mode that does not stop plugins when the diagnostic client closes. New-export HMR, full console and ordinary delivery acceptance remain open. The sandbox used import repair and its existing controller before first thread resume; new changes are unpublished.
+
+## 2026-10-06 — command errors now retain the latest outcome
+
+- The console panel connected to the real Universe menu. Previously a failed request displayed its message but left the latest outcome empty or stale; initial UI validation waited until timeout.
+- Native response handling now retains the public error outcome, displays its message and does not resend the command. A live control confirmed return to the commands tab with the failed outcome. Console checks passed15/15; a separate review found no issue in this delta.
+- Full menu acceptance has not passed. The seven current scenarios assume the authored map's hero. Existing game-command transport did not complete a menu hero query in time even with the controller installed before launch. A separate menu workflow and supported map loading from it are still needed; map-check requirements were retained. Original unsuccessful controls and timings remain in local logs.
+
+## 2026-10-06 — SDK core connection to the Universe menu
+
+- A capture of the owned test-process window confirmed the actual Universe menu. Its class differs from the original game's class; the previous SDK main-window check excluded this menu.
+- Window ownership, primary thread, absence of parent/owner and the window-instance module were verified. The core now recognizes both confirmed classes and refuses to choose among multiple eligible windows. Auxiliary and hidden windows remain rejected.
+- The current core DLL connected to the menu and closed the game through its native command; client and game returned success. The complete control took 4.51 seconds. Native checks passed6/6 and console checks15/15.
+- The control repaired only the known import ordering in the test process. No debugger, process-mitigation overrides or startup-script changes were used. This proves core menu dispatch, not reliable ordinary released-mod startup. Console-in-menu and transition-to-map still need live checks. Original logs and capture remain local; new changes are unpublished.
+
+## 2026-10-06 — separate animation-library placement failure
+
+- Rechecking the fixture revealed a limit in the earlier two-DLL result: the developer launcher repaired dependency ordering and the startup script in memory. It proves mod execution after that preparation, not ordinary released-package startup. The checker now creates an ordinary process without those patches; fresh live acceptance remains required.
+- An ordinary test-start dump without SDK DLLs confirmed a different failure: Granny accessed its old data location while a Universe graphics library occupied that location. This is a separate observation; the cause of the earlier freed graphics-device access remains unknown.
+- The existing animation preload did not establish reliable startup. With a monitor the process remained alive without a game window; a subsequent launch without a monitor failed in Granny. Successful startup and a fix are not confirmed.
+- Original dumps and numeric bindings remain local. Test-game files were restored. The next check must establish actual dependency placement in a failing preload launch. [Microsoft PE documentation](https://learn.microsoft.com/en-us/windows/win32/debug/pe-format) explains preferred versus actual image placement; the specific finding comes from the local dump.
+
+## 2026-10-06 — first test-start graphics failure
+
+- Two access-violation dumps were captured on fresh test profiles of the supported Universe build. The main game thread accessed freed Direct3D device data while checking available texture memory.
+- The second control failed before loading SDK or console DLLs. Early console-device creation does not explain this run; the experimental map-response wait was removed.
+- A comparable ordinary process-creation control also failed, with an unhandled breakpoint. A prepared SDK had previously passed on repeat startup; first-start reliability remains open. Device-release cause and the role of the launch method are not established.
+- Dumps, stacks and numeric bindings remain in unpublished local logs. Heap policy, registry and ordinary player startup were not changed. These findings concern the test setup and do not establish a defect across all Heroes V builds.
+
+## 2026-10-06 — suppressing camera mouse input
+
+- Question: does the SDK mouse suppression cover wheel zoom? The supported Universe build is identified in [Game API](https://github.com/Xaaalera/heroes5-game-api/blob/main/include/h5/build.hpp).
+- The base-camera constructor places `camera_zoom_mouse` in the mouse group. Its event handler skips that group when mouse input is suppressed; keyboard suppression gates another group.
+- Original machine-code emulation passed four flag combinations. The external binding helper was stubbed: calls and branches were checked, not camera movement.
+- Physical wheel input, delegation to another controller and full panel isolation remain unverified. Automated wheel input did not change zoom even with the panel hidden; that does not prove a fix.
+- Original logs remain local. The updated [Game API explanation](https://github.com/Xaaalera/heroes5-game-api/blob/main/docs/mechanisms/game-bindings.md) is prepared but unpublished. Microsoft documents separate [wheel-message](https://learn.microsoft.com/en-us/windows/win32/inputdev/wm-mousewheel) and [DirectInput mouse-state](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ee416630(v=vs.85)) interfaces; the current game session's route is not established.
+
+## 2026-10-05 — shared in-game diagnostics started
+
+- The owner requested a common bus for all modules: connection state and debug/info/warning/error messages in the game console. The requirement is tracked in the active backlog.
+- An SDK prototype keeps a bounded process-shared journal without DLL code pointers. Two simultaneously loaded DLLs published records that survived replacement and unloading while a buffer owner remained. Levels, UTF-8, bounds, overflow and pagination were checked; native tests: 6/6.
+- New starter plugins report their project name on the first actual callback. Python: 102 passed. Console output and the automatic module lifecycle registry are not implemented yet.
+- Nival documents Lua print as console output. No native ConsoleAppend contract was verified. Future live checks must distinguish output from command echo; Lua return does not prove visible console text. No game was launched for this stage.
+
+## 2026-10-05 — operation journals and retention
+
+- Main CLI commands record total time and outcome; nested builds link to their release. Journal write or close failures preserve the original command exception.
+- Shared writes use concurrent-log-handler. Four independent processes produced 100 large JSON records without loss; parallel operation contexts were checked separately.
+- Event journals rotate at approximately 10 MiB, keeping five gzip backups and deleting older event archives. `xkit diagnostics` lists archive paths. Reports, dumps and separate raw logs remain retained; no age-based cleanup is configured.
+- Python: 102 passed, including real rotation and preservation of unrelated files. Installed CLI produced an H5U in 1.32 seconds and a native package in 10.34 seconds. No game was launched for this logging work; direct legacy backend commands still need the common policy.
+
+## 2026-10-05 — complete current SDK check
+
+- `xkit check --player` passed in 65.2 seconds from a separate workspace. Added plugin functions and headers, a core export, core replacement and rollback, independent removal and reattachment worked in the same game.
+- Two packages built from the accepted sources loaded automatically. Stopping one preserved the other; callbacks were removed, both games exited with code 0 and staged files were restored.
+- Earlier checks found a missing test map and an overly long MSVC temporary object filename. The check now prepares a missing map while preserving an existing one and uses a short temporary filename. Compilation errors fail immediately instead of waiting for plugin application.
+- The HMR-ready message now waits for the selected plugin to be applied. Python: 95 passed; the message change was checked without the game. Map transitions, scene rendering in this run and published-source availability remain outside this check.
+
+## 2026-10-05 — canonical early dependency integration
+
+- Each native archive contains one plugin DLL plus shared `dinput8.dll` and `wsock32.dll`. The latter loads animation before the graphics wrapper and preserves all 75 socket export names/ordinals. Test fixtures are excluded.
+- Two independently released packages auto-loaded during ordinary startup and displayed 42/84. Stopping the first left the second active at 84. Shared hashes match and complete frames are retained.
+- Game and monitor ultimately exited with code 0, without dumps. The native exit deadline elapsed; a retained handle confirmed termination after WM_CLOSE. That limit remains explicit in the report.
+- Test deployment now writes a temporary file and atomically replaces the destination; restoration preserves external modifications. Python 92, native 5/5 and three GUI exit-race cases passed. Bounded review's restoration and partial-write findings were separately corrected and verified.
+
+## 2026-10-05 — successful early-loading experiment
+
+- Loader tracing identified why the first prototype failed: the audio DLL dynamically requested a socket export by ordinal. Direct executable imports did not cover that request.
+- The prototype now preserves all 75 system socket export names and ordinals. Four native implementations delegate to the actual system DLL; the others use standard export forwarding. [Windows mechanism](https://learn.microsoft.com/en-us/cpp/build/reference/exports).
+- Ordinary CreateProcess with the released plugin and prototype reached a rendered menu. Value 42 is visible in the full frame, and animation-image placement passed an owned post-initialization check. This run did not rewrite game imports or model descriptors.
+- Game and monitor exited with code 0, without dumps. Staged DLLs were hash-checked and removed. This is one successful monitored experiment; canonical integration and a final explanation of the earlier breakpoint remain open.
+
+## 2026-10-05 — stale reference provenance during ordinary startup
+
+- An ordinary-start monitor captured an animation-library fault after released-DLL auto-loading. A full dump includes the loaded model's type-description table, which the earlier mini-dump omitted.
+- The stale nested reference belongs to `IndicesMapFromTriToAnnotation`, part of the model's geometry description. Checked mapped-library tables and `GrannyInt32Type` relocate correctly. The call path reads file information and converts a legacy model format. The writer remains unidentified; an independent bounded analysis confirmed this limit.
+- A private early-dependency prototype passed local UDP forwarding. The game then rejected DLL initialization with that prototype. It is not included in the SDK or released packages.
+- The earlier executable breakpoint remains a separate observation; this dump does not establish its cause. Temporary DLLs were restored or removed after hash checks.
+
+## 2026-10-05 — managed shutdown after visual HMR
+
+- `xkit start` changed 42 → 43 → 42 in one process. The complete menu frame contains the updated value and an independently installed H5U marker. Ctrl+C closed the game with code 0 and no session failures.
+- Change detection to successful invocation took 1.816 seconds. Restoring the earlier source reused compiled objects and took 0.243 seconds. These are not full startup durations or measured pixel-update latency.
+- Switching SDK locations exposed CMake's source-bound cache. The fix selects a separate cache for another source location and preserves the prior files. Real startup and regression passed; Python 89 and native 4/4 passed, with no findings in the bounded cache review.
+- The earlier ordinary released-DLL startup exception outside the SDK remains separately unresolved.
+
+## 2026-10-05 — complete released DLL and H5U frames
+
+- A later menu control resolves the earlier capture limitation: the full window contains the rendered scene and value 42 from an independently released DLL. Windows Graphics Capture independently obtained a populated frame. The owned window was on-screen, responsive and not minimized; isolated child capture remains unsuitable for this scene.
+- A separate H5U-only session visibly shows the complete `[XalKit: solo-resource]` marker. The installed package matches the released hash and no native plugin was installed. Managed `xkit start` exited normally with game code 0.
+- The DLL session terminated after the private test's exit deadline. Its kernel handle was not retained, so the exit code is unknown. Visual delivery is verified; successful shutdown for that session is not claimed.
+- These frames use SDK test startup. The earlier breakpoint during ordinary released-DLL startup remains a separate unresolved case.
+
+## 2026-10-05 — released DLL and visual acceptance limits
+
+- An independently released plugin auto-loaded through the shared bootstrap in a placement-guarded game. No watcher was running; an addressed window event changed its UI caption to 42. Native shutdown returned 0 and staged files were hash-checked and removed.
+- PrintWindow rejected the child capture. WM_PRINT completed but produced a black image without recognized text. A window caption is not rendered-effect evidence; visual acceptance remains open.
+- Ordinary package startup ended with a breakpoint exception in the game executable before the plugin control appeared. Its system report is retained and its cause remains unknown.
+- A control without the installed bootstrap/plugin survived 25 seconds. After a diagnostic core was loaded to request shutdown, it faulted in the animation library. The dump shows a relocated image accessed through its former location. This is a separate failure, not a dump of the uninstrumented game before diagnostic loading.
+
+## 2026-10-05 — independent SDK installation
+
+- A frozen current-source export was installed into a fresh Python environment. Its Game API dependency was complete, with no Git metadata or workshop junctions. The export is an acceptance fixture, not another editable SDK.
+- From a separate project directory, help, setup, doctor, new, build, release and diagnostics passed. It produced an independent resource H5U and a ZIP containing one named plugin DLL plus the shared loader. Archive integrity passed and all 111 source hashes remained unchanged.
+- This verifies local candidate installation. Public-clone availability and visible in-game mod effects were not covered.
+
+## 2026-10-05 — SDK startup image check
+
+- Native `xkit start` checks the animation DLL at its loader event before initialization and records successful validation in the session report.
+- The initial guarded live plugin changed 42 → 43 → 42 in one game. After strengthening identity handoff, a repeat connected the plugin and exited normally; game and monitor returned 0.
+- Cancelling before resume terminates only the created test child. Native 4/4 and Python 88 checks passed; bounded review closed the handoff and cancellation defects it found.
+- A retained loader thread proved successful completion after 18.1 seconds. The previous 10-second wait was insufficient; the underlying delay remains unexplained. Only the loading budget increased; uncertainty never authorizes replay.
+- This verifies native SDK startup. Visible released-mod effects, ordinary startup outside the SDK and resource H5U remain separate acceptance scopes. [Developer workflow](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md).
+
+## 2026-10-05 — ordinary startup and failed clean control {#sdk-ordinary-capture}
+
+Startup without SDK diagnostic patches also produced a blank window capture. The local DLL bootstrap and crash monitor remained in this control; the process closed normally. Window readiness does not prove a fully loaded map.
+
+A separate launch without either component failed in granny2.dll, confirmed by the Windows event for the owned process. It is not successful visual acceptance and does not establish the cause of earlier blank frames. Bootstrap hashes were restored; no identical crash retry was performed. Original reports/events remain private. Startup cause and visual H5U acceptance remain open.
+
+## 2026-10-05 — active-window capture and further exclusions {#sdk-capture-dc}
+
+Copying the active owned game's window DC also produced a blank frame. Two further launches separately restored the background-update default and excluded legacy DLL mods from automatic loading. The map answered commands, captures remained blank and games closed normally. Profile bytes and DLL hashes were restored. Focus and cursor were untouched.
+
+These factors alone do not explain the observed result. Diagnostic startup changes remained enabled; an ordinary launch without them is still untested. The cause and visual acceptance of the finished H5U remain open. Frames and reports are retained in the workshop's private journal.
+
+## 2026-10-05 — negative SDK scene-capture control {#sdk-capture-order}
+
+In two owned test launches, the map answered a hero-list request while its window capture showed no scene. The first called Windows Graphics Capture before the first PrintWindow and again afterwards, without a diagnostic HUD. Both frames stayed blank. The second changed only the test profile's fullscreen setting; the result was unchanged and the original file was restored byte-for-byte.
+
+These observations do not support HUD, PrintWindow order or that window-mode setting as a sufficient explanation. They do not establish the physical display's image. Visual H5U acceptance remains open. Both games closed normally; shared cursor and focus were untouched. Original frames and reports remain in the workshop's private journal. This is local research, not a published release verification.
+
+## 2026-10-04 — editorial clarification of native mechanisms {#native-names-editorial}
+
+The [native UI](../modding/native-ui.md), [placement internals](placement-internals.md), [creature definitions](creatures.md), [build reference](universe-build.md) and earlier diary entries now describe native operations by their verified roles. Existing SDK symbols, including BankLayout and ScriptDispatchCall, link to their source; descriptive roles elsewhere are not claims of recovered original function names. Lookup tables now explain behavior and evidence rather than listing numeric pointers or structure offsets.
+
+This is an editorial change, not a new game experiment or algorithm correction. Original documents were preserved privately; experiment dates, build hashes, formulas, observed results and unresolved semantics are retained. Earlier observations remain subject to their dated corrections and evidence limits. Predictor work remains paused.
+
+## 2026-10-04 — multiple plugins and shared library
+
+The supervisor adds plugins without restart, routes commands by ID and stops removed plugins. Live control175242: state10/20→22 stays independent; new cpp returns77, a header changes it to88, deletion restores42. Alpha compile failure does not stop Beta; conflicting CALL ownership is rejected without damaging its owner. Removing Alpha restores the CALL, re-add starts fresh state, Beta retains22. Two same-source release packages load together. PID23568/50924 close normally; full cycle53.541s, second-plugin add4.678s, removal0.547s.
+
+Earlier172417 text readback passed while screenshots lacked UI. Shared WS_CLIPCHILDREN ownership fixes overdraw;173124 visibly shows both controls,175242 additionally checks diagnostic-control pixels. Readback alone is not rendered acceptance.
+
+[Game API](https://github.com/Xaaalera/heroes5-game-api) published at93ca6e7: C++ fingerprint/hash guards, five known hook sites from both mods/SDK, owned PID/creation/path checks. Consumers share one canonical library. Five independent lenses passed10/10 after test/doc fixes; native1/review9/docs/secrets/pre-push and GitHub CI37216059445 PASS. Native consumers compile; bank1/SDK51+4 PASS. Predictor algorithm work remains paused; historical accuracy is not transferred to a new hash.
+
+## 2026-10-04 — SDK ABI3 prototype final acceptance
+
+Reproducible plugin-check.py --live passes the current code's complete cycle: automatic compilation/reload of functions, window event/UI and real engine CALL observer; state persists, wrong hooks/rejected probes roll back, compiler errors retain the working version. Disable restores original CALL bytes and removes UI. The same source produces a package that starts through the ordinary DLL bootstrap and executes its engine callback without watcher/client.
+
+Final sdk-acceptance-20261004T170427/report.json and audit.json: PID49896/36064, both close normally after confirmed map readiness; sandbox restored. Save→UI2.101s, complete cycle38.385s. Current core-source/DLL/package hashes match; live and release source hashes are identical. map-49896.png visually confirms UI3001 over the adventure map.
+
+Python51/51 and native4/4 PASS. Machine tests compare GPR/ESP/flags, stack argument and x87/SSE for direct original call versus thunk; DF is cleared before C++ and restored before the original function. Map readiness and scaled OCR resolve the observed close issue; earlier failed records remain retained.
+
+This completes prototype acceptance, not arbitrary interception of any function: one main-thread E8 CALL observer and window event are supported; arbitrary prologues, multithread patching, schema migration, native crash containment and a complete UI toolkit remain extensions. Native mods use DLL/bootstrap; H5U supports resources/scripts referenced by the relevant game context. Code remains local and unpublished.
+
+## 2026-10-04 — real engine CALL hook and concurrent replacement
+
+ABI3 declares one x86 CALL site with its expected original target. In PID52212, the handler at [ScriptDispatchCall](https://github.com/Xaaalera/heroes5-game-api/blob/main/include/h5/hooks.hpp), the engine script-dispatch call, changes from version 3 to 4. A wrong hook site is rejected with rollback; disable restores the original 5 bytes and state survives. A native test separately proves reload waits for an active old call. Arbitrary prologues and cross-thread installation are unsupported; register preservation still needs a dedicated machine-level test.
+
+The complete live run is marked failed: OCR misses OK during close. The screenshot confirms the dialog and a background click closes that same PID. A retained image shows2x OCR recognizes OK; the fix is added. The next close control ran too early during startup-window replacement, then remained at a splash; normal recovery failed, so only verified owned PID46704 was terminated. Both failures are retained; successful close acceptance still requires confirmed map readiness.
+
+## 2026-10-04 — automatic UI reload and same-source release
+
+PID52020 verifies window callback registration/removal and UI2007→2010; sdk-event-ui-first-live.png shows the control over the map. PID49128 passes automatic source edits: UI2001→4002 in2.162s, rejected probe rolls the DLL back, compiler error retains working code, subsequent events4003/4004 preserve state. Returning to a version without events removes UI; both games close normally. This is a Windows child control and custom window message, not an arbitrary engine hook or XDB UI.
+
+The same payload source builds with the permanent bridge into one DLL. Its ZIP contains that DLL, shared dinput8 and hashes. PID19292 ordinary startup without watcher/client produces UI0→2001; complete cycle6.689s, normal close, sandbox restored. Artifacts sdk-auto-event-ui-live.json, sdk-release-build.json, sdk-release-first-live.json.
+
+Two-cpp incremental builds compile2→1→0→2→1 units: initial, one cpp edit, cache, header, release bridge. The tiny helper edit takes0.153s; not a large-mod estimate. Python51/51/native3/3 PASS. Prototype unpublished; engine detours and concurrent-update verification remain open.
+
+## 2026-10-04 — replaceable plugin calls on the game's window thread
+
+A persistent SDK bridge thread installs WH_CALLWNDPROC on the owned game window thread. PID48772 passes48 commands: thread ID independently matches process windows, new function42 is available, counter7 survives10 DLL switches and5 schema rejections. Whole cycle6.125s, hook/installer stop and game closes normally; bridge image stays until game exit. Artifact sdk-main-thread-first-live.json.
+
+First control PID52168 loses its hook after the temporary installer thread exits: the first call passes, the next returns102. Failure retained and fixed with a persistent installer; both games close normally. This proves window-thread dispatch; gameplay UI, arbitrary engine hooks/API and automatic save→main-call remain unverified. [Windows thread hook documentation](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowshookexw).
+
+## 2026-10-04 — automatic native reload after source save
+
+The SDK watcher detects a C++ edit, builds a generation DLL and applies it through a persistent bridge in owned visible game PID3320. The sequence1→2→compile error→1 passes without restart; save→confirmed call2.126s, complete launch/check/normal close9.286s. One stateless-function sample; game hooks/UI and live state are unverified. The first attempt lacked keystone in system Python before launch completion; the dependency-checked venv passed and no game remains.
+
+Separate local integration verifies a new function, retained counter7, schema rejection and recovery after compiler error. Watcher boundary tests4/4, native CTest3/3 PASS. Artifacts sdk-watch-local-integration.json, sdk-auto-watch-local.json, sdk-auto-watch-first-live.json. Sources remain local uncommitted devkit changes; the universal development environment is incomplete.
+
+## 2026-10-04 — SDK plugin lifecycle prototype
+
+The canonical devkit adds native/plugin_runtime.hpp: C ABI, persistent host-owned state, serialized calls and DLL switching. Game-free checks preserve state through20 switches, observe changed/new functions, reject incompatible ABI/schema and roll back state on a rejected call. MSVC x86 Release and CTest3/3 PASS, no skips. Watcher, game hooks/UI, schema migration and packaging remain open; native crashes and external game effects are outside rollback.
+
+A separate tiny-DLL benchmark reuses one MSVC environment: setup1.452s, five builds0.375–0.565s, all exit0. This is not full-mod or live-reload latency. [SDK source and limitations](https://github.com/Xaaalera/heroes5-mod-devkit): local uncommitted changes; the public link does not establish publication.
+
+## 2026-10-04 — first live native HMR experiment
+
+In one owned game process a research DLL first returns1. Its code is changed and rebuilt while the game runs; the new DLL returns2 and an added function42. PID remains unchanged, both research DLLs unload after completed calls, and the game closes normally. Edit→new call2.946s,build2.890s; one measurement, not a general mod speedup.
+
+The DLLs have no hooks or transferable state. Existing game mods retain detours/callbacks and lack a detach API; this experiment does not establish their reload. Write-opening the loaded file yields sharing violation, supporting separate generation filenames. Next: persistent bridge, versioned ABI, state transfer and old-call quiescence. [Windows FreeLibrary](https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary), [DllMain constraints](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-best-practices). Local evidence sdk-native-hmr-first-live.json; predictor remains paused.
 
 ## 2026-10-04 — RMG and refined source category
 
@@ -52,7 +286,7 @@ The test1/1 PASS3.293s retains earlier checks. Coefficient values are synthetic;
 
 Jazaz and level7 Hero1 each pass36 complete packs:72/72,mixed60/60,solo12/12. All pre-Start hero scores are28 and70 respectively. Composition, quantities, cells, frozenSHA/time and both after-Start checks are independently verified. Games close and original map/manifest are restored. Total measurement333.748s; phase timers overlap it. With the earlier Calid series three current profiles give108/108, but the complete algorithm is not accepted.
 
-The mastery patch is a separate War Machines bonus from Ring of Machine Affinity. Artifact91 is not Critical Strike skill91: these are distinct enums.192 synthetic cases execute original artifact search, patch and final0…4 range;1/1 PASS3.849s. Real equipment state and the skipping flag0x80 meaning remain unverified. Local evidence jazaz-full36-verification.json and hero1-offender-full36-verification.json; DLL31cc03e0 unchanged. Other branches and the final matrix remain open.
+The mastery patch is a separate War Machines bonus from Ring of Machine Affinity. Artifact91 is not Critical Strike skill91: these are distinct enums.192 synthetic cases execute original artifact search, patch and final0…4 range;1/1 PASS3.849s. Real equipment state and the meaning of the flag that makes the artifact scanner skip an entry remain unverified. Local evidence jazaz-full36-verification.json and hero1-offender-full36-verification.json; DLL31cc03e0 unchanged. Other branches and the final matrix remain open.
 
 ## 2026-10-04 — positive controls for two specializations
 
@@ -128,9 +362,9 @@ Oracle coverage expands to synthetic and loaded tables:1296 original-instruction
 
 ## 2026-10-04 — hero initial-score arithmetic
 
-Original helperbc1a50 clamps the index of two tables to1…8 and linearly changes their value with level using float32 coefficient0.033333335. Level31 is the upper table reference; rounding can differ from that endpoint. Levels above31 continue without a clamp. The result is multiplied by the target scalar and converted to an integer with the original x87 operation/rounding order.
+The original hero-baseline interpolation helper clamps the index of two tables to1…8 and linearly changes their value with level using float32 coefficient0.033333335. Level31 is the upper table reference; rounding can differ from that endpoint. Levels above31 continue without a clamp. The result is multiplied by the target scalar and converted to an integer with the original x87 operation/rounding order.
 
-648 original-instruction comparisons against independent arithmetic pass with synthetic tables and CW0xc7f; resource references and control word are restored. Only external resource getters are substituted, not arithmetic. Persistent test_hero_baseline_interpolation_matches_original_tier_level_and_scalar_boundaries passes1/1. This verifies a helper formula; loaded tables, scalar meaning and complete hero modifiers remain unconfirmed. DLL31cc03e0/sourcef8e9ba97 unchanged.
+648 original-instruction comparisons against independent arithmetic pass with synthetic tables and the x87 control word set to 24-bit precision and rounding toward zero; resource references and control word are restored. Only external resource getters are substituted, not arithmetic. Persistent test_hero_baseline_interpolation_matches_original_tier_level_and_scalar_boundaries passes1/1. This verifies a helper formula; loaded tables, scalar meaning and complete hero modifiers remain unconfirmed. DLL31cc03e0/sourcef8e9ba97 unchanged.
 
 ## 2026-10-04 — full cycle drops from80.18 to26.33min
 
@@ -214,7 +448,7 @@ Full native58/58 and live pre-Start forecast1/1 pass. DLL31cc03e0/sourcef8e9ba97
 
 The authored BlackDragon20 versus Angel100 control with fixed obstacles produced public2/models0 and failed projection readiness before Start. No saved forecast or final cells exist; this is a predictor failure, not a completed accuracy sample. The game closed normally, temporary map and manifest were restored, and obstacles removed. Local report: accuracy-campaign-20261004T035629Z-25968-polygon-admin.json, PID41664, DLL baca8975/source13ae9b,20.809s.
 
-Static caller85a110 invokes simple857380, runs859930 once on failure, then releases context85adf0 and returns. The extended merge/exclusion retry is absent here. After-Start handling of the remaining unplaced stack is still unverified; prediction must not add exclusion without that evidence.
+Static tracing shows that the simple-placement dispatcher invokes the initial placement pass, runs the simple-path fallback once on failure, then releases its placement context and returns. The extended merge/exclusion retry is absent here. After-Start handling of the remaining unplaced stack is still unverified; prediction must not add exclusion without that evidence.
 
 ## 2026-10-04 — current DLL with Peasants in the hero army
 
@@ -230,44 +464,44 @@ Local evidence: accuracy-campaign-20261004T034054Z-10192-polygon-admin.json, PID
 
 ## 2026-10-04 — large stack in live fallback
 
-- Sandbox ordinary pack19 temporarily becomes BlackDragon1 with the previous fixed-obstacle fixture. This is an ordinary neutral attack, not scripted859eb0. Forecast[84×1,13,2,size2] saved before Start matches exact1/1 afterward; direct859930 side0 confirms fallback after simple failure.
+- Sandbox ordinary pack19 temporarily becomes BlackDragon1 with the previous fixed-obstacle fixture. This is an ordinary neutral attack, not a scripted extended-placement path. Forecast[84×1,13,2,size2] saved before Start matches exact1/1 afterward; direct entry into the simple-path fallback on side 0 confirms fallback after simple failure.
 - At fallback entry the stack is unplaced; large helper writes its2×2 footprint in free front cells. Return/normal exit succeed. Hash/time/tuple/entry independently checked; map/manifest restored byte-for-byte and temporary H5U removed.
 - One-large/two-column/melee scope does not prove third-column or split-large join/remove behavior. DLL baca89 unchanged; raw JSON/derived map/manifest stay local and game resources are not published. [Predictor](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp).
 
 ## 2026-10-04 — live fallback with fixed obstacles
 
 - Sandbox uses the stock ArenaObstaclesGroup/FixedObstacles/blockedTiles format: X12/13,Y3..10 blocked, front two rows free. Temporary resource H5U belongs in UserMODs; the first erroneous data-directory installation did not apply obstruction and is not counted.
-- Ordinary single-source Peasant1000 andArcher40 invoke direct859930 side0 after partial simple placement. First stack already occupies[13,2], others remain unplaced. Forecasts before Start match2/2 battles and6/6(type,quantity,cell) units, retaining that first cell; melee and shooter-first column priority differ as in the game.
+- Ordinary single-source Peasant1000 andArcher40 invoke direct entry into the simple-path fallback on side 0 after partial simple placement. First stack already occupies[13,2], others remain unplaced. Forecasts before Start match2/2 battles and6/6(type,quantity,cell) units, retaining that first cell; melee and shooter-first column priority differ as in the game.
 - Return/normal exit succeed; exact owned overlay removed after hash verification. A supplemental manifest links immutable reports to overlay hash/setup. Derived game resources/raw JSON stay local and are not published. Third-column/2x2/remaining branches need separate controls. [Predictor](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp), [path observer](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
 
-## 2026-10-04 — direct859930 entry and unsuitable scripted control
+## 2026-10-04 — direct entry into the simple-path fallback and unsuitable scripted control
 
-- Passive path journal now records859930 itself; shared column-helper calls do not substitute for caller proof. New observer installs successfully on a normal Peasant1000 control with3/3 exact forecast and normal exit;859930 was not invoked.
-- Single BlackDragon20 on specified Grass_Big_01 matches1/1 exact forecast before Start, returns and exits normally. Native route is859eb0/859670 rather than the target simple fallback. This scripted pack therefore does not count as live859930 coverage and is not blindly repeated over scenes.
-- Next needs an ordinary single-source neutral attack with authored obstruction geometry and direct859930 entry. Production DLL unchanged; driver hash changed. Internal JSON/hash/time evidence retained but unpublished. [Observer](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
+- Passive path journal now records the simple-path fallback itself; shared column-helper calls do not substitute for caller proof. New observer installs successfully on a normal Peasant1000 control with3/3 exact forecast and normal exit; the simple-path fallback was not invoked.
+- Single BlackDragon20 on specified Grass_Big_01 matches1/1 exact forecast before Start, returns and exits normally. The native route uses extended placement and its general pass rather than the target simple fallback. This scripted pack therefore does not count as live coverage of the simple-path fallback and is not blindly repeated over scenes.
+- Next needs an ordinary single-source neutral attack with authored obstruction geometry and direct entry into the simple-path fallback. Production DLL unchanged; driver hash changed. Internal JSON/hash/time evidence retained but unpublished. [Observer](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
 
 ## 2026-10-04 — broad control of the new fallback DLL
 
 - Current DLL baca89 with Angels10 completes all36 authored cases:36/36 exact(type,quantity,cell),mixed30/30,solo6/6. Forecasts before Start, hashes/timing order and exact counters independently checked. Return and normal exit succeed; full cycle261.870s.
-- Recorded path set does not contain859930; shared column-helper calls do not prove forced fallback. Synthetic240-case/selector checks remain a separate evidence scope. Other armies/arenas/RMG, live fallback and remaining branches stay open. Earlier273/273 is not transferred to this DLL. Internal JSON retained but unpublished. [Harness](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
+- Recorded path set does not contain the simple-path fallback; shared column-helper calls do not prove forced fallback. Synthetic240-case/selector checks remain a separate evidence scope. Other armies/arenas/RMG, live fallback and remaining branches stay open. Earlier273/273 is not transferred to this DLL. Internal JSON retained but unpublished. [Harness](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/accuracy-campaign.py).
 
 ## 2026-10-04 — simple placement fallback implemented
 
-- DLL baca89 adds source-simple fallback following original859930: source order, partial placed mask/occupancy, shooter-gated large/small passes, cursor reset per helper. Width2/3 comes from the army deployment rectangle; unsupported right-side/full-height geometry is not guessed.
+- DLL baca89 adds source-simple fallback following the original simple-path fallback: source order, partial placed mask/occupancy, shooter-gated large/small passes, cursor reset per helper. Width2/3 comes from the army deployment rectangle; unsupported right-side/full-height geometry is not guessed.
 - C++ matches original instructions on240 synthetic mixed two/three-column cases. Selector separately reproduces partial failure and[13,2],[13,1],[12,1]. Full native58/58 pass without skips.
 - Live Archer40→twoArcher20 control matches2/2 and exits normally. It did not require fallback; forced live fallback remains pending.273/273 belongs to previous DLL a8d794; new broad matrix is still needed. Internal JSON/archives/timings retained but unpublished. [C++](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp), [native tests](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py).
 
 ## 2026-10-04 — uncovered fallback pass
 
-- Original857380/859930 tested on a synthetic field: three identical ranged1x1 stacks, two columns, local rows0/1 free and2..9 blocked. Simple placement writes the first stack[13,2] then fails; fallback preserves it and writes remaining[13,1],[12,1].
+- The original initial simple-placement pass and its fallback were tested on a synthetic field: three identical ranged1x1 stacks, two columns, local rows0/1 free and2..9 blocked. Simple placement writes the first stack[13,2] then fails; fallback preserves it and writes remaining[13,1],[12,1].
 - This exposes a specific gap in current source-simple prediction, which stops after failure. Completed273/273 does not cover it; no live miss claimed here. Native regression passes; production DLL is unchanged.
-- 858ba0 copies records in input order rather than sorting;742e10 releases temporary references. The test substitutes getters/copy for identical records; placement passes run original instructions. Mixed records and optional third-column mode remain incomplete. Internal fixture/log retained but unpublished. [Tests](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py).
+- The source-record copy function preserves input order rather than sorting; the temporary-reference cleanup function releases those references. The test substitutes getters/copy for identical records; placement passes run original instructions. Mixed records and optional third-column mode remain incomplete. Internal fixture/log retained but unpublished. [Tests](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/tests/test_native_preview.py).
 
 ## 2026-10-04 — strict ten-load control
 
 - Current DLL a8d794 completes273/273 exact(type,quantity,cell) matches across ten fresh loads: mixed213/213,solo60/60. Polygon144/144,RMG-A72/72,RMG-B57/57. Every game exits normally; no return failures in this series.
 - Independent strict verification checks current source/DLL/tool/map hashes, expected packs/load order, prediction hashes, storage before Start/observation and exact counters. PASS applies to this dataset; goal_completefalse keeps complete-algorithm verification separate. Legacy CLI exit1 is its old Superadmin acceptance flag, not a miss in this series.
-- Live equality/same-state thresholds, effects/linked/dispatcher/baseline/null-hero/859930 and complete RNG boundaries remain open. One clean series does not explain earlier hero loss. Full cycle4800.185s; report217989320bytes. Whole-JSON rewrites warrant profiling, not a claim that they caused all elapsed time. Internal JSON/hash evidence is retained but unpublished. [Verifier](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/check.py).
+- Live equality/same-state thresholds, effects/linked/dispatcher/baseline/null-hero/simple-path fallback and complete RNG boundaries remain open. One clean series does not explain earlier hero loss. Full cycle4800.185s; report217989320bytes. Whole-JSON rewrites warrant profiling, not a claim that they caused all elapsed time. Internal JSON/hash evidence is retained but unpublished. [Verifier](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/scripts/check.py).
 
 ## 2026-10-04 — current DLL on both RMG maps
 
@@ -302,7 +536,7 @@ Local evidence: accuracy-campaign-20261004T034054Z-10192-polygon-admin.json, PID
 ## 2026-10-03 — original scripted army before placement construction
 
 - Correction to the previous control: original-source generation0 does not establish absent scripted entry. A checked arena-call return and separate placement generation0→1 prove native placement-window construction. Visibility/non-minimization were checked; rendered deployment remains unproven.
-- On the pinned build, an owned temporary observer at0x5d434c captured original StartCombat arguments: Peasant80, Footman35, Priest12. They matched the authored army and preceded combat construction, without consuming final positions. Original code restored; normal game exit confirmed.
+- On the pinned build, an owned temporary observer at the StartCombat call captured its original arguments: Peasant80, Footman35, Priest12. They matched the authored army and preceded combat construction, without consuming final positions. Original code restored; normal game exit confirmed.
 - The DLL's ordinary attack handler does not run on this path. Scripted source/generation support is still unimplemented; named-arena prediction accuracy remains unproven. The console VM separately lacks type/pcall; the earlier type query timed out. Internal logs/decompilation are retained but unpublished. [DLL source](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp).
 
 ## 2026-10-03 — blank capture does not establish game phase
@@ -675,7 +909,7 @@ Across ten loads, the older candidate matched **all occupied cells in 111 of 149
 
 **Question:** observer error, DLL startup or placement calculation?
 
-**Method:** ordinary DLL loading, WorkshopPolygon, pack_8 → pack_12 → pack_15. Predictions were saved before Start; GetUnitPosition recorded positions separately. An additional observer captured parameters before `0x8598e0`; these records were read after combat and never supplied to the predictor. Random state was not fixed between runs.
+**Method:** ordinary DLL loading, WorkshopPolygon, pack_8 → pack_12 → pack_15. Predictions were saved before Start; GetUnitPosition recorded positions separately. An additional observer captured placement-context parameters before formation selection; these records were read after combat and never supplied to the predictor. Random state was not fixed between runs.
 
 **Observations:** the general formation matched 5/7 and 6/7. Run32808 matched1/7 with `defensive=1`: the engine used a protective pass the predictor does not yet implement. This establishes a different placement sequence, not the sole cause of older run31848, whose flag was not recorded. No causal link to DLL loading was established.
 
@@ -789,10 +1023,10 @@ JSON SHA-256 at this entry: `3865ebc7623a024edafc5f208834070916b0bf651e27f5f3e63
 
 | Earlier assumption | Check result | Consequence |
 |---|---|---|
-| Field `+0xdc` is creature tier | Registration/XML loading identify CombatSize, range 1…2 | Do not substitute tier into CombatSize>2 |
+| The CombatSize field is creature tier | Registration/XML loading identify CombatSize, range 1…2 | Do not substitute tier into CombatSize>2 |
 | Equal scores retain input order | Ordinary sorting selects the right lane on equality; 10 equal rows yield 8,4,6,10,2,7,3,5,9,1 | Preserve native ordering instead of arbitrary stable sorting |
 | Spread evenly rounds rows | Integer division gives {0,4,9} for R=10,N=3 | Rounding to {0,5,9} changes the result |
-| Crowded stacks always merge | The inner loop at `0x8599d0` is unreachable for tested valid vectors N=0,1,2,3,7,64 | A branch name does not establish merging |
+| Crowded stacks always merge | The inner loop of the apparent same-type merging function is unreachable for tested valid vectors N=0,1,2,3,7,64 | A branch name does not establish merging |
 
 **Method:** instruction/field-loader analysis and emulation of individual routines. Ordinary numeric sorting matched 3280 sequences of length 0…7 over {0,1,2}; this enumeration did not test the getter-dependent comparator.
 
@@ -844,7 +1078,7 @@ JSON SHA-256 at this entry: `3865ebc7623a024edafc5f208834070916b0bf651e27f5f3e63
 
 **Method:** the C++ function receives speed, Flying, CombatSize and an obstacle mask. Orthogonal steps cost 2, diagonals 3, with a `speed × 2` budget; highlighting includes complete legal landing footprints. Other projections and visible player-army cells are added to the static mask.
 
-**Algorithm check:** 16 authored fields matched execution of original `0xb5f0d0` in an emulator. Allocation/free were substituted and the source EXE hash was checked. Cases covered diagonals, a wall, flight/landing, a 2×2 corridor, boundaries and buffer guards. This is the preserved September 23 result, not a new September 24 run.
+**Algorithm check:** 16 authored fields matched execution of the original movement-cost propagation function in an emulator. Allocation/free were substituted and the source EXE hash was checked. Cases covered diagonals, a wall, flight/landing, a 2×2 corridor, boundaries and buffer guards. This is the preserved September 23 result, not a new September 24 run.
 
 **In-game observation:** frames showed the 2×2 genie's range, a smaller golem range and dismissal on exit. A subsequent background run passed five battles, card switching, cursor exit, menu blocking, type changes and cleanup after Start. These results do not confirm physical RMB holding.
 
@@ -870,7 +1104,7 @@ Historical DLL hash: `8290957f03a1eb526168430f69fefb45fa2a01859a96f19f2251d7dd27
 
 **Resource check:** ArmyText, seven CreatureFace.1–7 cells, 40×40 frames and 34×34 portraits were found. `Visible` was already true; visibility alone was insufficient.
 
-**Next experiment:** a temporary entry counter at `0x5f8050`, without reading actual guards.
+**Next experiment:** a temporary entry counter in the army-list renderer, without reading actual guards.
 
 | Action | Cumulative counter |
 |---|---:|
@@ -880,7 +1114,7 @@ Historical DLL hash: `8290957f03a1eb526168430f69fefb45fa2a01859a96f19f2251d7dd27
 
 **Conclusion:** the bank tooltip path invokes the renderer. The four additional calls cannot be separated into show/hide events; no frame recording exists for this experiment. Invocation does not establish safe integration of a new reference model.
 
-**Static refinement:** model slots `+0x38/+0x3c/+0x40` supply population condition, count and indexed access. The inspected implementation uses a 24-byte stride; `0x5fd080` computes count and `0x5fd0a0` obtains an entry. An entry carries texture, numeric and string labels. This describes one implementation, not a ready ABI for arbitrary objects.
+**Static refinement:** the model's virtual methods supply the population condition, element count and indexed access. The inspected implementation uses a 24-byte record stride: its count method reports the number of entries and its indexed-access method obtains one entry. An entry carries texture, numeric and string labels. This describes one implementation, not a ready ABI for arbitrary objects.
 
 [Current native-window explanation](../modding/native-ui.md). Addresses apply only to the pinned EXE. The manual record was reconstructed September 24; no separate public counter dump is available.
 
