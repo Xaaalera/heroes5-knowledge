@@ -8,9 +8,40 @@ section: modding
 kicker: HEROES V · UNIVERSE
 translation: modding/devkit/
 description: Our mod development environment
-updated: 2026-09-26
+updated: 2026-10-08
 ---
 # Our mod development environment
+
+## Start with xkit
+
+[xkit v0.1.1-preview.1](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.1) contains sources, Game API and ready SDK DLLs. Download `xkit-sdk.zip`, extract `xkit`, and follow the [installation guide](https://github.com/Xaaalera/heroes5-mod-devkit/blob/5f4af7931aaf431fd364f0386d927ce7a718c698/README.md). H5U authors need no C++ compiler; native plugins require MSVC Build Tools.
+
+```text
+xkit setup
+xkit new demo --resources
+xkit start demo
+xkit release demo
+```
+
+For a native project use `xkit new demo-native`. Saving supported C++ code automatically builds and replaces its DLL in the same game. Added functions/core exports, state transfer, callback teardown and rollback are verified. The game itself needs no rebuild; DLL code still compiles.
+
+Each resource mod ships as its own H5U and each native plugin as its own DLL. Shared infrastructure uses `dinput8.dll` and `d3d9.dll`; the game original stays local as `d3d9.universe.dll`. Existing predictor/reference plugins are not automatically migrated to HMR. Unconfirmed cleanup stops updates and preserves recovery data.
+
+Bank reference now has a dedicated development adapter: `xkit start army-reference --map WorkshopPolygon`, `xkit build army-reference` and `xkit release army-reference`. The owned test game verifies crypt-card rendering and populated cache continuity through bank DLL and SDK core updates. Incompatible data structures are rejected. Predictor work remains paused; this adapter does not migrate the predictor to HMR.
+
+## Historical prototypes and verification limits
+
+The observations below belong to earlier revisions. Their unpublished-prototype caveats do not describe the current release.
+
+**Multiple plugins:** `plugin-watch.py --plugins` observes directories, adds new plugins to the same running game and removes deleted ones. State and compiler failures are separate; cpp/header additions were live-tested. Removal clears UI/hooks, and re-add starts fresh state. SDK source is shared while each plugin owns a compiled bridge instance. Two player DLL packages also passed ordinary simultaneous startup.
+
+Shared build verification, known hook catalog and owned-process guards now live in the separate [Game API library](https://github.com/Xaaalera/heroes5-game-api), published after five independent reviews and successful CI. Predictor, bank reference and devkit consume one library without source copies. Review configuration is included in the library repository; players do not need those tools.
+
+**ABI3 prototype acceptance is complete:** current code passes automatic function/UI/validated engine CALL-hook updates, state preservation and error rollback, followed by ordinary startup of a same-source player DLL package. Latest save→UI2.101s; Python51/native4 PASS. Repeat with plugin-check.py --live. Supported boundaries and retained failures are in the [diary](../reference/research-diary.md). Changes are not published yet.
+
+The local October4,2026 prototype adds native watch: saving C++ automatically recompiles changed units and replaces the DLL in the same game. Window callbacks, numeric UI, state and rejected-update rollback are verified; one save→UI sample took2.162s. `plugin-watch.py --release` builds the same sources into a ZIP with `bin/Heroes5Mods/Plugins/<name>.dll` and shared `bin/dinput8.dll`; ordinary startup passed without the developer client. These changes are not published yet. Arbitrary engine hooks and a general UI API remain open. [Evidence and limits](../reference/research-diary.md).
+
+Resource mods and scripts supported by the relevant game context can use H5U. The native SDK requires DLL/bootstrap; putting a DLL inside H5U does not execute it. Existing predictor/reference plugins keep their legacy contracts and do not become reloadable automatically.
 
 [**Heroes V Mod Devkit on GitHub**](https://github.com/Xaaalera/heroes5-mod-devkit) builds H5U packages, creates a separate game copy and controls a test process through commands. Its source now lives in an independent repository containing the shared tools used in our mod development.
 

@@ -17,10 +17,10 @@ updated: 2026-09-26
 | Мод | Что показывает | Доступность | Исходники |
 |---|---|---|---|
 | [Предиктор расстановки](deployment-preview.md) | Проекции, карточки грейдов и область хода | [Скачать ZIP](https://github.com/Xaaalera/heroes5-deployment-preview/releases/download/v0.1.0-preview.2/Heroes5DeploymentPreview-0.1.0-preview.2.zip) | [GitHub](https://github.com/Xaaalera/heroes5-deployment-preview) |
-| [Справочник хранилищ](bank-reference.md) | Возможные армии по тирам, диапазоны и альтернативы | [Скачать ZIP](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.2/Heroes5BankReference-0.1.0-preview.2.zip) | [GitHub](https://github.com/Xaaalera/heroes5-bank-reference) |
+| [Справочник хранилищ](bank-reference.md) | Возможные армии по тирам, диапазоны и альтернативы | [Скачать ZIP](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.4/army-reference.zip) | [GitHub](https://github.com/Xaaalera/heroes5-bank-reference) |
 
 ## Скачать моды
 
-Опубликованы экспериментальные DLL-пакеты 0.1.0-preview.2. Оба используют обычный запуск Heroes/Lobby и один общий dinput8.dll. EXE-кандидаты отменены. Перед установкой прочитай страницу выбранного мода: там состав файлов, удаление и фактически проверенные ограничения.
+Опубликованы экспериментальные DLL-пакеты: предиктор preview.2 и справочник preview.4. Каждый запускается через Heroes/Lobby; отдельного EXE мода нет. Их совместная установка в этих конкретных версиях не проверена. Перед установкой прочитай страницу выбранного мода: там состав файлов, удаление и фактически проверенные ограничения.
 
 [Разработчикам: сборка и тестовый запуск](../modding/devkit.md#mod-sources).

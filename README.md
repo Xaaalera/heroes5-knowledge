@@ -1,5 +1,9 @@
 # База знаний Xaaalera о Героях
 
+[xkit v0.1.1-preview.1 — готовый SDK](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.1) · [RU: начать разработку](docs/modding/devkit.md) · [EN: get started](docs/en/modding/devkit.md). Архив содержит исходники, Game API и готовые служебные DLL; игра с Universe устанавливается отдельно. / The archive includes sources, Game API and ready SDK DLLs; install the Universe game separately.
+
+[Game API](https://github.com/Xaaalera/heroes5-game-api) — shared C++ game bindings / общая библиотека привязок к игре.
+
 
 ## Author and related projects / Автор и связанные проекты
 
@@ -108,3 +112,14 @@ RU — `docs/llms.txt` — короткий указатель на исходн
 EN — `docs/llms.txt` indexes source Markdown, devkit and evidence. Page metadata links it with describedby and links the corresponding GitHub Markdown source with alternate/type=text/markdown. No duplicate article copies are maintained. Main may precede a deployed site, so record revisions during verification. AGENTS.md defines check order. Mandatory docs-review includes `docs/llms.txt` alongside Markdown files. `npm run check` validates llms.txt and its own-repository source targets; a browser test checks discovery on RU/EN pages under the Pages prefix. Client discovery varies; automatic loading by every agent is not guaranteed.
 
 Format references / описание форматов: [llms.txt proposal](https://llmstxt.org/) · [AGENTS.md](https://agents.md/).
+
+## Standalone use / Работа вне мастерской
+
+RU: этот репозиторий можно использовать отдельно. Начни с его README и AGENTS.md; глобальная папка мастерской не обязательна. Если есть .gitmodules, выполни `git submodule update --init --recursive` после клонирования. В связанной мастерской используй её sync-subrepos вместо создания вторых checkout.
+EN: This repository can be used independently. Start with its README and AGENTS.md; the global workshop is optional. If .gitmodules exists, initialize pinned dependencies with `git submodule update --init --recursive`. In a linked workshop use its canonical dependency synchronization.
+
+- [Devkit commands / команды SDK](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md).
+- [Game API contracts / контракты библиотеки](https://github.com/Xaaalera/heroes5-game-api/blob/main/docs/mechanisms/game-bindings.md).
+- [Research index / карта исследований](https://xaaalera.github.io/heroes5-knowledge/reference/research-index/).
+
+[Code standards / стандарты кода](https://github.com/Xaaalera/claude-skills).

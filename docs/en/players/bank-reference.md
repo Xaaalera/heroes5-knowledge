@@ -8,7 +8,7 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/bank-reference/
 description: 'Possible bank armies: what the mod shows and how to read its cards.'
-updated: 2026-09-26
+updated: 2026-10-08
 ---
 # Bank reference
 
@@ -17,14 +17,14 @@ The mod shows **possible armies by tier**, portraits, ranges and alternatives. I
 
 ## Download and install
 
-**[Download DLL package 0.1.0-preview.2](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.2/Heroes5BankReference-0.1.0-preview.2.zip)** — experimental release. Keep ordinary Heroes/Lobby startup; there is no separate mod EXE. Code → Download ZIP downloads source, not the player package.
+**[Download DLL package 0.1.0-preview.4](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.4/army-reference.zip)** — experimental xkit delivery. Automatic DLL installation and normal exit are verified; current-package card rendering is not yet verified. Keep ordinary Heroes/Lobby startup; there is no separate mod EXE. Code → Download ZIP downloads source.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-bank-reference) · [Universe](https://h5lobby.com/).
 
 The player ZIP needs Windows and the [supported game build](../reference/universe-build.md). No Python, Git or devkit is needed.
 
 1. Exit the game and editor. The DLL package contains the shared `bin/dinput8.dll`, `bin/Heroes5Mods/WorkshopBankReference.dll` and `UserMODs/workshop-army-reference.h5u` for the installed game directory.
-2. Both of our mods share one `dinput8.dll`. Do not replace a copy belonging to another mod; that combination has not been checked.
+2. Retain the original `bin/d3d9.dll` as `bin/d3d9.universe.dll`, then install the package's `bin/d3d9.dll`. Preserve an already retained original and back up the previous `dinput8.dll`. Shared xkit files are installed once; compatibility with another loader is unverified.
 3. Start through Heroes/Lobby as usual. There is no separate player EXE for this mod.
 4. Hover a supported bank on the map: the possible-army reference should appear.
 
@@ -33,6 +33,8 @@ Remove the old text prototype `workshop-object-reference.h5u` from UserMODs if p
 ## Disable and remove
 
 Exit the game. Remove `UserMODs/workshop-army-reference.h5u` and `bin/Heroes5Mods/WorkshopBankReference.dll`. Leave other UserMODs files alone. Remove shared `bin/dinput8.dll` only after removing all of our DLL mods, and only if it came from our package.
+
+After removing all xkit mods, restore the backed-up input DLL, remove our `d3d9.dll` and rename the retained `d3d9.universe.dll` back to `d3d9.dll`. Keep shared files while another mod uses xkit. If file ownership is unknown, restore your game backup.
 
 [Developers: source build and test environment](../modding/devkit.md#mod-sources).
 
@@ -67,6 +69,8 @@ Public imp-cache data gives these reference ranges by tier:
 The T2 range belongs only to that variant: do not add other tiers or infer that the selected bank actually has T2. [Calculation source](../reference/research-diary.md#banks).
 
 ## Limits
+
+The following results belong to the older preview.2 delivery; they do not validate player archive preview.4 rendering. A separate xkit development adapter supports bank DLL and core updates; its crypt-card check does not replace the player archive's card check.
 
 Historical evidence covers the imp cache. On September 25, automatic DLL loading displayed the crypt card at 1264×921. Both DLLs were active together, including five predictor battle cycles. Other banks, display sizes and all feature combinations remain incompletely checked.
 
