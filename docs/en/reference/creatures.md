@@ -14,18 +14,18 @@ updated: '2026-09-24'
 
 **Creature XDB stores base stats, footprint and upgrades.** For example, `Speed` sets movement speed, `CombatSize` defines the footprint and `Upgrades` lists upgrades. These are type properties, not the quantity or hidden upgrade of a particular army.
 
-| XDB field | Meaning in inspected mechanisms | Definition offset in the pinned x86 build |
-|---|---|---|
-| AttackSkill / DefenceSkill | Base attack/defence | +0x44 / +0x48 |
-| Shots | Used by the basic shooter-role test | +0x4c |
-| MinDamage / MaxDamage | Ordinary damage limits | +0x50 / +0x54 |
-| Speed / Flying | Base speed and flight | +0x58 / +0x60 |
-| Health | Health per creature | +0x64 |
-| CreatureTier | Tier, distinct from CombatSize | +0x8c |
-| CombatSize | 1×1 or2×2 | +0xdc |
-| Upgrades | Upgrade-reference range | +0x104…+0x108 |
+| XDB field | Meaning in inspected mechanisms |
+|---|---|
+| AttackSkill / DefenceSkill | Base attack/defence |
+| Shots | Used by the basic shooter-role test |
+| MinDamage / MaxDamage | Ordinary damage limits |
+| Speed / Flying | Base speed and flight |
+| Health | Health per creature |
+| CreatureTier | Tier, distinct from CombatSize |
+| CombatSize | 1×1 or2×2 |
+| Upgrades | Upgrade-reference range |
 
-Offsets belong to the [pinned build](universe-build.md), not another version's API. Heroes, effects, skills and week rules can alter final values.
+The native interpretation was checked against the [pinned build](universe-build.md); it is not an API guarantee for other versions. Heroes, effects, skills and week rules can alter final values.
 
 ## Universe elemental definitions
 
@@ -42,7 +42,7 @@ This separates Fire as a shooter and Air as flying in the [placement example](..
 
 ## CombatSize is footprint; Upgrades lists upgrades
 
-Field registration and the XML loader establish +0xdc as CombatSize, clamped to1…2. The investigated archive contains 179 Creature definitions:102 size 1 and 77 size 2. Other archives/DLLs may add more creatures.
+Field-name registration and the XML loader identify CombatSize as the footprint property, clamped to 1…2. The investigated archive contains 179 Creature definitions:102 size 1 and 77 size 2. Other archives/DLLs may add more creatures.
 
 Consequently the neutral-splitting condition CombatSize>2 cannot occur after that loader; creature tier is not the tested value. Upgrades is independently confirmed by its loader; Peasant.xdb lists MILITIAMAN and LANDLORD. A reference list does not establish the hidden army's actual upgrade.
 

@@ -28,7 +28,7 @@ An army tooltip needs **a window template, the selected root and a populated dat
 
 `MonsterTooltip` and `CommonAdvObjTooltip` already reference this container. The renderer finds child elements **by name**.
 
-In the inspected model, virtual slots `+0x38/+0x3c/+0x40` supply the population condition, element count and element access. A 24-byte record contains a texture reference and numeric/string labels. These offsets describe one implementation, not a universal C++ ABI.
+In the inspected model, virtual methods supply the population condition, element count and indexed element access. A 24-byte record contains a texture reference and numeric/string labels. This describes one implementation, not a universal C++ ABI.
 
 ## Read ArmyWnd from your installation {#read-army-resource}
 
@@ -97,15 +97,15 @@ Window and projection references belong to an owner and generation; Start or scr
 
 Before a native call, check the window pointer, calling convention, reference ownership, active screen and execution thread. A function name or virtual-method table alone is insufficient.
 
-## Addresses in the inspected build
+## Native operations in the inspected build
 
-| Purpose | Address |
+| Operation | Role in the UI |
 |---|---|
-| Army-list renderer | `0x5f8050` |
-| Root selection before layout | `0x5f8800` |
-| Combat tooltip source | `0x546f40` |
-| Creature descriptor creation | `0x4bd550` |
-| Rotator creation | `0x789010` |
+| Army-list rendering | Finds named portrait cells and fills their images and labels from the model |
+| Root selection before layout | Chooses the bank window before normal population; the shared SDK identifies this hook as [BankLayout](https://github.com/Xaaalera/heroes5-game-api/blob/main/include/h5/hooks.hpp) |
+| Combat tooltip source | Supplies the creature description to `CScreenTooltipController`, which displays the card and handles RMB |
+| Creature descriptor creation | Builds the reference description for one creature type without a hero or real combat stack |
+| `CSimpleCreaturesRotator` creation | Provides the creature view used by the detailed card |
 
 **Scope:** the [pinned build](../reference/universe-build.md) only; no universal plugin API. The [devkit](devkit.md) contains development tools. Evidence: resources, call counter and game checks on September 21–23, 2026. Original game DLLs were not replaced with a generic loader.
 

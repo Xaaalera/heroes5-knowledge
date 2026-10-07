@@ -12,7 +12,7 @@ updated: '2026-09-24'
 ---
 # The investigated Universe build
 
-**Native addresses and experiments in this knowledge base refer to the four file hashes below.** “Universe 2.0” alone does not identify the build: the mod changes resources, UI and executable code. Compare your installation’s SHA-256 hashes before repeating native experiments.
+**Native mechanisms and experiments in this knowledge base refer to the four file hashes below.** “Universe 2.0” alone does not identify the build: the mod changes resources, UI and executable code. Compare your installation’s SHA-256 hashes before repeating native experiments.
 
 ## Exact native baseline
 
@@ -25,7 +25,7 @@ updated: '2026-09-24'
 | `um.dll` | `1956c00b371d22a3e1a644394ff3e7159b6ec36d660d5ffa36628fcf63fd0fc6` |
 | `d3d9.dll` | `5eb152357f99d53397b764384d5cf9a0f6aece733ced30a34186ac57fb15be25` |
 
-All are x86 PE, machine 0x14c. The inspected EXE ImageBase is `0x400000`; function addresses in these articles are absolute virtual addresses, not file offsets. EXE equality does not establish resource/profile/runtime-patch equality. From your game directory:
+All four are 32-bit x86 Windows executable files in PE format. Native bindings must target the matching executable; the source code owns the build-specific pointer details. EXE equality does not establish resource/profile/runtime-patch equality. From your game directory:
 
 ```powershell
 Get-FileHash -Algorithm SHA256 .\bin\H5_Game.exe
