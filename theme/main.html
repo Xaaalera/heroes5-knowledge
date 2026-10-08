@@ -22,7 +22,7 @@
   <script src="{{ 'assets/site.js'|url }}" defer></script>
 </head>
 <body class="{% if is_home %}page-home{% else %}page-article{% endif %}" data-faction="{{ faction }}" data-search-index="{{ 'search/search_index.json'|url }}" data-search-base="{{ ''|url }}" data-language="{{ language }}">
-  <div class="world-background" aria-hidden="true"><img src="{{ ('assets/worlds/' ~ faction ~ '.png')|url }}" width="1920" height="1080" alt="" fetchpriority="high"></div>
+  <div class="world-background" aria-hidden="true"><img src="{{ ('assets/worlds/' ~ faction ~ '.avif')|url }}" width="1920" height="1080" alt="" fetchpriority="high"></div>
   <div class="world-caption"><span aria-hidden="true">✦</span> {{ world[language] }}</div>
   <a class="skip-link" href="#main">{{ labels.skip }}</a>
   <header class="site-header">

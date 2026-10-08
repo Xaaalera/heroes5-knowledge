@@ -158,6 +158,7 @@ test('all eight backgrounds load as viewport backgrounds and survive reload and 
     const background = page.locator('.world-background');
     await expect(background).toHaveCSS('position', 'fixed');
     await expect(page.locator('body')).toHaveAttribute('data-faction', faction);
+    await expect(background.locator('img')).toHaveAttribute('src', new RegExp(`assets/worlds/${faction}\\.avif$`));
     await expect.poll(() => background.locator('img').evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
     await page.reload();
     await expect(page.locator('body')).toHaveAttribute('data-faction', faction);

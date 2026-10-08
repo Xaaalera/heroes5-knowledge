@@ -2,6 +2,8 @@
 
 ## Documentation ownership and article critique / Документация и критика статей
 
+RU: Исходные PNG задников сохраняются в `docs/assets/worlds`; сайт использует отдельные AVIF-копии. Не заменять исходники сжатыми файлами. EN: Retain original background PNGs in `docs/assets/worlds`; the website uses separate AVIF copies. Never replace the originals with compressed derivatives.
+
 RU: Единственный источник живой документации — [наш сайт](https://xaaalera.github.io/heroes5-knowledge/), исходники статей — knowledge/docs. В репозиториях оставляем краткий README с назначением и ссылками, AGENTS с рабочими правилами и обязательные лицензии; руководства, справочники и объяснения не копируем по репам. Исторические исследования и приватные журналы сохраняем отдельно, не выдаём за текущую инструкцию. Изменение поведения сопровождается обновлением соответствующей статьи.
 EN: The website is the sole source of living human documentation, authored in knowledge/docs. Repositories retain concise README entry points, AGENTS working rules and required notices; manuals, references and explanations link to the site instead of maintaining parallel copies. Preserve historical/private evidence separately and update the canonical article when behavior changes.
 
