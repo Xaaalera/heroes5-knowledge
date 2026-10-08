@@ -14,6 +14,8 @@ EN: Read the relevant article and its scope first. Draft is not a verified speci
 - [Research diary in English](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/en/reference/research-diary.md): EN experimental history.
 - [Pinned build / Проверенная сборка](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/reference/universe-build.md): hashes and applicability; EN counterpart is linked in its metadata.
 
+- [Technology inventory](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/reference/technology-stack.md): current tools, usage and authoritative version sources; English counterpart linked in metadata.
+
 ## Devkit / Стенд
 
 - [Devkit agent instructions / Инструкции агенту](https://raw.githubusercontent.com/Xaaalera/heroes5-mod-devkit/main/AGENTS.md): bilingual reading order, checks and reporting rules.

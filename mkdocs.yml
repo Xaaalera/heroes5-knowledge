@@ -39,6 +39,7 @@ nav:
   - Публичные данные: modding/public-information.md
 - Справочник:
   - Game API: reference/game-api.md
+  - Технологии проекта: reference/technology-stack.md
   - Исходники замков: reference/castle-artwork.md
   - Команды xkit: reference/xkit-commands.md
   - Карта знаний: reference/research-index.md
@@ -69,6 +70,7 @@ nav:
     - Public inputs: en/modding/public-information.md
   - Reference:
     - Game API: en/reference/game-api.md
+    - Project technologies: en/reference/technology-stack.md
     - Castle artwork originals: en/reference/castle-artwork.md
     - xkit commands: en/reference/xkit-commands.md
     - Knowledge map: en/reference/research-index.md

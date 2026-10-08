@@ -2,6 +2,8 @@
 
 ## Documentation ownership and article critique / Документация и критика статей
 
+RU: Перед новым инструментом или зависимостью читай [список технологий](https://xaaalera.github.io/heroes5-knowledge/reference/technology-stack/) и проверяй код/манифесты. Сначала переиспользуй имеющееся; добавление, обновление или удаление зависимости требует обновить список с назначением, местом использования и источником версии. Исследованные варианты не выдавать за подключённые. EN: Consult the [technology inventory](https://xaaalera.github.io/heroes5-knowledge/en/reference/technology-stack/) and actual code/manifests before introducing tools or dependencies. Reuse existing solutions first; additions, upgrades and removals must update purpose, usage location and version source in the inventory. Research candidates are not installed technologies.
+
 RU: Исходные PNG задников сохраняются в `docs/assets/worlds`; сайт использует отдельные AVIF-копии. Не заменять исходники сжатыми файлами. EN: Retain original background PNGs in `docs/assets/worlds`; the website uses separate AVIF copies. Never replace the originals with compressed derivatives.
 
 RU: Единственный источник живой документации — [наш сайт](https://xaaalera.github.io/heroes5-knowledge/), исходники статей — knowledge/docs. В репозиториях оставляем краткий README с назначением и ссылками, AGENTS с рабочими правилами и обязательные лицензии; руководства, справочники и объяснения не копируем по репам. Исторические исследования и приватные журналы сохраняем отдельно, не выдаём за текущую инструкцию. Изменение поведения сопровождается обновлением соответствующей статьи.
