@@ -1,14 +1,15 @@
 {
-  "diffHash": "b7b50af246189de7e968a75f71dd4a57c3d4bc52e70b6b9033817a517ec6765a",
-  "commitSha": "8058c36bcbeb76d4425e7315ff54588375636c80",
+  "diffHash": "872661b0c9c9669d7e2d50e4e03d3b018ec864436de13023c84432f82461282e",
+  "commitSha": "924f8bef13e6746f3e74960d2f64ca95b02f72da",
   "perAgent": {
     "craft": {
       "score": 10,
       "verdict": "PASS",
       "reviewer": "/root/event_api_final_craft",
-      "reviewed_head": "8058c36bcbeb76d4425e7315ff54588375636c80",
+      "reviewed_head": "924f8bef13e6746f3e74960d2f64ca95b02f72da",
       "reviewed_files": [
         ".claude/review.config.json",
+        ".review/attestations/b7b50af246189de7e968a75f71dd4a57c3d4bc52e70b6b9033817a517ec6765a.json",
         ".review/attestations/e3b0cc89b9048ba17b080a281e4e6a151ecd421b5601e28506b7fcbaa505301f.json",
         "AGENTS.md",
         "README.md",
@@ -35,16 +36,17 @@
         "docs/reference/research-diary.md",
         "docs/reference/universe-build.md"
       ],
-      "evidence": "Final26-path Knowledge craft review PASS10/10: exact prior coverage plus paired command-location clarity fix preserve canonical ownership, bilingual draft status and bounded claims.",
-      "verification_limits": "Exact unchanged committed-snapshot coverage composed with current deltas; draft metadata and bounded gameplay claims retained."
+      "evidence": "Actual27-path Knowledge craft publication review PASS10/10: exact prior composition and5Markdown preview4 deltas preserve canonical ownership, bilingual draft status and bounded installed-public-archive evidence.",
+      "verification_limits": "Prior exact source coverage reused only where current Git blobs match; current draft statuses and bounded native/resource acceptance limits retained."
     },
     "architecture": {
       "score": 10,
       "verdict": "PASS",
-      "reviewer": "/root/event_api_final_architecture (independent knowledge architecture reviewer)",
-      "reviewed_head": "8058c36bcbeb76d4425e7315ff54588375636c80",
+      "reviewer": "/root/event_api_final_architecture (independent final knowledge architecture reviewer)",
+      "reviewed_head": "924f8bef13e6746f3e74960d2f64ca95b02f72da",
       "reviewed_files": [
         ".claude/review.config.json",
+        ".review/attestations/b7b50af246189de7e968a75f71dd4a57c3d4bc52e70b6b9033817a517ec6765a.json",
         ".review/attestations/e3b0cc89b9048ba17b080a281e4e6a151ecd421b5601e28506b7fcbaa505301f.json",
         "AGENTS.md",
         "README.md",
@@ -71,16 +73,17 @@
         "docs/reference/research-diary.md",
         "docs/reference/universe-build.md"
       ],
-      "evidence": "Knowledge changes preserve canonical SDK implementation, portable bilingual documentation, scoped evidence and independent mod delivery; no architecture findings.",
-      "verification_limits": "Exact unchanged committed-snapshot coverage composed with current deltas; draft metadata and bounded gameplay claims retained."
+      "evidence": "Knowledge preview.4 updates preserve canonical SDK ownership, human entry points, independent delivery and scoped evidence boundaries; no architecture findings.",
+      "verification_limits": "Prior exact source coverage reused only where current Git blobs match; current draft statuses and bounded native/resource acceptance limits retained."
     },
     "tests": {
       "score": 10,
       "verdict": "PASS",
       "reviewer": "/root/event_api_tests",
-      "reviewed_head": "8058c36bcbeb76d4425e7315ff54588375636c80",
+      "reviewed_head": "924f8bef13e6746f3e74960d2f64ca95b02f72da",
       "reviewed_files": [
         ".claude/review.config.json",
+        ".review/attestations/b7b50af246189de7e968a75f71dd4a57c3d4bc52e70b6b9033817a517ec6765a.json",
         ".review/attestations/e3b0cc89b9048ba17b080a281e4e6a151ecd421b5601e28506b7fcbaa505301f.json",
         "AGENTS.md",
         "README.md",
@@ -107,16 +110,17 @@
         "docs/reference/research-diary.md",
         "docs/reference/universe-build.md"
       ],
-      "evidence": "Static publication text preserves bounded site/native/live evidence; no new executable coverage or false-green defect found in the exact26-path scope.",
-      "verification_limits": "Exact unchanged committed-snapshot coverage composed with current deltas; draft metadata and bounded gameplay claims retained. SDK table width at320 not directly asserted by existing browser suite."
+      "evidence": "Static preview4 publication delta preserves installation/application/visual/resource evidence limits; no new executable-coverage or false-green defect in27-path range.",
+      "verification_limits": "Prior exact source coverage reused only where current Git blobs match; current draft statuses and bounded native/resource acceptance limits retained."
     },
     "docs": {
       "score": 10,
       "verdict": "PASS",
       "reviewer": "docs",
-      "reviewed_head": "8058c36bcbeb76d4425e7315ff54588375636c80",
+      "reviewed_head": "924f8bef13e6746f3e74960d2f64ca95b02f72da",
       "reviewed_files": [
         ".claude/review.config.json",
+        ".review/attestations/b7b50af246189de7e968a75f71dd4a57c3d4bc52e70b6b9033817a517ec6765a.json",
         ".review/attestations/e3b0cc89b9048ba17b080a281e4e6a151ecd421b5601e28506b7fcbaa505301f.json",
         "AGENTS.md",
         "README.md",
@@ -143,8 +147,8 @@
         "docs/reference/research-diary.md",
         "docs/reference/universe-build.md"
       ],
-      "evidence": "PASS10: all22 Markdown covered; final paired console/terminal clarification read,20 other blobs unchanged; bank contradiction resolved and draft limits retained.",
-      "verification_limits": "Exact unchanged committed-snapshot coverage composed with current deltas; draft metadata and bounded gameplay claims retained.",
+      "evidence": "PASS10: all22 Markdown covered,17 exact unchanged blobs composed and five preview4 publication deltas directly reviewed; no draft promotion or broader acceptance inferred.",
+      "verification_limits": "Prior exact source coverage reused only where current Git blobs match; current draft statuses and bounded native/resource acceptance limits retained.",
       "review": {
         "reviewer": "/root/sdk_ci_final_docs (independent Codex knowledge documentation reviewer)",
         "files": [
@@ -174,51 +178,48 @@
         "criteria": {
           "purpose": {
             "verdict": "PASS",
-            "evidence": "All22 Markdown paths preserve prior per-file assessment. Current SDK entry explains install/create/start/release and developer diagnostics; bank guide explains possible guards rather than hidden actual guards. New diary states the checked scenario and bounded timing."
+            "evidence": "Prior full per-file purpose judgment composed for17 exact unchanged Markdown blobs. Current devkit entry points to preview4/native-cache fix and pinned setup/command sources. New diary explains public-archive installation, same-source native development/release, separate timings and original-chain noSDKH5U failure."
           },
           "structure": {
             "verdict": "PASS",
-            "evidence": "Fifteen Markdown Git blobs match approved0e515007 snapshot exactly; their prior full review is composed. Seven current document deltas directly reviewed. Human workflows lead devkit pages; historical prototype section retains older claims; paired diary additions are dated and preserve original observations. Paired bank opening now agrees with Limits."
+            "evidence": "Five current docs deltas read directly: AGENTS current-release pointer, paired devkit release/cache sentence/pinned links and paired dated diary append. Existing command table and terminal-only diagnostics distinction preserved. Older diary entries remain intact; all20 article drafts unchanged."
           },
           "specificity": {
             "verdict": "PASS",
-            "evidence": "CLI table supplies concrete map/restart WorkshopPolygon arguments, screenshot/menu/diagnostics and expected results. Native timing3.31s, build1.82s and full10.21s match directly read private receipt, with capture/positioning included and no first-GPU-frame claim. Bank receipt covers T1-T4/A-B/portraits/counts, one Crypt/RU1024x768. Final8058c36 paired paragraph directly read: in-game console exposes map/menu/capture; xkit diagnostics explicitly runs in terminal. RU/EN agree and command/evidence scope is preserved. All20 other Markdown Git blobs match preceding68c6a98 review exactly."
+            "evidence": "SDK0c406f45/preview4/APIa71985c/CI37726287809 and SHAa945e8db exact archive provenance match directly read publication/install receipts. Diary3.28s is save-to-confirmed application;6.60s install and109.12s separate workflow are correctly distinct. Internal memory pointer explanation conveys bounded dump mechanism without raw memory addresses."
           },
           "reproducibility": {
             "verdict": "PASS",
-            "evidence": "Directly reviewed uv installation/editable tool/new terminal/setup/new --resources/start/release steps; native example names start demo-native and release demo-native. Pinned f5d9a766 README/commands and local implementation agree that restart needs a map name. Resource H5U compilation needs no C++ compiler; hot replacement in an open map is not promised. Player install/remove instructions preserve originals and shared-loader ownership. No procedure execution by reviewer. Final8058c36 paired paragraph directly read: in-game console exposes map/menu/capture; xkit diagnostics explicitly runs in terminal. RU/EN agree and command/evidence scope is preserved. All20 other Markdown Git blobs match preceding68c6a98 review exactly."
+            "evidence": "Pinned0c406f45 README/commands identify exact release setup and final-cache behavior; local pinned source read. Prior UV/new-terminal/setup/new/start/release examples remain unchanged and concrete. sdk-public-preview4-installed.json confirms actual public ZIP UV install6.5952s; sdk-installed-public4-native.json confirms installedCLI start42-to77/normal stop/native release; sdk-public4-resource-release.json confirms actual resource build/release0 exit. No reviewer execution or pureH5U gameplay inferred."
           },
           "evidence": {
             "verdict": "PASS",
-            "evidence": "Read sdk-event-published.json: passed=true,draft=false,SDKf5d9a766,CI37716897971 success,archive SHA7c2b24c6. Read bank-player-card-event-current-verified.json: exact archive SHAfcce3a08,selector verified before diagnostics/unchanged,visual_verified=true,normal exit0,26.7246s,one Crypt/RU1024x768. Read sdk-save-to-visible-verified.json: passed/visual_verified true,same owner,3.3068s capture,1.8158s build,10.2109s run; underlying adventure-scene capture excluded. Supplied site41pages/23Python/8Node/13browser PASS not rerun. Scoped public summaries are available; raw visual receipts remain private and draft article status is retained."
+            "evidence": "Directly read sdk-relocated-cache-published.json: preview4/0c406f45/SHAa945e8db/CI37726287809 success/draftfalse. Public install receipt matches sameSHA and6.5952s. Native receipt owner40568,42gen1 to77gen2,3.278863s save-to-applied,109.11736s fullrun excluding install,game0/monitor0/CLI0,release source77 same as HMR and one-plugin ZIPbcde76f5. Resource receipt passes build/release only. Read original-no-package failed receipt and owner-pinned dump diagnosis/limits: no other H5U, tested package restored, noSDKmodules,stale arena pointer verified; monitored dump supports observed baseline pattern, not every graphics failure. Supplied198Python/8Node/7native and finalSDKCI are recorded receipts, not reviewer reruns; final knowledge gates will repeat."
           },
           "applicability": {
             "verdict": "PASS",
-            "evidence": "All20 changed articles remain draft. SDKpreview3/GameAPIa71985c current source, dated historical counts and player archivepreview4 are distinct. Diagnostic positioning after ordinary startup is disclosed; no all-bank/map/resolution/native-hook/resource-H5U guarantee. Timing is one fixture UI observation upper bound, not exact first game frame."
+            "evidence": "One actual installed publicpreview4 lifecycle in existing owned workspace; response/application timing does not prove a visible/GPU frame. NoSDKH5U visual acceptance remains open; original no-package fault and monitored dump retain distinct owners/conditions. No universal fullSDK/root-goal PASS, predictor resumption, all-map/bank/resolution guarantee or native released-player startup inference from this receipt. All20 articles stay draft."
           },
           "translations": {
             "verdict": "PASS",
-            "evidence": "Directly compared new RU/EN devkit install, CLI table, bank limits and diary claims: commands, revisions, timings, display size and exclusions agree. Decimal comma/point formats preserve values. Rechecked paired68c6a98 corrections: both introductions now state the Crypt card check and refer to separate control conditions. Prior identical paired articles retain approved parity. Final8058c36 paired paragraph directly read: in-game console exposes map/menu/capture; xkit diagnostics explicitly runs in terminal. RU/EN agree and command/evidence scope is preserved. All20 other Markdown Git blobs match preceding68c6a98 review exactly."
+            "evidence": "Direct RU/EN comparison of preview4 revision/pinned links/cache sentence and new dated diary: installation6.60s versus separate109.12s workflow,applied3.28s,no first-visible timing,H5U packaging versus open gameplay acceptance and preserved/restored package match. Decimal comma/point differences are formatting.17 unchanged Markdown blobs preserve earlier reviewed parity."
           },
           "maintenance": {
             "verdict": "PASS",
-            "evidence": "Current26-path inventory/all22 Markdown dispositions included.15 identical Markdown Git blobs composed from approved0e515007. Prior JSON head b43e746 is stale metadata, but target/scope records final current-worktree hashes: verified hashes against approved snapshot LF/CRLF forms; four mixed-line-ending files match current raw hashes and normalized approved Git content. Superseded private-path attestation removed; no documentation contract lost. No draft promotion; dated diary originals retained. Final8058c36 paired paragraph directly read: in-game console exposes map/menu/capture; xkit diagnostics explicitly runs in terminal. RU/EN agree and command/evidence scope is preserved. All20 other Markdown Git blobs match preceding68c6a98 review exactly."
+            "evidence": "Actual fixed-base27 paths,22Markdown explicitly dispositioned. Parent supplied26 was superseded by Git inventory: added03da publicb7b50af attestation remains alongside fixed-base deletione3b0. All22 prior reviewed8058 Markdown blobs match03da exactly;17 remain identical at924f8be. Five current publication updates read with relevant receipts. No changed draft frontmatter or rewritten historical diary. Knowledge has no docs.config declared layers; no invented whole-tree audit certification."
           }
         },
         "findings": []
-      },
-      "resolved_findings": [
-        "Bank download intro agrees with the separately scoped Crypt verification.",
-        "Console map/menu/capture and terminal diagnostics entry points explicitly distinguished."
-      ]
+      }
     },
     "security": {
       "score": 10,
       "verdict": "PASS",
       "reviewer": "/root/bank_runtime_review",
-      "reviewed_head": "8058c36bcbeb76d4425e7315ff54588375636c80",
+      "reviewed_head": "924f8bef13e6746f3e74960d2f64ca95b02f72da",
       "reviewed_files": [
         ".claude/review.config.json",
+        ".review/attestations/b7b50af246189de7e968a75f71dd4a57c3d4bc52e70b6b9033817a517ec6765a.json",
         ".review/attestations/e3b0cc89b9048ba17b080a281e4e6a151ecd421b5601e28506b7fcbaa505301f.json",
         "AGENTS.md",
         "README.md",
@@ -245,10 +246,10 @@
         "docs/reference/research-diary.md",
         "docs/reference/universe-build.md"
       ],
-      "evidence": "Full26-path fixed-base coverage retained at8058c36; final two-line console/terminal clarification introduces no security finding.",
-      "verification_limits": "Exact unchanged committed-snapshot coverage composed with current deltas; draft metadata and bounded gameplay claims retained."
+      "evidence": "All27 fixed-base paths accounted for; current SDK4 guidance/dated records and existing relative public attestation introduce no concrete security exposure.",
+      "verification_limits": "Prior exact source coverage reused only where current Git blobs match; current draft statuses and bounded native/resource acceptance limits retained."
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-10-08T02:48:41.922Z"
+  "timestamp": "2026-10-08T04:34:03.279Z"
 }
