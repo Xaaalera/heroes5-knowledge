@@ -17,18 +17,20 @@ The mod shows **possible armies by tier**, portraits, ranges and alternatives. I
 
 ## Download and install
 
-**[Download DLL package 0.1.0-preview.4](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.4/army-reference.zip)** — experimental xkit delivery. Automatic DLL installation, the Crypt card and normal exit are verified; separate control conditions are described below. Keep ordinary Heroes/Lobby startup; there is no separate mod EXE. Code → Download ZIP downloads source.
+**[Download DLL package 0.1.0-preview.4](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.4/army-reference.zip)** — experimental release with shared loading and graphics compatibility DLLs. The full SDK and development tools are not installed into the game. DLL loading, the Crypt card and normal exit are verified; separate control conditions are described below. Keep ordinary Heroes/Lobby startup; there is no separate mod EXE. Code → Download ZIP downloads source.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-bank-reference) · [Universe](https://h5lobby.com/).
 
 The player ZIP needs Windows and the [supported game build](../reference/universe-build.md). No Python, Git or devkit is needed.
 
-1. Exit the game and editor. The DLL package contains the shared `bin/dinput8.dll`, `bin/Heroes5Mods/WorkshopBankReference.dll` and `UserMODs/workshop-army-reference.h5u` for the installed game directory.
-2. Retain the original `bin/d3d9.dll` as `bin/d3d9.universe.dll`, then install the package's `bin/d3d9.dll`. Preserve an already retained original and back up the previous `dinput8.dll`. Shared xkit files are installed once; compatibility with another loader is unverified.
-3. Start through Heroes/Lobby as usual. There is no separate player EXE for this mod.
-4. Hover a supported bank on the map: the possible-army reference should appear.
+1. Exit the game and editor.
+2. If `UserMODs` still contains the old text prototype `workshop-object-reference.h5u`, move it to a backup folder outside the game: it blocks installation and stretches the card. Back up an existing `workshop-army-reference.h5u` separately before replacing it.
+3. Retain the original `bin/d3d9.dll` as `bin/d3d9.universe.dll`. Preserve an already retained original. Back up the previous `bin/dinput8.dll`, if present.
+4. Extract the ZIP and copy its `bin` and `UserMODs` folders into the installed game directory, merging them with the matching folders. This installs the shared `bin/dinput8.dll` and `bin/d3d9.dll`, the reference `bin/Heroes5Mods/WorkshopBankReference.dll` and `UserMODs/workshop-army-reference.h5u`.
+5. Start through Heroes/Lobby as usual. There is no separate player EXE for this mod.
+6. Hover a supported bank on the map: the possible-army reference should appear.
 
-Remove the old text prototype `workshop-object-reference.h5u` from UserMODs if present: it adds unwanted text and stretches the card. Preserve an existing H5U separately before replacing it. The reference DLL and H5U must belong to the same release. Validation limits are described below.
+Shared xkit files are installed once; compatibility with another loader is unverified. The reference DLL and H5U must belong to the same release. Validation limits are described below.
 
 ## Disable and remove
 
