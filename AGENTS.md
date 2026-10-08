@@ -2,7 +2,7 @@
 
 ## Problem-solving order
 
-Current release / Текущий выпуск: [xkit preview.3](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.3), SDK `f5d9a76`, Game API `a71985c`, hosted CI37716897971 success. New game-frame capture and bounded source-save-to-visible test results are in the newest diary entry. Bank preview.4 has a separate one-Crypt/RU1024×768 player-card check after ordinary startup; diagnostic positioning is disclosed. Preserve older dated entries below. Do not transfer this scope to all maps, banks, input gestures or no-SDK H5U acceptance.
+Current release / Текущий выпуск: [xkit preview.4](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.4), SDK `0c406f4`, Game API `a71985c`, hosted CI37726287809 success. Exact public archive installation, source HMR and same-source native release passed; latest diary preserves timings and original no-SDK resource baseline failure. Bank preview.4 has a separate one-Crypt/RU1024×768 player-card check after ordinary startup; diagnostic positioning is disclosed. Preserve older dated entries below. Do not transfer this scope to all maps, banks, input gestures or no-SDK H5U acceptance.
 
 For every problem, first search our logs, research, backlog and handoff for prior occurrences, attempts, solutions and their verified conditions. Then research the web when needed for causes, documentation, existing solutions and libraries. Only then choose an approach and act. Repeat known experiments only for a new hypothesis or changed conditions. Record links, conclusions and verification limits in the existing log.
 
