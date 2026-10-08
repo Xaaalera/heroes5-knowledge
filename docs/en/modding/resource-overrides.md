@@ -8,7 +8,7 @@ section: modding
 kicker: HEROES V · UNIVERSE
 translation: modding/resource-overrides/
 description: Test a resource override with a menu marker
-updated: '2026-09-24'
+updated: '2026-10-08'
 ---
 # Test a resource override with a menu marker
 
@@ -66,4 +66,53 @@ The example uses the original ZIP-member timestamp plus 2 seconds. Identical inp
 
 XML clones additionally require checking edited nodes, relative `href` and `ObjectRecordID`. Text normalized to UTF-8 for analysis must be returned to its original encoding before packaging. [Formats and links](../reference/formats.md).
 
-For repeated cycles, follow [devkit setup](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#setup-and-first-mod) and the [build/deploy/rollback reference](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#resource-workflow). Builder source: [mod-dev.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/mod-dev.py).
+For ordinary development, use the [xkit guide](devkit.md) and [command reference](../reference/xkit-commands.md). Builder source: [mod-dev.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/mod-dev.py).
+
+## xkit resource project recipe
+
+`xkit new ui-example --resources` creates `mods/ui-example/mod.json`. Create a sibling `files` directory when adding your own resources. Edit the recipe, then run `xkit build ui-example`. Its `id` must match the project name. Archives come from the selected game's `data` directory; resources use their internal game paths.
+
+| Recipe field | Purpose |
+|---|---|
+| `source_archive`, `source_path` | Required source archive and resource, hashed in the build report |
+| `append` | Optional text appended to the main resource |
+| `xml_patches` | XML template edits, each with required `source` and optional `archive` and `target` |
+| `encode_texts: "utf-16-le"` | Convert your UTF-8 TXT files under `files` to UTF-16LE with BOM; otherwise preserve bytes |
+
+For an XML edit, `archive` defaults to `source_archive` and `target` to `source`. Operations address existing elements using ElementTree paths:
+
+| Operation | Effect |
+|---|---|
+| `clear`: list of paths | Clear the selected element's children, text and attributes |
+| `text`: path to string mapping | Replace element text |
+| `attributes`: path to attribute mapping | Add or replace the specified attributes |
+| `append_xml`: path to XML-string list mapping | Append child elements from fragments |
+
+Missing elements or invalid XML cause refusal rather than construction of a similar template. Cloning removes the root `ObjectRecordID` and resolves relative `href` links against their original directory. A new window file also needs a reference from game resources: packaging a clone alone does not make the game show it.
+
+For example, add `xml_patches` to the generated recipe while retaining its required `id`, `source_archive` and `source_path`:
+
+```json
+{
+  "xml_patches": [
+    {
+      "archive": "data.pak",
+      "source": "UI/Tooltips/CommonAdvObjTooltip/ArmyWnd.(WindowSimple).xdb",
+      "target": "UI/XkitExample/ArmyWnd.(WindowSimple).xdb",
+      "text": { "./Visible": "true" }
+    }
+  ]
+}
+```
+
+This is a recipe fragment, not a replacement for the entire `mod.json`. It creates a separate standard-panel clone and sets its existing `Visible` element. The original template and this operation were checked through the builder in memory; this example does not wire the new window into the interface. After `xkit build ui-example`, check the new internal H5U path, then verify game usage separately.
+
+Files under `files` preserve game paths. Paths must remain inside the project; case-insensitive collisions are refused. XML/XDB is parsed for validity. Build reports record every consumed template's archive, path and SHA-256, and deployment rechecks those dependencies. ZIP dates account for the newest consumed template, without establishing game loading precedence.
+
+## Deployment ownership and rollback
+
+Ordinary `xkit start ui-example` manages the test session; player delivery uses `xkit release ui-example` and the package's README.txt. Low-level resource deployment journals ownership before replacement, then records installed state. Redeployment accepts only a known owned hash; foreign destination files are not overwritten.
+
+Low-level `rollback` removes its owned installation, restoring absence of the mod rather than a previous version. External file edits cause refusal to delete it. Deployment and rollback require the game and editor closed; do not start the game externally while files are being written. After a crash, first confirm the recorded process has exited. Do not blindly remove unknown temporary files or locks.
+
+These checks concern the resource builder and its isolated tests. A valid ZIP and successful installation do not prove that the game actually uses the chosen window or resource.

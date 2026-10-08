@@ -111,7 +111,7 @@ Size: 197 110
 
 [Запись исследования](../reference/research-diary.md#army-tooltip-probe).
 
-Инструменты проверки: [диагностический перехват native-probe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/native-probe.py) и [захват кадра/OCR](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#изображение-и-закрытие). Код карточек самого предиктора в devkit не входит.
+Инструменты проверки: [диагностический перехват native-probe.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/native-probe.py) и [исходник захвата кадра/OCR](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/game-ui.ps1). Это исходники диагностических инструментов, а не инструкция съёмки через консоль. Код карточек самого предиктора в devkit не входит.
 
 [Исходник карточек предиктора](https://github.com/Xaaalera/heroes5-deployment-preview/blob/main/src/preview_plugin.cpp) и [рецепт справочника хранилищ](https://github.com/Xaaalera/heroes5-bank-reference/blob/main/mod.json) теперь хранятся в отдельных репозиториях.
 

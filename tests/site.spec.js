@@ -123,6 +123,22 @@ test('English homepage and article fit on a narrow viewport', async ({
       () => document.documentElement.scrollWidth > innerWidth,
     ),
   ).toBe(false);
+  for (const languagePrefix of ['', 'en/']) {
+    for (const articleRoute of [
+      'modding/devkit/', 'modding/console/', 'reference/xkit-commands/',
+      'reference/game-api/', 'reference/formats/', 'contributing/',
+      'modding/native-projects/', 'modding/resource-overrides/', 'modding/test-maps/',
+      'modding/native-ui/',
+    ]) {
+      const response = await page.goto(`${languagePrefix}${articleRoute}`);
+      expect(response.status()).toBe(200);
+      await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+      await expect(page.locator('html')).toHaveAttribute('lang', languagePrefix ? 'en' : 'ru');
+      expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+      const translationLink = page.getByRole('link', { name: languagePrefix ? 'Русская версия' : 'English version' });
+      await expect(translationLink).toHaveAttribute('href', new RegExp(`${languagePrefix ? '' : 'en/'}${articleRoute}$`));
+    }
+  }
 });
 
 

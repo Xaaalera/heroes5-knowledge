@@ -1,125 +1,34 @@
-# База знаний Xaaalera о Героях
-
-[xkit v0.1.1-preview.1 — готовый SDK](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.1) · [RU: начать разработку](docs/modding/devkit.md) · [EN: get started](docs/en/modding/devkit.md). Архив содержит исходники, Game API и готовые служебные DLL; игра с Universe устанавливается отдельно. / The archive includes sources, Game API and ready SDK DLLs; install the Universe game separately.
-
-[Game API](https://github.com/Xaaalera/heroes5-game-api) — shared C++ game bindings / общая библиотека привязок к игре.
-
-
-## Author and related projects / Автор и связанные проекты
-
-Автор / Author: [Xaaalera](https://github.com/Xaaalera) · [email](mailto:dampirsimpl@gmail.com) · [личный Telegram / personal Telegram](https://t.me/Victima).
-
-- [Deployment Preview / Предиктор](https://github.com/Xaaalera/heroes5-deployment-preview).
-- [Bank Reference / Справочник армий](https://github.com/Xaaalera/heroes5-bank-reference).
-- [Mod Devkit / Девкит](https://github.com/Xaaalera/heroes5-mod-devkit): shared development and test tools for both DLL mods.
-- [Knowledge source / Исходники базы](https://github.com/Xaaalera/heroes5-knowledge) · [public knowledge / база знаний](https://xaaalera.github.io/heroes5-knowledge/).
-- [Heroes V Universe / Heroes Lobby](https://h5lobby.com/).
-
-RU: личные проекты автора; не официальные продукты Universe. EN: Personal projects by the author, not official Universe products.
-
-## Delivery correction / Поправка к поставке — 2026-09-25
-
-RU: отдельные EXE-загрузчики отклонены владельцем. Пользователь запускает игру через Heroes/Lobby как раньше; моды должны подключаться автоматически через DLL. Текущий прототип использует новый bin/dinput8.dll и bin/Heroes5Mods/*.dll, для справочника также нужен его H5U. Штатные бинарники Universe не заменяются. Обычный запуск до меню и автоматическое подключение двух DLL с показом проекций проверены; актуальные выпуски и ограничения указаны в репозиториях модов. Приведённые ниже команды со старым EXE — диагностика/история разработки, не инструкция игроку.
-
-EN: separate player launcher EXEs were rejected. Players keep ordinary Heroes/Lobby startup with automatic DLL loading. The current prototype uses a new bin/dinput8.dll plus bin/Heroes5Mods/*.dll; bank reference also needs its H5U. Original Universe binaries are not replaced. Ordinary startup to the menu and both DLLs loading with visible projections were checked; current releases and limits are listed in the mod repositories. Old EXE commands below are developer diagnostics/history, not player installation.
-
+# База знаний о Heroes V / Heroes V knowledge base
 
 ## RU
 
-[Дневник исследований](docs/reference/research-diary.md) хранит датированные опыты и ссылки на исходные результаты; статьи дают отредактированное объяснение. Правила ведения — в CONTRIBUTING.
-
-Подготовленные результаты исследования Heroes V Universe: игровые механики, ресурсы, скрипты, нативный интерфейс и воспроизводимые примеры. Вход по темам — [карта знаний](docs/reference/research-index.md).
-
-- Сайт: https://xaaalera.github.io/heroes5-knowledge/
-- Статьи: `docs/`; английские версии: `docs/en/`.
-- Оформление: Jinja-шаблон `theme/main.html`, SCSS `styles/`, браузерный поиск `theme/assets/site.js`.
-- «Моды» — отдельный раздел верхнего меню и боковой навигации: каталог, предиктор расстановки и справочник хранилищ. Статьи используют `section: mods`; опубликованные адреса сохранены.
-- Единственный источник статьи — Markdown. Сайт собирается самостоятельно, без приватной мастерской.
-
-### Сборка
-
-Нужны Python 3.10+ и Node.js 22+.
-
-```sh
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# Linux/macOS: source .venv/bin/activate
-python -m pip install -r requirements.txt
-npm ci
-npm run build
-npm run check
-npx playwright install chromium
-npm test
-python -m mkdocs serve --watch-theme
-```
-
-`site/` и скомпилированный CSS не редактируются и не коммитятся. После правки SCSS выполнить `npm run styles`; MkDocs serve следит за статьями и темой. Публикация Pages выполняется workflow этой репы.
-
-Обязательные требования к структуре, доказательствам, статусам и редакторской приёмке: [стандарт в CONTRIBUTING](CONTRIBUTING.md). Статус `draft` сохраняет явно указанные границы исследования; успешная сборка не подтверждает факты.
-
-### Проверка и ограничения
-
-Проверка сборки ищет сломанные ссылки, пропавшие переводы и приватные пути. Playwright проверяет навигацию, поиск, переключение языка и переполнение на пяти ширинах. Результаты скриншотов остаются локальными тестовыми артефактами.
-
-Материалы не являются полной спецификацией движка. Фоны оригинальные; игровые кадры и их происхождение перечислены в NOTICE. Гостевого wiki-редактирования пока нет — предложения идут через GitHub.
-
-Подробнее: [CONTRIBUTING](CONTRIBUTING.md), [AGENTS](AGENTS.md), [источники иллюстраций и шрифтов](NOTICE.md).
+Наш сайт содержит руководства, справочники и исследования Heroes V Universe, наших модов, xkit и Game API. Это единственный источник текущей документации; статьи хранятся в `docs/`, английские версии — в `docs/en/`.
 
 ## EN
 
-The [research diary](docs/en/reference/research-diary.md) stores dated experiments and links to source results; articles provide edited explanations. CONTRIBUTING defines the recording rules.
+Our site is the canonical home for guides, references and research about Heroes V Universe, our mods, xkit and Game API. Article sources live in `docs/`, with English versions in `docs/en/`.
 
-Xaaalera’s personal notes, research, and guides about Heroes V. Prepared findings cover game mechanics, resources, scripts, native UI and reproducible examples. Start with the [knowledge map](docs/en/reference/research-index.md).
-
-The site URL and commands above apply to both languages. Requires Python 3.10+ and Node.js 22+. Markdown articles are the only content source; the site builds independently of any private workspace.
-
-“Mods” is a separate section in the header and article navigation, containing the catalog and both mod guides. Their metadata uses `section: mods`; published URLs are preserved.
-
-Presentation lives in `theme/` and `styles/`; generated `site/` and CSS are not committed. Run `npm run styles` after changing SCSS. MkDocs serve watches articles and the theme; this repo's Pages workflow publishes the site.
-
-The mandatory article standard and editorial acceptance live in [CONTRIBUTING](CONTRIBUTING.md). Draft status retains stated research limits; successful builds do not verify factual claims.
-
-Checks cover content metadata, local links, translations and private paths. Browser tests exercise navigation, search, language switching and overflow at five widths. Screenshots remain local test artifacts.
-
-This is not a complete engine specification. Background art is original; game screenshots and provenance are listed in NOTICE. Direct wiki editing is not available; proposed changes use GitHub. See the shared contribution, agent and asset documentation links above.
-
-### Фоны / Backgrounds
-
-Восемь фракционных замков служат фоном всего окна. Поле `faction` в метаданных статьи выбирает изображение из `docs/assets/worlds/` и цветовой акцент. Фон меняется при навигации; обновление страницы и смена языка сохраняют фракцию. Названия фракций: `extra.worlds` в `mkdocs.yml`.
-
-Eight faction castles fill the viewport behind the content. Article metadata `faction` selects an image from `docs/assets/worlds/` and its accent color. Navigation changes the background; reloads and language changes preserve the faction. Localized names live in `mkdocs.yml` under `extra.worlds`.
-
-Перед push / Before push: `npm ci` installs the Git pre-push gate. Follow the independent agent protocol in [CONTRIBUTING](CONTRIBUTING.md): a docs score alone is insufficient; the hash-bound report must cover all eight criteria and changed Markdown files. / `npm ci` устанавливает pre-push gate. Одной оценки docs недостаточно: нужен независимый отчёт по восьми критериям и всем изменённым Markdown-файлам.
-
-### Placement diagrams / Схемы расстановки
-
-`docs/assets/placement/observations.json` owns recorded coordinates of both armies and blocked cells. `npm run figures` generates complete SVG grids with labelled X/Y axes; edit data/generator, not individual SVG cells. `npm run check` rejects stale diagrams and invalid/overlapping footprints. Screenshots are separate evidence; instructional overlays are labelled in the article.
-
-JSON — единственный источник записанных координат обеих армий и препятствий. `npm run figures` строит полные SVG-сетки циклом; вручную SVG-клетки не править. Проверка отклоняет устаревшие схемы, выход за границы и пересечения фигур. Скриншоты дополняют схемы; учебные слои подписаны отдельно.
-
-The placement article includes `docs/assets/placement/placement_walkthrough.py`, an executable, scoped reconstruction. Tests compare two recorded fields and all seven native attempts in the traced elemental case. The reconstruction never consumes recorded neutral target cells; they are independent comparison data. / Исполняемый разбор сверяется с двумя записанными полями и семью попытками игры. Итоговые клетки нейтралов служат только независимым результатом для сравнения, не входом расчёта.
-
-The walkthrough distinguishes recorded mode flags from an explicit `assumed_context`. Missing flags without that argument fail; the older field comparison is conditional, not evidence of its selected branch. / Код различает записанный режим и явно заданное предположение. Отсутствующий режим без assumed_context вызывает отказ; совпадение клеток старого поля не доказывает выбранную игрой ветку.
-
-Python bytecode/cache directories are excluded from MkDocs output and rejected by the generated-site check. The downloadable walkthrough `.py` remains a public source file. / Кэш и байткод Python исключены из сайта и запрещены проверкой сборки; скачиваемый `.py` остаётся доступным исходником.
-
-Browser tests start a dedicated non-live-reloading server on port 8769 and do not reuse the interactive preview. / Браузерные проверки запускают отдельный сервер без live reload на 8769 и не переиспользуют интерактивный preview со старым CSS.
-
-### Agent entry points / Входы для агентов
-
-RU — `docs/llms.txt` — короткий указатель на исходный Markdown, devkit и доказательства. Шаблон страницы даёт `rel="describedby"` на этот файл и `rel="alternate" type="text/markdown"` на соответствующий исходник статьи в GitHub. Копии статей не храним. Ветка main может опережать развёрнутый сайт: при проверке фиксировать ревизию. AGENTS.md содержит порядок проверок. `docs/llms.txt` включён в обязательный docs-review наравне с Markdown-файлами. `npm run check` проверяет наличие llms.txt и локальные исходники его ссылок; браузерный тест проверяет обнаружение на RU/EN-страницах с префиксом Pages. Обнаружение указателя зависит от клиента; не обещаем автоматическое чтение каждым агентом.
-
-EN — `docs/llms.txt` indexes source Markdown, devkit and evidence. Page metadata links it with describedby and links the corresponding GitHub Markdown source with alternate/type=text/markdown. No duplicate article copies are maintained. Main may precede a deployed site, so record revisions during verification. AGENTS.md defines check order. Mandatory docs-review includes `docs/llms.txt` alongside Markdown files. `npm run check` validates llms.txt and its own-repository source targets; a browser test checks discovery on RU/EN pages under the Pages prefix. Client discovery varies; automatic loading by every agent is not guaranteed.
-
-Format references / описание форматов: [llms.txt proposal](https://llmstxt.org/) · [AGENTS.md](https://agents.md/).
+- [База знаний / Knowledge site](https://xaaalera.github.io/heroes5-knowledge/) · [English](https://xaaalera.github.io/heroes5-knowledge/en/).
+- [SDK xkit](https://xaaalera.github.io/heroes5-knowledge/modding/devkit/) · [консоль / console](https://xaaalera.github.io/heroes5-knowledge/modding/console/).
+- [Команды SDK / SDK commands](https://xaaalera.github.io/heroes5-knowledge/reference/xkit-commands/).
+- [Game API](https://xaaalera.github.io/heroes5-knowledge/reference/game-api/).
+- [Карта исследований / Research index](https://xaaalera.github.io/heroes5-knowledge/reference/research-index/).
+- [Внести правку, собрать и проверить сайт / Contribute, build and check the site](https://xaaalera.github.io/heroes5-knowledge/contributing/) · [English](https://xaaalera.github.io/heroes5-knowledge/en/contributing/).
 
 ## Standalone use / Работа вне мастерской
 
-RU: этот репозиторий можно использовать отдельно. Начни с его README и AGENTS.md; глобальная папка мастерской не обязательна. Если есть .gitmodules, выполни `git submodule update --init --recursive` после клонирования. В связанной мастерской используй её sync-subrepos вместо создания вторых checkout.
-EN: This repository can be used independently. Start with its README and AGENTS.md; the global workshop is optional. If .gitmodules exists, initialize pinned dependencies with `git submodule update --init --recursive`. In a linked workshop use its canonical dependency synchronization.
+Репозиторий собирается отдельно, глобальная мастерская и игра не нужны. Нужны Git, Python 3.10+ и Node.js 22+. Клонируй репозиторий и следуй инструкции сборки на сайте. Правила работы агентов — в [AGENTS.md](AGENTS.md); лицензии иллюстраций — в [NOTICE.md](NOTICE.md).
 
-- [Devkit commands / команды SDK](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md).
-- [Game API contracts / контракты библиотеки](https://github.com/Xaaalera/heroes5-game-api/blob/main/docs/mechanisms/game-bindings.md).
-- [Research index / карта исследований](https://xaaalera.github.io/heroes5-knowledge/reference/research-index/).
+This repository builds independently, without the workshop or game. Requires Git, Python 3.10+ and Node.js 22+. Clone it and follow the site's build instructions. Agent working rules live in AGENTS.md; asset licenses remain in NOTICE.md.
 
-[Code standards / стандарты кода](https://github.com/Xaaalera/claude-skills).
+## Проекты и контакты / Projects and contacts
+
+- [SDK xkit](https://github.com/Xaaalera/heroes5-mod-devkit).
+- [Game API source](https://github.com/Xaaalera/heroes5-game-api).
+- [Предиктор расстановки / Deployment predictor](https://github.com/Xaaalera/heroes5-deployment-preview).
+- [Справочник хранилищ / Bank reference](https://github.com/Xaaalera/heroes5-bank-reference).
+- [Исходники сайта / Site source](https://github.com/Xaaalera/heroes5-knowledge).
+- [Стандарты кода / Code standards](https://github.com/Xaaalera/claude-skills).
+- [Universe / Heroes Lobby](https://h5lobby.com/).
+
+[Xaaalera](https://github.com/Xaaalera) · [email](mailto:dampirsimpl@gmail.com) · [Telegram](https://t.me/Victima). Наши проекты не являются официальными продуктами Universe. / Our projects are unofficial Universe tools.

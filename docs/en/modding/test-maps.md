@@ -8,7 +8,7 @@ section: modding
 kicker: HEROES V · UNIVERSE
 translation: modding/test-maps/
 description: 'Test maps: repeatable battles and movement checks'
-updated: '2026-09-24'
+updated: '2026-10-08'
 ---
 # Test maps: repeatable battles and movement checks
 
@@ -40,7 +40,31 @@ Scripted arenas call `StartCombat` against 80 peasants, 35 footmen and 12 priest
 
 Download SHA-256: `b5baf474cb523dfa9ec66831676d9c98c722198f1e8af017290d38ec38fa68dc`.
 
-For map changes and rebuilding, use the [test-map.py generator](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/test-map.py) and [devkit launch instructions](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#maps-workspace-and-control).
+For map changes, use the [test-map.py generator](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/test-map.py). The [xkit guide](devkit.md) explains preparing a test game.
+
+## Rebuild the polygon from source
+
+Requires Windows, Python 3.10+, SDK sources, the supported installed game and an already prepared xkit test copy. This is an additional developer tool; using the downloaded H5M does not require rebuilding.
+
+Open PowerShell in the SDK source directory. Set the xkit workspace containing the prepared copy and the original game installation; replace these relative examples with your paths:
+
+```powershell
+$env:H5_WORKSPACE = (Resolve-Path '../ModWorkspace').Path
+$env:H5_GAME_DIR = (Resolve-Path '../HeroesV').Path
+python -X utf8 scripts/test-map.py --stage
+```
+
+`--stage` builds `.local/staged-maps/WorkshopPolygon.h5m` in the workspace without replacing a running game's map. The command prints the map path and object count; its detailed `test-map-staged.json` report is in `.local/test-state`. It neither loads the map nor verifies gameplay.
+
+To install the result, stop the xkit session with Ctrl+C and close other game windows. Then run in the same terminal:
+
+```text
+python -X utf8 scripts/test-map.py
+```
+
+This rebuilds directly into the prepared test copy's `Maps/WorkshopPolygon.h5m`; it does not copy the older staged file. If an existing map does not match its owned report hash, writing is refused. Preserve an unrelated or externally edited map separately rather than deleting it to bypass the guard. After success, start the map anew through the menu or the [map command](../reference/xkit-commands.md).
+
+For short controls, the generator also accepts `--arena-smoke` values 1 through 6 or `--solo-smoke` values 0 or 1. These modes automatically enter a specific battle after map loading; do not add them accidentally to an ordinary experiment. `--confirm-placement` requires `--arena-smoke`; solo controls cannot be combined with arena controls. A report's `in_game: not_verified` preserves the distinction between building and a live result.
 
 ## Same composition, multiple arenas
 

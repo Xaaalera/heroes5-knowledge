@@ -41,6 +41,29 @@ with ZipFile('data/Universe_mod.pak') as archive:
 
 This checked text starts with `fffe`. Do not apply this decoder to all members: XML has its declaration/BOM, and binary resources remain bytes.
 
+## Create an archive comparison report
+
+Use `inspect_universe.py` from the [xkit source repository](https://github.com/Xaaalera/heroes5-mod-devkit) for a full comparison. It requires Python 3.10+ and the studied installed build, with no extra Python packages. It reads the game and writes results to a separate research directory.
+
+In PowerShell, from the xkit source directory, set your two paths:
+
+```powershell
+$env:H5_GAME_DIR = (Resolve-Path '../HeroesV').Path
+$env:H5_WORKSPACE = Join-Path (Get-Location).Path '../HeroesV-research'
+New-Item -ItemType Directory -Force -Path $env:H5_WORKSPACE
+python -X utf8 inspect_universe.py
+```
+
+Replace the examples with your game and a separate research directory. The tool expects the baseline `data.pak`, `a2p1-data.pak`, `texts.pak`, `a2p1-texts.pak`, plus `Universe_mod.pak` and `universe_mod_texts_ru.pak`. Another installation may require changes to the tool.
+
+| File in the research directory | Contents |
+|---|---|
+| `research/inventory.json` | Resource counts, file types, game DLL/EXE SHA-256 hashes and report status |
+| `research/archive-diff.csv` | Universe resources classified as added, changed or identical to the selected baseline |
+| `research/unpacked/` | Universe XDB, XML, Lua and TXT plus matching baseline files, normalized to UTF-8 |
+
+The JSON starts with `status: incomplete`; only a finished analysis writes `complete`. After an error, do not treat the CSV or extraction as a complete snapshot. Fix the reported cause and rerun. Do not run two analyses into the same directory concurrently. Previous extracted files are not removed: choose a new research directory for another build. These copies are for reading, not installing in the game.
+
 ## Relative XDB links
 
 `href="../Textures/icon.xdb#xpointer(/Texture)"` combines a resource path with an XML pointer. Moving the containing definition can change its target. Clone processing must resolve links against the original directory. The [devkit clone generator](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/mod-dev.py) also removes the root ObjectRecordID; missing expected template nodes fail instead of silently constructing substitutes.
