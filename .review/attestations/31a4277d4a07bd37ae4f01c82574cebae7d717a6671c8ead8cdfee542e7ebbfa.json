@@ -1,0 +1,1133 @@
+{
+  "diffHash": "31a4277d4a07bd37ae4f01c82574cebae7d717a6671c8ead8cdfee542e7ebbfa",
+  "commitSha": "80b0270b11394b897e30dee8bbe7202ea56cfa3e",
+  "perAgent": {
+    "craft": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "/root/article_accuracy_critic"
+    },
+    "architecture": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "/root/article_gate_arch_review"
+    },
+    "tests": {
+      "verdict": "PASS",
+      "score": 9,
+      "reviewer": "/root/article_gate_tests_review"
+    },
+    "docs": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "/root/article_newcomer_critic",
+      "review": {
+        "reviewer": "/root/article_newcomer_critic",
+        "files": [
+          "AGENTS.md",
+          "CONTRIBUTING.md",
+          "README.md",
+          "docs/contributing.md",
+          "docs/en/contributing.md",
+          "docs/en/modding/console.md",
+          "docs/en/modding/devkit.md",
+          "docs/en/modding/native-projects.md",
+          "docs/en/modding/native-ui.md",
+          "docs/en/modding/resource-overrides.md",
+          "docs/en/modding/test-maps.md",
+          "docs/en/players/army-placement.md",
+          "docs/en/players/bank-reference.md",
+          "docs/en/players/deployment-preview.md",
+          "docs/en/players/mods.md",
+          "docs/en/reference/creatures.md",
+          "docs/en/reference/formats.md",
+          "docs/en/reference/game-api.md",
+          "docs/en/reference/placement-internals.md",
+          "docs/en/reference/research-diary.md",
+          "docs/en/reference/universe-build.md",
+          "docs/en/reference/xkit-commands.md",
+          "docs/llms.txt",
+          "docs/modding/console.md",
+          "docs/modding/devkit.md",
+          "docs/modding/native-projects.md",
+          "docs/modding/native-ui.md",
+          "docs/modding/resource-overrides.md",
+          "docs/modding/test-maps.md",
+          "docs/players/army-placement.md",
+          "docs/players/bank-reference.md",
+          "docs/players/deployment-preview.md",
+          "docs/players/mods.md",
+          "docs/reference/creatures.md",
+          "docs/reference/formats.md",
+          "docs/reference/game-api.md",
+          "docs/reference/placement-internals.md",
+          "docs/reference/research-diary.md",
+          "docs/reference/universe-build.md",
+          "docs/reference/xkit-commands.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "evidence": "All39 full-base documentation paths assessed plus docs/llms.txt; player guides, C++ references, how-to SDK workflows, dated diary and short repository entry points identify distinct purposes.",
+            "verdict": "PASS"
+          },
+          "structure": {
+            "evidence": "Heading/metadata triage covered every listed file; detailed review focused on changed workflows and player/reference corpus, with links, tables, full-field figure references and dated diary entries preserved.",
+            "verdict": "PASS"
+          },
+          "specificity": {
+            "evidence": "Current SDK procedures name commands, working directories, placeholders, source edit/result, archive recipe nesting, storage restoration lookup and callback/build limits; resolved fixes were independently checked in earlier bounded rounds.",
+            "verdict": "PASS"
+          },
+          "reproducibility": {
+            "evidence": "Current workflows retain prerequisites, commands, output and refusal handling. The Universe inventory setup now links to the canonical formats report section. The dated predictor availability correction explicitly withholds a complete public reproduction claim. No new workflow/game execution was performed.",
+            "verdict": "PASS"
+          },
+          "evidence": {
+            "evidence": "Final24 article hashes and120 actual critic records inspected: five distinct critics separate from each author, no stale hashes or unresolved S1/S2. Parent-provided exact80b0270 full-gate receipt:24Python14Node49HTML13browser PASS23.7246061s; those gates were not executed by this reviewer. Drafts and historical gameplay scope remain uncertified.",
+            "verdict": "PASS"
+          },
+          "applicability": {
+            "evidence": "All36 listed site articles remain draft. Pinned build hashes, released predictor preview.2 versus local corrections, bank preview.4 one-Crypt control, HMR/developer versus player delivery and unverified multiplayer/display scope remain explicit.",
+            "verdict": "PASS"
+          },
+          "translations": {
+            "evidence": "RU/EN player/reference pairs and current SDK pairs inspected for matching numbers, constraints, release versions and evidence limits;20 article records retain independent translation critic identities and findings, not an invented panel.",
+            "verdict": "PASS"
+          },
+          "maintenance": {
+            "evidence": "All three original maintenance findings remain resolved. The only0add-to80b delta replaces the fragile RU formats fragment with an article link and explicitly named report section; five actual corrected-route critiques cover the final article bytes.",
+            "verdict": "PASS"
+          }
+        },
+        "findings": [],
+        "articleCritiques": [
+          {
+            "path": "docs/modding/devkit.md",
+            "sha256": "a0e1992d4a7046c87c25e8e2b5851ed6e4a7016711fe5ee24c52e0c4179fed3b",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report sdk-command-critique-newcomer-round3.json; SHA-256 f2fb20082b054a67bc5116716604ff6c0fee389c0e69a64a98167d055d37dcb7. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report sdk-command-critique-accuracy-round3.json; SHA-256 90905d2265e8b709b6f16085902a578d1fb560c998c86a5e3d9dc1afea5f7205. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report sdk-command-critique-steps-round3.json; SHA-256 871096df54e089cac01b8a694374d1cb82baf15536773db853098709b935f018. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report sdk-command-critique-structure-round3.json; SHA-256 dc72c26424415eb6615732d08d4e7dee507326d6205c7fdb5c988b1f6a7ed087. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report sdk-command-critique-translation-round3.json; SHA-256 bfee2fa8e8f565fa7d92245354acfdf1dd7a0bcd3c689fbcdd6318c6ad9074d2. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/devkit.md",
+            "sha256": "ceae41c326531d365f3e61fdd1f2d6b195436afb6d8679f264f92fbc67781659",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report sdk-command-critique-newcomer-round3.json; SHA-256 f2fb20082b054a67bc5116716604ff6c0fee389c0e69a64a98167d055d37dcb7. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report sdk-command-critique-accuracy-round3.json; SHA-256 90905d2265e8b709b6f16085902a578d1fb560c998c86a5e3d9dc1afea5f7205. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report sdk-command-critique-steps-round3.json; SHA-256 871096df54e089cac01b8a694374d1cb82baf15536773db853098709b935f018. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report sdk-command-critique-structure-round3.json; SHA-256 dc72c26424415eb6615732d08d4e7dee507326d6205c7fdb5c988b1f6a7ed087. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report sdk-command-critique-translation-round3.json; SHA-256 bfee2fa8e8f565fa7d92245354acfdf1dd7a0bcd3c689fbcdd6318c6ad9074d2. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/xkit-commands.md",
+            "sha256": "7cf6a47e5444aa929376b2f40f481073b66794fa6ae9563ff2b0de031f40dabf",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report sdk-command-critique-newcomer-round3.json; SHA-256 f2fb20082b054a67bc5116716604ff6c0fee389c0e69a64a98167d055d37dcb7. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report sdk-command-critique-accuracy-round3.json; SHA-256 90905d2265e8b709b6f16085902a578d1fb560c998c86a5e3d9dc1afea5f7205. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report sdk-command-critique-steps-round3.json; SHA-256 871096df54e089cac01b8a694374d1cb82baf15536773db853098709b935f018. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report sdk-command-critique-structure-round3.json; SHA-256 dc72c26424415eb6615732d08d4e7dee507326d6205c7fdb5c988b1f6a7ed087. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report sdk-command-critique-translation-round3.json; SHA-256 bfee2fa8e8f565fa7d92245354acfdf1dd7a0bcd3c689fbcdd6318c6ad9074d2. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/xkit-commands.md",
+            "sha256": "135c560aad59ad36f31691bbe26effd9f003b9aab18ba2267325a3f128e791e0",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report sdk-command-critique-newcomer-round3.json; SHA-256 f2fb20082b054a67bc5116716604ff6c0fee389c0e69a64a98167d055d37dcb7. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report sdk-command-critique-accuracy-round3.json; SHA-256 90905d2265e8b709b6f16085902a578d1fb560c998c86a5e3d9dc1afea5f7205. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report sdk-command-critique-steps-round3.json; SHA-256 871096df54e089cac01b8a694374d1cb82baf15536773db853098709b935f018. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report sdk-command-critique-structure-round3.json; SHA-256 dc72c26424415eb6615732d08d4e7dee507326d6205c7fdb5c988b1f6a7ed087. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report sdk-command-critique-translation-round3.json; SHA-256 bfee2fa8e8f565fa7d92245354acfdf1dd7a0bcd3c689fbcdd6318c6ad9074d2. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/formats.md",
+            "sha256": "29c101f55f9dcd8b97d9516e0defe2257ceff66f02153d745f2829c71ffcc37b",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report formats-critique-newcomer-round3.json; SHA-256 20e45cfdf17675b2828ccd20c715c19338f19a3cff2161386cae63727113ae1e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report formats-critique-accuracy-round3.json; SHA-256 7bbe42370ff7e79289f21f0569743f687b9d4813ee6129470fc980d8e30b7fb0. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report formats-critique-steps-round3.json; SHA-256 d74272a9462e8a9440245574f57d45bc68a38cf86a78cd9040950526019a28f9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report formats-critique-structure-round3.json; SHA-256 73fc0f86784b4cfa0571f8e12354d50efab9a9b00b3ed5233bf7770fd46336f6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report formats-critique-translation-round3.json; SHA-256 85db313fc29273b9d4213063e452bf7de2fac0106c95030344fe91092745bc4a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/formats.md",
+            "sha256": "c9e8d81d65ecb21a7ab21754b44ecce5e100da146dbfc783d5bc5b63944a514c",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report formats-critique-newcomer-round3.json; SHA-256 20e45cfdf17675b2828ccd20c715c19338f19a3cff2161386cae63727113ae1e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report formats-critique-accuracy-round3.json; SHA-256 7bbe42370ff7e79289f21f0569743f687b9d4813ee6129470fc980d8e30b7fb0. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report formats-critique-steps-round3.json; SHA-256 d74272a9462e8a9440245574f57d45bc68a38cf86a78cd9040950526019a28f9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report formats-critique-structure-round3.json; SHA-256 73fc0f86784b4cfa0571f8e12354d50efab9a9b00b3ed5233bf7770fd46336f6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report formats-critique-translation-round3.json; SHA-256 85db313fc29273b9d4213063e452bf7de2fac0106c95030344fe91092745bc4a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/game-api.md",
+            "sha256": "07d3463ca672fae26af596cda05f627e4aed0d1a5077df4c8d6efbb7c87ed13a",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report game-api-critique-newcomer-round3.json; SHA-256 fcd6f82d16c14d3628c3aaae6dd78662336646df5b6f078b576401e82c2d25c9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report game-api-critique-accuracy-round3.json; SHA-256 9ca9b2a5f788e0ceab2c6dcd5675f456a35599ea53cdd0c0ebae716b6a09e73a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report game-api-critique-steps-round3.json; SHA-256 28ab54fd890f93a64cec0665cadf6bd0e06658476c046e4d8e176b90349da50b. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report game-api-critique-structure-round3.json; SHA-256 0b7704e1285f714b3e5d6b2ec17dc1efa903eb19b5d476914b28d3c7cf640d76. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report game-api-critique-translation-round3.json; SHA-256 7eeb6b47bd319cef69a1beaaa6aa4ae8b4da517e56c3bb9087222c976d4876b3. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/game-api.md",
+            "sha256": "23d6be5d389189539a1c057061cf450ac1ad23cf5b30f00b6a841eeb7b57d9b8",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report game-api-critique-newcomer-round3.json; SHA-256 fcd6f82d16c14d3628c3aaae6dd78662336646df5b6f078b576401e82c2d25c9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report game-api-critique-accuracy-round3.json; SHA-256 9ca9b2a5f788e0ceab2c6dcd5675f456a35599ea53cdd0c0ebae716b6a09e73a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report game-api-critique-steps-round3.json; SHA-256 28ab54fd890f93a64cec0665cadf6bd0e06658476c046e4d8e176b90349da50b. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report game-api-critique-structure-round3.json; SHA-256 0b7704e1285f714b3e5d6b2ec17dc1efa903eb19b5d476914b28d3c7cf640d76. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report game-api-critique-translation-round3.json; SHA-256 7eeb6b47bd319cef69a1beaaa6aa4ae8b4da517e56c3bb9087222c976d4876b3. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/console.md",
+            "sha256": "6ff5bfb6f57d63b50412da4399d46d562b42cf06cae27a4bf4311f1977fe2b47",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report console-critique-newcomer-round3.json; SHA-256 d8a962f8f72eb544c6bbd80afa329834b5c222c2068cd4ec6b261df827e98c9e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report console-critique-accuracy-round3.json; SHA-256 47391b07b435a0e4a6f5aaa0db5319b21a12e09daf7104eacdf5a0e28031173d. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report console-critique-steps-round3.json; SHA-256 a2a0b9cdd4ed16f3bcee0a2345679ff433633e28c4c1bd327f4193750188255f. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/modding/console.md:77-80; knowledge/docs/en/modding/console.md:77-80",
+                    "problem": "The restore instruction names an archive placeholder without saying where to obtain the snapshot path.",
+                    "consequence": "Normal cleanup and storage status do not print snapshot paths, so the reader cannot complete the restore command from the described results.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed source inspection: sdk_storage.py:418 stores snapshots under each retired workspace .local/test-state/retired-game.zip; xalkit.py:264 prints only count/cache for status and :284-285 prints retirement counts/freed size for cleanup; archive paths are retained in the storage_cleaned event result, not the human summary.",
+                    "disposition": "Added explicit snapshot locations and journal discovery instructions in both languages.",
+                    "verification": "Corrected paragraph identifies retired workspace .local/test-state/retired-game.zip and historical retired-game-*.zip, explains that short CLI output omits paths, and uses xkit diagnostics to locate the SDK journal then storage_cleaned result.retired game/archive pairs; this matches sdk_storage.py:418,459-466 and xalkit.py:283,392-397."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report console-critique-structure-round3.json; SHA-256 b5acaed34a4e21963543e82c2a007cc8cf804738c0566bdbbe7dbea8ec9dbc5f. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report console-critique-translation-round3.json; SHA-256 49ba156cf14720767eef8f206eb03dbfc200da26ad6a5f80869d3fbd73cb88d9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/console.md",
+            "sha256": "3516aa2a38f88539a8a0689e804fd06cd1593052ba05877aa0c83ca06ec9e889",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report console-critique-newcomer-round3.json; SHA-256 d8a962f8f72eb544c6bbd80afa329834b5c222c2068cd4ec6b261df827e98c9e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report console-critique-accuracy-round3.json; SHA-256 47391b07b435a0e4a6f5aaa0db5319b21a12e09daf7104eacdf5a0e28031173d. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report console-critique-steps-round3.json; SHA-256 a2a0b9cdd4ed16f3bcee0a2345679ff433633e28c4c1bd327f4193750188255f. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/modding/console.md:77-80; knowledge/docs/en/modding/console.md:77-80",
+                    "problem": "The restore instruction names an archive placeholder without saying where to obtain the snapshot path.",
+                    "consequence": "Normal cleanup and storage status do not print snapshot paths, so the reader cannot complete the restore command from the described results.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed source inspection: sdk_storage.py:418 stores snapshots under each retired workspace .local/test-state/retired-game.zip; xalkit.py:264 prints only count/cache for status and :284-285 prints retirement counts/freed size for cleanup; archive paths are retained in the storage_cleaned event result, not the human summary.",
+                    "disposition": "Added explicit snapshot locations and journal discovery instructions in both languages.",
+                    "verification": "Corrected paragraph identifies retired workspace .local/test-state/retired-game.zip and historical retired-game-*.zip, explains that short CLI output omits paths, and uses xkit diagnostics to locate the SDK journal then storage_cleaned result.retired game/archive pairs; this matches sdk_storage.py:418,459-466 and xalkit.py:283,392-397."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report console-critique-structure-round3.json; SHA-256 b5acaed34a4e21963543e82c2a007cc8cf804738c0566bdbbe7dbea8ec9dbc5f. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report console-critique-translation-round3.json; SHA-256 49ba156cf14720767eef8f206eb03dbfc200da26ad6a5f80869d3fbd73cb88d9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/contributing.md",
+            "sha256": "ec96d1d5eb622fb5101caeaafa0639a42a8fb6eab416f268f8fd2ea1cebe4490",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report article-critique-newcomer-round3.json; SHA-256 0ca7e94548b89c58a0335238ee22568b846072387c7e761ba8bb4bfc37fd1f9e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/contributing.md:117-119; knowledge/docs/en/contributing.md:117-119",
+                    "problem": "The push procedure requires results.json without explaining how to obtain a valid review report.",
+                    "consequence": "A first local contributor cannot complete the gate from the documented steps.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed textual omission: review:info reports base/hash/articles, while the next instruction assumes an existing actual-results JSON.",
+                    "disposition": "resolved",
+                    "verification": "Both versions assign this stage to maintainers, identify results.json as a report received from independent reviewers, and link the adapter, nested contract validator and illustrative fixtures."
+                  }
+                ]
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report article-critique-accuracy-round3.json; SHA-256 ed994033ee12f4c58f953531dd165182082e5877da710d2949193d7656e35c62. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report article-critique-steps-round3.json; SHA-256 1ad94948324d40b848a4f61931c2e7b7c261832e9ff36b0796f415bfe9d3e0c6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/contributing.md:117-119; knowledge/docs/en/contributing.md:117-119",
+                    "problem": "The review procedure omits committing source changes before review and attestation.",
+                    "consequence": "A maintainer following the written sequence hits a hard gate refusal with uncommitted article edits.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed by knowledge/scripts/review-check.mjs:55-59: any dirty path outside .review/attestations throws Commit the source changes before reviewing or pushing.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at line123 explicitly require committing source/article changes before attestation, while retaining separate attestation commit afterward."
+                  },
+                  {
+                    "location": "knowledge/docs/contributing.md:119; knowledge/docs/en/contributing.md:119",
+                    "problem": "The attest instruction does not provide or link the accepted results JSON shape.",
+                    "consequence": "The prose finding fields cannot be turned into an accepted report without reverse-engineering the validator.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed: review-check.mjs:64-72 treats the file as a perAgent object; review-docs.mjs requires docs.review.articleCritiques with exact path/hash/author/round/critics fields and lane names; review:info:52 reports config and criteria but no results shape.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at119/123 assign report acquisition to maintainers, explain the results-file placeholder, name the five-lens object and docs.review fields, and link actual adapter, nested validator and test-format examples without presenting fixture data as real review."
+                  },
+                  {
+                    "location": "knowledge/docs/contributing.md:99-107; knowledge/docs/en/contributing.md:99-107",
+                    "problem": "The Linux setup downloads Chromium without installing its required system dependencies.",
+                    "consequence": "A fresh supported Linux machine can reach npm test and fail before any browser test executes.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed prerequisite omission from docs: Playwright documents install-deps or install --with-deps at https://playwright.dev/docs/browsers; knowledge/.github/workflows/pages.yml:34 already uses install --with-deps chromium. No fresh Linux execution was performed.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at113 replace the Linux browser installation command with install --with-deps chromium, explain OS package privileges and link official Playwright browser documentation."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report article-critique-structure-round3.json; SHA-256 46d528a0b9816109983357bfdf6c3d84e5d27f909ebca2b25b346b6fa1fdf89c. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report article-critique-translation-round3.json; SHA-256 17e12ade2a4e9576765b7b5f9321ddfcefa9d368d76ca3864caa5546b7685e80. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/contributing.md",
+            "sha256": "0b87e381ce9679b8c75bf38a7b6eb313f01c6da14e1e8d50fd40bebcc29670af",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report article-critique-newcomer-round3.json; SHA-256 0ca7e94548b89c58a0335238ee22568b846072387c7e761ba8bb4bfc37fd1f9e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/contributing.md:117-119; knowledge/docs/en/contributing.md:117-119",
+                    "problem": "The push procedure requires results.json without explaining how to obtain a valid review report.",
+                    "consequence": "A first local contributor cannot complete the gate from the documented steps.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed textual omission: review:info reports base/hash/articles, while the next instruction assumes an existing actual-results JSON.",
+                    "disposition": "resolved",
+                    "verification": "Both versions assign this stage to maintainers, identify results.json as a report received from independent reviewers, and link the adapter, nested contract validator and illustrative fixtures."
+                  }
+                ]
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report article-critique-accuracy-round3.json; SHA-256 ed994033ee12f4c58f953531dd165182082e5877da710d2949193d7656e35c62. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report article-critique-steps-round3.json; SHA-256 1ad94948324d40b848a4f61931c2e7b7c261832e9ff36b0796f415bfe9d3e0c6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/contributing.md:117-119; knowledge/docs/en/contributing.md:117-119",
+                    "problem": "The review procedure omits committing source changes before review and attestation.",
+                    "consequence": "A maintainer following the written sequence hits a hard gate refusal with uncommitted article edits.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed by knowledge/scripts/review-check.mjs:55-59: any dirty path outside .review/attestations throws Commit the source changes before reviewing or pushing.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at line123 explicitly require committing source/article changes before attestation, while retaining separate attestation commit afterward."
+                  },
+                  {
+                    "location": "knowledge/docs/contributing.md:119; knowledge/docs/en/contributing.md:119",
+                    "problem": "The attest instruction does not provide or link the accepted results JSON shape.",
+                    "consequence": "The prose finding fields cannot be turned into an accepted report without reverse-engineering the validator.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed: review-check.mjs:64-72 treats the file as a perAgent object; review-docs.mjs requires docs.review.articleCritiques with exact path/hash/author/round/critics fields and lane names; review:info:52 reports config and criteria but no results shape.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at119/123 assign report acquisition to maintainers, explain the results-file placeholder, name the five-lens object and docs.review fields, and link actual adapter, nested validator and test-format examples without presenting fixture data as real review."
+                  },
+                  {
+                    "location": "knowledge/docs/contributing.md:99-107; knowledge/docs/en/contributing.md:99-107",
+                    "problem": "The Linux setup downloads Chromium without installing its required system dependencies.",
+                    "consequence": "A fresh supported Linux machine can reach npm test and fail before any browser test executes.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed prerequisite omission from docs: Playwright documents install-deps or install --with-deps at https://playwright.dev/docs/browsers; knowledge/.github/workflows/pages.yml:34 already uses install --with-deps chromium. No fresh Linux execution was performed.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at113 replace the Linux browser installation command with install --with-deps chromium, explain OS package privileges and link official Playwright browser documentation."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report article-critique-structure-round3.json; SHA-256 46d528a0b9816109983357bfdf6c3d84e5d27f909ebca2b25b346b6fa1fdf89c. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report article-critique-translation-round3.json; SHA-256 17e12ade2a4e9576765b7b5f9321ddfcefa9d368d76ca3864caa5546b7685e80. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/resource-overrides.md",
+            "sha256": "5a62e9ad25ea0532070f91bb1f591421c168812cbab4f9b24f7e106e0238d3b0",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/resource-overrides.md",
+            "sha256": "2f69383fdc4aa0a5d8417ad19157bdd37bd3aad9b901d8b8ed1f089783bcc78f",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/test-maps.md",
+            "sha256": "63039baf161d4acd0c97f24b6a12856cbdae362004c4097c2bdd572f94496230",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/test-maps.md",
+            "sha256": "d070b371580560361e3d03c9ca2f6aaa6c10bc4845ec17ac77ce4d61fd8e9d62",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/native-projects.md",
+            "sha256": "d6497df1d8a1c2b2df953a574c6e6db55f33930f75282149c664936e18b7b60d",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-newcomer-round3.json; SHA-256 6fe11d8169a61acf6d98ded95f00ef797b5ece02b44bd25a36cae321ca5207c3. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-accuracy-round3.json; SHA-256 f8c530fc85d27a321cf07fe5ed058911fb3541eda24c63502f706d488d07c74e. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-steps-round3.json; SHA-256 628cc67091463ae742644adf633737f923d66b61671e34438c664247c182d327. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-structure-round3.json; SHA-256 0de7516d31986dddc7840b0daef73366483d958c54096460a56e95056269bbd1. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-translation-round3.json; SHA-256 1bab5b7d3c0daec3679b590b28022d5251640cfb2fd3a8bf5a2b1092d98cdc97. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/native-projects.md",
+            "sha256": "289431ac9e606617ce642a78eda92e7cf7d482cf5a1b2c279a8193e9eb7a664f",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-newcomer-round3.json; SHA-256 6fe11d8169a61acf6d98ded95f00ef797b5ece02b44bd25a36cae321ca5207c3. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-accuracy-round3.json; SHA-256 f8c530fc85d27a321cf07fe5ed058911fb3541eda24c63502f706d488d07c74e. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-steps-round3.json; SHA-256 628cc67091463ae742644adf633737f923d66b61671e34438c664247c182d327. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-structure-round3.json; SHA-256 0de7516d31986dddc7840b0daef73366483d958c54096460a56e95056269bbd1. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final branch-scope report native-projects-critique-translation-round3.json; SHA-256 1bab5b7d3c0daec3679b590b28022d5251640cfb2fd3a8bf5a2b1092d98cdc97. Other accepted sections retained from previous rounds; no fourth round or gameplay recertification.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/native-ui.md",
+            "sha256": "698603e44d9c200132d7178d950224a12eeae6bff575cd38802e42c3cb1f35f0",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-newcomer-round1.json; SHA-256 ae0a3089591481a9ad2aa69c0dae53109416fd09cfe23eb8974d4f391a9b2f9e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-accuracy-round1.json; SHA-256 37d42b09c99e0093c6321c5670dc6c64ec5de61b13b132021aea86a61c986e72. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-steps-round1.json; SHA-256 e4a99b7ee07aeeacb2f630fe9884629cadbde1bf60b9bbcd5044a4a0a5ddd528. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-structure-round1.json; SHA-256 f7dee986868c839c00e43e48e0a6fe3af7bfce1e8c6b1baac8b1e75b2461682e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-translation-round1.json; SHA-256 48dbe77d5da5415f7b86fc2cda39d2da92a854a2a32c499acc7f52161216cf08. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/native-ui.md",
+            "sha256": "6c730f3aa80165424fddfc6c2538714b0518a81c0c9659bd5b6b57ee99a83e4e",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-newcomer-round1.json; SHA-256 ae0a3089591481a9ad2aa69c0dae53109416fd09cfe23eb8974d4f391a9b2f9e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-accuracy-round1.json; SHA-256 37d42b09c99e0093c6321c5670dc6c64ec5de61b13b132021aea86a61c986e72. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-steps-round1.json; SHA-256 e4a99b7ee07aeeacb2f630fe9884629cadbde1bf60b9bbcd5044a4a0a5ddd528. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-structure-round1.json; SHA-256 f7dee986868c839c00e43e48e0a6fe3af7bfce1e8c6b1baac8b1e75b2461682e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-translation-round1.json; SHA-256 48dbe77d5da5415f7b86fc2cda39d2da92a854a2a32c499acc7f52161216cf08. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/universe-build.md",
+            "sha256": "a217db9e4c16fa6ef34cdf543e98ef598b5b60b699d14d2774005750bd6d08c3",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-newcomer-round2.json; SHA-256 98dda0f8652fb186d773a9292c237fa137aafc6624953c8369aeb5b6d42013a7. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-accuracy-round2.json; SHA-256 6458416c566697a4ddfdaecb6ecd6944bce941a0b91bd3ff9db6d89ae6118a92. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-steps-round2.json; SHA-256 aa07de3b42199c15d074cbcafbf30e6df4e867fce208397b9906618a35b97e0a. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-structure-round2.json; SHA-256 44932b093178e8cbab93079fec9ff99e19f0b26930ef892348b20ae4770e92d6. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-translation-round2.json; SHA-256 8346cc15708ab6de9fd31e638c8866bde868d682363e1d5389965723f2cfc786. Historical claims remain outside revalidation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/universe-build.md",
+            "sha256": "f19c9a41d1a3156c54194d3a6733e8c1e225974fda7a613223039dc007bc6e2d",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-newcomer-round2.json; SHA-256 98dda0f8652fb186d773a9292c237fa137aafc6624953c8369aeb5b6d42013a7. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-accuracy-round2.json; SHA-256 6458416c566697a4ddfdaecb6ecd6944bce941a0b91bd3ff9db6d89ae6118a92. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-steps-round2.json; SHA-256 aa07de3b42199c15d074cbcafbf30e6df4e867fce208397b9906618a35b97e0a. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-structure-round2.json; SHA-256 44932b093178e8cbab93079fec9ff99e19f0b26930ef892348b20ae4770e92d6. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-translation-round2.json; SHA-256 8346cc15708ab6de9fd31e638c8866bde868d682363e1d5389965723f2cfc786. Historical claims remain outside revalidation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/research-diary.md",
+            "sha256": "62049d3f2c60c1887a5eac653a60083b812039d09bb056b393946630222e623b",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-newcomer-round1.json; SHA-256 f517b98c13a26b410105de3f0d29b7faed786260ab0b076ef8771adaecffb038. Historical game claims not recertified.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-accuracy-round1.json; SHA-256 133951240a9e8c1b7029ac7d6cc9cad6032a6892883b10951370964e50596a90. Historical game claims not recertified.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-steps-round1.json; SHA-256 d6fafd1dadf1573a2f57220ae1f8c0562e7e9d1fc1a626246cc946dd9becf094. Historical game claims not recertified.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-structure-round1.json; SHA-256 4055e2eebca7630e5f90da6e2725d0fb9bc11fbb8e2b16e7990aa42d8bcd938d. Historical game claims not recertified.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-translation-round1.json; SHA-256 af556b5702d9bacd842b6a2a5a64981b41e1b0f7985dcc43e008f51167b06de3. Historical game claims not recertified.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/research-diary.md",
+            "sha256": "f7c3ff8054b95e888179feafeeb8220f23732acdba28ac9903a4ff4a44b48319",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-newcomer-round1.json; SHA-256 f517b98c13a26b410105de3f0d29b7faed786260ab0b076ef8771adaecffb038. Historical game claims not recertified.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-accuracy-round1.json; SHA-256 133951240a9e8c1b7029ac7d6cc9cad6032a6892883b10951370964e50596a90. Historical game claims not recertified.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-steps-round1.json; SHA-256 d6fafd1dadf1573a2f57220ae1f8c0562e7e9d1fc1a626246cc946dd9becf094. Historical game claims not recertified.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-structure-round1.json; SHA-256 4055e2eebca7630e5f90da6e2725d0fb9bc11fbb8e2b16e7990aa42d8bcd938d. Historical game claims not recertified.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent source-link/availability critique publication-links-critique-translation-round1.json; SHA-256 af556b5702d9bacd842b6a2a5a64981b41e1b0f7985dcc43e008f51167b06de3. Historical game claims not recertified.",
+                "findings": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "security": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "/root/article_translation_critic"
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-10-08T13:20:08.602Z"
+}
