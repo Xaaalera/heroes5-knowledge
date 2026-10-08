@@ -1,6 +1,6 @@
 {
-  "diffHash": "1e38e704b60744c13254e7a52fd5869d39c9d49fd086b356456368cf790cd9e7",
-  "commitSha": "a308646d5a5fd4cb4eb294b4ec2f88b26ce75602",
+  "diffHash": "6f9a1eff00994398c07a7ed3feebfbbc7b5805419413b7dc8d521856bd5797d9",
+  "commitSha": "2d8f14dd460aacf58cb4c2490fb19c1fe97675c9",
   "perAgent": {
     "craft": {
       "verdict": "PASS",
@@ -77,27 +77,27 @@
             "verdict": "PASS"
           },
           "specificity": {
-            "evidence": "Existing explicit SDK/player workflows retained. Gallery identifies all8 factions, previewAVIF versus originalPNG, dimensions, download action and per-file size; no new license/reuse promise introduced.",
+            "evidence": "Existing explicit workflow/gallery assessment retained. Placement checkpoint now distinguishes complete creature/count/cell per-stack matching from occupied-cell-only measures, native60/60 from one battle3/3stacks and full36/36battles, and latest interrupted campaign from older151/273 results.",
             "verdict": "PASS"
           },
           "reproducibility": {
-            "evidence": "Existing workflow checks retained; gallery gives a directDownloadPNG action below each preview. Parent supplied16 download byte-identity/mobile-fit checks; no browser/download execution by this reviewer.",
+            "evidence": "Player predictor copy-step S2 independently resolved: exact DLL destination, extraction, folder creation and conditional shared-loader installation are explicit. Research DLL/raw reports remain local and unavailable for website download; article does not promise public reproduction of private controls.",
             "verdict": "PASS"
           },
           "evidence": {
-            "evidence": "28 current article hashes and140 actual critics checked: five distinct identities separate from each author and no unresolved S1/S2. Gallery provenance points to NOTICE and parent supplied16original download/mobile checks; prior originalPNG hash inspection remains preserved. No new factual/game certification.",
+            "evidence": "32 current article hashes and160 actual critic identities checked; no stale records or unresolved S1/S2. New checkpoint cites historical local receipts and campaign-stop record; source/report inspection explicitly is not a fresh game run. No optional tests or historical native/game claims executed by this reviewer.",
             "verdict": "PASS"
           },
           "applicability": {
-            "evidence": "All38 listed website articles remain draft. Gallery is a download/provenance page for site art, not a new game mechanism or reuse-license guarantee; prior pinned-build/player/runtime boundaries unchanged.",
+            "evidence": "Draft status retained. Latest completed60native/3stack/36battle checks remain scoped to their researchDLL; ten-load run incomplete after2loads plus3battles, older151/273 tied to earlierDLLs. Downloadable preview.2 excludes new researchmechanisms, algorithm pause retained and ordinary input policy/postStart explanations remainTODO.",
             "verdict": "PASS"
           },
           "translations": {
-            "evidence": "Prior RU/EN full assessment retained; new gallery pair matches8factions, dimensions, file names/sizes, preview/original distinction and provenance meaning. Five actual gallery critics record final-text review.",
+            "evidence": "Prior full RU/EN assessment retained; all6 current status/copy-step articles have five actual final-text critics. Both languages distinguish native tests/battles/stacks, older/currentDLLs, paused/unshipped status, private availability and remaining work.",
             "verdict": "PASS"
           },
           "maintenance": {
-            "evidence": "Canonical site ownership and originalPNG preservation rule unchanged. New gallery, navigation and llms entry expose preserved sources without replacing originals or duplicating live manuals elsewhere; prior resolved maintenance findings stay closed.",
+            "evidence": "Dated current diary checkpoint is added without rewriting numeric historical observations; technical status and player guide crosslink it. Early offline limitation is dated to its stage and points to later controls. Prior originalPNG preservation/canonicalownership findings stay closed.",
             "verdict": "PASS"
           }
         },
@@ -1046,82 +1046,6 @@
             ]
           },
           {
-            "path": "docs/reference/research-diary.md",
-            "sha256": "62049d3f2c60c1887a5eac653a60083b812039d09bb056b393946630222e623b",
-            "author": "/root",
-            "round": 1,
-            "critics": [
-              {
-                "lane": "newcomer",
-                "reviewer": "/root/article_newcomer_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-newcomer-round1.json; SHA-256 f517b98c13a26b410105de3f0d29b7faed786260ab0b076ef8771adaecffb038. Historical game claims not recertified.",
-                "findings": []
-              },
-              {
-                "lane": "accuracy",
-                "reviewer": "article_accuracy_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-accuracy-round1.json; SHA-256 133951240a9e8c1b7029ac7d6cc9cad6032a6892883b10951370964e50596a90. Historical game claims not recertified.",
-                "findings": []
-              },
-              {
-                "lane": "steps",
-                "reviewer": "/root/article_steps_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-steps-round1.json; SHA-256 d6fafd1dadf1573a2f57220ae1f8c0562e7e9d1fc1a626246cc946dd9becf094. Historical game claims not recertified.",
-                "findings": []
-              },
-              {
-                "lane": "structure",
-                "reviewer": "article_structure_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-structure-round1.json; SHA-256 4055e2eebca7630e5f90da6e2725d0fb9bc11fbb8e2b16e7990aa42d8bcd938d. Historical game claims not recertified.",
-                "findings": []
-              },
-              {
-                "lane": "translation",
-                "reviewer": "/root/article_translation_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-translation-round1.json; SHA-256 af556b5702d9bacd842b6a2a5a64981b41e1b0f7985dcc43e008f51167b06de3. Historical game claims not recertified.",
-                "findings": []
-              }
-            ]
-          },
-          {
-            "path": "docs/en/reference/research-diary.md",
-            "sha256": "f7c3ff8054b95e888179feafeeb8220f23732acdba28ac9903a4ff4a44b48319",
-            "author": "/root",
-            "round": 1,
-            "critics": [
-              {
-                "lane": "newcomer",
-                "reviewer": "/root/article_newcomer_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-newcomer-round1.json; SHA-256 f517b98c13a26b410105de3f0d29b7faed786260ab0b076ef8771adaecffb038. Historical game claims not recertified.",
-                "findings": []
-              },
-              {
-                "lane": "accuracy",
-                "reviewer": "article_accuracy_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-accuracy-round1.json; SHA-256 133951240a9e8c1b7029ac7d6cc9cad6032a6892883b10951370964e50596a90. Historical game claims not recertified.",
-                "findings": []
-              },
-              {
-                "lane": "steps",
-                "reviewer": "/root/article_steps_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-steps-round1.json; SHA-256 d6fafd1dadf1573a2f57220ae1f8c0562e7e9d1fc1a626246cc946dd9becf094. Historical game claims not recertified.",
-                "findings": []
-              },
-              {
-                "lane": "structure",
-                "reviewer": "article_structure_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-structure-round1.json; SHA-256 4055e2eebca7630e5f90da6e2725d0fb9bc11fbb8e2b16e7990aa42d8bcd938d. Historical game claims not recertified.",
-                "findings": []
-              },
-              {
-                "lane": "translation",
-                "reviewer": "/root/article_translation_critic",
-                "evidence": "Independent source-link/availability critique publication-links-critique-translation-round1.json; SHA-256 af556b5702d9bacd842b6a2a5a64981b41e1b0f7985dcc43e008f51167b06de3. Historical game claims not recertified.",
-                "findings": []
-              }
-            ]
-          },
-          {
             "path": "docs/players/bank-reference.md",
             "sha256": "1dc3e79ac8dca3529e4b06cdf7f21adfba30329400affd89a12efab6fe67b653",
             "round": 2,
@@ -1360,6 +1284,388 @@
                 "findings": []
               }
             ]
+          },
+          {
+            "path": "docs/reference/placement-internals.md",
+            "sha256": "a0f7a4fa92a09af36f4cd039b7e68c925b5e92c53d5141fe267e5ad683557cef",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [
+                  {
+                    "verification": "Independent round1-snapshot/current textual comparison confirms no present-tense no-live claim remains, while currentcc36860native/3stacks/36battles and incomplete-ten boundaries remain unchanged.",
+                    "disposition": "Older pack15 offline replay is now explicitly early-stage history; later live controls refer to the current bounded checkpoint.",
+                    "state": "resolved",
+                    "location": "docs/reference/placement-internals.md:80",
+                    "problem": "The retained defensive-placement paragraph still says the new DLL has no fresh live verification.",
+                    "severity": "S2",
+                    "consequence": "The same page reports current36/36 battles above but tells readers below that the newer DLL was never checked live, obscuring the actual pre-pause progress.",
+                    "evidence": "Confirmed: cc368-ranged-full36-verification.json and raw122201Z-48872 report bind currentcc368 to36/36 battles; definition-category counterexample binds it to3/3 stacks. The lower paragraph lacks a date or version marking its no-live claim historical."
+                  }
+                ],
+                "evidence": "Independent current six-article scope and exact round1/current textual delta checked: historical offline-only sentence is corrected, source/readback/version counts remain artifact-supported, research DLL/raw logs expressly local and unavailable for download, and player installation now explicitly copies published DLL/shared bootstrap while preserving an already owned loader. Prior empirical scope is retained without new tests or game run.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Independently matched round2 frozenhash and reread paired final procedures/checkpoint boundaries. Verified installation transfer/loader condition, local-only evidence caveat and historical offline wording; no newresearch/test/game performed.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "All six current normalized hashes independently confirmed. Rechecked current/historical hierarchy, scoped metrics, unique current-research/placement-checkpoint IDs, reciprocal task crosslinks and player action sequence. Both original structural findings resolved; diary now explicitly distinguishes local-only research artifacts from website downloads. No new structure/navigation issue found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Entry paths / ???? ?????: defensive candidate paragraph ending with absence of a fresh new-DLL live check; current-research checkpoint above",
+                    "problem": "An undated earlier-build live-check limitation still refers to the new/newer DLL beneath the new authoritative current checkpoint.",
+                    "consequence": "A reader cannot reliably tell which build the no-fresh-live-check statement refers to, or reconcile it with the latest DLL table showing a three-stack live control and36 polygon battles.",
+                    "evidence": "Current checkpoint explicitly describes last tested4October DLL60native/3stacks/36battles; EN Entry paths says \"the newer DLL has no fresh live campaign\", RU says \"?????? ??????? ???????? ????? DLL ???????????\". The latter paragraph gives no date or build identity although its pack_15 replay is an earlier stage. This is temporal scope ambiguity, not a claim that a completed ten-load campaign exists.",
+                    "disposition": "Replaced undated absence-of-new-DLL-live-check claim with explicitly early-stage offline replay, then directed the reader to subsequent live checks and limits in the current checkpoint.",
+                    "verification": "Independent round2 structure reading found the early-stage qualifier and current-checkpoint handoff in both paired technical pages; the unqualified newer-DLL/no-fresh-live-check wording is removed. Latest60native/3stacks/36battles and incomplete campaign remain separately scoped."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленных парных абзацев, текущих чисел и сохранённых терминов; все шесть замороженных SHA проверены.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "docs/reference/placement-internals.md:80; docs/en/reference/placement-internals.md:78",
+                    "problem": "RU говорит об отсутствии свежей игровой проверки новой DLL, EN — об отсутствии свежей игровой серии.",
+                    "consequence": "Читатели получают разные ограничения: русский текст отрицает даже отдельную проверку, английский — серию проверок.",
+                    "evidence": "RU: «свежая игровая проверка новой DLL отсутствует»; EN: «the newer DLL has no fresh live campaign». Новый checkpoint в обеих версиях отдельно перечисляет один бой3/3, полный полигон36/36 и незавершённую десятизагрузочную серию.",
+                    "disposition": "Обе версии явно относят offline pack_15 к раннему историческому этапу и отсылают к последующим живым проверкам выше.",
+                    "verification": "RU internals:80 и EN:78 теперь говорят об одном раннем offline этапе, без отрицания текущего живого опыта; Subsequent live checks и Последующие живые проверки эквивалентны."
+                  }
+                ]
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent changed-scope reading: early supplied-branch offline checks are explicitly historical and point to subsequent checkpoint controls; current test/battle units and unfinished campaign remain clear; no new substantive finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/placement-internals.md",
+            "sha256": "f19dfb276609b89a112f3dcbd9b309c23f621a310fd5cc381a51a98e05267a74",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [
+                  {
+                    "verification": "Independent round1-snapshot/current textual comparison confirms no present-tense no-live claim remains, while currentcc36860native/3stacks/36battles and incomplete-ten boundaries remain unchanged.",
+                    "disposition": "Older pack15 offline replay is now explicitly early-stage history; later live controls refer to the current bounded checkpoint.",
+                    "state": "resolved",
+                    "location": "docs/en/reference/placement-internals.md:78",
+                    "problem": "The retained defensive-placement paragraph still says the new DLL has no fresh live verification.",
+                    "severity": "S2",
+                    "consequence": "The same page reports current36/36 battles above but tells readers below that the newer DLL was never checked live, obscuring the actual pre-pause progress.",
+                    "evidence": "Confirmed: cc368-ranged-full36-verification.json and raw122201Z-48872 report bind currentcc368 to36/36 battles; definition-category counterexample binds it to3/3 stacks. The lower paragraph lacks a date or version marking its no-live claim historical."
+                  }
+                ],
+                "evidence": "Independent current six-article scope and exact round1/current textual delta checked: historical offline-only sentence is corrected, source/readback/version counts remain artifact-supported, research DLL/raw logs expressly local and unavailable for download, and player installation now explicitly copies published DLL/shared bootstrap while preserving an already owned loader. Prior empirical scope is retained without new tests or game run.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Independently matched round2 frozenhash and reread paired final procedures/checkpoint boundaries. Verified installation transfer/loader condition, local-only evidence caveat and historical offline wording; no newresearch/test/game performed.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "All six current normalized hashes independently confirmed. Rechecked current/historical hierarchy, scoped metrics, unique current-research/placement-checkpoint IDs, reciprocal task crosslinks and player action sequence. Both original structural findings resolved; diary now explicitly distinguishes local-only research artifacts from website downloads. No new structure/navigation issue found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Entry paths / ???? ?????: defensive candidate paragraph ending with absence of a fresh new-DLL live check; current-research checkpoint above",
+                    "problem": "An undated earlier-build live-check limitation still refers to the new/newer DLL beneath the new authoritative current checkpoint.",
+                    "consequence": "A reader cannot reliably tell which build the no-fresh-live-check statement refers to, or reconcile it with the latest DLL table showing a three-stack live control and36 polygon battles.",
+                    "evidence": "Current checkpoint explicitly describes last tested4October DLL60native/3stacks/36battles; EN Entry paths says \"the newer DLL has no fresh live campaign\", RU says \"?????? ??????? ???????? ????? DLL ???????????\". The latter paragraph gives no date or build identity although its pack_15 replay is an earlier stage. This is temporal scope ambiguity, not a claim that a completed ten-load campaign exists.",
+                    "disposition": "Replaced undated absence-of-new-DLL-live-check claim with explicitly early-stage offline replay, then directed the reader to subsequent live checks and limits in the current checkpoint.",
+                    "verification": "Independent round2 structure reading found the early-stage qualifier and current-checkpoint handoff in both paired technical pages; the unqualified newer-DLL/no-fresh-live-check wording is removed. Latest60native/3stacks/36battles and incomplete campaign remain separately scoped."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленных парных абзацев, текущих чисел и сохранённых терминов; все шесть замороженных SHA проверены.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "docs/reference/placement-internals.md:80; docs/en/reference/placement-internals.md:78",
+                    "problem": "RU говорит об отсутствии свежей игровой проверки новой DLL, EN — об отсутствии свежей игровой серии.",
+                    "consequence": "Читатели получают разные ограничения: русский текст отрицает даже отдельную проверку, английский — серию проверок.",
+                    "evidence": "RU: «свежая игровая проверка новой DLL отсутствует»; EN: «the newer DLL has no fresh live campaign». Новый checkpoint в обеих версиях отдельно перечисляет один бой3/3, полный полигон36/36 и незавершённую десятизагрузочную серию.",
+                    "disposition": "Обе версии явно относят offline pack_15 к раннему историческому этапу и отсылают к последующим живым проверкам выше.",
+                    "verification": "RU internals:80 и EN:78 теперь говорят об одном раннем offline этапе, без отрицания текущего живого опыта; Subsequent live checks и Последующие живые проверки эквивалентны."
+                  }
+                ]
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent changed-scope reading: early supplied-branch offline checks are explicitly historical and point to subsequent checkpoint controls; current test/battle units and unfinished campaign remain clear; no new substantive finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/research-diary.md",
+            "sha256": "69dbbd14f12f99a0a7e8ac84f2459b500cbdec925854e09a75b3946d482b1547",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent current six-article scope and exact round1/current textual delta checked: historical offline-only sentence is corrected, source/readback/version counts remain artifact-supported, research DLL/raw logs expressly local and unavailable for download, and player installation now explicitly copies published DLL/shared bootstrap while preserving an already owned loader. Prior empirical scope is retained without new tests or game run.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Independently matched round2 frozenhash and reread paired final procedures/checkpoint boundaries. Verified installation transfer/loader condition, local-only evidence caveat and historical offline wording; no newresearch/test/game performed.",
+                "findings": [
+                  {
+                    "severity": "S3",
+                    "state": "resolved",
+                    "location": "Both research diary placement-checkpoint paragraphs:23",
+                    "problem": "Local named receipts/research DLL availability was not previously explicit.",
+                    "consequence": "Readers could mistake private record names/latestDLL for publicly retrievable reproduction material.",
+                    "evidence": "Frozen round1 said locallyverified records but did not plainly label unavailable material.",
+                    "disposition": "Explicit local-only and no-site-download caveat added.",
+                    "verification": "Both round2 diary paragraphs now state the researchDLL andrawreports remainlocal andthis version cannot be downloaded fromwebsite; player package remains preview.2 andnewmechanisms remain outside it."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "All six current normalized hashes independently confirmed. Rechecked current/historical hierarchy, scoped metrics, unique current-research/placement-checkpoint IDs, reciprocal task crosslinks and player action sequence. Both original structural findings resolved; diary now explicitly distinguishes local-only research artifacts from website downloads. No new structure/navigation issue found.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленных парных абзацев, текущих чисел и сохранённых терминов; все шесть замороженных SHA проверены.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent changed-checkpoint reading: local research DLL/raw report availability is explicit, no website download of that version promised, and source/report inspection is distinguished from a fresh game run; no new substantive finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/research-diary.md",
+            "sha256": "04ae803d2d059a359f611043522bb455ccffbdfb41cbe28af438b04e889cb448",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent current six-article scope and exact round1/current textual delta checked: historical offline-only sentence is corrected, source/readback/version counts remain artifact-supported, research DLL/raw logs expressly local and unavailable for download, and player installation now explicitly copies published DLL/shared bootstrap while preserving an already owned loader. Prior empirical scope is retained without new tests or game run.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Independently matched round2 frozenhash and reread paired final procedures/checkpoint boundaries. Verified installation transfer/loader condition, local-only evidence caveat and historical offline wording; no newresearch/test/game performed.",
+                "findings": [
+                  {
+                    "severity": "S3",
+                    "state": "resolved",
+                    "location": "Both research diary placement-checkpoint paragraphs:23",
+                    "problem": "Local named receipts/research DLL availability was not previously explicit.",
+                    "consequence": "Readers could mistake private record names/latestDLL for publicly retrievable reproduction material.",
+                    "evidence": "Frozen round1 said locallyverified records but did not plainly label unavailable material.",
+                    "disposition": "Explicit local-only and no-site-download caveat added.",
+                    "verification": "Both round2 diary paragraphs now state the researchDLL andrawreports remainlocal andthis version cannot be downloaded fromwebsite; player package remains preview.2 andnewmechanisms remain outside it."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "All six current normalized hashes independently confirmed. Rechecked current/historical hierarchy, scoped metrics, unique current-research/placement-checkpoint IDs, reciprocal task crosslinks and player action sequence. Both original structural findings resolved; diary now explicitly distinguishes local-only research artifacts from website downloads. No new structure/navigation issue found.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленных парных абзацев, текущих чисел и сохранённых терминов; все шесть замороженных SHA проверены.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent changed-checkpoint reading: local research DLL/raw report availability is explicit, no website download of that version promised, and source/report inspection is distinguished from a fresh game run; no new substantive finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/players/deployment-preview.md",
+            "sha256": "2406766e80c076401335a1a23406278d11b696d46d13926efdb6ffaa6588195d",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent current six-article scope and exact round1/current textual delta checked: historical offline-only sentence is corrected, source/readback/version counts remain artifact-supported, research DLL/raw logs expressly local and unavailable for download, and player installation now explicitly copies published DLL/shared bootstrap while preserving an already owned loader. Prior empirical scope is retained without new tests or game run.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Independently matched round2 frozenhash and reread paired final procedures/checkpoint boundaries. Verified installation transfer/loader condition, local-only evidence caveat and historical offline wording; no newresearch/test/game performed.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Original both player guides:31-34; round2 both guides:31-35",
+                    "problem": "Player installation previously omitted explicit ZIP extraction and DLL copying.",
+                    "consequence": "Following only stated actions could leave the loader/plugin inside the downloaded ZIP.",
+                    "evidence": "Frozen round1 step1 was passive package/destination wording, followed by launch.",
+                    "disposition": "Explicit file-transfer step added before ordinary launch.",
+                    "verification": "Round2 step3 explicitly extractsZIP, copies bin/Heroes5Mods/WorkshopDeploymentPreview.dll into matching game folder, creates Heroes5Mods ifneeded, conditionally copies our loader only ifnot already installed, and leaves the installed loader. Step2 still prohibits overwriting a foreign loader; steps4-5 provide ordinary startup and expected projections."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "All six current normalized hashes independently confirmed. Rechecked current/historical hierarchy, scoped metrics, unique current-research/placement-checkpoint IDs, reciprocal task crosslinks and player action sequence. Both original structural findings resolved; diary now explicitly distinguishes local-only research artifacts from website downloads. No new structure/navigation issue found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Download and install / ??????? ? ??????????: numbered steps1-3",
+                    "problem": "The installation sequence describes package filenames then proceeds to launch without an extraction/copy action.",
+                    "consequence": "A player holding the downloaded ZIP cannot follow a complete end-to-end installation task from this numbered procedure; the required transfer from archive to game folder is left implicit.",
+                    "evidence": "Frozen RU step1 lists where DLL files are placed; EN step1 says \"The DLL package places\" the files. Step2 discusses shared-loader ownership, and step3 launches Heroes/Lobby. No numbered step instructs extracting the ZIP or copying its bin contents. Independently read both lists; another critic report was not used as evidence.",
+                    "disposition": "Added numbered extraction/copy step for exact WorkshopDeploymentPreview.dll destination and optional shared dinput8 loader, before game launch.",
+                    "verification": "Independent reviewer read both revised installation lists: close, loader-ownership caution, extract/copy exact files, launch, battle check. The missing archive-to-installed-files transition is now present and the existing no-foreign-loader-overwrite caution remains before copy."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленных парных абзацев, текущих чисел и сохранённых терминов; все шесть замороженных SHA проверены.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-player reading: payload installation is now explicit, released preview.2 remains separate from research status, pause and planned post-Start explanations; no new substantive finding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/players/deployment-preview.md:31-34 (round1)",
+                    "problem": "The player installation procedure names destination files without telling the reader to extract and copy them.",
+                    "consequence": "A newcomer can follow the numbered actions and start the game with the downloaded ZIP still uninstalled.",
+                    "evidence": "Round1 confirmed textual omission: file locations were described but no extract/copy step existed.",
+                    "disposition": "Added an explicit extract-and-copy step while preserving other-loader restrictions.",
+                    "verification": "Independent round2 reading at lines31-35 confirms extraction, exact plugin path, creating Heroes5Mods if needed, conditional installation of our dinput8.dll and retaining an existing shared loader."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "docs/en/players/deployment-preview.md",
+            "sha256": "982eb8af80ac966e259f7ee2fca0bd532267ace93d94e9efe27ed0212d22c02a",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent current six-article scope and exact round1/current textual delta checked: historical offline-only sentence is corrected, source/readback/version counts remain artifact-supported, research DLL/raw logs expressly local and unavailable for download, and player installation now explicitly copies published DLL/shared bootstrap while preserving an already owned loader. Prior empirical scope is retained without new tests or game run.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Independently matched round2 frozenhash and reread paired final procedures/checkpoint boundaries. Verified installation transfer/loader condition, local-only evidence caveat and historical offline wording; no newresearch/test/game performed.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Original both player guides:31-34; round2 both guides:31-35",
+                    "problem": "Player installation previously omitted explicit ZIP extraction and DLL copying.",
+                    "consequence": "Following only stated actions could leave the loader/plugin inside the downloaded ZIP.",
+                    "evidence": "Frozen round1 step1 was passive package/destination wording, followed by launch.",
+                    "disposition": "Explicit file-transfer step added before ordinary launch.",
+                    "verification": "Round2 step3 explicitly extractsZIP, copies bin/Heroes5Mods/WorkshopDeploymentPreview.dll into matching game folder, creates Heroes5Mods ifneeded, conditionally copies our loader only ifnot already installed, and leaves the installed loader. Step2 still prohibits overwriting a foreign loader; steps4-5 provide ordinary startup and expected projections."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "All six current normalized hashes independently confirmed. Rechecked current/historical hierarchy, scoped metrics, unique current-research/placement-checkpoint IDs, reciprocal task crosslinks and player action sequence. Both original structural findings resolved; diary now explicitly distinguishes local-only research artifacts from website downloads. No new structure/navigation issue found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Download and install / ??????? ? ??????????: numbered steps1-3",
+                    "problem": "The installation sequence describes package filenames then proceeds to launch without an extraction/copy action.",
+                    "consequence": "A player holding the downloaded ZIP cannot follow a complete end-to-end installation task from this numbered procedure; the required transfer from archive to game folder is left implicit.",
+                    "evidence": "Frozen RU step1 lists where DLL files are placed; EN step1 says \"The DLL package places\" the files. Step2 discusses shared-loader ownership, and step3 launches Heroes/Lobby. No numbered step instructs extracting the ZIP or copying its bin contents. Independently read both lists; another critic report was not used as evidence.",
+                    "disposition": "Added numbered extraction/copy step for exact WorkshopDeploymentPreview.dll destination and optional shared dinput8 loader, before game launch.",
+                    "verification": "Independent reviewer read both revised installation lists: close, loader-ownership caution, extract/copy exact files, launch, battle check. The missing archive-to-installed-files transition is now present and the existing no-foreign-loader-overwrite caution remains before copy."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленных парных абзацев, текущих чисел и сохранённых терминов; все шесть замороженных SHA проверены.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-player reading: payload installation is now explicit, released preview.2 remains separate from research status, pause and planned post-Start explanations; no new substantive finding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/deployment-preview.md:31-34 (round1)",
+                    "problem": "The player installation procedure names destination files without telling the reader to extract and copy them.",
+                    "consequence": "A newcomer can follow the numbered actions and start the game with the downloaded ZIP still uninstalled.",
+                    "evidence": "Round1 confirmed textual omission: file locations were described but no extract/copy step existed.",
+                    "disposition": "Added an explicit extract-and-copy step while preserving other-loader restrictions.",
+                    "verification": "Independent round2 reading at lines31-35 confirms extraction, exact plugin path, creating Heroes5Mods if needed, conditional installation of our dinput8.dll and retaining an existing shared loader."
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1371,5 +1677,5 @@
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-10-08T16:03:33.722Z"
+  "timestamp": "2026-10-08T18:50:42.050Z"
 }
