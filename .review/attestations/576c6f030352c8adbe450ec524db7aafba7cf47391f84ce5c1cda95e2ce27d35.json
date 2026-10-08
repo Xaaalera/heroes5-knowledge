@@ -1,6 +1,6 @@
 {
-  "diffHash": "31a4277d4a07bd37ae4f01c82574cebae7d717a6671c8ead8cdfee542e7ebbfa",
-  "commitSha": "80b0270b11394b897e30dee8bbe7202ea56cfa3e",
+  "diffHash": "576c6f030352c8adbe450ec524db7aafba7cf47391f84ce5c1cda95e2ce27d35",
+  "commitSha": "5f86d03386c76f7f7b8ec51014fad1b667dbfb3a",
   "perAgent": {
     "craft": {
       "verdict": "PASS",
@@ -83,7 +83,7 @@
             "verdict": "PASS"
           },
           "evidence": {
-            "evidence": "Final24 article hashes and120 actual critic records inspected: five distinct critics separate from each author, no stale hashes or unresolved S1/S2. Parent-provided exact80b0270 full-gate receipt:24Python14Node49HTML13browser PASS23.7246061s; those gates were not executed by this reviewer. Drafts and historical gameplay scope remain uncertified.",
+            "evidence": "Current24 article content hashes match unchanged120 actual critic records. Exact80b0270 full-gate receipt24Python14Node49HTML13browser PASS23.7246061s remains historical. Parent supplied final fixture14-test isolation receipt with foreign sentinel intact; neither suite was executed by this reviewer. No final complete5f86 suite or new gameplay certification is claimed.",
             "verdict": "PASS"
           },
           "applicability": {
@@ -1129,5 +1129,5 @@
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-10-08T13:20:08.602Z"
+  "timestamp": "2026-10-08T13:33:47.368Z"
 }
