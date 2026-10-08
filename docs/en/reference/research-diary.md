@@ -12,6 +12,14 @@ updated: 2026-10-08
 ---
 # Research diary
 
+## 2026-10-08 — resource mod without installed xkit
+
+- The owner clarified player delivery: install a ready mod and start Heroes/Lobby normally. A required shared DLL may accompany the mod; players do not need xkit development tools.
+- `xkit release` retains the separate H5U and creates a ZIP containing it, the verified graphics DLL, notices and bilingual instructions. `xkit build` still produces the H5U. The DLL comes from the prepared SDK without invoking a compiler; the game original is not redistributed. This addition is published in preview.5; preview.4 does not contain it.
+- The exact generated ZIP was checked in the test game: a complete menu displayed the resource mod marker, while the loaded-module inventory excluded the SDK core, developer console, plugin bootstrap and controller. The game exited normally through its menu buttons; the test game's original graphics DLL was restored. The complete run took 19.34 seconds.
+- This checks a resource package with the shared graphics facade. It does not certify original-DLL test startup without that facade or multiplayer compatibility. Granny failure history remains separate; the established workaround serves working player delivery.
+- Mechanism and installation: [SDK commands](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md). [Preview.5](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.5) is published from `757a19a`: five independent reviews, 199 Python tests, 8 review checks, 7 native suites and CI passed. The public SDK archive digest matches the separately installed complete SDK; its short CLI released a resource player ZIP without a compiler. Installation uses the README's `--editable` flag; the control omitting it is retained as a procedure error, not a product fix.
+
 ## 2026-10-08 — published SDK preview.4 acceptance
 
 - [xkit preview.4](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.4), revision `0c406f4`, fixes short-cache selection after moving SDK source. Five independent reviews, 198 Python tests, 8 JavaScript checks, 7 native suites and CI passed. The archive digest matches the published asset.

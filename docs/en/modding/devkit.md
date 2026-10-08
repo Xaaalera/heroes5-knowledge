@@ -14,7 +14,7 @@ updated: 2026-10-08
 
 ## Start with xkit
 
-[xkit v0.1.1-preview.4](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.4) includes sources, Game API and ready SDK DLLs. An installed game with Universe is required. Resource H5U projects need no C++ compiler; native plugins require MSVC Build Tools. This release fixes the long cache path after moving SDK source or installing another archive.
+[xkit v0.1.1-preview.5](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.5) includes sources, Game API and ready SDK DLLs. An installed game with Universe is required. Resource H5U projects and their player ZIPs need no C++ compiler; native plugins require MSVC Build Tools. This release adds resource ZIPs with a shared graphics DLL for ordinary startup without development tools.
 
 Download `xkit-sdk.zip`, extract `xkit` and install [uv](https://docs.astral.sh/uv/getting-started/installation/). In a terminal inside `xkit`, run:
 
@@ -23,7 +23,7 @@ uv tool install --editable .
 uv tool update-shell
 ```
 
-Open a new terminal. `xkit setup` saves the installed game and workspace paths. Then create a resource project, run it in the test copy and build its ready H5U:
+Open a new terminal. `xkit setup` saves the installed game and workspace paths. Run commands one at a time: create a resource project, run it in the test copy, stop the session with Ctrl+C, then release its player package:
 
 ```text
 xkit setup
@@ -32,9 +32,11 @@ xkit start demo
 xkit release demo
 ```
 
+`xkit build demo` creates a separate H5U. `xkit release demo` retains it and creates a ZIP with the H5U, verified graphics DLL, notices and bilingual README.txt. Follow README.txt for first installation: retain the game's original graphics DLL, then copy the package bin and UserMODs folders. Players need no xkit, Python, developer console or controller; the shared DLL connects during ordinary Heroes/Lobby startup. The separate H5U suits an already working compatible graphics chain.
+
 For a native project use `xkit new demo-native`. Saving supported C++ code automatically builds and replaces its DLL in the same game. Added functions/core exports, state transfer, callback teardown and rollback are verified. The game itself needs no rebuild; DLL code still compiles.
 
-After creation, run `xkit start demo-native`. When development is finished, `xkit release demo-native` builds a separate player DLL package. Resource `xkit start demo` does not promise automatic H5U replacement in an open map. [Setup and version limits](https://github.com/Xaaalera/heroes5-mod-devkit/blob/0c406f45d5823a9c1343d22599ab9fe04a031cee/README.md).
+After creation, run `xkit start demo-native`. When development is finished, `xkit release demo-native` builds a separate player DLL package. Resource `xkit start demo` does not promise automatic H5U replacement in an open map. [Setup and version limits](https://github.com/Xaaalera/heroes5-mod-devkit/blob/24f8cc0e58a1de1d79a78f49d205020b4b4070a6/README.md).
 
 ### Controls and diagnostics
 
@@ -46,7 +48,7 @@ After creation, run `xkit start demo-native`. When development is finished, `xki
 | `xkit game screenshot` | A new PNG capture and its file path |
 | `xkit diagnostics` | SDK status and failure diagnostics |
 
-A connected SDK exposes map, menu and capture commands through its in-game console. Run `xkit diagnostics` in the terminal. A loading request does not establish map readiness. A screenshot shows the current frame: map, menu or intro. Failed capture is not replayed through another route; exiting the diagnostic client does not stop plugins. [Command reference](https://github.com/Xaaalera/heroes5-mod-devkit/blob/0c406f45d5823a9c1343d22599ab9fe04a031cee/docs/commands.md).
+A connected SDK exposes map, menu and capture commands through its in-game console. Run `xkit diagnostics` in the terminal. A loading request does not establish map readiness. A screenshot shows the current frame: map, menu or intro. Failed capture is not replayed through another route; exiting the diagnostic client does not stop plugins. [Command reference](https://github.com/Xaaalera/heroes5-mod-devkit/blob/24f8cc0e58a1de1d79a78f49d205020b4b4070a6/docs/commands.md).
 
 Each resource mod ships as its own H5U and each native plugin as its own DLL. Shared infrastructure uses `dinput8.dll` and `d3d9.dll`; the game original stays local as `d3d9.universe.dll`. Existing predictor/reference plugins are not automatically migrated to HMR. Unconfirmed cleanup stops updates and preserves recovery data.
 
