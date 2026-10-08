@@ -1,6 +1,6 @@
 import { execFileSync, execSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
-import { validateDocsReview, documentationCriteria } from './review-docs.mjs';
+import { validateDocsReview, documentationCriteria, validateArticleCritiques } from './review-docs.mjs';
 import {
   evaluateGate,
   getCumulativeDiff,
@@ -40,8 +40,16 @@ const documentationFiles = execFileSync('git', [
 const diff = getCumulativeDiff(base);
 const hash = hashDiff(diff);
 const config = loadConfig();
+const articlePolicy = rawConfig.articleCritique;
+if (!articlePolicy || articlePolicy.since !== '31885003d1e4740fc38f30bc604837dc5f9c547f') {
+  throw new Error('Keep the fixed article-critique policy adoption commit; do not reset it to skip reviews.');
+}
+execFileSync('git', ['merge-base', '--is-ancestor', articlePolicy.since, 'HEAD'], { stdio: 'pipe' });
+const articleFiles = execFileSync('git', [
+  'diff', '--name-only', '--diff-filter=AMR', '-z', articlePolicy.since, 'HEAD', '--', 'docs/*.md',
+], { encoding: 'utf8' }).split('\0').filter(Boolean);
 if (process.argv.includes('--info')) {
-  console.log(JSON.stringify({ base, hash, config, documentationFiles, documentationCriteria }));
+  console.log(JSON.stringify({ base, hash, config, documentationFiles, documentationCriteria, articleFiles }));
   process.exit(0);
 }
 const dirtyPaths = execFileSync('git', ['status', '--porcelain', '--untracked-files=normal'], {
@@ -89,6 +97,9 @@ for (const lens of config.agents.filter((agent) => agent.enabled !== false)) {
   }
 }
 validateDocsReview(attestation.perAgent.docs.review, documentationFiles, attestation.perAgent.docs.score);
+validateArticleCritiques(attestation.perAgent.docs.review, articleFiles.map((path) => ({
+  path, content: readFileSync(path, 'utf8'),
+})));
 execFileSync(
   'git',
   ['merge-base', '--is-ancestor', attestation.commitSha, 'HEAD'],

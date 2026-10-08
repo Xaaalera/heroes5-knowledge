@@ -13,6 +13,22 @@ SPEC.loader.exec_module(CHECK)
 
 
 class EditorialGateTests(unittest.TestCase):
+    def test_sdk_directory_label_does_not_allow_private_artifacts_or_links(self):
+        self.assertFalse(CHECK.contains_private_reference('<p>Open <code>.local/test-state</code> in your SDK workspace.</p>'))
+        for content in [
+            '<code>.local/test-state/private-report.json</code>',
+            '<code>.local/test-state</code>/private-report.json',
+            '<code>.local/test-state</code>&#47;private-report.json',
+            '<code>.local/test-state</code><span>/private-report.json</span>',
+            '<a href=".local%2Ftest-state/private-report.json">private report</a>',
+            '<a href=".local/test-state">private journal</a>',
+            'D:\\Private\\report.json',
+            'ghp_' + 'x' * 24,
+            'heroes5-mod-workshop',
+        ]:
+            with self.subTest(content=content):
+                self.assertTrue(CHECK.contains_private_reference(content))
+
     def validate(self, ru_changes=None, en_changes=None, raw=None):
         with tempfile.TemporaryDirectory() as folder:
             docs = Path(folder)

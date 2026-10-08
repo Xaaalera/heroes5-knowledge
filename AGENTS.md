@@ -1,5 +1,14 @@
 # Repository instructions / Инструкции репозитория
 
+## Documentation ownership and article critique / Документация и критика статей
+
+RU: Единственный источник живой документации — [наш сайт](https://xaaalera.github.io/heroes5-knowledge/), исходники статей — knowledge/docs. В репозиториях оставляем краткий README с назначением и ссылками, AGENTS с рабочими правилами и обязательные лицензии; руководства, справочники и объяснения не копируем по репам. Исторические исследования и приватные журналы сохраняем отдельно, не выдаём за текущую инструкцию. Изменение поведения сопровождается обновлением соответствующей статьи.
+EN: The website is the sole source of living human documentation, authored in knowledge/docs. Repositories retain concise README entry points, AGENTS working rules and required notices; manuals, references and explanations link to the site instead of maintaining parallel copies. Preserve historical/private evidence separately and update the canonical article when behavior changes.
+
+RU: Каждая новая или изменённая статья проходит пять независимых критиков по [методу critique](https://github.com/Xaaalera/claude-skills/blob/main/plugins/critique/skills/critique/SKILL.md): понятность новичку, техническая точность, воспроизводимость, структура/навигация, терминология/перевод. Каждый критик указывает место, конкретную проблему, последствия, серьёзность и доказательство; автор не выступает своим критиком. Проверяем факты по коду и наблюдениям, исправляем подтверждённые существенные ошибки, не придумываем оценки. До трёх раундов на статью; фиксируем хеш проверенного текста и решения по замечаниям. Подробный стандарт — [на сайте](https://xaaalera.github.io/heroes5-knowledge/contributing/).
+EN: Every new or changed article receives five independent critiques: newcomer clarity, technical accuracy, reproducible steps, structure/navigation, terminology/translation. Findings identify location, failure, consequence, severity and evidence; the author is not a critic. Verify claims against code/observations, fix confirmed substantial defects, record the reviewed content hash and finding disposition, and cap review at three rounds. Follow the canonical site authoring standard; never invent scores.
+
+
 ## Problem-solving order
 
 Current release / Текущий выпуск: [xkit preview.5](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.5), release SDK `757a19a`, Game API `a71985c`, hosted CI37744229507 success. Resource release adds an independent H5U/shared-graphics player ZIP with no developer core/controller/bootstrap; exact ZIP menu marker and normal exit verified19.34s. Documented editable installed SDK releases it without a compiler. Original-DLL sandbox startup and multiplayer remain separate unverified scopes. Earlier preview.4 native source HMR/native delivery evidence is retained; runtime logic unchanged by resource packaging. Bank preview.4 retains its separate one-Crypt/RU1024×768 player-card check after ordinary startup with diagnostic positioning disclosed. Preserve dated history; do not transfer these checks to all maps/banks/input gestures.
@@ -93,8 +102,8 @@ RU: эти проекты принадлежат автору; база знан
 RU: этот репозиторий можно использовать отдельно. Начни с его README и AGENTS.md; глобальная папка мастерской не обязательна. Если есть .gitmodules, выполни `git submodule update --init --recursive` после клонирования. В связанной мастерской используй её sync-subrepos вместо создания вторых checkout.
 EN: This repository can be used independently. Start with its README and AGENTS.md; the global workshop is optional. If .gitmodules exists, initialize pinned dependencies with `git submodule update --init --recursive`. In a linked workshop use its canonical dependency synchronization.
 
-- [Devkit commands / команды SDK](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md).
-- [Game API contracts / контракты библиотеки](https://github.com/Xaaalera/heroes5-game-api/blob/main/docs/mechanisms/game-bindings.md).
+- [Devkit commands / команды SDK](https://xaaalera.github.io/heroes5-knowledge/reference/xkit-commands/).
+- [Game API contracts / контракты библиотеки](https://xaaalera.github.io/heroes5-knowledge/reference/game-api/).
 - [Research index / карта исследований](https://xaaalera.github.io/heroes5-knowledge/reference/research-index/).
 
 ## Code standards / Стандарты кода

@@ -12,6 +12,17 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'site'
 
 
+def contains_private_reference(text):
+    """Allow the documented SDK directory label, never private artifact paths or links."""
+    public_text = re.sub(r'<code>\.local/test-state</code>(?![/\\])', '', text)
+    pattern = r'heroes5-mod-workshop|[A-Z]:\\|\.local/test-state|gh[oprs]_[A-Za-z0-9]{20,}'
+    document = Links()
+    document.feed(text)
+    visible_text = re.sub(r'\.local/test-state(?![/\\\w-])', '', ''.join(document.text))
+    return bool(re.search(pattern, public_text) or re.search(pattern, visible_text)
+                or any(re.search(pattern, unquote(link)) for link in document.links))
+
+
 def check_articles(docs, factions):
     """Check declared editorial state, not the truth of article content."""
     failures = []
@@ -82,6 +93,10 @@ class Links(HTMLParser):
         super().__init__()
         self.links = []
         self.ids = set()
+        self.text = []
+
+    def handle_data(self, data):
+        self.text.append(data)
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
@@ -126,7 +141,7 @@ def main():
         document = Links()
         document.feed(text)
         parsed[path.resolve()] = document
-        if re.search(r'heroes5-mod-workshop|[A-Z]:\\|\.local/test-state|gh[oprs]_[A-Za-z0-9]{20,}', text):
+        if contains_private_reference(text):
             failures.append(f'Unexpected private-workspace or credential reference: {path.relative_to(SITE)}')
     prefix = urlsplit(yaml.safe_load((ROOT / 'mkdocs.yml').read_text(encoding='utf-8'))['site_url']).path
     for path, document in parsed.items():
