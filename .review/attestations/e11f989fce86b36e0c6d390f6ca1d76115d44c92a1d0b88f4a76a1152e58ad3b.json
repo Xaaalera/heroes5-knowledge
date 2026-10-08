@@ -1,0 +1,105 @@
+{
+  "diffHash": "e11f989fce86b36e0c6d390f6ca1d76115d44c92a1d0b88f4a76a1152e58ad3b",
+  "commitSha": "c5db3032db69a257989ecd8f9d53ec2405a99b73",
+  "perAgent": {
+    "craft": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "/root/sdk_resource_final_craft",
+      "source_head": "c5db3032db69a257989ecd8f9d53ec2405a99b73",
+      "scope": "Full fixed-base Knowledge review; source/install/player evidence bounded to shared graphics dependency, not original-DLL or multiplayer acceptance."
+    },
+    "architecture": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "/root/event_api_final_architecture (independent final knowledge architecture reviewer)",
+      "source_head": "c5db3032db69a257989ecd8f9d53ec2405a99b73",
+      "scope": "Full fixed-base Knowledge review; source/install/player evidence bounded to shared graphics dependency, not original-DLL or multiplayer acceptance."
+    },
+    "tests": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "/root/event_api_tests",
+      "source_head": "c5db3032db69a257989ecd8f9d53ec2405a99b73",
+      "scope": "Full fixed-base Knowledge review; source/install/player evidence bounded to shared graphics dependency, not original-DLL or multiplayer acceptance."
+    },
+    "docs": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "/root/sdk_resource_final_docs (independent Codex knowledge documentation reviewer)",
+      "source_head": "c5db3032db69a257989ecd8f9d53ec2405a99b73",
+      "scope": "Full fixed-base Knowledge review; source/install/player evidence bounded to shared graphics dependency, not original-DLL or multiplayer acceptance.",
+      "review": {
+        "reviewer": "/root/sdk_resource_final_docs (independent Codex knowledge documentation reviewer)",
+        "files": [
+          "AGENTS.md",
+          "README.md",
+          "docs/en/modding/devkit.md",
+          "docs/en/modding/native-ui.md",
+          "docs/en/players/army-placement.md",
+          "docs/en/players/bank-reference.md",
+          "docs/en/players/deployment-preview.md",
+          "docs/en/players/mods.md",
+          "docs/en/reference/creatures.md",
+          "docs/en/reference/placement-internals.md",
+          "docs/en/reference/research-diary.md",
+          "docs/en/reference/universe-build.md",
+          "docs/modding/devkit.md",
+          "docs/modding/native-ui.md",
+          "docs/players/army-placement.md",
+          "docs/players/bank-reference.md",
+          "docs/players/deployment-preview.md",
+          "docs/players/mods.md",
+          "docs/reference/creatures.md",
+          "docs/reference/placement-internals.md",
+          "docs/reference/research-diary.md",
+          "docs/reference/universe-build.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "17 exact unchanged Markdown blobs compose actual knowledge-sdk4-docs-review.json per-file judgments. Five fresh deltas explain published resource delivery: ready H5U/shared-graphics ZIP, ordinary player launch without xkit developer tools, and reproducible author setup; AGENTS identifies current release and bounded acceptance."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "Fresh AGENTS current pointer, paired SDK entry instructions and paired dated diary append read with surrounding current/historical sections. Existing control table and developer diagnostics distinction retained; new Ctrl+C between start/release explicit. No article metadata/status promotion or historical record rewrite. 20 cumulative changed articles remain draft,40draft pages across tree."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "Preview5 release757a19a, GameAPIa71985c, CI37744229507 and installed/promoted archive SHA5bcfaaf9d5e8e06ad21879300db2890f39f2f7e5f8c0f4b80156f0f24caf5903 match read receipts. Guide states separate H5U, exact player ZIP components, original graphics retention, bin/UserMODs install and standalone H5U compatible-chain requirement. Raw binding scan found no numerical memory/disassembler labels in fresh human guidance. 19.34s identifies complete startup/capture/exit control, not HMR or frame latency."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "Guide explicitly downloads preview5, extracts xkit, installs uv editable, updates shell, opens new terminal, setup/new/start, Ctrl+C and release. SDK pinned24f8 README/commands locally independently reviewed earlier and current Git contents support procedures; hosted availability not separately verified here. Installed exact5bc archive receipt shows editable install0 and installed release0 without compiler tools on PATH,7.2490411s; noneditable failed control retained as wrong procedure, not product fix. Actual ZIP bilingual instructions independently inspected in prior SDK review. No reviewer workflow execution."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "Fresh publication receipt confirms release757a19a/public preview5 and hostedCI37744229507 success. Same5bc SDK asset matches installed editable-release receipt. Exact player ZIP control resource-player-archive-visual.json owner12420/flags0/game0/whole19.3402991s read earlier; independent SHA-linked PNG inspection showed [xkit: startup-proof], ZIP11506170 exact five members/member hashes matched. Core/console/controller/bootstrap/plugins absent but graphics facade present. Manual pixel acceptance and raw false runner flags explicitly distinguished. Prior original-DLL crash/dump observations and preview4 HMR timings retained historically, not converted into original-DLL acceptance. Parent supplies knowledge build/check23Python/8Node/41HTML PASS; not rerun, browser gate pending."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "One owned supported Universe resource ZIP with shared graphics dependency. No standalone original-DLL baseline or multiplayer certification, all-screen/map/bank/input claim, universal Windows/editor compatibility or transferred HMR timing. Existing native lifecycle stays prior preview4 evidence because runtime unchanged by packaging. All20 cumulative article drafts and40whole-tree draft statuses preserved; bounded preview publication PASS does not certify complete editorial requirements or promote verified."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "Fresh RU/EN paired SDK guides and diary compared directly: preview5 versus preview4, editable setup, Ctrl+C, H5U plus shared graphics ZIP, original retention, no player development tools, compatible-chain standaloneH5U condition,19.34s complete run and excluded original/multiplayer scopes agree. AGENTS bilingual heading/current pointer is shared;17unchanged Markdown blobs preserve actual prior parity."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "Authoritative27fixed-base paths/22Markdown all dispositioned. Actual prior report read;17Markdown Git blobs checked identical, five fresh paths directly read. New dated diary preserves old Granny fault/preview4 history. Current guide links intentionally pin SDK24f8doc refresh while actual released runtime source remains757a19a; no claim that new24f8source is released runtime. Replaced872stored attestation names prior924review, not current review proof. docs/llms.txt unchanged and outside changed inventory. No docs.config layers declared; separate advisory layer audit N/A."
+          }
+        },
+        "findings": []
+      }
+    },
+    "security": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "/root/bank_runtime_review",
+      "source_head": "c5db3032db69a257989ecd8f9d53ec2405a99b73",
+      "scope": "Full fixed-base Knowledge review; source/install/player evidence bounded to shared graphics dependency, not original-DLL or multiplayer acceptance."
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-10-08T08:05:32.332Z"
+}
