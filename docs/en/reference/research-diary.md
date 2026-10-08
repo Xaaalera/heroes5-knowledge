@@ -12,6 +12,14 @@ updated: 2026-10-08
 ---
 # Research diary
 
+## 2026-10-08 — frame capture and complete HMR timing
+
+- Published [xkit preview.3](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.3) from revision `f5d9a76`, with Game API `a71985c`. Five independent reviews and final CI passed: 198 Python tests, 8 JavaScript checks and 7 native suites. The published archive digest matches the verified build.
+- `xkit game screenshot` received a new complete PNG through the active SDK core; the test frame showed the intro. Dispatch return does not establish map readiness. Refusals do not replay through another route; diagnostic-client exit does not stop plugins.
+- A separate control of exact bank player archive preview.4 verified the Crypt card: ordinary startup, installed DLL checked before diagnostic connection, selector code unchanged. The hero was then positioned diagnostically; an actual capture showed T1–T4, A/B, portraits and counts. Scope: one object, Russian interface, 1024×768; full check 26.72 seconds, normal exit.
+- Native test-plugin timing starts before saving source and ends after capturing the visibly changed `2001` inside the same owned game window. 3.31 seconds to capture, 1.82 seconds to build, 10.21 seconds for the full run. The result was placed inside the game window outside a Discord notification. This is an upper bound to observing the test UI including capture and positioning, not exact first game-frame time or universal mod performance. The game exited normally.
+- Prior CI failed because the new test compared short and full Windows temporary-folder paths. Resolving the expected path fixed the test; production process guards stayed unchanged. Separate resource-H5U visual acceptance without SDK remains open because of the known original graphics-chain Granny failure.
+
 ## 2026-10-08 — SDK release and bank development adapter
 
 - Published [xkit v0.1.1-preview.1](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.1) and [bank reference preview.4](https://github.com/Xaaalera/heroes5-bank-reference/releases/tag/v0.1.0-preview.4). Remote archive digests match verified local files. SDK CI passed 197 Python tests, 8 JavaScript checks and 7 native tests; bank reference passed 6 checks with no skips.

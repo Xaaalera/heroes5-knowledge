@@ -70,7 +70,9 @@ The T2 range belongs only to that variant: do not add other tiers or infer that 
 
 ## Limits
 
-The following results belong to the older preview.2 delivery; they do not validate player archive preview.4 rendering. A separate xkit development adapter supports bank DLL and core updates; its crypt-card check does not replace the player archive's card check.
+On October 8, player archive preview.4 passed a separate Crypt-card check: Russian interface, 1024×768, T1–T4, A/B alternatives, portraits and counts. Startup was ordinary; diagnostic hero positioning and capture were connected only after verifying the installed DLL. Bank code stayed unchanged. One Crypt does not validate other objects or display sizes.
+
+A separate xkit development adapter supports bank DLL and core updates. Its populated-cache continuity belongs to development; the player archive result was obtained separately. Historical results below belong to preview.2.
 
 Historical evidence covers the imp cache. On September 25, automatic DLL loading displayed the crypt card at 1264×921. Both DLLs were active together, including five predictor battle cycles. Other banks, display sizes and all feature combinations remain incompletely checked.
 
