@@ -1,6 +1,6 @@
 {
-  "diffHash": "576c6f030352c8adbe450ec524db7aafba7cf47391f84ce5c1cda95e2ce27d35",
-  "commitSha": "5f86d03386c76f7f7b8ec51014fad1b667dbfb3a",
+  "diffHash": "dff852ee6e932c3e91a94d3b89a4c894b8e4e87d2609c336b2a66b09bf1548d3",
+  "commitSha": "ec21ab99b336753e4f6f63a839b5b1eed833d3c7",
   "perAgent": {
     "craft": {
       "verdict": "PASS",
@@ -75,15 +75,15 @@
             "verdict": "PASS"
           },
           "specificity": {
-            "evidence": "Current SDK procedures name commands, working directories, placeholders, source edit/result, archive recipe nesting, storage restoration lookup and callback/build limits; resolved fixes were independently checked in earlier bounded rounds.",
+            "evidence": "Current SDK procedures retain explicit commands, directories, substitutions and output/refusal checks. Bank RU/EN now gives six ordered close/remove-old-prototype/backup/copy/start/hover steps and identifies all installed DLL/H5U payload files; shared loading/graphics DLLs are distinguished from a complete SDK.",
             "verdict": "PASS"
           },
           "reproducibility": {
-            "evidence": "Current workflows retain prerequisites, commands, output and refusal handling. The Universe inventory setup now links to the canonical formats report section. The dated predictor availability correction explicitly withholds a complete public reproduction claim. No new workflow/game execution was performed.",
+            "evidence": "Corrected bank steps explicitly extract and merge bin/UserMODs after backups, followed by ordinary Heroes/Lobby startup and expected card. Direct-init AGENTS matches standalone policy. Prior canonical archive/SDK workflows remain unchanged; no install/game execution performed here.",
             "verdict": "PASS"
           },
           "evidence": {
-            "evidence": "Current24 article content hashes match unchanged120 actual critic records. Exact80b0270 full-gate receipt24Python14Node49HTML13browser PASS23.7246061s remains historical. Parent supplied final fixture14-test isolation receipt with foreign sentinel intact; neither suite was executed by this reviewer. No final complete5f86 suite or new gameplay certification is claimed.",
+            "evidence": "26 current article hashes and130 actual critics inspected: five distinct identities separate from each author, no stale hashes and no unresolved S1/S2. Existing supplied site/unit/browser receipts remain historical and are not finalec21ab9 execution; reviewer ran no optional tests.",
             "verdict": "PASS"
           },
           "applicability": {
@@ -91,11 +91,11 @@
             "verdict": "PASS"
           },
           "translations": {
-            "evidence": "RU/EN player/reference pairs and current SDK pairs inspected for matching numbers, constraints, release versions and evidence limits;20 article records retain independent translation critic identities and findings, not an invented panel.",
+            "evidence": "Existing full-base RU/EN assessment retained; current bank round2 pair matches in backup/copy/start/hover instructions, payload names and release/evidence limits, with five actual final-text critics for each article.",
             "verdict": "PASS"
           },
           "maintenance": {
-            "evidence": "All three original maintenance findings remain resolved. The only0add-to80b delta replaces the fragile RU formats fragment with an article link and explicitly named report section; five actual corrected-route critiques cover the final article bytes.",
+            "evidence": "Prior three maintenance findings remain resolved; current source delta preserves canonical site ownership and direct dependency initialization. Bank installer instruction fix has recorded S2 disposition and independent round2 verification; no new publication-docs finding.",
             "verdict": "PASS"
           }
         },
@@ -1118,6 +1118,170 @@
                 "findings": []
               }
             ]
+          },
+          {
+            "path": "docs/players/bank-reference.md",
+            "sha256": "1dc3e79ac8dca3529e4b06cdf7f21adfba30329400affd89a12efab6fe67b653",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Full current paired article read; changed preparation explicitly removes legacy prototype and retains original graphics/input before copying exact preview.4 bin/UserMODs members. Existing round1 exact publicfcce3a ZIP inspection and matching historical Crypt/startup receipts reused; frozen source preflight refuses old prototype and mismatched paired H5U. DLL loading is accurately distinguished from file installation.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Full frozen paired article reread, current hashes independently matched, missing file-transfer action verified at line 29 and prototype refusal checked in WorkshopBankReferenceInstall.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Round 1: both bank-reference articles lines 26-29; round 2 verification at lines 26-31",
+                    "problem": "Installation omitted explicit extraction/copying of the loader, bank DLL and H5U.",
+                    "consequence": "A reader could install only graphics while leaving the bank mod inside the ZIP.",
+                    "evidence": "The frozen round 1 wording inventories package members and explicitly installs only d3d9.dll.",
+                    "disposition": "The author added complete file transfer after backups and before normal launch.",
+                    "verification": "Both current articles line 29 explicitly extract the ZIP and merge its bin/UserMODs folders into the installed game, naming dinput8.dll, d3d9.dll, WorkshopBankReference.dll and workshop-army-reference.h5u; lines 27-28 move old prototype removal and backups before copying; lines 30-31 give normal launch and expected hover result."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired round2 text and normalized hashes checked. Installation sequence is close/preflight/backup/copy/launch/check; removal, card interpretation, example, sources and bounded historic/current evidence remain discoverable. No new structure/navigation defect found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "??????? ? ??????????: numbered launch/hover steps and following old-prototype paragraph",
+                    "problem": "Old text-prototype removal is ordered after game launch instead of before it.",
+                    "consequence": "A returning user can follow the numbered procedure and reach a launch where the bank reference refuses installation or fails to appear, before learning the required cleanup.",
+                    "evidence": "Frozen paired articles put old workshop-object-reference.h5u removal in the paragraph after numbered steps3(launch) and4(hover). src/bank_launcher.cpp, WorkshopBankReferenceInstall, explicitly requires that this old prototype not exist before installing the bank reference.",
+                    "disposition": "Moved old-prototype removal and existing-H5U preservation into numbered preflight step2, before backup/copy/launch steps3-5.",
+                    "verification": "Independent structure reviewer read both complete frozen round2 articles. Step2 explicitly removes the blocked old prototype; step4 explicitly extracts/copies bin and UserMODs; launch is step5 and card check step6. The original prerequisite-order failure is absent."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленного DLL loading и шести текущих шагов установки RU/EN.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/bank-reference.md:20; RU pair:20",
+                    "problem": "EN previously translated DLL connection/loading as Automatic DLL installation.",
+                    "consequence": "EN described verified automatic file installation instead of verified connection of installed DLLs.",
+                    "evidence": "Round1 RU:20 подключение DLL vs EN:20 Automatic DLL installation.",
+                    "disposition": "EN:20 now says DLL loading.",
+                    "verification": "Independently read current pair: RU подключение DLL and EN DLL loading mean the same action; manual folder copying is explicit and equivalent in both line29."
+                  }
+                ]
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-step and context reading: backup, extract/copy, startup and expected bank-card steps are explicit; shared infrastructure is distinguished from complete SDK. No new substantive clarity finding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/players/bank-reference.md:26-29 (round1)",
+                    "problem": "The numbered installation steps never instruct copying the bank DLL, H5U and shared input DLL from the package.",
+                    "consequence": "A newcomer following the explicit actions installs only d3d9.dll and cannot get the bank card.",
+                    "evidence": "Round1 textual omission: package contents were listed, while only d3d9.dll had an explicit installation action.",
+                    "disposition": "Both versions now include an explicit extract-and-copy installation step after backups.",
+                    "verification": "Independent round2 reading at lines26-31 confirms six ordered steps; line29 copies/merges bin and UserMODs into the installed game directory and lists all four installed payload files."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "docs/en/players/bank-reference.md",
+            "sha256": "0edd84dd73a2f0aa0edd91af963d7f845eff4e11551a37f101498ed3b88ef876",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Full current paired article read; changed preparation explicitly removes legacy prototype and retains original graphics/input before copying exact preview.4 bin/UserMODs members. Existing round1 exact publicfcce3a ZIP inspection and matching historical Crypt/startup receipts reused; frozen source preflight refuses old prototype and mismatched paired H5U. DLL loading is accurately distinguished from file installation.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Full frozen paired article reread, current hashes independently matched, missing file-transfer action verified at line 29 and prototype refusal checked in WorkshopBankReferenceInstall.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Round 1: both bank-reference articles lines 26-29; round 2 verification at lines 26-31",
+                    "problem": "Installation omitted explicit extraction/copying of the loader, bank DLL and H5U.",
+                    "consequence": "A reader could install only graphics while leaving the bank mod inside the ZIP.",
+                    "evidence": "The frozen round 1 wording inventories package members and explicitly installs only d3d9.dll.",
+                    "disposition": "The author added complete file transfer after backups and before normal launch.",
+                    "verification": "Both current articles line 29 explicitly extract the ZIP and merge its bin/UserMODs folders into the installed game, naming dinput8.dll, d3d9.dll, WorkshopBankReference.dll and workshop-army-reference.h5u; lines 27-28 move old prototype removal and backups before copying; lines 30-31 give normal launch and expected hover result."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired round2 text and normalized hashes checked. Installation sequence is close/preflight/backup/copy/launch/check; removal, card interpretation, example, sources and bounded historic/current evidence remain discoverable. No new structure/navigation defect found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Download and install: numbered launch/hover steps and following old-prototype paragraph",
+                    "problem": "Old text-prototype removal is ordered after game launch instead of before it.",
+                    "consequence": "A returning user can follow the numbered procedure and reach a launch where the bank reference refuses installation or fails to appear, before learning the required cleanup.",
+                    "evidence": "Frozen paired articles put old workshop-object-reference.h5u removal in the paragraph after numbered steps3(launch) and4(hover). src/bank_launcher.cpp, WorkshopBankReferenceInstall, explicitly requires that this old prototype not exist before installing the bank reference.",
+                    "disposition": "Moved old-prototype removal and existing-H5U preservation into numbered preflight step2, before backup/copy/launch steps3-5.",
+                    "verification": "Independent structure reviewer read both complete frozen round2 articles. Step2 explicitly removes the blocked old prototype; step4 explicitly extracts/copies bin and UserMODs; launch is step5 and card check step6. The original prerequisite-order failure is absent."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленного DLL loading и шести текущих шагов установки RU/EN.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/bank-reference.md:20; RU pair:20",
+                    "problem": "EN previously translated DLL connection/loading as Automatic DLL installation.",
+                    "consequence": "EN described verified automatic file installation instead of verified connection of installed DLLs.",
+                    "evidence": "Round1 RU:20 подключение DLL vs EN:20 Automatic DLL installation.",
+                    "disposition": "EN:20 now says DLL loading.",
+                    "verification": "Independently read current pair: RU подключение DLL and EN DLL loading mean the same action; manual folder copying is explicit and equivalent in both line29."
+                  }
+                ]
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-step and context reading: backup, extract/copy, startup and expected bank-card steps are explicit; shared infrastructure is distinguished from complete SDK. No new substantive clarity finding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/bank-reference.md:26-29 (round1)",
+                    "problem": "The numbered installation steps never instruct copying the bank DLL, H5U and shared input DLL from the package.",
+                    "consequence": "A newcomer following the explicit actions installs only d3d9.dll and cannot get the bank card.",
+                    "evidence": "Round1 textual omission: package contents were listed, while only d3d9.dll had an explicit installation action.",
+                    "disposition": "Both versions now include an explicit extract-and-copy installation step after backups.",
+                    "verification": "Independent round2 reading at lines26-31 confirms six ordered steps; line29 copies/merges bin and UserMODs into the installed game directory and lists all four installed payload files."
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1129,5 +1293,5 @@
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-10-08T13:33:47.368Z"
+  "timestamp": "2026-10-08T15:37:27.023Z"
 }
