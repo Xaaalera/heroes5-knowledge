@@ -8,11 +8,17 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/deployment-preview/
 description: 'Deployment predictor'
-updated: '2026-09-26'
+updated: '2026-10-08'
 ---
 # Deployment predictor
 
 A projection marks **a creature's predicted position and movement area**. It uses a known type without revealing hidden guard quantities or upgrades. This is an experimental mod for the inspected Universe build; no universal release is available.
+
+## Development status
+
+The research algorithm has advanced beyond the published package. The latest tested research DLL passed 60 native tests, a three-stack control and 36 full-polygon battles. Its ten-load campaign is incomplete and algorithm work is paused. [Recovered rules, verified results and remaining work](../reference/placement-internals.md#current-research).
+
+Ordinary prediction must continue to exclude hidden counts, upgrades and the final neutral split. Post-Start explanations of actual placement for every player remain planned.
 
 ## Download and install
 
@@ -22,10 +28,11 @@ A projection marks **a creature's predicted position and movement area**. It use
 
 The player ZIP needs Windows and the supported game. No Python, Git or compiler is needed.
 
-1. Exit the game. The DLL package places the shared `bin/dinput8.dll` and `bin/Heroes5Mods/WorkshopDeploymentPreview.dll` inside the installed game directory.
+1. Exit the game.
 2. Both of our mods share one `dinput8.dll`. Do not overwrite a copy installed by another mod; that combination has not been checked.
-3. Start through Heroes/Lobby as usual. There is no separate player EXE for this mod.
-4. Start an ordinary battle: enemy projections should appear before Start. Hover for movement range; right-click for a creature card.
+3. Extract the ZIP. Copy `bin/Heroes5Mods/WorkshopDeploymentPreview.dll` into the matching folder of the installed game; create `Heroes5Mods` inside `bin` if needed. If our shared loader is not installed yet, copy the package's `bin/dinput8.dll` into the game's `bin`. Retain an already installed shared loader.
+4. Start through Heroes/Lobby as usual. There is no separate player EXE for this mod.
+5. Start an ordinary battle: enemy projections should appear before Start. Hover for movement range; right-click for a creature card.
 
 If the build is unsupported, compare it with the linked build below. Original `d3d9.dll`, `uni.dll` and `um.dll` are not replaced. Validation results and limits are described below.
 

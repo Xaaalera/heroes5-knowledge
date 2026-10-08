@@ -8,11 +8,48 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/placement-internals/
 description: Placement internals and corrected assumptions
-updated: '2026-09-26'
+updated: '2026-10-08'
 ---
 # Placement internals and corrected assumptions
 
 Technical reference for **stack splitting, sorting and cell selection**. Start with the illustrated [player explanation](../players/army-placement.md). The inspected mechanisms belong to the [pinned EXE](universe-build.md); validation scope is listed at the end.
+
+## Research checkpoint {#current-research}
+
+As of **8 October 2026**, the research predictor is preserved and algorithm work is paused. The new mechanisms have not shipped in the player package.
+
+The prototype freezes the complete prediction **before Start**, then compares it with the actual army after battle starts. A complete match requires the same **creature, quantity and cell for every stack**. Matching occupied cells alone is a separate, weaker measure.
+
+### Additions and corrections
+
+- Separated defensive placement, general placement and linked groups. Goblins and their carriers require adjacency checks that account for creature footprints and occupied cells.
+- Corrected shooter classification: placement uses declared shots and the “Cyclops + Goblin” group condition. Physical creature state is checked separately. This defect preserved the army composition but misplaced all three stacks in a control battle.
+- After partially successful simple placement, preserve selected cells and exact quantities of placed source records. Repeated stacks of the same creature retain their identity; reducing the record count must not recalculate successful positions.
+- Investigated parts of army valuation, hero specializations and the initial placement area. Isolated arithmetic checks do not establish every combination of effects and modes.
+
+### Latest tested research DLL
+
+The last completed checks before the pause ran on **4 October**, after correcting source shooter classification:
+
+| Check | Result | Verified scope |
+|---|---|---|
+| Isolated native tests | 60/60 | Local rules and regressions; not a battle campaign |
+| Cyclops, Goblin and Archer counterexample | 3/3 stacks | Creature, quantity and cell in one battle |
+| Full test polygon with 100 Archers in the hero army | 36/36 battles | 30 mixed and 6 single-type packs |
+| Ten-load campaign | Incomplete | Two loads and three battles of the third, then the game was closed to change priorities |
+
+The preceding DLL achieved **151/151 complete matches** across five loads: 108 polygon battles and 43 random-map battles. An earlier version separately achieved **273/273** across ten loads. Each result belongs to its own build and cannot certify a changed DLL. Later counterexamples showed that a successful campaign does not establish the complete algorithm.
+
+The early **111/149** measured occupied-cell matches; **14/14** were native tests from an early stage. Neither describes current progress or equals complete-army accuracy.
+
+### Remaining work
+
+- Complete a fresh broad campaign for the latest DLL and cover other hero armies, obstacles and field shapes.
+- Resolve remaining transitions between passes, threshold ties, effects, random branches and crowded compositions.
+- Decide ordinary-mode inputs separately: hidden counts, upgrades and the final neutral split must not become inputs to ordinary prediction.
+- Add post-Start explanations for every player: why the army took its actual positions and how they differ from the prediction.
+
+The target is complete agreement for every pack in research Superadmin mode. It **has not been achieved**. Earlier rules and their limits remain below; the [diary](research-diary.md#placement-checkpoint) records this checkpoint.
 
 ## Army preparation
 
@@ -38,7 +75,7 @@ The extended path controls retries, builds a placement context, then selects the
 
 In the pinned Universe `DefaultStats.xdb`, the defensive comparison uses `OurShootersMinRelativePower=0.2` and `OurShootersMinRelativeAdvantage=1.3`, both with strict greater-than tests. An opposing-capability check and early conditions also apply; the two thresholds are not the complete formula. Spread is related to `EnemyAreaAttackMinRelativePower=0.35` and its own conditions. Defence and spread can both be enabled. Two recorded `pack_15` battles with the same captured public quantity bands had shooter-power shares of about 0.217 and 0.183 with different defensive flags; exact neutral counts were not retained and arenas differed. [Observation record](research-diary.md#placement-defence-2026-09-26).
 
-The defensive candidate-selection function lists free neighbors of occupied cells, removes duplicates, and sorts candidates. The shooter-window row scorer assigns weight 2 to chosen shooter-window rows, 1 to their neighbors, and 0 to other rows; the candidate-order comparators resolve ties in the game's order. Large and small defenders keep separate candidate sequences, and an entire 2×2 footprint is checked before placement. Combined defence and spread use selected spaced rows rather than ordinary adjacency. Recorded Polygon `pack_15` attempts from rounds 1, 4, and 10 passed offline when the defensive branch was supplied; the newer DLL has no fresh live campaign.
+The defensive candidate-selection function lists free neighbors of occupied cells, removes duplicates, and sorts candidates. The shooter-window row scorer assigns weight 2 to chosen shooter-window rows, 1 to their neighbors, and 0 to other rows; the candidate-order comparators resolve ties in the game's order. Large and small defenders keep separate candidate sequences, and an entire 2×2 footprint is checked before placement. Combined defence and spread use selected spaced rows rather than ordinary adjacency. At an early stage, recorded Polygon `pack_15` attempts from rounds 1, 4, and 10 passed offline when the defensive branch was supplied. Subsequent live research-DLL checks and their limits are listed in the current checkpoint above.
 
 ## Scores and ties
 

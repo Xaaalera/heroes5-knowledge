@@ -12,6 +12,16 @@ updated: 2026-10-08
 ---
 # Research diary
 
+## 2026-10-08 — current placement-algorithm status {#placement-checkpoint}
+
+Algorithm work has been paused since the switch to SDK development on 4 October. The [technical account](placement-internals.md#current-research) is updated; the research DLL's new mechanisms have not shipped in the player package.
+
+The last tested DLL before the pause corrects source shooter classification. Its own results are **60/60 native tests**, **3/3 stacks** in the counterexample and **36/36 full-polygon battles** with 100 Archers in the hero army. The full ten-load campaign stopped after two loads and three battles of the third. It is not a completed ten-load success.
+
+Earlier builds retain separate results: **151/151** across five loads for the preceding version and **273/273** across ten loads for an older one. Each result has its own DLL and scope. The early 111/149 occupied-cell matches and 14 native tests are historical stages rather than the current result.
+
+Evidence: locally verified records `definition-category-counterexample-verification`, `cc368-ranged-full36-verification` and `new-dll-rmg43-verification`, plus the owner's campaign-stop record. The research DLL and raw reports remain local; this version is not downloadable from the website. Reading source and reports is not a new game run. The complete algorithm, ordinary-mode input policy and post-Start explanations for every player remain unfinished.
+
 ## 2026-10-08 — resource mod without installed xkit
 
 - The owner clarified player delivery: install a ready mod and start Heroes/Lobby normally. A required shared DLL may accompany the mod; players do not need xkit development tools.
