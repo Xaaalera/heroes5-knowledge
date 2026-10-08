@@ -1,6 +1,6 @@
 {
-  "diffHash": "6f9a1eff00994398c07a7ed3feebfbbc7b5805419413b7dc8d521856bd5797d9",
-  "commitSha": "2d8f14dd460aacf58cb4c2490fb19c1fe97675c9",
+  "diffHash": "6656fca1344f8b4ca4b93cb549e5cd271414e32f213d285d3b5b479a0b5b5c79",
+  "commitSha": "0e3971865ac9136fb70cba324faf73142dc393a3",
   "perAgent": {
     "craft": {
       "verdict": "PASS",
@@ -45,6 +45,7 @@
           "docs/en/reference/game-api.md",
           "docs/en/reference/placement-internals.md",
           "docs/en/reference/research-diary.md",
+          "docs/en/reference/technology-stack.md",
           "docs/en/reference/universe-build.md",
           "docs/en/reference/xkit-commands.md",
           "docs/llms.txt",
@@ -64,40 +65,41 @@
           "docs/reference/game-api.md",
           "docs/reference/placement-internals.md",
           "docs/reference/research-diary.md",
+          "docs/reference/technology-stack.md",
           "docs/reference/universe-build.md",
           "docs/reference/xkit-commands.md"
         ],
         "criteria": {
           "purpose": {
-            "evidence": "Existing purpose assessment retained across40 previous paths; new gallery pair clearly offers previews and unchanged original1672x941PNG downloads for all8 site backgrounds, with provenance links.",
+            "evidence": "Prior purpose coverage retained; technology pair identifies developer inventory/reuse objective, separates player prerequisites and records tool areas with actual uses.",
             "verdict": "PASS"
           },
           "structure": {
-            "evidence": "42 documentation paths covered: previous40 plus new gallery pair. Committed nav entries expose RU/EN pages, and llms entry names the original-download purpose; faction sections match gallery download links.",
+            "evidence": "44 documentation files assessed: prior42 plus bilingual inventory. Nav and llms expose the new pair; AGENTS and three configured review rules link the same canonical inventory rather than duplicate its maintained list.",
             "verdict": "PASS"
           },
           "specificity": {
-            "evidence": "Existing explicit workflow/gallery assessment retained. Placement checkpoint now distinguishes complete creature/count/cell per-stack matching from occupied-cell-only measures, native60/60 from one battle3/3stacks and full36/36battles, and latest interrupted campaign from older151/273 results.",
+            "evidence": "Prior precise workflows retained. Inventory gives purpose/use area, authoritative manifest locations and update/removal process. Current source inspection confirms MinHook bank-loader use at SDKmod_loader.cpp and linked nativeCMake pin; setuptools and root-only Husky are explicitly scoped.",
             "verdict": "PASS"
           },
           "reproducibility": {
-            "evidence": "Player predictor copy-step S2 independently resolved: exact DLL destination, extraction, folder creation and conditional shared-loader installation are explicit. Research DLL/raw reports remain local and unavailable for website download; article does not promise public reproduction of private controls.",
+            "evidence": "Inventory instructs checking existing canonical components/Game API before adding dependencies and updating manifest/inventory/instructions together. It links version sources and does not require all developer tools for player packages. No dependency install/build tests executed here.",
             "verdict": "PASS"
           },
           "evidence": {
-            "evidence": "32 current article hashes and160 actual critic identities checked; no stale records or unresolved S1/S2. New checkpoint cites historical local receipts and campaign-stop record; source/report inspection explicitly is not a fresh game run. No optional tests or historical native/game claims executed by this reviewer.",
+            "evidence": "34 current article hashes and170 actual critic records inspected: distinct five lanes separate from authors, no stale hashes/unresolved S1/S2. Independently read SDK requirements/pyproject/nativeCMake+mod_loader and root/site package manifests to check stated limited adoption. No new game/runtime evidence certified.",
             "verdict": "PASS"
           },
           "applicability": {
-            "evidence": "Draft status retained. Latest completed60native/3stack/36battle checks remain scoped to their researchDLL; ten-load run incomplete after2loads plus3battles, older151/273 tied to earlierDLLs. Downloadable preview.2 excludes new researchmechanisms, algorithm pause retained and ordinary input policy/postStart explanations remainTODO.",
+            "evidence": "All40 listed website articles remain draft. MinHook bank-hook integration is separated from unfinished predictor migration; Detours remains a research candidate. Player/developer stack and root-workshop Husky applicability are distinct; existing paused/released/experimental boundaries retained.",
             "verdict": "PASS"
           },
           "translations": {
-            "evidence": "Prior full RU/EN assessment retained; all6 current status/copy-step articles have five actual final-text critics. Both languages distinguish native tests/battles/stacks, older/currentDLLs, paused/unshipped status, private availability and remaining work.",
+            "evidence": "Prior RU/EN coverage retained; independent round2 inventory reading confirms equivalent tool purposes, MinHook/Detours adoption limits, root Husky scope and reuse/update process, with five actual accepted critics per final article.",
             "verdict": "PASS"
           },
           "maintenance": {
-            "evidence": "Dated current diary checkpoint is added without rewriting numeric historical observations; technical status and player guide crosslink it. Early offline limitation is dated to its stage and points to later controls. Prior originalPNG preservation/canonicalownership findings stay closed.",
+            "evidence": "Inventory update obligation now appears consistently in canonical pair, AGENTS and configured craft/architecture/docs rules. Version numbers stay in authoritative manifests instead of a duplicate manual list; removed dependencies must leave the inventory. Existing ownership/preservation/scoped-history conclusions retained.",
             "verdict": "PASS"
           }
         },
@@ -1666,6 +1668,148 @@
                 ]
               }
             ]
+          },
+          {
+            "path": "docs/reference/technology-stack.md",
+            "sha256": "f7e307d0c4c14fe74f8074d4c9ef914386f2958164b16e818f6462b74fc27b29",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [
+                  {
+                    "verification": "Independent current article:24/:48/:60 agrees with CMake FetchContent14-17/link56 and mod_loader.cpp MH_Initialize/MH_CreateHook/MH_ApplyQueued; neither use nor source connection is confused with a finished predictor migration.",
+                    "disposition": "MinHook is now listed as current SDK bank-hook integration with native/CMakeLists.txt pin source; predictor migration is explicitly incomplete and Detours remains research-only.",
+                    "state": "resolved",
+                    "location": "docs/reference/technology-stack.md:56 (and in-use table:21-35)",
+                    "problem": "The inventory does not distinguish actual MinHook integration in the SDK bank prototype from research-only predictor hook migration.",
+                    "severity": "S2",
+                    "consequence": "An agent consulting the mandated reuse inventory can conclude MinHook is unconnected and introduce another hook backend despite an existing canonical SDK integration.",
+                    "evidence": "Confirmed current source: devkit/native/CMakeLists.txt:14-17 pins/fetches MinHook and:56 links heroes5_mod_loader; mod_loader.cpp:11/:110-118 includes MinHook and creates/enables/disables the bank hook. Backlog latest MinHook backend entry records integration/lifecycle checks. Detours remains research-only and predictor migration is incomplete."
+                  }
+                ],
+                "evidence": "Independent current full pair and manifests/source checked: actual SDK MinHook bank use now distinguished correctly; setuptools matches SDK pyproject build backend and entrypoints; bladeforge-review-harness is declared/imported for review across repositories; Husky specifically belongs to root package prepare. No new dependency version set or finished migration/live-release claim is invented.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Read full finalpair, independently matchedround2 normalizedhashes, verified scopedSDKMinHook/manifestlookup andaddedpackaging/publication classifications againstactual manifests. OriginalS2closed; no newproceduralfinding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Both technology inventory in-use tables, version-source lists and final migration paragraph",
+                    "problem": "Round1 omitted current SDK MinHook use/pin manifest while discussing only unconnected predictor candidates.",
+                    "consequence": "Existing-tool lookup could misclassify an already integrated SDK hook dependency as a new dependency.",
+                    "evidence": "Round1 inventory omission compared with actual SDKnative FetchContent declaration andbank-selector MH calls.",
+                    "disposition": "Added a scoped SDK MinHook row and general native manifest link, retaining separate incomplete predictor/Detours status.",
+                    "verification": "Both final tables now describe MinHook inSDK bank-reference interception, both version lists link native/CMakeLists.txt withrevision/archivehash, and finalparagraph explicitly says SDKbankhook usesMinHook while wholepredictor migration is unfinished andDetours unconnected."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired current tables, version-source link group and four-step reuse/change workflow rechecked. Current bank use, research candidates and incomplete full predictor migration are now distinct. Original S2 resolved; no new structure/task-navigation issue found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "In use / ??? ???????????? table, Version sources / ??? ?????????? ?????? list and final candidate paragraph",
+                    "problem": "An active component-specific hook backend is absent from the current-use inventory and its version-source navigation, leaving only its separate predictor-candidate status visible.",
+                    "consequence": "A developer trying to reuse the existing native hook solution cannot find its SDK bank integration or pin source through the inventory, and can mistake a not-yet-migrated consumer for an unconnected dependency.",
+                    "evidence": "Independently read both complete frozen pages and confirmed hashes. In-use table has no MinHook/native-hook-backend entry; Version sources links native console_module.cmake but not native/CMakeLists.txt. Current SDK native/CMakeLists.txt FetchContent_Declare(minhook) pins c3fcafdc..., links minhook into heroes5_mod_loader/player_launch_test; native/mod_loader.cpp includes MinHook.h and invokes MH_CreateHook for BankLayoutThunk. The sole article MinHook mention is the unfinished predictor-migration candidate paragraph.",
+                    "disposition": "Added SDK interception/MinHook current-use row and Native SDK/MinHook native/CMakeLists.txt version-source link; explicitly separated bank hook usage, unfinished predictor migration and Detours research-only status.",
+                    "verification": "Independent reviewer read both complete frozen round2 pages and confirmed exact hashes. Table now identifies existing bank integration, version section links native/CMakeLists.txt, final paragraph preserves unfinished full predictor scope. Added setuptools and root-only Husky/publication harness remain scoped in their corresponding rows."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Direct full current RU/EN comparison: limited SDK bank-hook MinHook use, unfinished predictor migration and researched-only Detours match; setuptools/review-harness/root-only Husky roles and identical version-source URLs agree.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent round2 paired-article reading: MinHook SDK bank-hook use is explicitly separated from unfinished predictor migration and research-only Detours; source link names integration/pinning evidence. Setuptools and publication tools have stated purposes, Husky is limited to root workshop, and reuse/update/version-source/player boundaries remain clear. No substantive newcomer-clarity finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/technology-stack.md",
+            "sha256": "273ced187b79d23deddf5f48184ecd10db243a33e3c7ce87c6f3c132b0e72d1d",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [
+                  {
+                    "verification": "Independent current article:24/:48/:60 agrees with CMake FetchContent14-17/link56 and mod_loader.cpp MH_Initialize/MH_CreateHook/MH_ApplyQueued; neither use nor source connection is confused with a finished predictor migration.",
+                    "disposition": "MinHook is now listed as current SDK bank-hook integration with native/CMakeLists.txt pin source; predictor migration is explicitly incomplete and Detours remains research-only.",
+                    "state": "resolved",
+                    "location": "docs/en/reference/technology-stack.md:56 (and in-use table:21-35)",
+                    "problem": "The inventory does not distinguish actual MinHook integration in the SDK bank prototype from research-only predictor hook migration.",
+                    "severity": "S2",
+                    "consequence": "An agent consulting the mandated reuse inventory can conclude MinHook is unconnected and introduce another hook backend despite an existing canonical SDK integration.",
+                    "evidence": "Confirmed current source: devkit/native/CMakeLists.txt:14-17 pins/fetches MinHook and:56 links heroes5_mod_loader; mod_loader.cpp:11/:110-118 includes MinHook and creates/enables/disables the bank hook. Backlog latest MinHook backend entry records integration/lifecycle checks. Detours remains research-only and predictor migration is incomplete."
+                  }
+                ],
+                "evidence": "Independent current full pair and manifests/source checked: actual SDK MinHook bank use now distinguished correctly; setuptools matches SDK pyproject build backend and entrypoints; bladeforge-review-harness is declared/imported for review across repositories; Husky specifically belongs to root package prepare. No new dependency version set or finished migration/live-release claim is invented.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Read full finalpair, independently matchedround2 normalizedhashes, verified scopedSDKMinHook/manifestlookup andaddedpackaging/publication classifications againstactual manifests. OriginalS2closed; no newproceduralfinding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Both technology inventory in-use tables, version-source lists and final migration paragraph",
+                    "problem": "Round1 omitted current SDK MinHook use/pin manifest while discussing only unconnected predictor candidates.",
+                    "consequence": "Existing-tool lookup could misclassify an already integrated SDK hook dependency as a new dependency.",
+                    "evidence": "Round1 inventory omission compared with actual SDKnative FetchContent declaration andbank-selector MH calls.",
+                    "disposition": "Added a scoped SDK MinHook row and general native manifest link, retaining separate incomplete predictor/Detours status.",
+                    "verification": "Both final tables now describe MinHook inSDK bank-reference interception, both version lists link native/CMakeLists.txt withrevision/archivehash, and finalparagraph explicitly says SDKbankhook usesMinHook while wholepredictor migration is unfinished andDetours unconnected."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired current tables, version-source link group and four-step reuse/change workflow rechecked. Current bank use, research candidates and incomplete full predictor migration are now distinct. Original S2 resolved; no new structure/task-navigation issue found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "In use / ??? ???????????? table, Version sources / ??? ?????????? ?????? list and final candidate paragraph",
+                    "problem": "An active component-specific hook backend is absent from the current-use inventory and its version-source navigation, leaving only its separate predictor-candidate status visible.",
+                    "consequence": "A developer trying to reuse the existing native hook solution cannot find its SDK bank integration or pin source through the inventory, and can mistake a not-yet-migrated consumer for an unconnected dependency.",
+                    "evidence": "Independently read both complete frozen pages and confirmed hashes. In-use table has no MinHook/native-hook-backend entry; Version sources links native console_module.cmake but not native/CMakeLists.txt. Current SDK native/CMakeLists.txt FetchContent_Declare(minhook) pins c3fcafdc..., links minhook into heroes5_mod_loader/player_launch_test; native/mod_loader.cpp includes MinHook.h and invokes MH_CreateHook for BankLayoutThunk. The sole article MinHook mention is the unfinished predictor-migration candidate paragraph.",
+                    "disposition": "Added SDK interception/MinHook current-use row and Native SDK/MinHook native/CMakeLists.txt version-source link; explicitly separated bank hook usage, unfinished predictor migration and Detours research-only status.",
+                    "verification": "Independent reviewer read both complete frozen round2 pages and confirmed exact hashes. Table now identifies existing bank integration, version section links native/CMakeLists.txt, final paragraph preserves unfinished full predictor scope. Added setuptools and root-only Husky/publication harness remain scoped in their corresponding rows."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Direct full current RU/EN comparison: limited SDK bank-hook MinHook use, unfinished predictor migration and researched-only Detours match; setuptools/review-harness/root-only Husky roles and identical version-source URLs agree.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent round2 paired-article reading: MinHook SDK bank-hook use is explicitly separated from unfinished predictor migration and research-only Detours; source link names integration/pinning evidence. Setuptools and publication tools have stated purposes, Husky is limited to root workshop, and reuse/update/version-source/player boundaries remain clear. No substantive newcomer-clarity finding.",
+                "findings": []
+              }
+            ]
           }
         ]
       }
@@ -1677,5 +1821,5 @@
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-10-08T18:50:42.050Z"
+  "timestamp": "2026-10-08T20:41:46.284Z"
 }
