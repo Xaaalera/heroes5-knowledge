@@ -1,6 +1,6 @@
 {
-  "diffHash": "dff852ee6e932c3e91a94d3b89a4c894b8e4e87d2609c336b2a66b09bf1548d3",
-  "commitSha": "ec21ab99b336753e4f6f63a839b5b1eed833d3c7",
+  "diffHash": "1e38e704b60744c13254e7a52fd5869d39c9d49fd086b356456368cf790cd9e7",
+  "commitSha": "a308646d5a5fd4cb4eb294b4ec2f88b26ce75602",
   "perAgent": {
     "craft": {
       "verdict": "PASS",
@@ -39,6 +39,7 @@
           "docs/en/players/bank-reference.md",
           "docs/en/players/deployment-preview.md",
           "docs/en/players/mods.md",
+          "docs/en/reference/castle-artwork.md",
           "docs/en/reference/creatures.md",
           "docs/en/reference/formats.md",
           "docs/en/reference/game-api.md",
@@ -57,6 +58,7 @@
           "docs/players/bank-reference.md",
           "docs/players/deployment-preview.md",
           "docs/players/mods.md",
+          "docs/reference/castle-artwork.md",
           "docs/reference/creatures.md",
           "docs/reference/formats.md",
           "docs/reference/game-api.md",
@@ -67,35 +69,35 @@
         ],
         "criteria": {
           "purpose": {
-            "evidence": "All39 full-base documentation paths assessed plus docs/llms.txt; player guides, C++ references, how-to SDK workflows, dated diary and short repository entry points identify distinct purposes.",
+            "evidence": "Existing purpose assessment retained across40 previous paths; new gallery pair clearly offers previews and unchanged original1672x941PNG downloads for all8 site backgrounds, with provenance links.",
             "verdict": "PASS"
           },
           "structure": {
-            "evidence": "Heading/metadata triage covered every listed file; detailed review focused on changed workflows and player/reference corpus, with links, tables, full-field figure references and dated diary entries preserved.",
+            "evidence": "42 documentation paths covered: previous40 plus new gallery pair. Committed nav entries expose RU/EN pages, and llms entry names the original-download purpose; faction sections match gallery download links.",
             "verdict": "PASS"
           },
           "specificity": {
-            "evidence": "Current SDK procedures retain explicit commands, directories, substitutions and output/refusal checks. Bank RU/EN now gives six ordered close/remove-old-prototype/backup/copy/start/hover steps and identifies all installed DLL/H5U payload files; shared loading/graphics DLLs are distinguished from a complete SDK.",
+            "evidence": "Existing explicit SDK/player workflows retained. Gallery identifies all8 factions, previewAVIF versus originalPNG, dimensions, download action and per-file size; no new license/reuse promise introduced.",
             "verdict": "PASS"
           },
           "reproducibility": {
-            "evidence": "Corrected bank steps explicitly extract and merge bin/UserMODs after backups, followed by ordinary Heroes/Lobby startup and expected card. Direct-init AGENTS matches standalone policy. Prior canonical archive/SDK workflows remain unchanged; no install/game execution performed here.",
+            "evidence": "Existing workflow checks retained; gallery gives a directDownloadPNG action below each preview. Parent supplied16 download byte-identity/mobile-fit checks; no browser/download execution by this reviewer.",
             "verdict": "PASS"
           },
           "evidence": {
-            "evidence": "26 current article hashes and130 actual critics inspected: five distinct identities separate from each author, no stale hashes and no unresolved S1/S2. Existing supplied site/unit/browser receipts remain historical and are not finalec21ab9 execution; reviewer ran no optional tests.",
+            "evidence": "28 current article hashes and140 actual critics checked: five distinct identities separate from each author and no unresolved S1/S2. Gallery provenance points to NOTICE and parent supplied16original download/mobile checks; prior originalPNG hash inspection remains preserved. No new factual/game certification.",
             "verdict": "PASS"
           },
           "applicability": {
-            "evidence": "All36 listed site articles remain draft. Pinned build hashes, released predictor preview.2 versus local corrections, bank preview.4 one-Crypt control, HMR/developer versus player delivery and unverified multiplayer/display scope remain explicit.",
+            "evidence": "All38 listed website articles remain draft. Gallery is a download/provenance page for site art, not a new game mechanism or reuse-license guarantee; prior pinned-build/player/runtime boundaries unchanged.",
             "verdict": "PASS"
           },
           "translations": {
-            "evidence": "Existing full-base RU/EN assessment retained; current bank round2 pair matches in backup/copy/start/hover instructions, payload names and release/evidence limits, with five actual final-text critics for each article.",
+            "evidence": "Prior RU/EN full assessment retained; new gallery pair matches8factions, dimensions, file names/sizes, preview/original distinction and provenance meaning. Five actual gallery critics record final-text review.",
             "verdict": "PASS"
           },
           "maintenance": {
-            "evidence": "Prior three maintenance findings remain resolved; current source delta preserves canonical site ownership and direct dependency initialization. Bank installer instruction fix has recorded S2 disposition and independent round2 verification; no new publication-docs finding.",
+            "evidence": "Canonical site ownership and originalPNG preservation rule unchanged. New gallery, navigation and llms entry expose preserved sources without replacing originals or duplicating live manuals elsewhere; prior resolved maintenance findings stay closed.",
             "verdict": "PASS"
           }
         },
@@ -1282,6 +1284,82 @@
                 ]
               }
             ]
+          },
+          {
+            "path": "docs/reference/castle-artwork.md",
+            "sha256": "c7a102f83a3bd908f9c7833095c0b460df149b34e0f7a70377b6fe688973634e",
+            "round": 1,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent full article/source metadata read confirms8original PNGs1672x941, displayed decimal MB rounded to2places, matching faction filenames and unchanged eight SHA256 values. AVIF previews and PNG download paths resolve at each generated language depth; NOTICE explicitly attributes originals to OpenAI image generation for this project. Retained browser receipt reports8byte-identical downloads per language and no mobile overflow.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Read full frozen RU article and independently matched LF-normalized hash; its eight named download attributes target original PNGs with rendered-route ../../assets paths, while AVIF is clearly identified as preview; parent actual browser receipt records all eight downloads with original hashes and 390px no overflow.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired frozen pages independently read and supplied normalized hashes confirmed. Opening text states all8 backgrounds, original1672x941 PNG downloads and compressed AVIF previews. Eight distinct faction H2 headings each place matching preview and original download together. Both mkdocs navigation entries exist; corresponding RU/EN metadata links pair the gallery. Existing castle-gallery-browser-check.json shows16 source-identical downloads and no390pxoverflow; receipt inspected, not rerun. No concrete structure/task-navigation defect found.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Direct full RU/EN article comparison; all8 names/sizes/data labels match. Raw HTML link URLs resolved against rendered RU/EN article routes, not Markdown file directories; all16 routes point at same8originalPNG files with1672x941IHDR. NOTICE12 supports OpenAI-generated backgrounds.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent full paired-article reading: introduction distinguishes compressed previews from unchanged original1672x941PNG downloads, buttons state the save action, all8 faction sections identify image/source files, and provenance is linked without inventing a reuse-license promise. No substantive newcomer-clarity finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/castle-artwork.md",
+            "sha256": "2bc1b138b9e26fdbafdfb6e706f38696456b607628adfbd8db3990e42f63520d",
+            "round": 1,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent full article/source metadata read confirms8original PNGs1672x941, displayed decimal MB rounded to2places, matching faction filenames and unchanged eight SHA256 values. AVIF previews and PNG download paths resolve at each generated language depth; NOTICE explicitly attributes originals to OpenAI image generation for this project. Retained browser receipt reports8byte-identical downloads per language and no mobile overflow.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Read full frozen EN article and independently matched LF-normalized hash; all eight named PNG actions mirror RU using rendered-route ../../../assets paths and retained original filenames, distinctly labelled from AVIF previews; parent actual browser receipt records all eight matching downloads and 390px no overflow.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired frozen pages independently read and supplied normalized hashes confirmed. Opening text states all8 backgrounds, original1672x941 PNG downloads and compressed AVIF previews. Eight distinct faction H2 headings each place matching preview and original download together. Both mkdocs navigation entries exist; corresponding RU/EN metadata links pair the gallery. Existing castle-gallery-browser-check.json shows16 source-identical downloads and no390pxoverflow; receipt inspected, not rerun. No concrete structure/task-navigation defect found.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Direct full RU/EN article comparison; all8 names/sizes/data labels match. Raw HTML link URLs resolved against rendered RU/EN article routes, not Markdown file directories; all16 routes point at same8originalPNG files with1672x941IHDR. NOTICE12 supports OpenAI-generated backgrounds.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent full paired-article reading: introduction distinguishes compressed previews from unchanged original1672x941PNG downloads, buttons state the save action, all8 faction sections identify image/source files, and provenance is linked without inventing a reuse-license promise. No substantive newcomer-clarity finding.",
+                "findings": []
+              }
+            ]
           }
         ]
       }
@@ -1293,5 +1371,5 @@
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-10-08T15:37:27.023Z"
+  "timestamp": "2026-10-08T16:03:33.722Z"
 }
