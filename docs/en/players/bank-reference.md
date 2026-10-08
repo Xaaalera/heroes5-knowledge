@@ -17,7 +17,7 @@ The mod shows **possible armies by tier**, portraits, ranges and alternatives. I
 
 ## Download and install
 
-**[Download DLL package 0.1.0-preview.4](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.4/army-reference.zip)** — experimental xkit delivery. Automatic DLL installation and normal exit are verified; current-package card rendering is not yet verified. Keep ordinary Heroes/Lobby startup; there is no separate mod EXE. Code → Download ZIP downloads source.
+**[Download DLL package 0.1.0-preview.4](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.4/army-reference.zip)** — experimental xkit delivery. Automatic DLL installation, the Crypt card and normal exit are verified; separate control conditions are described below. Keep ordinary Heroes/Lobby startup; there is no separate mod EXE. Code → Download ZIP downloads source.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-bank-reference) · [Universe](https://h5lobby.com/).
 

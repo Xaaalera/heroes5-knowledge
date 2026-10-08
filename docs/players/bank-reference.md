@@ -17,7 +17,7 @@ updated: 2026-10-08
 
 ## Скачать и установить
 
-**[Скачать DLL-пакет 0.1.0-preview.4](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.4/army-reference.zip)** — экспериментальный выпуск с xkit. Проверены подключение DLL и штатное закрытие игры; отображение карточки этого пакета ещё не проверено. Игра запускается через Heroes/Lobby; отдельного EXE мода нет. Code → Download ZIP скачивает исходники.
+**[Скачать DLL-пакет 0.1.0-preview.4](https://github.com/Xaaalera/heroes5-bank-reference/releases/download/v0.1.0-preview.4/army-reference.zip)** — экспериментальный выпуск с xkit. Проверены подключение DLL, карточка склепа и штатное закрытие игры; условия отдельного контроля описаны ниже. Игра запускается через Heroes/Lobby; отдельного EXE мода нет. Code → Download ZIP скачивает исходники.
 
 [Страница мода на GitHub](https://github.com/Xaaalera/heroes5-bank-reference) · [Universe](https://h5lobby.com/).
 
