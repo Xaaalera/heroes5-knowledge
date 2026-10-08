@@ -35,7 +35,14 @@ const articleReport = () => ({
 
 test('article Git selection covers nested edits, additions and renames, excluding deletions and nonarticles', () => {
   const directory = mkdtempSync(join(tmpdir(), 'article-gate-'));
-  const git = (...argumentsList) => execFileSync('git', argumentsList, { cwd: directory, encoding: 'utf8' }).trim();
+  const fixtureEnvironment = { ...process.env };
+  const repositoryVariables = execFileSync('git', ['rev-parse', '--local-env-vars'], { encoding: 'utf8' }).trim().split('\n');
+  for (const variableName of repositoryVariables) {
+    delete fixtureEnvironment[variableName.trim()];
+  }
+  const git = (...argumentsList) => execFileSync('git', argumentsList, {
+    cwd: directory, encoding: 'utf8', env: fixtureEnvironment,
+  }).trim();
   try {
     git('init', '--quiet');
     git('config', 'user.name', 'Gate fixture');
