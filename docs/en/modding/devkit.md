@@ -46,7 +46,7 @@ After creation, run `xkit start demo-native`. When development is finished, `xki
 | `xkit game screenshot` | A new PNG capture and its file path |
 | `xkit diagnostics` | SDK status and failure diagnostics |
 
-A connected SDK also exposes these commands through its in-game console. A loading request does not establish map readiness. A screenshot shows the current frame: map, menu or intro. Failed capture is not replayed through another route; exiting the diagnostic client does not stop plugins. [Command reference](https://github.com/Xaaalera/heroes5-mod-devkit/blob/f5d9a7666635ca478c1481444b6b943d096c2efe/docs/commands.md).
+A connected SDK exposes map, menu and capture commands through its in-game console. Run `xkit diagnostics` in the terminal. A loading request does not establish map readiness. A screenshot shows the current frame: map, menu or intro. Failed capture is not replayed through another route; exiting the diagnostic client does not stop plugins. [Command reference](https://github.com/Xaaalera/heroes5-mod-devkit/blob/f5d9a7666635ca478c1481444b6b943d096c2efe/docs/commands.md).
 
 Each resource mod ships as its own H5U and each native plugin as its own DLL. Shared infrastructure uses `dinput8.dll` and `d3d9.dll`; the game original stays local as `d3d9.universe.dll`. Existing predictor/reference plugins are not automatically migrated to HMR. Unconfirmed cleanup stops updates and preserves recovery data.
 
