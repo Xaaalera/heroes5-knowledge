@@ -40,6 +40,8 @@ test('article Git selection covers nested edits, additions and renames, excludin
     git('init', '--quiet');
     git('config', 'user.name', 'Gate fixture');
     git('config', 'user.email', 'fixture@example.invalid');
+    git('config', 'commit.gpgsign', 'false');
+    git('config', 'core.hooksPath', join(directory, 'disabled-hooks'));
     mkdirSync(join(directory, 'docs/en/reference'), { recursive: true });
     for (const path of ['docs/en/reference/edit.md', 'docs/remove.md', 'docs/rename.md', 'README.md']) {
       writeFileSync(join(directory, path), `# ${path}\nUnique fixture content.\n`);

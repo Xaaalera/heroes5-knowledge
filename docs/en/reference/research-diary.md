@@ -18,7 +18,7 @@ updated: 2026-10-08
 - `xkit release` retains the separate H5U and creates a ZIP containing it, the verified graphics DLL, notices and bilingual instructions. `xkit build` still produces the H5U. The DLL comes from the prepared SDK without invoking a compiler; the game original is not redistributed. This addition is published in preview.5; preview.4 does not contain it.
 - The exact generated ZIP was checked in the test game: a complete menu displayed the resource mod marker, while the loaded-module inventory excluded the SDK core, developer console, plugin bootstrap and controller. The game exited normally through its menu buttons; the test game's original graphics DLL was restored. The complete run took 19.34 seconds.
 - This checks a resource package with the shared graphics facade. It does not certify original-DLL test startup without that facade or multiplayer compatibility. Granny failure history remains separate; the established workaround serves working player delivery.
-- Mechanism and installation: [SDK commands](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md). [Preview.5](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.5) is published from `757a19a`: five independent reviews, 199 Python tests, 8 review checks, 7 native suites and CI passed. The public SDK archive digest matches the separately installed complete SDK; its short CLI released a resource player ZIP without a compiler. Installation uses the README's `--editable` flag; the control omitting it is retained as a procedure error, not a product fix.
+- Mechanism and installation: [SDK commands](https://github.com/Xaaalera/heroes5-mod-devkit/blob/v0.1.1-preview.5/docs/commands.md). [Preview.5](https://github.com/Xaaalera/heroes5-mod-devkit/releases/tag/v0.1.1-preview.5) is published from `757a19a`: five independent reviews, 199 Python tests, 8 review checks, 7 native suites and CI passed. The public SDK archive digest matches the separately installed complete SDK; its short CLI released a resource player ZIP without a compiler. Installation uses the README's `--editable` flag; the control omitting it is retained as a procedure error, not a product fix.
 
 ## 2026-10-08 — published SDK preview.4 acceptance
 
@@ -186,7 +186,7 @@ updated: 2026-10-08
 - The initial guarded live plugin changed 42 → 43 → 42 in one game. After strengthening identity handoff, a repeat connected the plugin and exited normally; game and monitor returned 0.
 - Cancelling before resume terminates only the created test child. Native 4/4 and Python 88 checks passed; bounded review closed the handoff and cancellation defects it found.
 - A retained loader thread proved successful completion after 18.1 seconds. The previous 10-second wait was insufficient; the underlying delay remains unexplained. Only the loading budget increased; uncertainty never authorizes replay.
-- This verifies native SDK startup. Visible released-mod effects, ordinary startup outside the SDK and resource H5U remain separate acceptance scopes. [Developer workflow](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md).
+- This verifies native SDK startup. Visible released-mod effects, ordinary startup outside the SDK and resource H5U remain separate acceptance scopes. [Developer workflow](https://github.com/Xaaalera/heroes5-mod-devkit/blob/v0.1.1-preview.5/docs/commands.md).
 
 ## 2026-10-05 — ordinary startup and failed clean control {#sdk-ordinary-capture}
 
@@ -326,7 +326,9 @@ A subsequent Hero1 control identifies the actual owner asCHero. The specializati
 
 The test driver accepts an existing hero and ordered skill grants for one Polygon/Superadmin load. Ownership, each grant's acceptance, queues and increasing mastery are checked; steps are retained in JSON. Ordinary-mode policy is unchanged. Four invalid configurations were rejected before launch.
 
-The normal Calid6/6/6/60/91 command, without an in-memory function change, freezes baseline36 at10/4 and an exact complete7/7 forecast; the game closes. FrozenSHA/time/both snapshots/current driver hash are independently checked. DLL31cc03e0 unchanged; the earlier273 series stays tied to its older driver. [Reproduction command](https://github.com/Xaaalera/heroes5-deployment-preview#authored-heroes-and-skills-in-superadmin); local evidence calid-critical-cli-verification.json. Next: the complete polygon with the skill and specialization controls.
+The normal Calid6/6/6/60/91 command, without an in-memory function change, freezes baseline36 at10/4 and an exact complete7/7 forecast; the game closes. FrozenSHA/time/both snapshots/current driver hash are independently checked. DLL31cc03e0 unchanged; the earlier273 series stays tied to its older driver. Local evidence calid-critical-cli-verification.json. Next: the complete polygon with the skill and specialization controls.
+
+Availability clarification, October 8,2026: the former reproduction link did not provide that public README section. Local evidence remains unpublished; this entry does not supply a complete reproduction procedure. Original observations and verification limits are retained.
 
 ## 2026-10-04 — positive Critical Strike control
 

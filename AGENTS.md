@@ -63,7 +63,7 @@ RU: эти проекты принадлежат автору; база знан
 - Дизайн: оригинальный pixel art в иллюстрациях и декоре; обычный читаемый шрифт для длинного текста и кода. Контрольные ширины: 320, 390, 768, 1088, 1440 CSS px. Размеры интерфейса задавать в rem.
 - Перед публикацией: `npm run build`, `npm run check`, `npm test`. Независимые read-only линзы craft, architecture, tests, docs, security проверяют точный diff; результаты записываются через `npm run review:attest -- <results.json>`, затем `npm run review:gate`. Не выдумывать оценки/аттестации.
 - Изменение сборки или темы сопровождается обновлением README/CONTRIBUTING. Отправлять только файлы этой публичной репы.
-- GitHub Pages — первый этап. Правки через GitHub, а не через встроенный wiki-редактор. Не обещать реализованный MCP или SDK.
+- Правки сайта идут через GitHub, а не встроенный wiki-редактор. MCP пока не реализован; возможности выпущенного SDK описывает каноническое руководство с границами проверки.
 
 ## EN
 
@@ -95,7 +95,7 @@ RU: эти проекты принадлежат автору; база знан
 - Design: original pixel art for illustrations and decoration; readable normal fonts for prose and code. Check 320, 390, 768, 1088 and 1440 CSS-pixel widths. Use rem for layout dimensions.
 - Before publishing: run build, check and browser tests. Independent read-only craft, architecture, tests, docs and security reviews cover the exact diff; record actual judgments with review:attest, then run review:gate. Never fabricate reviews.
 - Build/theme changes update README/CONTRIBUTING. Push only files belonging to this public repository.
-- GitHub Pages is stage one. Contributions use GitHub, not direct wiki editing. Do not claim MCP or SDK is implemented.
+- Site contributions use GitHub rather than direct wiki editing. MCP remains unimplemented; the canonical guide describes released SDK capabilities and verification limits.
 
 ## Standalone use / Работа вне мастерской
 

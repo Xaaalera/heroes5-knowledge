@@ -17,8 +17,8 @@ EN: Read the relevant article and its scope first. Draft is not a verified speci
 ## Devkit / Стенд
 
 - [Devkit agent instructions / Инструкции агенту](https://raw.githubusercontent.com/Xaaalera/heroes5-mod-devkit/main/AGENTS.md): bilingual reading order, checks and reporting rules.
-- [Devkit setup / Развёртывание](https://raw.githubusercontent.com/Xaaalera/heroes5-mod-devkit/main/README.md): Windows requirements, workspace, sandbox and first mod, RU/EN.
-- [Command reference / Команды](https://raw.githubusercontent.com/Xaaalera/heroes5-mod-devkit/main/docs/commands.md): build/control/capture/shutdown and their limits, RU/EN.
+- [Devkit setup / Развёртывание](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/modding/devkit.md): Windows requirements, workspace, sandbox and first mod; English counterpart linked in metadata.
+- [Command reference / Команды](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/reference/xkit-commands.md): supported terminal and game commands, arguments and limits; English counterpart linked in metadata.
 - [Environment overview / Устройство стенда](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/modding/devkit.md): RU article with links to source tools.
 - [Environment overview in English](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/en/modding/devkit.md): EN article.
 
@@ -38,5 +38,5 @@ EN: Read the relevant article and its scope first. Draft is not a verified speci
 ## Editing / Правки
 
 - [Knowledge repository AGENTS.md](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/AGENTS.md): bilingual authoring and verification entry point.
-- [Article standard and review](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/CONTRIBUTING.md): scope, reproducibility, evidence, translations and independent pre-push review.
-- [Site build and checks](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/README.md): dependencies and validation commands, RU/EN.
+- [Article standard and review](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/contributing.md): scope, reproducibility, evidence, translations and independent pre-push review; English counterpart linked in metadata.
+- [Site build and checks](https://raw.githubusercontent.com/Xaaalera/heroes5-knowledge/main/docs/en/contributing.md): dependencies, validation commands and maintainer publication workflow in English; Russian counterpart linked in metadata.
