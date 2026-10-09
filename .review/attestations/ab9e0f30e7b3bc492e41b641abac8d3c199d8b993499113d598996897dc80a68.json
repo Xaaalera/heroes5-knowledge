@@ -1,18 +1,32 @@
 {
-  "diffHash": "a927c067f164d9b13e02dbde46425a041fb852281995bb358ef8554e8ff65372",
-  "commitSha": "ca74deaf8f6fff2772c3818c1b5365eefcfa47c9",
+  "diffHash": "ab9e0f30e7b3bc492e41b641abac8d3c199d8b993499113d598996897dc80a68",
+  "commitSha": "0982097df3fae0941dc4057deade4f5af14dff9d",
   "perAgent": {
+    "craft": {
+      "verdict": "PASS",
+      "score": 9,
+      "reviewer": "/root/placement_docs_newcomer",
+      "evidence": [
+        "Independent bounded craft refresh reviewed the current eight-file source delta since published fb1178e: six paired articles, AGENTS.md and .claude/review.config.json. No JS/TS, UI implementation, layout, dependency manifests or style files are changed in this delta. git diff --check passed.",
+        "The actual configured solid, ockham, conventions, ui-strings and responsive-layout guides were loaded earlier in this same reviewer session and reused without redundant reads. Current craft rules were read again. Applied responsibility, reuse, canonical ownership and human usability criteria; code naming/JS conventions, runtime UI localization and responsive-layout checks are not applicable to this prose/process-only delta.",
+        "AGENTS and craft/tests rules consistently require process/hooks/API evidence for facts those mechanisms establish; absent telemetry requires repair, and screenshots remain limited to rendered visual properties or explicit owner requests. Reuse of the last verified scenario is explicit. The architecture entry links to the canonical contract and separates requirements from proven player readiness.",
+        "Reviewed all six article edits and rechecked their exact LF hashes against the independent newcomer refresh. The preserved calculation is connected through the adapter rather than replaced with a claimed independent algorithm. The 28-input agreement uses the same shared calculation and is limited to data forwarding/recalculation, not engine-aggregate equivalence or actual after-Start cell accuracy.",
+        "Current research integration, historical defensive-comparison alignment, ordinary estimates and the downloadable player package remain clearly distinguished. All-pack accuracy, full feature retention, observer live verification and the load campaign remain unverified. No numeric memory addresses or private artifact paths were introduced in the inspected prose.",
+        "Score 9 is the current bounded review judgment: no concrete craft defect found, with factual gameplay and rendered-site acceptance outside this review. Build/check/browser work is ongoing separately and is not represented as passed here. No game, focus, input, agent spawning or source edits were performed."
+      ],
+      "findings": []
+    },
     "architecture": {
       "verdict": "PASS",
       "score": 9,
       "reviewer": "/root/placement_docs_accuracy",
       "evidence": [
-        "Reviewed clean source HEAD db978036a01de14e35787dcf1a1753eb8e0dd033 against fixed base 6b3bcdc9bc1f1e8e8c266bf51fde3ecd772accbe. Classified cumulative 65-file scope against .review/attestations/f9397c857c42707d8281a9899e5c94870a7b4e1e27e89e56f61173db107fcd68.json and its recorded architecture coverage at 47ace4a; earlier source, website implementation, assets, tests and gate machinery are unchanged since that reviewed revision.",
-        "Deep-reviewed 47ace4a..HEAD: fourteen article files, review configuration, AGENTS dependency policy and paired navigation titles; attestation replacement treated as historical review metadata. No website runtime, adapter or native loader implementation is changed in this repository delta.",
-        "Loaded actual configured solid and ockham guides; applied responsibility, dependency direction, canonical ownership, reuse and no speculative entity criteria. Existing native-projects article is extended as the canonical contract; devkit links instead of duplicating a second maintained contract.",
-        "Contract explicitly specifies required source ownership, state/callback lifetime, player independence and feature preservation without certifying current implementation compliance. Static package validation, ordinary startup and behavioral parity remain separate acceptance requirements. Current source checks substantiate only the limited unpublished ZIP gate claim.",
-        "Modules documentation separates unpublished discovery/catalog behavior from preview.5. Research updates retain dated bounded evidence and do not transfer historical accuracy or SDK HMR success to a released player package.",
-        "Score 9 reflects no concrete architecture defect in the inspected delta with prior unchanged coverage retained; this review does not certify native implementation compliance or run game/build/browser acceptance. No game, focus or input used."
+        "Independent bounded source review of fb1178e..current working tree. git status and diff confirm exactly eight changed files: six RU/EN article files, AGENTS.md and .claude/review.config.json. No website code, style, native implementation, dependency or package artifact is in this publication delta. Earlier fixed-base coverage is retained solely for unchanged files.",
+        "Actual configured architecture guides solid and ockham were loaded earlier in this same reviewer session; current configuration architecture rules rechecked. Changes extend existing canonical reference, diary and player articles without duplicating implementation or inventing parallel infrastructure. AGENTS links the existing mandatory architecture contract and explicitly separates requirements from proven current compliance.",
+        "New diary/reference/player statements describe preserved mod-owned research handlers/calculation connected through an SDK adapter. Source forwarding and PreciseResearchState persistence were checked in the preceding six-article accuracy pass. Separation of explicit research configuration from diagnostic capture and ordinary estimation is maintained.",
+        "Generation8 receipt and same-input comparison support only connected data forwarding/recalculation through shared formulas. Text explicitly preserves pending actual afterStart comparison, engine aggregate equivalence, full feature parity, load campaign and player release. Native position-observer fixture success is distinguished from absent live acceptance; no standalone player readiness is claimed.",
+        "Process-first verification additions require existing process/hooks/API evidence and telemetry repair rather than screenshot inference. They preserve images for actual rendered properties and do not introduce a second runtime or verification architecture. Current readiness wording requires an active context without promising a runtime-wide readiness guarantee.",
+        "Current independent source assessment earns9: no concrete architecture defect in this documentation/policy delta, while native implementation conformance and empirical player acceptance are outside this publication-source judgment. Build/check/browser gates are running and are not counted as passed. No game/input, spawning or article/source edits performed."
       ],
       "findings": []
     },
@@ -21,12 +35,12 @@
       "score": 9,
       "reviewer": "/root/placement_docs_steps",
       "evidence": [
-        "Read configured tests rules and tests-architecture guide. Shallow reviewed cumulative 6b3bcdc9bc1f1e8e8c266bf51fde3ecd772accbe..db978036a01de14e35787dcf1a1753eb8e0dd033 and previous attestation at 47ace4a; deeply reviewed final 47ace4a..HEAD delta. That delta changes docs, navigation and review rules, with no scripts/tests modifications.",
-        "Independently executed node --test scripts/review-docs.test.mjs: exit 0, 14 passed, no skips. Real disposable Git repository checks nested/add/rename selection; validator checks stale bytes, LF normalization, independent reviewers, bounded rounds and unresolved findings.",
-        "Independently executed python -m unittest discover -s tests -p test_editorial_gate.py: exit 0, 10 passed. Private-reference cases exercise encoded links, split HTML text and rejected artifact paths.",
-        "Read cumulative tests/site.spec.js changes: assertions check rendered route availability, language/counterpart links, narrow article overflow and successful AVIF image loading through a real MkDocs server. These browser checks were not rerun by this reviewer. Fresh full build/check/browser execution remains the parent gate.",
-        "No coverage percentage, mutation score, native tests, game accuracy or ordinary managed-player acceptance was measured here. Known managed-player acceptance and CMake mismatch remain unfinished. Static package checks cannot prove gameplay or source-layer separation.",
-        "Nonblocking retained coverage limit: disposable-Git selection tests exercise the selection command, not the complete pre-push orchestration/history. A score of 9 reflects meaningful boundary assertions and no new executable test surface in the final delta, not blanket product readiness."
+        "Read current configured tests rules and previously loaded actual tests-architecture guide. Reviewed fb1178e..current publication delta: six Markdown articles, AGENTS and process-first review rules; no scripts, tests, package or Playwright implementation changes. Local style changes were excluded from the tested publication snapshot.",
+        "Reviewed existing review-docs.test.mjs coverage of independent critic identities, stale hashes, CRLF equivalence, bounded rounds and unresolved substantive defects; editorial gate tests cover metadata/translation boundaries and split/encoded private references. Browser assertions cover rendered routes, language links, narrow layouts and loaded background images. These establish website publication properties only.",
+        "Parent-reported current-source gate exec80092 exited0: strict MkDocs build PASS; diagram check PASS; Node review-docs14/14 PASS; Python24/24 PASS; check_site53HTML PASS; node--check PASS; Playwright13/13 PASS in15.9s. This reviewer did not independently rerun these final gates. Intentional removed-route404 assertions and NO_COLOR warning are not test failures.",
+        "Current six-article LF hashes match the latest independent steps critique. Existing precise_same_input_forwarding_comparison supports28 same-input records and shared-calculation agreement only. post_start_observer_status records native fixture success separately from unverified live post-Start placement. New articles preserve explicit research activation, ordinary estimation and unpublished-player boundaries.",
+        "Process/hooks/API evidence is required for numerical and phase/readiness claims. The reviewed research conclusions use recorded process data, not screenshot inference. Browser tests concern website rendering; they do not establish game readiness, module state, calculations or mod accuracy.",
+        "No new native/game/ordinary managed-player acceptance, coverage percentage or mutation score was measured. Known live placement, full UI parity and managed-player acceptance remain unfinished. Score9 reflects appropriate existing publication test coverage and no new executable implementation surface; retained nonblocking limit: selection fixture does not exercise complete pre-push orchestration/history."
       ],
       "findings": []
     },
@@ -34,7 +48,7 @@
       "verdict": "PASS",
       "score": 10,
       "reviewer": "/root/placement_docs_structure",
-      "evidence": "Independent docs review of db97803: shallow coverage of all 44 documentationFiles, prior exact-byte acceptance comparison, deep review of fourteen changed articles plus AGENTS/config/navigation, and 359 local-link/40 translation-metadata checks. No findings. Documentation readiness only; no fresh game/input, external-link availability or complete player-runtime certification.",
+      "evidence": "Fresh independent docs review of the eight-file working-tree delta from published fb1178e. Full fixed-base scope covers 44 documentation files: 37 unchanged source comparisons plus fresh review of six articles and AGENTS; review.config.json evidence rules also inspected. All 368 local links, 40 translation metadata records and six refreshed article hashes pass. No findings. Read-only documentation acceptance; no fresh game/input, engine accuracy, external-link availability or player-release acceptance.",
       "findings": [],
       "review": {
         "reviewer": "/root/placement_docs_structure",
@@ -87,35 +101,35 @@
         "criteria": {
           "purpose": {
             "verdict": "PASS",
-            "evidence": "Shallow coverage includes all 44 documentationFiles: titles, openings, metadata and headings. Twenty unchanged article files and nine unchanged entry/reference files match the prior c69193c reviewed tree; fourteen changed articles and AGENTS.md received delta review. README/CONTRIBUTING remain entry points; devkit addresses authors, player pages address installation, and native-projects explicitly introduces its architecture requirements and practical sections."
+            "evidence": "All 44 fixed-base documentation paths retain coverage. Normalized source comparison against published fb1178e confirms 37 unchanged paths; the six changed articles and AGENTS.md received fresh delta review. New paragraphs tell players and technical readers what precise integration now connects, what one control establishes and what remains unverified. README, CONTRIBUTING and docs/llms.txt retain their reviewed entry-point roles."
           },
           "structure": {
             "verdict": "PASS",
-            "evidence": "Read-only target/anchor inspection covered 359 local links across all 44 paths with no missing target or anchor. mkdocs.yml labels now include C++ mod architecture in both languages. The architecture contract precedes distinct practical procedures; current-research links reach the stable placement-sdk-capture entry; same-day diary additions explicitly preserve the initial stage as history. docs/llms.txt remains a grouped source/evidence index."
+            "evidence": "Read-only inspection across all 44 paths checked 368 local links with no missing target or anchor. The newest placement-sdk-precise diary entry precedes decision alignment and SDK capture; the older estimation-only stage is explicitly historical. Current checkpoint/player paragraphs link to the new entry while retaining meaningful earlier correction links. AGENTS links to the canonical architecture contract instead of duplicating its description."
           },
           "specificity": {
             "verdict": "PASS",
-            "evidence": "The changed catalog text names Modules and distinguishes confirmed plugin connection from source discovery. Predictor text names pre-Start projections, highlighting, cards, upgrade selection and native descriptions, while leaving description arrows and broad accuracy unfinished. Architecture tables state ownership, dependency direction and concrete acceptance evidence. Static DLL validation identifies entry points, normal/delayed dependencies and actionable failure interpretation."
+            "evidence": "The new diary identifies one control with 40 Archers, 28 stack-input records, both armies parameters and one projection. It distinguishes data forwarding and shared recalculation from engine-final aggregate equivalence. Pending after-Start observation, whole-placement accuracy, retained-feature acceptance and the load campaign are named explicitly. Process evidence rules identify the facts requiring telemetry and the limited visual cases where images are allowed."
           },
           "reproducibility": {
             "verdict": "PASS",
-            "evidence": "Previously reviewed setup, player installation, exports and recovery procedures retain their concrete commands, context, expected results and failure handling. New architecture links resolve before native commands. The catalog addition and static package validation explicitly remain unpublished; the diary identifies unavailable local reports and excludes downloadable-package certification. This review reran no game or input checks and does not claim public reproduction of unpublished development results."
+            "evidence": "Previously reviewed install/build/recovery workflows are byte-identical to published fb1178e. New prose reports bounded development research rather than introducing an unsupported public procedure. It states that live position/quantity verification remains ahead and active game context is required for map readiness. This reviewer performed read-only document/link/hash checks; parent-reported site checks are separate evidence, and no runtime reproduction or new player release is claimed."
           },
           "evidence": {
             "verdict": "PASS",
-            "evidence": "Prior c69193c independent docs review has no findings, and unchanged reviewed bytes were compared before reuse. New catalog claims were checked against native/module_catalog.hpp and its console integration; new pefile purpose was checked against scripts/plugin_core.py validate_player_archive and scripts/plugin-watch.py release validation in the devkit source. Article text preserves the distinction between recorded interface/lifecycle checks, static package checks and ordinary final-package startup. Draft metadata is not promoted or certified."
+            "evidence": "The current six article hashes match the refreshed independent structure records. New prose separates the recorded 28-input/two-army shared-calculation agreement from original-engine aggregates and after-Start placement accuracy; older two-flag comparison evidence remains separately dated and bounded. AGENTS and review.config.json now require process/hooks/API evidence for phase, readiness, command results and numerical state. Parent reports strict MkDocs, Node14, Python24, HTML53 and Playwright13 passing; these website checks do not establish game accuracy."
           },
           "applicability": {
             "verdict": "PASS",
-            "evidence": "All forty translated Markdown pages inspected retain draft status. The new console section explicitly excludes downloadable preview.5 catalog availability; predictor updates exclude player preview.2 accuracy claims. The architecture contract distinguishes development requirements from current compliance, generic native packaging from separate bank routes, and static validation from dynamic dependencies, retained behavior and ordinary player startup. Initial developer Superadmin collection remains historical and does not authorize hidden inputs in ordinary prediction."
+            "evidence": "All site articles retain their reviewed draft status; this review does not certify drafts as verified facts. Precise calculation is explicitly an enabled research mode, diagnostic admission alone does not enable it, and ordinary prediction remains an estimate without hidden neutral inputs. New SDK changes are explicitly absent from the published player package; actual placement accuracy, complete retained behavior and load-campaign acceptance remain unverified."
           },
           "translations": {
             "verdict": "PASS",
-            "evidence": "Forty translated Markdown metadata records have existing reciprocal targets and matching content_type/status/faction. The seven changed RU/EN pairs preserve the same development/publication distinction, lifecycle scope, incomplete arrows/accuracy work, layer responsibilities, two operating modes and package-validation limits. Native-projects navigation titles broaden together; unchanged pairs retain prior exact-byte acceptance."
+            "evidence": "Forty Markdown translation records have reciprocal existing targets and matching content_type/status/faction. The three changed RU/EN pairs agree on newest integration versus historical estimation, 40 Archers/28 records, shared recalculation versus engine results, pending after-Start checks and unpublished package scope. New bilingual AGENTS evidence rules express the same telemetry requirement, image exceptions and existing-scenario reuse."
           },
           "maintenance": {
             "verdict": "PASS",
-            "evidence": "Canonical living documentation remains in docs/ with concise root README/CONTRIBUTING entry points and operational instructions in AGENTS.md. Its changed rule requires inventory updates alongside dependency-purpose/location changes, matching review.config.json. Existing inventory rows now record catalog JSON and development pefile validation without adding duplicate dependency lists. Same-day research additions preserve earlier observations and explicit limitations; navigation changes match the broadened architecture article. Publication and runtime acceptance remain separate."
+            "evidence": "Thirty-seven unchanged documentation paths reuse prior accepted coverage only after normalized source comparison against published fb1178e. Canonical article ownership and fixed-base coverage remain intact. AGENTS adds operational evidence rules plus a link to the existing architecture contract, and configured craft/tests rules mirror telemetry requirements. Dated diary additions preserve earlier stages and their anchors rather than rewriting historical observations. No dependency, packaging release or accuracy certification is introduced."
           }
         },
         "findings": [],
@@ -603,38 +617,38 @@
           },
           {
             "path": "docs/en/players/deployment-preview.md",
-            "sha256": "53588646475b59e7717b224b32b3d75e91d0b9d1bc7b96117d1cd0def1bfe0e2",
+            "sha256": "b800d7614c9f89abdfca04ea8df6f40acf4704ea91c0b4d723c3e571b18cca21",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "accuracy",
                 "reviewer": "/root/placement_docs_accuracy",
-                "evidence": "Exact bytes match this reviewer initial pass. ../.local/test-state/canonical-graphics-build-20261006/managed-visible-projections-checkpoint.json base/cards/grades/details sections support dated migration checks. Text excludes arrows, broad accuracy and downloadable-package acceptance. Unchanged historical algorithm campaigns were not freshly rerun.",
-                "findings": []
-              },
-              {
-                "lane": "steps",
-                "reviewer": "/root/placement_docs_steps",
-                "evidence": "Player installation targets preview.2 and ordinary Heroes/Lobby startup. SDK projection/card/description checks are explicitly development-only and do not certify the downloadable package or full-pack accuracy. Prior exact-byte judgment reused.",
-                "findings": []
-              },
-              {
-                "lane": "structure",
-                "reviewer": "/root/placement_docs_structure",
-                "evidence": "Development status separates current SDK interface checks from historical research-DLL campaigns and downloadable preview.2 installation. Current-research and developer-source links resolve; controls and historical examples remain grouped below compatibility. Reciprocal translation metadata is intact.",
+                "evidence": "Existing managed-visible-projections-checkpoint.json precise_research_frozen_live records preStart generation8, enabled1, actor_count28, frozen1, core_mask3, source Archers40 and one model. precise_same_input_forwarding_comparison reports no actor differences and both cores matching the separate diagnostic path using the SAME shared formulas; it expressly excludes original engine aggregates/full accuracy. Current preview_sdk.cpp forwards preserved research helpers and state through explicit research mode; diagnostic capture alone is separate. Added text correctly separates connected calculation/data-forwarding from actual afterStart placement accuracy, ordinary estimates and unpublished package state; no whole-pack or engine aggregate equivalence claimed.",
                 "findings": []
               },
               {
                 "lane": "newcomer",
                 "reviewer": "/root/placement_docs_newcomer",
-                "evidence": "Exact bytes match earlier independent newcomer review. Development results are bounded separately from the downloadable package; installation and controls retain a clear player entry point.",
+                "evidence": "Bounded refresh reviewed the development paragraph with published-package download and existing accuracy limits. It identifies preserved research calculation connected in a development version, limits evidence to input/recalculation agreement in one control, leaves actual post-migration placement accuracy unverified, retains ordinary estimation and expressly says these changes are absent from the published package. The diary link provides research-mode details.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final bounded read-only review against existing precise_state_persistence_preparation, precise_research_frozen_live, precise_same_input_forwarding_comparison and post_start_observer_status receipt sections and current preview_sdk.cpp research-state gates. The same-input comparison records 28 matching rows and matching shared-calculation cores; it is not an original-engine oracle. Native observer fixture success is explicitly separate from pending live post-Start positions/quantities. New paragraphs require explicit research enablement, preserve ordinary estimation, distinguish active game context from an empty command queue, and retain unpublished-player scope. New placement-sdk-precise and placement-decision-alignment links/anchors resolve in both languages. No private diagnostic command is presented as a user procedure; no game, input or tests executed by this reviewer.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The concise new paragraph sits in development status before download/install and links directly to the latest precise-integration entry. It separates development input/recalculation checks from unverified actual-placement accuracy and explicitly excludes the published package. Installation instructions remain a single existing procedure.",
                 "findings": []
               },
               {
                 "lane": "translation",
                 "reviewer": "/root/placement_docs_translation",
-                "evidence": "Development results, campaign counts, unfinished arrows/accuracy checks and published-package exclusion align between RU and EN.",
+                "evidence": "Both languages state development-only precise SDK integration, one input/recalculation control, pending actual placement validation, ordinary estimation and exclusion from the published package. Reciprocal translation metadata and both referenced diary anchors verified.",
                 "findings": []
               }
             ]
@@ -755,76 +769,76 @@
           },
           {
             "path": "docs/en/reference/placement-internals.md",
-            "sha256": "6f1398300594b93c282789f577052e5a9602472f63cbf8a1bd64180a8758072c",
+            "sha256": "de414a58ca1e377d40860f13936ac491bde99953d6bb8872a2fb1c7237d10356",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "accuracy",
                 "reviewer": "/root/placement_docs_accuracy",
-                "evidence": "Exact bytes match this reviewer initial pass. managed-visible-projections-checkpoint base/cards/grades/details sections support bounded historical projection, hover, card, upgrade and reload observations; text excludes complete-pack accuracy and shipped-package acceptance. Current source is not treated as current gameplay completion evidence.",
-                "findings": []
-              },
-              {
-                "lane": "steps",
-                "reviewer": "/root/placement_docs_steps",
-                "evidence": "The SDK checkpoint separates interface/reload observations from full-pack accuracy and player release. Description arrows and broad new-build validation remain unfinished. Prior exact-byte judgment and existing checkpoint/handoff comparison reused.",
-                "findings": []
-              },
-              {
-                "lane": "structure",
-                "reviewer": "/root/placement_docs_structure",
-                "evidence": "The current checkpoint separates SDK interface/code-reload checks from preserved research-DLL accuracy evidence and explicitly excludes the published player package. current-research and placement-sdk-capture anchors resolve; recovered rules and their evidence scope remain separately headed.",
+                "evidence": "Existing managed-visible-projections-checkpoint.json precise_research_frozen_live records preStart generation8, enabled1, actor_count28, frozen1, core_mask3, source Archers40 and one model. precise_same_input_forwarding_comparison reports no actor differences and both cores matching the separate diagnostic path using the SAME shared formulas; it expressly excludes original engine aggregates/full accuracy. Current preview_sdk.cpp forwards preserved research helpers and state through explicit research mode; diagnostic capture alone is separate. Added text correctly separates connected calculation/data-forwarding from actual afterStart placement accuracy, ordinary estimates and unpublished package state; no whole-pack or engine aggregate equivalence claimed.",
                 "findings": []
               },
               {
                 "lane": "newcomer",
                 "reviewer": "/root/placement_docs_newcomer",
-                "evidence": "Exact bytes match earlier independent newcomer review. Current interface checks, preserved algorithm campaigns and unpublished package changes remain explicitly distinguished.",
+                "evidence": "Bounded refresh reviewed the new checkpoint paragraph with existing complete-match definition and unmet all-pack research goal. Explicit research wiring is distinguished from ordinary estimation; the separate diagnostic path uses the same shared calculation. Actual army comparison after Start is pending, two earlier defensive flags do not establish cell accuracy, and surrounding text identifies changes as absent from the published player package.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final bounded read-only review against existing precise_state_persistence_preparation, precise_research_frozen_live, precise_same_input_forwarding_comparison and post_start_observer_status receipt sections and current preview_sdk.cpp research-state gates. The same-input comparison records 28 matching rows and matching shared-calculation cores; it is not an original-engine oracle. Native observer fixture success is explicitly separate from pending live post-Start positions/quantities. New paragraphs require explicit research enablement, preserve ordinary estimation, distinguish active game context from an empty command queue, and retain unpublished-player scope. New placement-sdk-precise and placement-decision-alignment links/anchors resolve in both languages. No private diagnostic command is presented as a user procedure; no game, input or tests executed by this reviewer.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The new integration paragraph stays in the current-research checkpoint before historical additions/results. Its primary link targets the newest precise-integration entry; a separate meaningful defensive-decision link retains the earlier correction. Both links resolve within the same language. Pending actual-army comparison and ordinary estimation remain explicit.",
                 "findings": []
               },
               {
                 "lane": "translation",
                 "reviewer": "/root/placement_docs_translation",
-                "evidence": "Pre-Start interface/reload results and unfinished accuracy scope align; earlier research campaigns retain separate build scope.",
+                "evidence": "Both languages connect the preserved precise path only in explicit research mode, report 28 records and both armies parameters matching the same-calculation diagnostic path, retain ordinary estimation and pending post-Start comparison, and scope earlier aligned defensive flags separately. Reciprocal translation metadata and both referenced diary anchors verified.",
                 "findings": []
               }
             ]
           },
           {
             "path": "docs/en/reference/research-diary.md",
-            "sha256": "adfc485155c0645e0e45d548e11e55e23110c8b73211417bb1e82b3ad3225d1b",
+            "sha256": "544292f3cd29a42cabd38bde6352b0d044a1435cd6eee16af5289c2648da81f3",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "accuracy",
                 "reviewer": "/root/placement_docs_accuracy",
-                "evidence": "Exact bytes match this reviewer initial pass. managed-visible-projections-checkpoint base/cards/grades/details and bank_live_card_checkpoint support dated observations. bank_on_demand_checkpoint and mixed-sdk-session-output.txt record independent bank stop/readmission with unchanged predictor instance. Text explicitly excludes a repeated card check after reconnection and fresh accuracy acceptance.",
-                "findings": []
-              },
-              {
-                "lane": "steps",
-                "reviewer": "/root/placement_docs_steps",
-                "evidence": "Dated update retains initial migration stage and discloses local unpublished receipts. Existing cards, grades, description and mixed-session evidence supports only bounded observations; arrows and card-after-reconnection remain unverified. Prior exact-byte judgment reused.",
-                "findings": []
-              },
-              {
-                "lane": "structure",
-                "reviewer": "/root/placement_docs_structure",
-                "evidence": "The same-day addition is explicitly newer than the preserved initial input-collection stage. Unpublished evidence, interface/lifecycle scope and incomplete accuracy certification are stated before the historical bullets. The stable placement-sdk-capture anchor remains the current-checkpoint target; later dated entries retain their history.",
+                "evidence": "Existing managed-visible-projections-checkpoint.json precise_research_frozen_live records preStart generation8, enabled1, actor_count28, frozen1, core_mask3, source Archers40 and one model. precise_same_input_forwarding_comparison reports no actor differences and both cores matching the separate diagnostic path using the SAME shared formulas; it expressly excludes original engine aggregates/full accuracy. src/preview_plugin.cpp PreciseResearchState retains mod calculation state; ConfigureResearchMode/SetResearchMode require explicit configuration. src/preview_sdk.cpp UpdatePreciseInputs forwards preserved input helpers and UpdatePublicProjections restores/saves their state. Command30 selects research independently of command18 diagnostic capture; commands31/32 feed afterStart verification only. post_start_observer_status records native fixture PASS10.127s and fixed reset publication fence, but rejects the purported generation9 snapshot because it remains generation8 afterStart; no live position acceptance. Article accurately retains pending whole accuracy, UI parity, load campaign and release. Active-context readiness requirement is normative, without asserting current listener readiness or runtime-wide implementation. Earlier decision-alignment entry now states its ordinary-estimation limit historically and links the later integration.",
                 "findings": []
               },
               {
                 "lane": "newcomer",
                 "reviewer": "/root/placement_docs_newcomer",
-                "evidence": "Exact bytes match earlier independent newcomer review. The same-day update identifies limited unpublished evidence and distinguishes the preserved initial migration stage from current interface capability.",
+                "evidence": "Bounded refresh reviewed placement-sdk-precise and the now-historical alignment entry. The adapter calls preserved mod handlers/calculation in explicitly enabled research mode; diagnostic capture does not enable it. The 28-record agreement uses the same shared calculation and is explicitly data-forwarding/recalculation evidence, not engine-parameter equivalence or actual after-Start accuracy. One projection and native observer tests do not establish live comparison, full feature retention or a completed campaign. Unreleased player-package status and ordinary estimation are explicit.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final bounded read-only review against existing precise_state_persistence_preparation, precise_research_frozen_live, precise_same_input_forwarding_comparison and post_start_observer_status receipt sections and current preview_sdk.cpp research-state gates. The same-input comparison records 28 matching rows and matching shared-calculation cores; it is not an original-engine oracle. Native observer fixture success is explicitly separate from pending live post-Start positions/quantities. New paragraphs require explicit research enablement, preserve ordinary estimation, distinguish active game context from an empty command queue, and retain unpublished-player scope. New placement-sdk-precise and placement-decision-alignment links/anchors resolve in both languages. No private diagnostic command is presented as a user procedure; no game, input or tests executed by this reviewer.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The new placement-sdk-precise entry is first, followed by earlier decision alignment and SDK capture entries. Decision alignment now explicitly describes its older estimation-only stage and links forward to precise integration. New text separates input/recalculation equivalence from pending live after-Start accuracy and retained-feature acceptance. Stable old anchors remain unique; no new living procedure is duplicated.",
                 "findings": []
               },
               {
                 "lane": "translation",
                 "reviewer": "/root/placement_docs_translation",
-                "evidence": "Same-day update aligns on three projections, cards, upgrades, reload and bank reconnection limits; earlier capture remains historical and new evidence unpublished.",
+                "evidence": "Compared new precise-path and corrected historical alignment entries: both languages require explicit research activation, retain ordinary estimation without hidden inputs, report one 40-Archer pre-Start control and 28 matching stack-input records using the SAME shared calculation, and leave engine aggregates, actual placement, live observers, full parity, load campaign and release unverified. Reciprocal translation metadata and both referenced diary anchors verified.",
                 "findings": []
               }
             ]
@@ -1266,38 +1280,38 @@
           },
           {
             "path": "docs/players/deployment-preview.md",
-            "sha256": "cac06d0d674e1471bb98b1d5442f5824d47cdf8b77af5241c76fbc76d46dedd6",
+            "sha256": "7736b890552ce243f7c30aa2e99a5a909db2bbdbf8c8c9fa1e72a0c30c3e4507",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "accuracy",
                 "reviewer": "/root/placement_docs_accuracy",
-                "evidence": "Exact bytes match this reviewer initial pass. ../.local/test-state/canonical-graphics-build-20261006/managed-visible-projections-checkpoint.json base/cards/grades/details sections support dated migration checks. Text excludes arrows, broad accuracy and downloadable-package acceptance. Unchanged historical algorithm campaigns were not freshly rerun.",
-                "findings": []
-              },
-              {
-                "lane": "steps",
-                "reviewer": "/root/placement_docs_steps",
-                "evidence": "Player installation targets preview.2 and ordinary Heroes/Lobby startup. SDK projection/card/description checks are explicitly development-only and do not certify the downloadable package or full-pack accuracy. Prior exact-byte judgment reused.",
-                "findings": []
-              },
-              {
-                "lane": "structure",
-                "reviewer": "/root/placement_docs_structure",
-                "evidence": "Development status separates current SDK interface checks from historical research-DLL campaigns and downloadable preview.2 installation. Current-research and developer-source links resolve; controls and historical examples remain grouped below compatibility. Reciprocal translation metadata is intact.",
+                "evidence": "Existing managed-visible-projections-checkpoint.json precise_research_frozen_live records preStart generation8, enabled1, actor_count28, frozen1, core_mask3, source Archers40 and one model. precise_same_input_forwarding_comparison reports no actor differences and both cores matching the separate diagnostic path using the SAME shared formulas; it expressly excludes original engine aggregates/full accuracy. Current preview_sdk.cpp forwards preserved research helpers and state through explicit research mode; diagnostic capture alone is separate. Added text correctly separates connected calculation/data-forwarding from actual afterStart placement accuracy, ordinary estimates and unpublished package state; no whole-pack or engine aggregate equivalence claimed.",
                 "findings": []
               },
               {
                 "lane": "newcomer",
                 "reviewer": "/root/placement_docs_newcomer",
-                "evidence": "Exact bytes match earlier independent newcomer review. Development results are bounded separately from the downloadable package; installation and controls retain a clear player entry point.",
+                "evidence": "Bounded refresh reviewed the development paragraph with published-package download and existing accuracy limits. It identifies preserved research calculation connected in a development version, limits evidence to input/recalculation agreement in one control, leaves actual post-migration placement accuracy unverified, retains ordinary estimation and expressly says these changes are absent from the published package. The diary link provides research-mode details.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final bounded read-only review against existing precise_state_persistence_preparation, precise_research_frozen_live, precise_same_input_forwarding_comparison and post_start_observer_status receipt sections and current preview_sdk.cpp research-state gates. The same-input comparison records 28 matching rows and matching shared-calculation cores; it is not an original-engine oracle. Native observer fixture success is explicitly separate from pending live post-Start positions/quantities. New paragraphs require explicit research enablement, preserve ordinary estimation, distinguish active game context from an empty command queue, and retain unpublished-player scope. New placement-sdk-precise and placement-decision-alignment links/anchors resolve in both languages. No private diagnostic command is presented as a user procedure; no game, input or tests executed by this reviewer.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The concise new paragraph sits in development status before download/install and links directly to the latest precise-integration entry. It separates development input/recalculation checks from unverified actual-placement accuracy and explicitly excludes the published package. Installation instructions remain a single existing procedure.",
                 "findings": []
               },
               {
                 "lane": "translation",
                 "reviewer": "/root/placement_docs_translation",
-                "evidence": "Development results, campaign counts, unfinished arrows/accuracy checks and published-package exclusion align between RU and EN.",
+                "evidence": "Both languages state development-only precise SDK integration, one input/recalculation control, pending actual placement validation, ordinary estimation and exclusion from the published package. Reciprocal translation metadata and both referenced diary anchors verified.",
                 "findings": []
               }
             ]
@@ -1418,76 +1432,76 @@
           },
           {
             "path": "docs/reference/placement-internals.md",
-            "sha256": "1e8d291bdba03b356a5a829b5d431967e070565846da77f12abf21a490ef5922",
+            "sha256": "c72b03d87def7c4611d6a40d3e30ade9961cf001d9ec5de325c0f050eed647af",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "accuracy",
                 "reviewer": "/root/placement_docs_accuracy",
-                "evidence": "Exact bytes match this reviewer initial pass. managed-visible-projections-checkpoint base/cards/grades/details sections support bounded historical projection, hover, card, upgrade and reload observations; text excludes complete-pack accuracy and shipped-package acceptance. Current source is not treated as current gameplay completion evidence.",
-                "findings": []
-              },
-              {
-                "lane": "steps",
-                "reviewer": "/root/placement_docs_steps",
-                "evidence": "The SDK checkpoint separates interface/reload observations from full-pack accuracy and player release. Description arrows and broad new-build validation remain unfinished. Prior exact-byte judgment and existing checkpoint/handoff comparison reused.",
-                "findings": []
-              },
-              {
-                "lane": "structure",
-                "reviewer": "/root/placement_docs_structure",
-                "evidence": "The current checkpoint separates SDK interface/code-reload checks from preserved research-DLL accuracy evidence and explicitly excludes the published player package. current-research and placement-sdk-capture anchors resolve; recovered rules and their evidence scope remain separately headed.",
+                "evidence": "Existing managed-visible-projections-checkpoint.json precise_research_frozen_live records preStart generation8, enabled1, actor_count28, frozen1, core_mask3, source Archers40 and one model. precise_same_input_forwarding_comparison reports no actor differences and both cores matching the separate diagnostic path using the SAME shared formulas; it expressly excludes original engine aggregates/full accuracy. Current preview_sdk.cpp forwards preserved research helpers and state through explicit research mode; diagnostic capture alone is separate. Added text correctly separates connected calculation/data-forwarding from actual afterStart placement accuracy, ordinary estimates and unpublished package state; no whole-pack or engine aggregate equivalence claimed.",
                 "findings": []
               },
               {
                 "lane": "newcomer",
                 "reviewer": "/root/placement_docs_newcomer",
-                "evidence": "Exact bytes match earlier independent newcomer review. Current interface checks, preserved algorithm campaigns and unpublished package changes remain explicitly distinguished.",
+                "evidence": "Bounded refresh reviewed the new checkpoint paragraph with existing complete-match definition and unmet all-pack research goal. Explicit research wiring is distinguished from ordinary estimation; the separate diagnostic path uses the same shared calculation. Actual army comparison after Start is pending, two earlier defensive flags do not establish cell accuracy, and surrounding text identifies changes as absent from the published player package.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final bounded read-only review against existing precise_state_persistence_preparation, precise_research_frozen_live, precise_same_input_forwarding_comparison and post_start_observer_status receipt sections and current preview_sdk.cpp research-state gates. The same-input comparison records 28 matching rows and matching shared-calculation cores; it is not an original-engine oracle. Native observer fixture success is explicitly separate from pending live post-Start positions/quantities. New paragraphs require explicit research enablement, preserve ordinary estimation, distinguish active game context from an empty command queue, and retain unpublished-player scope. New placement-sdk-precise and placement-decision-alignment links/anchors resolve in both languages. No private diagnostic command is presented as a user procedure; no game, input or tests executed by this reviewer.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The new integration paragraph stays in the current-research checkpoint before historical additions/results. Its primary link targets the newest precise-integration entry; a separate meaningful defensive-decision link retains the earlier correction. Both links resolve within the same language. Pending actual-army comparison and ordinary estimation remain explicit.",
                 "findings": []
               },
               {
                 "lane": "translation",
                 "reviewer": "/root/placement_docs_translation",
-                "evidence": "Pre-Start interface/reload results and unfinished accuracy scope align; earlier research campaigns retain separate build scope.",
+                "evidence": "Both languages connect the preserved precise path only in explicit research mode, report 28 records and both armies parameters matching the same-calculation diagnostic path, retain ordinary estimation and pending post-Start comparison, and scope earlier aligned defensive flags separately. Reciprocal translation metadata and both referenced diary anchors verified.",
                 "findings": []
               }
             ]
           },
           {
             "path": "docs/reference/research-diary.md",
-            "sha256": "2428971bc4b76709f0accc4f1315251f0842f9c57fafffe626adb62d8fca2f26",
+            "sha256": "ac30b5c356c36f0ffff055183615beb73d9c265e6af3ef610d5f866231435d81",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "accuracy",
                 "reviewer": "/root/placement_docs_accuracy",
-                "evidence": "Exact bytes match this reviewer initial pass. managed-visible-projections-checkpoint base/cards/grades/details and bank_live_card_checkpoint support dated observations. bank_on_demand_checkpoint and mixed-sdk-session-output.txt record independent bank stop/readmission with unchanged predictor instance. Text explicitly excludes a repeated card check after reconnection and fresh accuracy acceptance.",
-                "findings": []
-              },
-              {
-                "lane": "steps",
-                "reviewer": "/root/placement_docs_steps",
-                "evidence": "Dated update retains initial migration stage and discloses local unpublished receipts. Existing cards, grades, description and mixed-session evidence supports only bounded observations; arrows and card-after-reconnection remain unverified. Prior exact-byte judgment reused.",
-                "findings": []
-              },
-              {
-                "lane": "structure",
-                "reviewer": "/root/placement_docs_structure",
-                "evidence": "The same-day addition is explicitly newer than the preserved initial input-collection stage. Unpublished evidence, interface/lifecycle scope and incomplete accuracy certification are stated before the historical bullets. The stable placement-sdk-capture anchor remains the current-checkpoint target; later dated entries retain their history.",
+                "evidence": "Existing managed-visible-projections-checkpoint.json precise_research_frozen_live records preStart generation8, enabled1, actor_count28, frozen1, core_mask3, source Archers40 and one model. precise_same_input_forwarding_comparison reports no actor differences and both cores matching the separate diagnostic path using the SAME shared formulas; it expressly excludes original engine aggregates/full accuracy. src/preview_plugin.cpp PreciseResearchState retains mod calculation state; ConfigureResearchMode/SetResearchMode require explicit configuration. src/preview_sdk.cpp UpdatePreciseInputs forwards preserved input helpers and UpdatePublicProjections restores/saves their state. Command30 selects research independently of command18 diagnostic capture; commands31/32 feed afterStart verification only. post_start_observer_status records native fixture PASS10.127s and fixed reset publication fence, but rejects the purported generation9 snapshot because it remains generation8 afterStart; no live position acceptance. Article accurately retains pending whole accuracy, UI parity, load campaign and release. Active-context readiness requirement is normative, without asserting current listener readiness or runtime-wide implementation. Earlier decision-alignment entry now states its ordinary-estimation limit historically and links the later integration.",
                 "findings": []
               },
               {
                 "lane": "newcomer",
                 "reviewer": "/root/placement_docs_newcomer",
-                "evidence": "Exact bytes match earlier independent newcomer review. The same-day update identifies limited unpublished evidence and distinguishes the preserved initial migration stage from current interface capability.",
+                "evidence": "Bounded refresh reviewed placement-sdk-precise and the now-historical alignment entry. The adapter calls preserved mod handlers/calculation in explicitly enabled research mode; diagnostic capture does not enable it. The 28-record agreement uses the same shared calculation and is explicitly data-forwarding/recalculation evidence, not engine-parameter equivalence or actual after-Start accuracy. One projection and native observer tests do not establish live comparison, full feature retention or a completed campaign. Unreleased player-package status and ordinary estimation are explicit.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final bounded read-only review against existing precise_state_persistence_preparation, precise_research_frozen_live, precise_same_input_forwarding_comparison and post_start_observer_status receipt sections and current preview_sdk.cpp research-state gates. The same-input comparison records 28 matching rows and matching shared-calculation cores; it is not an original-engine oracle. Native observer fixture success is explicitly separate from pending live post-Start positions/quantities. New paragraphs require explicit research enablement, preserve ordinary estimation, distinguish active game context from an empty command queue, and retain unpublished-player scope. New placement-sdk-precise and placement-decision-alignment links/anchors resolve in both languages. No private diagnostic command is presented as a user procedure; no game, input or tests executed by this reviewer.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The new placement-sdk-precise entry is first, followed by earlier decision alignment and SDK capture entries. Decision alignment now explicitly describes its older estimation-only stage and links forward to precise integration. New text separates input/recalculation equivalence from pending live after-Start accuracy and retained-feature acceptance. Stable old anchors remain unique; no new living procedure is duplicated.",
                 "findings": []
               },
               {
                 "lane": "translation",
                 "reviewer": "/root/placement_docs_translation",
-                "evidence": "Same-day update aligns on three projections, cards, upgrades, reload and bank reconnection limits; earlier capture remains historical and new evidence unpublished.",
+                "evidence": "Compared new precise-path and corrected historical alignment entries: both languages require explicit research activation, retain ordinary estimation without hidden inputs, report one 40-Archer pre-Start control and 28 matching stack-input records using the SAME shared calculation, and leave engine aggregates, actual placement, live observers, full parity, load campaign and release unverified. Reciprocal translation metadata and both referenced diary anchors verified.",
                 "findings": []
               }
             ]
@@ -1609,39 +1623,14 @@
         ]
       }
     },
-    "craft": {
-      "verdict": "PASS",
-      "score": 9,
-      "reviewer": "/root/placement_docs_newcomer",
-      "evidence": [
-        "Reviewed source HEAD db978036a01de14e35787dcf1a1753eb8e0dd033 against fixed publication base 6b3bcdc9bc1f1e8e8c266bf51fde3ecd772accbe. Shallow cumulative pass covered changed paths and gate/check/theme implementation; existing 47ace4a attestation records craft PASS 10 for unchanged earlier material.",
-        "Deep review covered 47ace4a..HEAD: fourteen article files, AGENTS dependency policy, review configuration and paired navigation labels. No UI source, layout or runtime implementation changes occur in this delta; styles are absent from the committed scope. git diff --check passed.",
-        "Loaded actual solid, ockham, conventions, ui-strings and responsive-layout guides. Applied canonical ownership, responsibility, dependency direction and reuse criteria. JS/TS conventions and localization/layout change rules are not newly exercised by this documentation/configuration delta; cumulative review machinery follows descriptive names, braces and focused validators. Existing localized navigation entries are updated in both languages.",
-        "Existing native-projects article hosts the required contract; devkit links there without duplicating it. Normative architecture obligations, unpublished static packaging checks and unverified feature parity/player startup remain distinct. Dated research results do not certify the downloadable player package.",
-        "All fourteen final articles received this newcomer pass; twelve exact-byte judgments were verified against previous independent reviews, and both technology inventory edits were refreshed. Prior console S2 findings are resolved by explicit availability notices.",
-        "Score 9 reflects no concrete craft defect found with bounded cumulative sampling and a deep final delta review; this review is not fresh gameplay, build or browser acceptance. No game, focus or input used."
-      ],
-      "findings": []
-    },
     "security": {
       "verdict": "PASS",
       "score": 9,
       "reviewer": "/root/placement_docs_translation",
-      "evidence": "Read configured security lane (threshold 9; no listed skills). Inspected cumulative fixed-base changed-path inventory and security-sensitive script/template diffs, scanned 64 current added/modified paths for credential patterns, private paths, native addresses and unsafe commands, and reviewed the new delta architecture/packaging documentation and configuration. No credential-pattern or native-address matches; no new unsafe command matches. Public docs preserve release/development boundaries and constrained recovery instructions. Review gate additions enforce fixed policy, current hashes and independent critics; the private-reference exception is limited to the documented directory label. Existing tracked attestation still contains personal skill paths and must be replaced before publication. No game/input, live checks, web checks or binary-content forensic scan performed. Follow-up at ca74deaf8f6fff2772c3818c1b5365eefcfa47c9 verified removal of the previous attestation and scanned all tracked UTF-8 files; remaining private-reference matches are intentional detector/test strings in scripts/check_site.py and tests/test_editorial_gate.py. The S2 is resolved. Final aggregate separately inspected by /root/placement_docs_translation: all34 article hashes match current files; no personal paths, credentials, native addresses or unresolved S1/S2 findings.",
-      "findings": [
-        {
-          "severity": "S2",
-          "state": "resolved",
-          "location": ".review/attestations/f9397c857c42707d8281a9899e5c94870a7b4e1e27e89e56f61173db107fcd68.json:1710-1711",
-          "problem": "The tracked previous review attestation contains personal absolute skill paths.",
-          "consequence": "Publishing the current tree would retain private workstation references in the public repository.",
-          "evidence": "Cumulative changed-file private-path scan identified these two lines; parent plans normal attestation replacement, which has not yet occurred in the reviewed tree.",
-          "disposition": "Removed the superseded tracked attestation; its private archival copy is outside tracked publication files.",
-          "verification": "At ca74deaf8f6fff2772c3818c1b5365eefcfa47c9 the former attestation does not exist and git ls-files excludes it. A scan of all tracked UTF-8 files found no credential patterns or personal absolute paths; only intentional private-workspace detector/test strings matched. All 14 article LF hashes are unchanged."
-        }
-      ]
+      "evidence": "Fresh bounded security review of the eight-file working-tree delta from fb1178e: six RU/EN article edits, AGENTS.md and .claude/review.config.json. Actual configured security lane has threshold 9 and no listed skills or additional lane rules. Read the complete new article delta during the translation pass and inspected all changed policy lines. Full current contents of all eight changed files scanned for credential patterns, personal absolute paths, native addresses/disassembler labels and unsafe command patterns: no matches. No runtime source, install commands, dependencies, executable payloads or public attestation files changed. Policy additions strengthen process-based evidence and preserve existing gates, thresholds and fixed article-policy marker. Articles distinguish research activation from ordinary estimates and explicitly leave engine aggregate equivalence, post-Start accuracy, live observers, full parity and release pending. git ls-files confirms no .local receipts are tracked; no private process addresses or new local reports are in the publication delta. Existing authorized author contacts were preserved. No game/input, live tests, external mutation or publication performed; parent-reported build and test results were not independently rerun. New publication aggregate/attestation must receive its own boundary check after generation.",
+      "findings": []
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-10-09T16:46:24.485Z"
+  "timestamp": "2026-10-09T20:19:48.071Z"
 }
