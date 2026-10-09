@@ -8,7 +8,7 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/deployment-preview/
 description: 'Deployment predictor'
-updated: '2026-10-09'
+updated: '2026-10-10'
 ---
 # Deployment predictor
 
@@ -20,7 +20,7 @@ The research algorithm has advanced beyond the published package. The last resea
 
 Ordinary prediction must continue to exclude hidden counts, upgrades and the final neutral split. Post-Start explanations of actual placement for every player remain planned.
 
-The development version now connects the preserved precise research calculation to SDK projections. Input and recalculation agreement was checked in one control; actual placement accuracy after migration remains unverified. Ordinary forecasting remains an estimate. [What is connected and what remains to verify](../reference/research-diary.md#placement-sdk-precise). These changes are not yet in the published package.
+The development version connects the preserved precise research calculation to SDK projections. The current SDK build passed **36/36 polygon battles** in explicit research mode, matching every creature, quantity and cell across 96 stacks. Complete repeat campaigns, random maps and other hero armies remain unverified. Ordinary forecasting remains an estimate. [Verification and its limits](../reference/research-diary.md#placement-sdk-polygon). These changes are not yet in the published package.
 
 ## Download and install
 

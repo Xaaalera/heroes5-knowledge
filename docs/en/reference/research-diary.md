@@ -8,9 +8,19 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/research-diary/
 description: Research diary
-updated: 2026-10-09
+updated: 2026-10-10
 ---
 # Research diary
+
+## 2026-10-10 — full polygon through the SDK: 36/36 {#placement-sdk-polygon}
+
+The current research SDK build passed **36/36 battles, totalling 96 combat stacks**. Superadmin is an explicitly enabled developer mode that can access hidden source creature types and quantities before Start. Every creature, quantity and cell matched. Each forecast was saved before Start; separate engine observers recorded the actual army after Start without feeding it into the prediction.
+
+- The fixtures include 30 packs authored with multiple source stacks, including a repeated creature type, and 6 with a single source stack. One source stack can split into multiple combat stacks. All compositions used the polygon's default hero army; the map was loaded afresh before each battle within one SDK session. The seven-stack pack and its input permutation both matched completely.
+- The verification reader was corrected: quantities in an intermediate order cannot be paired with final model order. The first 14 quantity checks were excluded; a new complete pass was run. This required no mod algorithm change.
+- Map readiness is confirmed by a game API response containing the expected heroes. Neither an empty queue nor a listener count proves readiness alone.
+
+This is not ten complete repeat campaigns, random-map coverage, all hero armies or ordinary-mode accuracy. Matching intermediate engine parameters requires separate verification. Full interface parity and an independent player-package release remain open. [Next stages](placement-internals.md#current-research).
 
 ## 2026-10-09 — precise research path connected to the SDK {#placement-sdk-precise}
 

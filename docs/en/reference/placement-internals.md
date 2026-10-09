@@ -8,7 +8,7 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/placement-internals/
 description: Placement internals and corrected assumptions
-updated: '2026-10-09'
+updated: '2026-10-10'
 ---
 # Placement internals and corrected assumptions
 
@@ -22,7 +22,7 @@ Later SDK checks verified projections before Start, footprint and movement highl
 
 The preserved research prototype freezes the complete prediction **before Start**, then compares it with the actual army after battle starts. A complete match requires the same **creature, quantity and cell for every stack**. Matching occupied cells alone is a separate, weaker measure.
 
-The preserved precise path is now connected to SDK projections in explicitly enabled research mode. In one control, 28 input records and both armies' calculated parameters matched a separate diagnostic path using the same shared calculation. Comparison with the actual army after Start is still pending; ordinary mode remains an estimate. [Integration and verification limits](research-diary.md#placement-sdk-precise). The comparison of two [defensive decisions](research-diary.md#placement-decision-alignment) was also corrected earlier; matching these flags does not establish cell accuracy.
+The preserved precise path is connected to SDK projections in explicitly enabled research mode. A new control of the current SDK build passed **36/36 polygon battles: all 96 combat stacks** matched by creature, quantity and cell. The fixtures include 30 packs authored with multiple source stacks, including a repeated creature type, and 6 with a single source stack; one source stack can split into multiple combat stacks. The map was loaded afresh before every battle with the default hero army. This is not ten complete campaigns or random-map coverage; ordinary mode remains an estimate. [New control and verification correction](research-diary.md#placement-sdk-polygon). The comparison of two [defensive decisions](research-diary.md#placement-decision-alignment) was corrected earlier; matching these flags alone does not establish cell accuracy.
 
 ### Additions and corrections
 
@@ -31,7 +31,7 @@ The preserved precise path is now connected to SDK projections in explicitly ena
 - After partially successful simple placement, preserve selected cells and exact quantities of placed source records. Repeated stacks of the same creature retain their identity; reducing the record count must not recalculate successful positions.
 - Investigated parts of army valuation, hero specializations and the initial placement area. Isolated arithmetic checks do not establish every combination of effects and modes.
 
-### Latest tested research DLL
+### Research DLL before the SDK migration
 
 The last completed checks before the pause ran on **4 October**, after correcting source shooter classification:
 
@@ -53,7 +53,7 @@ The early **111/149** measured occupied-cell matches; **14/14** were native test
 - Decide ordinary-mode inputs separately: hidden counts, upgrades and the final neutral split must not become inputs to ordinary prediction.
 - Add post-Start explanations for every player: why the army took its actual positions and how they differ from the prediction.
 
-The target is complete agreement for every pack in research Superadmin mode. It **has not been achieved**. Earlier rules and their limits remain below; the [diary](research-diary.md#placement-sdk-capture) records this checkpoint.
+The target is complete agreement for every pack in research Superadmin mode. It **has not been achieved**. Earlier rules and their limits remain below; the [diary](research-diary.md#placement-sdk-polygon) records this checkpoint.
 
 ## Army preparation
 
