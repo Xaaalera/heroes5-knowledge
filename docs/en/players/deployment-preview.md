@@ -20,6 +20,8 @@ The research algorithm has advanced beyond the published package. The last resea
 
 Ordinary prediction must continue to exclude hidden counts, upgrades and the final neutral split. Post-Start explanations of actual placement for every player remain planned.
 
+The development version now connects the preserved precise research calculation to SDK projections. Input and recalculation agreement was checked in one control; actual placement accuracy after migration remains unverified. Ordinary forecasting remains an estimate. [What is connected and what remains to verify](../reference/research-diary.md#placement-sdk-precise). These changes are not yet in the published package.
+
 ## Download and install
 
 **[Download DLL package 0.1.0-preview.2](https://github.com/Xaaalera/heroes5-deployment-preview/releases/download/v0.1.0-preview.2/Heroes5DeploymentPreview-0.1.0-preview.2.zip)** — experimental release. Keep ordinary Heroes/Lobby startup; there is no separate mod EXE. Code → Download ZIP downloads source, not the player package.

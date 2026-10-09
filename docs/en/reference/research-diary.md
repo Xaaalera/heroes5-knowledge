@@ -12,6 +12,28 @@ updated: 2026-10-09
 ---
 # Research diary
 
+## 2026-10-09 — precise research path connected to the SDK {#placement-sdk-precise}
+
+The SDK adapter again calls the previous mod's preserved handlers and calculation when research mode is explicitly enabled. Calculation state survives code replacement; diagnostic capture alone does not enable this mode. Ordinary forecasting remains an estimate and receives no hidden neutral inputs.
+
+- In one control with 40 Archers, source-army data, stack inputs, corrections and area effects were collected before Start; both armies' parameters were calculated and one projection was created.
+- All 28 stack-input records and both armies' parameters matched a separate diagnostic path using the same shared calculation. This checks data forwarding and recalculation, not equivalence to the engine's final parameters.
+- Comparison with the actual army after Start is still pending. Position and quantity observers are connected through SDK hooks and passed a native test; live verification remains ahead. Map readiness requires an active game context; an empty command queue is insufficient.
+
+Complete accuracy of the new version, preservation of every previous feature and the load campaign remain unverified. These changes have not shipped in the player package.
+
+## 2026-10-09 — defensive-decision comparison corrected {#placement-decision-alignment}
+
+In one mixed battle, the earlier comparison said that our calculation enabled defense while the engine disabled it. Direct observations of the original calls showed that different calculations had been compared: a side label in the placement object had been mistaken for an army index in our snapshot.
+
+- After alignment by source army, evaluation context and event order, both decisions matched: defense off in the first calculation and on in the second. The formula was not changed to force agreement.
+- Later empty army lists did not explain the original decision: at the calls themselves, the lists contained 1 and 2 stacks in one measurement. Splitting changed in the next measurement, reinforcing the need to distinguish loads and battle generations.
+- Verification rejects stale generations, overflow, unknown armies, mismatched contexts and events occurring after the observation being checked. Engine data is used for verification, not as prediction input.
+
+Evidence: local `decision_call_inputs_live`, `decision_call_results_live`, `decision_final_store_live` and `aligned_decision_verification` records. This checks two flags in one control pack, **not a new complete-composition and cell-accuracy campaign**. It does not establish numerical aggregate equivalence or other branches.
+
+At this stage, SDK projections still used ordinary estimation. The [preserved research path](#placement-sdk-precise) was connected later. Published accuracy results for older builds do not describe the current SDK version.
+
 ## 2026-10-09 — SDK input collection and parameter calculation {#placement-sdk-capture}
 
 **Later update on the same day.** Physical SDK checks verified three projections before Start, footprint and movement highlighting, Genie and Golem cards, a Genie reference-upgrade cycle and opening/closing the full native description. Checked code replacements preserved projections, highlighting and the selected upgrade; the full description also survived a reload. Its navigation arrows are not yet verified. The bank army reference joined the common session: a crypt card rendered, then the reference stopped and reconnected independently while the predictor kept running. After reconnection, console status was checked; the card was not checked again.

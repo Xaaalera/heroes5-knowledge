@@ -22,6 +22,8 @@ Later SDK checks verified projections before Start, footprint and movement highl
 
 The preserved research prototype freezes the complete prediction **before Start**, then compares it with the actual army after battle starts. A complete match requires the same **creature, quantity and cell for every stack**. Matching occupied cells alone is a separate, weaker measure.
 
+The preserved precise path is now connected to SDK projections in explicitly enabled research mode. In one control, 28 input records and both armies' calculated parameters matched a separate diagnostic path using the same shared calculation. Comparison with the actual army after Start is still pending; ordinary mode remains an estimate. [Integration and verification limits](research-diary.md#placement-sdk-precise). The comparison of two [defensive decisions](research-diary.md#placement-decision-alignment) was also corrected earlier; matching these flags does not establish cell accuracy.
+
 ### Additions and corrections
 
 - Separated defensive placement, general placement and linked groups. Goblins and their carriers require adjacency checks that account for creature footprints and occupied cells.
