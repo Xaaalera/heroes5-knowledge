@@ -14,7 +14,11 @@ updated: 2026-10-09
 
 ## 2026-10-09 — SDK input collection and parameter calculation {#placement-sdk-capture}
 
-Work resumed with the predictor's SDK migration. Input collection was checked in the test game with the Superadmin developer mode explicitly enabled; the migrated version does not yet produce a complete prediction. This collection is off by default and does not establish ordinary-player input rules.
+**Later update on the same day.** Physical SDK checks verified three projections before Start, footprint and movement highlighting, Genie and Golem cards, a Genie reference-upgrade cycle and opening/closing the full native description. Checked code replacements preserved projections, highlighting and the selected upgrade; the full description also survived a reload. Its navigation arrows are not yet verified. The bank army reference joined the common session: a crypt card rendered, then the reference stopped and reconnected independently while the predictor kept running. After reconnection, console status was checked; the card was not checked again.
+
+Evidence for this update: the local `managed-visible-projections-checkpoint` record and its card, upgrade, full-description and mixed-session checks. These are bounded interface and lifecycle checks, **not a new complete-pack accuracy campaign**. New sources and reports remain unpublished; the result does not apply to the downloadable player package. The earlier input-collection stage is preserved below; its limits do not describe the whole current interface.
+
+At the initial migration stage, input collection was checked in the test game with the Superadmin developer mode explicitly enabled; that stage did not yet produce a complete prediction. This collection is off by default and does not establish ordinary-player input rules.
 
 - The combat-stack parameter reader moved into the shared Game API. The reference version and SDK use the same reading code; **62/62 native tests passed without skips** after the move.
 - Before Start in one mixed battle, the journal retained **58 input records**, including three neutral stacks with quantities 80, 35 and 12, plus the hero's stack of 10 creatures. Several records represent different evaluation calls for one stack; 58 is not the stack count. No reading errors or journal overflow occurred.

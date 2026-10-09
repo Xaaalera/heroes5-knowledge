@@ -18,7 +18,7 @@ Technical reference for **stack splitting, sorting and cell selection**. Start w
 
 As of **9 October 2026**, work has resumed with the predictor's SDK migration. Combat-stack inputs and corrections were collected in the test game, and the shared calculation of both armies' parameters ran through the SDK. Its results matched a game-free calculation of the same inputs; they have not yet been compared with the engine's own final aggregates.
 
-The migrated version calculates parameters when Start is pressed and does not yet predict cells before the click. This stage is separate from the preserved research prototype described below. The new mechanisms have not shipped in the player package. [Migration checks and limits](research-diary.md#placement-sdk-capture).
+Later SDK checks verified projections before Start, footprint and movement highlighting on hover, creature cards, selection of a reference upgrade and opening the full native creature description. In the checked cases, code replacement preserved projections and the selected upgrade. These are interface and code-reload checks, not complete-pack accuracy evidence. Description navigation arrows and broad placement validation after migration remain unfinished. These changes have not shipped in the player package. [Stages and verification limits](research-diary.md#placement-sdk-capture).
 
 The preserved research prototype freezes the complete prediction **before Start**, then compares it with the actual army after battle starts. A complete match requires the same **creature, quantity and cell for every stack**. Matching occupied cells alone is a separate, weaker measure.
 
