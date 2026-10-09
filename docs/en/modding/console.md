@@ -50,6 +50,14 @@ Use a short command such as `heroes` inside the console. Its Windows terminal eq
 
 Tab suggests commands, parameters, maps, heroes and creature constants. Hero suggestions refresh from the test game and may take a moment while a map loads. Hiding the panel retains output and history. Click Logs to reopen it.
 
+## Inspect our mods
+
+This section describes an unpublished SDK addition checked in the test game on 9 October 2026. In downloadable preview.5, the tab shows events for connected modules; it does not yet include the complete project catalog or a separate prototype section.
+
+The **Modules** tab shows discovered mod projects and confirmed connection states. Display names come from project manifests. SDK checks and prototypes appear in a separate collapsible section.
+
+**Active** means the SDK confirmed that a plugin is connected. **Project found; running state unconfirmed** means only that its sources were found; it does not confirm DLL or H5U installation in the game. Listing a mod does not enable it automatically.
+
 ## Find the cause of an error
 
 On **Logs**, select a message level and filter by part of the text. INFO shows ordinary events, WARNING warnings, ERROR failures and DEBUG additional details. Filtering changes visible rows; the complete journal stays in its file.

@@ -27,8 +27,8 @@ Check this list and the relevant code before adding a tool or library. Reuse an 
 | Localization | gettext, Babel | Russian and English messages; gettext is part of Python's standard library |
 | Logs and locks | logging, structlog, concurrent-log-handler, portalocker | Structured events, rotating logs and file locks |
 | Native console | Dear ImGui, ImTerm, ImGuiColorTextEdit, DirectX 9 | Window, terminal, command editor and rendering |
-| Native JSON | nlohmann/json | Parsing structured console messages |
-| Analysis and checks | Keystone, Unicorn, pefile, Capstone | Machine code, emulation, PE parsing and disassembly |
+| Native JSON | nlohmann/json | Console messages and mod catalog manifests in `module_catalog.hpp` |
+| Analysis and checks | Keystone, Unicorn, pefile, Capstone | Machine code, emulation, PE parsing and disassembly; the development packager uses pefile to check DLL entry points and dependencies before emitting a player ZIP |
 | Website | MkDocs, Jinja, JavaScript, SCSS/Sass | Static articles, templates, search and styling |
 | Images | Pillow, PNG, AVIF, SVG | Original backgrounds, compressed copies and diagrams; original PNGs are retained |
 | Checks | unittest, CTest, Node.js, Playwright | Python/C++ checks, review and browser scenarios |

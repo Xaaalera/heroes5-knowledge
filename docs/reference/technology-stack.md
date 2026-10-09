@@ -27,8 +27,8 @@ updated: '2026-10-08'
 | Локализация | gettext, Babel | Русские и английские сообщения; gettext входит в стандартную библиотеку Python |
 | Журналы и блокировки | logging, structlog, concurrent-log-handler, portalocker | Структурированные события, ротация журналов и блокировки файлов |
 | Нативная консоль | Dear ImGui, ImTerm, ImGuiColorTextEdit, DirectX 9 | Окно, терминал, редактор команд и отрисовка |
-| Нативный JSON | nlohmann/json | Разбор структурированных сообщений консоли |
-| Анализ и проверки | Keystone, Unicorn, pefile, Capstone | Машинный код, эмуляция, чтение PE и дизассемблирование |
+| Нативный JSON | nlohmann/json | Сообщения консоли и манифесты каталога модов в `module_catalog.hpp` |
+| Анализ и проверки | Keystone, Unicorn, pefile, Capstone | Машинный код, эмуляция, чтение PE и дизассемблирование; в разрабатываемом сборщике pefile проверяет точки входа и зависимости DLL перед выдачей игрового ZIP |
 | Сайт | MkDocs, Jinja, JavaScript, SCSS/Sass | Статические статьи, шаблоны, поиск и оформление |
 | Изображения | Pillow, PNG, AVIF, SVG | Исходные фоны, сжатые копии и схемы; оригинальные PNG сохраняются |
 | Проверки | unittest, CTest, Node.js, Playwright | Проверки Python/C++, ревью и браузерные сценарии |
