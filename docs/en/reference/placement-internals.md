@@ -8,7 +8,7 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/placement-internals/
 description: Placement internals and corrected assumptions
-updated: '2026-10-08'
+updated: '2026-10-09'
 ---
 # Placement internals and corrected assumptions
 
@@ -16,9 +16,11 @@ Technical reference for **stack splitting, sorting and cell selection**. Start w
 
 ## Research checkpoint {#current-research}
 
-As of **8 October 2026**, the research predictor is preserved and algorithm work is paused. The new mechanisms have not shipped in the player package.
+As of **9 October 2026**, work has resumed with the predictor's SDK migration. Combat-stack inputs and corrections were collected in the test game, and the shared calculation of both armies' parameters ran through the SDK. Its results matched a game-free calculation of the same inputs; they have not yet been compared with the engine's own final aggregates.
 
-The prototype freezes the complete prediction **before Start**, then compares it with the actual army after battle starts. A complete match requires the same **creature, quantity and cell for every stack**. Matching occupied cells alone is a separate, weaker measure.
+The migrated version calculates parameters when Start is pressed and does not yet predict cells before the click. This stage is separate from the preserved research prototype described below. The new mechanisms have not shipped in the player package. [Migration checks and limits](research-diary.md#placement-sdk-capture).
+
+The preserved research prototype freezes the complete prediction **before Start**, then compares it with the actual army after battle starts. A complete match requires the same **creature, quantity and cell for every stack**. Matching occupied cells alone is a separate, weaker measure.
 
 ### Additions and corrections
 
@@ -49,7 +51,7 @@ The early **111/149** measured occupied-cell matches; **14/14** were native test
 - Decide ordinary-mode inputs separately: hidden counts, upgrades and the final neutral split must not become inputs to ordinary prediction.
 - Add post-Start explanations for every player: why the army took its actual positions and how they differ from the prediction.
 
-The target is complete agreement for every pack in research Superadmin mode. It **has not been achieved**. Earlier rules and their limits remain below; the [diary](research-diary.md#placement-checkpoint) records this checkpoint.
+The target is complete agreement for every pack in research Superadmin mode. It **has not been achieved**. Earlier rules and their limits remain below; the [diary](research-diary.md#placement-sdk-capture) records this checkpoint.
 
 ## Army preparation
 

@@ -8,9 +8,24 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/research-diary/
 description: Research diary
-updated: 2026-10-08
+updated: 2026-10-09
 ---
 # Research diary
+
+## 2026-10-09 — SDK input collection and parameter calculation {#placement-sdk-capture}
+
+Work resumed with the predictor's SDK migration. Input collection was checked in the test game with the Superadmin developer mode explicitly enabled; the migrated version does not yet produce a complete prediction. This collection is off by default and does not establish ordinary-player input rules.
+
+- The combat-stack parameter reader moved into the shared Game API. The reference version and SDK use the same reading code; **62/62 native tests passed without skips** after the move.
+- Before Start in one mixed battle, the journal retained **58 input records**, including three neutral stacks with quantities 80, 35 and 12, plus the hero's stack of 10 creatures. Several records represent different evaluation calls for one stack; 58 is not the stack count. No reading errors or journal overflow occurred.
+- Start stopped further recording. A later snapshot confirmed that all 58 records remained unchanged. This verifies data collection, not creature-and-cell prediction accuracy for the pack.
+- A journal-format incompatibility introduced by the change counter was fixed. The current version rejects the older format, verified separately by a native test.
+- A subsequent check retained 16 hero corrections and 62 auxiliary-strength records tied to input order. No overflow or reading errors occurred; all three arrays remained unchanged after Start.
+- The SDK calculated aggregate parameters for both armies: one hero stack and three neutral stacks. Every value matched a game-free calculation of the same inputs bit for bit. This verifies shared-code execution, not agreement with the engine's own calculation.
+- Calculation currently runs when Start is pressed, before the engine transitions into combat. No result is available before the click; this is **not a ready pre-Start prediction**. Targeted capture-boundary and shared-calculation checks passed after the latest changes; the earlier 62/62 result belongs to the parameter-reader migration stage.
+- Next: calculation before the Start click, comparison with engine aggregates, mode and cell selection, the interface and a broad whole-pack campaign. Complete input retention through nested calls and SDK core replacement remains unproven. Ordinary-mode input rules and post-Start explanations for every player remain separate tasks.
+
+Evidence: local records `actor-reader-native-check`, `actor-reader-source-equivalence`, `predictor-actor-journal-live-placement/after-start`, `predictor-corrections-live-placement/after-start` and `sdk-core-versus-common-replay`. This stage's source and raw reports are not yet published; its results do not certify the downloadable DLL. See the [placement mechanism](placement-internals.md).
 
 ## 2026-10-08 — current placement-algorithm status {#placement-checkpoint}
 

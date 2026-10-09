@@ -8,7 +8,7 @@ section: mods
 kicker: HEROES V · UNIVERSE
 translation: players/deployment-preview/
 description: 'Deployment predictor'
-updated: '2026-10-08'
+updated: '2026-10-09'
 ---
 # Deployment predictor
 
@@ -16,7 +16,7 @@ A projection marks **a creature's predicted position and movement area**. It use
 
 ## Development status
 
-The research algorithm has advanced beyond the published package. The latest tested research DLL passed 60 native tests, a three-stack control and 36 full-polygon battles. Its ten-load campaign is incomplete and algorithm work is paused. [Recovered rules, verified results and remaining work](../reference/placement-internals.md#current-research).
+The research algorithm has advanced beyond the published package. The last research DLL tested before the switch to SDK work passed 60 native tests, a three-stack control and 36 full-polygon battles. Its ten-load campaign is incomplete. Work resumed with the SDK migration: input collection and army-parameter calculation were checked, but the migrated version does not yet predict cells before Start. These checks do not certify the published package's accuracy. [Recovered rules, verified results and remaining work](../reference/placement-internals.md#current-research).
 
 Ordinary prediction must continue to exclude hidden counts, upgrades and the final neutral split. Post-Start explanations of actual placement for every player remain planned.
 
