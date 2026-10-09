@@ -81,6 +81,8 @@ xkit release demo
 
 ## Разрабатывать C++-плагин
 
+Перед изменением интеграции прочитай [обязательный архитектурный контракт](native-projects.md#architecture-contract): логика и интерфейс остаются в моде, адаптер связывает их с runtime, а инструменты разработки не требуются игроку.
+
 ```text
 xkit new demo-native
 xkit start demo-native

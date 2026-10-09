@@ -2,17 +2,87 @@
 content_type: how-to
 status: draft
 faction: academy
-title: Extend a C++ plugin and recover test files
+title: C++ mod architecture and extension
 lang: en
 section: modding
 kicker: HEROES V · UNIVERSE
 translation: modding/native-projects/
-description: Additional DLL exports and recovery of the bank adapter's test files in xkit.
-updated: '2026-10-08'
+description: Required boundaries between the game, shared runtime, adapter and mod behavior; development, release and acceptance.
+updated: '2026-10-09'
 ---
-# Extend a C++ plugin and recover test files
+# C++ mod architecture and extension
 
-For developers with a working [first xkit C++ project](devkit.md), this guide covers an additional exported function and the separate case of bank-adapter file recovery after failed installation. Players using a released mod do not need these actions.
+This guide defines the required boundaries between our mods and xkit. It then covers standalone clones, DLL exports and test-file recovery. Start with the [xkit guide](devkit.md) for initial commands; players using a finished mod do not need these actions.
+
+## Required architecture contract {#architecture-contract}
+
+**Game behavior and UI belong to the mod. The development environment connects the mod through an adapter and does not define its behavior.** This contract applies when creating, extending or migrating mods. It states requirements; the text itself does not establish that current builds comply.
+
+### Layer responsibilities
+
+| Layer | Owns | Does not own |
+|---|---|---|
+| Game | World, battles, creatures, camera, native windows and engine rules | Mod development tools |
+| [Game API](../reference/game-api.md) | Verified bindings to the supported game, game types and known hook sites | Predictor algorithm, bank-reference content or project management |
+| Shared game loader/runtime | Mod connection, event delivery, safe callback invocation/retirement and the agreed state contract | Individual mod rules or UI |
+| Individual mod adapter | Translating runtime events/data into mod calls, registering callbacks and transferring state/cleanup | A duplicate algorithm built for the SDK |
+| Mod behavior and UI | Calculation, mod rules, models, cards, tooltips and state | Supervisor commands, build management and HMR mechanics |
+| xkit tools | Projects, builds, file watching, developer commands, logs and packaging | A required service on a player's computer |
+
+Runtime means code executing inside the game. An adapter is part of an individual mod's integration. The supervisor is the xkit process watching sources and managing development updates. These roles do not require a separate DLL for every table row: physical packaging can differ. Each mod still ships independently, with shared game dependencies listed in its package.
+
+### Dependency direction
+
+- The adapter depends on the public runtime contract and calls its mod's behavior. The shared runtime invokes registered callbacks through that contract.
+- Mod behavior must not import its adapter, internal SDK types, runtime buffer layouts or development commands. Algorithm inputs have meaning in the mod's domain.
+- Mod UI may use Game API and native game objects. Independence from xkit does not mean independence from the game itself.
+- The shared runtime does not know predictor creature categories, placement formulas or army variants for a particular bank. These decisions remain in the mods.
+- A shared library holds reusable bindings and mechanisms with an explicit purpose. Moving code there requires a real shared consumer; calling it “common” is insufficient.
+
+**Predictor boundary example.** The runtime reports battle preparation. The adapter creates an allowed input and calls the existing predictor calculation. The predictor returns positions and UI data; the adapter connects necessary operations to the runtime lifecycle. Information disclosure policy is separate: research mode does not authorize hidden quantities, upgrades or the final neutral split in ordinary prediction.
+
+| Allowed | Boundary violation |
+|---|---|
+| Adapter translates a game callback into mod input | Algorithm receives an internal SDK context and reads its buffers |
+| Mod owns the reference-upgrade choice; adapter preserves it during reload | Upgrade choice exists only in the developer's Python process |
+| Runtime safely invokes mod cleanup | Runtime has a special branch for Genie placement |
+| Mod uses verified Game API bindings | Mod searches for xkit sources or workspace during play |
+| New adapter invokes the previous algorithm and UI | SDK integration creates a simplified copy of the mod |
+
+### Two operating modes
+
+**Development through xkit:** mod sources → temporary DLL build → compatibility checks → safe version replacement in the test game. Developer tools and console help observe results. C++ still compiles; HMR automates building and connection.
+
+**Finished mod for a player:** installed package → ordinary Heroes/Lobby startup → game loader/runtime → adapter → the same mod behavior. Separate xkit processes, Python/Node, sources, workspace and developer console are unnecessary. Resource mods ship their own H5U; native mods ship their own DLL; necessary shared game files are explicit.
+
+Development and release use one behavior implementation. Connection and packaging may differ. Conditional compilation must not silently disable features in either mode. Copying an intermediate HMR DLL does not turn it into a finished player package.
+
+### State, updates and cleanup
+
+- The mod defines its state's meaning. The adapter transfers it through the agreed contract; runtime owns the provided storage lifetime. Transport types must not become the algorithm's data model.
+- Contract and state-format compatibility are checked before replacement. Without established compatibility, reject the update with an understandable reason. Never silently reset state or reinterpret its meaning.
+- A DLL must not unload while the game or another callback can invoke its functions. Retire callbacks through the agreed mechanism; release game objects and references on an allowed game thread.
+- A rejected update should preserve the previous working version when state allows that to be established. This does not promise rollback of arbitrary game actions already performed.
+- Loader, incompatible-state or resource changes may require a restart. Record its specific reason; ending a check or response does not justify closing the test game.
+
+### Migration completion requirements
+
+| Requirement | Necessary evidence |
+|---|---|
+| Source boundaries respected | Architecture review of dependencies and behavior ownership; violations block acceptance |
+| Previous features retained | A pre-migration feature inventory and post-migration result for each feature, including UI and cleanup |
+| Finished package correct | Checks of actual released files, DLL entry points, dependencies and installation paths |
+| Development supports claimed HMR | Code, state, callback and rejection checks in one confirmed session |
+| Player needs no development environment | Ordinary final-package startup without developer processes, sources or workshop paths, with mod behavior checked |
+| Mods independent | Separate-package and coexistence checks; demand loading/stopping additionally tested when claimed |
+
+Successful compilation, a module-list entry, static DLL validation and SDK operation establish different properties. None alone proves migration completion. The predictor's earlier accuracy campaigns do not transfer to a new build either: evidence must cover that build's calculation.
+
+### Change control and current limits
+
+Root, devkit and both mod AGENTS link to this contract. Architecture review must check dependency direction, absence of SDK implementation leakage and retained behavior. Changing the decision requires updating the contract and related acceptance criteria with a reason; bypassing it as a local implementation detail is unacceptable.
+
+The development native packager already requires a [static player ZIP check](#player-package-check). It does not prove the absence of programmatically loaded dependencies or source-layer separation. Automatic checking of all dependencies between layers is not implemented; architecture review currently owns that check. Different packaging routes, including the bank reference, require their own acceptance. Full feature parity of the migrated predictor and ordinary startup of its new managed build remain unverified.
 
 ## Connect dependencies in a standalone clone
 
@@ -50,6 +120,14 @@ An export is a function name available to another DLL module. It is not a new in
 Replace `project-name` and `DLL_PATH` with your project name and the DLL path from its extracted release. Compilation or linking failure does not mean the change was applied. Do not retain function pointers from an unloaded version; see [Game API](../reference/game-api.md) for callback removal and state transfer.
 
 Startup bootstrap and graphics facade changes take effect at the next process launch. Use supported core or plugin contracts for development changes. Moving an older DLL into a project directory does not automatically make it HMR-compatible.
+
+<span id="player-package-check"></span>
+
+**Final DLL check during release.**
+
+The development packager automatically checks DLL format, the entry point called by the loader, and normal/delayed dependencies before emitting a player ZIP. A missing-entry-point error may mean that a development payload was supplied instead of the finished mod. An undeclared-dependency error requires checking the build and package contents; installing the SDK on the player's computer is not a fix.
+
+This check is not yet published. It does not launch the game or detect every dependency loaded programmatically. Ordinary final-package startup through Heroes/Lobby without developer processes, and verification that all features remain available, are separate readiness requirements.
 
 ## Recover bank-adapter files
 

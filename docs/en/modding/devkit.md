@@ -81,6 +81,8 @@ Players follow README.txt: on first installation retain the original graphics DL
 
 ## Develop a C++ plugin
 
+Before changing integration, read the [required architecture contract](native-projects.md#architecture-contract): behavior and UI stay in the mod, its adapter connects them to runtime, and players do not need development tools.
+
 ```text
 xkit new demo-native
 xkit start demo-native
