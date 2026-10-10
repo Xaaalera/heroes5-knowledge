@@ -16,13 +16,13 @@ A projection marks **a creature's predicted position and movement area**. It use
 
 ## Development status
 
-The research algorithm has advanced beyond the published package. The last research DLL tested before the switch to SDK work passed 60 native tests, a three-stack control and 36 full-polygon battles. Its ten-load campaign is incomplete. SDK migration checks now cover projections before Start, footprint and movement highlighting, creature cards, selection of a reference upgrade and opening the full description. Description navigation arrows and broad accuracy validation after migration remain unfinished. These development results do not certify the published package's accuracy. [Recovered rules, verified results and remaining work](../reference/placement-internals.md#current-research).
+The research version running through the SDK completed independent verification: **273/273 complete matches, 757 stacks, ten map runs**. Each creature, quantity and cell forecast was saved before Start, then compared with the complete actual roster afterwards. This result belongs to the checked conditions and does not certify the downloadable package's accuracy. [Campaign coverage and verification limits](../reference/research-diary.md#placement-273-matrix).
 
 Ordinary prediction must continue to exclude hidden counts, upgrades and the final neutral split. Post-Start explanations of actual placement for every player remain planned.
 
-Developer Superadmin uses hidden source creature types and quantities before Start. In this mode, separate polygon sweeps with three hero armies each passed **36/36 complete matches**; selected packs from two random maps passed **43/43**. These results belong to their tested research builds. A full ten-load campaign and remaining combinations are checked separately. Ordinary forecasting remains an estimate. [Calculation and placement checks, conditions and limits](../reference/research-diary.md#placement-sdk-numeric). These changes are not yet in the published package.
+This campaign uses developer Superadmin: hidden source creature types and quantities are available before Start. Ordinary forecasting remains an estimate. Not every combination of heroes, effects and arenas is covered; a positive live protection-reserve control is still required separately.
 
-The subsequent research campaign stopped on a separate health-calculation discrepancy: **116/116 checked placements matched**, but validation of all calculations did not pass. The correction needs its own live verification. This does not change the accuracy status of the downloadable package.
+SDK checks cover projections before Start, footprint and movement highlighting, creature cards, selection of a reference upgrade and opening the full description. Description navigation arrows remain unverified. These changes have not shipped in the player package. [Current status and earlier research stages](../reference/placement-internals.md#current-research).
 
 ## Download and install
 
