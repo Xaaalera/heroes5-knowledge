@@ -16,13 +16,13 @@ A projection marks **a creature's predicted position and movement area**. It use
 
 ## Development status
 
-The research version running through the SDK completed independent verification: **273/273 complete matches, 757 stacks, ten map runs**. Each creature, quantity and cell forecast was saved before Start, then compared with the complete actual roster afterwards. This result belongs to the checked conditions and does not certify the downloadable package's accuracy. [Campaign coverage and verification limits](../reference/research-diary.md#placement-273-matrix).
+Research Superadmin completed independent verification after pass-transition and runic corrections: **273/273 battles, 757 stacks, ten map runs and 16,830 numerical values**. Forecasts were retained before Start and compared with the complete actual roster afterwards. Different armies and heroes were used, but every observed hero level was one. [Campaign coverage and verification limits](../reference/research-diary.md#placement-runic-matrix).
 
-Ordinary prediction must continue to exclude hidden counts, upgrades and the final neutral split. Post-Start explanations of actual placement for every player remain planned.
+Superadmin checks the algorithm with exact source inputs. The user version still needs completion: agree the permitted inputs and outputs of ordinary prediction, show uncertainty clearly and add post-Start placement explanations for every player. Ordinary prediction must not read hidden quantities, actual upgrades or the completed neutral split.
 
-This campaign uses developer Superadmin: hidden source creature types and quantities are available before Start. Ordinary forecasting remains an estimate. Not every combination of heroes, effects and arenas is covered. Three separate [positive starting-rage controls](../reference/research-diary.md#placement-rage-control) passed: all 10 neutral stacks and the checked numerical values matched.
+Player-package readiness requires separate interface checks and ordinary Heroes/Lobby startup without an installed SDK. The research result does not certify the accuracy of the downloadable package below. Maximum variation of armies, levels, skills, artifacts and arenas is recorded in the future plan.
 
-SDK checks cover projections before Start, footprint and movement highlighting, creature cards, selection of a reference upgrade and opening the full description. Description navigation arrows remain unverified. These changes have not shipped in the player package. [Current status and earlier research stages](../reference/placement-internals.md#current-research).
+SDK checks cover projections before Start, footprint and movement highlighting, creature cards, selection of a reference upgrade and opening the full description. Description navigation arrows remain unverified. These changes have not shipped in the player package. [Interface-verification stages](../reference/research-diary.md#placement-sdk-capture).
 
 ## Download and install
 

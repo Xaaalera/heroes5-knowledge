@@ -12,6 +12,50 @@ updated: 2026-10-10
 ---
 # Research diary
 
+## 2026-10-10 — full campaign after pass-transition and runic corrections {#placement-runic-matrix}
+
+**The new build independently achieved 273/273 complete matches: 757 stacks, ten map runs and 16,830 numerical values.** Every creature, quantity and cell forecast was retained before Start. The complete actual roster was checked afterwards; matching occupied cells alone is insufficient.
+
+The series covered the authored polygon and two random maps. Hero armies included 100 Archers, 1000 Peasants, 10 Angels, seven mixed stacks and the starting armies of several random-map heroes. **Every observed hero level in this series was one.** Army variety does not establish coverage of levels, skills, artifacts or every arena.
+
+### Transition to the final pass
+
+A targeted battle with seven shooter stacks in the hero army found a miss: six of seven neutral stacks matched completely, while one Peasant stack received another cell. Numerical evaluation and the strategy decision matched. When selected spread rows could not fit a stack, the forecast immediately tried arbitrary rows. The engine left that stack for the final column pass.
+
+A regression reproduced the difference using original engine instructions and passed after correction. A fresh live control matched all seven stacks and 68 numerical values. The complete earlier arena and random-generator state are not claimed as restored; the original failed result remains separate.
+
+### Runes before Start
+
+A hero with Runelore, a learned Rune of Charge and 21 Defenders exposed an unsupported input before Start. There was no overflow; complete evaluation of the hero army was missing. This attempt is neither a cell mismatch nor a successful forecast check.
+
+Game API now reads individual runic descriptor states. The mod calculates their activity contribution before retaliation bonuses and the final limit. The existing input journal is reused; completed engine decisions do not become forecast inputs. Incomplete or inconsistent records are rejected.
+
+A fresh positive control matched all three neutral stacks and 68 numerical values. Replaying the same retained inputs without the runic contribution reduced activity evaluation in both observed calculations; damage and survivability parameters stayed unchanged. This is a separate replay, not a second live battle without the rune.
+
+Additional original-code comparisons matched 524 runic descriptor-state combinations, 880 initial-activity cases and 512 protective-candidate and creature-footprint cases. Each set checks its own branch; these counts are not added to the live-battle total.
+
+### Time and limits
+
+The whole external campaign process took **14 minutes 59 seconds**; independent retained-input and raw-observation verification took **9.44 seconds**. The separate rune control took 8.81 seconds including its checking-process launch; its independent verification took 0.24 seconds.
+
+The full campaign belongs to the new build after these corrections. The [earlier 273/273 campaign](#placement-273-matrix), [intermediate journal controls](#placement-crowded-journals) and failed attempts retain their own conditions and results. Maps, the build and raw observations have not been published as one reproducible bundle. Ordinary-forecast accuracy, post-Start explanations for every player and player-package readiness remain separate work; maximum variation expansion is recorded in the future plan.
+
+## 2026-10-10 — seven-large-stack controls and expanded journals {#placement-crowded-journals}
+
+**Four demanding controls passed on the new storage version: all 20 deployed neutral stacks and 952 numerical values matched.** Two hero armies of seven large stacks faced seven source neutral types, all large. The engine deployed five defenders in each battle; the forecast matched the complete actual roster, including quantities and cells.
+
+The first attempt on the previous version exhausted both the actor-parameter and auxiliary-calculation journals. Verification stopped before Start because complete calculation could not be confirmed. This attempt is neither a recorded cell mismatch nor a successful battle. Required records were not discarded to fit storage.
+
+Existing journals were expanded and their format versioned; placement formulas did not change. Native tests cover write boundaries, migration of the interface-state prefix during code replacement and preservation of attack generation. The legacy diagnostic interface retains its buffer size and refuses oversized results before writing. Replaying three older input sets through the new format reproduced their original results.
+
+The fourth live control retained 540 auxiliary records, exceeding the former limit. The new actor journals contained at most 504 records, so the exact original actor-journal overflow is not claimed as reproduced. Bounds sufficient for every engine path remain unproven.
+
+A separate short series on the same new build achieved **10/10 complete matches, 28 stacks and 612 numerical values**. The whole external controller process took 33.46 seconds. Retained-input and raw-observation verification returned the same result after replacing full-history loading with hash-checked references to the selected battles: the repeat check took 0.99 seconds versus 16.48. These are ten battles, not a complete map run.
+
+Forecasts were retained before Start; the complete actual roster was read separately afterwards. With seven large hero stacks, the first confirmation event did not finish deployment; a separate Enter event started combat. Once Start was observed, results were read without sending Start again. The exact interface state between those events was not independently established.
+
+This validates the new storage version and declared cases; it does not transfer the [previous full 273/273 campaign](#placement-273-matrix) to it. This intermediate checkpoint preceded the [full campaign after pass-transition and runic corrections](#placement-runic-matrix). Ordinary-mode behavior and player-release readiness remain separate checks. Maps, the build and raw observations have not been published as a bundle.
+
 ## 2026-10-10 — starting-rage protection verified {#placement-rage-control}
 
 **Three positive live controls matched: all 10 neutral stacks and 170 numerical values.** The same hero on one loaded map received 21 Centaurs before each battle. Memory of our Blood supplied starting rage; Basic, Advanced and Expert Blood Rage were checked separately.

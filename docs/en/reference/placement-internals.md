@@ -14,62 +14,14 @@ updated: '2026-10-10'
 
 Technical reference for **stack splitting, sorting and cell selection**. Start with the illustrated [player explanation](../players/army-placement.md). The inspected mechanisms belong to the [pinned EXE](universe-build.md); validation scope is listed at the end.
 
-## Research checkpoint {#current-research}
+## Overall sequence
 
-The current research build completed an independently verified plan: **273/273 complete matches, 757 stacks, ten map runs**. Every forecast was saved before Start and compared with the complete actual roster afterwards. This validates the checked set; other heroes, effects, arenas and ordinary mode remain separate work. [Conditions and result](research-diary.md#placement-273-matrix).
-
-Three later positive starting-rage controls matched the complete forecast for 10 neutral stacks and 170 numerical values. They close the missing live protection-reserve control noted in the earlier checkpoints below. Basic, Advanced and Expert Blood Rage were checked on one hero with 21 Centaurs and Memory of our Blood; this does not establish all other combinations. [Control, replay and limits](research-diary.md#placement-rage-control).
-
-The previous campaign stopped after 269 matches because a large army reached the input-journal limit. Storage was corrected and the complete new campaign above was run; the earlier stopped result remains separate. [Journal-limit investigation](research-diary.md#placement-journal-capacity).
-
-### Earlier checkpoints and remaining limits
-
-The following paragraphs describe earlier builds and controls. The ten-map plan above is complete; historical stopped campaigns were not resumed or relabelled as successful.
-
-The previous large campaign found **one mismatch among 152 battles**: creatures and quantities matched, but three stacks received different cells. Numerical calculations and the defensive-formation decision matched the engine in that battle. This narrows the investigation to cell selection; it does not yet explain all three discrepancies.
-
-The investigation identified a separate rule for a **large shooter in a spread formation**: when the top cell cannot fit its complete footprint, the game can shift the stack down while preserving the original candidate's priority. The mod preserved tie order but recalculated the shifted row's score. The correction passed a targeted test that reproduced the wrong choice before the change. Three subsequent live controls matched completely; one exercised spread formation. The exact old case has not been restored; the later completed matrix does not establish a replay of that specific state. [Investigation and verification limits](research-diary.md#placement-spread-shooter).
-
-An earlier numerical campaign stopped after **116/116 complete placements matched**, but one battle's hero-army health estimate differed — **294 in the engine versus 126 in the mod**. The protection-reserve step has since been added; its arithmetic was checked against original instructions, while a positive live control is still required. This old campaign does not complete validation of all calculations. [Evidence and verification limits](research-diary.md#placement-sdk-numeric).
-
-As of **10 October 2026**, the preserved research calculation is connected to the SDK. In five control battles, all 17 numerical fields of both armies matched each of nine observed engine evaluations. Each comparison uses that evaluation's own inputs and corrections; later records for the same army are checked separately. [Control and verification limits](research-diary.md#placement-sdk-numeric).
-
-By 9 October, SDK checks had verified projections before Start, footprint and movement highlighting on hover, creature cards, selection of a reference upgrade and opening the full native creature description. In the checked cases, code replacement preserved projections and the selected upgrade. These are interface and code-reload checks, not complete-pack accuracy evidence. Description navigation arrows remain unverified; the later 273/273 campaign validates deployment only under its declared conditions. These changes have not shipped in the player package. [Stages and verification limits](research-diary.md#placement-sdk-capture).
-
-The preserved research prototype freezes the complete prediction **before Start**, then compares it with the actual army after battle starts. A complete match requires the same **creature, quantity and cell for every stack**. Matching occupied cells alone is a separate, weaker measure.
-
-Earlier polygon sweeps with the default hero army, 100 Archers and 1000 Peasants each passed **36/36 complete matches**, covering 96, 98 and 99 combat stacks respectively. Selected packs from two random maps passed **43/43 battles and all 126 stacks**. Each result belongs to its tested research build; the map was loaded afresh before every battle in these sweeps. The separate ten-run plan was completed later: 273/273 above. Uncovered combinations still require new controls; ordinary mode remains an estimate. [Conditions, maximum-size composition and engine comparison](research-diary.md#placement-sdk-numeric). The comparison of two [defensive decisions](research-diary.md#placement-decision-alignment) was corrected earlier; matching these flags alone does not establish cell accuracy.
-
-### Additions and corrections
-
-- Separated defensive placement, general placement and linked groups. Goblins and their carriers require adjacency checks that account for creature footprints and occupied cells.
-- Corrected shooter classification: placement uses declared shots and the “Cyclops + Goblin” group condition. Physical creature state is checked separately. This defect preserved the army composition but misplaced all three stacks in a control battle.
-- After partially successful simple placement, preserve selected cells and exact quantities of placed source records. Repeated stacks of the same creature retain their identity; reducing the record count must not recalculate successful positions.
-- Investigated parts of army valuation, hero specializations and the initial placement area. Isolated arithmetic checks do not establish every combination of effects and modes.
-
-### Research DLL before the SDK migration
-
-The last completed checks before the pause ran on **4 October**, after correcting source shooter classification:
-
-| Check | Result | Verified scope |
-|---|---|---|
-| Isolated native tests | 60/60 | Local rules and regressions; not a battle campaign |
-| Cyclops, Goblin and Archer counterexample | 3/3 stacks | Creature, quantity and cell in one battle |
-| Full test polygon with 100 Archers in the hero army | 36/36 battles | 30 packs with multiple source stacks and 6 with one source stack |
-| Ten-load campaign | Incomplete | Two loads and three battles of the third, then the game was closed to change priorities |
-
-The preceding DLL achieved **151/151 complete matches** across five loads: 108 polygon battles and 43 random-map battles. An earlier version separately achieved **273/273** across ten loads. Each result belongs to its own build and cannot certify a changed DLL. Later counterexamples showed that a successful campaign does not establish the complete algorithm.
-
-The early **111/149** measured occupied-cell matches; **14/14** were native tests from an early stage. Neither describes current progress or equals complete-army accuracy.
-
-### Remaining work
-
-- Extend the completed ten-map plan with uncovered hero armies, obstacles and field shapes.
-- Resolve remaining transitions between passes, threshold ties, effects, random branches and crowded compositions.
-- Decide ordinary-mode inputs separately: hidden counts, upgrades and the final neutral split must not become inputs to ordinary prediction.
-- Add post-Start explanations for every player: why the army took its actual positions and how they differ from the prediction.
-
-The target is complete agreement for every pack in research Superadmin mode. It **has not been achieved**. Earlier rules and their limits remain below; the [diary](research-diary.md#placement-sdk-numeric) records this checkpoint.
+1. Prepare combat stacks. One source stack uses splitting; multiple source stacks follow a separate preparation branch.
+2. Evaluate both armies using creature and hero parameters and applicable corrections.
+3. Select the simple or extended path, defensive formation and spread.
+4. Sort stacks within groups and execute their placement passes.
+5. Check free cells and the complete footprint of large creatures; resolve ties in engine order.
+6. Leave unplaced stacks for the final column passes.
 
 ## Army preparation
 
@@ -93,9 +45,9 @@ The automatic-placement entry checks combat_active_auto_placement and nonempty s
 
 The extended path controls retries, builds a placement context, then selects the formation. Formation selection conditionally runs the defensive pass, always runs the general pass, then tries remaining stacks by column. The simple path has its own fallback.
 
-In the pinned Universe `DefaultStats.xdb`, the defensive comparison uses `OurShootersMinRelativePower=0.2` and `OurShootersMinRelativeAdvantage=1.3`, both with strict greater-than tests. An opposing-capability check and early conditions also apply; the two thresholds are not the complete formula. Spread is related to `EnemyAreaAttackMinRelativePower=0.35` and its own conditions. Defence and spread can both be enabled. Two recorded `pack_15` battles with the same captured public quantity bands had shooter-power shares of about 0.217 and 0.183 with different defensive flags; exact neutral counts were not retained and arenas differed. [Observation record](research-diary.md#placement-defence-2026-09-26).
+In the pinned Universe settings, the relative shooter-power threshold is 20% (`OurShootersMinRelativePower`); relative advantage must exceed 1.3 (`OurShootersMinRelativeAdvantage`). Both comparisons are strict. Capability checks and early conditions also apply, so those thresholds alone do not determine the formation. Spread uses an area-attack threshold of 35% (`EnemyAreaAttackMinRelativePower`) and its own conditions. Defence and spread can both be enabled. [Formation observations](research-diary.md#placement-defence-2026-09-26).
 
-The defensive candidate-selection function lists free neighbors of occupied cells, removes duplicates, and sorts candidates. The shooter-window row scorer assigns weight 2 to chosen shooter-window rows, 1 to their neighbors, and 0 to other rows; the candidate-order comparators resolve ties in the game's order. Large and small defenders keep separate candidate sequences, and an entire 2×2 footprint is checked before placement. Combined defence and spread use selected spaced rows rather than ordinary adjacency. At an early stage, recorded Polygon `pack_15` attempts from rounds 1, 4, and 10 passed offline when the defensive branch was supplied. Subsequent live research-DLL checks and their limits are listed in the current checkpoint above.
+The defensive candidate-selection function lists free neighbors of occupied cells, removes duplicates, and sorts candidates. The shooter-window row scorer assigns weight 2 to chosen shooter-window rows, 1 to their neighbors, and 0 to other rows; the candidate-order comparators resolve ties in the game's order. Large and small defenders keep separate candidate sequences, and an entire 2×2 footprint is checked before placement. Combined defence and spread use selected spaced rows rather than ordinary adjacency. [Candidate and footprint verification](#current-research).
 
 ## Scores and ties
 
@@ -116,9 +68,11 @@ The special placement comparator orders stacks as follows: non-flying before fly
 
 ## Rows, spread and depth
 
-For shooters, the game first evaluates how clear the approach is along each row and selects the first window with the lowest total score. Spread formation retains spaced candidates: for example, three stacks on ten playable rows select the first, fifth and tenth rows. Candidates then retain their previous priority order. If occupancy filtering removes them all, the game returns to the previous list.
+For shooters, the game first evaluates how clear the approach is along each row and selects the first window with the lowest total score. Spread formation retains spaced candidates: for example, three stacks on ten playable rows select the first, fifth and tenth rows. Candidates then retain their previous priority order. If occupancy filtering removes them all, the spaced list from before that filter is retained.
 
-A candidate row and a stack's final cell are separate stages. A large shooter cannot fit its complete footprint against the top boundary, so its anchor can shift down. In spread formation, that shift preserves the original candidate's score and order: the stack does not gain the neighbouring row's advantage. This distinction is corrected in the new research code; [verification limits](research-diary.md#placement-spread-shooter) still prevent declaring the full algorithm complete.
+A candidate row and a stack's final cell are separate stages. If a large shooter's complete footprint cannot fit the candidate cell, its anchor can shift down. In spread formation, that shift preserves the original candidate's score and order. [Rule verification](research-diary.md#placement-spread-shooter).
+
+If selected rows cannot place the next stack, it remains unplaced until the final column passes. Switching to arbitrary rows within the current pass changes the result. [Pass-transition control](research-diary.md#placement-runic-matrix).
 
 ??? info "Exact calculation of spaced candidates"
 
@@ -130,6 +84,14 @@ Large units reserve all 2×2 cells. The large-footprint mask builder derives anc
 
 The deployment-depth function calculates the number of placement columns inside the field. The observed Universe patch changes the large-position threshold 2L→3L and adds a column at L≥4. Minimum 2/3 depends on effective Tactics advantage; equal effective opportunities clear both flags. The extra blocking predicate is not conclusively mapped to a named specialization.
 
+## Activity and survivability corrections
+
+Activity evaluation uses initiative, morale, luck, speed, initial turn-bar position and remaining ability resources. Retaliation bonuses and the final evaluation limit follow the preceding corrections.
+
+Known runes add a separate correction. Only runic descriptors count: their states receive full, partial or zero weight. Partial weight is one third of full weight; the exact meaning of every state has not been established. The average weight sets a correction of up to 10% to the activity factor before retaliation bonuses and the final limit. [Descriptor-state and live verification](research-diary.md#placement-runic-matrix).
+
+Damage absorption also changes survivability evaluation through its protection reserve and absorbed fraction. Starting Orc rage can activate this branch before the first turn. [Blood Rage controls](research-diary.md#placement-rage-control).
+
 ## Linked groups and retries
 
 Goblins and their users have a separate adjacency-selection function. Candidate scoring considers membership in multiple lists; the choice is greedy, not globally optimal.
@@ -140,10 +102,10 @@ The apparent same-type merging function has an unreachable inner loop for valid 
 
 The additional-ability evaluator has separate applicability/target tests. In the inspected call, contribution=min(uses,10)×value div 10; EXPLOSION 162 and DEATH_WAIL316 are excluded. Initial-value semantics/all predicates remain incomplete; not a complete ranged-damage formula.
 
-## Evidence scope
+## Rule verification {#current-research}
 
-Sort/truncation/footprint and parts of split/spread arithmetic ran in original-code emulation. Universe width changes were observed in a separate process. The live elemental journal confirms seven attempts/four cells only for its ordinary pass. It does not validate every special mode.
+The latest independent comparison achieved **273/273 complete matches: 757 stacks, ten map runs and 16,830 numerical values**. Creature, quantity and cell forecasts were retained before Start; the actual army was read afterwards. The series used different armies and heroes, but every observed hero level was one.
 
-**Evidence:** September 21–23 analysis and corrections; published [example data](../players/army-placement.md). [Definitions](creatures.md) · [Research map](research-index.md).
+Separate checks covered 512 protective-candidate and creature-footprint cases, 524 runic descriptor-state combinations and 880 initial-activity cases. Each set validates its own branches; they do not cover every hero, effect and arena combination. [Conditions, results and limits](research-diary.md#placement-runic-matrix).
 
-[Research record](research-diary.md#placement-corrections).
+[Illustrated explanation](../players/army-placement.md) · [Definitions](creatures.md) · [Research map](research-index.md).
