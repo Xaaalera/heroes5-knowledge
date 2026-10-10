@@ -8,7 +8,7 @@ section: modding
 kicker: HEROES V · UNIVERSE
 translation: modding/combat-scripts/
 description: 'Combat scripts: Prepare, Start and battle results'
-updated: '2026-09-24'
+updated: '2026-10-10'
 ---
 # Combat scripts: Prepare, Start and battle results
 
@@ -49,6 +49,14 @@ Our map uses this CombatScript.xdb resource:
 Bind the neutral object's `CombatScript` field to this Script resource; a Lua file in the archive alone is insufficient. The code prints each stack's type and coordinates; it does not include a log collector. The published experiments also recorded `GetUnitPosition` results with a separate observer.
 
 To repeat an experiment on the polygon, use the [devkit map launch](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/README.md#maps-workspace-and-control) and [terminal commands](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/docs/commands.md#terminal-workflow). See [test-map.py](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/scripts/test-map.py) for object-to-`CombatScript` bindings.
+
+## Verify the complete starting army after Start
+
+Completed records for several stacks do not mean that the game has finished enumerating the army. We reproduced a check that received positions and quantities for only two of four defenders. The remaining records arrived later; comparing the early snapshot incorrectly looked like a prediction failure.
+
+Native verification now separately observes the actual defender-list size produced by the game. A result is ready when every stack in that list has both a position and a quantity, with no read errors or battle change. The forecast's stack count is not the completion condition: a prediction error must not hide incomplete collection.
+
+A control on the same four-stack pack passed: creatures, quantities and cells all matched. A later [ten-map campaign](../reference/research-diary.md#placement-273-matrix) independently verified 273 complete deployments. The observed post-Start list is verification data, never a prediction input.
 
 ## After-battle results
 

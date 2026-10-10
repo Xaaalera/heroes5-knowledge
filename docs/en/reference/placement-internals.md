@@ -16,15 +16,27 @@ Technical reference for **stack splitting, sorting and cell selection**. Start w
 
 ## Research checkpoint {#current-research}
 
-The subsequent campaign is stopped: **116/116 complete placements matched**, but one battle's hero-army health estimate differed — **294 in the engine versus 126 in the mod**. The protection-reserve step has been added; its arithmetic was checked against original instructions, while a positive live control is still required. This does not complete validation of all calculations or the whole campaign. [Evidence and verification limits](research-diary.md#placement-sdk-numeric).
+The current research build completed an independently verified plan: **273/273 complete matches, 757 stacks, ten map runs**. Every forecast was saved before Start and compared with the complete actual roster afterwards. This validates the checked set; other heroes, effects, arenas and ordinary mode remain separate work. [Conditions and result](research-diary.md#placement-273-matrix).
+
+The previous campaign stopped after 269 matches because a large army reached the input-journal limit. Storage was corrected and the complete new campaign above was run; the earlier stopped result remains separate. [Journal-limit investigation](research-diary.md#placement-journal-capacity).
+
+### Earlier checkpoints and remaining limits
+
+The following paragraphs describe earlier builds and controls. The ten-map plan above is complete; historical stopped campaigns were not resumed or relabelled as successful.
+
+The previous large campaign found **one mismatch among 152 battles**: creatures and quantities matched, but three stacks received different cells. Numerical calculations and the defensive-formation decision matched the engine in that battle. This narrows the investigation to cell selection; it does not yet explain all three discrepancies.
+
+The investigation identified a separate rule for a **large shooter in a spread formation**: when the top cell cannot fit its complete footprint, the game can shift the stack down while preserving the original candidate's priority. The mod preserved tie order but recalculated the shifted row's score. The correction passed a targeted test that reproduced the wrong choice before the change. Three subsequent live controls matched completely; one exercised spread formation. The exact old case has not been restored; the later completed matrix does not establish a replay of that specific state. [Investigation and verification limits](research-diary.md#placement-spread-shooter).
+
+An earlier numerical campaign stopped after **116/116 complete placements matched**, but one battle's hero-army health estimate differed — **294 in the engine versus 126 in the mod**. The protection-reserve step has since been added; its arithmetic was checked against original instructions, while a positive live control is still required. This old campaign does not complete validation of all calculations. [Evidence and verification limits](research-diary.md#placement-sdk-numeric).
 
 As of **10 October 2026**, the preserved research calculation is connected to the SDK. In five control battles, all 17 numerical fields of both armies matched each of nine observed engine evaluations. Each comparison uses that evaluation's own inputs and corrections; later records for the same army are checked separately. [Control and verification limits](research-diary.md#placement-sdk-numeric).
 
-By 9 October, SDK checks had verified projections before Start, footprint and movement highlighting on hover, creature cards, selection of a reference upgrade and opening the full native creature description. In the checked cases, code replacement preserved projections and the selected upgrade. These are interface and code-reload checks, not complete-pack accuracy evidence. Description navigation arrows and broad placement validation after migration remain unfinished. These changes have not shipped in the player package. [Stages and verification limits](research-diary.md#placement-sdk-capture).
+By 9 October, SDK checks had verified projections before Start, footprint and movement highlighting on hover, creature cards, selection of a reference upgrade and opening the full native creature description. In the checked cases, code replacement preserved projections and the selected upgrade. These are interface and code-reload checks, not complete-pack accuracy evidence. Description navigation arrows remain unverified; the later 273/273 campaign validates deployment only under its declared conditions. These changes have not shipped in the player package. [Stages and verification limits](research-diary.md#placement-sdk-capture).
 
 The preserved research prototype freezes the complete prediction **before Start**, then compares it with the actual army after battle starts. A complete match requires the same **creature, quantity and cell for every stack**. Matching occupied cells alone is a separate, weaker measure.
 
-Separate polygon sweeps with the default hero army, 100 Archers and 1000 Peasants each passed **36/36 complete matches**, covering 96, 98 and 99 combat stacks respectively. Selected packs from two random maps passed **43/43 battles and all 126 stacks**. Each result belongs to its tested research build; the map was loaded afresh before every battle in these sweeps. Ten complete map runs and remaining combinations are checked separately. Ordinary mode remains an estimate. [Conditions, maximum-size composition and engine comparison](research-diary.md#placement-sdk-numeric). The comparison of two [defensive decisions](research-diary.md#placement-decision-alignment) was corrected earlier; matching these flags alone does not establish cell accuracy.
+Earlier polygon sweeps with the default hero army, 100 Archers and 1000 Peasants each passed **36/36 complete matches**, covering 96, 98 and 99 combat stacks respectively. Selected packs from two random maps passed **43/43 battles and all 126 stacks**. Each result belongs to its tested research build; the map was loaded afresh before every battle in these sweeps. The separate ten-run plan was completed later: 273/273 above. Uncovered combinations still require new controls; ordinary mode remains an estimate. [Conditions, maximum-size composition and engine comparison](research-diary.md#placement-sdk-numeric). The comparison of two [defensive decisions](research-diary.md#placement-decision-alignment) was corrected earlier; matching these flags alone does not establish cell accuracy.
 
 ### Additions and corrections
 
@@ -50,7 +62,7 @@ The early **111/149** measured occupied-cell matches; **14/14** were native test
 
 ### Remaining work
 
-- Complete a fresh broad campaign for the latest DLL and cover other hero armies, obstacles and field shapes.
+- Extend the completed ten-map plan with uncovered hero armies, obstacles and field shapes.
 - Resolve remaining transitions between passes, threshold ties, effects, random branches and crowded compositions.
 - Decide ordinary-mode inputs separately: hidden counts, upgrades and the final neutral split must not become inputs to ordinary prediction.
 - Add post-Start explanations for every player: why the army took its actual positions and how they differ from the prediction.
@@ -102,7 +114,13 @@ The special placement comparator orders stacks as follows: non-flying before fly
 
 ## Rows, spread and depth
 
-The approach-length calculation supplies the shooter-window selector, which retains the first minimum-sum window. The spread-row selector uses integer division(R−1)/(N−1), then adds 0.001. Truncate i×step for the first N−1 indices; append R−1. R10,N3 gives{0,4,9}, not{0,5,9}. Preserve original candidate order; occupancy filtering falls back to the prior list if empty.
+For shooters, the game first evaluates how clear the approach is along each row and selects the first window with the lowest total score. Spread formation retains spaced candidates: for example, three stacks on ten playable rows select the first, fifth and tenth rows. Candidates then retain their previous priority order. If occupancy filtering removes them all, the game returns to the previous list.
+
+A candidate row and a stack's final cell are separate stages. A large shooter cannot fit its complete footprint against the top boundary, so its anchor can shift down. In spread formation, that shift preserves the original candidate's score and order: the stack does not gain the neighbouring row's advantage. This distinction is corrected in the new research code; [verification limits](research-diary.md#placement-spread-shooter) still prevent declaring the full algorithm complete.
+
+??? info "Exact calculation of spaced candidates"
+
+    For R playable rows and N stack records, the step is integer division `(R−1)/(N−1)` plus `0.001`. Truncate `i×step` for the first N−1 indices, then append `R−1`. These indices start at zero: ten rows and three stacks yield `{0,4,9}`, meaning the first, fifth and tenth playable rows.
 
 Large units reserve all 2×2 cells. The large-footprint mask builder derives anchor restrictions from a copy, avoiding recursive propagation.
 

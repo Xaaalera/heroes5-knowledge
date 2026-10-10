@@ -12,6 +12,56 @@ updated: 2026-10-10
 ---
 # Research diary
 
+## 2026-10-10 — ten map runs completed: 273/273 {#placement-273-matrix}
+
+**All 273 battles and 757 stacks matched completely in the new campaign.** Ten runs of the polygon and two random maps preserved the hero and progression within each run. Controls included different hero armies and cases with seven source stacks on each side.
+
+Creature, quantity and cell forecasts were saved before Start. Afterwards, the complete actual defender list and original observation files were checked. Independent verification also repeated numerical engine comparisons from the retained inputs. The whole campaign took about 14 minutes 18 seconds; separate independent verification took about 17 seconds.
+
+The **“Expanded journal — 10 October”** campaign has identifier `precise-expanded-full` and belongs to one research build with expanded input journals. It completes the declared plan, not every combination of heroes, effects, arenas or ordinary-mode accuracy. It does not certify a new player release. A positive live protection-reserve control is still required: that state did not occur in this campaign.
+
+| Runs | Map | Hero army | Battles per run |
+|---|---|---|---|
+| 1, 4, 7, 10 | Polygon | 100 Archers; 1000 Peasants; starting army; mixed seven-stack army | 36 |
+| 2, 5, 8 | Random map A | This map's starting army | 24 |
+| 3, 6, 9 | Random map B | This map's starting army | 19 |
+
+Chosen army quantities were restored before each battle; the hero and progression persisted within a run. The map was reloaded between runs. Raw observations, exact control maps, the build and replay tools remain in the private workshop journal and have not been published as a bundle. This table explains coverage but is not a standalone rerun procedure. The [public starting-position recording example](../modding/combat-scripts.md) checks observation, not this complete campaign.
+
+## 2026-10-10 — large-army input journal control passed {#placement-journal-capacity}
+
+**A control with seven source stacks on each side passed.** Stack parameters and auxiliary calculation inputs were retained completely; their former limits were insufficient. In this battle the engine deployed five defenders, and every creature, quantity and cell matched the forecast.
+
+Research-input storage changed; placement formulas did not. C++ structure measurements verify the new format, and a retained-input replay control reconstructed the same results. The legacy diagnostic interface retains its original buffer size and refuses an oversized journal without truncation.
+
+This is a new research build. Its full campaign is still running; the earlier 269 matches below are not treated as results of the new campaign.
+
+## 2026-10-10 — 269 battles verified; input journal limit reached {#placement-269-prefix}
+
+**All 269 checked battles matched completely—758 stacks.** Independent verification read retained pre-Start inputs, post-Start results and the separate actual defender count. Numerical comparisons against the engine also passed. Nine complete map runs and part of the tenth are finished.
+
+The next case, seven stacks on each side, exhausted the input journal. Complete calculation could not be confirmed, so verification stopped before Start. This is a research-collector limit, not a recorded cell mismatch. The stopped campaign is retained; four planned battles remain unperformed. The storage correction will require separate validation of the new build.
+
+This result belongs to the current research mode and checked campaign; it does not certify every hero, effect, arena or ordinary player mode.
+
+## 2026-10-10 — a partial observation looked like a prediction failure {#placement-oracle-completion}
+
+**Post-Start result collection corrected.** The new build matched the first 152 observed deployments. In the next battle, verification compared only two of four stacks while the game was still recording results. Reading the same buffer later showed all four records. The original report is retained as an observation-completeness failure, not a demonstrated algorithm mismatch.
+
+A separate native observer now records the complete actual defender-list size. Verification no longer treats the first equal record counts as completed enumeration or uses forecast size as its completion condition. The targeted native test covers partial records, the other army, war machines, roster changes and malformed data sizes. A live control on the same four-stack pack matched completely; the new full campaign is not complete yet.
+
+[Waiting for complete results](../modding/combat-scripts.md). External research helped choose the investigation direction; the observation site was located and verified in our own EXE, without transferring foreign addresses.
+
+## 2026-10-10 — large shooter cell selection in spread formation {#placement-spread-shooter}
+
+**The algorithm is not complete.** A new large campaign fully matched 151 of 152 checked battles. In the remaining case, composition and quantities matched, while three cells did not. All checked numerical fields and the defensive-formation decision matched the engine in that case.
+
+- **Rule clarified.** Shifting a large shooter down must preserve the original candidate's score. Recalculating it gives the cell another row's priority and can move it ahead of the correct choice.
+- **Verification.** A targeted test reproduced the wrong choice before the correction and passed afterwards. The game's original sort confirmed candidate order for the retained scores. Three subsequent live controls matched completely; the last included spread formation.
+- **Remaining limits.** The controls reloaded the map and did not restore the hero's previous progression. The exact old battle and the full large campaign have not yet been checked after the correction. Results belong to the new research build, not ordinary mode or a released player package.
+
+[Current mechanism explanation](placement-internals.md#current-research). Historical results below retain their original verification conditions.
+
 ## 2026-10-10 — varied hero armies and comparison with engine calculations {#placement-sdk-numeric}
 
 Research Superadmin can access hidden source creature types and quantities before Start. The stage using the preserved algorithm completed these separate checks:
