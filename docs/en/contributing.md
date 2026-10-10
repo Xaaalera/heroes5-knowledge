@@ -7,7 +7,7 @@ lang: en
 kicker: ADD TO THE CODEX
 translation: contributing/
 description: Report a mistake or propose an article for Xaaalera’s knowledge base.
-updated: 2026-10-08
+updated: 2026-10-10
 ---
 # Suggest an edit
 
@@ -59,6 +59,16 @@ A finding identifies its location, concrete defect, consequence, severity and ev
 Collect findings in one JSON: page and content hash, critic and area, defect location, evidence, severity, disposition and fix verification. Deduplicate by location while preserving independent agreement. Freeze text within a round and recheck corrected locations afterward. Cap review at three rounds per article. Fix confirmed substantial defects before publication and mark uncertain claims as unverified. Critique does not replace the site build, link checks or rendered-page inspection.
 
 ## Support technical conclusions
+
+### Research a mechanism before changing code {#research-workflow}
+
+1. Find earlier experiments, failures and solutions in our logs and documentation.
+2. Search the relevant topic in [homm5-editor and other external research](reference/research-index.md#external-research). Retain revisions and links; record when no applicable result is found.
+3. State a specific hypothesis and choose the fastest sufficient check on our game build.
+4. Record the observation, conditions and remaining limits. Reuse matching prior checks; changed conditions require relevant new verification.
+5. Update the mechanism's readable explanation. Separate confirmed results from hypotheses.
+
+The root workshop also enforces an acceptance check: `npm run research:check` reads `.review/research.json` and binds the record to the current changes. It covers prior evidence, repository and web searches, hypothesis, decision, verification and limits. Missing stages or a stale record block the overall `review:gate`. The file alone does not prove the findings: independent review must verify them. This check belongs to the workshop; players do not need it to run a released mod.
 
 Separate observations from assumptions. Include the game version, scenario, and a small example. Do not upload game distributions, others' private material, tokens, or personal data.
 
