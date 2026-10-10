@@ -20,7 +20,9 @@ The research algorithm has advanced beyond the published package. The last resea
 
 Ordinary prediction must continue to exclude hidden counts, upgrades and the final neutral split. Post-Start explanations of actual placement for every player remain planned.
 
-The development version connects the preserved precise research calculation to SDK projections. The current SDK build passed **36/36 polygon battles** in explicit research mode, matching every creature, quantity and cell across 96 stacks. Complete repeat campaigns, random maps and other hero armies remain unverified. Ordinary forecasting remains an estimate. [Verification and its limits](../reference/research-diary.md#placement-sdk-polygon). These changes are not yet in the published package.
+Developer Superadmin uses hidden source creature types and quantities before Start. In this mode, separate polygon sweeps with three hero armies each passed **36/36 complete matches**; selected packs from two random maps passed **43/43**. These results belong to their tested research builds. A full ten-load campaign and remaining combinations are checked separately. Ordinary forecasting remains an estimate. [Calculation and placement checks, conditions and limits](../reference/research-diary.md#placement-sdk-numeric). These changes are not yet in the published package.
+
+The subsequent research campaign stopped on a separate health-calculation discrepancy: **116/116 checked placements matched**, but validation of all calculations did not pass. The correction needs its own live verification. This does not change the accuracy status of the downloadable package.
 
 ## Download and install
 

@@ -12,6 +12,27 @@ updated: 2026-10-10
 ---
 # Research diary
 
+## 2026-10-10 — varied hero armies and comparison with engine calculations {#placement-sdk-numeric}
+
+Research Superadmin can access hidden source creature types and quantities before Start. The stage using the preserved algorithm completed these separate checks:
+
+| Conditions | Complete matches | Combat stacks |
+|---|---:|---:|
+| Polygon, default hero army | 36/36 | 96 |
+| Polygon, hero with 100 Archers | 36/36 | 98 |
+| Polygon, hero with 1000 Peasants | 36/36 | 99 |
+| Selected packs from two random maps | 43/43 | 126 |
+
+Each result belongs to its tested build and conditions. The map was loaded afresh before every battle in these sweeps; the complete forecast was saved before Start and compared with actual creatures, quantities and cells after Start. A full campaign of ten complete map runs is checked separately.
+
+After diagnostic additions, five control battles matched the placement of all 18 stacks and **306 numerical engine values**: nine observed evaluations, two armies and 17 fields per army. Each comparison uses that evaluation's own inputs and corrections. A later evaluation of the same army can have different inputs and cannot be substituted for the earlier one. Saved inputs were replayed without accessing the game.
+
+A separate control with seven hero stacks against seven neutral stacks also matched completely. It checks one maximum-size composition, not every combination. The mod's formulas were not rewritten for these checks; integration and diagnostics were refined. Ordinary forecasting remains an estimate; player disclosure rules and post-Start explanations remain separate tasks. These changes have not shipped in the player package.
+
+The subsequent campaign stopped after **116 checked battles out of 273 planned**. All 116 complete placements matched. The last battle also matched the strategy decision, but its intermediate hero-army health estimate was **294 in the engine versus 126 in the mod**. The campaign therefore does not pass validation of all calculations. This result belongs to the build before the correction.
+
+The health calculation contains an additional protection-reserve step. Its source parameters and an owned replay of this step have been added; 192 original-instruction checks and a correction-integration check passed. A positive live control with active protection is still required: the earlier archive lacks these two parameters. The corrected build needs its own validation; the 116/116 result does not transfer to it.
+
 ## 2026-10-10 — full polygon through the SDK: 36/36 {#placement-sdk-polygon}
 
 The current research SDK build passed **36/36 battles, totalling 96 combat stacks**. Superadmin is an explicitly enabled developer mode that can access hidden source creature types and quantities before Start. Every creature, quantity and cell matched. Each forecast was saved before Start; separate engine observers recorded the actual army after Start without feeding it into the prediction.
@@ -658,7 +679,7 @@ The first correction produced a new0/2 miss with hero Angels while the Peasant c
 
 DLL e4d4c6 matched269/273 complete battles across ten fresh Polygon/two-generated-map loads:209/213 mixed and60/60 solo. Predictions were saved before Start and all games closed normally.272/273 occupied-cell-set matches do not replace creature/quantity verification.
 
-Three misses of one pack exchanged two melee units under defence plus spread. The game used ordinary movement-aware ordering; the mod selected power ordering. DLL384e08 corrects comparator selection and passes49 native tests and3 fresh targeted battles, including defence without spread. Its complete series has not run.
+Three misses of one pack exchanged two melee units under defence plus spread. The game used ordinary movement-aware ordering; the mod selected power ordering. DLL192e08 corrects comparator selection and passes49 native tests and3 fresh targeted battles, including defence without spread. Its complete series has not run.
 
 The fourth miss remains:40 Goblins and3 Cyclopes. The game classifies the Cyclops as a physical shooter in this composition despite a recorded ordinary ammo count of zero. Both predicted rows differed from the actual rows. Exact classification and its use remain to fix; the full algorithm is not yet proven. Raw logs remain internal.
 

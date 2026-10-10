@@ -16,13 +16,15 @@ Technical reference for **stack splitting, sorting and cell selection**. Start w
 
 ## Research checkpoint {#current-research}
 
-As of **9 October 2026**, work has resumed with the predictor's SDK migration. Combat-stack inputs and corrections were collected in the test game, and the shared calculation of both armies' parameters ran through the SDK. Its results matched a game-free calculation of the same inputs; they have not yet been compared with the engine's own final aggregates.
+The subsequent campaign is stopped: **116/116 complete placements matched**, but one battle's hero-army health estimate differed — **294 versus 126**. The protection-reserve step has been added; its arithmetic was checked against original instructions, while a positive live control is still required. This does not complete validation of all calculations or the whole campaign. [Evidence and verification limits](research-diary.md#placement-sdk-numeric).
 
-Later SDK checks verified projections before Start, footprint and movement highlighting on hover, creature cards, selection of a reference upgrade and opening the full native creature description. In the checked cases, code replacement preserved projections and the selected upgrade. These are interface and code-reload checks, not complete-pack accuracy evidence. Description navigation arrows and broad placement validation after migration remain unfinished. These changes have not shipped in the player package. [Stages and verification limits](research-diary.md#placement-sdk-capture).
+As of **10 October 2026**, the preserved research calculation is connected to the SDK. In five control battles, all 17 numerical fields of both armies matched each of nine observed engine evaluations. Each comparison uses that evaluation's own inputs and corrections; later records for the same army are checked separately. [Control and verification limits](research-diary.md#placement-sdk-numeric).
+
+By 9 October, SDK checks had verified projections before Start, footprint and movement highlighting on hover, creature cards, selection of a reference upgrade and opening the full native creature description. In the checked cases, code replacement preserved projections and the selected upgrade. These are interface and code-reload checks, not complete-pack accuracy evidence. Description navigation arrows and broad placement validation after migration remain unfinished. These changes have not shipped in the player package. [Stages and verification limits](research-diary.md#placement-sdk-capture).
 
 The preserved research prototype freezes the complete prediction **before Start**, then compares it with the actual army after battle starts. A complete match requires the same **creature, quantity and cell for every stack**. Matching occupied cells alone is a separate, weaker measure.
 
-The preserved precise path is connected to SDK projections in explicitly enabled research mode. A new control of the current SDK build passed **36/36 polygon battles: all 96 combat stacks** matched by creature, quantity and cell. The fixtures include 30 packs authored with multiple source stacks, including a repeated creature type, and 6 with a single source stack; one source stack can split into multiple combat stacks. The map was loaded afresh before every battle with the default hero army. This is not ten complete campaigns or random-map coverage; ordinary mode remains an estimate. [New control and verification correction](research-diary.md#placement-sdk-polygon). The comparison of two [defensive decisions](research-diary.md#placement-decision-alignment) was corrected earlier; matching these flags alone does not establish cell accuracy.
+Separate polygon sweeps with the default hero army, 100 Archers and 1000 Peasants each passed **36/36 complete matches**, covering 96, 98 and 99 combat stacks respectively. Selected packs from two random maps passed **43/43 battles and all 126 stacks**. Each result belongs to its tested research build; the map was loaded afresh before every battle in these sweeps. Ten complete map runs and remaining combinations are checked separately. Ordinary mode remains an estimate. [Conditions, maximum-size composition and engine comparison](research-diary.md#placement-sdk-numeric). The comparison of two [defensive decisions](research-diary.md#placement-decision-alignment) was corrected earlier; matching these flags alone does not establish cell accuracy.
 
 ### Additions and corrections
 
@@ -53,7 +55,7 @@ The early **111/149** measured occupied-cell matches; **14/14** were native test
 - Decide ordinary-mode inputs separately: hidden counts, upgrades and the final neutral split must not become inputs to ordinary prediction.
 - Add post-Start explanations for every player: why the army took its actual positions and how they differ from the prediction.
 
-The target is complete agreement for every pack in research Superadmin mode. It **has not been achieved**. Earlier rules and their limits remain below; the [diary](research-diary.md#placement-sdk-polygon) records this checkpoint.
+The target is complete agreement for every pack in research Superadmin mode. It **has not been achieved**. Earlier rules and their limits remain below; the [diary](research-diary.md#placement-sdk-numeric) records this checkpoint.
 
 ## Army preparation
 
