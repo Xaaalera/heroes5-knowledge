@@ -1,29 +1,74 @@
 {
-  "diffHash": "735b6c99158ed4612eea50559185440e942f5b252ad1c3a8dd3feeb592c2d3e2",
-  "commitSha": "523d973598990fd8dca7a73cc61fca2e8c451d8d",
+  "diffHash": "8b1fae7c5de974d68b82dabc007770c12b1e33b6df0fe220f8d3d68f34d91883",
+  "commitSha": "b21d67df1bef7b163a7faab892ed2377b2614d0d",
   "perAgent": {
     "craft": {
       "verdict": "PASS",
       "score": 9,
-      "reviewer": "/root/final_docs_navigation",
-      "evidence": "Incremental publication review rage-doc-navigation-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Publication craft only. The new dated diary entry is independently anchored and placed above the 273/273 matrix entry. Current reference paragraphs explicitly identify three later controls and say they close the former missing positive control; the unchanged requirement wording below belongs to a labelled earlier-checkpoint section. Player status links directly to the new control entry and preserves ordinary-mode/player-release limits. The new diary table is immediately followed by an explanation that its values are internal deployment estimates rather than displayed creature health. The three controls supplement the 273 matrix rather than being added to its battle total; missing defensive-decision observation and unreconstructed historical state remain explicit.",
+      "reviewer": "/root/crowded_docs_navigation",
+      "evidence": "Incremental publication review runic-doc-navigation-round2.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. ['Actual publication craft judgment after resolving the paired S3 semantic link issue: 9/10.', 'Round1 remains preserved; no article edits were made.', 'Acceptance of six unchanged article bodies is inherited by exact hash, not represented as a fresh body review.']",
       "findings": [],
       "priorResult": {
         "verdict": "PASS",
         "score": 9,
         "reviewer": "/root/final_docs_navigation",
-        "evidence": "Incremental publication review final-docs-navigation-round3.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Publication craft only. Native post-Start collection and after-battle results now have separate peer headings in both languages. Current completion is followed by an explicit earlier-checkpoints section; the old sweep paragraph now acknowledges the later completed ten-run plan. Remaining work explicitly extends the completed plan. The newest diary entry has a stable campaign identifier and coverage table, and states that the private maps/build/replay bundle is unavailable publicly; its public observation link is not represented as a full rerun procedure. No runtime, source-code architecture or release certification is implied.",
+        "evidence": "Incremental publication review rage-doc-navigation-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Publication craft only. The new dated diary entry is independently anchored and placed above the 273/273 matrix entry. Current reference paragraphs explicitly identify three later controls and say they close the former missing positive control; the unchanged requirement wording below belongs to a labelled earlier-checkpoint section. Player status links directly to the new control entry and preserves ordinary-mode/player-release limits. The new diary table is immediately followed by an explanation that its values are internal deployment estimates rather than displayed creature health. The three controls supplement the 273 matrix rather than being added to its battle total; missing defensive-decision observation and unreconstructed historical state remain explicit.",
         "findings": []
       },
       "incrementalReport": {
-        "file": "rage-doc-navigation-round1.json",
-        "sha256": "4294f22112bf86656eb388c12743f0e8a1cc9ddce1f5384186bbbb1620201109",
+        "file": "runic-doc-navigation-round2.json",
+        "sha256": "9ca8433b4a4e8c56d12bcb8b0813646490ca054e93205a4d8562a8935ec5ff59",
         "assessment": {
           "name": "craft",
-          "verdict": "pass",
+          "reviewer_id": "/root/crowded_docs_navigation",
+          "verdict": "no_confirmed_defect_in_inspected_corrections",
           "score": 9,
           "findings": [],
-          "notes": "Publication craft only. The new dated diary entry is independently anchored and placed above the 273/273 matrix entry. Current reference paragraphs explicitly identify three later controls and say they close the former missing positive control; the unchanged requirement wording below belongs to a labelled earlier-checkpoint section. Player status links directly to the new control entry and preserves ordinary-mode/player-release limits. The new diary table is immediately followed by an explanation that its values are internal deployment estimates rather than displayed creature health. The three controls supplement the 273 matrix rather than being added to its battle total; missing defensive-decision observation and unreconstructed historical state remain explicit."
+          "evidence": [
+            "Two corrected labels and diary destinations checked directly",
+            "Reverting only each corrected line reproduces its round1 normalized article hash",
+            "Six other normalized full-article hashes match round1 and the round2 freeze"
+          ],
+          "rationale": "The two corrected player links now lead to the promised SDK interface-check history. The six unchanged articles retain independent round1 acceptance; mechanics, mod status and dated evidence keep their separate homes.",
+          "notes": [
+            "Actual publication craft judgment after resolving the paired S3 semantic link issue: 9/10.",
+            "Round1 remains preserved; no article edits were made.",
+            "Acceptance of six unchanged article bodies is inherited by exact hash, not represented as a fresh body review."
+          ],
+          "verification_limits": [
+            "Publication craft only; no native, runtime, loader, release, player-readiness or physical-input approval.",
+            "No game, test, build, browser or whole-log execution."
+          ],
+          "resolved_findings": [
+            {
+              "location": "docs/en/players/deployment-preview.md:25",
+              "severity": "S3",
+              "what": "The status/history link leads to mechanics-only rule verification.",
+              "why": "A reader following the SDK interface paragraph cannot find the promised earlier interface checks at that destination.",
+              "rationale": "The destination was restructured in this package, while the incoming player-page label and target were retained.",
+              "evidence": "The player paragraph links to placement-internals.md#current-research; that anchor now heads Rule verification / ???????? ??????, containing campaign and branch-test results without SDK interface history.",
+              "fix": "Point this link to the relevant diary entry for SDK interface checks and give it a matching label in both languages.",
+              "fix_rationale": "Readers reach the evidence promised by the surrounding interface paragraph, while the algorithm reference retains its mechanics scope.",
+              "confidence": "high",
+              "falsifier": "The destination again includes the promised SDK interface history, or the incoming label is changed to describe rule verification.",
+              "disposition": "resolved",
+              "fix_verification": "The corrected interface-history label targets the dated SDK entry whose opening paragraphs describe projections, highlighting, cards, upgrade selection and full-description checks, with navigation-arrow and player-package limits retained."
+            },
+            {
+              "location": "docs/players/deployment-preview.md:25",
+              "severity": "S3",
+              "what": "The status/history link leads to mechanics-only rule verification.",
+              "why": "A reader following the SDK interface paragraph cannot find the promised earlier interface checks at that destination.",
+              "rationale": "The destination was restructured in this package, while the incoming player-page label and target were retained.",
+              "evidence": "The player paragraph links to placement-internals.md#current-research; that anchor now heads Rule verification / ???????? ??????, containing campaign and branch-test results without SDK interface history.",
+              "fix": "Point this link to the relevant diary entry for SDK interface checks and give it a matching label in both languages.",
+              "fix_rationale": "Readers reach the evidence promised by the surrounding interface paragraph, while the algorithm reference retains its mechanics scope.",
+              "confidence": "high",
+              "falsifier": "The destination again includes the promised SDK interface history, or the incoming label is changed to describe rule verification.",
+              "disposition": "resolved",
+              "fix_verification": "The corrected interface-history label targets the dated SDK entry whose opening paragraphs describe projections, highlighting, cards, upgrade selection and full-description checks, with navigation-arrow and player-package limits retained."
+            }
+          ]
         }
       }
     },
@@ -31,18 +76,18 @@
       "verdict": "PASS",
       "score": 9,
       "reviewer": "/root/final_docs_accuracy",
-      "evidence": "Incremental publication review rage-doc-accuracy-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. ['Six frozen changed-section diffs', 'verify-rage-controls.py pinned022ed2e payload and input/observation separation', 'precise-rage-three-controls-verified.json scoped acceptance', 'precise-rage-memory-protection-verified.json scoped primitive-input and counterfactual evidence']",
+      "evidence": "Incremental publication review runic-doc-accuracy-round2.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. ['Eight frozen article diffs', 'ReadActorRunicInputs API capture function', 'ReadFrozenRunicContribution and activity correction order', 'Campaign/control receipts with distinct payload epochs and scope', 'Native-test boundary substitution summary in frozen package', 'Corrected two player links and placement-sdk-capture target immediate context']",
       "findings": [],
       "priorResult": {
         "verdict": "PASS",
         "score": 9,
         "reviewer": "/root/final_docs_accuracy",
-        "evidence": "Incremental publication review final-docs-accuracy-round3.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. ['Inspected full knowledge/.claude/review.config.json and its changed rules', 'Inspected knowledge/AGENTS.md research acceptance diff', 'Inspected both contributing workflow additions', 'Inspected both game-api unpublished-header notices', 'Inspected both placement current-research sections and diary additions', 'Round-two corrections preserve workshop/player, pre-Start prediction/post-Start verification, current/historical-build and private/public reproduction boundaries']",
+        "evidence": "Incremental publication review rage-doc-accuracy-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. ['Six frozen changed-section diffs', 'verify-rage-controls.py pinned022ed2e payload and input/observation separation', 'precise-rage-three-controls-verified.json scoped acceptance', 'precise-rage-memory-protection-verified.json scoped primitive-input and counterfactual evidence']",
         "findings": []
       },
       "incrementalReport": {
-        "file": "rage-doc-accuracy-round1.json",
-        "sha256": "35a9337595733c52395d5fe79500c868ec8c9ca57d378a7773af7210c4b9c9df",
+        "file": "runic-doc-accuracy-round2.json",
+        "sha256": "7dd382428a3eee7d38f93767689e97e77375bececedd01cc252135758fa36ef9",
         "assessment": {
           "name": "architecture",
           "reviewer_id": "/root/final_docs_accuracy",
@@ -50,15 +95,19 @@
           "score": 9,
           "findings": [],
           "evidence": [
-            "Six frozen changed-section diffs",
-            "verify-rage-controls.py pinned022ed2e payload and input/observation separation",
-            "precise-rage-three-controls-verified.json scoped acceptance",
-            "precise-rage-memory-protection-verified.json scoped primitive-input and counterfactual evidence"
+            "Eight frozen article diffs",
+            "ReadActorRunicInputs API capture function",
+            "ReadFrozenRunicContribution and activity correction order",
+            "Campaign/control receipts with distinct payload epochs and scope",
+            "Native-test boundary substitution summary in frozen package",
+            "Corrected two player links and placement-sdk-capture target immediate context"
           ],
-          "rationale": "The additions publish a bounded result in the existing diary with links from technical and player summaries. They preserve research/player and prediction/verification boundaries. No runtime architecture change or native source conformance approval is claimed.",
+          "rationale": "Algorithm references now describe mechanics and verification scope; player status and unfinished product/release work live in the mod page and dated diary. Rune bindings capture individual descriptor inputs and the mod computes scoring,which preserves the stated API/mod responsibility boundary. Post-Start results remain verification data.",
           "verification_limits": [
-            "Source/build unchanged per task; no native architecture,package dependencies,standalone startup or release acceptance reviewed."
-          ]
+            "Publication architecture and exact cited functions only; no whole native architecture,ABI,loader,release-package or ordinary startup approval.",
+            "Boundary-substituted original-code comparisons do not certify live lifetime/availability behavior."
+          ],
+          "review_basis": "Supplemented round-one publication architecture assessment reused;two corrected links now lead to interface evidence in dated diary rather than mechanics reference"
         }
       }
     },
@@ -66,25 +115,26 @@
       "verdict": "PASS",
       "score": 8,
       "reviewer": "/root/final_docs_reproducibility",
-      "evidence": "Incremental publication review rage-doc-reproducibility-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Retained positive controls exercise the previously unobserved protection branch with separate API readbacks and independent native roster parsing. The verifier compares frozen pre-Start inputs to numerical prefixes, replays with only protection input pairs removed, and preserves absent strategy evidence as null. The publication claims match these exact boundaries and do not promote these controls to universal or standalone player acceptance.",
+      "evidence": "Incremental publication review runic-doc-reproducibility-round2.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Publication claims distinguish exact native-roster campaign acceptance, one fresh positive rune control, retained-input counterfactual replay and branch-local original-code comparisons. The524-case runic metadata explicitly limits original execution to the descriptor loop/school classifier with vector lifetime, definition loading and availability boundaries substituted; the articles claim selected branch verification rather than complete ABI/lifetime acceptance. The880 initial-activity and512 protective cases are not added to the live-battle total. No standalone or user acceptance is inferred.",
       "findings": [],
       "priorResult": {
         "verdict": "PASS",
         "score": 8,
         "reviewer": "/root/final_docs_reproducibility",
-        "evidence": "Incremental publication review final-docs-reproducibility-round3.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. The publication/config diff adds research-evidence review policy without claiming new player-package acceptance. The final campaign summary and verifier support273 complete matches,757 stacks and10 runs with separate actual-roster completion. Root research-check source rejects missing/stale stages, and its test source covers those refusals. Neither JSON presence nor these validator tests establish research truth, as the contribution pages explicitly state.",
+        "evidence": "Incremental publication review rage-doc-reproducibility-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Retained positive controls exercise the previously unobserved protection branch with separate API readbacks and independent native roster parsing. The verifier compares frozen pre-Start inputs to numerical prefixes, replays with only protection input pairs removed, and preserves absent strategy evidence as null. The publication claims match these exact boundaries and do not promote these controls to universal or standalone player acceptance.",
         "findings": []
       },
       "incrementalReport": {
-        "file": "rage-doc-reproducibility-round1.json",
-        "sha256": "430cf9cd035f3272c815495c030015f8a6fb6e2f125fd08217fd57144cf6b87f",
+        "file": "runic-doc-reproducibility-round2.json",
+        "sha256": "ca364b99b9e8a9c4f9354b6d0d7cbc0a29d8ed5f3914b51f235a320963a48c59",
         "assessment": {
           "name": "tests",
           "verdict": "pass",
-          "score": 9,
+          "score": 8,
           "findings": [],
-          "assessment": "Retained positive controls exercise the previously unobserved protection branch with separate API readbacks and independent native roster parsing. The verifier compares frozen pre-Start inputs to numerical prefixes, replays with only protection input pairs removed, and preserves absent strategy evidence as null. The publication claims match these exact boundaries and do not promote these controls to universal or standalone player acceptance.",
-          "verification_limit": "Source and retained-summary review only; no native replay, game action, tests or builds were executed by this reviewer."
+          "assessment": "Publication claims distinguish exact native-roster campaign acceptance, one fresh positive rune control, retained-input counterfactual replay and branch-local original-code comparisons. The524-case runic metadata explicitly limits original execution to the descriptor loop/school classifier with vector lifetime, definition loading and availability boundaries substituted; the articles claim selected branch verification rather than complete ABI/lifetime acceptance. The880 initial-activity and512 protective cases are not added to the live-battle total. No standalone or user acceptance is inferred.",
+          "verification_limit": "Only frozen diffs and cited compact evidence were reviewed. No source implementation, test rerun, game action, build, raw archive or full historical-tail review was performed in this cycle.",
+          "review_basis": "Publication tests lens inherited from supplemented round1 at score8. Round2 changes only two history-link labels/targets; no new runtime/test claim or execution."
         }
       }
     },
@@ -92,20 +142,20 @@
       "verdict": "PASS",
       "score": 10,
       "reviewer": "/root/final_docs_newcomer",
-      "evidence": "Incremental publication review rage-doc-newcomer-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Positive live gap closed for declared controls, with historical,internal-estimate andplayer-release boundaries explicit.",
+      "evidence": "Incremental publication review runic-doc-newcomer-round2.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Both minor navigation findings independently verified resolved; score10 reflects no remaining source/publication finding in this bounded cumulative review.",
       "findings": [],
       "priorResult": {
         "verdict": "PASS",
         "score": 10,
         "reviewer": "/root/final_docs_newcomer",
-        "evidence": "Incremental publication review final-docs-newcomer-round3.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Round3 bullet in both languages now extends the completed plan instead of requesting a fresh broad repeat. Other source-lens evidence inherits round2 unchanged; no new substantial finding.",
+        "evidence": "Incremental publication review rage-doc-newcomer-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Positive live gap closed for declared controls, with historical,internal-estimate andplayer-release boundaries explicit.",
         "findings": []
       },
       "incrementalReport": {
-        "file": "rage-doc-newcomer-round1.json",
-        "sha256": "2b6559b556b49ba0fbf1c7b8c71a2edab95c2742f4781afeb9bc75940f89504c",
+        "file": "runic-doc-newcomer-round2.json",
+        "sha256": "4dc649bafa4f74b011d0bd47770e1233fd21e583cba8da97b942639faa84cbed",
         "assessment": {
-          "evidence": "Positive live gap closed for declared controls, with historical,internal-estimate andplayer-release boundaries explicit.",
+          "evidence": "Both minor navigation findings independently verified resolved; score10 reflects no remaining source/publication finding in this bounded cumulative review.",
           "verdict": "pass",
           "score": 10,
           "name": "docs",
@@ -166,40 +216,40 @@
         ],
         "criteria": {
           "purpose": {
-            "evidence": "Prior unchanged scope: Prior unchanged scope: Own prior review remains applicable: player summaries, mechanism reference and dated diary serve distinct readers.38 unchanged paths retain exact trusted coverage. Incremental review: Changed content explains research workflow, result collection, supported local APIs and observed placement mechanisms for contributors and modders. Incremental review: Changed sections report closure of one research verification gap while preserving ordinary player accuracy boundaries.",
+            "evidence": "Prior unchanged scope: Prior unchanged scope: Prior unchanged scope: Own prior review remains applicable: player summaries, mechanism reference and dated diary serve distinct readers.38 unchanged paths retain exact trusted coverage. Incremental review: Changed content explains research workflow, result collection, supported local APIs and observed placement mechanisms for contributors and modders. Incremental review: Changed sections report closure of one research verification gap while preserving ordinary player accuracy boundaries. Incremental review: Algorithm reference describes mechanics; diary records chronology; player page states current research versus experimental download.",
             "verdict": "PASS"
           },
           "structure": {
-            "evidence": "Prior unchanged scope: Prior unchanged scope: Restoration changes no headings, navigation or numeric section. Current checkpoint separates stopped campaign, historical builds and outstanding verification. Incremental review: Corrected checkpoints label earlier results; separate Start and after-battle headings distinguish observation paths; diary additions retain dated entries. Incremental review: New diary entry is dated and linked from current technical and player summaries; historical checkpoints stay separate.",
+            "evidence": "Prior unchanged scope: Prior unchanged scope: Prior unchanged scope: Restoration changes no headings, navigation or numeric section. Current checkpoint separates stopped campaign, historical builds and outstanding verification. Incremental review: Corrected checkpoints label earlier results; separate Start and after-battle headings distinguish observation paths; diary additions retain dated entries. Incremental review: New diary entry is dated and linked from current technical and player summaries; historical checkpoints stay separate. Incremental review: Round1 structural evidence retained; corrected player links now explicitly lead to interface-verification history in diary rather than mechanics-only reference.",
             "verdict": "PASS"
           },
           "specificity": {
-            "evidence": "Prior unchanged scope: Prior unchanged scope: Historical DLL384e08 now matches published source and retained full hash. Numeric text retains engine294/mod126, source-record categories and separate sweep/diagnostic totals. Incremental review: Complete match names creature, quantity and cell; row example explains first/fifth/tenth rows; campaign label and run table identify checked coverage. Incremental review: 3 controls,10 neutral stacks and170 numerical values use named units; table labels internal survivability and shows3 mastery-specific comparisons.",
+            "evidence": "Prior unchanged scope: Prior unchanged scope: Prior unchanged scope: Historical DLL384e08 now matches published source and retained full hash. Numeric text retains engine294/mod126, source-record categories and separate sweep/diagnostic totals. Incremental review: Complete match names creature, quantity and cell; row example explains first/fifth/tenth rows; campaign label and run table identify checked coverage. Incremental review: 3 controls,10 neutral stacks and170 numerical values use named units; table labels internal survivability and shows3 mastery-specific comparisons. Incremental review: Rune partial weight1/3 and up-to10% correction are explicit; meaning of all descriptor states remains expressly unknown. All observed hero levels are1.",
             "verdict": "PASS"
           },
           "reproducibility": {
-            "evidence": "Prior unchanged scope: Prior unchanged scope: Own prior conditions review remains valid; restoration introduces no procedure. Fresh-load, pre-Start and evaluation-specific boundaries remain explicit. Incremental review: Diary explicitly says raw observations, exact maps, build and tools remain private and table is not a rerun procedure; public Start example is described as observation only. Incremental review: One hero,21 Centaurs,starting-rage ability andmastery variations are described; same-input replay removes only protection data, and maps/build/raw observations are explicitly private.",
+            "evidence": "Prior unchanged scope: Prior unchanged scope: Prior unchanged scope: Own prior conditions review remains valid; restoration introduces no procedure. Fresh-load, pre-Start and evaluation-specific boundaries remain explicit. Incremental review: Diary explicitly says raw observations, exact maps, build and tools remain private and table is not a rerun procedure; public Start example is described as observation only. Incremental review: One hero,21 Centaurs,starting-rage ability andmastery variations are described; same-input replay removes only protection data, and maps/build/raw observations are explicitly private. Incremental review: Before-Start forecast and after-Start complete roster are distinguished; counterfactual is retained-input replay rather than another live battle; reproducible map/build/observation bundle remains private.",
             "verdict": "PASS"
           },
           "evidence": {
-            "evidence": "Prior unchanged scope: Prior unchanged scope: Frozen evidence distinguishes116/116 placement matches from FAILED original health294/126; positive live protection remains pending. Final article hashes and all referenced critic-report hashes independently validate. Incremental review: Bounded publication review checked retained verified summary 273 battles,757 stacks,10 runs and record-completeness basis; not a new execution or independent technical audit of every log. Incremental review: Retained verified summaries show4+3+3 stacks,34+68+68 numerical values,294/319/355 replay equality and126 without protection; one strategy comparison null is honestly disclosed.",
+            "evidence": "Prior unchanged scope: Prior unchanged scope: Prior unchanged scope: Frozen evidence distinguishes116/116 placement matches from FAILED original health294/126; positive live protection remains pending. Final article hashes and all referenced critic-report hashes independently validate. Incremental review: Bounded publication review checked retained verified summary 273 battles,757 stacks,10 runs and record-completeness basis; not a new execution or independent technical audit of every log. Incremental review: Retained verified summaries show4+3+3 stacks,34+68+68 numerical values,294/319/355 replay equality and126 without protection; one strategy comparison null is honestly disclosed. Incremental review: Allowlisted runic summary confirms273 battles,757 stacks,10 runs,16830 values; hero-level summary confirms1 only. Branch test counts are separately scoped and not new executions by this critic.",
             "verdict": "PASS"
           },
           "applicability": {
-            "evidence": "Prior unchanged scope: Prior unchanged scope: Unchanged numeric sections confine hidden inputs to developer Superadmin and exclude ordinary-mode, player-release and full-algorithm acceptance. Historical targeted tests retain incomplete-series limits. Incremental review: Research mode, untested effects, ordinary-mode limits and remaining positive protection-reserve control are explicit; Game API row is local/unpublished and workshop gate is not player setup. Incremental review: Internal deployment estimate is distinguished from displayed HP;3 controls supplement273 matrix and do not certify ordinary mode, exact historical state or player release.",
+            "evidence": "Prior unchanged scope: Prior unchanged scope: Prior unchanged scope: Unchanged numeric sections confine hidden inputs to developer Superadmin and exclude ordinary-mode, player-release and full-algorithm acceptance. Historical targeted tests retain incomplete-series limits. Incremental review: Research mode, untested effects, ordinary-mode limits and remaining positive protection-reserve control are explicit; Game API row is local/unpublished and workshop gate is not player setup. Incremental review: Internal deployment estimate is distinguished from displayed HP;3 controls supplement273 matrix and do not certify ordinary mode, exact historical state or player release. Incremental review: New matrix is separate from old273 and failed attempts; partial rune semantics,other levels/effects/arenas,ordinary prediction and player release remain outside established scope.",
             "verdict": "PASS"
           },
           "translations": {
-            "evidence": "Prior unchanged scope: Prior unchanged scope: Both historical tokens restored identically; final diary diff contains only paired numeric additions. Own prior RU/EN review of health labeling, source-stack terminology and evidence limits remains applicable. Incremental review: Reviewed RU/EN changed passages preserve the same completion, timing and private reproduction boundaries; canonical names remain understandable identifiers. Incremental review: Each RU/EN changed pair conveys the same later-controls count, internal-health distinction, historical gap closure and remaining limits.",
+            "evidence": "Prior unchanged scope: Prior unchanged scope: Prior unchanged scope: Both historical tokens restored identically; final diary diff contains only paired numeric additions. Own prior RU/EN review of health labeling, source-stack terminology and evidence limits remains applicable. Incremental review: Reviewed RU/EN changed passages preserve the same completion, timing and private reproduction boundaries; canonical names remain understandable identifiers. Incremental review: Each RU/EN changed pair conveys the same later-controls count, internal-health distinction, historical gap closure and remaining limits. Incremental review: Each of4 RU/EN article pairs preserves algorithm sequence,input ownership,runic-state uncertainty,level1 scope and research-versus-download distinction.",
             "verdict": "PASS"
           },
           "maintenance": {
-            "evidence": "Prior unchanged scope: Prior unchanged scope: Configured standard, wittgenstein and critique guides read; lean-writing is authoring-only. Canonical ownership retained.38 files and28 records reused exactly; current package includes five distinct critic lanes and bounded round3 restoration evidence, without a fourth broad round. Incremental review: Prior round2 evidence retained; round3 Remaining work now explicitly extends the completed ten-run plan with uncovered cases, removing stale repeat instruction in both languages. Incremental review: Current summaries link new dated control record and explicitly close earlier missing-positive-control status without rewriting older experiment history.",
+            "evidence": "Prior unchanged scope: Prior unchanged scope: Prior unchanged scope: Configured standard, wittgenstein and critique guides read; lean-writing is authoring-only. Canonical ownership retained.38 files and28 records reused exactly; current package includes five distinct critic lanes and bounded round3 restoration evidence, without a fourth broad round. Incremental review: Prior round2 evidence retained; round3 Remaining work now explicitly extends the completed ten-run plan with uncovered cases, removing stale repeat instruction in both languages. Incremental review: Current summaries link new dated control record and explicitly close earlier missing-positive-control status without rewriting older experiment history. Incremental review: Round1 ownership evidence retained;2 retained link mismatches are corrected with labels and destinations matching interface chronology.",
             "verdict": "PASS"
           }
         },
         "findings": [],
-        "summary": "PASS for6 changed sections against baseline a6f6e44 with necessary immediate context only. No full older diary or unchanged article-body rereview. No network,game/input or rendered-site inspection.",
+        "summary": "PASS for8 cumulative reviewed articles: round2 inspects only2 player-page link corrections;6 unchanged exact hashes inherit round1 acceptance. Both priorS3 findings resolved. No tests,game,network,ordinary-mode/player-release or native approval.",
         "articleCritiques": [
           {
             "path": "docs/contributing.md",
@@ -600,38 +650,68 @@
           },
           {
             "path": "docs/en/players/deployment-preview.md",
-            "sha256": "886ce329bd0bd7347430ab7c9a419b20cb09c9edaa080441aec5df5d51816b02",
+            "sha256": "7c3d34f88a9688f31bf8c09f0cd7d2c47dd750792abb2c5246da3fd6841ffa06",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "newcomer",
                 "reviewer": "/root/final_docs_newcomer",
-                "evidence": "Independent report rage-doc-newcomer-round1.json; SHA256 2b6559b556b49ba0fbf1c7b8c71a2edab95c2742f4781afeb9bc75940f89504c. Bounded correction review and exact-hash inheritance disclosed there.",
-                "findings": []
+                "evidence": "Independent report runic-doc-newcomer-round2.json; SHA256 4dc649bafa4f74b011d0bd47770e1233fd21e583cba8da97b942639faa84cbed. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": [
+                  {
+                    "location": "Development status final SDK paragraph / Состояние разработки последний абзац",
+                    "severity": "S3",
+                    "problem": "Current status and earlier research stages link still targets mechanics-only placement-internals#current-research.",
+                    "consequence": "A player seeking the earlier SDK/interface stages reaches Rule verification and must search again for the promised development history.",
+                    "evidence": "The refactored target contains algorithm verification totals and scope; its prior SDK/release/checkpoint chronology was removed, while the player link label still promises that history.",
+                    "fix": "Point the status/history label to the relevant diary entry, or relabel the reference link as rule verification.",
+                    "state": "resolved",
+                    "disposition": "Corrected the player-page development-history link to the research diary; final independent review accepts the corrected destination.",
+                    "verification": "runic-doc-newcomer-round2.json, final reviewed hash 7c3d34f88a9688f31bf8c09f0cd7d2c47dd750792abb2c5246da3fd6841ffa06; no open findings. Original round1 evidence retained."
+                  }
+                ]
               },
               {
                 "lane": "accuracy",
                 "reviewer": "/root/final_docs_accuracy",
-                "evidence": "Independent report rage-doc-accuracy-round1.json; SHA256 35a9337595733c52395d5fe79500c868ec8c9ca57d378a7773af7210c4b9c9df. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-accuracy-round2.json; SHA256 7dd382428a3eee7d38f93767689e97e77375bececedd01cc252135758fa36ef9. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "steps",
                 "reviewer": "/root/final_docs_reproducibility",
-                "evidence": "Independent report rage-doc-reproducibility-round1.json; SHA256 430cf9cd035f3272c815495c030015f8a6fb6e2f125fd08217fd57144cf6b87f. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-reproducibility-round2.json; SHA256 ca364b99b9e8a9c4f9354b6d0d7cbc0a29d8ed5f3914b51f235a320963a48c59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "structure",
-                "reviewer": "/root/final_docs_navigation",
-                "evidence": "Independent report rage-doc-navigation-round1.json; SHA256 4294f22112bf86656eb388c12743f0e8a1cc9ddce1f5384186bbbb1620201109. Bounded correction review and exact-hash inheritance disclosed there.",
-                "findings": []
+                "reviewer": "/root/crowded_docs_navigation",
+                "evidence": "Independent report runic-doc-navigation-round2.json; SHA256 9ca8433b4a4e8c56d12bcb8b0813646490ca054e93205a4d8562a8935ec5ff59. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": [
+                  {
+                    "location": "docs/en/players/deployment-preview.md:25",
+                    "severity": "S3",
+                    "what": "The status/history link leads to mechanics-only rule verification.",
+                    "why": "A reader following the SDK interface paragraph cannot find the promised earlier interface checks at that destination.",
+                    "rationale": "The destination was restructured in this package, while the incoming player-page label and target were retained.",
+                    "evidence": "The player paragraph links to placement-internals.md#current-research; that anchor now heads Rule verification / ???????? ??????, containing campaign and branch-test results without SDK interface history.",
+                    "fix": "Point this link to the relevant diary entry for SDK interface checks and give it a matching label in both languages.",
+                    "fix_rationale": "Readers reach the evidence promised by the surrounding interface paragraph, while the algorithm reference retains its mechanics scope.",
+                    "confidence": "high",
+                    "falsifier": "The destination again includes the promised SDK interface history, or the incoming label is changed to describe rule verification.",
+                    "problem": "The status/history link leads to mechanics-only rule verification.",
+                    "consequence": "A reader following the SDK interface paragraph cannot find the promised earlier interface checks at that destination.",
+                    "state": "resolved",
+                    "disposition": "Corrected the player-page development-history link to the research diary; final independent review accepts the corrected destination.",
+                    "verification": "runic-doc-navigation-round2.json, final reviewed hash 7c3d34f88a9688f31bf8c09f0cd7d2c47dd750792abb2c5246da3fd6841ffa06; no open findings. Original round1 evidence retained."
+                  }
+                ]
               },
               {
                 "lane": "translation",
-                "reviewer": "/root/final_docs_translation",
-                "evidence": "Independent report rage-doc-translation-round1.json; SHA256 0353111bd299755d3d103e5daa7483deed8ccf606f0b369aef0a580792134f34. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_translation",
+                "evidence": "Independent report runic-doc-translation-round2.json; SHA256 c460b652074c91fa495c02dfa2506be63c79d7ffc41acc6b658162dcd4264e2a. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               }
             ]
@@ -714,114 +794,114 @@
           },
           {
             "path": "docs/en/reference/game-api.md",
-            "sha256": "b7868f7d1beb77789acc153cb010dfb70f654f1ff392122f57e2c3f50a58c443",
+            "sha256": "77f016bca02f7ec32decbbdd64b3da9f335433a4e82c579e922556627271dfa6",
             "author": "/root",
-            "round": 3,
+            "round": 2,
             "critics": [
               {
                 "lane": "newcomer",
                 "reviewer": "/root/final_docs_newcomer",
-                "evidence": "Independent report final-docs-newcomer-round3.json; SHA256 50ca1254245358071e72d799f53a0b476e40621cca773c5c0cda40b1868256ff. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-newcomer-round2.json; SHA256 4dc649bafa4f74b011d0bd47770e1233fd21e583cba8da97b942639faa84cbed. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "accuracy",
                 "reviewer": "/root/final_docs_accuracy",
-                "evidence": "Independent report final-docs-accuracy-round3.json; SHA256 00f3f147788dcb29c75af2d6bfd91a1665ed28a89c32d6cb118459aac20eec57. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-accuracy-round2.json; SHA256 7dd382428a3eee7d38f93767689e97e77375bececedd01cc252135758fa36ef9. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "steps",
                 "reviewer": "/root/final_docs_reproducibility",
-                "evidence": "Independent report final-docs-reproducibility-round3.json; SHA256 303abfdc4c54a9595ba5cb205d86e442cecc2fbd3a30cb149b178ccb04bf76a0. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-reproducibility-round2.json; SHA256 ca364b99b9e8a9c4f9354b6d0d7cbc0a29d8ed5f3914b51f235a320963a48c59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "structure",
-                "reviewer": "/root/final_docs_navigation",
-                "evidence": "Independent report final-docs-navigation-round3.json; SHA256 f126305ea170ef91e8666acbbb4dee50cf838e27057fae8c0455df4165e74e04. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_navigation",
+                "evidence": "Independent report runic-doc-navigation-round2.json; SHA256 9ca8433b4a4e8c56d12bcb8b0813646490ca054e93205a4d8562a8935ec5ff59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "translation",
-                "reviewer": "/root/final_docs_translation",
-                "evidence": "Independent report final-docs-translation-round3.json; SHA256 95b97779e244b0ecbf508e16ac903e53e1a0193f4475f222d381a052c60cb475. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_translation",
+                "evidence": "Independent report runic-doc-translation-round2.json; SHA256 c460b652074c91fa495c02dfa2506be63c79d7ffc41acc6b658162dcd4264e2a. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               }
             ]
           },
           {
             "path": "docs/en/reference/placement-internals.md",
-            "sha256": "5fb5871fed83c605121875b5331b78426d52a625282c464c14eaff12694b2916",
+            "sha256": "31240c7aff5b0733b7bf2cdbe4dca7809fefab4362026a1d5d2355585f648786",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "newcomer",
                 "reviewer": "/root/final_docs_newcomer",
-                "evidence": "Independent report rage-doc-newcomer-round1.json; SHA256 2b6559b556b49ba0fbf1c7b8c71a2edab95c2742f4781afeb9bc75940f89504c. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-newcomer-round2.json; SHA256 4dc649bafa4f74b011d0bd47770e1233fd21e583cba8da97b942639faa84cbed. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "accuracy",
                 "reviewer": "/root/final_docs_accuracy",
-                "evidence": "Independent report rage-doc-accuracy-round1.json; SHA256 35a9337595733c52395d5fe79500c868ec8c9ca57d378a7773af7210c4b9c9df. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-accuracy-round2.json; SHA256 7dd382428a3eee7d38f93767689e97e77375bececedd01cc252135758fa36ef9. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "steps",
                 "reviewer": "/root/final_docs_reproducibility",
-                "evidence": "Independent report rage-doc-reproducibility-round1.json; SHA256 430cf9cd035f3272c815495c030015f8a6fb6e2f125fd08217fd57144cf6b87f. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-reproducibility-round2.json; SHA256 ca364b99b9e8a9c4f9354b6d0d7cbc0a29d8ed5f3914b51f235a320963a48c59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "structure",
-                "reviewer": "/root/final_docs_navigation",
-                "evidence": "Independent report rage-doc-navigation-round1.json; SHA256 4294f22112bf86656eb388c12743f0e8a1cc9ddce1f5384186bbbb1620201109. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_navigation",
+                "evidence": "Independent report runic-doc-navigation-round2.json; SHA256 9ca8433b4a4e8c56d12bcb8b0813646490ca054e93205a4d8562a8935ec5ff59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "translation",
-                "reviewer": "/root/final_docs_translation",
-                "evidence": "Independent report rage-doc-translation-round1.json; SHA256 0353111bd299755d3d103e5daa7483deed8ccf606f0b369aef0a580792134f34. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_translation",
+                "evidence": "Independent report runic-doc-translation-round2.json; SHA256 c460b652074c91fa495c02dfa2506be63c79d7ffc41acc6b658162dcd4264e2a. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               }
             ]
           },
           {
             "path": "docs/en/reference/research-diary.md",
-            "sha256": "7110cac6908b2ea0e53435747203d24246615c37f40bbb5c21380fab09bd2cf4",
+            "sha256": "ed85f093713413c49b980a5bb7cd2c3f97140b3d532bbe0bbf87ad274bf13db7",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "newcomer",
                 "reviewer": "/root/final_docs_newcomer",
-                "evidence": "Independent report rage-doc-newcomer-round1.json; SHA256 2b6559b556b49ba0fbf1c7b8c71a2edab95c2742f4781afeb9bc75940f89504c. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-newcomer-round2.json; SHA256 4dc649bafa4f74b011d0bd47770e1233fd21e583cba8da97b942639faa84cbed. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "accuracy",
                 "reviewer": "/root/final_docs_accuracy",
-                "evidence": "Independent report rage-doc-accuracy-round1.json; SHA256 35a9337595733c52395d5fe79500c868ec8c9ca57d378a7773af7210c4b9c9df. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-accuracy-round2.json; SHA256 7dd382428a3eee7d38f93767689e97e77375bececedd01cc252135758fa36ef9. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "steps",
                 "reviewer": "/root/final_docs_reproducibility",
-                "evidence": "Independent report rage-doc-reproducibility-round1.json; SHA256 430cf9cd035f3272c815495c030015f8a6fb6e2f125fd08217fd57144cf6b87f. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-reproducibility-round2.json; SHA256 ca364b99b9e8a9c4f9354b6d0d7cbc0a29d8ed5f3914b51f235a320963a48c59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "structure",
-                "reviewer": "/root/final_docs_navigation",
-                "evidence": "Independent report rage-doc-navigation-round1.json; SHA256 4294f22112bf86656eb388c12743f0e8a1cc9ddce1f5384186bbbb1620201109. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_navigation",
+                "evidence": "Independent report runic-doc-navigation-round2.json; SHA256 9ca8433b4a4e8c56d12bcb8b0813646490ca054e93205a4d8562a8935ec5ff59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "translation",
-                "reviewer": "/root/final_docs_translation",
-                "evidence": "Independent report rage-doc-translation-round1.json; SHA256 0353111bd299755d3d103e5daa7483deed8ccf606f0b369aef0a580792134f34. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_translation",
+                "evidence": "Independent report runic-doc-translation-round2.json; SHA256 c460b652074c91fa495c02dfa2506be63c79d7ffc41acc6b658162dcd4264e2a. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               }
             ]
@@ -1263,38 +1343,68 @@
           },
           {
             "path": "docs/players/deployment-preview.md",
-            "sha256": "2c53bf40b4bacef11e6a525a3372722e57f43dad1e8105d9795c7c5b4c5e4106",
+            "sha256": "6e6865fe6b2fc30fcbc4e4f0467713dd5676361eb2966687abfd517c78ed7f45",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "newcomer",
                 "reviewer": "/root/final_docs_newcomer",
-                "evidence": "Independent report rage-doc-newcomer-round1.json; SHA256 2b6559b556b49ba0fbf1c7b8c71a2edab95c2742f4781afeb9bc75940f89504c. Bounded correction review and exact-hash inheritance disclosed there.",
-                "findings": []
+                "evidence": "Independent report runic-doc-newcomer-round2.json; SHA256 4dc649bafa4f74b011d0bd47770e1233fd21e583cba8da97b942639faa84cbed. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": [
+                  {
+                    "location": "Development status final SDK paragraph / Состояние разработки последний абзац",
+                    "severity": "S3",
+                    "problem": "Current status and earlier research stages link still targets mechanics-only placement-internals#current-research.",
+                    "consequence": "A player seeking the earlier SDK/interface stages reaches Rule verification and must search again for the promised development history.",
+                    "evidence": "The refactored target contains algorithm verification totals and scope; its prior SDK/release/checkpoint chronology was removed, while the player link label still promises that history.",
+                    "fix": "Point the status/history label to the relevant diary entry, or relabel the reference link as rule verification.",
+                    "state": "resolved",
+                    "disposition": "Corrected the player-page development-history link to the research diary; final independent review accepts the corrected destination.",
+                    "verification": "runic-doc-newcomer-round2.json, final reviewed hash 6e6865fe6b2fc30fcbc4e4f0467713dd5676361eb2966687abfd517c78ed7f45; no open findings. Original round1 evidence retained."
+                  }
+                ]
               },
               {
                 "lane": "accuracy",
                 "reviewer": "/root/final_docs_accuracy",
-                "evidence": "Independent report rage-doc-accuracy-round1.json; SHA256 35a9337595733c52395d5fe79500c868ec8c9ca57d378a7773af7210c4b9c9df. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-accuracy-round2.json; SHA256 7dd382428a3eee7d38f93767689e97e77375bececedd01cc252135758fa36ef9. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "steps",
                 "reviewer": "/root/final_docs_reproducibility",
-                "evidence": "Independent report rage-doc-reproducibility-round1.json; SHA256 430cf9cd035f3272c815495c030015f8a6fb6e2f125fd08217fd57144cf6b87f. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-reproducibility-round2.json; SHA256 ca364b99b9e8a9c4f9354b6d0d7cbc0a29d8ed5f3914b51f235a320963a48c59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "structure",
-                "reviewer": "/root/final_docs_navigation",
-                "evidence": "Independent report rage-doc-navigation-round1.json; SHA256 4294f22112bf86656eb388c12743f0e8a1cc9ddce1f5384186bbbb1620201109. Bounded correction review and exact-hash inheritance disclosed there.",
-                "findings": []
+                "reviewer": "/root/crowded_docs_navigation",
+                "evidence": "Independent report runic-doc-navigation-round2.json; SHA256 9ca8433b4a4e8c56d12bcb8b0813646490ca054e93205a4d8562a8935ec5ff59. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": [
+                  {
+                    "location": "docs/players/deployment-preview.md:25",
+                    "severity": "S3",
+                    "what": "The status/history link leads to mechanics-only rule verification.",
+                    "why": "A reader following the SDK interface paragraph cannot find the promised earlier interface checks at that destination.",
+                    "rationale": "The destination was restructured in this package, while the incoming player-page label and target were retained.",
+                    "evidence": "The player paragraph links to placement-internals.md#current-research; that anchor now heads Rule verification / ???????? ??????, containing campaign and branch-test results without SDK interface history.",
+                    "fix": "Point this link to the relevant diary entry for SDK interface checks and give it a matching label in both languages.",
+                    "fix_rationale": "Readers reach the evidence promised by the surrounding interface paragraph, while the algorithm reference retains its mechanics scope.",
+                    "confidence": "high",
+                    "falsifier": "The destination again includes the promised SDK interface history, or the incoming label is changed to describe rule verification.",
+                    "problem": "The status/history link leads to mechanics-only rule verification.",
+                    "consequence": "A reader following the SDK interface paragraph cannot find the promised earlier interface checks at that destination.",
+                    "state": "resolved",
+                    "disposition": "Corrected the player-page development-history link to the research diary; final independent review accepts the corrected destination.",
+                    "verification": "runic-doc-navigation-round2.json, final reviewed hash 6e6865fe6b2fc30fcbc4e4f0467713dd5676361eb2966687abfd517c78ed7f45; no open findings. Original round1 evidence retained."
+                  }
+                ]
               },
               {
                 "lane": "translation",
-                "reviewer": "/root/final_docs_translation",
-                "evidence": "Independent report rage-doc-translation-round1.json; SHA256 0353111bd299755d3d103e5daa7483deed8ccf606f0b369aef0a580792134f34. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_translation",
+                "evidence": "Independent report runic-doc-translation-round2.json; SHA256 c460b652074c91fa495c02dfa2506be63c79d7ffc41acc6b658162dcd4264e2a. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               }
             ]
@@ -1377,114 +1487,114 @@
           },
           {
             "path": "docs/reference/game-api.md",
-            "sha256": "dccf74db9fc85a939d4e082756b27f32e4c61650bc088b99269b38acbb11c14e",
+            "sha256": "402e9c128c34e7bc28f31d87a8c6be9468ce25ec6eaa8636710c50915d27fe26",
             "author": "/root",
-            "round": 3,
+            "round": 2,
             "critics": [
               {
                 "lane": "newcomer",
                 "reviewer": "/root/final_docs_newcomer",
-                "evidence": "Independent report final-docs-newcomer-round3.json; SHA256 50ca1254245358071e72d799f53a0b476e40621cca773c5c0cda40b1868256ff. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-newcomer-round2.json; SHA256 4dc649bafa4f74b011d0bd47770e1233fd21e583cba8da97b942639faa84cbed. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "accuracy",
                 "reviewer": "/root/final_docs_accuracy",
-                "evidence": "Independent report final-docs-accuracy-round3.json; SHA256 00f3f147788dcb29c75af2d6bfd91a1665ed28a89c32d6cb118459aac20eec57. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-accuracy-round2.json; SHA256 7dd382428a3eee7d38f93767689e97e77375bececedd01cc252135758fa36ef9. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "steps",
                 "reviewer": "/root/final_docs_reproducibility",
-                "evidence": "Independent report final-docs-reproducibility-round3.json; SHA256 303abfdc4c54a9595ba5cb205d86e442cecc2fbd3a30cb149b178ccb04bf76a0. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-reproducibility-round2.json; SHA256 ca364b99b9e8a9c4f9354b6d0d7cbc0a29d8ed5f3914b51f235a320963a48c59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "structure",
-                "reviewer": "/root/final_docs_navigation",
-                "evidence": "Independent report final-docs-navigation-round3.json; SHA256 f126305ea170ef91e8666acbbb4dee50cf838e27057fae8c0455df4165e74e04. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_navigation",
+                "evidence": "Independent report runic-doc-navigation-round2.json; SHA256 9ca8433b4a4e8c56d12bcb8b0813646490ca054e93205a4d8562a8935ec5ff59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "translation",
-                "reviewer": "/root/final_docs_translation",
-                "evidence": "Independent report final-docs-translation-round3.json; SHA256 95b97779e244b0ecbf508e16ac903e53e1a0193f4475f222d381a052c60cb475. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_translation",
+                "evidence": "Independent report runic-doc-translation-round2.json; SHA256 c460b652074c91fa495c02dfa2506be63c79d7ffc41acc6b658162dcd4264e2a. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               }
             ]
           },
           {
             "path": "docs/reference/placement-internals.md",
-            "sha256": "9d24b14618831150706c4d9bec65eb8c9e1f8100d2dcdf94fbbcbb8924b16efe",
+            "sha256": "f19324662a62b02ace7f4adef76f01555d6cbb8540ccbc399dade4ade37e7b16",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "newcomer",
                 "reviewer": "/root/final_docs_newcomer",
-                "evidence": "Independent report rage-doc-newcomer-round1.json; SHA256 2b6559b556b49ba0fbf1c7b8c71a2edab95c2742f4781afeb9bc75940f89504c. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-newcomer-round2.json; SHA256 4dc649bafa4f74b011d0bd47770e1233fd21e583cba8da97b942639faa84cbed. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "accuracy",
                 "reviewer": "/root/final_docs_accuracy",
-                "evidence": "Independent report rage-doc-accuracy-round1.json; SHA256 35a9337595733c52395d5fe79500c868ec8c9ca57d378a7773af7210c4b9c9df. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-accuracy-round2.json; SHA256 7dd382428a3eee7d38f93767689e97e77375bececedd01cc252135758fa36ef9. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "steps",
                 "reviewer": "/root/final_docs_reproducibility",
-                "evidence": "Independent report rage-doc-reproducibility-round1.json; SHA256 430cf9cd035f3272c815495c030015f8a6fb6e2f125fd08217fd57144cf6b87f. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-reproducibility-round2.json; SHA256 ca364b99b9e8a9c4f9354b6d0d7cbc0a29d8ed5f3914b51f235a320963a48c59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "structure",
-                "reviewer": "/root/final_docs_navigation",
-                "evidence": "Independent report rage-doc-navigation-round1.json; SHA256 4294f22112bf86656eb388c12743f0e8a1cc9ddce1f5384186bbbb1620201109. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_navigation",
+                "evidence": "Independent report runic-doc-navigation-round2.json; SHA256 9ca8433b4a4e8c56d12bcb8b0813646490ca054e93205a4d8562a8935ec5ff59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "translation",
-                "reviewer": "/root/final_docs_translation",
-                "evidence": "Independent report rage-doc-translation-round1.json; SHA256 0353111bd299755d3d103e5daa7483deed8ccf606f0b369aef0a580792134f34. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_translation",
+                "evidence": "Independent report runic-doc-translation-round2.json; SHA256 c460b652074c91fa495c02dfa2506be63c79d7ffc41acc6b658162dcd4264e2a. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               }
             ]
           },
           {
             "path": "docs/reference/research-diary.md",
-            "sha256": "23a5b51b5dce89b95074d2ebae8bf3fdc5ab15bdd865822389d9fd8badfa06b9",
+            "sha256": "a03782ac7bbf2ce1e75295375c92b819af897125af60ffe63470462221825e30",
             "author": "/root",
-            "round": 1,
+            "round": 2,
             "critics": [
               {
                 "lane": "newcomer",
                 "reviewer": "/root/final_docs_newcomer",
-                "evidence": "Independent report rage-doc-newcomer-round1.json; SHA256 2b6559b556b49ba0fbf1c7b8c71a2edab95c2742f4781afeb9bc75940f89504c. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-newcomer-round2.json; SHA256 4dc649bafa4f74b011d0bd47770e1233fd21e583cba8da97b942639faa84cbed. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "accuracy",
                 "reviewer": "/root/final_docs_accuracy",
-                "evidence": "Independent report rage-doc-accuracy-round1.json; SHA256 35a9337595733c52395d5fe79500c868ec8c9ca57d378a7773af7210c4b9c9df. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-accuracy-round2.json; SHA256 7dd382428a3eee7d38f93767689e97e77375bececedd01cc252135758fa36ef9. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "steps",
                 "reviewer": "/root/final_docs_reproducibility",
-                "evidence": "Independent report rage-doc-reproducibility-round1.json; SHA256 430cf9cd035f3272c815495c030015f8a6fb6e2f125fd08217fd57144cf6b87f. Bounded correction review and exact-hash inheritance disclosed there.",
+                "evidence": "Independent report runic-doc-reproducibility-round2.json; SHA256 ca364b99b9e8a9c4f9354b6d0d7cbc0a29d8ed5f3914b51f235a320963a48c59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "structure",
-                "reviewer": "/root/final_docs_navigation",
-                "evidence": "Independent report rage-doc-navigation-round1.json; SHA256 4294f22112bf86656eb388c12743f0e8a1cc9ddce1f5384186bbbb1620201109. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_navigation",
+                "evidence": "Independent report runic-doc-navigation-round2.json; SHA256 9ca8433b4a4e8c56d12bcb8b0813646490ca054e93205a4d8562a8935ec5ff59. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               },
               {
                 "lane": "translation",
-                "reviewer": "/root/final_docs_translation",
-                "evidence": "Independent report rage-doc-translation-round1.json; SHA256 0353111bd299755d3d103e5daa7483deed8ccf606f0b369aef0a580792134f34. Bounded correction review and exact-hash inheritance disclosed there.",
+                "reviewer": "/root/crowded_docs_translation",
+                "evidence": "Independent report runic-doc-translation-round2.json; SHA256 c460b652074c91fa495c02dfa2506be63c79d7ffc41acc6b658162dcd4264e2a. Bounded correction review and exact-hash inheritance disclosed there.",
                 "findings": []
               }
             ]
@@ -1805,8 +1915,8 @@
           }
         ],
         "priorReview": {
-          "path": ".review/attestations/0ccf1200a850483b87f474deade3d54ab77a17bd845f086514c6aa98e4240b44.json",
-          "sha256": "d1f5c757a9239092f5e9db64296a65055b25cc38ac7b95cc95f81f9704065075",
+          "path": ".review/attestations/735b6c99158ed4612eea50559185440e942f5b252ad1c3a8dd3feeb592c2d3e2.json",
+          "sha256": "56d738908b8a69e67d901c7327678230b95ebcf374b4dfc76cb24afcb6f17ef2",
           "reusedArticles": [
             "docs/contributing.md",
             "docs/en/contributing.md",
@@ -1819,7 +1929,6 @@
             "docs/en/players/bank-reference.md",
             "docs/en/reference/castle-artwork.md",
             "docs/en/reference/formats.md",
-            "docs/en/reference/game-api.md",
             "docs/en/reference/technology-stack.md",
             "docs/en/reference/universe-build.md",
             "docs/en/reference/xkit-commands.md",
@@ -1832,7 +1941,6 @@
             "docs/players/bank-reference.md",
             "docs/reference/castle-artwork.md",
             "docs/reference/formats.md",
-            "docs/reference/game-api.md",
             "docs/reference/technology-stack.md",
             "docs/reference/universe-build.md",
             "docs/reference/xkit-commands.md",
@@ -1848,29 +1956,41 @@
     "security": {
       "verdict": "PASS",
       "score": 9,
-      "reviewer": "/root/final_docs_translation",
-      "evidence": "Incremental publication review rage-doc-translation-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Changed human prose contains no new private paths, credentials, raw memory addresses or raw private-observation dumps. Private maps/build/raw evidence are explicitly disclosed rather than offered as publicly reproducible. Positive controls supplement the distinct main 273/273 campaign and close only the missing positive protection-reserve branch control. Ordinary prediction, universal coverage, exact historical failure replay and player release remain unverified. Primitive protection inputs are distinguished from completed engine decisions, and post-Start roster observations from pre-Start forecasts. Native-code safety is outside this review; retained evidence rather than new gameplay supports the qualified 9.",
+      "reviewer": "/root/crowded_docs_translation",
+      "evidence": "Incremental publication review runic-doc-translation-round2.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. ['Publication prose scope only; no native/runtime/release artifact approval.', 'Round1 report preserved; unchanged historical bodies were not rereviewed.']",
       "findings": [],
       "priorResult": {
         "verdict": "PASS",
         "score": 9,
         "reviewer": "/root/final_docs_translation",
-        "evidence": "Incremental publication review final-docs-translation-round3.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Independent publication assessment supports 9 under the supplied rubric. Corrected text maintains pre-Start inputs versus post-Start verification separation and a distinct after-battle results phase. Completed research matrix is separated from historical stopped builds, ordinary-mode accuracy, exact-old-state replay, missing positive protection-reserve controls and player release. Stable precise-expanded-full identifier and paired coverage table disclose the private unpublished evidence bundle and limits on external reruns. No new credentials, personal filesystem paths, raw memory addresses or private observation dump found in changed sections. Six unchanged publication sections retain their exact reviewed hashes. Scope qualifications preclude a score of 10.",
+        "evidence": "Incremental publication review rage-doc-translation-round1.json. Unchanged article hashes checked; prior cumulative review preserved in priorResult. Changed human prose contains no new private paths, credentials, raw memory addresses or raw private-observation dumps. Private maps/build/raw evidence are explicitly disclosed rather than offered as publicly reproducible. Positive controls supplement the distinct main 273/273 campaign and close only the missing positive protection-reserve branch control. Ordinary prediction, universal coverage, exact historical failure replay and player release remain unverified. Primitive protection inputs are distinguished from completed engine decisions, and post-Start roster observations from pre-Start forecasts. Native-code safety is outside this review; retained evidence rather than new gameplay supports the qualified 9.",
         "findings": []
       },
       "incrementalReport": {
-        "file": "rage-doc-translation-round1.json",
-        "sha256": "0353111bd299755d3d103e5daa7483deed8ccf606f0b369aef0a580792134f34",
+        "file": "runic-doc-translation-round2.json",
+        "sha256": "c460b652074c91fa495c02dfa2506be63c79d7ffc41acc6b658162dcd4264e2a",
         "assessment": {
           "name": "security",
-          "verdict": "pass",
+          "reviewer_id": "/root/crowded_docs_translation",
+          "verdict": "no_confirmed_defect_in_changed_publication_claims",
           "score": 9,
           "findings": [],
-          "notes": "Changed human prose contains no new private paths, credentials, raw memory addresses or raw private-observation dumps. Private maps/build/raw evidence are explicitly disclosed rather than offered as publicly reproducible. Positive controls supplement the distinct main 273/273 campaign and close only the missing positive protection-reserve branch control. Ordinary prediction, universal coverage, exact historical failure replay and player release remain unverified. Primitive protection inputs are distinguished from completed engine decisions, and post-Start roster observations from pre-Start forecasts. Native-code safety is outside this review; retained evidence rather than new gameplay supports the qualified 9."
+          "evidence": [
+            "Two correction diffs contain only clearer UI-verification link labels and relative internal diary links",
+            "Six other article hashes unchanged; round1 publication-security acceptance inherited"
+          ],
+          "rationale": "The correction adds no credentials, private paths, raw logs, memory bindings or executable content. Both links stay within the public documentation site.",
+          "notes": [
+            "Publication prose scope only; no native/runtime/release artifact approval.",
+            "Round1 report preserved; unchanged historical bodies were not rereviewed."
+          ],
+          "verification_limits": [
+            "Fresh inspection limited to two round2 link corrections."
+          ]
         }
       }
     }
   },
   "overall": "PASS",
-  "timestamp": "2026-10-10T12:31:12.914Z"
+  "timestamp": "2026-10-10T16:09:51.061Z"
 }
