@@ -12,6 +12,24 @@ updated: 2026-10-10
 ---
 # Research diary
 
+## 2026-10-10 — starting-rage protection verified {#placement-rage-control}
+
+**Three positive live controls matched: all 10 neutral stacks and 170 numerical values.** The same hero on one loaded map received 21 Centaurs before each battle. Memory of our Blood supplied starting rage; Basic, Advanced and Expert Blood Rage were checked separately.
+
+| Blood Rage mastery | Native survivability estimate | Our replay |
+|---|---:|---:|
+| Basic | 294 | 294 |
+| Advanced | 319 | 319 |
+| Expert | 355 | 355 |
+
+This is an internal deployment estimate, not a change to the Centaurs' displayed health. Replaying the same retained inputs with only protection data removed produced 126 in all three cases. This control shows that the added correction affects the required branch.
+
+Forecasts were frozen before Start; the complete actual roster was checked separately afterwards. Positive protection capacity and absorption parameters were retained as primitive inputs, not completed engine decisions. Skills were confirmed by a separate query after mutation: command completion alone does not establish the new state.
+
+The three battle controls took about 3.65, 3.72 and 4.22 seconds; separate retained-evidence verification took about 0.38 seconds. An initial battle without Memory of our Blood also matched, but produced no positive reserve and is not a positive protection control.
+
+This supplements the 273/273 campaign on the same research build. One control did not observe the defensive-formation decision and does not certify it; the two observed decisions matched. The exact historical state from the 294-versus-126 failure was not restored. Other heroes, effects and arenas still need their own checks; ordinary forecasting and player release are not certified. Maps, the build and raw observations remain private, as for the [main campaign](#placement-273-matrix).
+
 ## 2026-10-10 — ten map runs completed: 273/273 {#placement-273-matrix}
 
 **All 273 battles and 757 stacks matched completely in the new campaign.** Ten runs of the polygon and two random maps preserved the hero and progression within each run. Controls included different hero armies and cases with seven source stacks on each side.

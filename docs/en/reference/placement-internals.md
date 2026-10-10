@@ -18,6 +18,8 @@ Technical reference for **stack splitting, sorting and cell selection**. Start w
 
 The current research build completed an independently verified plan: **273/273 complete matches, 757 stacks, ten map runs**. Every forecast was saved before Start and compared with the complete actual roster afterwards. This validates the checked set; other heroes, effects, arenas and ordinary mode remain separate work. [Conditions and result](research-diary.md#placement-273-matrix).
 
+Three later positive starting-rage controls matched the complete forecast for 10 neutral stacks and 170 numerical values. They close the missing live protection-reserve control noted in the earlier checkpoints below. Basic, Advanced and Expert Blood Rage were checked on one hero with 21 Centaurs and Memory of our Blood; this does not establish all other combinations. [Control, replay and limits](research-diary.md#placement-rage-control).
+
 The previous campaign stopped after 269 matches because a large army reached the input-journal limit. Storage was corrected and the complete new campaign above was run; the earlier stopped result remains separate. [Journal-limit investigation](research-diary.md#placement-journal-capacity).
 
 ### Earlier checkpoints and remaining limits

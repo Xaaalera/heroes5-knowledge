@@ -20,7 +20,7 @@ The research version running through the SDK completed independent verification:
 
 Ordinary prediction must continue to exclude hidden counts, upgrades and the final neutral split. Post-Start explanations of actual placement for every player remain planned.
 
-This campaign uses developer Superadmin: hidden source creature types and quantities are available before Start. Ordinary forecasting remains an estimate. Not every combination of heroes, effects and arenas is covered; a positive live protection-reserve control is still required separately.
+This campaign uses developer Superadmin: hidden source creature types and quantities are available before Start. Ordinary forecasting remains an estimate. Not every combination of heroes, effects and arenas is covered. Three separate [positive starting-rage controls](../reference/research-diary.md#placement-rage-control) passed: all 10 neutral stacks and the checked numerical values matched.
 
 SDK checks cover projections before Start, footprint and movement highlighting, creature cards, selection of a reference upgrade and opening the full description. Description navigation arrows remain unverified. These changes have not shipped in the player package. [Current status and earlier research stages](../reference/placement-internals.md#current-research).
 
