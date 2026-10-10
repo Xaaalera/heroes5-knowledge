@@ -679,7 +679,7 @@ The first correction produced a new0/2 miss with hero Angels while the Peasant c
 
 DLL e4d4c6 matched269/273 complete battles across ten fresh Polygon/two-generated-map loads:209/213 mixed and60/60 solo. Predictions were saved before Start and all games closed normally.272/273 occupied-cell-set matches do not replace creature/quantity verification.
 
-Three misses of one pack exchanged two melee units under defence plus spread. The game used ordinary movement-aware ordering; the mod selected power ordering. DLL192e08 corrects comparator selection and passes49 native tests and3 fresh targeted battles, including defence without spread. Its complete series has not run.
+Three misses of one pack exchanged two melee units under defence plus spread. The game used ordinary movement-aware ordering; the mod selected power ordering. DLL384e08 corrects comparator selection and passes49 native tests and3 fresh targeted battles, including defence without spread. Its complete series has not run.
 
 The fourth miss remains:40 Goblins and3 Cyclopes. The game classifies the Cyclops as a physical shooter in this composition despite a recorded ordinary ammo count of zero. Both predicted rows differed from the actual rows. Exact classification and its use remain to fix; the full algorithm is not yet proven. Raw logs remain internal.
 
