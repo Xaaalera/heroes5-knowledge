@@ -1125,6 +1125,8 @@ Across ten loads, the older candidate matched **all occupied cells in 111 of 149
 
 ## September 25 — why the mixed pack matched 1/7 {#placement-policy}
 
+**October 11, 2026 clarification — knowledge before combat.** In the tested Universe build, the ordinary tooltip contains a numeric range; the control retained **20–49**, not an exact count. Separate controls with Scouting and with an equipped Crown of Many Eyes but no Scouting admitted the exact original guard composition: **40 Archers**. Combat then split the guard and introduced an upgraded stack. Knowing the original 40 Archers does not reveal that future split. The skill or equipped artifact was checked on the participating hero; a backpack artifact is not equipped. These checks cover these ordinary guards and our Universe build, not other heroes, sight distances, creature banks or game versions. The older observation below remains a record of the previous research state.
+
 **Question:** observer error, DLL startup or placement calculation?
 
 **Method:** ordinary DLL loading, WorkshopPolygon, pack_8 → pack_12 → pack_15. Predictions were saved before Start; GetUnitPosition recorded positions separately. An additional observer captured placement-context parameters before formation selection; these records were read after combat and never supplied to the predictor. Random state was not fixed between runs.

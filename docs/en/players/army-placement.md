@@ -40,7 +40,7 @@ The game then makes a random adjustment: one result reduces the number by one; a
 
 Once the part count is chosen, creatures are distributed nearly evenly. **If ten creatures have already been assigned to three parts**, the result is **4 + 3 + 3**. With three or four parts, interior stacks may receive an upgrade of the original creature; the endpoints keep the original type. Splitting, a possible upgrade, and cell selection are three separate decisions.
 
-Exact neutral quantities are hidden before combat behind labels such as “pack” or “lots.” Players know their own army, but not every number in this comparison. See the [research diary](../reference/research-diary.md#placement-policy) for the checks.
+Without exact scouting information, our Universe build shows neutral quantities as ranges, such as **1–9** or **10–19**. A range limits the possible creature count but does not reveal the exact number. Scouting or an equipped Crown of Many Eyes can reveal the guard's exact original composition; this still does not reveal how the game will split it into combat stacks. Players know their own army, but not every input to this comparison before combat. See the [research diary](../reference/research-diary.md#placement-policy) for the checks.
 
 [![Before combat the hero army and obstacles are visible, but neutral models are hidden](../../assets/placement/academy-before.png)](../../assets/placement/academy-before.png)
 
