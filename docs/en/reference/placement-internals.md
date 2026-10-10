@@ -16,7 +16,7 @@ Technical reference for **stack splitting, sorting and cell selection**. Start w
 
 ## Research checkpoint {#current-research}
 
-The subsequent campaign is stopped: **116/116 complete placements matched**, but one battle's hero-army health estimate differed — **294 versus 126**. The protection-reserve step has been added; its arithmetic was checked against original instructions, while a positive live control is still required. This does not complete validation of all calculations or the whole campaign. [Evidence and verification limits](research-diary.md#placement-sdk-numeric).
+The subsequent campaign is stopped: **116/116 complete placements matched**, but one battle's hero-army health estimate differed — **294 in the engine versus 126 in the mod**. The protection-reserve step has been added; its arithmetic was checked against original instructions, while a positive live control is still required. This does not complete validation of all calculations or the whole campaign. [Evidence and verification limits](research-diary.md#placement-sdk-numeric).
 
 As of **10 October 2026**, the preserved research calculation is connected to the SDK. In five control battles, all 17 numerical fields of both armies matched each of nine observed engine evaluations. Each comparison uses that evaluation's own inputs and corrections; later records for the same army are checked separately. [Control and verification limits](research-diary.md#placement-sdk-numeric).
 
@@ -41,7 +41,7 @@ The last completed checks before the pause ran on **4 October**, after correctin
 |---|---|---|
 | Isolated native tests | 60/60 | Local rules and regressions; not a battle campaign |
 | Cyclops, Goblin and Archer counterexample | 3/3 stacks | Creature, quantity and cell in one battle |
-| Full test polygon with 100 Archers in the hero army | 36/36 battles | 30 mixed and 6 single-type packs |
+| Full test polygon with 100 Archers in the hero army | 36/36 battles | 30 packs with multiple source stacks and 6 with one source stack |
 | Ten-load campaign | Incomplete | Two loads and three battles of the third, then the game was closed to change priorities |
 
 The preceding DLL achieved **151/151 complete matches** across five loads: 108 polygon battles and 43 random-map battles. An earlier version separately achieved **273/273** across ten loads. Each result belongs to its own build and cannot certify a changed DLL. Later counterexamples showed that a successful campaign does not establish the complete algorithm.
