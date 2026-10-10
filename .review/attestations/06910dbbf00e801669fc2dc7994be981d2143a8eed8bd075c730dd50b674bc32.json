@@ -1,0 +1,1738 @@
+{
+  "diffHash": "06910dbbf00e801669fc2dc7994be981d2143a8eed8bd075c730dd50b674bc32",
+  "commitSha": "49e6546fa594fa641aaef0aa894c5d5fab1eaefd",
+  "perAgent": {
+    "craft": {
+      "verdict": "PASS",
+      "score": 9,
+      "reviewer": "numeric-gate-craft-final",
+      "evidence": "HEAD is 49e6546; Git state is clean. c87dd23..49e6546 contains exactly two DLL192e08→DLL384e08 restorations. Both restored paragraphs exactly match published accadbd; its diary diff now contains only the new numeric section. Prior craft FAIL remains superseded evidence. All 44 documentation files match HEAD; 38 unchanged files match trusted attestation commit blobs. No tests, game commands, edits or other current-role reports used.",
+      "findings": [
+        {
+          "severity": "advisory",
+          "path": ".local/test-state/canonical-graphics-build-20261006/numeric-publication-articles.json",
+          "detail": "The assembled package still carries pre-restoration hashes for both research diaries; 32/34 hashes match. Rebuild and validate final article hashes before attestation, as planned. Source restoration itself passes."
+        }
+      ],
+      "review": {
+        "reviewer": "numeric-gate-docs",
+        "files": [
+          "AGENTS.md",
+          "CONTRIBUTING.md",
+          "README.md",
+          "docs/contributing.md",
+          "docs/en/contributing.md",
+          "docs/en/modding/console.md",
+          "docs/en/modding/devkit.md",
+          "docs/en/modding/native-projects.md",
+          "docs/en/modding/native-ui.md",
+          "docs/en/modding/resource-overrides.md",
+          "docs/en/modding/test-maps.md",
+          "docs/en/players/army-placement.md",
+          "docs/en/players/bank-reference.md",
+          "docs/en/players/deployment-preview.md",
+          "docs/en/players/mods.md",
+          "docs/en/reference/castle-artwork.md",
+          "docs/en/reference/creatures.md",
+          "docs/en/reference/formats.md",
+          "docs/en/reference/game-api.md",
+          "docs/en/reference/placement-internals.md",
+          "docs/en/reference/research-diary.md",
+          "docs/en/reference/technology-stack.md",
+          "docs/en/reference/universe-build.md",
+          "docs/en/reference/xkit-commands.md",
+          "docs/llms.txt",
+          "docs/modding/console.md",
+          "docs/modding/devkit.md",
+          "docs/modding/native-projects.md",
+          "docs/modding/native-ui.md",
+          "docs/modding/resource-overrides.md",
+          "docs/modding/test-maps.md",
+          "docs/players/army-placement.md",
+          "docs/players/bank-reference.md",
+          "docs/players/deployment-preview.md",
+          "docs/players/mods.md",
+          "docs/reference/castle-artwork.md",
+          "docs/reference/creatures.md",
+          "docs/reference/formats.md",
+          "docs/reference/game-api.md",
+          "docs/reference/placement-internals.md",
+          "docs/reference/research-diary.md",
+          "docs/reference/technology-stack.md",
+          "docs/reference/universe-build.md",
+          "docs/reference/xkit-commands.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "Prior own review retained: player summaries, mechanism checkpoint and diary have distinct purposes; final changes restore historical identifiers only."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "Two token restorations preserve headings, tables, links and navigation assessed in the prior own review."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "Restored DLL384e08 identifies the historical build precisely; numeric health attribution and source-stack terminology are unchanged."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "Final changes introduce no commands or prerequisites; prior assessment of fresh loads and pre-/post-Start comparison remains applicable."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "Both historical paragraphs exactly match accadbd. Numeric text still separates 116/116 placements from failed health294/126 and pending positive live protection."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "Final changes preserve developer-only hidden inputs and limitations on ordinary forecasting, player release and complete-algorithm acceptance."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "Identical historical-token restoration in RU/EN; both paragraphs match their published originals."
+          },
+          "maintenance": {
+            "verdict": "N/A",
+            "evidence": "Source correction is complete, but assembled article records retain two stale diary hashes. Final package acceptance awaits the planned rebuild and exact-hash validation."
+          }
+        },
+        "findings": []
+      }
+    },
+    "architecture": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "numeric-gate-architecture-final",
+      "evidence": "Bounded follow-up using only my prior architecture report and c87dd23..49e6546 source changes; configured SOLID/Ockham guides and knowledge/AGENTS.md read. HEAD is 49e6546fa594fa641aaef0aa894c5d5fab1eaefd; worktree clean. Diff contains exactly two historical diary token restorations, DLL192e08→DLL384e08, one per RU/EN file. Both restored paragraphs match published accadbd; no additional historical changes occur in this follow-up. Current numeric section and architectural boundaries are unchanged, preserving the prior architecture PASS: research inputs remain distinct from ordinary inputs, with no new player-release, parity or full-algorithm claim. The reported earlier craft failure is superseded by this verified source restoration; my own prior report was PASS. No tests, game commands or other current role reports used. Article-package rebuilding and final attestation gates remain outside this certification.",
+      "findings": []
+    },
+    "tests": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "numeric-gate-tests-final",
+      "evidence": "Applied tests-architecture. Clean HEAD is 49e6546fa594fa641aaef0aa894c5d5fab1eaefd. Independently verified c87dd23..49e6546 changes exactly two historical diary tokens, DLL192e08→DLL384e08; accadbd..49e6546 contains only the new numeric section in both diaries, proving historical text is restored and that section unchanged. Prior historical-corruption finding is superseded by this source verification. Previous tests-review conclusions remain scoped: fixtures do not establish ten rotations or player acceptance; 116/116 placements coexist with failed health 294/126; positive live protection remains unverified. No tests or campaigns launched; final gate reruns and article-package hash validation remain pending.",
+      "findings": []
+    },
+    "docs": {
+      "verdict": "PASS",
+      "score": 10,
+      "reviewer": "numeric-gate-docs-final",
+      "evidence": "HEAD49e6546fa594fa641aaef0aa894c5d5fab1eaefd; clean Git state. c87dd23..49e6546 changes only DLL192e08→DLL384e08 in two historical diary paragraphs. accadbd..HEAD contains no remaining historical diary changes; retained handoff:2628 confirms full DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d. Current numeric sections are unchanged. Verified38 unchanged documentation files against accadbd, trusted98a4061 and working bytes;28 reused article records equal trusted records. Current assembled34-article package passes exact-hash validateArticleCritiques; all15 referenced round3/correction/restoration report hashes match. Historical corruption is resolved; its prior failure remains superseded evidence. No gameplay/build/browser tests rerun. Score follows review-docs.mjs.",
+      "findings": [],
+      "review": {
+        "reviewer": "numeric-gate-docs-final",
+        "files": [
+          "AGENTS.md",
+          "CONTRIBUTING.md",
+          "README.md",
+          "docs/contributing.md",
+          "docs/en/contributing.md",
+          "docs/en/modding/console.md",
+          "docs/en/modding/devkit.md",
+          "docs/en/modding/native-projects.md",
+          "docs/en/modding/native-ui.md",
+          "docs/en/modding/resource-overrides.md",
+          "docs/en/modding/test-maps.md",
+          "docs/en/players/army-placement.md",
+          "docs/en/players/bank-reference.md",
+          "docs/en/players/deployment-preview.md",
+          "docs/en/players/mods.md",
+          "docs/en/reference/castle-artwork.md",
+          "docs/en/reference/creatures.md",
+          "docs/en/reference/formats.md",
+          "docs/en/reference/game-api.md",
+          "docs/en/reference/placement-internals.md",
+          "docs/en/reference/research-diary.md",
+          "docs/en/reference/technology-stack.md",
+          "docs/en/reference/universe-build.md",
+          "docs/en/reference/xkit-commands.md",
+          "docs/llms.txt",
+          "docs/modding/console.md",
+          "docs/modding/devkit.md",
+          "docs/modding/native-projects.md",
+          "docs/modding/native-ui.md",
+          "docs/modding/resource-overrides.md",
+          "docs/modding/test-maps.md",
+          "docs/players/army-placement.md",
+          "docs/players/bank-reference.md",
+          "docs/players/deployment-preview.md",
+          "docs/players/mods.md",
+          "docs/reference/castle-artwork.md",
+          "docs/reference/creatures.md",
+          "docs/reference/formats.md",
+          "docs/reference/game-api.md",
+          "docs/reference/placement-internals.md",
+          "docs/reference/research-diary.md",
+          "docs/reference/technology-stack.md",
+          "docs/reference/universe-build.md",
+          "docs/reference/xkit-commands.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "Own prior review remains applicable: player summaries, mechanism reference and dated diary serve distinct readers.38 unchanged paths retain exact trusted coverage."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "Restoration changes no headings, navigation or numeric section. Current checkpoint separates stopped campaign, historical builds and outstanding verification."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "Historical DLL384e08 now matches published source and retained full hash. Numeric text retains engine294/mod126, source-record categories and separate sweep/diagnostic totals."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "Own prior conditions review remains valid; restoration introduces no procedure. Fresh-load, pre-Start and evaluation-specific boundaries remain explicit."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "Frozen evidence distinguishes116/116 placement matches from FAILED original health294/126; positive live protection remains pending. Final article hashes and all referenced critic-report hashes independently validate."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "Unchanged numeric sections confine hidden inputs to developer Superadmin and exclude ordinary-mode, player-release and full-algorithm acceptance. Historical targeted tests retain incomplete-series limits."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "Both historical tokens restored identically; final diary diff contains only paired numeric additions. Own prior RU/EN review of health labeling, source-stack terminology and evidence limits remains applicable."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "Configured standard, wittgenstein and critique guides read; lean-writing is authoring-only. Canonical ownership retained.38 files and28 records reused exactly; current package includes five distinct critic lanes and bounded round3 restoration evidence, without a fourth broad round."
+          }
+        },
+        "findings": [],
+        "articleCritiques": [
+          {
+            "path": "docs/contributing.md",
+            "sha256": "ec96d1d5eb622fb5101caeaafa0639a42a8fb6eab416f268f8fd2ea1cebe4490",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report article-critique-newcomer-round3.json; SHA-256 0ca7e94548b89c58a0335238ee22568b846072387c7e761ba8bb4bfc37fd1f9e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/contributing.md:117-119; knowledge/docs/en/contributing.md:117-119",
+                    "problem": "The push procedure requires results.json without explaining how to obtain a valid review report.",
+                    "consequence": "A first local contributor cannot complete the gate from the documented steps.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed textual omission: review:info reports base/hash/articles, while the next instruction assumes an existing actual-results JSON.",
+                    "disposition": "resolved",
+                    "verification": "Both versions assign this stage to maintainers, identify results.json as a report received from independent reviewers, and link the adapter, nested contract validator and illustrative fixtures."
+                  }
+                ]
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report article-critique-accuracy-round3.json; SHA-256 ed994033ee12f4c58f953531dd165182082e5877da710d2949193d7656e35c62. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report article-critique-steps-round3.json; SHA-256 1ad94948324d40b848a4f61931c2e7b7c261832e9ff36b0796f415bfe9d3e0c6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/contributing.md:117-119; knowledge/docs/en/contributing.md:117-119",
+                    "problem": "The review procedure omits committing source changes before review and attestation.",
+                    "consequence": "A maintainer following the written sequence hits a hard gate refusal with uncommitted article edits.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed by knowledge/scripts/review-check.mjs:55-59: any dirty path outside .review/attestations throws Commit the source changes before reviewing or pushing.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at line123 explicitly require committing source/article changes before attestation, while retaining separate attestation commit afterward."
+                  },
+                  {
+                    "location": "knowledge/docs/contributing.md:119; knowledge/docs/en/contributing.md:119",
+                    "problem": "The attest instruction does not provide or link the accepted results JSON shape.",
+                    "consequence": "The prose finding fields cannot be turned into an accepted report without reverse-engineering the validator.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed: review-check.mjs:64-72 treats the file as a perAgent object; review-docs.mjs requires docs.review.articleCritiques with exact path/hash/author/round/critics fields and lane names; review:info:52 reports config and criteria but no results shape.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at119/123 assign report acquisition to maintainers, explain the results-file placeholder, name the five-lens object and docs.review fields, and link actual adapter, nested validator and test-format examples without presenting fixture data as real review."
+                  },
+                  {
+                    "location": "knowledge/docs/contributing.md:99-107; knowledge/docs/en/contributing.md:99-107",
+                    "problem": "The Linux setup downloads Chromium without installing its required system dependencies.",
+                    "consequence": "A fresh supported Linux machine can reach npm test and fail before any browser test executes.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed prerequisite omission from docs: Playwright documents install-deps or install --with-deps at https://playwright.dev/docs/browsers; knowledge/.github/workflows/pages.yml:34 already uses install --with-deps chromium. No fresh Linux execution was performed.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at113 replace the Linux browser installation command with install --with-deps chromium, explain OS package privileges and link official Playwright browser documentation."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report article-critique-structure-round3.json; SHA-256 46d528a0b9816109983357bfdf6c3d84e5d27f909ebca2b25b346b6fa1fdf89c. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report article-critique-translation-round3.json; SHA-256 17e12ade2a4e9576765b7b5f9321ddfcefa9d368d76ca3864caa5546b7685e80. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/contributing.md",
+            "sha256": "0b87e381ce9679b8c75bf38a7b6eb313f01c6da14e1e8d50fd40bebcc29670af",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report article-critique-newcomer-round3.json; SHA-256 0ca7e94548b89c58a0335238ee22568b846072387c7e761ba8bb4bfc37fd1f9e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/contributing.md:117-119; knowledge/docs/en/contributing.md:117-119",
+                    "problem": "The push procedure requires results.json without explaining how to obtain a valid review report.",
+                    "consequence": "A first local contributor cannot complete the gate from the documented steps.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed textual omission: review:info reports base/hash/articles, while the next instruction assumes an existing actual-results JSON.",
+                    "disposition": "resolved",
+                    "verification": "Both versions assign this stage to maintainers, identify results.json as a report received from independent reviewers, and link the adapter, nested contract validator and illustrative fixtures."
+                  }
+                ]
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report article-critique-accuracy-round3.json; SHA-256 ed994033ee12f4c58f953531dd165182082e5877da710d2949193d7656e35c62. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report article-critique-steps-round3.json; SHA-256 1ad94948324d40b848a4f61931c2e7b7c261832e9ff36b0796f415bfe9d3e0c6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": [
+                  {
+                    "location": "knowledge/docs/contributing.md:117-119; knowledge/docs/en/contributing.md:117-119",
+                    "problem": "The review procedure omits committing source changes before review and attestation.",
+                    "consequence": "A maintainer following the written sequence hits a hard gate refusal with uncommitted article edits.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed by knowledge/scripts/review-check.mjs:55-59: any dirty path outside .review/attestations throws Commit the source changes before reviewing or pushing.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at line123 explicitly require committing source/article changes before attestation, while retaining separate attestation commit afterward."
+                  },
+                  {
+                    "location": "knowledge/docs/contributing.md:119; knowledge/docs/en/contributing.md:119",
+                    "problem": "The attest instruction does not provide or link the accepted results JSON shape.",
+                    "consequence": "The prose finding fields cannot be turned into an accepted report without reverse-engineering the validator.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed: review-check.mjs:64-72 treats the file as a perAgent object; review-docs.mjs requires docs.review.articleCritiques with exact path/hash/author/round/critics fields and lane names; review:info:52 reports config and criteria but no results shape.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at119/123 assign report acquisition to maintainers, explain the results-file placeholder, name the five-lens object and docs.review fields, and link actual adapter, nested validator and test-format examples without presenting fixture data as real review."
+                  },
+                  {
+                    "location": "knowledge/docs/contributing.md:99-107; knowledge/docs/en/contributing.md:99-107",
+                    "problem": "The Linux setup downloads Chromium without installing its required system dependencies.",
+                    "consequence": "A fresh supported Linux machine can reach npm test and fail before any browser test executes.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "Confirmed prerequisite omission from docs: Playwright documents install-deps or install --with-deps at https://playwright.dev/docs/browsers; knowledge/.github/workflows/pages.yml:34 already uses install --with-deps chromium. No fresh Linux execution was performed.",
+                    "disposition": "Corrected in both languages after the frozen third-round findings.",
+                    "verification": "Both versions at113 replace the Linux browser installation command with install --with-deps chromium, explain OS package privileges and link official Playwright browser documentation."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report article-critique-structure-round3.json; SHA-256 46d528a0b9816109983357bfdf6c3d84e5d27f909ebca2b25b346b6fa1fdf89c. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report article-critique-translation-round3.json; SHA-256 17e12ade2a4e9576765b7b5f9321ddfcefa9d368d76ca3864caa5546b7685e80. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/console.md",
+            "sha256": "489ca7c0f3c1c7e225cd3d457ca548f713ced5ecdf6beef79e50020334376718",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round2. Published v0.1.1-preview.5 native/console_module.cpp:819-830 displays runtime states without project discovery/prototype grouping. Current ../devkit/native/module_catalog.hpp and console_module.cpp implement the explicitly unpublished addition; dated module_catalog_checkpoint supports its limited historical test.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final unpublished-section notice distinguishes the development project catalog from downloadable preview.5. Original S2 is resolved: release source only enumerates connected-module events, and final text says the complete catalog/prototype section is absent from that release. Prior independent round-two judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The module-inspection section follows panel controls and precedes diagnostics. Its opening explicitly separates the unpublished catalog from downloadable preview.5; the final verified-scope section retains released-console scope. Reciprocal translation metadata and local links resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match round 2 newcomer review. The section explicitly identifies the catalog as unpublished and states that downloadable preview.5 lacks the complete project catalog and prototype section.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Inspect our mods / ?????????? ???? ????",
+                    "problem": "The project catalog was originally presented as available in documented preview.5.",
+                    "consequence": "Release users could not find the promised catalog and status labels.",
+                    "evidence": "Published preview.5 revision 757a19a lacks module_catalog.hpp and renders raw moduleStates.",
+                    "disposition": "Added an explicit section-level notice identifying the catalog as unpublished and describing preview.5 limitations.",
+                    "verification": "Final bytes explicitly state that downloadable preview.5 lacks the complete project catalog and separate prototype section."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Paired Modules additions align on unpublished status, preview.5 limitations, connection versus source discovery, and no automatic activation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/devkit.md",
+            "sha256": "09c03d9ce2f330c1c66c52b0a8900d161d5e375d9a35b79e12767d44b8c72ce9",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round1. Added integration paragraph accurately summarizes native-projects.md#architecture-contract and root/devkit/mod AGENTS requirements; no claim of current migration completion.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Architecture prerequisite resolves to native-projects.md#architecture-contract. It states normative integration requirements without asserting migration completion. Starter verification remains confined to observed function output. Prior independent judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The architecture prerequisite is directly under C++ development before its commands, and links to the explicit architecture-contract anchor in the same language. Setup, resource release, native development, diagnostics and verification retain distinct sections. Local links and reciprocal metadata resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match earlier independent newcomer review. The integration paragraph identifies when to consult the canonical architecture contract and summarizes mod ownership and player independence.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Paired architecture-contract link paragraphs align on mod behavior/UI ownership, runtime adapter and player independence.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/native-projects.md",
+            "sha256": "26c261ea4ee34030fe6e88a71b28026b64b75a36fe40ddb3492685aac9e8dd97",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round1. Root, devkit and both mod AGENTS link and establish these normative boundaries. ../devkit/scripts/plugin_core.py:258-314 validates DLL format, required exports and ordinary/delayed imports; plugin-watch.py:738-744 validates before publishing ZIP. Dynamic dependency checks, automatic layer checking, migrated predictor feature parity and ordinary startup remain explicitly unverified.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Required contract, dependency direction, lifecycle and migration evidence were independently reviewed. Static development ZIP checks match scripts/plugin_core.py validate_player_archive and its plugin-watch/plugin-check callers. Dynamic loads, source-layer separation, behavioral parity and ordinary managed-player startup remain separate unverified scopes. Prior judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The broadened title and architecture-inclusive navigation match the opening contract. Layer responsibilities, dependency direction, operating modes, lifecycle, acceptance and current limits precede the practical clone/export/recovery procedures. Requirements explicitly do not certify builds; the static package check remains unpublished. architecture-contract and player-package-check anchors resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match earlier independent newcomer review. Six layer roles, dependency examples, development/player modes, lifecycle ownership and migration acceptance explain obligations and prohibitions; requirements do not claim current compliance.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Six layers, dependency direction, player/development modes, state and callback lifetime, migration evidence and incomplete checks align between RU and EN.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/native-ui.md",
+            "sha256": "6c730f3aa80165424fddfc6c2538714b0518a81c0c9659bd5b6b57ee99a83e4e",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-newcomer-round1.json; SHA-256 ae0a3089591481a9ad2aa69c0dae53109416fd09cfe23eb8974d4f391a9b2f9e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-accuracy-round1.json; SHA-256 37d42b09c99e0093c6321c5670dc6c64ec5de61b13b132021aea86a61c986e72. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-steps-round1.json; SHA-256 e4a99b7ee07aeeacb2f630fe9884629cadbde1bf60b9bbcd5044a4a0a5ddd528. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-structure-round1.json; SHA-256 f7dee986868c839c00e43e48e0a6fe3af7bfce1e8c6b1baac8b1e75b2461682e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-translation-round1.json; SHA-256 48dbe77d5da5415f7b86fc2cda39d2da92a854a2a32c499acc7f52161216cf08. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/resource-overrides.md",
+            "sha256": "2f69383fdc4aa0a5d8417ad19157bdd37bd3aad9b901d8b8ed1f089783bcc78f",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/test-maps.md",
+            "sha256": "d070b371580560361e3d03c9ca2f6aaa6c10bc4845ec17ac77ce4d61fd8e9d62",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/players/bank-reference.md",
+            "sha256": "0edd84dd73a2f0aa0edd91af963d7f845eff4e11551a37f101498ed3b88ef876",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Full current paired article read; changed preparation explicitly removes legacy prototype and retains original graphics/input before copying exact preview.4 bin/UserMODs members. Existing round1 exact publicfcce3a ZIP inspection and matching historical Crypt/startup receipts reused; frozen source preflight refuses old prototype and mismatched paired H5U. DLL loading is accurately distinguished from file installation.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Full frozen paired article reread, current hashes independently matched, missing file-transfer action verified at line 29 and prototype refusal checked in WorkshopBankReferenceInstall.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Round 1: both bank-reference articles lines 26-29; round 2 verification at lines 26-31",
+                    "problem": "Installation omitted explicit extraction/copying of the loader, bank DLL and H5U.",
+                    "consequence": "A reader could install only graphics while leaving the bank mod inside the ZIP.",
+                    "evidence": "The frozen round 1 wording inventories package members and explicitly installs only d3d9.dll.",
+                    "disposition": "The author added complete file transfer after backups and before normal launch.",
+                    "verification": "Both current articles line 29 explicitly extract the ZIP and merge its bin/UserMODs folders into the installed game, naming dinput8.dll, d3d9.dll, WorkshopBankReference.dll and workshop-army-reference.h5u; lines 27-28 move old prototype removal and backups before copying; lines 30-31 give normal launch and expected hover result."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired round2 text and normalized hashes checked. Installation sequence is close/preflight/backup/copy/launch/check; removal, card interpretation, example, sources and bounded historic/current evidence remain discoverable. No new structure/navigation defect found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Download and install: numbered launch/hover steps and following old-prototype paragraph",
+                    "problem": "Old text-prototype removal is ordered after game launch instead of before it.",
+                    "consequence": "A returning user can follow the numbered procedure and reach a launch where the bank reference refuses installation or fails to appear, before learning the required cleanup.",
+                    "evidence": "Frozen paired articles put old workshop-object-reference.h5u removal in the paragraph after numbered steps3(launch) and4(hover). src/bank_launcher.cpp, WorkshopBankReferenceInstall, explicitly requires that this old prototype not exist before installing the bank reference.",
+                    "disposition": "Moved old-prototype removal and existing-H5U preservation into numbered preflight step2, before backup/copy/launch steps3-5.",
+                    "verification": "Independent structure reviewer read both complete frozen round2 articles. Step2 explicitly removes the blocked old prototype; step4 explicitly extracts/copies bin and UserMODs; launch is step5 and card check step6. The original prerequisite-order failure is absent."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленного DLL loading и шести текущих шагов установки RU/EN.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/bank-reference.md:20; RU pair:20",
+                    "problem": "EN previously translated DLL connection/loading as Automatic DLL installation.",
+                    "consequence": "EN described verified automatic file installation instead of verified connection of installed DLLs.",
+                    "evidence": "Round1 RU:20 подключение DLL vs EN:20 Automatic DLL installation.",
+                    "disposition": "EN:20 now says DLL loading.",
+                    "verification": "Independently read current pair: RU подключение DLL and EN DLL loading mean the same action; manual folder copying is explicit and equivalent in both line29."
+                  }
+                ]
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-step and context reading: backup, extract/copy, startup and expected bank-card steps are explicit; shared infrastructure is distinguished from complete SDK. No new substantive clarity finding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/bank-reference.md:26-29 (round1)",
+                    "problem": "The numbered installation steps never instruct copying the bank DLL, H5U and shared input DLL from the package.",
+                    "consequence": "A newcomer following the explicit actions installs only d3d9.dll and cannot get the bank card.",
+                    "evidence": "Round1 textual omission: package contents were listed, while only d3d9.dll had an explicit installation action.",
+                    "disposition": "Both versions now include an explicit extract-and-copy installation step after backups.",
+                    "verification": "Independent round2 reading at lines26-31 confirms six ordered steps; line29 copies/merges bin and UserMODs into the installed game directory and lists all four installed payload files."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "docs/en/players/deployment-preview.md",
+            "sha256": "85a72e70f3e2f243221f8d5e8d0e58e84c9ede019908fcf3d3abcb4409089428",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "codex:01a12496-bf4b-7e82-9b1d-4dde44f07bb7",
+                "evidence": "Changed paragraphs clearly distinguish hidden-input developer research from ordinary forecasting and downloadable-player accuracy. Separate tested builds are named as the scope of the reported matches. The stopped campaign's placement success is not presented as numerical validation or full algorithm completion, and the correction retains its own live-verification requirement. Full final-round3 report numeric-critic-newcomer-round3.json SHA256 772f0a0ccdb15cadbccfbe4ec6870efae9acb068a5f6b5819e8bf251b82714b5.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "codex:01a12496-bf4b-74f3-abfe-44a4a7b7957b",
+                "evidence": "Changed numerical claims are supported by frozen creature/quantity/cell tuples: three separate36/36 polygon sweeps and43/43 selected RMG battles. Research source epochs remain separate from the downloadable package.116/116 stopped-campaign placements are independently reproducible, while generation239 offline replay preserves false numerical aggregates294 versus126 and true strategy.273 planned cases remain unaccepted; protection correction still requires positive live verification. Twenty timing controls neither establish that capture nor enter article accuracy totals. Full final-round3 report numeric-critic-accuracy-round3.json SHA256 e5a56cd3ee00dd0848330d440a6aca90d12fa7da3e2474d210fb5071c25fee28.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "codex:01a12498-dde5-76d1-a03b-c00b03d3da5c",
+                "evidence": "Checked changed status paragraphs against frozen sweep and stopped-campaign evidence. Developer Superadmin's hidden pre-Start inputs and tested-build boundaries are stated. The116/116 placement result does not claim successful validation of all calculations or the complete campaign. Correction verification remains pending, and downloadable-package accuracy is kept separate. The linked research record imposes no private-artifact download or nonexistent SDK procedure. Full final-round3 report numeric-critic-steps-round3.json SHA256 856568a7a487952cc10a45aca1b4dcd944c20f42a01ecce771e7c8585f847dd1.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "codex:01a1249a-7c00-7582-a3f1-e990ac09b736",
+                "evidence": "The changed development status precedes installation and links to the current checkpoint and new 10 October diary entry. The previous DLL, bounded SDK sweeps, stopped campaign and downloadable package remain distinct. The final status paragraph explicitly preserves failed calculation validation and the correction's outstanding live verification. Full final-round3 report numeric-critic-structure-round3.json SHA256 379146b69c5203cf54d250d86967effd6aedec7d3acb9a137b7cb57856118296.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "codex:01a1249b-a86c-7bd2-a318-e6f53c1ab3a9",
+                "evidence": "The new EN paragraphs preserve all RU counts, developer-only hidden-input permissions, pre-Start timing, tested-build boundaries and remaining campaign work. The116/116 statement remains placement-only, calculation validation remains failed and the correction requires live verification. Adjacent ordinary-mode exclusions and all-player post-Start tasks agree with RU; research results do not certify the downloadable package. Full final-round3 report numeric-critic-translation-round3.json SHA256 e0c541985486a8b9675dd9027b554bceb8f1599e3d5692e082ae469d8b921795.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/castle-artwork.md",
+            "sha256": "2bc1b138b9e26fdbafdfb6e706f38696456b607628adfbd8db3990e42f63520d",
+            "round": 1,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent full article/source metadata read confirms8original PNGs1672x941, displayed decimal MB rounded to2places, matching faction filenames and unchanged eight SHA256 values. AVIF previews and PNG download paths resolve at each generated language depth; NOTICE explicitly attributes originals to OpenAI image generation for this project. Retained browser receipt reports8byte-identical downloads per language and no mobile overflow.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Read full frozen EN article and independently matched LF-normalized hash; all eight named PNG actions mirror RU using rendered-route ../../../assets paths and retained original filenames, distinctly labelled from AVIF previews; parent actual browser receipt records all eight matching downloads and 390px no overflow.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired frozen pages independently read and supplied normalized hashes confirmed. Opening text states all8 backgrounds, original1672x941 PNG downloads and compressed AVIF previews. Eight distinct faction H2 headings each place matching preview and original download together. Both mkdocs navigation entries exist; corresponding RU/EN metadata links pair the gallery. Existing castle-gallery-browser-check.json shows16 source-identical downloads and no390pxoverflow; receipt inspected, not rerun. No concrete structure/task-navigation defect found.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Direct full RU/EN article comparison; all8 names/sizes/data labels match. Raw HTML link URLs resolved against rendered RU/EN article routes, not Markdown file directories; all16 routes point at same8originalPNG files with1672x941IHDR. NOTICE12 supports OpenAI-generated backgrounds.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent full paired-article reading: introduction distinguishes compressed previews from unchanged original1672x941PNG downloads, buttons state the save action, all8 faction sections identify image/source files, and provenance is linked without inventing a reuse-license promise. No substantive newcomer-clarity finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/formats.md",
+            "sha256": "c9e8d81d65ecb21a7ab21754b44ecce5e100da146dbfc783d5bc5b63944a514c",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report formats-critique-newcomer-round3.json; SHA-256 20e45cfdf17675b2828ccd20c715c19338f19a3cff2161386cae63727113ae1e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report formats-critique-accuracy-round3.json; SHA-256 7bbe42370ff7e79289f21f0569743f687b9d4813ee6129470fc980d8e30b7fb0. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report formats-critique-steps-round3.json; SHA-256 d74272a9462e8a9440245574f57d45bc68a38cf86a78cd9040950526019a28f9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report formats-critique-structure-round3.json; SHA-256 73fc0f86784b4cfa0571f8e12354d50efab9a9b00b3ed5233bf7770fd46336f6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report formats-critique-translation-round3.json; SHA-256 85db313fc29273b9d4213063e452bf7de2fac0106c95030344fe91092745bc4a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/game-api.md",
+            "sha256": "23d6be5d389189539a1c057061cf450ac1ad23cf5b30f00b6a841eeb7b57d9b8",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report game-api-critique-newcomer-round3.json; SHA-256 fcd6f82d16c14d3628c3aaae6dd78662336646df5b6f078b576401e82c2d25c9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report game-api-critique-accuracy-round3.json; SHA-256 9ca9b2a5f788e0ceab2c6dcd5675f456a35599ea53cdd0c0ebae716b6a09e73a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report game-api-critique-steps-round3.json; SHA-256 28ab54fd890f93a64cec0665cadf6bd0e06658476c046e4d8e176b90349da50b. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report game-api-critique-structure-round3.json; SHA-256 0b7704e1285f714b3e5d6b2ec17dc1efa903eb19b5d476914b28d3c7cf640d76. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report game-api-critique-translation-round3.json; SHA-256 7eeb6b47bd319cef69a1beaaa6aa4ae8b4da517e56c3bb9087222c976d4876b3. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/placement-internals.md",
+            "sha256": "9c61950d031ec3efb6247357b9cffe580f94ea3a6c02ef898f4912b121d42975",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "codex:01a124ac-e9e9-77d2-ba66-41ee409c034a",
+                "evidence": "The changed checkpoint distinguishes placement agreement from numerical and full-campaign acceptance. Research-build limits, ordinary estimates and unfinished Superadmin coverage remain explicit. The linked diary explains hidden-input provenance and why instruction checks do not establish positive live protection capture. Full final-round3 report numeric-critic-newcomer-round3.json SHA256 772f0a0ccdb15cadbccfbe4ec6870efae9acb068a5f6b5819e8bf251b82714b5. Bounded same-round correction verification numeric-critic-newcomer-round3-correction.json SHA256 533f5310f128f5daa510a14b5a367e9de83c16cdbffff8c0fdcf69a6ceae6149: Verified bcc7445..c87dd23 corrections at lines 19 and 44: health 294 belongs to the engine and 126 to the mod; categories now count multiple source stacks versus one source stack. Adjacent source-record definitions at lines 62 and 78 count records rather than unique creature portraits, so two records of the same type remain in the multiple-source category. Corrections preserve research/ordinary-mode, build/player-package and numeric/full-algorithm boundaries. Independently computed normalized SHA256 matches the correction manifest. Earlier full-article round3 review remains retained separately; no fourth broad review was performed.",
+                "findings": [
+                  {
+                    "location": "docs/en/reference/placement-internals.md:19, Research checkpoint",
+                    "problem": "The pair “294 versus 126” does not identify which value belongs to the engine and which belongs to the mod.",
+                    "consequence": "A newcomer must follow the diary link to understand the discrepancy; labeling the values locally would remove the ambiguity.",
+                    "severity": "S3",
+                    "state": "resolved",
+                    "evidence": "This sentence leaves both values unlabeled; docs/en/reference/research-diary.md:32 explicitly identifies engine294 versus mod126.",
+                    "disposition": "Corrected within final round3; no fourth broad review.",
+                    "verification": "Verified bcc7445..c87dd23 corrections at lines 19 and 44: health 294 belongs to the engine and 126 to the mod; categories now count multiple source stacks versus one source stack. Adjacent source-record definitions at lines 62 and 78 count records rather than unique creature portraits, so two records of the same type remain in the multiple-source category. Corrections preserve research/ordinary-mode, build/player-package and numeric/full-algorithm boundaries. Independently computed normalized SHA256 matches the correction manifest. Earlier full-article round3 review remains retained separately; no fourth broad review was performed. Report: numeric-critic-newcomer-round3-correction.json"
+                  }
+                ]
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "codex:01a124ac-e9e9-7793-9da0-824f5aae9c1f",
+                "evidence": "Changed checkpoint checked against frozen complete-condition records and independently reconstructed placement tuples.36/36×3 and96/98/99 stacks,43/43 and126 stacks are supported. Five controls/nine evaluations/17 fields per army agree with306 numerical comparisons and retained exact-prefix/source-mapping evidence. Hash-pinned generation120 offline function replay matches.116/116 placements coexist with generation239 aggregate failure294 versus126; strategy still matches.192 protection instruction cases plus42 scaling cases do not prove positive live protection capture. The text preserves historical build scope and does not certify the273-case campaign or corrected build. Full final-round3 report numeric-critic-accuracy-round3.json SHA256 e5a56cd3ee00dd0848330d440a6aca90d12fa7da3e2474d210fb5071c25fee28. Bounded same-round correction verification numeric-critic-accuracy-round3-correction.json SHA256 1d39fc8b130474968e68fd348cd4073c715851971c3ca3e9d23a41b67bc0c3bb: Bounded verification of bcc7445..c87dd23 and adjacent source-stack semantics only; normalized final hash matches the supplied manifest. Hash-verified generation239 bytes confirm engine294 versus mod126. The corrected30 multiple-source-stack/6 one-source-stack wording agrees with record-based classification: two source records of the same creature remain mixed; splitting one source record does not make it mixed. Earlier full-article round3 remains retained separately for36/36x3,96/98/99 stacks,43/43 and126 stacks, five cases/18 stacks/nine evaluations/306 numeric fields, and the single7-vs7 composition. Historical sweeps do not certify newer diagnostic builds. No game access, replay execution or fourth broad review.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "codex:01a124ae-19fd-7211-8ffe-c9ff420fa222",
+                "evidence": "Checked changed checkpoint against frozen evidence. Exact evaluation inputs are distinguished from later evaluations and final placement observations. Independent offline replay of generation120 confirms the stated replay method within its recorded scope. The separate36/36 and43/43 results retain their conditions;116/116 placements do not establish numerical correctness, corrected-build acceptance or complete campaign coverage. Positive live protection verification remains explicitly pending. No public command or source availability is invented. Full final-round3 report numeric-critic-steps-round3.json SHA256 856568a7a487952cc10a45aca1b4dcd944c20f42a01ecce771e7c8585f847dd1. Bounded same-round correction verification numeric-critic-steps-round3-correction.json SHA256 f8e5542edd6f5faf8ede9839e708d31e463b64633501c7f021c7451cc85b9ff9: Bounded inspection of bcc7445..c87dd23: line19 explicitly attributes health294 to the engine and126 to the mod while retaining the existing verification limits. Line44 now categorizes30 packs by multiple source stacks and6 by one source stack, consistent with the adjacent source-record definition: two records of the same creature remain mixed, and splitting one record does not change its source category. Frozen evidence retains the100-Archer36-battle sweep as historical build-specific evidence. No downloadable private-artifact requirement or new command/source claim is introduced. Independently computed UTF-8/LF-normalized hash matches the final receipt. Earlier full-article round3 remains separately retained; no fourth broad review was performed.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "codex:01a124af-2371-74c2-a984-3ea5a47c036e",
+                "evidence": "The checkpoint leads with the stopped campaign and outstanding positive protection control, then explicitly dates the state to 10 October. Numeric, capture and decision-alignment links resolve to unique anchors. A separate heading isolates the pre-migration DLL and its historical campaigns. Remaining work and the latest diary link appear before the mechanism reference; historical successes do not certify the corrected build. Full final-round3 report numeric-critic-structure-round3.json SHA256 379146b69c5203cf54d250d86967effd6aedec7d3acb9a137b7cb57856118296. Bounded same-round correction verification numeric-critic-structure-round3-correction.json SHA256 aba3228b087b4d3e6e6e98a38087e53ffe64c2b15dfc8afb29a190f623deb409: Verified both bcc7445..c87dd23 corrections: health 294 belongs to the engine and 126 to the mod; the historical table now distinguishes multiple source stacks from one source stack. This agrees with adjacent Army preparation's record-based definition, so two records of the same creature remain in the multiple-source category. The current 10 October checkpoint, dated diary targets, historical-DLL heading and remaining-work navigation remain unchanged. Normalized hash matches the correction manifest. Earlier full-article numeric-structure-round3 remains retained separately; no new broad review.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "codex:01a124af-b701-7792-a4b5-e810921eb140",
+                "evidence": "Changed paragraphs preserve the RU dates, numerical totals, stopped-campaign scope, protection limits and remaining tasks. Checked source-versus-combat terminology against adjacent diary definitions and frozen classification counterexamples: pack34 has two same-type source stacks and is mixed; pack19 has one source stack producing three combat stacks. Full final-round3 report numeric-critic-translation-round3.json SHA256 e0c541985486a8b9675dd9027b554bceb8f1599e3d5692e082ae469d8b921795. Bounded same-round correction verification numeric-critic-translation-round3-correction.json SHA256 c4edb7e13dc61b49b3a93a67beb9b98a390ff70cae2f156677336171113ca135: Verified both English corrections against RU: engine294/mod126 attribution agrees; the36/36 table now describes30 packs with multiple source stacks and6 with one source stack, replacing the incorrect single-type category. A source stack is an input army record before combat splitting; combat stacks are resulting battle records. Two source records of the same creature therefore remain mixed, while one source record may produce several combat stacks. Dates, hidden-input restrictions, evidence limits and remaining tasks retain bilingual equivalence. Normalized working-file and c87dd23 hashes match the frozen correction input. Earlier full-article round3 scope remains retained separately; no fourth broad review was performed.",
+                "findings": [
+                  {
+                    "location": "docs/en/reference/placement-internals.md:44, Research DLL before the SDK migration table",
+                    "problem": "“6 single-type packs” classifies packs by creature type, while the corresponding RU category and source-stack definition classify them by the number of source records.",
+                    "consequence": "Readers can count two Peasant source stacks as a single-type pack and misinterpret the30/6 coverage split; use “6 single-source-stack packs” and define mixed packs by multiple source stacks.",
+                    "severity": "S2",
+                    "state": "resolved",
+                    "evidence": "The adjacent diary defines30 packs with multiple source stacks, including repeated creature types, and6 with one source stack. Frozen precise_sdk_full_polygon_latest classifies pack34 as mixed with two stacks, while pack19 is solo despite producing three combat stacks.",
+                    "disposition": "Corrected within final round3; no fourth broad review.",
+                    "verification": "Verified both English corrections against RU: engine294/mod126 attribution agrees; the36/36 table now describes30 packs with multiple source stacks and6 with one source stack, replacing the incorrect single-type category. A source stack is an input army record before combat splitting; combat stacks are resulting battle records. Two source records of the same creature therefore remain mixed, while one source record may produce several combat stacks. Dates, hidden-input restrictions, evidence limits and remaining tasks retain bilingual equivalence. Normalized working-file and c87dd23 hashes match the frozen correction input. Earlier full-article round3 scope remains retained separately; no fourth broad review was performed. Report: numeric-critic-translation-round3-correction.json"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/research-diary.md",
+            "sha256": "ba6a33d5d3d1ed94ea061f709618913acaaebafb8b638d9a50834e604d1dcde9",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "codex:01a124b4-5c4e-7cd0-b33d-cfecfbd0d0a6",
+                "evidence": "Changed section clearly distinguishes hidden-input research, ordinary estimates and unpublished player changes. Frozen records support the separate placement and numerical checks. The stopped campaign explicitly identifies engine294 versus mod126 despite matching placements and strategy. Instruction-level protection validation is separated from positive live capture; the original archive remains insufficient and its failure is not converted into a pass. Full final-round3 report numeric-critic-newcomer-round3.json SHA256 772f0a0ccdb15cadbccfbe4ec6870efae9acb068a5f6b5819e8bf251b82714b5. Bounded historical-token restoration verification numeric-critic-newcomer-round3-history-restored.json SHA256 f77dc83bcde4e854c44a0d49a08cfe9b63807a89a9c2eccc515ab55fc96fd2d7: Verified c87dd23..49e6546 changes only DLL192e08 to DLL384e08. Restored paragraph is byte-identical to published accadbd after newline normalization. rg confirms historical DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d in root handoff line2628. Computed final normalized hash matches manifest. Paragraph retains targeted-build limits and states its complete series has not run. October10 numeric section is unchanged; retained numeric-newcomer-round3 review covers hidden Superadmin inputs versus ordinary forecasting, research builds versus downloadable-player accuracy, and numeric validation versus full algorithm completion. This check covers only restoration within final round3.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "codex:01a124b4-5c4c-7391-ab60-5ea801a4f684",
+                "evidence": "Frozen tuples reproduce 36/36×3 with96/98/99 stacks and43/43 with126 stacks. All five complete diagnostic records match18 stacks; the retained numerical acceptance supports nine evaluations and306 fields with exact input-prefix comparisons. Isolated unchanged comparator replay verifies hash-pinned generation120 before-Start inputs. The [7,7] control supports one maximum composition. Stopped campaign tuples reproduce116/116; generation239 offline comparison preserves294 versus126, aggregate failure and strategy agreement.273 planned cases remain unaccepted.192 protection instruction cases and42 old scaling cases establish bounded arithmetic coverage, not positive getter capture. Missing generation239 parameters remain missing; twenty later timing controls do not enter these totals. Source epochs and corrected-build acceptance limits remain separate. Full final-round3 report numeric-critic-accuracy-round3.json SHA256 e5a56cd3ee00dd0848330d440a6aca90d12fa7da3e2474d210fb5071c25fee28. Bounded historical-token restoration verification numeric-critic-accuracy-round3-history-restored.json SHA256 d674b9187e79fed6e0108e400389739e9ff01793030f71c16e49a6e1c8e38321: Bounded c87dd23..49e6546 verification: only DLL192e08→DLL384e08 changes. Restored historical paragraph is byte-identical to published accadbd after newline normalization. Root docs/2026-09-23-handoff.md:2628 confirms DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d and49/49 native tests. Final normalized hash matches the supplied manifest. October10 numeric section is byte-identical to retained full round3 commit bcc7445; its earlier accuracy review remains retained for36/36×3 with96/98/99 stacks,43/43 with126 stacks, five cases/18 stacks/nine evaluations/306 numeric fields, and one7-vs7 composition. Historical sweep epochs remain separate; newer diagnostics inherit no whole-sweep acceptance. This is a restoration verification within round3, not a new broad article review.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "codex:01a124b5-3644-7430-98c3-2bc28444e6a1",
+                "evidence": "Checked changed/adjacent sections against frozen conditions and complete diagnostic tuples. The 36/36 sweeps and selected 43/43 RMG battles remain scoped to their tested builds. Five diagnostic cases contain 18 matching stacks; 306 values denote nine evaluations of two 17-field aggregates. Generation120 independently replayed offline successfully. The 116/116 placement result does not certify the failed health calculation, complete273 matrix or corrected build. The192 instruction cases do not establish positive live protection capture. No downloadable private evidence or nonexistent commands are prescribed. Full final-round3 report numeric-critic-steps-round3.json SHA256 856568a7a487952cc10a45aca1b4dcd944c20f42a01ecce771e7c8585f847dd1. Bounded historical-token restoration verification numeric-critic-steps-round3-history-restored.json SHA256 bcc1e4593eafd2dd42b778575461f49f9eb75ddcf8c87529117bb6b7ebe2df61: c87dd23..49e6546 changes only DLL192e08 to DLL384e08. Restored paragraph is byte-identical to published accadbd after newline normalization. Root HEAD handoff line2174 confirms historical DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d. October10 sections are unchanged from retained full round3 input bcc74455; its conditions and evidence-boundary review remains scoped to that text. Restoration adds no public procedure, private-artifact download requirement, SDK command or public-source claim. Final normalized hash matches the supplied manifest and working file.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "codex:01a124b5-aa46-7110-85ea-301f75c521d0",
+                "evidence": "The new 10 October entry comes first and has a unique placement-sdk-numeric anchor. Completed sweeps, five diagnostic battles, the stopped 116/273 campaign and the corrected build awaiting validation remain separate stages. The 116 placement matches do not conceal the 294/126 health failure or certify the planned matrix. Protection instruction checks are separated from outstanding positive live verification. Timing controls are excluded from article accuracy totals. The adjacent earlier entry is dated and links to the current checkpoint; the historical DLL correction remains under 3 October. Full final-round3 report numeric-critic-structure-round3.json SHA256 379146b69c5203cf54d250d86967effd6aedec7d3acb9a137b7cb57856118296. Bounded historical-token restoration verification numeric-critic-structure-round3-history-restored.json SHA256 2bfc654563ac0533e5b5190d34e8f3f73ef019b586222f55458480637bd76376: c87dd23..49e6546 changes only historical DLL192e08 to DLL384e08. Restored paragraph is byte-identical to accadbd after newline normalization. rg confirms full historical DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d in root handoff line 2628. Final normalized hash matches the manifest. October 10 numeric section, unique placement-sdk-numeric anchor, current-claim navigation and remaining-work distinctions are unchanged from retained numeric-structure-round3 at bcc74455; c87dd23 matches that reviewed diary. Bounded restoration verification only.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "codex:01a124b6-5282-78e0-b928-a89a8adbbc5b",
+                "evidence": "All added EN paragraphs and table rows preserve the RU counts, dates, input restrictions and evidence scopes. Exact-input evaluation comparisons agree with the frozen mapping and interval reviews without claiming universal correctness. The stopped campaign, missing generation239 protection parameters, unverified corrected build and required positive live control remain explicit; timing controls are excluded from article accuracy totals. The adjacent source-stack/combat-stack distinction and changed historical DLL identifier192e08 agree across languages. Full final-round3 report numeric-critic-translation-round3.json SHA256 e0c541985486a8b9675dd9027b554bceb8f1599e3d5692e082ae469d8b921795. Bounded historical-token restoration verification numeric-critic-translation-round3-history-restored.json SHA256 d6b139e4a95e3eeb9bc7ba5e891531f723e36ba1d081735db37d4c44e161a6db: The sole scoped change restores DLL384e08; its paragraph matches published accadbd byte-for-byte after newline normalization, and the full historical hash is confirmed by rg in root handoff line2628. Final normalized working-file and commit hashes match the manifest. Retained full round3 October10 scope remains unchanged. Direct RU/EN comparison preserves separate36/36 sweeps with96/98/99 combat stacks,43/43 with126 stacks, five controls with18 stacks and306 values, seven-versus-seven control,116/273 stopped campaign, engine294 versus mod126,192 instruction checks, pending positive live protection control and corrected-build validation. Hidden-input rules, ordinary-mode limits and post-Start tasks agree. Source records precede splitting; resulting combat stacks do not determine the source-stack category. No new broad article round.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/technology-stack.md",
+            "sha256": "cf86d1bda0e2249cfbe8c3aec4b0048ef437093ca0ad8596539fbf8ac04322c1",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Fresh final-byte review after inventory extension. ../devkit/native/module_catalog.hpp parses manifests through nlohmann/json. ../devkit/scripts/plugin_core.py:258-314 imports pefile and checks DLL exports, format, normal/delayed dependencies; plugin-watch.py:738-744 invokes it before ZIP publication. ../devkit/requirements.txt pins pefile. Wording limits this additional usage to the development packager.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Fresh final review of the pefile usage addition against scripts/plugin_core.py validate_player_archive: normal/delayed PE imports and required DLL exports are checked before native ZIP emission. The row explicitly says development packager; it makes no ordinary-game or architecture-conformance claim. Existing JSON catalog usage remains accurate.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "Catalog manifest parsing extends the existing native JSON row; development package entry/dependency validation extends the existing analysis row with explicit development scope. Version sources and change-maintenance procedure remain separate sections. Navigation and reciprocal translation metadata resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Refreshed final text review: existing pefile now has a concrete development-packager purpose, DLL entry point and dependency validation before player ZIP emission. Developer-only tooling remains distinguished from player prerequisites; version sources link to manifests.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Native JSON purpose and module_catalog.hpp match; pefile entry-point/dependency checks are consistently scoped to the development packager before player ZIP emission.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/universe-build.md",
+            "sha256": "f19c9a41d1a3156c54194d3a6733e8c1e225974fda7a613223039dc007bc6e2d",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-newcomer-round2.json; SHA-256 98dda0f8652fb186d773a9292c237fa137aafc6624953c8369aeb5b6d42013a7. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-accuracy-round2.json; SHA-256 6458416c566697a4ddfdaecb6ecd6944bce941a0b91bd3ff9db6d89ae6118a92. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-steps-round2.json; SHA-256 aa07de3b42199c15d074cbcafbf30e6df4e867fce208397b9906618a35b97e0a. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-structure-round2.json; SHA-256 44932b093178e8cbab93079fec9ff99e19f0b26930ef892348b20ae4770e92d6. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-translation-round2.json; SHA-256 8346cc15708ab6de9fd31e638c8866bde868d682363e1d5389965723f2cfc786. Historical claims remain outside revalidation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/xkit-commands.md",
+            "sha256": "135c560aad59ad36f31691bbe26effd9f003b9aab18ba2267325a3f128e791e0",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report sdk-command-critique-newcomer-round3.json; SHA-256 f2fb20082b054a67bc5116716604ff6c0fee389c0e69a64a98167d055d37dcb7. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report sdk-command-critique-accuracy-round3.json; SHA-256 90905d2265e8b709b6f16085902a578d1fb560c998c86a5e3d9dc1afea5f7205. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report sdk-command-critique-steps-round3.json; SHA-256 871096df54e089cac01b8a694374d1cb82baf15536773db853098709b935f018. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report sdk-command-critique-structure-round3.json; SHA-256 dc72c26424415eb6615732d08d4e7dee507326d6205c7fdb5c988b1f6a7ed087. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report sdk-command-critique-translation-round3.json; SHA-256 bfee2fa8e8f565fa7d92245354acfdf1dd7a0bcd3c689fbcdd6318c6ad9074d2. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/console.md",
+            "sha256": "d3980170975007f63805ac8214fa45c018d0858d5309d70e8e57b2bd2b8a860b",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round2. Published v0.1.1-preview.5 native/console_module.cpp:819-830 displays runtime states without project discovery/prototype grouping. Current ../devkit/native/module_catalog.hpp and console_module.cpp implement the explicitly unpublished addition; dated module_catalog_checkpoint supports its limited historical test.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final unpublished-section notice distinguishes the development project catalog from downloadable preview.5. Original S2 is resolved: release source only enumerates connected-module events, and final text says the complete catalog/prototype section is absent from that release. Prior independent round-two judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The module-inspection section follows panel controls and precedes diagnostics. Its opening explicitly separates the unpublished catalog from downloadable preview.5; the final verified-scope section retains released-console scope. Reciprocal translation metadata and local links resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match round 2 newcomer review. The section explicitly identifies the catalog as unpublished and states that downloadable preview.5 lacks the complete project catalog and prototype section.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Inspect our mods / ?????????? ???? ????",
+                    "problem": "The project catalog was originally presented as available in documented preview.5.",
+                    "consequence": "Release users could not find the promised catalog and status labels.",
+                    "evidence": "Published preview.5 revision 757a19a lacks module_catalog.hpp and renders raw moduleStates.",
+                    "disposition": "Added an explicit section-level notice identifying the catalog as unpublished and describing preview.5 limitations.",
+                    "verification": "Final bytes explicitly state that downloadable preview.5 lacks the complete project catalog and separate prototype section."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Paired Modules additions align on unpublished status, preview.5 limitations, connection versus source discovery, and no automatic activation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/devkit.md",
+            "sha256": "93c2c89cfc7af974c09f9a8a23af34bf36aa8f73018d6791a59b8817347aade8",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round1. Added integration paragraph accurately summarizes native-projects.md#architecture-contract and root/devkit/mod AGENTS requirements; no claim of current migration completion.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Architecture prerequisite resolves to native-projects.md#architecture-contract. It states normative integration requirements without asserting migration completion. Starter verification remains confined to observed function output. Prior independent judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The architecture prerequisite is directly under C++ development before its commands, and links to the explicit architecture-contract anchor in the same language. Setup, resource release, native development, diagnostics and verification retain distinct sections. Local links and reciprocal metadata resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match earlier independent newcomer review. The integration paragraph identifies when to consult the canonical architecture contract and summarizes mod ownership and player independence.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Paired architecture-contract link paragraphs align on mod behavior/UI ownership, runtime adapter and player independence.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/native-projects.md",
+            "sha256": "65988808025df276982ce0299740b1edc591446be27a6c8b459d86458c46d33d",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round1. Root, devkit and both mod AGENTS link and establish these normative boundaries. ../devkit/scripts/plugin_core.py:258-314 validates DLL format, required exports and ordinary/delayed imports; plugin-watch.py:738-744 validates before publishing ZIP. Dynamic dependency checks, automatic layer checking, migrated predictor feature parity and ordinary startup remain explicitly unverified.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Required contract, dependency direction, lifecycle and migration evidence were independently reviewed. Static development ZIP checks match scripts/plugin_core.py validate_player_archive and its plugin-watch/plugin-check callers. Dynamic loads, source-layer separation, behavioral parity and ordinary managed-player startup remain separate unverified scopes. Prior judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The broadened title and architecture-inclusive navigation match the opening contract. Layer responsibilities, dependency direction, operating modes, lifecycle, acceptance and current limits precede the practical clone/export/recovery procedures. Requirements explicitly do not certify builds; the static package check remains unpublished. architecture-contract and player-package-check anchors resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match earlier independent newcomer review. Six layer roles, dependency examples, development/player modes, lifecycle ownership and migration acceptance explain obligations and prohibitions; requirements do not claim current compliance.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Six layers, dependency direction, player/development modes, state and callback lifetime, migration evidence and incomplete checks align between RU and EN.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/native-ui.md",
+            "sha256": "698603e44d9c200132d7178d950224a12eeae6bff575cd38802e42c3cb1f35f0",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-newcomer-round1.json; SHA-256 ae0a3089591481a9ad2aa69c0dae53109416fd09cfe23eb8974d4f391a9b2f9e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-accuracy-round1.json; SHA-256 37d42b09c99e0093c6321c5670dc6c64ec5de61b13b132021aea86a61c986e72. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-steps-round1.json; SHA-256 e4a99b7ee07aeeacb2f630fe9884629cadbde1bf60b9bbcd5044a4a0a5ddd528. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-structure-round1.json; SHA-256 f7dee986868c839c00e43e48e0a6fe3af7bfce1e8c6b1baac8b1e75b2461682e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-translation-round1.json; SHA-256 48dbe77d5da5415f7b86fc2cda39d2da92a854a2a32c499acc7f52161216cf08. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/resource-overrides.md",
+            "sha256": "5a62e9ad25ea0532070f91bb1f591421c168812cbab4f9b24f7e106e0238d3b0",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/test-maps.md",
+            "sha256": "63039baf161d4acd0c97f24b6a12856cbdae362004c4097c2bdd572f94496230",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/players/bank-reference.md",
+            "sha256": "1dc3e79ac8dca3529e4b06cdf7f21adfba30329400affd89a12efab6fe67b653",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Full current paired article read; changed preparation explicitly removes legacy prototype and retains original graphics/input before copying exact preview.4 bin/UserMODs members. Existing round1 exact publicfcce3a ZIP inspection and matching historical Crypt/startup receipts reused; frozen source preflight refuses old prototype and mismatched paired H5U. DLL loading is accurately distinguished from file installation.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Full frozen paired article reread, current hashes independently matched, missing file-transfer action verified at line 29 and prototype refusal checked in WorkshopBankReferenceInstall.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Round 1: both bank-reference articles lines 26-29; round 2 verification at lines 26-31",
+                    "problem": "Installation omitted explicit extraction/copying of the loader, bank DLL and H5U.",
+                    "consequence": "A reader could install only graphics while leaving the bank mod inside the ZIP.",
+                    "evidence": "The frozen round 1 wording inventories package members and explicitly installs only d3d9.dll.",
+                    "disposition": "The author added complete file transfer after backups and before normal launch.",
+                    "verification": "Both current articles line 29 explicitly extract the ZIP and merge its bin/UserMODs folders into the installed game, naming dinput8.dll, d3d9.dll, WorkshopBankReference.dll and workshop-army-reference.h5u; lines 27-28 move old prototype removal and backups before copying; lines 30-31 give normal launch and expected hover result."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired round2 text and normalized hashes checked. Installation sequence is close/preflight/backup/copy/launch/check; removal, card interpretation, example, sources and bounded historic/current evidence remain discoverable. No new structure/navigation defect found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "??????? ? ??????????: numbered launch/hover steps and following old-prototype paragraph",
+                    "problem": "Old text-prototype removal is ordered after game launch instead of before it.",
+                    "consequence": "A returning user can follow the numbered procedure and reach a launch where the bank reference refuses installation or fails to appear, before learning the required cleanup.",
+                    "evidence": "Frozen paired articles put old workshop-object-reference.h5u removal in the paragraph after numbered steps3(launch) and4(hover). src/bank_launcher.cpp, WorkshopBankReferenceInstall, explicitly requires that this old prototype not exist before installing the bank reference.",
+                    "disposition": "Moved old-prototype removal and existing-H5U preservation into numbered preflight step2, before backup/copy/launch steps3-5.",
+                    "verification": "Independent structure reviewer read both complete frozen round2 articles. Step2 explicitly removes the blocked old prototype; step4 explicitly extracts/copies bin and UserMODs; launch is step5 and card check step6. The original prerequisite-order failure is absent."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленного DLL loading и шести текущих шагов установки RU/EN.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/bank-reference.md:20; RU pair:20",
+                    "problem": "EN previously translated DLL connection/loading as Automatic DLL installation.",
+                    "consequence": "EN described verified automatic file installation instead of verified connection of installed DLLs.",
+                    "evidence": "Round1 RU:20 подключение DLL vs EN:20 Automatic DLL installation.",
+                    "disposition": "EN:20 now says DLL loading.",
+                    "verification": "Independently read current pair: RU подключение DLL and EN DLL loading mean the same action; manual folder copying is explicit and equivalent in both line29."
+                  }
+                ]
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-step and context reading: backup, extract/copy, startup and expected bank-card steps are explicit; shared infrastructure is distinguished from complete SDK. No new substantive clarity finding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/players/bank-reference.md:26-29 (round1)",
+                    "problem": "The numbered installation steps never instruct copying the bank DLL, H5U and shared input DLL from the package.",
+                    "consequence": "A newcomer following the explicit actions installs only d3d9.dll and cannot get the bank card.",
+                    "evidence": "Round1 textual omission: package contents were listed, while only d3d9.dll had an explicit installation action.",
+                    "disposition": "Both versions now include an explicit extract-and-copy installation step after backups.",
+                    "verification": "Independent round2 reading at lines26-31 confirms six ordered steps; line29 copies/merges bin and UserMODs into the installed game directory and lists all four installed payload files."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "docs/players/deployment-preview.md",
+            "sha256": "6ffc18c28877f716bad5d6ecca402111435924dde3cad36f2d69228c09c67ca9",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "codex:01a12496-bf4b-7e82-9b1d-4dde44f07bb7",
+                "evidence": "Changed paragraphs explicitly identify developer Superadmin hidden inputs, build-specific research results and ordinary estimates. They state that the changes are unpublished and do not change downloadable-package accuracy. The 116/116 placement result is explicitly separated from failed calculation validation and the correction's required live check. Full final-round3 report numeric-critic-newcomer-round3.json SHA256 772f0a0ccdb15cadbccfbe4ec6870efae9acb068a5f6b5819e8bf251b82714b5.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "codex:01a12496-bf4b-74f3-abfe-44a4a7b7957b",
+                "evidence": "Changed development-status claims match frozen tuple recomputation: three separate polygon36/36 sweeps and selected RMG43/43. Results retain their research-build scope. Stopped campaign independently yields116/116 complete placements, but generation239 hash-pinned offline replay retains aggregate failure294 versus126 with matching strategy. The273-case matrix remains unaccepted, corrected-build live verification remains outstanding, and later timing controls do not increase the stated accuracy totals or establish downloadable-package accuracy. Full final-round3 report numeric-critic-accuracy-round3.json SHA256 e5a56cd3ee00dd0848330d440a6aca90d12fa7da3e2474d210fb5071c25fee28.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "codex:01a12498-dde5-76d1-a03b-c00b03d3da5c",
+                "evidence": "Checked changed research-status paragraphs and their linked conditions. Hidden pre-Start inputs are explicitly confined to developer Superadmin. Separate sweeps are attributed to their research builds; the full campaign remains separate. The116 matching placements are distinguished from failed calculation validation and pending live correction verification. Research outcomes are not transferred to the downloadable package, and readers are not instructed to obtain private game artifacts. Full final-round3 report numeric-critic-steps-round3.json SHA256 856568a7a487952cc10a45aca1b4dcd944c20f42a01ecce771e7c8585f847dd1.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "codex:01a1249a-7c00-7582-a3f1-e990ac09b736",
+                "evidence": "Изменённый раздел состояния расположен перед установкой. Ссылки ведут к текущему checkpoint и новой записи 10 октября. Предыдущая DLL, ограниченные SDK-проходы, остановленная серия 116/116 расстановок и доступный пакет явно разделены. Последний абзац сохраняет непринятую проверку расчётов и необходимость отдельной игровой проверки исправления. Full final-round3 report numeric-critic-structure-round3.json SHA256 379146b69c5203cf54d250d86967effd6aedec7d3acb9a137b7cb57856118296.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "codex:01a1249b-a86c-7bd2-a318-e6f53c1ab3a9",
+                "evidence": "Compared both added paragraphs and adjacent input-policy text with EN. Three separate36/36 sweeps, selected-map43/43, hidden source types/counts before Start, build-specific results and incomplete broad coverage are equivalent. Both preserve116/116 placement success without calculation acceptance, require the correction's own live verification and exclude these results from downloadable-package accuracy. Ordinary hidden counts/upgrades/final splits remain excluded; post-Start explanations remain planned. Full final-round3 report numeric-critic-translation-round3.json SHA256 e0c541985486a8b9675dd9027b554bceb8f1599e3d5692e082ae469d8b921795.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/castle-artwork.md",
+            "sha256": "c7a102f83a3bd908f9c7833095c0b460df149b34e0f7a70377b6fe688973634e",
+            "round": 1,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent full article/source metadata read confirms8original PNGs1672x941, displayed decimal MB rounded to2places, matching faction filenames and unchanged eight SHA256 values. AVIF previews and PNG download paths resolve at each generated language depth; NOTICE explicitly attributes originals to OpenAI image generation for this project. Retained browser receipt reports8byte-identical downloads per language and no mobile overflow.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Read full frozen RU article and independently matched LF-normalized hash; its eight named download attributes target original PNGs with rendered-route ../../assets paths, while AVIF is clearly identified as preview; parent actual browser receipt records all eight downloads with original hashes and 390px no overflow.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired frozen pages independently read and supplied normalized hashes confirmed. Opening text states all8 backgrounds, original1672x941 PNG downloads and compressed AVIF previews. Eight distinct faction H2 headings each place matching preview and original download together. Both mkdocs navigation entries exist; corresponding RU/EN metadata links pair the gallery. Existing castle-gallery-browser-check.json shows16 source-identical downloads and no390pxoverflow; receipt inspected, not rerun. No concrete structure/task-navigation defect found.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Direct full RU/EN article comparison; all8 names/sizes/data labels match. Raw HTML link URLs resolved against rendered RU/EN article routes, not Markdown file directories; all16 routes point at same8originalPNG files with1672x941IHDR. NOTICE12 supports OpenAI-generated backgrounds.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent full paired-article reading: introduction distinguishes compressed previews from unchanged original1672x941PNG downloads, buttons state the save action, all8 faction sections identify image/source files, and provenance is linked without inventing a reuse-license promise. No substantive newcomer-clarity finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/formats.md",
+            "sha256": "29c101f55f9dcd8b97d9516e0defe2257ceff66f02153d745f2829c71ffcc37b",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report formats-critique-newcomer-round3.json; SHA-256 20e45cfdf17675b2828ccd20c715c19338f19a3cff2161386cae63727113ae1e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report formats-critique-accuracy-round3.json; SHA-256 7bbe42370ff7e79289f21f0569743f687b9d4813ee6129470fc980d8e30b7fb0. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report formats-critique-steps-round3.json; SHA-256 d74272a9462e8a9440245574f57d45bc68a38cf86a78cd9040950526019a28f9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report formats-critique-structure-round3.json; SHA-256 73fc0f86784b4cfa0571f8e12354d50efab9a9b00b3ed5233bf7770fd46336f6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report formats-critique-translation-round3.json; SHA-256 85db313fc29273b9d4213063e452bf7de2fac0106c95030344fe91092745bc4a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/game-api.md",
+            "sha256": "07d3463ca672fae26af596cda05f627e4aed0d1a5077df4c8d6efbb7c87ed13a",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report game-api-critique-newcomer-round3.json; SHA-256 fcd6f82d16c14d3628c3aaae6dd78662336646df5b6f078b576401e82c2d25c9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report game-api-critique-accuracy-round3.json; SHA-256 9ca9b2a5f788e0ceab2c6dcd5675f456a35599ea53cdd0c0ebae716b6a09e73a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report game-api-critique-steps-round3.json; SHA-256 28ab54fd890f93a64cec0665cadf6bd0e06658476c046e4d8e176b90349da50b. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report game-api-critique-structure-round3.json; SHA-256 0b7704e1285f714b3e5d6b2ec17dc1efa903eb19b5d476914b28d3c7cf640d76. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report game-api-critique-translation-round3.json; SHA-256 7eeb6b47bd319cef69a1beaaa6aa4ae8b4da517e56c3bb9087222c976d4876b3. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/placement-internals.md",
+            "sha256": "f2b089c26b6474ae9e984b0dca1d0169409e80dfe3f1a90b72aa9a32260f7ac4",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "codex:01a124ac-e9e9-77d2-ba66-41ee409c034a",
+                "evidence": "The changed checkpoint separates placement matches, numerical controls, interface checks and unfinished algorithm validation. Results are tied to tested research builds; adjacent text excludes hidden inputs from ordinary prediction and states that the Superadmin goal remains unmet. The linked diary supplies the hidden-input provenance and stopped-campaign details. Full final-round3 report numeric-critic-newcomer-round3.json SHA256 772f0a0ccdb15cadbccfbe4ec6870efae9acb068a5f6b5819e8bf251b82714b5. Bounded same-round correction verification numeric-critic-newcomer-round3-correction.json SHA256 533f5310f128f5daa510a14b5a367e9de83c16cdbffff8c0fdcf69a6ceae6149: Verified bcc7445..c87dd23 correction at line 17: health 294 explicitly belongs to the engine and 126 to the mod. The correction preserves the stated incomplete numeric/campaign validation and does not extend research Superadmin results to ordinary forecasting or downloadable player accuracy. Independently computed normalized SHA256 matches the correction manifest. Earlier full-article round3 review remains retained separately; this verification covers only the correction and adjacent scope.",
+                "findings": [
+                  {
+                    "location": "docs/reference/placement-internals.md:17, До чего дошло исследование",
+                    "problem": "Пара чисел «294 против 126» не указывает, какое значение получил движок, а какое — мод.",
+                    "consequence": "Новичок не может определить направление расхождения без перехода в дневник; подписи «294 у движка против 126 у мода» устранят неоднозначность.",
+                    "severity": "S3",
+                    "state": "resolved",
+                    "evidence": "В этой строке значения не подписаны; docs/reference/research-diary.md:32 явно указывает движок294 и мод126.",
+                    "disposition": "Corrected within final round3; no fourth broad review.",
+                    "verification": "Verified bcc7445..c87dd23 correction at line 17: health 294 explicitly belongs to the engine and 126 to the mod. The correction preserves the stated incomplete numeric/campaign validation and does not extend research Superadmin results to ordinary forecasting or downloadable player accuracy. Independently computed normalized SHA256 matches the correction manifest. Earlier full-article round3 review remains retained separately; this verification covers only the correction and adjacent scope. Report: numeric-critic-newcomer-round3-correction.json"
+                  }
+                ]
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "codex:01a124ac-e9e9-7793-9da0-824f5aae9c1f",
+                "evidence": "Changed research checkpoint agrees with recomputed frozen sweep tuples:36/36 with96/98/99 stacks and43/43 with126. Five diagnostic cases support nine observed evaluations,17 fields per army and306 comparisons; retained mapping/interval evidence supports exact evaluation inputs rather than later whole-core substitution. Generation120 isolated offline replay matches. Recomputed campaign placements are116/116, while generation239 replay confirms hero health294 versus126 and false aggregate validation. Protection arithmetic evidence does not establish positive live capture. Historical sweep results are confined to their tested builds, and complete algorithm/campaign acceptance remains explicitly incomplete. Full final-round3 report numeric-critic-accuracy-round3.json SHA256 e5a56cd3ee00dd0848330d440a6aca90d12fa7da3e2474d210fb5071c25fee28. Bounded same-round correction verification numeric-critic-accuracy-round3-correction.json SHA256 1d39fc8b130474968e68fd348cd4073c715851971c3ca3e9d23a41b67bc0c3bb: Bounded verification of bcc7445..c87dd23 and adjacent source-stack semantics only; normalized final hash matches the supplied manifest. Independently hash-verified frozen generation239 archive and decoded hero-side health words6/8: engine294, mod126, confirming the corrected attribution. Earlier full-article round3 remains retained separately: three36/36 sweeps with96/98/99 stacks,43/43 with126 stacks, five cases/18 stacks/nine evaluations/306 numeric fields, and one7-vs7 composition. Historical sweep epochs remain separate from diagnostic builds; no sweep acceptance transfers to newer diagnostics. No game access, replay execution or fourth broad review.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "codex:01a124ae-19fd-7211-8ffe-c9ff420fa222",
+                "evidence": "Checked changed checkpoint and adjacent acceptance boundaries. Numerical comparison uses each evaluation's own input prefixes and corrections, consistent with retained mapping/prefix evidence and successful generation120 offline replay. Separate hero-army sweeps preserve build scope and fresh-map conditions. The294-versus126 discrepancy remains distinct from116 matching placements; arithmetic checks do not replace the required positive live protection control or complete campaign. Links lead to research records without requiring private downloads. Full final-round3 report numeric-critic-steps-round3.json SHA256 856568a7a487952cc10a45aca1b4dcd944c20f42a01ecce771e7c8585f847dd1. Bounded same-round correction verification numeric-critic-steps-round3-correction.json SHA256 f8e5542edd6f5faf8ede9839e708d31e463b64633501c7f021c7451cc85b9ff9: Bounded inspection of bcc7445..c87dd23: line 17 now explicitly attributes health294 to the engine and126 to the mod. The stopped-series, arithmetic-only verification and pending positive live-control limits remain intact. The correction introduces no public-download requirement, SDK command or public-source claim. Independently computed UTF-8/LF-normalized hash matches the final receipt. Earlier full-article round3 remains separately retained; this verifies only the correction.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "codex:01a124af-2371-74c2-a984-3ea5a47c036e",
+                "evidence": "Checkpoint начинается с остановки серии и оставшегося положительного контроля защиты, затем явно датирует состояние 10 октября. Ссылки на numeric, capture и decision-alignment существуют и уникальны. Историческая DLL выделена отдельным подзаголовком; её 151/151 и 273/273 не представлены как результаты исправленной SDK-сборки. Раздел оставшейся работы и ссылка на последнюю запись доступны до технического описания. Full final-round3 report numeric-critic-structure-round3.json SHA256 379146b69c5203cf54d250d86967effd6aedec7d3acb9a137b7cb57856118296. Bounded same-round correction verification numeric-critic-structure-round3-correction.json SHA256 aba3228b087b4d3e6e6e98a38087e53ffe64c2b15dfc8afb29a190f623deb409: Verified bcc7445..c87dd23 correction: the current checkpoint explicitly attributes health 294 to the engine and 126 to the mod, retaining the stopped-campaign and outstanding positive-control limits. The 10 October date, current-research anchor, dated diary targets and historical-DLL separation remain unchanged. Normalized hash matches the correction manifest. Earlier full-article numeric-structure-round3 remains retained separately; no new broad review.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "codex:01a124af-b701-7792-a4b5-e810921eb140",
+                "evidence": "Compared the changed checkpoint and adjacent remaining-work sections with EN. Both preserve 10 October2026, five controls, nine evaluations,17 fields per army, separate 36/36 sweeps and43/43 selected-map coverage. Both distinguish116/116 placement success from failed health validation294 versus126, retain the positive-live-protection requirement and leave ordinary hidden-input policy and all-player post-Start explanations separate. Source stacks are pre-split army records; combat stacks are resulting placement records. Full final-round3 report numeric-critic-translation-round3.json SHA256 e0c541985486a8b9675dd9027b554bceb8f1599e3d5692e082ae469d8b921795. Bounded same-round correction verification numeric-critic-translation-round3-correction.json SHA256 c4edb7e13dc61b49b3a93a67beb9b98a390ff70cae2f156677336171113ca135: Verified bcc7445..c87dd23: RU and EN explicitly attribute health294 to the engine and126 to the mod, preserving116/116 placement matches and the pending positive live control. Adjacent army-preparation text distinguishes source records before splitting from resulting combat stacks. Surrounding bilingual counts, dates, hidden-input restrictions, evidence limits and remaining tasks remain equivalent. Normalized working-file and c87dd23 hashes match the frozen correction input. Earlier full-article round3 review remains retained separately; this verification covers only the corrections and adjacent terminology.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/research-diary.md",
+            "sha256": "a6963ba7242679e44aa94dbaf0a184c7deec74885da30ecf9cf4fb116b6e7a65",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "codex:01a124b4-5c4e-7cd0-b33d-cfecfbd0d0a6",
+                "evidence": "Changed section explicitly identifies Superadmin hidden inputs and separates tested research builds from ordinary forecasting and the player package. Frozen diagnostic records cover five battles and 18 stacks; the 306-value comparison is bounded to nine recorded evaluations. stopped_rotation confirms 116/116 placements, a false native aggregate match and a true strategy match at generation239, with the 273-battle campaign unaccepted. The protection paragraph distinguishes 192 instruction checks from the missing positive live control; neither the 42 older scaling cases nor twenty timing controls are added to article accuracy totals. Full final-round3 report numeric-critic-newcomer-round3.json SHA256 772f0a0ccdb15cadbccfbe4ec6870efae9acb068a5f6b5819e8bf251b82714b5. Bounded historical-token restoration verification numeric-critic-newcomer-round3-history-restored.json SHA256 f77dc83bcde4e854c44a0d49a08cfe9b63807a89a9c2eccc515ab55fc96fd2d7: Verified c87dd23..49e6546 changes only DLL192e08 to DLL384e08. Restored paragraph is byte-identical to published accadbd after newline normalization. rg confirms historical DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d in root handoff line2628. Computed final normalized hash matches manifest. Paragraph retains targeted-build limits and incomplete full-series acceptance. October10 numeric section is unchanged; retained numeric-newcomer-round3 review covers hidden Superadmin inputs versus ordinary forecasting, research builds versus downloadable-player accuracy, and numeric validation versus full algorithm completion. This check covers only restoration within final round3.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "codex:01a124b4-5c4c-7391-ab60-5ea801a4f684",
+                "evidence": "Changed/adjacent sections checked against frozen round3 evidence. Recomputed creature/quantity/cell tuples confirm polygon 36/36 with 96, 98 and 99 stacks; RMG 24+19=43 matches with 74+52=126 stacks. Five diagnostic records independently confirm 3+7+4+1+3=18 stacks, before-Start forecasts and matching snapshot references. Frozen acceptance records nine evaluations and 9×2×17=306 numeric fields; retained mapping and interval reviews support army orientation and exact prefixes. Executed the comparator's unchanged comparison function separately from receipt imports: hash-verified generation120 archive and replay binary produce two matching evaluations. Maximum control has core counts [7,7] and seven matching neutral tuples, supporting one composition only. Recomputed stopped campaign tuples confirm 116/116 placements; hash-verified generation239 replay retains false aggregates, true strategy and hero-side words6/8=294 versus126. The 273-case matrix remains unaccepted. Protection evidence supports 192 instruction cases plus42 earlier scaling cases, without positive live capture; generation239 lacks reserve/fraction primitives. Twenty timing controls are excluded from article totals. Historical sweep epochs are not transferred to diagnostic or corrected builds. Full final-round3 report numeric-critic-accuracy-round3.json SHA256 e5a56cd3ee00dd0848330d440a6aca90d12fa7da3e2474d210fb5071c25fee28. Bounded historical-token restoration verification numeric-critic-accuracy-round3-history-restored.json SHA256 d674b9187e79fed6e0108e400389739e9ff01793030f71c16e49a6e1c8e38321: Bounded c87dd23..49e6546 verification: only DLL192e08→DLL384e08 changes. Restored historical paragraph is byte-identical to published accadbd after newline normalization. Root docs/2026-09-23-handoff.md:2628 confirms DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d and49/49 native tests. Final normalized hash matches the supplied manifest. October10 numeric section is byte-identical to retained full round3 commit bcc7445; its earlier accuracy review remains retained for36/36×3 with96/98/99 stacks,43/43 with126 stacks, five cases/18 stacks/nine evaluations/306 numeric fields, and one7-vs7 composition. Historical sweep epochs remain separate; newer diagnostics inherit no whole-sweep acceptance. This is a restoration verification within round3, not a new broad article review.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "codex:01a124b5-3644-7430-98c3-2bc28444e6a1",
+                "evidence": "Checked changed/adjacent sections against frozen evidence. Separate sweeps retain their build and army conditions. Five raw forecast/observation pairs confirm 18 stacks, matching session and forecast hashes, and pre-/post-Start timing. Generation120 offline replay independently returned matching cores, native aggregates and strategy for two evaluations. The stopped campaign records 116/116 placements, a failed numeric comparison and an unaccepted 273-battle plan. Protection arithmetic coverage remains separate from positive live capture; original239 remains failed. Twenty timing controls are excluded from accuracy totals. No public procedure requires private artifacts or invents SDK commands. Full final-round3 report numeric-critic-steps-round3.json SHA256 856568a7a487952cc10a45aca1b4dcd944c20f42a01ecce771e7c8585f847dd1. Bounded historical-token restoration verification numeric-critic-steps-round3-history-restored.json SHA256 bcc1e4593eafd2dd42b778575461f49f9eb75ddcf8c87529117bb6b7ebe2df61: c87dd23..49e6546 changes only DLL192e08 to DLL384e08. Restored paragraph is byte-identical to published accadbd after newline normalization. Root HEAD handoff line2174 confirms historical DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d. October10 sections are unchanged from retained full round3 input bcc74455; its conditions and evidence-boundary review remains scoped to that text. Restoration adds no public procedure, private-artifact download requirement, SDK command or public-source claim. Final normalized hash matches the supplied manifest and working file.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "codex:01a124b5-aa46-7110-85ea-301f75c521d0",
+                "evidence": "Новая запись 10 октября расположена первой; placement-sdk-numeric уникален. Отдельно обозначены завершённые проходы, пять диагностических боёв, остановленная серия 116/273 и непроверенная исправленная сборка. Сохранены различия между совпадением расстановок, ошибкой здоровья 294/126 и совпадением стратегии. Положительный игровой контроль защиты явно остаётся задачей; двадцать timing-контролей не добавлены к итогам точности. Соседняя прежняя запись датирована и ведёт к текущему checkpoint. Изменённый исторический идентификатор DLL остаётся внутри записи 3 октября. Full final-round3 report numeric-critic-structure-round3.json SHA256 379146b69c5203cf54d250d86967effd6aedec7d3acb9a137b7cb57856118296. Bounded historical-token restoration verification numeric-critic-structure-round3-history-restored.json SHA256 2bfc654563ac0533e5b5190d34e8f3f73ef019b586222f55458480637bd76376: c87dd23..49e6546 changes only historical DLL192e08 to DLL384e08. Restored paragraph is byte-identical to accadbd after newline normalization. rg confirms full historical DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d in root handoff line 2628. Final normalized hash matches the manifest. October 10 numeric section, unique placement-sdk-numeric anchor, current-claim navigation and remaining-work distinctions are unchanged from retained numeric-structure-round3 at bcc74455; c87dd23 matches that reviewed diary. Bounded restoration verification only.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "codex:01a124b6-5282-78e0-b928-a89a8adbbc5b",
+                "evidence": "Compared every new paragraph and table with EN: dates, hidden pre-Start inputs, three separate 36/36 sweeps with 96/98/99 combat stacks, selected-map 43/43 with 126 stacks, build-specific scopes and remaining tasks agree. All five frozen diagnostic tuple sets match, totalling 18 neutral combat stacks; 9×2×17=306 numerical values. stopped_rotation retains 116/116 placements, generation239 aggregate failure and strategy match, with the 273-battle matrix unaccepted. Both languages retain 294 engine versus126 mod and require positive live protection verification. The 192 instruction cases remain separate from 42 older scaling cases and twenty timing controls. Adjacent text distinguishes source records before splitting from resulting combat stacks. Full final-round3 report numeric-critic-translation-round3.json SHA256 e0c541985486a8b9675dd9027b554bceb8f1599e3d5692e082ae469d8b921795. Bounded historical-token restoration verification numeric-critic-translation-round3-history-restored.json SHA256 d6b139e4a95e3eeb9bc7ba5e891531f723e36ba1d081735db37d4c44e161a6db: c87dd23..49e6546 changes only DLL192e08 to DLL384e08. The restored paragraph is byte-identical to accadbd after newline normalization. rg confirms the full historical DLL384e088d71f01c42679a34262989f0643bb0389cf0e04a3e25f73f69b6ac8b3d in root handoff line2628. Working-file and commit normalized hashes match the final manifest. The October10 section is unchanged from retained full round3 review; directly compared all its RU/EN paragraphs and table rows: dates, hidden pre-Start inputs, counts, build-specific evidence limits and remaining tasks agree. Source stacks are input army records before splitting; combat stacks are resulting battle records. Historical49 tests,3 targeted battles and pending complete series remain equivalent. This is bounded restoration verification within round3.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/technology-stack.md",
+            "sha256": "fa1e505b409de2e792f3ab318ad6e66c3cc44f2e9251f9fe556ff7babf78cc24",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Fresh final-byte review after inventory extension. ../devkit/native/module_catalog.hpp parses manifests through nlohmann/json. ../devkit/scripts/plugin_core.py:258-314 imports pefile and checks DLL exports, format, normal/delayed dependencies; plugin-watch.py:738-744 invokes it before ZIP publication. ../devkit/requirements.txt pins pefile. Wording limits this additional usage to the development packager.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Fresh final review of the pefile usage addition against scripts/plugin_core.py validate_player_archive: normal/delayed PE imports and required DLL exports are checked before native ZIP emission. The row explicitly says development packager; it makes no ordinary-game or architecture-conformance claim. Existing JSON catalog usage remains accurate.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "Catalog manifest parsing extends the existing native JSON row; development package entry/dependency validation extends the existing analysis row with explicit development scope. Version sources and change-maintenance procedure remain separate sections. Navigation and reciprocal translation metadata resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Refreshed final text review: existing pefile now has a concrete development-packager purpose, DLL entry point and dependency validation before player ZIP emission. Developer-only tooling remains distinguished from player prerequisites; version sources link to manifests.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Native JSON purpose and module_catalog.hpp match; pefile entry-point/dependency checks are consistently scoped to the development packager before player ZIP emission.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/universe-build.md",
+            "sha256": "a217db9e4c16fa6ef34cdf543e98ef598b5b60b699d14d2774005750bd6d08c3",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-newcomer-round2.json; SHA-256 98dda0f8652fb186d773a9292c237fa137aafc6624953c8369aeb5b6d42013a7. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-accuracy-round2.json; SHA-256 6458416c566697a4ddfdaecb6ecd6944bce941a0b91bd3ff9db6d89ae6118a92. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-steps-round2.json; SHA-256 aa07de3b42199c15d074cbcafbf30e6df4e867fce208397b9906618a35b97e0a. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-structure-round2.json; SHA-256 44932b093178e8cbab93079fec9ff99e19f0b26930ef892348b20ae4770e92d6. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-translation-round2.json; SHA-256 8346cc15708ab6de9fd31e638c8866bde868d682363e1d5389965723f2cfc786. Historical claims remain outside revalidation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/xkit-commands.md",
+            "sha256": "7cf6a47e5444aa929376b2f40f481073b66794fa6ae9563ff2b0de031f40dabf",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report sdk-command-critique-newcomer-round3.json; SHA-256 f2fb20082b054a67bc5116716604ff6c0fee389c0e69a64a98167d055d37dcb7. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report sdk-command-critique-accuracy-round3.json; SHA-256 90905d2265e8b709b6f16085902a578d1fb560c998c86a5e3d9dc1afea5f7205. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report sdk-command-critique-steps-round3.json; SHA-256 871096df54e089cac01b8a694374d1cb82baf15536773db853098709b935f018. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report sdk-command-critique-structure-round3.json; SHA-256 dc72c26424415eb6615732d08d4e7dee507326d6205c7fdb5c988b1f6a7ed087. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report sdk-command-critique-translation-round3.json; SHA-256 bfee2fa8e8f565fa7d92245354acfdf1dd7a0bcd3c689fbcdd6318c6ad9074d2. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "security": {
+      "verdict": "PASS",
+      "score": 9,
+      "reviewer": "numeric-gate-security-final",
+      "evidence": "Read only the prior numeric-gate-security.json and bounded Git evidence. HEAD is 49e6546fa594fa641aaef0aa894c5d5fab1eaefd; working tree is clean. Diff c87dd23..49e6546 contains exactly two historical DLL192e08→DLL384e08 restorations in RU/EN research diaries, with no secrets, assets, private process state or personal paths introduced. Both diary diffs against published accadbd now contain only the new numeric section; no historical changes remain. The restored prefix matches the supplied retained DLL hash. The numeric section is unchanged. Prior security PASS remains applicable; the reported historical-token failure is superseded by verified source restoration. No other role reports read, marketplace scans claimed, or tests run.",
+      "findings": []
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-10-10T07:34:29.923Z"
+}
