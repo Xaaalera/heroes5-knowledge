@@ -8,7 +8,7 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/game-api/
 description: Shared game bindings, build checks and callback lifetime rules.
-updated: '2026-10-10'
+updated: '2026-10-11'
 ---
 # Game API for C++ plugins
 
@@ -34,15 +34,23 @@ This is a header library, with no separate Game API DLL. Its CMake target provid
 | `h5/build.hpp` | `VerifyGame`: check supported installation binary names and SHA-256 hashes | Check before using bindings; stop on refusal |
 | `h5/process.hpp` | `OpenOwnedProcess`: open the specific process from your launch and verify creation time, path and build | Supply your launch provenance; close a successful handle with `CloseHandle` |
 | `h5/hooks.hpp` | Named integration points for bank army selection, placement rendering, attack entry, hovering, scripts and exit | Verify the signature and calling contract; the catalog does not install a hook |
-| `h5/actor_input.hpp` *(local research version; not published yet)* | Army-input records; `ReadActorRunicInputs` reads individual rune states, `ReadCombatRosterCount` reads the actual unit-list size | Matching live callback only; hidden inputs require explicit research mode. Runic scoring belongs to the mod; post-Start results serve verification |
+| `h5/actor_input.hpp` | Army inputs, individual rune states through `ReadActorRunicInputs`, roster size through `ReadCombatRosterCount`, a bounded creature-name copy through `ReadCreatureDisplayName`, and actual initial deployment through `ReadCommittedDeployment` | Call from the matching live game handler. Hidden inputs belong only to an explicitly isolated research or internal full calculation; the visible approximate forecast does not receive them. Capture deployment facts after Start |
+| `h5/source_strength.hpp` | `ReadSourceStrength` and `ReadSourceStrengthFrame`: copy source strength values from an admitted game call | Validate context and successful reading; formulas and strategy selection remain in the mod |
+| `h5/resident_buffers.hpp` | `EnsureBuffer` and `BufferLease`: process-owned data that survives DLL replacement | Agree on key, schema and size; create and write on the game-window thread. An ordinary lease pointer lasts only for its current operation |
 | `h5/console.hpp` | `DispatchConsoleCommand` and `DispatchGameText`: dispatch a stock command, event or adventure script | Call on your game's window thread; verify the action's effect separately |
 | `h5/script_observers.hpp` | Shared subscriptions to the game's script dispatcher | Remove your callback before unloading or replacing its DLL |
-| `h5/camera_input.hpp` | Subscriptions to suppress camera input over a panel | Change subscriptions on the validated game thread; preserve map control outside the panel |
+| `h5/camera_input.hpp` | Camera-input suppression subscriptions; `RegisterInputPanel`, `ReadInputPanels` and `PublishKeyboardFocus` connect mod panels to input focus | The registered panel must be a descendant of the supplied game window; separate top-level windows are not discovered by this route. Include nested controls, change capture on the validated game thread and preserve map control outside panels |
 | `h5/adventure_input.hpp` | Isolate verified key presses while the console has focus | Preserve original handling when hidden; this does not capture every input kind |
 | `h5/graphics_lifetime.hpp` | Repair the graphics wrapper lifetime in process memory | Startup only, before graphics initialization, with all owned child threads stopped; never continue startup after refusal |
 | `h5/image_placement.hpp` | Validate a loaded DLL's file and placement without memory changes | Stop your loader at its DLL-load event and retain the original file handle |
 
 `OpenOwnedProcess` neither discovers games automatically nor authorizes attachment to another person's process. On refusal, it closes the handle it opened. Build checks do not modify game files.
+
+These bindings are published in [Game API `8eebef8`](https://github.com/Xaaalera/heroes5-game-api/tree/8eebef8f718ea8b26dd3a12313c8f6713caf5b35). In an existing project, check the pinned dependency revision: an older commit may lack the new headers and functions.
+
+`ReadCommittedDeployment` accepts only completed deployment of two distinct armies. Pending placement, malformed rosters, more than seven creature stacks in either army, invalid quantities or footprints cause refusal. Consumers check the whole result; a partially filled record after refusal is not confirmed deployment.
+
+Buffers may retain copies of plain state values, but no pointers to functions, destructors or data in replaceable DLLs. A native game-object exception requires a separately reserved immutable area without replaceable-module addresses; it must never be cleared or reused during updates. While the mod still retains the object, restore its original native binding before releasing ownership. In the predictor, this lets the native description window outlive mod replacement without calling unloaded code. This is the adapter's responsibility, not permission to retain arbitrary lease pointers.
 
 ## Dispatch an event or script
 
