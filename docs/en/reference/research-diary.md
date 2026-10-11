@@ -12,6 +12,27 @@ updated: 2026-10-11
 ---
 # Research diary
 
+## 2026-10-11 — repeated campaign and player-package checks {#placement-player-candidate}
+
+**After the dense-spread correction, a fresh independent research-build comparison passed 273/273 battles: 762 stacks, ten map runs and 16,864 numerical values.** The full forecast was retained before Start. Comparison covered every creature, quantity and cell in each pack. This is a new campaign with its own observations, not a result transferred from the previous DLL; other armies, levels, effects and arenas remain outside its coverage.
+
+The ten runs used the authored polygon and two random maps. Polygon armies were 100 Archers, 1,000 Peasants, 10 Angels and a mixed seven-stack army; random-map runs used the starting armies of six different heroes. Every recorded post-battle hero level in this campaign was one. This varies armies, rather than testing different levels.
+
+**The updated player package was checked separately.** It started ordinarily without a connected SDK and without developer commands before automatic mod initialization completed. Diagnostic commands then prepared two encounters in the test game:
+
+| Scenario | Result |
+|---|---|
+| Mixed seven-stack guard | Seven projections before Start; the internal full forecast matched all seven actual creature, quantity and cell tuples |
+| Scripted encounter without an available visible forecast | The approximate forecast is unavailable; the hidden full calculation was retained before Start. After Start, both actual stacks and explanations appear, with a 2/2 reference match |
+| Native detailed creature window | Physical clicks verified both upgrade arrows and reopening after replacing code in the running game |
+| Deployment button | Appeared automatically in both encounters and opened the window on a physical click |
+
+Both encounters verified that the entire full calculation retained before Start remained unchanged. No combat-script result observers were attached for the breakdown. Preparing tests with diagnostic commands does not mean players need an SDK: the ready package loads independently.
+
+Interface migration exposed two defects: refreshing the detailed window disabled its arrows, and replacing code cleared its binding to the deployment screen. Both were corrected and checked with native tests and in the game. The native window was closed using its button; Escape closing is not established by these checks.
+
+The checked candidate has not been published yet. These checks do not transfer the whole research campaign to the player DLL or establish 100% accuracy for the approximate forecast. [Download the published version and check its limits](../players/deployment-preview.md).
+
 ## 2026-10-11 — dense spread and deployment breakdown {#placement-dense-spread}
 
 **Mismatch:** for a mixed seven-stack guard against one hero Archer, the full calculation matched 4/7 cells. All creature types and quantities matched. The large stack occupied a neighboring row, and two further stacks moved because occupancy changed.

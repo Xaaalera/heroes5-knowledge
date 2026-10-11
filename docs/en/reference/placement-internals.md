@@ -106,7 +106,7 @@ The additional-ability evaluator has separate applicability/target tests. In the
 
 ## Rule verification {#current-research}
 
-The latest independent comparison achieved **273/273 complete matches: 757 stacks, ten map runs and 16,830 numerical values**. Creature, quantity and cell forecasts were retained before Start; the actual army was read afterwards. The series used different armies and heroes, but every observed hero level was one.
+After the dense-spread correction, a fresh independent research-build comparison achieved **273/273 complete matches: 762 stacks, ten map runs and 16,864 numerical values**. Creature, quantity and cell forecasts were retained before Start; the actual army was read afterwards. This validates the declared campaign; other armies, levels, effects and arenas require separate checks. [New campaign and separate player-package checks](research-diary.md#placement-player-candidate).
 
 Separate checks covered 512 protective-candidate and creature-footprint cases, 524 runic descriptor-state combinations and 880 initial-activity cases. Each set validates its own branches; they do not cover every hero, effect and arena combination. [Conditions, results and limits](research-diary.md#placement-runic-matrix).
 
