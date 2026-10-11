@@ -46,9 +46,11 @@ This is a header library, with no separate Game API DLL. Its CMake target provid
 
 `OpenOwnedProcess` neither discovers games automatically nor authorizes attachment to another person's process. On refusal, it closes the handle it opened. Build checks do not modify game files.
 
-These bindings are published in [Game API `8eebef8`](https://github.com/Xaaalera/heroes5-game-api/tree/8eebef8f718ea8b26dd3a12313c8f6713caf5b35). In an existing project, check the pinned dependency revision: an older commit may lack the new headers and functions.
+These bindings are published in [Game API `3e37dff`](https://github.com/Xaaalera/heroes5-game-api/tree/3e37dffcbf68d4eed25ce22e0dd44717c87001cd). In an existing project, check the pinned dependency revision: an older commit may lack the new headers and functions.
 
 `ReadCommittedDeployment` accepts only completed deployment of two distinct armies. Pending placement, malformed rosters, more than seven creature stacks in either army, invalid quantities or footprints cause refusal. Consumers check the whole result; a partially filled record after refusal is not confirmed deployment.
+
+`ReadCombatFieldDimensions` in the same header reads the current battlefield width and height, including blocked border cells. Pass a live combat world from an admitted deployment or render handler and call it on that handler's game thread. Refusal clears both dimensions to zero rather than retaining old values. On the checked ordinary battlefield it returns 16 × 12, while the playable area is 12 × 10. The caller trims borders for its own diagram.
 
 Buffers may retain copies of plain state values, but no pointers to functions, destructors or data in replaceable DLLs. A native game-object exception requires a separately reserved immutable area without replaceable-module addresses; it must never be cleared or reused during updates. While the mod still retains the object, restore its original native binding before releasing ownership. In the predictor, this lets the native description window outlive mod replacement without calling unloaded code. This is the adapter's responsibility, not permission to retain arbitrary lease pointers.
 

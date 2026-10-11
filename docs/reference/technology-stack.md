@@ -41,6 +41,8 @@ updated: '2026-10-08'
 
 ## Где закреплены версии
 
+Версия Game API закреплена записью зависимости `game-api` в Git [репозитория SDK](https://github.com/Xaaalera/heroes5-mod-devkit); её адрес указан в [`.gitmodules`](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/.gitmodules). Эта библиотека также читает размеры боевого поля; контракт вызова описан в [справочнике Game API](game-api.md).
+
 Не поддерживаем второй набор номеров вручную: точные версии и закреплённые ревизии задают манифесты.
 
 - [Зависимости SDK](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/requirements.txt), [проверки SDK](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/requirements-dev.txt), [Python-пакет](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/pyproject.toml).

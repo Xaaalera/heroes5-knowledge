@@ -41,6 +41,8 @@ These are developer tools. The list does not require players installing a ready 
 
 ## Version sources
 
+The `game-api` dependency entry in the [SDK Git repository](https://github.com/Xaaalera/heroes5-mod-devkit) pins the Game API revision; [`.gitmodules`](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/.gitmodules) specifies its repository URL. The library also reads battlefield dimensions; see the [Game API reference](game-api.md) for the call contract.
+
 Manifests define exact versions and pinned revisions; we do not maintain a second set of version numbers here.
 
 - [SDK dependencies](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/requirements.txt), [SDK checks](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/requirements-dev.txt), [Python package](https://github.com/Xaaalera/heroes5-mod-devkit/blob/main/pyproject.toml).
