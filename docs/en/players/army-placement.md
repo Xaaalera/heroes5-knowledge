@@ -8,13 +8,13 @@ section: players
 kicker: PLAYERS · COMBAT MECHANICS
 translation: players/army-placement/
 description: 'Why neutrals occupy particular cells: stack roles, obstacles, placement order, and recorded Heroes V Universe battles.'
-updated: 2026-09-26
+updated: 2026-10-11
 ---
 # How the game deploys a neutral army
 
 **Neutral stacks do not appear on random free cells.** The game prepares the stacks, selects a formation method, places them in sequence, and marks occupied cells after each placement. One obstacle or an earlier stack can therefore change where later stacks stand.
 
-This account concerns the tested **Heroes V: Tribes of the East with Universe** build. We reconstructed several rules from the game and its code, but have not established every combat path. Below is what the visible field can tell a player, followed by a battle where the game's placement attempts were recorded.
+This account concerns the tested **Heroes V: Tribes of the East with Universe** build. For the ordinary battles investigated, we reconstructed the sequence of decisions: evaluating armies, preparing stacks, choosing a formation, ordering placement and trying fallback positions. Below is an explanation of those steps and a recorded example. The checks do not cover every map, effect or game version.
 
 ## Reading the diagrams
 
@@ -23,6 +23,21 @@ This account concerns the tested **Heroes V: Tribes of the East with Universe** 
 Each diagram shows the **whole field**. Cyan `A` stacks belong to the hero; orange `N` stacks are neutrals. The letter and number identify a stack, not its quantity. Hatching marks obstacles and the field boundary.
 
 `X` is the column from left to right; `Y` is the row from bottom to top. These are grid coordinates, not screen positions: rotating the camera does not change them. For example, genie stack `N1` has anchor `(13,4)` near the right edge and occupies a 2×2 square. Open a diagram to inspect its cells.
+
+## Why army strength matters beyond creature counts
+
+The game compares the calculated strength of both armies. Equal creature counts therefore do not guarantee the same formation against different heroes.
+
+| Input | Its role in the calculation |
+|---|---|
+| Quantity, damage, attack, defence and health | Supply the starting characteristics of stacks and armies |
+| Initiative, speed, morale, luck and starting action-bar position | Contribute to the activity estimate |
+| Ability resources and rune states | Provide separate activity adjustments; a rune's state matters |
+| Damage absorption and protection reserves | Change calculated survivability; starting Orc rage can matter before the first turn |
+
+Morale and luck contribute before combat starts. Skills, artifacts and effects may change the characteristics used. A bonus need not move the neutrals: the comparison may remain on the same side of its threshold.
+
+Activity and survivability adjustments were checked separately, including runes and Blood Rage. The meaning of every rune state has not yet been fully established. [Details and verification limits](../reference/placement-internals.md).
 
 ## Before cells are chosen
 
@@ -56,15 +71,17 @@ Without exact scouting information, our Universe build shows neutral quantities 
 
 | Decision | What the game compares | What changes on the field |
 |---|---|---|
-| Shelter shooters | Their share of their army's strength must be **strictly above 20%**, and their relative advantage **strictly above 1.3×**. The game also checks opposing capabilities and special conditions. | A defensive pass runs before ordinary placement. Without spread, some stacks seek cells near shooters. |
-| Spread stacks | The game evaluates opposing area-attack strength; this comparison has a **35%** threshold in the tested Universe settings. Further conditions apply. | Candidate rows are spaced so stacks do not all cluster together. |
+| Shelter shooters | One branch requires own shooters' strength to be **strictly above 20%** of own army strength and **strictly above 1.3 times the opposing shooters' strength**. A separate capability check can select sheltering without these thresholds; another can veto it. | A defensive pass runs before ordinary placement. Without spread, some stacks seek cells near shooters. |
+| Spread stacks | The game compares the opponent's calculated area-attack strength with the total calculated strength of **that same opposing army**. In the tested Universe settings, the ratio must be **strictly above 35%**. Further conditions apply. | Candidate rows are spaced so stacks do not all cluster together. |
 | Ordinary formation | Neither extra decision is enabled. | Stacks follow the general category and row order. |
 
 “Own shooters” here means the shooters of **the side currently being deployed**; for neutrals, those are neutral shooters. Merely having a shooter is insufficient: the game compares its strength with the rest of the army and with the opponent. These thresholds come from the tested build, but **do not constitute the whole formula**: early conditions and an opposing-ability check remain partly unresolved. Shelter and spread can occur together; the defensive pass then uses spaced rows instead of simple adjacency. [What has been checked](../reference/placement-internals.md).
 
+“Strength” here is the game's internal estimate, not creature count or summed health. When the opponent has no shooters, the game handles that case separately without dividing by zero. Area-attack strength includes eligible creature attacks and spells, including the hero's spells.
+
 Spread is not an eyeballed “every second row” rule. With **10 available rows** and **3 stacks**, the initial spaced set is **1, 5, 10**. The game retains its previous priority among those rows and rejects occupied places; a large creature still needs a free 2×2 square. If spaced positions do not fit, other valid cells are attempted.
 
-This is why a visually similar pack may form differently. In two recorded battles with the same hero and the same visible neutral quantity labels, the game's internal shooter-strength share was **0.217** and **0.183**. The first exceeded the 0.20 threshold and accompanied sheltering; the second fell below it and accompanied ordinary formation. Exact neutral counts were not retained for those two battles, and the arenas differed, so no single changed input can be declared the sole cause. The record does show **which comparison switched branches**. [Both observations](../reference/research-diary.md#placement-defence-2026-09-26).
+This is why a visually similar pack may form differently. In two recorded battles with the same hero and the same visible neutral quantity labels, the game's internal shooter-strength share was about **21.7%** and **18.3%**. The first exceeded the 20% threshold and accompanied sheltering; the second fell below it and accompanied ordinary formation. Exact neutral counts were not retained for those two battles, and the arenas differed, so no single changed input can be declared the sole cause. The record does show **which comparison switched branches**. [Both observations](../reference/research-diary.md#placement-defence-2026-09-26).
 
 ## How the chosen formation becomes cells
 
@@ -74,7 +91,7 @@ First the game calculates **deployment depth**: how many columns at that side of
 
 1. **Check size.** A small creature needs one free cell; a large creature needs a free 2×2 square. One obstacle or occupied cell inside that square rejects the entire position.
 2. **Rank rows.** From the deployment edge, the game checks how far each row remains free towards the opposing side before an obstacle. Shooters and other stacks use the row information differently.
-3. **Place groups in sequence.** The general pass handles large non-shooters, then shooters, linked goblins and creatures that use them, then creatures with a magic-resistance aura or shield cover, and finally ordinary small non-shooters. Within groups, quantity, damage, attack, defence, and health matter; one special sort puts non-flyers before flyers. This is **not combat turn order**.
+3. **Place groups in sequence.** The general pass handles large non-shooters, then shooters, linked goblins and creatures that use them, then creatures with a magic-resistance aura or shield cover, and finally ordinary small non-shooters. Within groups, calculated stack value, speed, flight and the distance between armies matter; one special sort puts non-flyers before flyers. This is **not combat turn order**.
 4. **Reserve cells immediately.** Each later stack tries suitable positions again, skips occupied cells, and takes the first available one. If space runs out, the game has further attempts.
 
 If a stack still lacks a cell, the complex path may **shift its chosen row window and retry**, then scan other available deployment columns. This does not mean the game necessarily merges stacks or deletes creatures: in the checked code, an apparent same-type merging branch never enters its inner loop. [Fallback analysis](../reference/placement-internals.md).
@@ -158,12 +175,16 @@ A large defender must fit its entire 2×2 square at each attempt. Giving every d
 
 ## What can be predicted beforehand
 
-The field, obstacles, creature sizes, and the player's own army help identify possible positions. Before combat, however, the player lacks exact neutral quantities, possible splitting, and some of the game's formation decisions. Even identical visible quantity labels do not guarantee the same sheltered formation. This is **expected uncertainty**, not an explanation for every predictor miss.
+The field, obstacles, creature sizes and the player's own army help identify possible positions. When the game shows only a range such as **“1–9”** or **“10–19”**, the exact count is still unavailable. In tested ordinary guards, Scouting or an equipped Crown of Many Eyes reveals the original composition. That army may still pass through the combat-stack splitting rule.
+
+The final stacks and all formation decisions are therefore not always known before combat. Even identical visible ranges do not guarantee the same sheltered formation. This is **expected uncertainty**; other discrepancies need separate investigation.
 
 The findings cover investigated ordinary Universe battles. Sieges, special combats, and other builds have not been established as equivalent. Exact technical rules, code for the worked pass, and exceptions are in the [reference](../reference/placement-internals.md). The [research diary](../reference/research-diary.md#elementals) records the experiment; the [test map](../modding/test-maps.md) is available separately.
 
 ## Evidence and limits {#evidence}
 
-The battles were recorded on **September 23, 2026**, on `WorkshopPolygon`. Both armies' cells were recorded at combat Start, before the first turn; obstacles were recorded beforehand. For the main example, the game mode and seven placement attempts were also captured. Final cells were not supplied as calculation inputs. This is our research, not an official Nival specification.
+After reconstructing the rules, a separate research series gave **273/273 full matches: 762 stacks across ten map loads**. Calculated composition, quantities and cells were frozen before Start, then compared with the actual initial army. The series used the polygon and two random maps, varied armies and level-one heroes. Other levels, effects and arenas need separate checks. [Series conditions and results](../reference/research-diary.md#placement-player-candidate).
+
+The illustrations and worked example come from battles recorded on **September 23, 2026**, on `WorkshopPolygon`. Both armies' cells were recorded at combat Start, before the first turn; obstacles were recorded beforehand. For the main example, the game mode and seven placement attempts were also captured. Final cells were not supplied as calculation inputs. This is our research, not an official Nival specification.
 
 [Investigated build and EXE SHA-256](../reference/universe-build.md) · [Published diagram data](../../assets/placement/observations.json) · [Method and technical limits](../reference/placement-internals.md). The public map copy does not lock the hero, random state, or arena of each archived run, so a repeat playthrough may produce different cells.
