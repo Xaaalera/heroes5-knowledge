@@ -8,9 +8,21 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/research-diary/
 description: Research diary
-updated: 2026-10-10
+updated: 2026-10-11
 ---
 # Research diary
+
+## 2026-10-11 — dense spread and deployment breakdown {#placement-dense-spread}
+
+**Mismatch:** for a mixed seven-stack guard against one hero Archer, the full calculation matched 4/7 cells. All creature types and quantities matched. The large stack occupied a neighboring row, and two further stacks moved because occupancy changed.
+
+**Cause and correction:** the spaced list contained two distinct candidates leading to one 2×2 anchor. Our code incorrectly assigned both the shifted first candidate's priority. Original sorting confirmed the second candidate's separate priority. The correction depends on the candidate list, without an exception for a particular creature or cell.
+
+**Same-field verification:** the original obstacle mask and pre-Start calculation were retained. Isolated replay of cell selection, complete-footprint checks, occupancy and residual passes reproduced the previous 4/7; changing only this rule produced 7/7, including the two following stacks. Stack order, formation flags and row windows came from the retained trace. Army preparation, stack sorting, strength calculations and window selection were not recomputed. This verifies geometry for this case, not the entire battle. Both replay passes took 0.045 s; including compilation and preparation, 2.28 s. Artifacts remain in the project's working log; this page does not provide a public ready-to-run replay.
+
+**Live controls:** two fresh battles with the same composition but different fields matched all 7 full-reference creature, quantity and cell tuples. The final control also verified quantity labels: with shooters emitted first, labels follow original records rather than sorted order or creature type. Range 5–9 stayed with the large stack containing 8 actual creatures. Native tests separately cover identical types with different labels. These checks do not transfer the former 273/273 result to the new DLL.
+
+**Breakdown window:** the working version captures actual initial deployment through a game call. One field shows the blue forecast, orange facts and green hero army. Full-calculation explanations are admitted only after the entire neutral pack matches; on disagreement, the window states that the reason is unconfirmed. An unavailable prior forecast, a physical type-knowledge checkbox click and its next-battle effect are also checked. These are bounded working-version checks; the finished package and ordinary startup without developer tools still require separate acceptance. [Current mod status](../players/deployment-preview.md).
 
 ## 2026-10-10 — full campaign after pass-transition and runic corrections {#placement-runic-matrix}
 

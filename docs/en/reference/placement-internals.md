@@ -8,7 +8,7 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/placement-internals/
 description: Placement internals and corrected assumptions
-updated: '2026-10-10'
+updated: '2026-10-11'
 ---
 # Placement internals and corrected assumptions
 
@@ -71,6 +71,8 @@ The special placement comparator orders stacks as follows: non-flying before fly
 For shooters, the game first evaluates how clear the approach is along each row and selects the first window with the lowest total score. Spread formation retains spaced candidates: for example, three stacks on ten playable rows select the first, fifth and tenth rows. Candidates then retain their previous priority order. If occupancy filtering removes them all, the spaced list from before that filter is retained.
 
 A candidate row and a stack's final cell are separate stages. If a large shooter's complete footprint cannot fit the candidate cell, its anchor can shift down. In spread formation, that shift preserves the original candidate's score and order. [Rule verification](research-diary.md#placement-spread-shooter).
+
+Different candidates can lead a large stack to the same cell. In a dense spaced list, the first candidate shifts while the second already fits without shifting. They remain separate candidates, each with its own score and priority. Conflating them changed the large stack's first cell and then two further positions through occupancy. [Replay of the retained field](research-diary.md#placement-dense-spread).
 
 If selected rows cannot place the next stack, it remains unplaced until the final column passes. Switching to arbitrary rows within the current pass changes the result. [Pass-transition control](research-diary.md#placement-runic-matrix).
 
