@@ -8,7 +8,7 @@ section: players
 kicker: PLAYERS · COMBAT MECHANICS
 translation: players/army-placement/
 description: 'Why neutrals occupy particular cells: stack roles, obstacles, placement order, and recorded Heroes V Universe battles.'
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 # How the game deploys a neutral army
 
@@ -182,6 +182,8 @@ The final stacks and all formation decisions are therefore not always known befo
 The findings cover investigated ordinary Universe battles. Sieges, special combats, and other builds have not been established as equivalent. Exact technical rules, code for the worked pass, and exceptions are in the [reference](../reference/placement-internals.md). The [research diary](../reference/research-diary.md#elementals) records the experiment; the [test map](../modding/test-maps.md) is available separately.
 
 ## Evidence and limits {#evidence}
+
+On October 12, 2026, the reconstructed algorithm passed a separate new series: **273/273 full matches** across ten fresh loads of the polygon and two random maps. Every stack's composition, quantity, footprint and cell was saved before Start, then compared with the actual initial army; unchanged calculations, terrain and battle identity were checked separately. This validates the declared series, not every level, effect or arena. [New verification conditions](../reference/research-diary.md#placement-native-release-2026-10-12).
 
 After reconstructing the rules, a separate research series gave **273/273 full matches: 762 stacks across ten map loads**. Calculated composition, quantities and cells were frozen before Start, then compared with the actual initial army. The series used the polygon and two random maps, varied armies and level-one heroes. Other levels, effects and arenas need separate checks. [Series conditions and results](../reference/research-diary.md#placement-player-candidate).
 

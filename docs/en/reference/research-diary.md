@@ -8,9 +8,32 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/research-diary/
 description: Research diary
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 # Research diary
+
+## 2026-10-12 — native package and two forecasts {#placement-native-release-2026-10-12}
+
+**The full calculation in the standalone package matched 273/273 battles; the approximate forecast matched 171/213 mixed battles (80.3%).** Here mixed guards have multiple public source stacks; single-source guards that split later are excluded from this figure. This is the final series on October 12, with ten fresh loads: the 36-composition polygon and two random maps with 24 and 19 selected packs, in rotation. Every selected composition in each load was tested. Hero armies varied; maximum coverage of levels, skills, artifacts and arenas remains future work.
+
+Both calculations were saved before Start. Afterwards, comparison covered initial creatures, quantities, footprints and cells for the full calculation. Terrain, battle identity and unchanged full calculations were checked separately. Approximate prediction earns a match when every occupied cell and stack footprint agrees; this does not establish exact hidden quantities or upgrades.
+
+| Latest-series check | Result |
+|---|---:|
+| Full calculation: complete roster, quantities, footprints and cells | 273/273 |
+| Approximate forecast: every occupied cell of a mixed pack | 171/213 |
+| Approximate forecast: all battles | 186/273 |
+| Battles with one actual combat stack | 15/15 matches |
+| Stack-count differences | 45 |
+| Cell differences with equal stack counts | 42 |
+
+Of 60 guards with one public source entry, 45 split into multiple combat stacks. Thus 15/60 is not the algorithm's accuracy for actual single-stack battles. In 41 of 42 geometry misses, creature types and footprints agreed; unknown inputs cannot automatically explain every discrepancy.
+
+The public path now shares the known roles, priorities, placement retries and large-footprint checks while retaining its separately admitted inputs. Two earlier accepted series of this DLL achieved 175/213 mixed matches (82.2%) and 163/213 (76.5%). The final series achieved 171/213; the full calculation matched 273/273 battles in each series. The earlier 163/213 series retained 49 stack-count differences and 50 geometry misses. Quantities and arenas vary between fresh loads; these are separate observations, not a fixed prediction probability.
+
+Standalone startup used the normal game EXE without an SDK, Python or diagnostic controller before loading was confirmed. Test commands then prepared the encounters. The final series and its verification took 7 minutes 28 seconds; the preceding series took 8 minutes 14 seconds. This does not cover every game configuration or automatically verify every mouse interaction.
+
+Tested candidate archive SHA-256: `40ad7daae635ec92ea548aab406f30ca124e9cad3303dd7d412dea2f48c2ce84`. Hashes bind the package, source and verification records; independent verification accepted the declared series. [Player guide and release](../players/deployment-preview.md) · [Placement mechanics](../players/army-placement.md).
 
 ## 2026-10-11 — repeated campaign and player-package checks {#placement-player-candidate}
 

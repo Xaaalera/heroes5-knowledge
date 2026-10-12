@@ -8,7 +8,7 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/placement-internals/
 description: Placement internals and corrected assumptions
-updated: '2026-10-11'
+updated: '2026-10-12'
 ---
 # Placement internals and corrected assumptions
 
@@ -107,6 +107,8 @@ The additional-ability evaluator has separate applicability/target tests. In the
 ## Rule verification {#current-research}
 
 After the dense-spread correction, a fresh independent research-build comparison achieved **273/273 complete matches: 762 stacks, ten map runs and 16,864 numerical values**. Creature, quantity and cell forecasts were retained before Start; the actual army was read afterwards. This validates the declared campaign; other armies, levels, effects and arenas require separate checks. [New campaign and separate player-package checks](research-diary.md#placement-player-candidate).
+
+On October 12, a separate current-algorithm check again achieved **273/273 exact matches**: every initial creature type, quantity, footprint and cell. Calculations and terrain were saved before Start; battle identity and unchanged full calculations afterwards were verified. The declared series covers ten fresh loads of the polygon and two random maps; maximum variation of levels, effects and arenas remains separate work. [Conditions and verification limits](research-diary.md#placement-native-release-2026-10-12).
 
 Separate checks covered 512 protective-candidate and creature-footprint cases, 524 runic descriptor-state combinations and 880 initial-activity cases. Each set validates its own branches; they do not cover every hero, effect and arena combination. [Conditions, results and limits](research-diary.md#placement-runic-matrix).
 
