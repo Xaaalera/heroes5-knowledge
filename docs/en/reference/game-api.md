@@ -8,7 +8,7 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/game-api/
 description: Shared game bindings, build checks and callback lifetime rules.
-updated: '2026-10-11'
+updated: '2026-10-12'
 ---
 # Game API for C++ plugins
 
@@ -53,6 +53,36 @@ These bindings are published in [Game API `3e37dff`](https://github.com/Xaaalera
 `ReadCombatFieldDimensions` in the same header reads the current battlefield width and height, including blocked border cells. Pass a live combat world from an admitted deployment or render handler and call it on that handler's game thread. Refusal clears both dimensions to zero rather than retaining old values. On the checked ordinary battlefield it returns 16 × 12, while the playable area is 12 × 10. The caller trims borders for its own diagram.
 
 Buffers may retain copies of plain state values, but no pointers to functions, destructors or data in replaceable DLLs. A native game-object exception requires a separately reserved immutable area without replaceable-module addresses; it must never be cleared or reused during updates. While the mod still retains the object, restore its original native binding before releasing ownership. In the predictor, this lets the native description window outlive mod replacement without calling unloaded code. This is the adapter's responsibility, not permission to retain arbitrary lease pointers.
+
+## Read the native game interface
+
+**Available since [Game API `58f5ddc`](https://github.com/Xaaalera/heroes5-game-api/tree/58f5ddc74d65b911e4a7e3f4e067c691f9425d5a). The older revision pinned above does not include this addition.**
+
+`h5/native_ui.hpp` reads and changes native widgets in the researched Universe x86 build. Each mod retains its own behavior and presentation.
+
+- Start with `ReadNativeCombatRoot(reader, root)`: `root` is a native widget interface (`uint32_t`) accepted by `ReadNativeWindow` and other widget operations. It is not an `HWND`: mutations use the Windows handle of your owned game to check its thread and owner. The optional complete screen object is for screen operations and does not replace the widget interface.
+- Supply a `bool reader(uint32_t address, void* destination, size_t bytes)` callback. The caller owns process authorization and build verification; use the existing `OpenOwnedProcess` and `VerifyGame`.
+- Call on the game's UI thread or stabilize the data being read. Rechecking vector bounds detects some changes but does not make an external traversal atomic.
+- `NativeWindowSnapshot` contains copied name and geometry values. Game UI units may differ from Windows client pixels. A snapshot does not extend an object's lifetime; reacquire the root and its children after changing screens.
+- List reads admit at most 128 direct children. Unknown interface shapes, malformed data and read failures return `false` and clear the output.
+
+| Operation | Purpose and limits |
+|---|---|
+| `ReadNativeWindow`, `ReadNativeWindowChildren`, `ReadNativeWindowClass` | Widget name, geometry, direct children and class. |
+| `ReadNativeCombatRoot` | Current combat screen root; optionally its complete screen object. |
+| `ReadNativeCombatRootPresence` | Checks whether a particular root remains in the screen list. A failed read does not mean the window was destroyed. The list is limited to 16 screens. |
+| `ReadNativeCombatModals` | Separate list of combat screen modal windows. Ordinary children do not automatically belong to it. |
+| `ReadNativeWindowText`, `SetNativeWindowText` | Copy a native text view's text; up to 16,384 UTF-16 code units. The game copies the supplied text. |
+| `SetNativeWindowPlacement` | Position and size in the widget's existing alignment system, rather than absolute screen coordinates. Native reflow owns automatically wrapped text height. |
+| `ReadNativeScrollTextWindow` | The sole text view inside a native scroll container. Traversal is limited to 256 widgets and three descendant levels; ambiguous results are refused. |
+| `UpdateNativeScrollText` | Register one text view, refresh its scroll range and return content to the top. Registration may rename and reparent it; subsequent calls verify the exact widget. |
+| `SetNativeWindowModalInput` | Enable an unhandled-input barrier on an existing widget. It neither creates a modal window nor registers one with the screen. Disable it when closing. |
+| `ConsumeNativeButtonState` | Check and reset the expected native button state. |
+| `CreateNativeWindowChild`, `RemoveNativeWindowChild` | Create from an existing definition or remove a child. The parent owns the created object; the game may defer removal. |
+
+Mutations run on the window thread of the caller's owned game, after build verification. `Refused` means refusal before invoking the operation. `Completed` confirms its observable result. `Unconfirmed` means an effect may already exist: retain the parent and known child identifiers, plus the tree snapshot from before the operation. These are recovery records, not lifetime extensions: the game may destroy those objects. Inspect the tree and never blindly replay the command. If `ReadNativeCombatRootPresence` confirms that the old root is absent, stop accessing its widgets and clear their records; if the check fails, retain the records and defer cleanup. Do not unload the handler or create a duplicate window before confirming cleanup or root absence.
+
+Native tests check read boundaries, text identity and recovery after uncertain creation or deferred removal. Live checks confirmed window creation, roster and cell selection, native-button close/reopen, width adaptation and resetting new explanations to the top. Wheel input, fullscreen switching and this revision's final player package remain unaccepted.
 
 ## Dispatch an event or script
 

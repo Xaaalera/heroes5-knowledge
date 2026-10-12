@@ -8,7 +8,7 @@ section: modding
 kicker: HEROES V · UNIVERSE
 translation: modding/native-projects/
 description: Required boundaries between the game, shared runtime, adapter and mod behavior; development, release and acceptance.
-updated: '2026-10-09'
+updated: '2026-10-12'
 ---
 # C++ mod architecture and extension
 
@@ -127,7 +127,33 @@ Startup bootstrap and graphics facade changes take effect at the next process la
 
 The development packager automatically checks DLL format, the entry point called by the loader, and normal/delayed dependencies before emitting a player ZIP. A missing-entry-point error may mean that a development payload was supplied instead of the finished mod. An undeclared-dependency error requires checking the build and package contents; installing the SDK on the player's computer is not a fix.
 
-This check is not yet published. It does not launch the game or detect every dependency loaded programmatically. Ordinary final-package startup through Heroes/Lobby without developer processes, and verification that all features remain available, are separate readiness requirements.
+This check is available in [SDK source `39b4e92`](https://github.com/Xaaalera/heroes5-mod-devkit/tree/39b4e923c179e0e79f2bbf5757d96643ecbf474b). It does not launch the game or detect every dependency loaded programmatically. Ordinary final-package startup through Heroes/Lobby without developer processes, and verification that all features remain available, are separate readiness requirements.
+
+## Include game resources in a DLL package
+
+This addition is available in [SDK source `39b4e92`](https://github.com/Xaaalera/heroes5-mod-devkit/tree/39b4e923c179e0e79f2bbf5757d96643ecbf474b); a ready release containing it has not been published yet.
+
+If a DLL needs text, windows or other game resources, keep their recipe inside the project, for example at `resources/mod.json`. Add this field to the existing `xalkit.json`:
+
+```json
+{
+  "resource_project": "resources"
+}
+```
+
+The example shows only the new field; keep the manifest's other fields. The path is relative to the native project directory and must remain inside it. The `mod.json` uses a regular H5U recipe with its own `id`; its fields are explained in the [resource-project guide](resource-overrides.md).
+
+Run `xkit release project-name`. The packager builds the DLL and H5U, then includes both in one player ZIP:
+
+- mod DLL — `bin/Heroes5Mods/Plugins/project-name.dll`;
+- resources — `UserMODs/workshop-recipe-id.h5u`;
+- shared game DLLs and installation instructions — in the same ZIP.
+
+Replace `project-name` with your project name and `recipe-id` with the `id` from its `mod.json`. Players copy both `bin` and `UserMODs` into the game; they need neither the SDK nor Python. Removing one mod means removing its DLL and H5U while keeping shared DLLs for other mods.
+
+The packager checks the H5U against its build result and validates its internal paths and CRC. Changing local resources during compilation stops release and preserves the previous finished ZIP. For `SDK_NATIVE_RESOURCES_INVALID`, check the declared directory, recipe and journal, then rebuild.
+
+This is a packaging setting. It does not enable automatic game-resource reload in the current session. ZIP validation also does not replace ordinary startup and in-game mod verification.
 
 ## Recover bank-adapter files
 
