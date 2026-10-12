@@ -16,11 +16,11 @@ A projection marks **a creature's predicted position and movement area** before 
 
 ## Development status
 
-In the final series on October 12, the current package's approximate forecast matched every occupied cell in **171 of 213 mixed battles — 80.3%**. Here a mixed guard has multiple publicly shown source stacks before combat; single-source guards that split in combat are counted separately. Two earlier series of the same DLL achieved 175/213 — 82.2% and 163/213 — 76.5%. Quantities and arenas differ between fresh loads; these results do not guarantee a fixed percentage on every map.
+Package **0.2.0-alpha.2** corrects row selection against a shooter hero army. In a new series on October 12, its approximate forecast matched every occupied cell in **165 of 213 mixed battles — 77.5%**. Here a mixed guard has multiple publicly shown source stacks before combat; single-source guards that split in combat are counted separately. Previous alpha.1 achieved 171/213 — 80.3%; quantities and arenas differ between fresh loads, so these percentages do not measure the correction on identical inputs or guarantee results on every map.
 
 There are two independent calculations. **The approximate forecast is visible** and uses public types, numeric quantity ranges and the known hero army. For tested ordinary guards, Scouting or an equipped Crown of Many Eyes admits exact source composition. The completed neutral split and hidden upgrades are not its inputs. Quick Combat result integration remains planned.
 
-**The full calculation is hidden before Start** and does not fill the approximate forecast. It supports algorithm verification and explanations after combat starts. In the same series it reproduced creatures, quantities, footprints and cells exactly in **273 of 273 battles**. Standalone package startup passed without the SDK. Other levels, effects and arenas need separate checks. [Campaign conditions and limits](../reference/research-diary.md#placement-native-release-2026-10-12).
+**The full calculation is hidden before Start** and does not fill the approximate forecast. It supports algorithm verification and explanations after combat starts. In the same series it reproduced creatures, quantities, footprints and cells exactly in **273 of 273 battles**. Standalone package startup passed without the SDK. Other levels, effects and arenas need separate checks. [Campaign conditions and limits](../reference/research-diary.md#placement-melee-window-2026-10-12).
 
 The Deployment window has two equally sized fields: forecast left, facts right. Blue marks the forecast, orange the facts and green the hero army. Both fields show obstacles; large creatures occupy their complete 2×2 footprint. Cell labels identify stacks, and row numbers appear on the neutral side.
 
@@ -30,7 +30,7 @@ Maximum variation of armies, levels, skills, artifacts and arenas remains planne
 
 ## Download and install
 
-**[Download package 0.2.0-alpha.1](https://github.com/Xaaalera/heroes5-deployment-preview/releases/download/v0.2.0-alpha.1/Heroes5DeploymentPreview-0.2.0-alpha.1.zip)**. It contains a separate predictor DLL, the H5U interface resource and shared loader DLLs. Code → Download ZIP downloads source, not the player package.
+**[Download package 0.2.0-alpha.2](https://github.com/Xaaalera/heroes5-deployment-preview/releases/download/v0.2.0-alpha.2/Heroes5DeploymentPreview-0.2.0-alpha.2.zip)**. It contains a separate predictor DLL, the H5U interface resource and shared loader DLLs. Code → Download ZIP downloads source, not the player package.
 
 [Mod on GitHub](https://github.com/Xaaalera/heroes5-deployment-preview) · [Universe](https://h5lobby.com/).
 
@@ -86,7 +86,7 @@ The reference contains one creature without a hero or real combat stack. This **
 
 ## When prediction and battle differ
 
-The approximate forecast can miss because of unknown quantities, upgrades, splitting or formation choice. The final series on October 12 retained **45 stack-count differences and 42 cell differences with equal stack counts**. Unknown inputs do not automatically explain every miss. [Results and limits](../reference/research-diary.md#placement-native-release-2026-10-12).
+The approximate forecast can miss because of unknown quantities, upgrades, splitting or formation choice. The new series on October 12 retained **51 stack-count differences and 48 cell differences with equal stack counts**. Unknown inputs do not automatically explain every miss. [Results and limits](../reference/research-diary.md#placement-melee-window-2026-10-12).
 
 Before Start, the forecast creates one stack per public source entry. The game can split a single original stack; the completed split is not inserted into the approximate calculation.
 

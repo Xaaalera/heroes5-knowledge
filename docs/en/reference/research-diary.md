@@ -20,11 +20,11 @@ On a retained field with seven neutral stacks, the previous approach selection r
 
 The new standalone build separately passed ten fresh loads of the same three maps: **273/273 full calculations**, with the approximate forecast matching **165/213 mixed** and **174/273 total battles**. There were 51 stack-count differences and 48 cell differences, with no unavailable forecasts. Battles containing exactly one actual stack matched 9/9. The entire outer run took **7 min 50 s**. Fresh quantities and arenas differ from the previous series: these percentages do not prove improvement or regression on identical inputs.
 
-[The source correction is published](https://github.com/Xaaalera/heroes5-deployment-preview/commit/b1c5c22). Ordinary startup of the new package, card cycling and actual movement highlights for the selected upgrade were verified. This build has not been released: public alpha.1 and its results below remain a separate verified version. Nonempty mixed non-shooter subsets in the approximate forecast still omit the numeric hero contribution; that limitation remains. [Window selection rule](placement-internals.md#shooter-window).
+[The source correction is published](https://github.com/Xaaalera/heroes5-deployment-preview/commit/b1c5c22). Ordinary startup of the new package, card cycling and actual movement highlights for the selected upgrade were verified. The tested package is released as [0.2.0-alpha.2](https://github.com/Xaaalera/heroes5-deployment-preview/releases/tag/v0.2.0-alpha.2); alpha.1 and its results below remain a separate verified version. Nonempty mixed non-shooter subsets in the approximate forecast still omit the numeric hero contribution; that limitation remains. [Window selection rule](placement-internals.md#shooter-window).
 
 ??? info "Build identity and retained evidence"
 
-    Tested candidate 21 ZIP: SHA-256 `9e7862d8330280a8febf218c54fac2de1bf4ba1b9a8c98b20b4423d42aee5152`. The archive is not yet published; this hash does not identify alpha.1.
+    Tested candidate 21 ZIP, published in alpha.2: SHA-256 `9e7862d8330280a8febf218c54fac2de1bf4ba1b9a8c98b20b4423d42aee5152`. This hash does not identify alpha.1.
 
     Two replay receipts are retained locally: `ordinary-835-large-melee-geometry-replay.json` and `ordinary-live-1095-large-melee-geometry-replay.json`. Independent campaign verification: `ordinary-large-melee-final-campaign-independent-review.json`; entire-run timer: `ordinary-large-melee-final-campaign-outer.json`. These names identify original evidence in the project log; the private files are not a publicly runnable reproduction recipe.
 
