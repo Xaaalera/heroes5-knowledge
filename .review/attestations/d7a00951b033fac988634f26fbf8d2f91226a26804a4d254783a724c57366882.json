@@ -1,0 +1,1832 @@
+{
+  "diffHash": "d7a00951b033fac988634f26fbf8d2f91226a26804a4d254783a724c57366882",
+  "commitSha": "5e50d6a288a77d631b22909a75c04cc7e1f033af",
+  "perAgent": {
+    "craft": {
+      "score": 10,
+      "verdict": "PASS",
+      "reviewer": "/root/melee_docs_newcomer",
+      "evidence": {
+        "record": "ordinary-melee-knowledge-source-craft-review.json",
+        "sha256": "b67c4bd70427e1e83e61472c066e2a8a4cf06988b3c3503f7335724f91843d5b",
+        "head": "5e50d6a288a77d631b22909a75c04cc7e1f033af"
+      }
+    },
+    "architecture": {
+      "score": 10,
+      "verdict": "PASS",
+      "reviewer": "/root/melee_docs_accuracy",
+      "evidence": {
+        "record": "ordinary-melee-knowledge-source-architecture-review.json",
+        "sha256": "b86584bfc78ce27b09cb0cadcda2e92fad32521fd5b2d72b3514a586969683f6",
+        "head": "5e50d6a288a77d631b22909a75c04cc7e1f033af"
+      }
+    },
+    "tests": {
+      "score": 9,
+      "verdict": "PASS",
+      "reviewer": "/root/melee_docs_steps",
+      "evidence": {
+        "record": "ordinary-melee-knowledge-source-tests-review.json",
+        "sha256": "a2c45ec2bf7f124f60400dbe563681cbbc2697cc60309aa299de6702516f2237",
+        "head": "5e50d6a288a77d631b22909a75c04cc7e1f033af"
+      }
+    },
+    "docs": {
+      "score": 10,
+      "verdict": "PASS",
+      "reviewer": "/root/melee_docs_structure",
+      "evidence": {
+        "record": "ordinary-melee-knowledge-source-docs-review.json",
+        "sha256": "f55a7f565a4d2abbb271918925a5873dfd8284679c4360c4fcbbb630d4bfa898",
+        "head": "5e50d6a288a77d631b22909a75c04cc7e1f033af"
+      },
+      "review": {
+        "reviewer": "/root/melee_docs_structure",
+        "files": [
+          "AGENTS.md",
+          "CONTRIBUTING.md",
+          "README.md",
+          "docs/contributing.md",
+          "docs/en/contributing.md",
+          "docs/en/modding/combat-scripts.md",
+          "docs/en/modding/console.md",
+          "docs/en/modding/devkit.md",
+          "docs/en/modding/native-projects.md",
+          "docs/en/modding/native-ui.md",
+          "docs/en/modding/resource-overrides.md",
+          "docs/en/modding/test-maps.md",
+          "docs/en/players/army-placement.md",
+          "docs/en/players/bank-reference.md",
+          "docs/en/players/deployment-preview.md",
+          "docs/en/players/mods.md",
+          "docs/en/reference/castle-artwork.md",
+          "docs/en/reference/creatures.md",
+          "docs/en/reference/formats.md",
+          "docs/en/reference/game-api.md",
+          "docs/en/reference/placement-internals.md",
+          "docs/en/reference/research-diary.md",
+          "docs/en/reference/research-index.md",
+          "docs/en/reference/technology-stack.md",
+          "docs/en/reference/universe-build.md",
+          "docs/en/reference/xkit-commands.md",
+          "docs/llms.txt",
+          "docs/modding/combat-scripts.md",
+          "docs/modding/console.md",
+          "docs/modding/devkit.md",
+          "docs/modding/native-projects.md",
+          "docs/modding/native-ui.md",
+          "docs/modding/resource-overrides.md",
+          "docs/modding/test-maps.md",
+          "docs/players/army-placement.md",
+          "docs/players/bank-reference.md",
+          "docs/players/deployment-preview.md",
+          "docs/players/mods.md",
+          "docs/reference/castle-artwork.md",
+          "docs/reference/creatures.md",
+          "docs/reference/formats.md",
+          "docs/reference/game-api.md",
+          "docs/reference/placement-internals.md",
+          "docs/reference/research-diary.md",
+          "docs/reference/research-index.md",
+          "docs/reference/technology-stack.md",
+          "docs/reference/universe-build.md",
+          "docs/reference/xkit-commands.md"
+        ],
+        "criteria": {
+          "purpose": {
+            "verdict": "PASS",
+            "evidence": "The changed player pair explains neutral deployment decisions; the reference pair gives exact mechanism conditions, and the dated diary pair records the candidate-21 correction and tests. The other 42 covered docs retain the prior accepted exact blobs."
+          },
+          "structure": {
+            "verdict": "PASS",
+            "evidence": "Exactly six article bodies changed. Player mechanics, technical conditions, and dated candidate evidence remain separate in both languages; #shooter-window links to the new diary entry, which links back. The prior 48-file review list still covers docs/llms.txt."
+          },
+          "specificity": {
+            "verdict": "PASS",
+            "evidence": "The new rule states strict about-55% row selection, non-shooter subsets, hero contribution, cyclic windows, and first-row geometry. It separates numeric 100 for defensive shooter advantage from 100% non-shooter share."
+          },
+          "reproducibility": {
+            "verdict": "PASS",
+            "evidence": "The diary identifies the retained seven-stack comparison, 4/7 versus 7/7, ten fresh loads of three maps, 273/273 full and 165/213 mixed approximate matches, exact candidate ZIP hash, private receipt names, and what each check does not prove."
+          },
+          "evidence": {
+            "verdict": "PASS",
+            "evidence": "All six raw bytes match the round-2 freeze, all 40 article critiques match normalized HEAD hashes, and five independent lanes close each changed article. The isolated HEAD passed build, check, browser and secrets commands; the previous 34 critique records and 42 documentation blobs are unchanged."
+          },
+          "applicability": {
+            "verdict": "PASS",
+            "evidence": "The pages limit thresholds to the checked Universe settings and distinguish full calculation from approximate forecast. The diary marks candidate 21 unreleased, alpha.1 as a separate prior version, and the retained replay as narrower than full startup or strength validation."
+          },
+          "translations": {
+            "verdict": "PASS",
+            "evidence": "The six changed pages form three RU/EN pairs with matching row-selection conditions, ratios, fallback distinctions, evidence counts, package status and links. Independent terminology/translation records accept the exact final hashes."
+          },
+          "maintenance": {
+            "verdict": "PASS",
+            "evidence": "Living mechanics were updated in the canonical knowledge articles, while the new correction was appended as a dated diary entry and prior release results remain separate. Private receipt names are identified as local evidence, not a public reproduction recipe."
+          }
+        },
+        "findings": [],
+        "articleCritiques": [
+          {
+            "path": "docs/contributing.md",
+            "sha256": "18c4520d3b6d9c426fa20620e19ddfcc705868cb32ddc0c80c5059cab083b083",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/final_docs_newcomer",
+                "evidence": "Independent report final-docs-newcomer-round3.json; SHA256 50ca1254245358071e72d799f53a0b476e40621cca773c5c0cda40b1868256ff. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/final_docs_accuracy",
+                "evidence": "Independent report final-docs-accuracy-round3.json; SHA256 00f3f147788dcb29c75af2d6bfd91a1665ed28a89c32d6cb118459aac20eec57. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/final_docs_reproducibility",
+                "evidence": "Independent report final-docs-reproducibility-round3.json; SHA256 303abfdc4c54a9595ba5cb205d86e442cecc2fbd3a30cb149b178ccb04bf76a0. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/final_docs_navigation",
+                "evidence": "Independent report final-docs-navigation-round3.json; SHA256 f126305ea170ef91e8666acbbb4dee50cf838e27057fae8c0455df4165e74e04. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/final_docs_translation",
+                "evidence": "Independent report final-docs-translation-round3.json; SHA256 95b97779e244b0ecbf508e16ac903e53e1a0193f4475f222d381a052c60cb475. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/contributing.md",
+            "sha256": "c83c5e8036ca07bd4fc2eb515180895041ac4b44cf32415b15e3dffb0aa3224e",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/final_docs_newcomer",
+                "evidence": "Independent report final-docs-newcomer-round3.json; SHA256 50ca1254245358071e72d799f53a0b476e40621cca773c5c0cda40b1868256ff. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/final_docs_accuracy",
+                "evidence": "Independent report final-docs-accuracy-round3.json; SHA256 00f3f147788dcb29c75af2d6bfd91a1665ed28a89c32d6cb118459aac20eec57. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/final_docs_reproducibility",
+                "evidence": "Independent report final-docs-reproducibility-round3.json; SHA256 303abfdc4c54a9595ba5cb205d86e442cecc2fbd3a30cb149b178ccb04bf76a0. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/final_docs_navigation",
+                "evidence": "Independent report final-docs-navigation-round3.json; SHA256 f126305ea170ef91e8666acbbb4dee50cf838e27057fae8c0455df4165e74e04. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/final_docs_translation",
+                "evidence": "Independent report final-docs-translation-round3.json; SHA256 95b97779e244b0ecbf508e16ac903e53e1a0193f4475f222d381a052c60cb475. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/console.md",
+            "sha256": "489ca7c0f3c1c7e225cd3d457ca548f713ced5ecdf6beef79e50020334376718",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round2. Published v0.1.1-preview.5 native/console_module.cpp:819-830 displays runtime states without project discovery/prototype grouping. Current ../devkit/native/module_catalog.hpp and console_module.cpp implement the explicitly unpublished addition; dated module_catalog_checkpoint supports its limited historical test.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final unpublished-section notice distinguishes the development project catalog from downloadable preview.5. Original S2 is resolved: release source only enumerates connected-module events, and final text says the complete catalog/prototype section is absent from that release. Prior independent round-two judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The module-inspection section follows panel controls and precedes diagnostics. Its opening explicitly separates the unpublished catalog from downloadable preview.5; the final verified-scope section retains released-console scope. Reciprocal translation metadata and local links resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match round 2 newcomer review. The section explicitly identifies the catalog as unpublished and states that downloadable preview.5 lacks the complete project catalog and prototype section.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Inspect our mods / ?????????? ???? ????",
+                    "problem": "The project catalog was originally presented as available in documented preview.5.",
+                    "consequence": "Release users could not find the promised catalog and status labels.",
+                    "evidence": "Published preview.5 revision 757a19a lacks module_catalog.hpp and renders raw moduleStates.",
+                    "disposition": "Added an explicit section-level notice identifying the catalog as unpublished and describing preview.5 limitations.",
+                    "verification": "Final bytes explicitly state that downloadable preview.5 lacks the complete project catalog and separate prototype section."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Paired Modules additions align on unpublished status, preview.5 limitations, connection versus source discovery, and no automatic activation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/devkit.md",
+            "sha256": "09c03d9ce2f330c1c66c52b0a8900d161d5e375d9a35b79e12767d44b8c72ce9",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round1. Added integration paragraph accurately summarizes native-projects.md#architecture-contract and root/devkit/mod AGENTS requirements; no claim of current migration completion.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Architecture prerequisite resolves to native-projects.md#architecture-contract. It states normative integration requirements without asserting migration completion. Starter verification remains confined to observed function output. Prior independent judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The architecture prerequisite is directly under C++ development before its commands, and links to the explicit architecture-contract anchor in the same language. Setup, resource release, native development, diagnostics and verification retain distinct sections. Local links and reciprocal metadata resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match earlier independent newcomer review. The integration paragraph identifies when to consult the canonical architecture contract and summarizes mod ownership and player independence.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Paired architecture-contract link paragraphs align on mod behavior/UI ownership, runtime adapter and player independence.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/native-projects.md",
+            "sha256": "a68b057f2372b0ae7a1f45e52ab95e802281cafb81cca1b4e6a2c4494168c383",
+            "reviewed_raw_sha256": "a68b057f2372b0ae7a1f45e52ab95e802281cafb81cca1b4e6a2c4494168c383",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/published_docs_newcomer",
+                "findings": [],
+                "evidence": "Lines 130 and 134 link SDK source revision 39b4e92; line 134 explicitly says no ready release contains this addition; line 130 separates source availability from ordinary final-package readiness."
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/published_docs_accuracy",
+                "findings": [],
+                "evidence": "SDK 39b4e92 is an ancestor of origin/main 1de5840 and contains validate_player_archive, package_native_resources and resource_project handling; no local release tag contains that revision."
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/published_docs_steps",
+                "findings": [],
+                "evidence": "Freeze hash matches current bytes; prior_reconstruction_matches is true. Reused prior accepted steps judgment for unchanged article body: 670652a29966b21f9f3459fe3a7f06ccfd9a8230f236967877f0a8861c2e4dc7. Availability paragraphs name full immutable Git commit URLs; both objects resolve locally as commits and are ancestors of recorded public heads. SDK native release code builds through native_tools before packaging the companion H5U; this route does not require a prebuilt runtime folder. Article distinguishes source availability from ready release and ordinary final-package acceptance."
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/published_docs_structure",
+                "findings": [],
+                "evidence": "Current raw SHA256 independently matches the publication freeze. Reuse accepted structure judgment for previous raw SHA256 670652a29966b21f9f3459fe3a7f06ccfd9a8230f236967877f0a8861c2e4dc7; freeze records exact prior-body reconstruction. API lines 57-59 put the newer API revision at the native UI section entry and explicitly distinguish the older pin; native-projects lines 130 and 134 put SDK source availability beside the relevant check and packaging section. Section headings, language navigation and developer audience remain coherent; source availability is distinguished from unpublished ready release and ordinary final-package readiness."
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/published_docs_translation",
+                "findings": [],
+                "evidence": "Current raw SHA256 independently matches frozen receipt; previous accepted translation verdict reused for reconstructed unchanged body."
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/native-ui.md",
+            "sha256": "6c730f3aa80165424fddfc6c2538714b0518a81c0c9659bd5b6b57ee99a83e4e",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-newcomer-round1.json; SHA-256 ae0a3089591481a9ad2aa69c0dae53109416fd09cfe23eb8974d4f391a9b2f9e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-accuracy-round1.json; SHA-256 37d42b09c99e0093c6321c5670dc6c64ec5de61b13b132021aea86a61c986e72. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-steps-round1.json; SHA-256 e4a99b7ee07aeeacb2f630fe9884629cadbde1bf60b9bbcd5044a4a0a5ddd528. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-structure-round1.json; SHA-256 f7dee986868c839c00e43e48e0a6fe3af7bfce1e8c6b1baac8b1e75b2461682e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-translation-round1.json; SHA-256 48dbe77d5da5415f7b86fc2cda39d2da92a854a2a32c499acc7f52161216cf08. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/resource-overrides.md",
+            "sha256": "2f69383fdc4aa0a5d8417ad19157bdd37bd3aad9b901d8b8ed1f089783bcc78f",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/test-maps.md",
+            "sha256": "d070b371580560361e3d03c9ca2f6aaa6c10bc4845ec17ac77ce4d61fd8e9d62",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/players/bank-reference.md",
+            "sha256": "0edd84dd73a2f0aa0edd91af963d7f845eff4e11551a37f101498ed3b88ef876",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Full current paired article read; changed preparation explicitly removes legacy prototype and retains original graphics/input before copying exact preview.4 bin/UserMODs members. Existing round1 exact publicfcce3a ZIP inspection and matching historical Crypt/startup receipts reused; frozen source preflight refuses old prototype and mismatched paired H5U. DLL loading is accurately distinguished from file installation.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Full frozen paired article reread, current hashes independently matched, missing file-transfer action verified at line 29 and prototype refusal checked in WorkshopBankReferenceInstall.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Round 1: both bank-reference articles lines 26-29; round 2 verification at lines 26-31",
+                    "problem": "Installation omitted explicit extraction/copying of the loader, bank DLL and H5U.",
+                    "consequence": "A reader could install only graphics while leaving the bank mod inside the ZIP.",
+                    "evidence": "The frozen round 1 wording inventories package members and explicitly installs only d3d9.dll.",
+                    "disposition": "The author added complete file transfer after backups and before normal launch.",
+                    "verification": "Both current articles line 29 explicitly extract the ZIP and merge its bin/UserMODs folders into the installed game, naming dinput8.dll, d3d9.dll, WorkshopBankReference.dll and workshop-army-reference.h5u; lines 27-28 move old prototype removal and backups before copying; lines 30-31 give normal launch and expected hover result."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired round2 text and normalized hashes checked. Installation sequence is close/preflight/backup/copy/launch/check; removal, card interpretation, example, sources and bounded historic/current evidence remain discoverable. No new structure/navigation defect found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Download and install: numbered launch/hover steps and following old-prototype paragraph",
+                    "problem": "Old text-prototype removal is ordered after game launch instead of before it.",
+                    "consequence": "A returning user can follow the numbered procedure and reach a launch where the bank reference refuses installation or fails to appear, before learning the required cleanup.",
+                    "evidence": "Frozen paired articles put old workshop-object-reference.h5u removal in the paragraph after numbered steps3(launch) and4(hover). src/bank_launcher.cpp, WorkshopBankReferenceInstall, explicitly requires that this old prototype not exist before installing the bank reference.",
+                    "disposition": "Moved old-prototype removal and existing-H5U preservation into numbered preflight step2, before backup/copy/launch steps3-5.",
+                    "verification": "Independent structure reviewer read both complete frozen round2 articles. Step2 explicitly removes the blocked old prototype; step4 explicitly extracts/copies bin and UserMODs; launch is step5 and card check step6. The original prerequisite-order failure is absent."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленного DLL loading и шести текущих шагов установки RU/EN.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/bank-reference.md:20; RU pair:20",
+                    "problem": "EN previously translated DLL connection/loading as Automatic DLL installation.",
+                    "consequence": "EN described verified automatic file installation instead of verified connection of installed DLLs.",
+                    "evidence": "Round1 RU:20 подключение DLL vs EN:20 Automatic DLL installation.",
+                    "disposition": "EN:20 now says DLL loading.",
+                    "verification": "Independently read current pair: RU подключение DLL and EN DLL loading mean the same action; manual folder copying is explicit and equivalent in both line29."
+                  }
+                ]
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-step and context reading: backup, extract/copy, startup and expected bank-card steps are explicit; shared infrastructure is distinguished from complete SDK. No new substantive clarity finding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/bank-reference.md:26-29 (round1)",
+                    "problem": "The numbered installation steps never instruct copying the bank DLL, H5U and shared input DLL from the package.",
+                    "consequence": "A newcomer following the explicit actions installs only d3d9.dll and cannot get the bank card.",
+                    "evidence": "Round1 textual omission: package contents were listed, while only d3d9.dll had an explicit installation action.",
+                    "disposition": "Both versions now include an explicit extract-and-copy installation step after backups.",
+                    "verification": "Independent round2 reading at lines26-31 confirms six ordered steps; line29 copies/merges bin and UserMODs into the installed game directory and lists all four installed payload files."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/castle-artwork.md",
+            "sha256": "2bc1b138b9e26fdbafdfb6e706f38696456b607628adfbd8db3990e42f63520d",
+            "round": 1,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent full article/source metadata read confirms8original PNGs1672x941, displayed decimal MB rounded to2places, matching faction filenames and unchanged eight SHA256 values. AVIF previews and PNG download paths resolve at each generated language depth; NOTICE explicitly attributes originals to OpenAI image generation for this project. Retained browser receipt reports8byte-identical downloads per language and no mobile overflow.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Read full frozen EN article and independently matched LF-normalized hash; all eight named PNG actions mirror RU using rendered-route ../../../assets paths and retained original filenames, distinctly labelled from AVIF previews; parent actual browser receipt records all eight matching downloads and 390px no overflow.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired frozen pages independently read and supplied normalized hashes confirmed. Opening text states all8 backgrounds, original1672x941 PNG downloads and compressed AVIF previews. Eight distinct faction H2 headings each place matching preview and original download together. Both mkdocs navigation entries exist; corresponding RU/EN metadata links pair the gallery. Existing castle-gallery-browser-check.json shows16 source-identical downloads and no390pxoverflow; receipt inspected, not rerun. No concrete structure/task-navigation defect found.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Direct full RU/EN article comparison; all8 names/sizes/data labels match. Raw HTML link URLs resolved against rendered RU/EN article routes, not Markdown file directories; all16 routes point at same8originalPNG files with1672x941IHDR. NOTICE12 supports OpenAI-generated backgrounds.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent full paired-article reading: introduction distinguishes compressed previews from unchanged original1672x941PNG downloads, buttons state the save action, all8 faction sections identify image/source files, and provenance is linked without inventing a reuse-license promise. No substantive newcomer-clarity finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/formats.md",
+            "sha256": "c9e8d81d65ecb21a7ab21754b44ecce5e100da146dbfc783d5bc5b63944a514c",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report formats-critique-newcomer-round3.json; SHA-256 20e45cfdf17675b2828ccd20c715c19338f19a3cff2161386cae63727113ae1e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report formats-critique-accuracy-round3.json; SHA-256 7bbe42370ff7e79289f21f0569743f687b9d4813ee6129470fc980d8e30b7fb0. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report formats-critique-steps-round3.json; SHA-256 d74272a9462e8a9440245574f57d45bc68a38cf86a78cd9040950526019a28f9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report formats-critique-structure-round3.json; SHA-256 73fc0f86784b4cfa0571f8e12354d50efab9a9b00b3ed5233bf7770fd46336f6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report formats-critique-translation-round3.json; SHA-256 85db313fc29273b9d4213063e452bf7de2fac0106c95030344fe91092745bc4a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/technology-stack.md",
+            "sha256": "3530fa98033cc6a3f78fdec14786c95b8fc2962e1de0a13c6983ec8727c080fa",
+            "reviewed_raw_sha256": "3530fa98033cc6a3f78fdec14786c95b8fc2962e1de0a13c6983ec8727c080fa",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/game_api_dimensions_docs",
+                "evidence": "Loaded actual installed critique guide earlier in this reviewer session; independently reviewed this bounded delta from the newcomer angle. Both requested raw-byte SHA256 hashes match. Removing exactly the added paragraph and its following blank line reproduces each published knowledge 392bec7 article with LF normalization, confirming no other body change. The paragraph distinguishes the SDK Git dependency entry that pins the Game API revision from .gitmodules that supplies its repository URL. It names the library purpose added here, battlefield dimensions, and links the call contract rather than duplicating its instructions or maintaining another version number. Read previous independent technology-stack newcomer round2 evidence for unchanged developer/player, installed/research and version-source boundaries. This paragraph preserves those boundaries.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "Codex /root/release_native_arch_review",
+                "evidence": "New paragraph44 correctly identifies the SDK Git dependency entry as the revision pin and.gitmodules as the repository URL source. Committed SDK6984e9d has mode160000 entry game-api pointing to256f8be; its.gitmodules contains path/URL, no pinned revision. The battlefield-dimensions reader exists in published GameAPI256f8be and the already reviewed header6919ac29. The same-language game-api.md link resolves locally to the contract whose final dimensions paragraph passed this reviewers prior technical-accuracy round2. Removing exactly the added paragraph and its following blank line reproduces392bec7 bytes after normal CRLF/LF handling. Baseline SHA matches the retained approved inventory body; unchanged approved-body coverage reused. No extra technology, dependency, version-number table or player Python/compiler requirement is introduced. Existing version-source discipline remains explicit.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/release_native_tests_review",
+                "evidence": "{\"location\": \"Version sources, line44\", \"assessment\": \"The paragraph gives an identifiable Git dependency entry game-api and links the SDK repository where readers inspect it. It correctly distinguishes the pinned revision in the Git dependency entry from the repository URL in.gitmodules. A reader is directed to the version source, not a manually repeated release-number table.\"} {\"location\": \"line44, Game API reference link\", \"assessment\": \"The relative game-api.md link resolves to the same-language API reference and its dimensions call contract. That reference names the header/function, admitted live callback and game thread, native blocked borders, zero outputs on refusal, checked dimensions and existing setup/native-test workflow.\"} {\"location\": \"all unchanged content\", \"assessment\": \"Removing only the inserted paragraph and blank line reconstructs exact published392bec7 article bytes after LF normalization. Prior five-critic evidence matches that baseline hash and is reused only for unchanged text.\"}",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/game_api_dimensions_craft",
+                "evidence": "Applied the installed critique method already read in this session; independent structure critic did not author this delta. Independently verified raw SHA256 for both frozen files; git diff shows exactly one paragraph added atline44 under Version sources in each language. The paragraph belongs under version provenance: it identifies the SDK dependency entry as the revision source and .gitmodules as the URL source before the existing manifest links. It introduces no manually maintained revision number or new technology category. The short dimension-binding clause links directly to the existing Game API reference instead of duplicating its contract. Both same-language relative game-api.md targets exist. The existing shared-library table remains the high-level technology entry; detailed provenance and contract navigation appear in the version section. New text preserves heading order and does not interrupt an installation procedure. RU and EN insert the paragraph in the same position with corresponding SDK, .gitmodules and local reference links. Unchanged approved body was not broadly regraded.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/player_article_newcomer",
+                "evidence": "Установленный critique прочитан ранее в этой сессии; текущая независимая роль ограничена терминологией и переводом нового абзаца. Оба raw SHA256 независимо совпали с заданием. Прочитан фактический diff обеих статей: единственное добавление — абзац44 в разделе источников версий; неизменённая утверждённая часть повторно не атакуется. RU запись зависимости game-api в Git репозитория SDK соответствует EN dependency entry in the SDK Git repository; обе версии относят закреплённую ревизию к Git-записи, а URL репозитория к.gitmodules. Локальный SDK объект6984e9d содержит game-api как Git dependency160000 commit256f8be968c27c3c591adb77867979ef6e2ba0f0, а его.gitmodules содержит отдельный URL heroes5-game-api.git. RU размеры боевого поля соответствует EN battlefield dimensions; обе версии направляют к парному game-api.md за контрактом вызова без переноса числовых адресов или деталей реализации. В новых абзацах нет отдельного номера версии, новой технологии, нового требования к игроку или заявления о готовности пользовательского пакета.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/universe-build.md",
+            "sha256": "f19c9a41d1a3156c54194d3a6733e8c1e225974fda7a613223039dc007bc6e2d",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-newcomer-round2.json; SHA-256 98dda0f8652fb186d773a9292c237fa137aafc6624953c8369aeb5b6d42013a7. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-accuracy-round2.json; SHA-256 6458416c566697a4ddfdaecb6ecd6944bce941a0b91bd3ff9db6d89ae6118a92. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-steps-round2.json; SHA-256 aa07de3b42199c15d074cbcafbf30e6df4e867fce208397b9906618a35b97e0a. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-structure-round2.json; SHA-256 44932b093178e8cbab93079fec9ff99e19f0b26930ef892348b20ae4770e92d6. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-translation-round2.json; SHA-256 8346cc15708ab6de9fd31e638c8866bde868d682363e1d5389965723f2cfc786. Historical claims remain outside revalidation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/xkit-commands.md",
+            "sha256": "135c560aad59ad36f31691bbe26effd9f003b9aab18ba2267325a3f128e791e0",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report sdk-command-critique-newcomer-round3.json; SHA-256 f2fb20082b054a67bc5116716604ff6c0fee389c0e69a64a98167d055d37dcb7. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report sdk-command-critique-accuracy-round3.json; SHA-256 90905d2265e8b709b6f16085902a578d1fb560c998c86a5e3d9dc1afea5f7205. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report sdk-command-critique-steps-round3.json; SHA-256 871096df54e089cac01b8a694374d1cb82baf15536773db853098709b935f018. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report sdk-command-critique-structure-round3.json; SHA-256 dc72c26424415eb6615732d08d4e7dee507326d6205c7fdb5c988b1f6a7ed087. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report sdk-command-critique-translation-round3.json; SHA-256 bfee2fa8e8f565fa7d92245354acfdf1dd7a0bcd3c689fbcdd6318c6ad9074d2. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/console.md",
+            "sha256": "d3980170975007f63805ac8214fa45c018d0858d5309d70e8e57b2bd2b8a860b",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round2. Published v0.1.1-preview.5 native/console_module.cpp:819-830 displays runtime states without project discovery/prototype grouping. Current ../devkit/native/module_catalog.hpp and console_module.cpp implement the explicitly unpublished addition; dated module_catalog_checkpoint supports its limited historical test.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Final unpublished-section notice distinguishes the development project catalog from downloadable preview.5. Original S2 is resolved: release source only enumerates connected-module events, and final text says the complete catalog/prototype section is absent from that release. Prior independent round-two judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The module-inspection section follows panel controls and precedes diagnostics. Its opening explicitly separates the unpublished catalog from downloadable preview.5; the final verified-scope section retains released-console scope. Reciprocal translation metadata and local links resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match round 2 newcomer review. The section explicitly identifies the catalog as unpublished and states that downloadable preview.5 lacks the complete project catalog and prototype section.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Inspect our mods / ?????????? ???? ????",
+                    "problem": "The project catalog was originally presented as available in documented preview.5.",
+                    "consequence": "Release users could not find the promised catalog and status labels.",
+                    "evidence": "Published preview.5 revision 757a19a lacks module_catalog.hpp and renders raw moduleStates.",
+                    "disposition": "Added an explicit section-level notice identifying the catalog as unpublished and describing preview.5 limitations.",
+                    "verification": "Final bytes explicitly state that downloadable preview.5 lacks the complete project catalog and separate prototype section."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Paired Modules additions align on unpublished status, preview.5 limitations, connection versus source discovery, and no automatic activation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/devkit.md",
+            "sha256": "93c2c89cfc7af974c09f9a8a23af34bf36aa8f73018d6791a59b8817347aade8",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/placement_docs_accuracy",
+                "evidence": "Exact bytes match this reviewer round1. Added integration paragraph accurately summarizes native-projects.md#architecture-contract and root/devkit/mod AGENTS requirements; no claim of current migration completion.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/placement_docs_steps",
+                "evidence": "Architecture prerequisite resolves to native-projects.md#architecture-contract. It states normative integration requirements without asserting migration completion. Starter verification remains confined to observed function output. Prior independent judgment reused after final LF hash comparison.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/placement_docs_structure",
+                "evidence": "The architecture prerequisite is directly under C++ development before its commands, and links to the explicit architecture-contract anchor in the same language. Setup, resource release, native development, diagnostics and verification retain distinct sections. Local links and reciprocal metadata resolve.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/placement_docs_newcomer",
+                "evidence": "Exact bytes match earlier independent newcomer review. The integration paragraph identifies when to consult the canonical architecture contract and summarizes mod ownership and player independence.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/placement_docs_translation",
+                "evidence": "Paired architecture-contract link paragraphs align on mod behavior/UI ownership, runtime adapter and player independence.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/native-projects.md",
+            "sha256": "526ba4552b0e6426d4c8f630fd1167feea4fe24e9e6a352408b5a80397b1f316",
+            "reviewed_raw_sha256": "526ba4552b0e6426d4c8f630fd1167feea4fe24e9e6a352408b5a80397b1f316",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/published_docs_newcomer",
+                "findings": [],
+                "evidence": "Lines 130 and 134 link SDK source revision 39b4e92; line 134 explicitly says no ready release contains this addition; line 130 separates source availability from ordinary final-package readiness."
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/published_docs_accuracy",
+                "findings": [],
+                "evidence": "SDK 39b4e92 is an ancestor of origin/main 1de5840 and contains validate_player_archive, package_native_resources and resource_project handling; no local release tag contains that revision."
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/published_docs_steps",
+                "findings": [],
+                "evidence": "Freeze hash matches current bytes; prior_reconstruction_matches is true. Reused prior accepted steps judgment for unchanged article body: 149dc69cbf8e0955de9b717773243689ce7a449f75873123e5ea39f5e3c3eac9. Availability paragraphs name full immutable Git commit URLs; both objects resolve locally as commits and are ancestors of recorded public heads. SDK native release code builds through native_tools before packaging the companion H5U; this route does not require a prebuilt runtime folder. Article distinguishes source availability from ready release and ordinary final-package acceptance."
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/published_docs_structure",
+                "findings": [],
+                "evidence": "Current raw SHA256 independently matches the publication freeze. Reuse accepted structure judgment for previous raw SHA256 149dc69cbf8e0955de9b717773243689ce7a449f75873123e5ea39f5e3c3eac9; freeze records exact prior-body reconstruction. API lines 57-59 put the newer API revision at the native UI section entry and explicitly distinguish the older pin; native-projects lines 130 and 134 put SDK source availability beside the relevant check and packaging section. Section headings, language navigation and developer audience remain coherent; source availability is distinguished from unpublished ready release and ordinary final-package readiness."
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/published_docs_translation",
+                "findings": [],
+                "evidence": "Current raw SHA256 independently matches frozen receipt; previous accepted translation verdict reused for reconstructed unchanged body."
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/native-ui.md",
+            "sha256": "698603e44d9c200132d7178d950224a12eeae6bff575cd38802e42c3cb1f35f0",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-newcomer-round1.json; SHA-256 ae0a3089591481a9ad2aa69c0dae53109416fd09cfe23eb8974d4f391a9b2f9e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-accuracy-round1.json; SHA-256 37d42b09c99e0093c6321c5670dc6c64ec5de61b13b132021aea86a61c986e72. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-steps-round1.json; SHA-256 e4a99b7ee07aeeacb2f630fe9884629cadbde1bf60b9bbcd5044a4a0a5ddd528. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-structure-round1.json; SHA-256 f7dee986868c839c00e43e48e0a6fe3af7bfce1e8c6b1baac8b1e75b2461682e. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent bounded report native-ui-links-critique-translation-round1.json; SHA-256 48dbe77d5da5415f7b86fc2cda39d2da92a854a2a32c499acc7f52161216cf08. Changed-section scope and historical limitations remain as stated in source receipt.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/resource-overrides.md",
+            "sha256": "5a62e9ad25ea0532070f91bb1f591421c168812cbab4f9b24f7e106e0238d3b0",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/test-maps.md",
+            "sha256": "63039baf161d4acd0c97f24b6a12856cbdae362004c4097c2bdd572f94496230",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent report advanced-sdk-critique-newcomer-round2.json; SHA-256 8744032f0972e9d9cd54ce3748bc171ea15ff038700c5b5341a6bbe7c5247da1. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent report advanced-sdk-critique-accuracy-round2.json; SHA-256 dd843e82e9d1849f14b6356c996f14efa1b7e672b0832fab0a97929a9794efe0. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent report advanced-sdk-critique-steps-round2.json; SHA-256 93fc864c441366963e1465d30b6076095c40194452ac8258eb3f64981658417a. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent report advanced-sdk-critique-structure-round2.json; SHA-256 2278006d0826bbfc7b3ce588dda33f7fc3b8ac9693bdf7b3857df7be19187288. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent report advanced-sdk-critique-translation-round2.json; SHA-256 0d1e47629981419658ddddd62acbc46e5c85922b5f89d0da3ca7769167b0a993. Findings are scoped by explicit article location; prior findings and correction evidence retained in source receipts.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/players/bank-reference.md",
+            "sha256": "1dc3e79ac8dca3529e4b06cdf7f21adfba30329400affd89a12efab6fe67b653",
+            "round": 2,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Full current paired article read; changed preparation explicitly removes legacy prototype and retains original graphics/input before copying exact preview.4 bin/UserMODs members. Existing round1 exact publicfcce3a ZIP inspection and matching historical Crypt/startup receipts reused; frozen source preflight refuses old prototype and mismatched paired H5U. DLL loading is accurately distinguished from file installation.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Full frozen paired article reread, current hashes independently matched, missing file-transfer action verified at line 29 and prototype refusal checked in WorkshopBankReferenceInstall.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "Round 1: both bank-reference articles lines 26-29; round 2 verification at lines 26-31",
+                    "problem": "Installation omitted explicit extraction/copying of the loader, bank DLL and H5U.",
+                    "consequence": "A reader could install only graphics while leaving the bank mod inside the ZIP.",
+                    "evidence": "The frozen round 1 wording inventories package members and explicitly installs only d3d9.dll.",
+                    "disposition": "The author added complete file transfer after backups and before normal launch.",
+                    "verification": "Both current articles line 29 explicitly extract the ZIP and merge its bin/UserMODs folders into the installed game, naming dinput8.dll, d3d9.dll, WorkshopBankReference.dll and workshop-army-reference.h5u; lines 27-28 move old prototype removal and backups before copying; lines 30-31 give normal launch and expected hover result."
+                  }
+                ]
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired round2 text and normalized hashes checked. Installation sequence is close/preflight/backup/copy/launch/check; removal, card interpretation, example, sources and bounded historic/current evidence remain discoverable. No new structure/navigation defect found.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "??????? ? ??????????: numbered launch/hover steps and following old-prototype paragraph",
+                    "problem": "Old text-prototype removal is ordered after game launch instead of before it.",
+                    "consequence": "A returning user can follow the numbered procedure and reach a launch where the bank reference refuses installation or fails to appear, before learning the required cleanup.",
+                    "evidence": "Frozen paired articles put old workshop-object-reference.h5u removal in the paragraph after numbered steps3(launch) and4(hover). src/bank_launcher.cpp, WorkshopBankReferenceInstall, explicitly requires that this old prototype not exist before installing the bank reference.",
+                    "disposition": "Moved old-prototype removal and existing-H5U preservation into numbered preflight step2, before backup/copy/launch steps3-5.",
+                    "verification": "Independent structure reviewer read both complete frozen round2 articles. Step2 explicitly removes the blocked old prototype; step4 explicitly extracts/copies bin and UserMODs; launch is step5 and card check step6. The original prerequisite-order failure is absent."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Прямое сравнение исправленного DLL loading и шести текущих шагов установки RU/EN.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/en/players/bank-reference.md:20; RU pair:20",
+                    "problem": "EN previously translated DLL connection/loading as Automatic DLL installation.",
+                    "consequence": "EN described verified automatic file installation instead of verified connection of installed DLLs.",
+                    "evidence": "Round1 RU:20 подключение DLL vs EN:20 Automatic DLL installation.",
+                    "disposition": "EN:20 now says DLL loading.",
+                    "verification": "Independently read current pair: RU подключение DLL and EN DLL loading mean the same action; manual folder copying is explicit and equivalent in both line29."
+                  }
+                ]
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-step and context reading: backup, extract/copy, startup and expected bank-card steps are explicit; shared infrastructure is distinguished from complete SDK. No new substantive clarity finding.",
+                "findings": [
+                  {
+                    "severity": "S2",
+                    "state": "resolved",
+                    "location": "knowledge/docs/players/bank-reference.md:26-29 (round1)",
+                    "problem": "The numbered installation steps never instruct copying the bank DLL, H5U and shared input DLL from the package.",
+                    "consequence": "A newcomer following the explicit actions installs only d3d9.dll and cannot get the bank card.",
+                    "evidence": "Round1 textual omission: package contents were listed, while only d3d9.dll had an explicit installation action.",
+                    "disposition": "Both versions now include an explicit extract-and-copy installation step after backups.",
+                    "verification": "Independent round2 reading at lines26-31 confirms six ordered steps; line29 copies/merges bin and UserMODs into the installed game directory and lists all four installed payload files."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/castle-artwork.md",
+            "sha256": "c7a102f83a3bd908f9c7833095c0b460df149b34e0f7a70377b6fe688973634e",
+            "round": 1,
+            "author": "/root",
+            "critics": [
+              {
+                "findings": [],
+                "evidence": "Independent full article/source metadata read confirms8original PNGs1672x941, displayed decimal MB rounded to2places, matching faction filenames and unchanged eight SHA256 values. AVIF previews and PNG download paths resolve at each generated language depth; NOTICE explicitly attributes originals to OpenAI image generation for this project. Retained browser receipt reports8byte-identical downloads per language and no mobile overflow.",
+                "reviewer": "/root/article_accuracy_critic",
+                "lane": "accuracy"
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_gate_tests_review",
+                "evidence": "Read full frozen RU article and independently matched LF-normalized hash; its eight named download attributes target original PNGs with rendered-route ../../assets paths, while AVIF is clearly identified as preview; parent actual browser receipt records all eight downloads with original hashes and 390px no overflow.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/article_gate_arch_review",
+                "evidence": "Full paired frozen pages independently read and supplied normalized hashes confirmed. Opening text states all8 backgrounds, original1672x941 PNG downloads and compressed AVIF previews. Eight distinct faction H2 headings each place matching preview and original download together. Both mkdocs navigation entries exist; corresponding RU/EN metadata links pair the gallery. Existing castle-gallery-browser-check.json shows16 source-identical downloads and no390pxoverflow; receipt inspected, not rerun. No concrete structure/task-navigation defect found.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Direct full RU/EN article comparison; all8 names/sizes/data labels match. Raw HTML link URLs resolved against rendered RU/EN article routes, not Markdown file directories; all16 routes point at same8originalPNG files with1672x941IHDR. NOTICE12 supports OpenAI-generated backgrounds.",
+                "findings": []
+              },
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent full paired-article reading: introduction distinguishes compressed previews from unchanged original1672x941PNG downloads, buttons state the save action, all8 faction sections identify image/source files, and provenance is linked without inventing a reuse-license promise. No substantive newcomer-clarity finding.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/formats.md",
+            "sha256": "29c101f55f9dcd8b97d9516e0defe2257ceff66f02153d745f2829c71ffcc37b",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report formats-critique-newcomer-round3.json; SHA-256 20e45cfdf17675b2828ccd20c715c19338f19a3cff2161386cae63727113ae1e. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report formats-critique-accuracy-round3.json; SHA-256 7bbe42370ff7e79289f21f0569743f687b9d4813ee6129470fc980d8e30b7fb0. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report formats-critique-steps-round3.json; SHA-256 d74272a9462e8a9440245574f57d45bc68a38cf86a78cd9040950526019a28f9. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report formats-critique-structure-round3.json; SHA-256 73fc0f86784b4cfa0571f8e12354d50efab9a9b00b3ed5233bf7770fd46336f6. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report formats-critique-translation-round3.json; SHA-256 85db313fc29273b9d4213063e452bf7de2fac0106c95030344fe91092745bc4a. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/technology-stack.md",
+            "sha256": "7c78e12ea1dc5934d52f44918f91fa38cdc15d0569d7bcc188e222dfe10dd8e3",
+            "reviewed_raw_sha256": "7c78e12ea1dc5934d52f44918f91fa38cdc15d0569d7bcc188e222dfe10dd8e3",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/game_api_dimensions_docs",
+                "evidence": "Loaded actual installed critique guide earlier in this reviewer session; independently reviewed this bounded delta from the newcomer angle. Both requested raw-byte SHA256 hashes match. Removing exactly the added paragraph and its following blank line reproduces each published knowledge 392bec7 article with LF normalization, confirming no other body change. The paragraph distinguishes the SDK Git dependency entry that pins the Game API revision from .gitmodules that supplies its repository URL. It names the library purpose added here, battlefield dimensions, and links the call contract rather than duplicating its instructions or maintaining another version number. Read previous independent technology-stack newcomer round2 evidence for unchanged developer/player, installed/research and version-source boundaries. This paragraph preserves those boundaries.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "Codex /root/release_native_arch_review",
+                "evidence": "New paragraph44 correctly identifies the SDK Git dependency entry as the revision pin and.gitmodules as the repository URL source. Committed SDK6984e9d has mode160000 entry game-api pointing to256f8be; its.gitmodules contains path/URL, no pinned revision. The battlefield-dimensions reader exists in published GameAPI256f8be and the already reviewed header6919ac29. The same-language game-api.md link resolves locally to the contract whose final dimensions paragraph passed this reviewers prior technical-accuracy round2. Removing exactly the added paragraph and its following blank line reproduces392bec7 bytes after normal CRLF/LF handling. Baseline SHA matches the retained approved inventory body; unchanged approved-body coverage reused. No extra technology, dependency, version-number table or player Python/compiler requirement is introduced. Existing version-source discipline remains explicit.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/release_native_tests_review",
+                "evidence": "{\"location\": \"Version sources, line44\", \"assessment\": \"The paragraph gives an identifiable Git dependency entry game-api and links the SDK repository where readers inspect it. It correctly distinguishes the pinned revision in the Git dependency entry from the repository URL in.gitmodules. A reader is directed to the version source, not a manually repeated release-number table.\"} {\"location\": \"line44, Game API reference link\", \"assessment\": \"The relative game-api.md link resolves to the same-language API reference and its dimensions call contract. That reference names the header/function, admitted live callback and game thread, native blocked borders, zero outputs on refusal, checked dimensions and existing setup/native-test workflow.\"} {\"location\": \"all unchanged content\", \"assessment\": \"Removing only the inserted paragraph and blank line reconstructs exact published392bec7 article bytes after LF normalization. Prior five-critic evidence matches that baseline hash and is reused only for unchanged text.\"}",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/game_api_dimensions_craft",
+                "evidence": "Applied the installed critique method already read in this session; independent structure critic did not author this delta. Independently verified raw SHA256 for both frozen files; git diff shows exactly one paragraph added atline44 under Version sources in each language. The paragraph belongs under version provenance: it identifies the SDK dependency entry as the revision source and .gitmodules as the URL source before the existing manifest links. It introduces no manually maintained revision number or new technology category. The short dimension-binding clause links directly to the existing Game API reference instead of duplicating its contract. Both same-language relative game-api.md targets exist. The existing shared-library table remains the high-level technology entry; detailed provenance and contract navigation appear in the version section. New text preserves heading order and does not interrupt an installation procedure. RU and EN insert the paragraph in the same position with corresponding SDK, .gitmodules and local reference links. Unchanged approved body was not broadly regraded.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/player_article_newcomer",
+                "evidence": "Установленный critique прочитан ранее в этой сессии; текущая независимая роль ограничена терминологией и переводом нового абзаца. Оба raw SHA256 независимо совпали с заданием. Прочитан фактический diff обеих статей: единственное добавление — абзац44 в разделе источников версий; неизменённая утверждённая часть повторно не атакуется. RU запись зависимости game-api в Git репозитория SDK соответствует EN dependency entry in the SDK Git repository; обе версии относят закреплённую ревизию к Git-записи, а URL репозитория к.gitmodules. Локальный SDK объект6984e9d содержит game-api как Git dependency160000 commit256f8be968c27c3c591adb77867979ef6e2ba0f0, а его.gitmodules содержит отдельный URL heroes5-game-api.git. RU размеры боевого поля соответствует EN battlefield dimensions; обе версии направляют к парному game-api.md за контрактом вызова без переноса числовых адресов или деталей реализации. В новых абзацах нет отдельного номера версии, новой технологии, нового требования к игроку или заявления о готовности пользовательского пакета.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/universe-build.md",
+            "sha256": "a217db9e4c16fa6ef34cdf543e98ef598b5b60b699d14d2774005750bd6d08c3",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-newcomer-round2.json; SHA-256 98dda0f8652fb186d773a9292c237fa137aafc6624953c8369aeb5b6d42013a7. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-accuracy-round2.json; SHA-256 6458416c566697a4ddfdaecb6ecd6944bce941a0b91bd3ff9db6d89ae6118a92. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-steps-round2.json; SHA-256 aa07de3b42199c15d074cbcafbf30e6df4e867fce208397b9906618a35b97e0a. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-structure-round2.json; SHA-256 44932b093178e8cbab93079fec9ff99e19f0b26930ef892348b20ae4770e92d6. Historical claims remain outside revalidation.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent corrected-route report publication-links-critique-translation-round2.json; SHA-256 8346cc15708ab6de9fd31e638c8866bde868d682363e1d5389965723f2cfc786. Historical claims remain outside revalidation.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/xkit-commands.md",
+            "sha256": "7cf6a47e5444aa929376b2f40f481073b66794fa6ae9563ff2b0de031f40dabf",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/article_newcomer_critic",
+                "evidence": "Independent final report sdk-command-critique-newcomer-round3.json; SHA-256 f2fb20082b054a67bc5116716604ff6c0fee389c0e69a64a98167d055d37dcb7. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "article_accuracy_critic",
+                "evidence": "Independent final report sdk-command-critique-accuracy-round3.json; SHA-256 90905d2265e8b709b6f16085902a578d1fb560c998c86a5e3d9dc1afea5f7205. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/article_steps_critic",
+                "evidence": "Independent final report sdk-command-critique-steps-round3.json; SHA-256 871096df54e089cac01b8a694374d1cb82baf15536773db853098709b935f018. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "article_structure_critic",
+                "evidence": "Independent final report sdk-command-critique-structure-round3.json; SHA-256 dc72c26424415eb6615732d08d4e7dee507326d6205c7fdb5c988b1f6a7ed087. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/article_translation_critic",
+                "evidence": "Independent final report sdk-command-critique-translation-round3.json; SHA-256 bfee2fa8e8f565fa7d92245354acfdf1dd7a0bcd3c689fbcdd6318c6ad9074d2. Prior rounds and closed historical findings retained in source receipts; scope limitations unchanged.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/modding/combat-scripts.md",
+            "sha256": "197ead01742c4f8085f03a2d8dbd9bb674ab9d6508aacc49338bba2a3950b066",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/final_docs_newcomer",
+                "evidence": "Independent report final-docs-newcomer-round3.json; SHA256 50ca1254245358071e72d799f53a0b476e40621cca773c5c0cda40b1868256ff. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": [
+                  {
+                    "location": "After-battle results / Wait for the complete stack list, lines 53-63",
+                    "severity": "S2",
+                    "problem": "The native post-Start deployment-collection rule is nested under After-battle results immediately before the COMBAT_RESULTS_TRIGGER example.",
+                    "consequence": "A novice implementing casualty logging may apply starting-defender position-and-quantity readiness to an after-battle handler that instead reads saved winning-army losses.",
+                    "evidence": "The timing table distinguishes Start coordinates from COMBAT_RESULTS_TRIGGER losses; the new subsection describes a post-Start defender list, while the next example queries GetSavedCombatArmyCreatureInfo for the winner.",
+                    "fix": "Give native post-Start verification its own timed section before the separate after-battle handler section.",
+                    "state": "resolved",
+                    "disposition": "Corrected current/historical status, observation phases or campaign identification and reproduction limits; final independent review accepts the inspected corrections.",
+                    "verification": "final-docs-newcomer-round3.json, final reviewed hash 197ead01742c4f8085f03a2d8dbd9bb674ab9d6508aacc49338bba2a3950b066; no open findings. Original round1 evidence retained."
+                  },
+                  {
+                    "location": "After-battle results / Wait for the complete stack list, lines 53-63",
+                    "severity": "S2",
+                    "problem": "The native post-Start deployment-collection rule is nested under After-battle results immediately before the COMBAT_RESULTS_TRIGGER example.",
+                    "consequence": "A novice implementing casualty logging may apply starting-defender position-and-quantity readiness to an after-battle handler that instead reads saved winning-army losses.",
+                    "evidence": "The timing table distinguishes Start coordinates from COMBAT_RESULTS_TRIGGER losses; the new subsection describes a post-Start defender list, while the next example queries GetSavedCombatArmyCreatureInfo for the winner.",
+                    "state": "resolved",
+                    "disposition": "Corrected current/historical status, observation phases or campaign identification and reproduction limits; final independent review accepts the inspected corrections.",
+                    "verification": "final-docs-newcomer-round3.json, final reviewed hash 197ead01742c4f8085f03a2d8dbd9bb674ab9d6508aacc49338bba2a3950b066; no open findings. Original round2 evidence retained."
+                  }
+                ]
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/final_docs_accuracy",
+                "evidence": "Independent report final-docs-accuracy-round3.json; SHA256 00f3f147788dcb29c75af2d6bfd91a1665ed28a89c32d6cb118459aac20eec57. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/final_docs_reproducibility",
+                "evidence": "Independent report final-docs-reproducibility-round3.json; SHA256 303abfdc4c54a9595ba5cb205d86e442cecc2fbd3a30cb149b178ccb04bf76a0. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/final_docs_navigation",
+                "evidence": "Independent report final-docs-navigation-round3.json; SHA256 f126305ea170ef91e8666acbbb4dee50cf838e27057fae8c0455df4165e74e04. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": [
+                  {
+                    "location": "After-battle results > Wait for the complete stack list, new subsection and following OnResults example",
+                    "severity": "S2",
+                    "problem": "The post-Start deployment observer is nested under After-battle results, and the later casualty-handler example remains inside its subsection.",
+                    "consequence": "Heading navigation associates a starting-defender collection rule with the after-battle casualty API and obscures which timing and mechanism each explanation applies to.",
+                    "evidence": "The timing table distinguishes Start coordinates from COMBAT_RESULTS_TRIGGER saved army/loss data. The new subsection explicitly describes the observed post-Start list, but its parent is After-battle results and the following example reads GetSavedCombatArmyCreatureInfo.",
+                    "fix": "Create a separate section for native post-Start deployment verification, followed by the existing After-battle results section and its OnResults example.",
+                    "example": "A reader jumps directly to After-battle results in the contents and treats the deployment-roster readiness rule as preparation for the casualty callback.",
+                    "confidence": "high",
+                    "state": "resolved",
+                    "disposition": "Corrected current/historical status, observation phases or campaign identification and reproduction limits; final independent review accepts the inspected corrections.",
+                    "verification": "final-docs-navigation-round3.json, final reviewed hash 197ead01742c4f8085f03a2d8dbd9bb674ab9d6508aacc49338bba2a3950b066; no open findings. Original round1 evidence retained."
+                  }
+                ]
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/final_docs_translation",
+                "evidence": "Independent report final-docs-translation-round3.json; SHA256 95b97779e244b0ecbf508e16ac903e53e1a0193f4475f222d381a052c60cb475. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": [
+                  {
+                    "location": "After-battle results / Wait for the complete stack list (new subsection)",
+                    "severity": "S2",
+                    "problem": "The English section heading assigns post-Start deployment enumeration to after-battle results; its Russian counterpart says results without hidden inputs.",
+                    "consequence": "English readers can apply deployment-roster readiness to the casualty handler or wait until battle end to collect starting positions.",
+                    "evidence": "Frozen EN diff places the observer subsection directly under After-battle results and before OnResults; the subsection itself explicitly says post-Start, while the opening separates Start positions from COMBAT_RESULTS_TRIGGER losses. Frozen RU parent heading is Results without reading hidden inputs.",
+                    "fix": "Give post-Start deployment collection its own section in both languages and retain a separate after-battle section for COMBAT_RESULTS_TRIGGER.",
+                    "state": "resolved",
+                    "disposition": "Corrected current/historical status, observation phases or campaign identification and reproduction limits; final independent review accepts the inspected corrections.",
+                    "verification": "final-docs-translation-round3.json, final reviewed hash 197ead01742c4f8085f03a2d8dbd9bb674ab9d6508aacc49338bba2a3950b066; no open findings. Original round1 evidence retained."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/research-index.md",
+            "sha256": "27af896481224f701ca80857d219f9acef3f152ccd2083a437874b05e485d02b",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/final_docs_newcomer",
+                "evidence": "Independent report final-docs-newcomer-round3.json; SHA256 50ca1254245358071e72d799f53a0b476e40621cca773c5c0cda40b1868256ff. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/final_docs_accuracy",
+                "evidence": "Independent report final-docs-accuracy-round3.json; SHA256 00f3f147788dcb29c75af2d6bfd91a1665ed28a89c32d6cb118459aac20eec57. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/final_docs_reproducibility",
+                "evidence": "Independent report final-docs-reproducibility-round3.json; SHA256 303abfdc4c54a9595ba5cb205d86e442cecc2fbd3a30cb149b178ccb04bf76a0. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/final_docs_navigation",
+                "evidence": "Independent report final-docs-navigation-round3.json; SHA256 f126305ea170ef91e8666acbbb4dee50cf838e27057fae8c0455df4165e74e04. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/final_docs_translation",
+                "evidence": "Independent report final-docs-translation-round3.json; SHA256 95b97779e244b0ecbf508e16ac903e53e1a0193f4475f222d381a052c60cb475. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/modding/combat-scripts.md",
+            "sha256": "68889b83078628d40d45ea966892b3aa9c7f164be82683c9c19ecdecce9f0598",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/final_docs_newcomer",
+                "evidence": "Independent report final-docs-newcomer-round3.json; SHA256 50ca1254245358071e72d799f53a0b476e40621cca773c5c0cda40b1868256ff. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/final_docs_accuracy",
+                "evidence": "Independent report final-docs-accuracy-round3.json; SHA256 00f3f147788dcb29c75af2d6bfd91a1665ed28a89c32d6cb118459aac20eec57. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/final_docs_reproducibility",
+                "evidence": "Independent report final-docs-reproducibility-round3.json; SHA256 303abfdc4c54a9595ba5cb205d86e442cecc2fbd3a30cb149b178ccb04bf76a0. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/final_docs_navigation",
+                "evidence": "Independent report final-docs-navigation-round3.json; SHA256 f126305ea170ef91e8666acbbb4dee50cf838e27057fae8c0455df4165e74e04. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/final_docs_translation",
+                "evidence": "Independent report final-docs-translation-round3.json; SHA256 95b97779e244b0ecbf508e16ac903e53e1a0193f4475f222d381a052c60cb475. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/research-index.md",
+            "sha256": "896d13715bf04a2022444400e7724ac1a2e71eb996ed5fa540c0ccd71bf24ccb",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/final_docs_newcomer",
+                "evidence": "Independent report final-docs-newcomer-round3.json; SHA256 50ca1254245358071e72d799f53a0b476e40621cca773c5c0cda40b1868256ff. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/final_docs_accuracy",
+                "evidence": "Independent report final-docs-accuracy-round3.json; SHA256 00f3f147788dcb29c75af2d6bfd91a1665ed28a89c32d6cb118459aac20eec57. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/final_docs_reproducibility",
+                "evidence": "Independent report final-docs-reproducibility-round3.json; SHA256 303abfdc4c54a9595ba5cb205d86e442cecc2fbd3a30cb149b178ccb04bf76a0. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/final_docs_navigation",
+                "evidence": "Independent report final-docs-navigation-round3.json; SHA256 f126305ea170ef91e8666acbbb4dee50cf838e27057fae8c0455df4165e74e04. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/final_docs_translation",
+                "evidence": "Independent report final-docs-translation-round3.json; SHA256 95b97779e244b0ecbf508e16ac903e53e1a0193f4475f222d381a052c60cb475. Bounded correction review and exact-hash inheritance disclosed there.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/game-api.md",
+            "sha256": "1ece65d2e7a9219ad44747013f1955d9817b5746adb8d72805a3a7605aa788b5",
+            "reviewed_raw_sha256": "ed820853c8d80f55b775a5f7df7baebe8b4593c4b5653876b2dbfe8cf0ba08ed",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/published_docs_newcomer",
+                "findings": [],
+                "evidence": "Line 59 names the native-UI source revision 58f5ddc and explicitly says the older pinned revision lacks it; the connection section identifies the API as headers with no separate DLL; the native-UI verification paragraph retains unaccepted final-delivery limits."
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/published_docs_accuracy",
+                "findings": [],
+                "evidence": "Game API 58f5ddc adds include/h5/native_ui.hpp on 2026-10-12 and is an ancestor of origin/main 43af625; the prior pinned revision is explicitly distinguished."
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/published_docs_steps",
+                "findings": [],
+                "evidence": "Freeze hash matches current bytes; prior_reconstruction_matches is true. Reused prior accepted steps judgment for unchanged article body: 4e2eae8e31888414359c08a04219c660182cad0e18bfeb2fccc4f3a023eb0a88. Availability paragraphs name full immutable Git commit URLs; both objects resolve locally as commits and are ancestors of recorded public heads. SDK native release code builds through native_tools before packaging the companion H5U; this route does not require a prebuilt runtime folder. Article distinguishes source availability from ready release and ordinary final-package acceptance."
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/published_docs_structure",
+                "findings": [],
+                "evidence": "Current raw SHA256 independently matches the publication freeze. Reuse accepted structure judgment for previous raw SHA256 4e2eae8e31888414359c08a04219c660182cad0e18bfeb2fccc4f3a023eb0a88; freeze records exact prior-body reconstruction. API lines 57-59 put the newer API revision at the native UI section entry and explicitly distinguish the older pin; native-projects lines 130 and 134 put SDK source availability beside the relevant check and packaging section. Section headings, language navigation and developer audience remain coherent; source availability is distinguished from unpublished ready release and ordinary final-package readiness."
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/published_docs_translation",
+                "findings": [],
+                "evidence": "Current raw SHA256 independently matches frozen receipt; previous accepted translation verdict reused for reconstructed unchanged body."
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/game-api.md",
+            "sha256": "af176e873812e51d21630d1d9f6318600c122b51a87b3fd82ab64f1b0e4ad3ff",
+            "reviewed_raw_sha256": "1975ac00967115d12a1c885de40c513a0177ba02b17e80b45c470728d9a7bad5",
+            "author": "/root",
+            "round": 1,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/published_docs_newcomer",
+                "findings": [],
+                "evidence": "Line 59 names the native-UI source revision 58f5ddc and explicitly says the older pinned revision lacks it; the connection section identifies the API as headers with no separate DLL; the native-UI verification paragraph retains unaccepted final-delivery limits."
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/published_docs_accuracy",
+                "findings": [],
+                "evidence": "Game API 58f5ddc adds include/h5/native_ui.hpp on 2026-10-12 and is an ancestor of origin/main 43af625; the prior pinned revision is explicitly distinguished."
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/published_docs_steps",
+                "findings": [],
+                "evidence": "Freeze hash matches current bytes; prior_reconstruction_matches is true. Reused prior accepted steps judgment for unchanged article body: 54fe3adb156d37523438c15e8e8f4ca33c0d2f2135653679c744be74f3a8bdf9. Availability paragraphs name full immutable Git commit URLs; both objects resolve locally as commits and are ancestors of recorded public heads. SDK native release code builds through native_tools before packaging the companion H5U; this route does not require a prebuilt runtime folder. Article distinguishes source availability from ready release and ordinary final-package acceptance."
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/published_docs_structure",
+                "findings": [],
+                "evidence": "Current raw SHA256 independently matches the publication freeze. Reuse accepted structure judgment for previous raw SHA256 54fe3adb156d37523438c15e8e8f4ca33c0d2f2135653679c744be74f3a8bdf9; freeze records exact prior-body reconstruction. API lines 57-59 put the newer API revision at the native UI section entry and explicitly distinguish the older pin; native-projects lines 130 and 134 put SDK source availability beside the relevant check and packaging section. Section headings, language navigation and developer audience remain coherent; source availability is distinguished from unpublished ready release and ordinary final-package readiness."
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/published_docs_translation",
+                "findings": [],
+                "evidence": "Current raw SHA256 independently matches frozen receipt; previous accepted translation verdict reused for reconstructed unchanged body."
+              }
+            ]
+          },
+          {
+            "path": "docs/players/deployment-preview.md",
+            "sha256": "3a33a89a0735711a7347353ee9906d8a31a7128136ec5deec6667c52ad64434e",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/predictor_alpha_round3_newcomer",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-newcomer-critique-round3.json; SHA256 55a29351cd1e6386e12906378669fdc4058c14201084748697d17f087c446efc. Final bounded statistics review with exact-hash inherited scope recorded there."
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/predictor_alpha_round3_accuracy",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-accuracy-critique-round3.json; SHA256 192ef72f0016295134476bb59be4879759ea89802638c228864269710e1e6ce2. Final bounded statistics review with exact-hash inherited scope recorded there."
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/predictor_alpha_round3_steps",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-steps-critique-round3.json; SHA256 6b8d78dfc52ec52e6329aa634194b265f8c29c4c82c668c98996374dc0e927cd. Final bounded statistics review with exact-hash inherited scope recorded there."
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/predictor_alpha_round3_structure",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-structure-critique-round3.json; SHA256 ec970ea63a9a6dc66a99d06c7362622dd3464f9ece32445a41ad7d5340a88bc1. Final bounded statistics review with exact-hash inherited scope recorded there."
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/predictor_alpha_round3_translation",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-translation-critique-round3.json; SHA256 e0ba17166a6bef1d34a0bb7db2d3513d26aeb8381045e2958c23d34535d9eab7. Final bounded statistics review with exact-hash inherited scope recorded there."
+              }
+            ]
+          },
+          {
+            "path": "docs/en/players/deployment-preview.md",
+            "sha256": "4794fb0da5a572b33ebdbb34d52bf17c04330012c41ef47dd1766a34cefa8aa8",
+            "author": "/root",
+            "round": 3,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "/root/predictor_alpha_round3_newcomer",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-newcomer-critique-round3.json; SHA256 55a29351cd1e6386e12906378669fdc4058c14201084748697d17f087c446efc. Final bounded statistics review with exact-hash inherited scope recorded there."
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/predictor_alpha_round3_accuracy",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-accuracy-critique-round3.json; SHA256 192ef72f0016295134476bb59be4879759ea89802638c228864269710e1e6ce2. Final bounded statistics review with exact-hash inherited scope recorded there."
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/predictor_alpha_round3_steps",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-steps-critique-round3.json; SHA256 6b8d78dfc52ec52e6329aa634194b265f8c29c4c82c668c98996374dc0e927cd. Final bounded statistics review with exact-hash inherited scope recorded there."
+              },
+              {
+                "lane": "structure",
+                "reviewer": "/root/predictor_alpha_round3_structure",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-structure-critique-round3.json; SHA256 ec970ea63a9a6dc66a99d06c7362622dd3464f9ece32445a41ad7d5340a88bc1. Final bounded statistics review with exact-hash inherited scope recorded there."
+              },
+              {
+                "lane": "translation",
+                "reviewer": "/root/predictor_alpha_round3_translation",
+                "findings": [],
+                "evidence": "Independent predictor-alpha-docs-translation-critique-round3.json; SHA256 e0ba17166a6bef1d34a0bb7db2d3513d26aeb8381045e2958c23d34535d9eab7. Final bounded statistics review with exact-hash inherited scope recorded there."
+              }
+            ]
+          },
+          {
+            "path": "docs/players/army-placement.md",
+            "sha256": "af4afd240f06bcb9211753099830f75fbac4c1631fba87eeee906c8c00d7cf9d",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "independent newcomer clarity critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-newcomer-critique-round2.json, SHA256 61b86d9c2b4225c79c5500ac6e21233ebdd3b8843487f89f826d4da1977ad1d7; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/melee_docs_accuracy",
+                "evidence": "Independent round2 closure ordinary-melee-docs-accuracy-critique-round2.json, SHA256 e91e3a7178fbf448b85234afd8acc9f2a007e7f2dbee70ecd4372463bd4628ca; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/melee_docs_steps",
+                "evidence": "Independent round2 closure ordinary-melee-docs-steps-critique-round2.json, SHA256 7b51ce227a4e6dd58f721f7da52870889820213480296bfc1470fa2693f94a76; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "independent article critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-structure-critique-round2.json, SHA256 86ebfd869ce29eee5a3b7e1efb477d87de5e724ea5a74ab64af024e2ee9f47e2; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "independent terminology/translation critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-translation-critique-round2.json, SHA256 39c5e22165cc28e3058587a785fcb6d91c040529320416145c00ca72defcffe5; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/players/army-placement.md",
+            "sha256": "cf1cdee482d1711d14035269a1b8d3f9ce34285eed0e30073030a0dd2839294c",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "independent newcomer clarity critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-newcomer-critique-round2.json, SHA256 61b86d9c2b4225c79c5500ac6e21233ebdd3b8843487f89f826d4da1977ad1d7; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/melee_docs_accuracy",
+                "evidence": "Independent round2 closure ordinary-melee-docs-accuracy-critique-round2.json, SHA256 e91e3a7178fbf448b85234afd8acc9f2a007e7f2dbee70ecd4372463bd4628ca; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/melee_docs_steps",
+                "evidence": "Independent round2 closure ordinary-melee-docs-steps-critique-round2.json, SHA256 7b51ce227a4e6dd58f721f7da52870889820213480296bfc1470fa2693f94a76; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "independent article critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-structure-critique-round2.json, SHA256 86ebfd869ce29eee5a3b7e1efb477d87de5e724ea5a74ab64af024e2ee9f47e2; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "independent terminology/translation critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-translation-critique-round2.json, SHA256 39c5e22165cc28e3058587a785fcb6d91c040529320416145c00ca72defcffe5; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/placement-internals.md",
+            "sha256": "a01b487b76c0700d49a43d242b494b81b2990670fe6edd28ee6ab94d0c6635f5",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "independent newcomer clarity critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-newcomer-critique-round2.json, SHA256 61b86d9c2b4225c79c5500ac6e21233ebdd3b8843487f89f826d4da1977ad1d7; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/melee_docs_accuracy",
+                "evidence": "Independent round2 closure ordinary-melee-docs-accuracy-critique-round2.json, SHA256 e91e3a7178fbf448b85234afd8acc9f2a007e7f2dbee70ecd4372463bd4628ca; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/melee_docs_steps",
+                "evidence": "Independent round2 closure ordinary-melee-docs-steps-critique-round2.json, SHA256 7b51ce227a4e6dd58f721f7da52870889820213480296bfc1470fa2693f94a76; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "independent article critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-structure-critique-round2.json, SHA256 86ebfd869ce29eee5a3b7e1efb477d87de5e724ea5a74ab64af024e2ee9f47e2; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "independent terminology/translation critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-translation-critique-round2.json, SHA256 39c5e22165cc28e3058587a785fcb6d91c040529320416145c00ca72defcffe5; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/placement-internals.md",
+            "sha256": "73ab6fe9be3ceafae92f63e4124c655c11af1f9822ebbcf954c57102a4026393",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "independent newcomer clarity critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-newcomer-critique-round2.json, SHA256 61b86d9c2b4225c79c5500ac6e21233ebdd3b8843487f89f826d4da1977ad1d7; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/melee_docs_accuracy",
+                "evidence": "Independent round2 closure ordinary-melee-docs-accuracy-critique-round2.json, SHA256 e91e3a7178fbf448b85234afd8acc9f2a007e7f2dbee70ecd4372463bd4628ca; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/melee_docs_steps",
+                "evidence": "Independent round2 closure ordinary-melee-docs-steps-critique-round2.json, SHA256 7b51ce227a4e6dd58f721f7da52870889820213480296bfc1470fa2693f94a76; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "independent article critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-structure-critique-round2.json, SHA256 86ebfd869ce29eee5a3b7e1efb477d87de5e724ea5a74ab64af024e2ee9f47e2; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "independent terminology/translation critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-translation-critique-round2.json, SHA256 39c5e22165cc28e3058587a785fcb6d91c040529320416145c00ca72defcffe5; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/reference/research-diary.md",
+            "sha256": "0d600deaedf262a13dc006d2e5e0290bb2aff924b6fd64d20e04b90819bab2b0",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "independent newcomer clarity critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-newcomer-critique-round2.json, SHA256 61b86d9c2b4225c79c5500ac6e21233ebdd3b8843487f89f826d4da1977ad1d7; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/melee_docs_accuracy",
+                "evidence": "Independent round2 closure ordinary-melee-docs-accuracy-critique-round2.json, SHA256 e91e3a7178fbf448b85234afd8acc9f2a007e7f2dbee70ecd4372463bd4628ca; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/melee_docs_steps",
+                "evidence": "Independent round2 closure ordinary-melee-docs-steps-critique-round2.json, SHA256 7b51ce227a4e6dd58f721f7da52870889820213480296bfc1470fa2693f94a76; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "independent article critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-structure-critique-round2.json, SHA256 86ebfd869ce29eee5a3b7e1efb477d87de5e724ea5a74ab64af024e2ee9f47e2; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "independent terminology/translation critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-translation-critique-round2.json, SHA256 39c5e22165cc28e3058587a785fcb6d91c040529320416145c00ca72defcffe5; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              }
+            ]
+          },
+          {
+            "path": "docs/en/reference/research-diary.md",
+            "sha256": "496bd38ea4637f9aed5a24475c2cc44375502ebf46ae841d392fb2ef72e41341",
+            "author": "/root",
+            "round": 2,
+            "critics": [
+              {
+                "lane": "newcomer",
+                "reviewer": "independent newcomer clarity critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-newcomer-critique-round2.json, SHA256 61b86d9c2b4225c79c5500ac6e21233ebdd3b8843487f89f826d4da1977ad1d7; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "accuracy",
+                "reviewer": "/root/melee_docs_accuracy",
+                "evidence": "Independent round2 closure ordinary-melee-docs-accuracy-critique-round2.json, SHA256 e91e3a7178fbf448b85234afd8acc9f2a007e7f2dbee70ecd4372463bd4628ca; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "steps",
+                "reviewer": "/root/melee_docs_steps",
+                "evidence": "Independent round2 closure ordinary-melee-docs-steps-critique-round2.json, SHA256 7b51ce227a4e6dd58f721f7da52870889820213480296bfc1470fa2693f94a76; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "structure",
+                "reviewer": "independent article critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-structure-critique-round2.json, SHA256 86ebfd869ce29eee5a3b7e1efb477d87de5e724ea5a74ab64af024e2ee9f47e2; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              },
+              {
+                "lane": "translation",
+                "reviewer": "independent terminology/translation critic",
+                "evidence": "Independent round2 closure ordinary-melee-docs-translation-critique-round2.json, SHA256 39c5e22165cc28e3058587a785fcb6d91c040529320416145c00ca72defcffe5; original round1 findings retained in matching round1 receipt. Unchanged player pair inherited by exact hash, four changed bodies reviewed on bounded additions.",
+                "findings": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "security": {
+      "score": 10,
+      "verdict": "PASS",
+      "reviewer": "/root/melee_docs_translation",
+      "evidence": {
+        "record": "ordinary-melee-knowledge-source-security-review.json",
+        "sha256": "6ef2f7431bb4debb6a6ed4653338406a6ad92f7d9c3e2187c156726a310d0ea2",
+        "head": "5e50d6a288a77d631b22909a75c04cc7e1f033af"
+      }
+    }
+  },
+  "overall": "PASS",
+  "timestamp": "2026-10-12T19:26:29.281Z"
+}
