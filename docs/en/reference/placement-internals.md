@@ -49,6 +49,14 @@ In the pinned Universe settings, the relative shooter-power threshold is 20% (`O
 
 The defensive candidate-selection function lists free neighbors of occupied cells, removes duplicates, and sorts candidates. The shooter-window row scorer assigns weight 2 to chosen shooter-window rows, 1 to their neighbors, and 0 to other rows; the candidate-order comparators resolve ties in the game's order. Large and small defenders keep separate candidate sequences, and an entire 2×2 footprint is checked before placement. Combined defence and spread use selected spaced rows rather than ordinary adjacency. [Candidate and footprint verification](#current-research).
 
+### Complete defensive selection condition
+
+The value 100 below is a numeric shooter-advantage fallback when the opponent has no ranged strength. It is compared with the threshold 1.3. It is **not 100%** or the large-non-shooter share: row selection below uses a separate ratio.
+
+After the strength estimates are prepared, sheltering is enabled when the deploying army has positive total strength, the opposing capability check does not prohibit sheltering, and either its own capability check enables sheltering or **both** shooter-strength comparisons strictly exceed their thresholds. When opposing shooter strength is zero, the advantage comparison uses 100.
+
+Here the “own” side is the army being deployed. Capability checks iterate creature records, skipping records with a separate exclusion flag and, when ranged strength is absent, records with a conditional exclusion. Every remaining record must pass; an empty remainder returns a positive result. The sequence and Boolean condition are reconstructed, but the gameplay names of all rare flags remain unidentified. They cannot be replaced with the assumption “the army has a shooter”.
+
 ## Scores and ties
 
 Placement scoring uses a synthetic one-peasant reference without a hero, not the player's army. The aggregate-construction function uses:
@@ -66,7 +74,13 @@ The ordinary numeric-sort function merges decreasing-stride lanes; ties take the
 
 The special placement comparator orders stacks as follows: non-flying before flying; speed when max(speed 1,speed 2)≥distance; then score. General-pass distance=width−deploymentColumns−6. The [executable walkthrough](../../assets/placement/placement_walkthrough.py) covers one confirmed case, not every branch.
 
-## Rows, spread and depth
+## Rows, spread and depth {#shooter-window}
+
+The shooter window contains one row per prepared shooter stack, capped at the number of playable rows. Windows are enumerated cyclically; an equal sum does not replace the selected window. The first window with the minimum total free approach length therefore wins, rather than the last or a random one.
+
+The opposing army determines whether each approach uses one row or two. The numerator is the calculated strength of its large non-shooters; the denominator is that of all its non-shooters. Both subsets retain the hero contribution and are evaluated against the complete army being deployed. A zero denominator gives a zero ratio; otherwise the comparison with the runtime threshold is strict, about 55% in the checked settings. Shooters belong to neither subset. An empty creature subset need not have zero strength: with 100 Archers, both estimates were 24 and the ratio was 1.
+
+The two-row scan stops at the first obstacle in either the current or preceding playable row. The first playable row uses only itself. Cyclic window membership does not make approach geometry cyclic. This rule selects the window; later validation of a complete 2×2 footprint remains a separate step.
 
 For shooters, the game first evaluates how clear the approach is along each row and selects the first window with the lowest total score. Spread formation retains spaced candidates: for example, three stacks on ten playable rows select the first, fifth and tenth rows. Candidates then retain their previous priority order. If occupancy filtering removes them all, the spaced list from before that filter is retained.
 
@@ -85,6 +99,8 @@ Large units reserve all 2×2 cells. The large-footprint mask builder derives anc
 [![Large-footprint validation on the full field](../../assets/placement/pack_8-footprint.svg)](../../assets/placement/pack_8-footprint.svg)
 
 The deployment-depth function calculates the number of placement columns inside the field. The observed Universe patch changes the large-position threshold 2L→3L and adds a column at L≥4. Minimum 2/3 depends on effective Tactics advantage; equal effective opportunities clear both flags. The extra blocking predicate is not conclusively mapped to a named specialization.
+
+[A retained-field replay and a separate new-build campaign](research-diary.md#placement-melee-window-2026-10-12) verify different parts of this mechanism; the experiment record states their conditions and limits.
 
 ## Activity and survivability corrections
 

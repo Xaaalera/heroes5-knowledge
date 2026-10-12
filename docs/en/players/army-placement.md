@@ -75,7 +75,7 @@ Without exact scouting information, our Universe build shows neutral quantities 
 | Spread stacks | The game compares the opponent's calculated area-attack strength with the total calculated strength of **that same opposing army**. In the tested Universe settings, the ratio must be **strictly above 35%**. Further conditions apply. | Candidate rows are spaced so stacks do not all cluster together. |
 | Ordinary formation | Neither extra decision is enabled. | Stacks follow the general category and row order. |
 
-“Own shooters” here means the shooters of **the side currently being deployed**; for neutrals, those are neutral shooters. Merely having a shooter is insufficient: the game compares its strength with the rest of the army and with the opponent. These thresholds come from the tested build, but **do not constitute the whole formula**: early conditions and an opposing-ability check remain partly unresolved. Shelter and spread can occur together; the defensive pass then uses spaced rows instead of simple adjacency. [What has been checked](../reference/placement-internals.md).
+“Own shooters” here means the shooters of **the side currently being deployed**; for neutrals, those are neutral shooters. Merely having a shooter is insufficient: the game compares its strength with the rest of the army and with the opponent. These thresholds come from the tested build, but **are not the entire check**: capabilities of both sides are also considered. Their evaluation order is reconstructed; gameplay names for some rare states remain unidentified. Shelter and spread can occur together; the defensive pass then uses spaced rows instead of simple adjacency. [Complete condition and verification limits](../reference/placement-internals.md).
 
 “Strength” here is the game's internal estimate, not creature count or summed health. When the opponent has no shooters, the game handles that case separately without dividing by zero. Area-attack strength includes eligible creature attacks and spells, including the hero's spells.
 
@@ -105,6 +105,14 @@ If a stack still lacks a cell, the complex path may **shift its chosen row windo
 *Lines show where an obstacle stops a row scan. This measures available space before deployment; it is not a creature's movement route in combat.*
 
 When rows score equally, the game does not simply proceed top to bottom. For ten equal rows in the checked field, candidate-row order was **8, 4, 6, 10, 2, 7, 3, 5, 9, 1**. This is a list of *candidate rows*, not ten creatures' final cells: occupancy and footprint still change the outcome. [Tie rule and exceptions](../reference/placement-internals.md).
+
+### How shooter rows are selected
+
+The game seeks a **group of consecutive rows for shooters**. Its length equals the number of shooter stacks, capped at the number of playable rows. It adds the free approach lengths for each possible group and selects the first group with the lowest sum. A group may span the end and beginning of the row list. These are not final cells: candidate order, occupancy and creature size still apply.
+
+An additional condition depends on the opposing army: the game compares the strength of its **large non-shooters** with that of **all its non-shooters**. When the share strictly exceeds the threshold — about **55%** in the checked build — the approach is evaluated across two adjacent rows, stopping at the first obstacle in either. The first playable row keeps its single-row score: its neighbour does not wrap around from the other edge of the field.
+
+Both strength estimates include the hero contribution, even when no creatures qualify. A hero with only shooters can therefore have two equal, positive estimates: the share is **100%**, despite having no large creatures. This explains why changing the hero's army can move neutral shooters without changing their composition. [Exact rule and verification limits](../reference/placement-internals.md#shooter-window).
 
 ## Worked battle: four elementals
 

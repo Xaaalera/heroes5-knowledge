@@ -12,6 +12,22 @@ updated: 2026-10-12
 ---
 # Research diary
 
+## 2026-10-12 — row-window correction against a shooter hero {#placement-melee-window-2026-10-12}
+
+**A separate approximate-forecast bug was corrected:** shooters incorrectly contributed to the hero army's large-non-shooter share. With only shooters, this estimate became zero, whereas the full algorithm retains the hero contribution in both subsets and obtains a ratio of 1. This rule had already been reconstructed for the full calculation on October 3; the ordinary path is now corrected. The approximate forecast does not read numeric hero modifiers for this correction.
+
+On a retained field with seven neutral stacks, the previous approach selection reproduces **4/7 type-and-cell pairs**, while the corrected selection gives **7/7**. Stack order, roles and terrain are fixed in this comparison. It isolates row selection, but does not independently verify strength calculation, sorting or battle startup.
+
+The new standalone build separately passed ten fresh loads of the same three maps: **273/273 full calculations**, with the approximate forecast matching **165/213 mixed** and **174/273 total battles**. There were 51 stack-count differences and 48 cell differences, with no unavailable forecasts. Battles containing exactly one actual stack matched 9/9. The entire outer run took **7 min 50 s**. Fresh quantities and arenas differ from the previous series: these percentages do not prove improvement or regression on identical inputs.
+
+[The source correction is published](https://github.com/Xaaalera/heroes5-deployment-preview/commit/b1c5c22). Ordinary startup of the new package, card cycling and actual movement highlights for the selected upgrade were verified. This build has not been released: public alpha.1 and its results below remain a separate verified version. Nonempty mixed non-shooter subsets in the approximate forecast still omit the numeric hero contribution; that limitation remains. [Window selection rule](placement-internals.md#shooter-window).
+
+??? info "Build identity and retained evidence"
+
+    Tested candidate 21 ZIP: SHA-256 `9e7862d8330280a8febf218c54fac2de1bf4ba1b9a8c98b20b4423d42aee5152`. The archive is not yet published; this hash does not identify alpha.1.
+
+    Two replay receipts are retained locally: `ordinary-835-large-melee-geometry-replay.json` and `ordinary-live-1095-large-melee-geometry-replay.json`. Independent campaign verification: `ordinary-large-melee-final-campaign-independent-review.json`; entire-run timer: `ordinary-large-melee-final-campaign-outer.json`. These names identify original evidence in the project log; the private files are not a publicly runnable reproduction recipe.
+
 ## 2026-10-12 — native package and two forecasts {#placement-native-release-2026-10-12}
 
 **The full calculation in the standalone package matched 273/273 battles; the approximate forecast matched 171/213 mixed battles (80.3%).** Here mixed guards have multiple public source stacks; single-source guards that split later are excluded from this figure. This is the final series on October 12, with ten fresh loads: the 36-composition polygon and two random maps with 24 and 19 selected packs, in rotation. Every selected composition in each load was tested. Hero armies varied; maximum coverage of levels, skills, artifacts and arenas remains future work.
