@@ -8,9 +8,37 @@ section: reference
 kicker: HEROES V · UNIVERSE
 translation: reference/research-diary/
 description: Research diary
-updated: 2026-10-12
+updated: 2026-10-13
 ---
 # Research diary
+
+## 2026-10-13 — corrected sheltering selection {#placement-defensive-normalization-2026-10-13}
+
+**The ordinary forecast compared neutral ranged strength with the hero army's total strength.** The reconstructed game check compares it with the neutral army's total strength; the hero army's shooters participate in the separate advantage comparison. The correction uses the already verified strength scorer with public composition estimates. Ordinary prediction receives no new hidden quantities, upgrades or completed splits. Numeric hero modifiers, rare capability checks and nominal multipliers remain limitations of the approximate calculation.
+
+In a synthetic numeric control, neutral strength is 100, of which 40 belongs to shooters. Increasing only the known opposing non-shooter army from 10 to 1000 creatures leaves these estimates unchanged in the original game functions. The previous ordinary forecast disabled sheltering; the corrected forecast retains it in both cases. This control tests the formula with normalized inputs; a separate live encounter with 1000 Peasants matched **2/2 neutral positions**.
+
+The standalone candidate 22 package passed ordinary startup, **86 native tests with no skips**, and ten fresh loads: the 36-composition polygon and two random maps with 24 and 19 selected packs. Every selected pack in each load was checked. The entire outer run took **7 min 27 s**. Both forecasts were saved before Start; initial armies, obstacles, battle identity and unchanged full calculations were verified afterwards.
+
+| New-campaign check | Result |
+|---|---:|
+| Full calculation: entire pack's types, quantities, footprints and cells | 273/273 |
+| Approximate forecast: every occupied cell of a mixed pack | 191/213 — 89.7% |
+| Approximate forecast: every occupied cell across all battles | 201/273 |
+| Approximate forecast: every stack's type, footprint and cell, excluding quantity | 183/273 |
+| Battles containing exactly one actual combat stack | 10/10 |
+
+There were **50 stack-count differences**, all when one public source split, and **22 occupied-cell differences** with equal stack counts. In another 18 mixed battles, occupied cells matched but their creature types differed: 11 with the same type multiset and 7 with different types. The cause of those seven type differences remains unproven; unknown inputs do not automatically explain every miss.
+
+Public alpha.2 matched 165/213 mixed battles in its own campaign. Fresh quantities and arenas differ, so the percentage change does not isolate the correction's effect. The numeric control above verifies it separately. Other levels, effects, arenas and maximum army variation remain a separate test plan.
+
+The tested package is released as [0.2.0-alpha.3](https://github.com/Xaaalera/heroes5-deployment-preview/releases/tag/v0.2.0-alpha.3). Cards and upgrades were checked with physical input; native highlights at speeds 5/5/6 gave equal base and first-upgrade areas and a strict expansion for the alternative. The Deployment window passed native button activation, own and opposing stack selection, close and reopen. These checks cover two creature families and one window size.
+
+??? info "Build identity and retained evidence"
+
+    ZIP SHA-256: `1f7ddba9a32e114996ebdfb7b366e4de289c9aa16b809e3fe21270ea99808def`. [Correction source](https://github.com/Xaaalera/heroes5-deployment-preview/commit/4c69cc84449012eb1fdabe318fe3418693094b15).
+
+    The original discrepancy is retained in `ordinary-defensive-normalization-audit.json`; its independent review, `ordinary-defensive-normalization-independent-review.json`, covers the version before the fix. The corrected calculation is retained in `ordinary-defensive-normalization-final-audit.json`, with targeted and full tests in `ordinary-defensive-normalization-final-targeted-tests.json` and `ordinary-defensive-normalization-final-full-tests.json`. The campaign is checked in `ordinary-defensive-normalization-final-campaign-independent-review.json`, its outer timer in `ordinary-defensive-normalization-final-campaign-outer.json`, and UI evidence in `player22-ui-independent-review.json`. These names identify private evidence, not a publicly runnable reproduction recipe.
 
 ## 2026-10-12 — row-window correction against a shooter hero {#placement-melee-window-2026-10-12}
 
